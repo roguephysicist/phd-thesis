@@ -6,7 +6,6 @@
 \usepackage{ulem}
 \usepackage{subfigure}
 \input{definitions}
-%\input{definitions}
 \usepackage{bm}
 %%%%*****************%%%% fine hyperef 
 \usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
@@ -3057,12 +3056,35 @@ im_e(\go^\lda_{nm}r^\rma_{nm})_{;k^\rmb}
 im_e(\go^\lda_{nm})_{;k^\rmb} r^\rma_{nm}
 + 
 im_e\go^\lda_{nm}(r^\rma_{nm})_{;k^\rmb}
+\quad\mathrm{for}\quad n\ne m
 ,
 \end{eqnarray} 
 and use Eqs.~\eqref{a_gradw2} and \eqref{a_rgendevn} (with
-$\go_n\to\go_n^\lda$).
+$\go_n\to\go_n^\lda$); for $n=m$, we use Eqs.~\eqref{a_ripn} and \eqref{tita}, to write
+\begin{eqnarray}\label{a.3c}
+(p^\rma_{nn})_{;k^\rmb}
+=
+\nabla_{k^{\rma}}
+p^{\rmb}_{nn}(\bfk)
+=
+\gd_{ab}
+-\frac{m_e}{\hbar}
+\sum_{\ell\ne n}
+\go_{\ell n}
+\bigg(
+r^{\rma}_{n\ell}
+r^{\rmb}_{\ell n}
++
+r^{\rmb}_{n\ell}
+r^{\rma}_{\ell n}
+\bigg)
+,
+\end{eqnarray}
+which is the standard effective-mas sum rule.\cite{nastosPRB05}
+
+
 Likewise,
-\begin{eqnarray}\label{a.3}
+\begin{eqnarray}\label{a.3b}
 \calv^{S,\rma,\ell}_{nm}
 &=&
 \frac{1}{2}\sum_q\left(
