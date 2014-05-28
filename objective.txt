@@ -8,3 +8,5 @@ So you have to do the same for equation EQ82 following the same procedure. You c
 The goal is A16 and A19 but written in terms of w^s_nm and V^sigma
 
 Once programmed in Tiniba, temporarily use calMomMatElem instead of our new V^sigma
+
+Look at equation F4
