@@ -1,0 +1,31 @@
+\documentclass[floatfix,prb,aps,superscriptaddress,11pt,preprint]{revtex4}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\allowdisplaybreaks[1]%biutiful equation breaker!!!
+\usepackage{ulem}
+\usepackage{subfigure}
+\input{definitions}
+\usepackage{bm}
+\usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
+
+\begin{document}
+
+For the {\it i}ntraband terms,
+
+\begin{eqnarray}\label{pfi} 
+I&=& C\left[-\frac{1}{2\go^2_{nm}}\frac{1}{\go_{nm}-\go}+\frac{2}{\go^2_{nm}}\frac{1}{\go_{nm}-2\go}+\frac{1}{2\go^2_{nm}}\frac{1}{\go}\right]\nonumber\\
+&-&D\left[-\frac{3}{2\go^3_{nm}}\frac{1}{\go_{nm}-\go}+\frac{4}{\go^3_{nm}}\frac{1}{\go_{nm}-2\go}+\frac{1}{2\go^3_{nm}}\frac{1}{\go}-\frac{1}{2\go^2_{nm}}\frac{1}{(\go_{nm}-\go)^2}\right],
+\end{eqnarray} 
+
+where $C=f_{mn}{\cal V}^{\gS,\rma}_{mn}(r^{\lda,\rmb}_{nm})_{;k^{\rmc}}$, and $D=f_{mn}{\cal V}^{\gS,\rma}_{mn}r^{\rmb}_{nm}\gD^{\rmc}_{nm}$. Time-reversal symmetry allow us to write, $\mathbf{r}_{mn}(\mathbf{k})=\mathbf{r}_{nm}(-\mathbf{k})$, $\mathbf{r}_{mn;\mathbf{k}}(\mathbf{k})=-\mathbf{r}_{nm;\mathbf{k}}(-\mathbf{k})$, $\calbv_{mn}^{\gS,\rma}(-\mathbf{k})=-\calbv_{nm}^{\gS,\rma}(\mathbf{k})$, $\omega_{mn}^{S}(-\mathbf{k})=\omega_{mn}^{S}(\mathbf{k})$, and $\gD^a_{nm}(-\bfk)=-\gD^a_{nm}(\bfk)$. Also, for a clean cold semiconductor $f_n=1$  for an occupied or valence ($n=v$) band and $f_n=0$ for an empty or conduction ($n=c$) band independent of $\bfk$ and $f_{nm}=-f_{mn}$.
+
+We also use the following expression,
+
+\begin{equation}\label{gene2}
+\left(\frac{f_{mn}r_{nm}^{\rmb}}{\go^S_{nm}-\go_2}\right)_{;k^{\rmc}}=\frac{f_{mn}}{\go^S_{nm}-\go}\left(r_{nm}^{\lda,\rmb}\right)_{;k^{\rmc}}-\frac{f_{mn}r_{nm}^{\rmb}\gD_{nm}^\rmc}{(\go^S_{nm}-\go)^2},
+\end{equation}
+
+where LDA and scissored energies combine.
+
+\end{document}
