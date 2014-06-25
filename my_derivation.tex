@@ -1,31 +1,57 @@
-\documentclass[floatfix,prb,aps,superscriptaddress,11pt,preprint]{revtex4}
+\documentclass[11pt,draft]{article}
 \usepackage{amsfonts}
 \usepackage{amsmath}
-\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{fullpage}
+%\usepackage{graphicx}
 \allowdisplaybreaks[1]%biutiful equation breaker!!!
-\usepackage{ulem}
-\usepackage{subfigure}
-\input{definitions}
-\usepackage{bm}
-\usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
+%\usepackage{ulem}
+%\usepackage{subfigure}
+%\input{definitions}
+%\usepackage{bm}
+%\usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
 
 \begin{document}
 
-For the {\it i}ntraband terms,
+We start with the expression for the susceptibility for the intraband transtitions,
+
+\begin{equation}\label{chii}
+\chi_{i,\text{a}\text{b}\text{c}}^{s,\ell}=-\frac{e^3}{\Omega\hbar^2\omega_3}\sum_{mn\mathbf{k}}\frac{\mathcal{V}_{mn}^{\Sigma,\text{a},\ell}}{\omega^S_{nm}-\omega_3}\left(\frac{f_{mn}r_{nm}^{\text{b}}}{\omega^S_{nm}-\omega_\beta}\right)_{;k^{\text{c}}},
+\end{equation} 
+
+where \emph{s} denotes ``surface'' and \emph{S} refers to the scissors correction. This expression diverges as $\omega_{3} \rightarrow 0$. To eliminate this divergence we take the partial fraction expansion,
 
 \begin{eqnarray}\label{pfi} 
-I&=& C\left[-\frac{1}{2\go^2_{nm}}\frac{1}{\go_{nm}-\go}+\frac{2}{\go^2_{nm}}\frac{1}{\go_{nm}-2\go}+\frac{1}{2\go^2_{nm}}\frac{1}{\go}\right]\nonumber\\
-&-&D\left[-\frac{3}{2\go^3_{nm}}\frac{1}{\go_{nm}-\go}+\frac{4}{\go^3_{nm}}\frac{1}{\go_{nm}-2\go}+\frac{1}{2\go^3_{nm}}\frac{1}{\go}-\frac{1}{2\go^2_{nm}}\frac{1}{(\go_{nm}-\go)^2}\right],
+I &=& C \left[-\frac{1}{2(\omega^{S}_{nm})^{2}}\frac{1}{\omega^{S}_{nm}-\omega}+\frac{2}{(\omega^{S}_{nm})^{2}}\frac{1}{\omega^{S}_{nm}-2\omega}+\frac{1}{2(\omega^{S}_{nm})^{2}}\frac{1}{\omega}\right]\nonumber\\
+&-& D \left[-\frac{3}{2(\omega^{S}_{nm})^{2}}\frac{1}{\omega^{S}_{nm}-\omega}+\frac{4}{(\omega^{S}_{nm})^{3}}\frac{1}{\omega^{S}_{nm}-2\omega}+\frac{1}{2(\omega^{S}_{nm})^{3}}\frac{1}{\omega}-\frac{1}{2(\omega^{S}_{nm})^{2}}\frac{1}{(\omega^{S}_{nm}-\omega)^2}\right],
 \end{eqnarray} 
 
-where $C=f_{mn}{\cal V}^{\gS,\rma}_{mn}(r^{\lda,\rmb}_{nm})_{;k^{\rmc}}$, and $D=f_{mn}{\cal V}^{\gS,\rma}_{mn}r^{\rmb}_{nm}\gD^{\rmc}_{nm}$. Time-reversal symmetry allow us to write, $\mathbf{r}_{mn}(\mathbf{k})=\mathbf{r}_{nm}(-\mathbf{k})$, $\mathbf{r}_{mn;\mathbf{k}}(\mathbf{k})=-\mathbf{r}_{nm;\mathbf{k}}(-\mathbf{k})$, $\calbv_{mn}^{\gS,\rma}(-\mathbf{k})=-\calbv_{nm}^{\gS,\rma}(\mathbf{k})$, $\omega_{mn}^{S}(-\mathbf{k})=\omega_{mn}^{S}(\mathbf{k})$, and $\gD^a_{nm}(-\bfk)=-\gD^a_{nm}(\bfk)$. Also, for a clean cold semiconductor $f_n=1$  for an occupied or valence ($n=v$) band and $f_n=0$ for an empty or conduction ($n=c$) band independent of $\bfk$ and $f_{nm}=-f_{mn}$.
+where $C = f_{mn}\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{LDA},\text{b}}_{nm})_{;k^{\text{c}}}$, and $D=f_{mn}\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\Delta^{\text{c}}_{nm}$. Time-reversal symmetry allows us to write, $\mathbf{r}_{mn}(\mathbf{k})=\mathbf{r}_{nm}(-\mathbf{k})$, $\mathbf{r}_{mn;\mathbf{k}}(\mathbf{k})=-\mathbf{r}_{nm;\mathbf{k}}(-\mathbf{k})$, $\mathbf{\mathcal{V}}_{mn}^{\Sigma,\text{a}}(-\mathbf{k})=-\mathbf{\mathcal{V}}_{nm}^{\Sigma,\text{a}}(\mathbf{k})$, $\omega_{mn}^{S}(-\mathbf{k})=\omega_{mn}^{S}(\mathbf{k})$, and $\Delta^a_{nm}(-mathbf{k})=-\Delta^a_{nm}(mathbf{k})$. Also, for a clean cold semiconductor $f_n=1$  for an occupied or valence ($n=v$) band and $f_n=0$ for an empty or conduction ($n=c$) band independent of $mathbf{k}$ and $f_{nm}=-f_{mn}$.
 
-We also use the following expression,
+The last term in the second line of Eq.~\eqref{pfi} is dealt with as follows.
+\begin{eqnarray}\label{dresn}
+\frac{D}{2(\omega^S_{nm})^2}\frac{1}{(\omega^S_{nm}-\omega)^2} 
+&=& \frac{f_{mn}}{2}\frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{(\omega^S_{nm})^2}\frac{\Delta^{\text{c}}_{nm}}{(\omega^S_{nm}-\omega)^2} = \frac{f_{mn}}{2}\frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{(\omega^S_{nm})^2}\left(\frac{1}{\omega^S_{nm}-\omega}\right)_{;k^{\text{c}}}\nonumber\\
+&=& -\frac{f_{mn}}{2}\left(\frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{(\omega^S_{nm})^2}\right)_{;k^{\text{c}}}\frac{1}{\omega^S_{nm}-\omega},
+\end{eqnarray} 
 
-\begin{equation}\label{gene2}
-\left(\frac{f_{mn}r_{nm}^{\rmb}}{\go^S_{nm}-\go_2}\right)_{;k^{\rmc}}=\frac{f_{mn}}{\go^S_{nm}-\go}\left(r_{nm}^{\lda,\rmb}\right)_{;k^{\rmc}}-\frac{f_{mn}r_{nm}^{\rmb}\gD_{nm}^\rmc}{(\go^S_{nm}-\go)^2},
+where we used Eqs.~\eqref{wk} and ~\eqref{rcal}, and for the last line, we performed an
+integration by parts over the Brillouin zone, where the contribution from the edges vanishes.\cite{aschcroft} Using the chain rule, we obtain
+
+\begin{equation}\label{chrn}
+\left(\frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{(\omega^S_{nm})^2}\right)_{;k^{\text{c}}} = \frac{r^{\text{b}}_{nm}}{(\omega^S_{nm})^2}\left(\mathcal{V} ^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}} + \frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}}{(\omega^S_{nm})^2}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}} - \frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{2(\omega^S_{nm})^3}\left(\omega^S_{nm}\right)_{;k^{\text{c}}},
 \end{equation}
 
-where LDA and scissored energies combine.
+where in the appendix \ref{calvs} we show how to calculate $(\mathcal{V}^{\Sigma,a}_{nm})_{;k^b}$. For $\left(\omega^S_{nm}\right)_{;k^{\text{c}}}$ we simply use Eq.~\eqref{a_gradw2}, that using Eq.~\eqref{na_delta} gives
+
+\begin{equation}\label{eli.1}
+\left(\omega^S_{nm}\right)_{;k^{\text{c}}} = \Delta^{\text{LDA},\text{c}}_{nm},
+\end{equation}
+
+and from Eq.~\eqref{rgendevapn}
+
+\begin{equation}\label{eli.2}
+(r^{\text{b}}_{nm})_{;k^{\text{a}}} \approx \frac{r^{\text{a}}_{nm}\Delta^{\text{LDA},\text{b}}_{mn} + r^{\text{b}}_{nm}\Delta^{\text{LDA},\text{a}}_{mn}}{\omega^\text{LDA}_{nm}} + \frac{i}{\omega^\text{LDA}_{nm}}\sum_{\ell}\left(\omega^\text{LDA}_{\ell m}r^{\text{a}}_{n\ell}r^{\text{b}}_{\ell m} - \omega^\text{LDA}_{n\ell}r^{\text{b}}_{n\ell}r^{\text{a}}_{\ell m}\right),
+\end{equation}
 
 \end{document}
