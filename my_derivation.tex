@@ -41,7 +41,18 @@ Time-reversal symmetry leads to the following relationships:
 
 For a clean cold semiconductor, $f_{n} = 1$ for an occupied or valence $(n = v)$ band, and $f_{n} = 0$ for an empty or conduction $(n = c)$ band independent of $\mathbf{k}$, and $f_{nm}=-f_{mn}$.
 
-The $\frac{1}{\omega}$ terms cancel each other out. The last term in the second line of \eqref{pfi} is dealt with as follows,
+The $\frac{1}{\omega}$ terms cancel each other out. We notice that the energy denominators are invariant under $\mathbf{k} \rightarrow - \mathbf{k}$, and then we only look at the numerators, then
+\begin{eqnarray}\label{ct}
+C \rightarrow f_{mn}\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}}|_{\mathbf{k}} + f_{mn}\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}}|_{-\mathbf{k}}
+&=& f_{mn}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}}|_{\mathbf{k}} + (-\mathcal{V}^{\Sigma,\text{a}}_{nm})(-(r^{\text{b}}_{mn})_{;k^{\text{c}}})|_{\mathbf{k}}\right]\nonumber\\
+&=& f_{mn}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}} + \mathcal{V}^{\Sigma,\text{a}}_{nm}(r^{\text{b}}_{mn})_{;k^{\text{c}}}\right]\nonumber\\
+&=& f_{mn}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}} + (\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}})^*\right]\nonumber\\
+%&=& m_ef_{mn}\omega_{mn}\left[i\mathcal{R}^{\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}} + (i\mathcal{R}^{\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}})^*\right]\nonumber\\
+%&=& im_ef_{mn}\omega_{mn}\left[\mathcal{R}^{\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}} - (\mathcal{R}^{\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}})^*\right]\nonumber\\
+%&=& -2m_ef_{mn}\omega_{mn}\mathrm{Im}[\mathcal{R}^{\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}}],
+\end{eqnarray}
+
+The last term in the second line of \eqref{pfi} is dealt with as follows,
 
 \begin{eqnarray}\label{dresn}
 \frac{D}{2(\omega^S_{nm})^2}\frac{1}{(\omega^S_{nm}-\omega)^2} 
@@ -107,17 +118,6 @@ where $\left(v^{S,\text{a}}_{nm}\right)_{;k^\text{b}}$ is given by
 
 \begin{eqnarray}\label{choni.1}
 \left(v^{S,\text{a}}_{nm}\right)_{;k^\text{b}}=i\Delta f_{mn}(r^\text{a}_{nm})_{;k^\text{b}}.
-\end{eqnarray}
-
-For the \emph{I} term of ~\eqref{pfi}, we notice that the energy denominators are invariant under $\mathbf{k} \rightarrow - \mathbf{k}$, and then we only look at the numerators, then
-\begin{eqnarray}\label{ct}
-C \rightarrow f_{mn}\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}}|_{\mathbf{k}} + f_{mn}\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}}|_{-\mathbf{k}}
-&=& f_{mn}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}}|_{\mathbf{k}} + (-\mathcal{V}^{\Sigma,\text{a}}_{nm})(-(r^{\text{b}}_{mn})_{;k^{\text{c}}})|_{\mathbf{k}}\right]\nonumber\\
-&=& f_{mn}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}} + \mathcal{V}^{\Sigma,\text{a}}_{nm}(r^{\text{b}}_{mn})_{;k^{\text{c}}}\right]\nonumber\\
-&=& f_{mn}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}} + (\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}})^*\right]\nonumber\\
-&=& m_ef_{mn}\omega_{mn}\left[i\mathcal{R}^{\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}} + (i\mathcal{R}^{\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}})^*\right]\nonumber\\
-&=& im_ef_{mn}\omega_{mn}\left[\mathcal{R}^{\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}} - (\mathcal{R}^{\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}})^*\right]\nonumber\\
-&=& -2m_ef_{mn}\omega_{mn}\mathrm{Im}[\mathcal{R}^{\text{a}}_{mn}(r^{\text{b}}_{nm})_{;k^{\text{c}}}],
 \end{eqnarray}
 
 \end{document}
