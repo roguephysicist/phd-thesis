@@ -5,8 +5,8 @@
 \allowdisplaybreaks[1]%biutiful equation breaker!!!
 \usepackage{ulem}
 \usepackage{subfigure}
-%\input{/Users/bms/util/definitions}
 \input{definitions}
+%\input{definitions}
 \usepackage{bm}
 %%%%*****************%%%% fine hyperef 
 \usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
@@ -14,7 +14,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{showlabels}
-%%\usepackage{showkeys}
+%\usepackage{showkeys}
 \begin{document}
 \title{Longitudinal Gauge Theory of Surface 
 Second Harmonic Generation}
@@ -288,8 +288,7 @@ and the we can write
 \end{equation}  
 which gives the interband matrix elements of the position operator
 in terms of the matrix elements of $\bfv^\lda$. 
-For fully  separable pseudopotentials in the 
-Kleinman-Bylander form,\cite{mottaCMS10,kleinmanPRL82,adolphPRB96}
+For fully  separable pseudopotentials in the Kleinman-Bylander form,\cite{19,20}
 the matrix elements $\bfv^\nl_{nm}(\bfk)$ can be readily calculated.\cite{francesco}
 
 
@@ -764,8 +763,7 @@ The microscopic current density is given by
 \end{equation}
 where the operator for the electron's current is
 \begin{equation}\label{hatjmic}
-\hat\bfj(\bfr)=\frac{e}{2}\left(\hat\bfv^\gS\ket{\bfr}\bra{\bfr}
-+\ket{\bfr}\bra{\bfr}\hat\bfv^\gS\right), 
+\hat\bfj(\bfr)=\frac{e}{2}\left(\hat\bfv\ket{\bfr}\bra{\bfr}+\ket{\bfr}\bra{\bfr}\hat\bfv\right),
 \end{equation}
 where $\hat{\mbf{v}}$ is the electron's velocity operator to be dealt
 with below. We define
@@ -775,18 +773,18 @@ the trace to write
 \mathrm{Tr}(\hat\bfj(\bfr)\hat\rho(t)&=&\mathrm{Tr}(\hat\rho(t)\hat\bfj(\bfr))=
 \frac{e}{2}
 \left(
-\mathrm{Tr}(\hat\rho\hat\bfv^\gS\hat\mu)
+\mathrm{Tr}(\hat\rho\hat\bfv\hat\mu)
 +
-\mathrm{Tr}(\hat\rho\hat\mu\hat\bfv^\gS)
+\mathrm{Tr}(\hat\rho\hat\mu\hat\bfv)
 \right)
 \nonumber\\
 &=&
 \frac{e}{2}
 \sum_{n\bfk}
 \left(
-\bra{n\bfk}\hat\rho\hat\bfv^\gS\hat\mu\ket{n\bfk}
+\bra{n\bfk}\hat\rho\hat\bfv\hat\mu\ket{n\bfk}
 +
-\bra{n\bfk}\hat\rho\hat\mu\hat\bfv^\gS\ket{n\bfk}
+\bra{n\bfk}\hat\rho\hat\mu\hat\bfv\ket{n\bfk}
 \right)
 \nonumber\\
 &=&
@@ -794,9 +792,9 @@ the trace to write
 \sum_{nm\bfk}
 \bra{n\bfk}\hat\rho\ket{m\bfk}
 \left(
-\bra{m\bfk}\hat\bfv^\gS\ket{\bfr}\braket{\bfr}{n\bfk}
+\bra{m\bfk}\hat\bfv\ket{\bfr}\braket{\bfr}{n\bfk}
 +
-\braket{m\bfk}{\bfr}\bra{\bfr}\hat\bfv^\gS\ket{n\bfk}
+\braket{m\bfk}{\bfr}\bra{\bfr}\hat\bfv\ket{n\bfk}
 \right)
 \nonumber\\
 \bfj(\bfr,t)&=&
@@ -808,9 +806,9 @@ where
 \bfj_{mn}(\bfk;\bfr)=
 \frac{e}{2}
 \left(
-\bra{m\bfk}\hat\bfv^\gS\ket{\bfr}\braket{\bfr}{n\bfk}
+\bra{m\bfk}\hat\bfv\ket{\bfr}\braket{\bfr}{n\bfk}
 +
-\braket{m\bfk}{\bfr}\bra{\bfr}\hat\bfv^\gS\ket{n\bfk}
+\braket{m\bfk}{\bfr}\bra{\bfr}\hat\bfv\ket{n\bfk}
 \right),
 \end{equation}
 are the matrix elements of the microscopic current operator,
@@ -832,7 +830,7 @@ where $\mathbf{J}^{\ell}(t)$ is the microscopic current  in the
 $\ell$-th layer.
 Therefore we define
 \begin{equation}\label{vcal}
-e{\boldsymbol{\mathcal{V}}}^{\gS,\ell}_{mn}(\mathbf{k})
+e{\boldsymbol{\mathcal{V}}}^{\ell}_{mn}(\mathbf{k})
 \equiv
 %\frac{1}{\Omega}
 \int d^3r\, \calf_\ell(z)\,\bfj_{mn}({\bfk};\bfr),
@@ -841,7 +839,7 @@ to write
 \begin{equation}\label{jmac}
 J_a^{(N,\ell)}(t)=\frac{e}{\gO}
 \sum_{mn\bfk}
-\mathcal{V}^{\gS,a,\ell}_{mn}(\mathbf{k})
+\mathcal{V}^{a,\ell}_{mn}(\mathbf{k})
 \rho^{(N)}_{nm}(\bfk;t),
 \end{equation}
 as the induced macroscopic current, to order $N$-th in the external
@@ -852,26 +850,28 @@ The Fourier component of macroscopic current of Eq.~\eqref{jmac} is given by
 \begin{equation}\label{jmac2}
 J_{\rma}^{(N,\ell)}(\go_3)=\frac{e}{\gO}
 \sum_{mn\bfk}
-\calv^{\gS,\rma,\ell}_{mn}(\mathbf{k})
+\calv^{\rma,\ell}_{mn}(\mathbf{k})
 \rho^{(N)}_{nm}(\bfk;\go_3)
 .
 \end{equation}
+
 We proceed to give an explicit expression of
-$\calbv^{\gS,\ell}_{mn}(\mathbf{k})$.
+$\calbv^{\ell}_{mn}(\mathbf{k})$.
 From
 Eqs.~\eqref{vcal} and \eqref{jmic3} we obtain
 \begin{equation}\label{intj}
-{\boldsymbol{\mathcal{V}}}^{\gS,\ell}_{mn}({\mathbf k})=
+{\boldsymbol{\mathcal{V}}}^{\ell}_{mn}({\mathbf k})=
 \frac{1}{2}
 \int \mathrm{d}^3 r\,
  \calf_\ell(z)
 \bigg[
-\langle m\mathbf{k}|\mathbf{v}^\gS | \mathbf{r}\rangle
+\langle m\mathbf{k}|\mathbf{v} | \mathbf{r}\rangle
 \langle \mathbf{r} | n \mathbf k \rangle +
 \langle m\mathbf{k} | \mathbf{r}\rangle
-\langle \mathbf{r} | \mathbf{v}^\gS | n \mathbf k \rangle\bigg]
+\langle \mathbf{r} | \mathbf{v} | n \mathbf k \rangle\bigg]
 ,
 \end{equation}  
+for which we use $\bfv\to\bfv^\gS$ to include the scissors correction,
 and the following property
 \begin{equation}\label{nl.2}
 \langle \mathbf{r} | \hat\bfv^\gS(\bfr,\bfr')| n\mathbf{k} \rangle
@@ -912,6 +912,7 @@ $\bfr''$. Then,
 \psi^*_{m\mathbf{k}}(\mathbf{r})
 \calbv^{\gS,\ell}
 \psi_{n\mathbf{k}}(\mathbf{r})
+\nonumber\\
 ,
 \end{eqnarray}
 where we used the hermitian property of $\bfp$ and $\bfv^\gS$ and  defined
@@ -937,31 +938,21 @@ contribution of the region of the slab given by $\calf_\ell(z)$.
 From Eq.~\eqref{vop},
 \begin{eqnarray}\label{vopii}
 \calbv^{\gS,\ell}
-&=&
-\calbv^{\lda,\ell}
-+
-\calbv^{S,\ell}
-\nonumber\\
-\calbv^{\lda,\ell}
-&=&
+=
 \calbv^{\ell}
 +
 \calbv^{\nl,\ell}
-=
-\frac{1}{m_e}
-\calbp^{\ell}
 +
-\calbv^{\nl,\ell}
+\calbv^{S,\ell}
 ,
 \end{eqnarray}
-where the required expressions of above operators
+and the expressions for the matrix elements of above operators
 are given in 
 App. \ref{calvs}.
 
 Actually, 
 to limit the response to one surface, 
-the equivalent of Eq.~\eqref{nl.4} for $\calbv^\ell=\calbp^\ell/m_e$
- was proposed 
+the equivalent of Eq.~\eqref{nl.4} for $\calbv^\ell$ was proposed 
 in Ref.~\onlinecite{reiningPRB94}, and latter used in Refs.
 \onlinecite{mendozaPRB01} 
 and \onlinecite{mejiaSMF04} in the context of SHG. Then, 
@@ -1145,7 +1136,7 @@ which upon using Eqs.~\eqref{rho2n} and ~\eqref{sshgp2} leads to
 ,
 \end{eqnarray}
 which gives the surface susceptibility of layer $\ell$-th, where 
-$\calbv^\gS$ is given in Eq.~\eqref{vop}.
+$\calbv^\gS$ is given in Eq.~\eqref{chon.61}.
 Using Eq.~\eqref{rho1n}, we
 split above equation into
 two, one coming from the first term and the other
@@ -1367,43 +1358,6 @@ r^{\rmb}_{nm}
 \end{eqnarray}
 where in the appendix \ref{calvs} 
 we show how to calculate $(\calv^{\gS,a}_{nm})_{;k^b}$.
-For 
-$\left(\go^S_{nm}\right)_{;k^{\rmc}}$
- we simply use
-Eq.~\eqref{a_gradw2}, that using Eq.~\eqref{na_delta} gives
-\begin{equation}\label{eli.1}
-\left(\go^S_{nm}\right)_{;k^{\rmc}}
-=\Delta^{\lda,\rmc}_{nm}
-,
-\end{equation}
-and from Eq.~\eqref{rgendevapn}
-\begin{eqnarray}\label{eli.2}
-(r^{\rmb}_{nm})_{;k^{\rma}}
-&\approx&
-\frac{
-r^{\rma}_{nm}
-\Delta^{\lda,\rmb}_{mn}
-+r^{\rmb}_{nm}
-\Delta^{\lda,\rma}_{mn}
-}
-{\go^\lda_{nm}}
-+
-\frac{i}{\go^\lda_{nm}}
-\sum_{\ell}
-\bigg(
-\go^\lda_{\ell m}
-r^{\rma}_{n\ell}
-r^{\rmb}_{\ell m}
--
-\go^\lda_{n\ell}
-r^{\rmb}_{n\ell}
-r^{\rma}_{\ell m}
-\bigg)
-,
-\end{eqnarray}
-
-
-
 Therefore, all the remaining non-zero terms in expressions \eqref{pfe}
 and \eqref{pfi} 
 are simple $\go$ and $2\go$ resonant denominators well behaved at zero
@@ -2666,28 +2620,20 @@ from where
 &=&
 \bfv^\gS_{nn}
 \nonumber\\
-\nabla_\bfk(\go^\lda_n(\bfk)+\frac{\gD}{\hbar}(1-f_n))
-&=&
-\nabla_\bfk\go^\lda_n(\bfk)
-\nonumber\\
 \nabla_\bfk\go^\lda_n(\bfk)
 &=&
-\bfv^\gS_{nn}
-,
+\frac{\bfp_{nn}}{m_e}
+.
 \end{eqnarray}
-where we used Eq.~\eqref{chon.78},
-but from 
-Eq.~\eqref{chon.2}, $v^S_{nn}=0$, and then
-$\bfv^\gS_{nn}=v^\lda_{nn}$.
+where we used $\bfv^\gS_{nn}=\bfp_{nn}/m_e$ (see Eq.~\eqref{chon.2}), and Eq.~\eqref{chon.78}.
 Thus,  from Eq.~\eqref{a_wgendev}
 \begin{equation}\label{a_gradw2}
 (\go^S_n(\bfk))_{;k^{\rma}}=
 (\go^\lda_n(\bfk))_{;k^{\rma}}=
-v^{\lda,\rma}_{nn}(\bfk)
+\frac{p^{\rma}_{nn}(\bfk)}{m_e}
 ,
 \end{equation}
-the same for the LDA and scissored Hamiltonians; $\bfv_{nn}^\lda$ are
-the LDA velocities of the electron in state $\ket{n\bfk}$.
+the same for the LDA and scissored Hamiltonians.
 
 \section{Generalized derivative $(\bfr_{nm}(\bfk))_{;\bfk}$}\label{gder}
 
@@ -2696,7 +2642,7 @@ We start with the basic result
 \begin{equation}\label{a_hrdab}
 [r^{\rma},p^{\rmb}]=i\hbar\gd_{ab}
 ,
-\end{equation} 
+\end{equation}
 then
 \begin{equation}\label{a_hrdab2}
 \bra{n\bfk}[r^{\rma},p^{\rmb}]\ket{m\bfk'}=i\hbar\gd_{ab}\gd_{nm}\gd(\bfk-\bfk')
@@ -3042,965 +2988,19 @@ r^{\rma}_{\ell m}
 \bigg)
 \end{eqnarray}
 
-\section{Generalized derivative $(\bfr_{nm}(\bfk))_{;\bfk}$ for
-  non-local potentials}\label{gder}
-
-We obtain the generalized derivative $(\bfr_{nm}(\bfk))_{;\bfk}$ for
-the case of a non-local potential in the Hamiltonian.
-We start from (see Eq.~\eqref{conhr})
-\begin{equation}\label{na_hrdab}
-[r^{\rma},v^{\lda,\rmb}]= 
-\frac{i\hbar}{m_e}\gd_{ab}+
-\frac{1}{i\hbar}[r^{\rma},v^{\nl,\rmb}]
-\equiv
-\calc^{\rma\rmb}
-,
-\end{equation} 
-then
-\begin{equation}\label{na_hrdab2}
-\bra{n\bfk}[r^{\rma},v^{\lda,\rmb}]\ket{m\bfk'}
-=
-\bra{n\bfk}\calc^{\rma\rmb}\ket{m\bfk'}
-=
-\calc^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
-,
-\end{equation}
-so
-\begin{equation}\label{na_hrdab3}
-\bra{n\bfk}[r^{\rma}_i,v^{\lda,\rmb}]\ket{m\bfk'}
-+
-\bra{n\bfk}[r^{\rma}_e,v^{\lda,\rmb}]\ket{m\bfk'}
-=
-\calc^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
-.
-\end{equation}
-From Eq.~\eqref{conmri3} and ~\eqref{gendev}
-\begin{equation}\label{na_rip}
-\bra{n\bfk}[r^{\rma}_i,v_\lda^{\rmb}]\ket{m\bfk'}
-=i\gd(\bfk-\bfk')(v_{nm}^{\lda,\rmb})_{;k^{\rma}}
-\end{equation}
-\begin{equation}\label{na_ripn}
-(v^{\lda,\rmb}_{nm})_{;k^{\rma}}=
-\nabla_{k^{\rma}}
-v^{\lda,\rmb}_{n m}(\bfk)
--
-i
-v^{\lda,\rmb}_{nm}(\bfk)
-\left(
-\xi^{\rma}_{nn}(\bfk)
--
-\xi^{\rma}_{mm}(\bfk)
-\right)
-,
-\end{equation}
-and
-\begin{eqnarray}\label{na_rep}
-\bra{n\bfk}[r^{\rma}_e,v^{\lda,\rmb}]\ket{m\bfk'}&=&
-\sum_{\ell\bfk''}
-\bigg(
-\bra{n\bfk}r^{\rma}_e\ket{\ell\bfk''}\bra{\ell\bfk''}v^{\lda,\rmb}\ket{m\bfk'}
-\nonumber \\
-&&
--
-\bra{n\bfk}v^{\lda,\rmb}\ket{\ell\bfk''}\bra{\ell\bfk''}r^{\rma}_e\ket{m\bfk'}
-\bigg)
-\nonumber \\
-&=&
-\sum_{\ell\bfk''}
-\bigg(
-(1-\gd_{n\ell})\gd(\bfk-\bfk'')\xi^{\rma}_{n\ell}
-\gd(\bfk''-\bfk')v^{\lda,\rmb}_{\ell m}
-\nonumber \\
-&&-
-\gd(\bfk-\bfk'')v^{\lda,\rmb}_{n\ell}
-(1-\gd_{\ell m})\gd(\bfk''-\bfk')\xi^{\rma}_{\ell m}
-\bigg)
-\nonumber \\
-&=&
-\gd(\bfk-\bfk')
-\sum_{\ell}
-\bigg(
-(1-\gd_{n\ell})
-\xi^{\rma}_{n\ell}
-v^{\lda,\rmb}_{\ell m}
-\nonumber \\
-&&-
-(1-\gd_{\ell m})
-v^{\lda,\rmb}_{n\ell}
-\xi^{\rma}_{\ell m}
-\bigg)
-\nonumber \\
-&=&
-\gd(\bfk-\bfk')
-\bigg(
-\sum_{\ell}
-\bigg(
-\xi^{\rma}_{n\ell}
-v^{\lda,\rmb}_{\ell m}
--
-v^{\lda,\rmb}_{n\ell}
-\xi^{\rma}_{\ell m}
-\bigg)
-\nonumber \\
-&&+
-v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
--
-\xi^{\rma}_{nn}
-)
-\bigg)
-.
-\end{eqnarray}
-Using Eqs.~\eqref{na_rip} and ~\eqref{na_rep}
-into Eq.~\eqref{na_hrdab3} gives
-\begin{eqnarray}\label{na_rapb}
-i\gd(\bfk-\bfk')
-\bigg(
-(v^{\lda,\rmb}_{nm})_{;k^{\rma}}
-&&
--i
-\sum_{\ell}
-\bigg(
-\xi^{\rma}_{n\ell}
-v^{\lda,\rmb}_{\ell m}
--
-v^{\lda,\rmb}_{n\ell}
-\xi^{\rma}_{\ell m}
-\bigg)
-\nonumber \\
-&&
--i
-v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
--
-\xi^{\rma}_{nn}
-)
-\bigg)
-=
-\calc^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
-,
-\end{eqnarray}
-then
-\begin{eqnarray}\label{na_rapb2}
-(v^{\lda,\rmb}_{nm})_{;k^{\rma}}&=&
--i
-\calc^{\rma\rmb}_{nm}
-+i
-\sum_{\ell}
-\bigg(
-\xi^{\rma}_{n\ell}
-v^{\lda,\rmb}_{\ell m}
--
-v^{\lda,\rmb}_{n\ell}
-\xi^{\rma}_{\ell m}
-\bigg)
-\nonumber \\
-&&+i
-v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
--
-\xi^{\rma}_{nn}
-)
-,
-\end{eqnarray}
-and from Eq.~\eqref{na_ripn},
-\begin{eqnarray}\label{ncogno}
-\nabla_{k^{\rma}}v^{\lda,\rmb}_{nm}=
--i\calc^{\rma\rmb}_{nm}
-+i
-\sum_{\ell}
-\bigg(
-\xi^{\rma}_{n\ell}
-v^{\lda,\rmb}_{\ell m}
--
-v^{\lda,\rmb}_{n\ell}
-\xi^{\rma}_{\ell m}
-\bigg)
-.
-\end{eqnarray}
-Now, there are two cases. We use Eqs.~\eqref{xir} and ~\eqref{chon.98}.
-
-\noindent {\it Case} $n=m$
-\begin{eqnarray}\label{ntita}
-\nabla_{k^{\rma}}v^{\lda,\rmb}_{nn}&=&
--i\calc^{\rma\rmb}_{nn}
-+i
-\sum_{\ell}
-\bigg(
-\xi^{\rma}_{n\ell}
-v^{\lda,\rmb}_{\ell n}
--
-v^{\lda,\rmb}_{n\ell}
-\xi^{\rma}_{\ell n}
-\bigg)
-\nonumber\\
-&=&
--i\calc^{\rma\rmb}_{nn}
--
-\sum_{\ell\ne n}
-\bigg(
-r^{\rma}_{n\ell}
-\go^\lda_{\ell n}
-r^\rmb_{\ell n}
--
-\go^\lda_{n\ell}
-r^\rmb_{n\ell}
-r^{\rma}_{\ell n}
-\bigg)
-\nonumber\\
-&=&
--i\calc^{\rma\rmb}_{nn}
--
-\sum_{\ell\ne n}
-\go^\lda_{\ell n}
-\bigg(
-r^{\rma}_{n\ell}
-r^\rmb_{\ell n}
-+
-r^\rmb_{n\ell}
-r^{\rma}_{\ell n}
-\bigg)
-,
-\end{eqnarray}
-since the $\ell=n$ cancels out. This
-would give the generalization of the familiar expansion for the inverse effective mass
-tensor $(m_n^{-1})_{ab}$.\cite{aschcroft}
-Indeed, if we neglect the commutator of $\bfv^\nl$ in
-Eq.~\eqref{na_hrdab}, we obtain 
-$-i\calc^{\rma\rmb}_{nn}=\hbar/m_e\gd_{\rma\rmb}$
-thus obtaining Eq.~\eqref{tita}.
-
-\noindent {\it Case} $n\ne m$
-\begin{eqnarray}\label{nmes}
-(v^{\lda,\rmb}_{nm})_{;k^{\rma}}&=&
--i\calc^{\rma\rmb}_{nm}
-+i
-\sum_{\ell\ne m\ne n}
-\bigg(
-\xi^{\rma}_{n\ell}
-v^{\lda,\rmb}_{\ell m}
--
-v^{\lda,\rmb}_{n\ell}
-\xi^{\rma}_{\ell m}
-\bigg)
-\nonumber\\
-&&+
-i
-\bigg(
-\xi^{\rma}_{nm}
-v^{\lda,\rmb}_{mm}
--
-v^{\lda,\rmb}_{nm}
-\xi^{\rma}_{mm}
-\bigg)
-\nonumber\\
-&&+
-i
-\bigg(
-\xi^{\rma}_{nn}
-v^{\lda,\rmb}_{nm}
--
-v^{\lda,\rmb}_{nn}
-\xi^{\rma}_{nm}
-\bigg)
-+i
-v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
--
-\xi^{\rma}_{nn}
-)
-\nonumber \\
-&=&
--i\calc^{\rma\rmb}_{nm}
--
-\sum_{\ell}
-\bigg(
-\go^\lda_{\ell m}
-r^{\rma}_{n\ell}
-r^{\rmb}_{\ell m}
--
-\go^\lda_{n\ell}
-r^{\rmb}_{n\ell}
-r^{\rma}_{\ell m}
-\bigg)
-+i
-\xi^{\rma}_{nm}
-(v^{\lda,\rmb}_{mm}
--
-v^{\lda,\rmb}_{nn}
-)
-\nonumber \\
-&=&
--i\calc^{\rma\rmb}_{nm}
--
-\sum_{\ell}
-\bigg(
-\go^\lda_{\ell m} 
-r^{\rma}_{n\ell} 
-r^{\rmb}_{\ell m}
--
-\go^\lda_{n\ell} 
-r^{\rmb}_{n\ell} 
-r^{\rma}_{\ell m}
-\bigg)
-+i 
-r^{\rma}_{nm}
-\Delta^{\rmb}_{mn}
-,
-\end{eqnarray} 
-where
-\begin{equation}\label{na_delta}
-\Delta^{\lda,\rma}_{mn}=
-v^{\lda,\rma}_{mm}-v^{\lda,\rma}_{nn}
-.
-\end{equation}
-Now, for $n \ne m$, Eqs.~\eqref{chon.98},
-~\eqref{a_gradw2} and 
-~\eqref{nmes} and the chain rule, give
-\begin{eqnarray}\label{na_rgendevn}
-(r^{\rmb}_{nm})_{;k^{\rma}}&=&\left(\frac{v^{\lda,\rmb}_{nm}}{i\go^\lda_{nm}}\right)_{;k^{\rma}}
-=
-\frac{1}
-{i\go^\lda_{nm}}
-\left(
-v^{\lda,\rmb}_{nm}
-\right)_{;k^{\rma}}
--
-\frac{v^{\lda,\rmb}_{nm}}
-{i(\go^\lda_{nm})^2}
-\left(
-\go^\lda_{nm}
-\right)_{;k^{\rma}}
-\nonumber \\
-&=&
--i\calc^{\rma\rmb}_{nm}
-+
-\frac{i}{\go^\lda_{nm}}
-\sum_{\ell}
-\bigg(
-\go^\lda_{\ell m}
-r^{\rma}_{n\ell}
-r^{\rmb}_{\ell m}
--
-\go^\lda_{n\ell}
-r^{\rmb}_{n\ell}
-r^{\rma}_{\ell m}
-\bigg)
-+
-\frac{r^{\rma}_{nm}
-\Delta^{\lda,\rmb}_{mn}}
-{\go^\lda_{nm}}
-\nonumber \\
-&&
--
-\frac{r^{\rmb}_{nm}}
-{\go^\lda_{nm}}
-\left(
-\go^\lda_{nm}
-\right)_{;k^{\rma}}
-\nonumber \\
-&=&
--i\calc^{\rma\rmb}_{nm}
-+
-\frac{i}{\go^\lda_{nm}}
-\sum_{\ell}
-\bigg(
-\go^\lda_{\ell m}
-r^{\rma}_{n\ell}
-r^{\rmb}_{\ell m}
--
-\go^\lda_{n\ell}
-r^{\rmb}_{n\ell}
-r^{\rma}_{\ell m}
-\bigg)
-+
-\frac{r^{\rma}_{nm}
-\Delta^{\lda,\rmb}_{mn}}
-{\go^\lda_{nm}}
-\nonumber \\
-&&
--
-\frac{r^{\rmb}_{nm}}
-{\go_{nm}}
-\frac{v^{\lda,\rma}_{nn}-v^{\lda,\rma}_{mm}}{m_e}
-\nonumber \\
-&=&
--i\calc^{\rma\rmb}_{nm}
-+
-\frac{
-r^{\rma}_{nm}
-\Delta^{\lda,\rmb}_{mn}
-+r^{\rmb}_{nm}
-\Delta^{\lda,\rma}_{mn}
-}
-{\go^\lda_{nm}}
-+
-\frac{i}{\go^\lda_{nm}}
-\sum_{\ell}
-\bigg(
-\go^\lda_{\ell m}
-r^{\rma}_{n\ell}
-r^{\rmb}_{\ell m}
--
-\go^\lda_{n\ell}
-r^{\rmb}_{n\ell}
-r^{\rma}_{\ell m}
-\bigg),\nonumber\\
-\end{eqnarray}
-which is the generalization of Eq.~\eqref{a_rgendevn} for the case of a
-non-local potential in the Hamiltonian.
-
-\section{Matrix elements of $\calc_{nm}(\bfk)$}\label{calc}
-
-\subsection{Matrix elements of $\bfv^\nl_{nm}(\bfk)$}
-
-First we obtain the matrix elements of $\bfv^\nl_{nm}(\bfk)$ by using
-the following commutator in a
-real-space basis
-\begin{eqnarray}\label{cn0}
-\bra{\bfR'}[\hat\bfr,\hat V(\hat\bfr,\hat\bfr')]\ket{\bfR}
-&=&
-\bra{\bfR'}(\hat\bfr\hat V(\hat\bfr,\hat\bfr')
--
-\hat V(\hat\bfr,\hat\bfr')\hat\bfr
-)
-\ket{\bfR}
-\nonumber\\
-&=&
-\int d\bfR''\bra{\bfR'}\hat\bfr\ket{\bfR''}\bra{\bfR''}\hat V(\hat\bfr,\hat\bfr') \ket{\bfR}
--
-\int d\bfR''\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr')\ket{\bfR''}\bra{\bfR''}\hat\bfr\ket{\bfR}
-\nonumber\\
-&=&
-\int d\bfR'' \bfR''\gd(\bfR'-\bfR'')
-\bra{\bfR''}\hat V(\hat\bfr,\hat\bfr') \ket{\bfR}
--
-\int d\bfR''\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr')\ket{\bfR''}\bfR\gd(\bfR''-\bfR)
-\nonumber\\
-&=&
-\bfR'\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr') \ket{\bfR}
--
-\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr')\ket{\bfR}\bfR
-\nonumber\\
-&=&
-\bfR'
-V(\bfR,\bfR')
--
-V(\bfR,\bfR')
-\bfR
-=
-\bfR'
-V(\bfR,\bfR')
--
-\bfR
- V(\bfR,\bfR')
-\nonumber\\
-\bra{\bfR'}[\hat V(\hat\bfr,\hat\bfr'),\hat\bfr]\ket{\bfR}
-&=&
-\bfR
-V(\bfR,\bfR')
--
-\bfR'
- V(\bfR,\bfR')
-\nonumber\\
-\bra{\bfR}[\hat V(\hat\bfr,\hat\bfr'),\hat\bfr]\ket{\bfR'}
-&=&
-\bfR'
-V(\bfR,\bfR')
--
-\bfR
- V(\bfR,\bfR')
-,
-\end{eqnarray} 
-where we used $\hat\bfr\ket{\bfR}=\bfR\ket{\bfR}$, and
-the matrix elements of the non-local operator
-$\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr')\ket{\bfR}=V(\bfR,\bfR')$ just a
-function, no longer an operator, and thus it commutes with $\bfR$ and $\bfR'$.
-Now we distinguish operators and non-operators by the carate symbol,
-\verb=^=, on top.
-We want to calculate
-\begin{eqnarray}\label{cn2}
-\bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^a]\ket{m\bfk'}
-&=&
-\int d\bfr d\bfr'
-\bra{n\bfk}
-\ket{\bfr}\bra{\bfr}
-[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^a]
-\ket{\bfr'}\bra{\bfr'}
-\ket{m\bfk'}
-\nonumber\\
-&=&
-\int d\bfr d\bfr'
-\psi^*_{n\bfk}(\bfr)
-(  
-r'^a V^\nl(\bfr,\bfr')
--  
-r^aV^\nl(\bfr,\bfr')
-)
-\psi_{m\bfk'}(\bfr')
-,
-\end{eqnarray}  
-where due to the fact that the integrand is periodic in real space,
-$\bfk=\bfk'$ where $\bfk$ is restricted to the Brillouin Zone.
-In plane waves we have that
-\begin{eqnarray}\label{cn3}
-\psi_{n\bfk}(\bfr)=\frac{1}{\sqrt{\gO}}
-\sum_{\bfK} C_{n\bfk}(\bfK)e^{i(\bfk+\bfK)\cdot\bfr}
-,
-\end{eqnarray}
-where $\gO$ is the volume of the unit cell.
-Then,
-\begin{eqnarray}\label{cn4}
-\bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^a]\ket{m\bfk}
-&=&
-\frac{1}{\gO}
-\sum_{\bfK,\bfK'} 
-C^*_{n\bfk}(\bfK) 
-C_{m\bfk}(\bfK')
-\int d\bfr d\bfr' 
-e^{-i(\bfk+\bfK)\cdot \bfr}
- ( 
-r'^a V^\nl(\bfr,\bfr')
-- 
-r^aV^\nl(\bfr,\bfr')
-) 
-e^{i(\bfk+\bfK')\cdot \bfr'}
-.
-\nonumber\\
-\end{eqnarray} 
-Using the following identity 
-\begin{eqnarray}\label{cn5}
-(\nabla_\bfK+\nabla_\bfK')
-\int e^{-i\bfK\cdot\bfr}
-V^\nl(\bfr,\bfr')
-e^{i\bfK'\cdot\bfr'}
-\,d\bfr d\bfr'
-&=&
--i
-\int e^{-i\bfK\cdot\bfr}
-\left(
-\bfr
-V^\nl(\bfr,\bfr')
--
-V^\nl(\bfr,\bfr')
-\bfr'
-\right)
-e^{i\bfK'\cdot\bfr'}
-\,d\bfr d\bfr'
-\nonumber\\
-&=&
-i
-\int e^{-i\bfK\cdot\bfr}
-\left(
-\bfr'
-V^\nl(\bfr,\bfr')
--
-\bfr
- V^\nl(\bfr,\bfr')
-\right)
-e^{i\bfK'\cdot\bfr'}
-\,d\bfr d\bfr'
-,
-\nonumber\\
-\end{eqnarray}
-then, we obtain
-\begin{eqnarray}\label{cn5}
-\bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^a]\ket{m\bfk}
-&=&
--\frac{i}{\gO}
-\sum_{\bfK,\bfK'}
-C^*_{n\bfk}(\bfK)
-C_{m\bfk}(\bfK')
-(\nabla_{K^\rma}+\nabla_{K'^\rma})
-\int e^{-i\bfK\cdot\bfr}
-V^\nl(\bfr,\bfr')
-e^{i\bfK'\cdot\bfr'}
-\,d\bfr d\bfr'
-\nonumber\\
-&=&
--\frac{i}{\gO}
-\sum_{\bfK,\bfK'}
-C^*_{n\bfk}(\bfK)
-C_{m\bfk}(\bfK')
-(\nabla_{K^\rma}+\nabla_{K'^\rma})
-\bra{\bfK} 
-V^\nl
-\ket{\bfK'} 
-,
-\end{eqnarray}
-where
-\begin{eqnarray}\label{cn6}
-\bra{\bfK} 
-V^\nl
-\ket{\bfK'} 
-=
-\int e^{-i\bfK\cdot\bfr}
-V^\nl(\bfr,\bfr')
-e^{i\bfK'\cdot\bfr'}
-\,d\bfr d\bfr'
-.
-\end{eqnarray}
-For fully  separable pseudopotentials in the 
-Kleinman-Bylander form,\cite{mottaCMS10,kleinmanPRL82,adolphPRB96}
-above matrix elements 
-can be readily calculated.\cite{francesco}
-Therefore,
-\begin{eqnarray}\label{cn8}
-\frac{i}{\hbar}
-\bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rma]\ket{m\bfk'}
-=\gd(\bfk-\bfk') \bfv^\nl_{nm}(\bfk)
-,
-\end{eqnarray}
-where $\bfv^\nl_{nm}(\bfk)$ are known quantities.
-
-% From Eq.~\eqref{na_hrdab}, we need to further calculate
-% \begin{eqnarray}\label{cn9}
-% \frac{1}{i\hbar}
-% \bra{n\bfk}
-% [\hat r^{\rma},\hat v^{\nl,\rmb}]
-% \ket{m\bfk'}
-% &=&
-% \frac{1}{i\hbar}
-% \bra{n\bfk}
-% [\hat r_i^{\rma},\hat v^{\nl,\rmb}]
-% \ket{m\bfk'}
-% +
-% \frac{1}{i\hbar}
-% \bra{n\bfk}
-% [\hat r_e^{\rma},\hat v^{\nl,\rmb}]
-% \ket{m\bfk'}
-% ,
-% \end{eqnarray} 
-% from Eq.~\eqref{conmri3} and \eqref{gendev}
-% \begin{eqnarray}\label{cn19}
-% \bra{n\bfk}[\hat r_i^\rma,\hat v^{\nl,\rmb}]\ket{m\bfk'}
-% &=&i\gd(\bfk-\bfk')
-% (\hat v^{\nl,\rmb}_{nm})_{;k^\rma}
-% \nonumber\\
-% &=&
-% \gd(\bfk-\bfk')\Big(i\nabla_{k^\rma}
-% v^{\nl,\rmb}_{n m}(\bfk)
-% +
-% v^{\nl,\rmb}_{nm}(\bfk)
-% \big(
-% \xi^\rma_{nn}(\bfk)
-% -
-% \xi^\rma_{mm}(\bfk)
-% \big)
-% \Big)
-% ,
-% \end{eqnarray} 
-% and a similar algebra to that of Eq.~\eqref{na_rep} leads to
-% \begin{eqnarray}\label{cn11}
-% \bra{n\bfk}[\hat r^{\rma}_e,\hat v^{\nl,\rmb}]\ket{m\bfk'}&=&
-% \gd(\bfk-\bfk')
-% \bigg(
-% \sum_{\ell}
-% \bigg(
-% \xi^{\rma}_{n\ell}
-% v^{\nl,\rmb}_{\ell m}
-% -
-% v^{\nl,\rmb}_{n\ell}
-% \xi^{\rma}_{\ell m}
-% \bigg)
-% +
-% v^{\nl,\rmb}_{nm}(\xi^{\rma}_{mm}
-% -
-% \xi^{\rma}_{nn}
-% )
-% \bigg)
-% .
-% \end{eqnarray}
-% Putting these last two equations into Eq.~\eqref{cn9} we get
-% \begin{eqnarray}\label{cn12}
-% \frac{1}{i\hbar}
-% \bra{n\bfk}
-% [\hat r^{\rma},\hat v^{\nl,\rmb}]
-% \ket{m\bfk'}
-% &=&
-% \frac{1}{i\hbar}
-% \gd(\bfk-\bfk')\bigg(i
-% \nabla_{k^\rma}v^{\nl,\rmb}_{n m}
-% +
-% \sum_{\ell}
-% \big(
-% \xi^{\rma}_{n\ell}
-% v^{\nl,\rmb}_{\ell m}
-% -
-% v^{\nl,\rmb}_{n\ell}
-% \xi^{\rma}_{\ell m}
-% \big)
-% \bigg)
-% .
-% \end{eqnarray}
-% For $n=m$ above expresion can be evaluated, provided that 
-% $\nabla_{k^\rma}v^{\nl,\rmb}_{nn}$ is calculated, which is
-% numerically doable. However for $n\ne m$ above expresion involves
-% $\xi^\rma_{nn}$ which is not clear how to calculate it! Like wise, the
-% generalized derivative is not computable, thus, we
-% reached a {\it cul-de-sac}. Therefore, do we have to neglect the
-% contribution of $\bfv^\nl$ throughout the calculation?
-
-\subsection{Triple commutator}\label{3com}
-
-We want to calculate
-\begin{eqnarray}\label{3.1}
-\calt^{\rma\rmb}_{nm}(\bfk)=\frac{1}{i\hbar}
-\bra{n\bfk}
-[\hat r^{\rma},\hat v^{\nl,\rmb}]
-\ket{m\bfk'}\gd(\bfk-\bfk')
-=
-\frac{1}{\hbar^2}
-\bra{n\bfk}
-\big[\hat r^{\rma},[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rmb]\big]
-\ket{m\bfk'}\gd(\bfk-\bfk')
-,
-\end{eqnarray} 
-for which we need the following triple commutator
-\begin{eqnarray}\label{3.2}
-\big[\hat r^{\rma},[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rmb]\big]
-=
-\big[\hat r^{\rmb},[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rma]\big]
-,
-\end{eqnarray} 
-where the r.h.s follows form the Jacobi identity, since $[\hat
-r^\rma,\hat r^\rmb]=0$.
- We expand  the triple commutator as,
-\begin{eqnarray}\label{3.3}
-\big[\hat r^{\rma},[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rmb]\big]
-&=&
-\big[\hat r^{\rma},
-\hat V^\nl(\hat\bfr,\hat\bfr')\hat r^\rmb
-\big]
--
-\big[\hat r^{\rma},
-\hat r^\rmb\hat V^\nl(\hat\bfr,\hat\bfr')
-\big]
-\nonumber\\
-&=&
-\big[\hat r^{\rma},
-\hat V^\nl(\hat\bfr,\hat\bfr')
-\big]\hat r^\rmb
--
-\hat r^\rmb
-\big[\hat r^{\rma},
-\hat V^\nl(\hat\bfr,\hat\bfr')
-\big]
-\nonumber\\
-&=&
-\hat r^{\rma}
-\hat V^\nl(\hat\bfr,\hat\bfr')
-\hat r^\rmb
--
-\hat V^\nl(\hat\bfr,\hat\bfr')
-\hat r^\rma
-\hat r^{\rmb}
--
-\hat r^\rmb
-\hat r^{\rma}
-\hat V^\nl(\hat\bfr,\hat\bfr')
-+
-\hat r^\rmb
-\hat V^\nl(\hat\bfr,\hat\bfr')
-\hat r^{\rma}
-.
-\end{eqnarray}
-Then,
-\begin{eqnarray}\label{3.5}
-\frac{1}{\hbar^2}
-\bra{n\bfk}
-\big[\hat r^{\rma},[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rmb]\big]
-\ket{m\bfk'}
-&=&
-\frac{1}{\hbar^2}
-\int d\bfr d\bfr'
-\bra{n\bfk}
-\ket{\bfr}\bra{\bfr}
-\big[\hat r^{\rma},[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rmb]\big]
-\ket{\bfr'}\bra{\bfr'}
-\ket{m\bfk'}\gd(\bfk-\bfk')
-\nonumber\\
-&=&
-\frac{1}{\hbar^2}
-\int d\bfr d\bfr'
-\psi^*_{n\bfk}(\bfr)
-\Big(
-r^{\rma}
-V^\nl(\bfr,\bfr')
-r'^\rmb
--
-V^\nl(\bfr,\bfr')
-r'^\rma
-r'^{\rmb}
-\nonumber\\
-&-&
-r^\rmb
-r^{\rma}
-V^\nl(\bfr,\bfr')
-+
- r^\rmb
-V^\nl(\bfr,\bfr')
-r'^{\rma}
-\Big) 
-\psi_{m\bfk}(\bfr')
-\gd(\bfk-\bfk')
-\nonumber\\
-&=&
-\frac{1}{\hbar^2\gO}
-\sum_{\bfK,\bfK'} 
-C^*_{n\bfk}(\bfK) 
-C_{m\bfk}(\bfK')
-\int
-d\bfr d\bfr'
- e^{-i\bfK\cdot\bfr}
-\Big(
-r^{\rma}
-V^\nl(\bfr,\bfr')
-r'^\rmb
--
-V^\nl(\bfr,\bfr')
-r'^\rma
-r'^{\rmb}
-\nonumber\\
-&-&
-r^\rmb
-r^{\rma}
-V^\nl(\bfr,\bfr')
-+
- r^\rmb
-V^\nl(\bfr,\bfr')
-r'^{\rma}
-\Big) 
- e^{i\bfK'\cdot\bfr'}
-\gd(\bfk-\bfk')
-.
-\end{eqnarray} 
-We use the following identity
-\begin{eqnarray}\label{3.4}
-&&
-\Big(
-\frac{\partial^2}{\partial K^\rma\partial K'^\rmb}
-+
-\frac{\partial^2}{\partial K'^\rma\partial K'^\rmb}
-+
-\frac{\partial^2}{\partial K^\rma\partial K^\rmb}
-+
-\frac{\partial^2}{\partial K^\rmb\partial K'^\rma}
-\Big)
-\int
-d\bfr d\bfr'
- e^{-i\bfK\cdot\bfr}
-V^\nl(\bfr,\bfr')
-e^{i\bfK'\cdot\bfr'}
-\nonumber\\
-&=&
-\int d\bfr d\bfr'
- e^{-i\bfK\cdot\bfr}
-\Big( 
-r^{\rma} 
-V^\nl(\bfr,\bfr') 
-r'^\rmb
-- 
-V^\nl(\bfr,\bfr') 
-r'^\rma 
-r'^{\rmb}
-- 
-r^\rmb 
-r^{\rma} 
-V^\nl(\bfr,\bfr')
-+
- r^\rmb 
-V^\nl(\bfr,\bfr') 
-r'^{\rma}
-\Big)  
-e^{i\bfK'\cdot\bfr'}
-\nonumber\\
-&=&
-\Big(
-\frac{\partial^2}{\partial K^\rma\partial K'^\rmb}
-+
-\frac{\partial^2}{\partial K'^\rma\partial K'^\rmb}
-+
-\frac{\partial^2}{\partial K^\rma\partial K^\rmb}
-+
-\frac{\partial^2}{\partial K^\rmb\partial K'^\rma}
-\Big)
-\bra{\bfK} 
-V^\nl
-\ket{\bfK'} 
-,
-\end{eqnarray}
-to write
-\begin{eqnarray}\label{3.7}
-\calt^{\rma\rmb}_{nm}(\bfk)
-&=&
-\frac{1}{\hbar^2\gO}
-\sum_{\bfK,\bfK'} 
-C^*_{n\bfk}(\bfK) 
-C_{m\bfk}(\bfK')
-\Big(
-\frac{\partial^2}{\partial K^\rma\partial K'^\rmb}
-+
-\frac{\partial^2}{\partial K'^\rma\partial K'^\rmb}
-+
-\frac{\partial^2}{\partial K^\rma\partial K^\rmb}
-+
-\frac{\partial^2}{\partial K^\rmb\partial K'^\rma}
-\Big)
-\bra{\bfK} 
-V^\nl
-\ket{\bfK'} 
-\nonumber\\
-.
-\end{eqnarray} 
-The double derivatives with respect to $\bfK$ and $\bfK'$ can be worked out as
-it is done to obtain the matrix elements of
-$[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rmb]$, 
-Eq.~\eqref{cn5}, 
-in the notes of Valerio Olevano,\cite{cual}
-and thus we
-could have the value of the matrix elements of the triple commutator!
-
-With above results we can proceed to evaluate the matrix elements of $\calc$.
-From Eq.~\eqref{na_hrdab}
-\begin{eqnarray}\label{na_hrdabn}
-\bra{n\bfk}
-\calc^{\rma\rmb}
-\ket{m\bfk'}
-&=&
-\bra{n\bfk}
-\frac{i\hbar}{m_e}\gd_{ab}
-\ket{m\bfk'}
-+
-\bra{n\bfk}
-\frac{1}{i\hbar}[r^{\rma},v^{\nl,\rmb}]
-\ket{m\bfk'}
-\nonumber\\
-\calc^{\rma\rmb}_{nm}(\bfk)
-\gd(\bfk-\bfk')
-&=&
-\gd(\bfk-\bfk')
-\Big(
-\frac{i\hbar}{m_e}\gd_{ab}\gd_{nm}
-+
-\calt_{nm}^{\rma\rmb}(\bfk)\big)
-\nonumber\\
-\calc^{\rma\rmb}_{nm}(\bfk)
-=\calc^{\rmb\rma}_{nm}(\bfk)
-&=&
-\frac{i\hbar}{m_e}\gd_{ab}\gd_{nm}
-+
-\calt_{nm}^{\rma\rmb}(\bfk)
-,
-\end{eqnarray}
-which is an explicit expression that can be numerically calculated.
-
-\section{Generalized derivative 
-$\Big({\cal V}^{\gS,\rma,\ell}_{nm}\Big)_{;k^\rmb}$}\label{calvs} 
-From Eq.~\eqref{vopii} %and \eqref{conhr}
+\section{$\Big({\cal V}^{\gS,\rma,\ell}_{nm}\Big)_{;k^\rmb}$}\label{calvs}
 \begin{eqnarray}\label{a.1}
 \left(
 \calv^{\gS,\rma,\ell}_{nm}
 \right)_{;k^\rmb}
 =
+\frac{1}{m_e}
 \left(
-\calv^{\lda,\rma,\ell}_{nm}
+\calp^{\rma,\ell}_{nm}
+\right)_{;k^\rmb}
++
+\left(
+\calv^{\nl,\rma,\ell}_{nm}
 \right)_{;k^\rmb}
 +
 \left(
@@ -4008,47 +3008,48 @@ From Eq.~\eqref{vopii} %and \eqref{conhr}
 \right)_{;k^\rmb}
 .
 \end{eqnarray}
-For the LDA terme we have
+For the canonical momentum $\bfp=-i\hbar\bfgnabla$, we have
 \begin{eqnarray}\label{a.2}
-\calv^{\lda,\rma,\ell}_{nm}
+\calp^{\rma,\ell}_{nm}
 &=&
 \frac{1}{2}\left(
-v^{\lda,\rma}\calf^\ell+\calf^\ell v^{\lda,\rma}
+p^\rma\calf^\ell+\calf^\ell p^\rma
 \right)_{nm}
 \nonumber\\
 &=&
 \frac{1}{2}\sum_q\left(
-v^{\lda,\rma}_{nq}\calf^\ell_{qm}+\calf^\ell_{nq} v^{\lda,\rma}_{qm}
+p^\rma_{nq}\calf^\ell_{qm}+\calf^\ell_{nq} p_{qm}^\rma
 \right)
 \nonumber\\
-\left(\calv^{\lda,\rma}_{nm}\right)_{;k^\rmb}
+\left(\calp^\rma_{nm}\right)_{;k^\rmb}
 &=&
 \frac{1}{2}\sum_q\left(
-v^{\lda,\rma}_{nq}\calf^\ell_{qm}+\calf^\ell_{nq} p^{\lda,\rma}_{qm}
+p^\rma_{nq}\calf^\ell_{qm}+\calf^\ell_{nq} p_{qm}^\rma
 \right) _{;k^\rmb}
 \nonumber\\
 &=&
 \frac{1}{2}\sum_q\left(
-(v^{\lda,\rma}_{nq})_{;k^\rmb}\calf^\ell_{qm}
+(p^\rma_{nq})_{;k^\rmb}\calf^\ell_{qm}
 + 
-v^{\lda,\rma}_{nq}(\calf^\ell_{qm})_{;k^\rmb}
+p^\rma_{nq}(\calf^\ell_{qm})_{;k^\rmb}
 +
-(\calf^\ell_{nq})_{;k^\rmb} v^{\lda,\rma}_{qm}
+(\calf^\ell_{nq})_{;k^\rmb} p_{qm}^\rma
 +
-\calf^\ell_{nq} (v^{\lda,\rma}_{qm})_{;k^\rmb}
+\calf^\ell_{nq} (p_{qm}^\rma)_{;k^\rmb}
 \right)
 ,
 \end{eqnarray} 
 where we omitted $\bfk$ in all quantities.
-From Eq.~\eqref{cn8} we know that $\bfv^\nl_{nm}(\bfk)$
- can be readily
-calculated and thus 
-$\bfv^\lda_{nm}(\bfk)$ are known.
-For the generalized derivative 
-$(\bfv^\lda_{nm}(\bfk))_{;\bfk}$ we use Eq.~\eqref{chon.98}
-to write
+At this stage we have to neglect the contribution coming from
+$V^\nl(\bfr,\bfr')$, since the sum rules that are used in order to get
+the generalized derivative $(\bfr_{nm}(\bfk))_{;\bfk}$ are only valid
+for $V^l(\bfr)$ (Eq.~\eqref{ache.2}), i.e. local potentials.\cite{nastosPRB05}
+Then, we neglect $\bfv^\nl$, with which $\bfv^\lda\to\bfp/m_e$ (Eq.~\eqref{conhr}).
+Now, for $(p^\rma_{nm})_{;k^\rmb}$
+we can use
+Eq.~\eqref{chon.98} to write
 \begin{eqnarray}\label{a.3}
-(v^{\lda,\rma}_{nm})_{;k^\rmb}
+(p^\rma_{nm})_{;k^\rmb}
 &=& 
 im_e(\go^\lda_{nm}r^\rma_{nm})_{;k^\rmb}
 \nonumber\\
@@ -4056,119 +3057,12 @@ im_e(\go^\lda_{nm}r^\rma_{nm})_{;k^\rmb}
 im_e(\go^\lda_{nm})_{;k^\rmb} r^\rma_{nm}
 + 
 im_e\go^\lda_{nm}(r^\rma_{nm})_{;k^\rmb}
-\nonumber\\
-&=& 
-im_e(v^{\lda,b}_{nn}-v^{\lda,b}_{mm})r^\rma_{nm}
-+ 
-im_e\go^\lda_{nm}(r^\rma_{nm})_{;k^\rmb}
-\nonumber\\
-&=& 
-im_e\gD^{\lda,b}_{nm}r^\rma_{nm}
-+ 
-im_e\go^\lda_{nm}(r^\rma_{nm})_{;k^\rmb}
-\quad\mathrm{for}\quad n\ne m
 ,
 \end{eqnarray} 
-where we used Eqs.~\eqref{a_gradw2} (ann then Eq.~\eqref{na_delta})
- for the first term in the r.h.s
-of the middle equation
-and for the second term of the last equation we use
- \eqref{na_rgendevn} as follows
-\begin{eqnarray}\label{rgendevapn}
-(r^{\rmb}_{nm})_{;k^{\rma}}
-&=&
--i\calt^{\rma\rmb}_{nm}
-+
-\frac{ 
-r^{\rma}_{nm}
-\Delta^{\lda,\rmb}_{mn}
-+r^{\rmb}_{nm}
-\Delta^{\lda,\rma}_{mn}
-}
-{\go^\lda_{nm}}
-+
-\frac{i}{\go^\lda_{nm}}
-\sum_{\ell}
-\bigg(
-\go^\lda_{\ell m} 
-r^{\rma}_{n\ell} 
-r^{\rmb}_{\ell m}
--
-\go^\lda_{n\ell} 
-r^{\rmb}_{n\ell} 
-r^{\rma}_{\ell m}
-\bigg)
-\nonumber\\
-&\approx&
-\frac{ 
-r^{\rma}_{nm}
-\Delta^{\lda,\rmb}_{mn}
-+r^{\rmb}_{nm}
-\Delta^{\lda,\rma}_{mn}
-}
-{\go^\lda_{nm}}
-+
-\frac{i}{\go^\lda_{nm}}
-\sum_{\ell}
-\bigg(
-\go^\lda_{\ell m} 
-r^{\rma}_{n\ell} 
-r^{\rmb}_{\ell m}
--
-\go^\lda_{n\ell} 
-r^{\rmb}_{n\ell} 
-r^{\rma}_{\ell m}
-\bigg)
-,
-\end{eqnarray} 
-where from Eq.~\eqref{na_hrdabn} 
-$\calc^{\rma\rmb}_{nm}=\calt^{\rma\rmb}_{nm}$ for $n\ne m$, but 
-$\calt^{\rma\rmb}_{nm}\approx 0$, and thus we neglect it.\cite{valerie} 
-
-For $n=m$, 
-we use Eqs.~\eqref{na_ripn} and \eqref{ntita}, to write
-\begin{eqnarray}\label{a.3c}
-(v^{\lda,\rma}_{nn})_{;k^\rmb}
-=
-\nabla_{k^{\rma}}
-v^{\lda,\rmb}_{nn}(\bfk)
-&=&
--i\calc^{\rma\rmb}_{nn}
--
-\sum_{\ell\ne n}
-\go^\lda_{\ell n}
-\bigg(
-r^{\rma}_{n\ell}
-r^\rmb_{\ell n}
-+
-r^\rmb_{n\ell}
-r^{\rma}_{\ell n}
-\bigg)
-\nonumber\\
-&=&
-\frac{\hbar}{m_e}\gd_{\rma\rmb}
--
-\sum_{\ell\ne n}
-\go^\lda_{\ell n}
-\bigg(
-r^{\rma}_{n\ell}
-r^\rmb_{\ell n}
-+
-r^\rmb_{n\ell}
-r^{\rma}_{\ell n}
-\bigg)
-,
-\end{eqnarray}
-which is the standard effective-mas sum rule.\cite{nastosPRB05} 
-Again, we used Eq.~\eqref{na_hrdabn}, that for $n=m$ leads to 
-$\calc^{\rma\rmb}_{nn}=i\hbar\gd_{ab}/m_e
-+
-\calt_{nn}^{\rma\rmb}(\bfk)
-\approx i\hbar\gd_{ab}/m_e
-$.\cite{valerie}
-
+and use Eqs.~\eqref{a_gradw2} and \eqref{a_rgendevn} (with
+$\go_n\to\go_n^\lda$).
 Likewise,
-\begin{eqnarray}\label{a.3b}
+\begin{eqnarray}\label{a.3}
 \calv^{S,\rma,\ell}_{nm}
 &=&
 \frac{1}{2}\sum_q\left(
@@ -4387,8 +3281,6 @@ notice that the last term is zero for $n=m$.
 
 \section{$\Big({\cal R}^\rma_{nm}\Big)_{;k^\rmb}$}\label{calr}
 
-***NOT NEEDED, and perhaps is even wrong!!***
- 
 We rewrite Eq.~\eqref{mes} and \eqref{chon.98} as
 \begin{eqnarray}\label{mesnn}
 (p^{\rma}_{nm})_{;k^{\rmb}}&=& 
@@ -4470,7 +3362,7 @@ then, using Eq.~\eqref{mesnn2}
 \nonumber \\
 &=&
 \frac{r^{\rmb}_{nm}
-\Delta^{\lda,\rma,\ell}_{mn}}
+\Delta^{\rma,\ell}_{mn}}
 {\go_{nm}}
 +
 \frac{i}{\go_{nm}}
@@ -4495,7 +3387,7 @@ r^{\rmb}_{\ell m}
 \nonumber \\
 &=&
 \frac{r^{\rmb}_{nm}
-\Delta^{\lda,\rma,\ell}_{mn}}
+\Delta^{\rma,\ell}_{mn}}
 {\go_{nm}}
 +
 \frac{i}{\go_{nm}}
@@ -4518,7 +3410,7 @@ r^{\rmb}_{\ell m}
 \nonumber \\
 &=&
 \frac{r^{\rmb}_{nm}
-\Delta^{\lda,\rma,\ell}_{mn}}
+\Delta^{\rma,\ell}_{mn}}
 {\go_{nm}}
 +
 \frac{i}{\go_{nm}}
@@ -4542,7 +3434,7 @@ r^{\rmb}_{\ell m}
 \nonumber \\
 &=&
 \frac{r^{\rmb}_{nm}
-\Delta^{\lda,\rma,\ell}_{mn}
+\Delta^{\rma,\ell}_{mn}
 +
 {\cal R}^{\rma}_{nm}\gD^\rmb_{mn}
 }
@@ -4962,13 +3854,13 @@ Then,
 \bra{n\bfk}[\hat\bfr_i,\hat\calo]\ket{m\bfk'}
 =i\gd(\bfk-\bfk')(\calo_{nm})_{;\bfk}
 ,
-\end{equation}  
+\end{equation} 
 with
 \begin{equation}\label{gendev}
 (\calo_{nm})_{;\bfk}=
 \nabla_\bfk
 \calo_{n m}(\bfk)
-- 
+-
 i
 \calo_{nm}(\bfk)
 \left(
@@ -4977,7 +3869,7 @@ i
 \bfgxi_{mm}(\bfk)
 \right)
 ,
-\end{equation} 
+\end{equation}
 the generalized derivative of $\calo_{nm}$ with respect to $\bfk$.
 Note that the highly singular term $\nabla_\bfk\gd(\bfk-\bfk')$
 cancels in Eq.~\eqref{conmri2}, thus giving a well defined commutator
@@ -5095,32 +3987,6 @@ F. Nastos, B. Olejnik, K. Schwarz and J. E. Sipe, Phys. Rev. B {\bf 72}, 045223 
 \bibitem{cabellosPRB09}
 J. L. Cabellos, Bernardo S. Mendoza, M. A. Escobar, F. Nastos, and J. E. Sipe
  Phys. Rev. B {\bf 80}, 155205 (2009).
-
-\bibitem{mottaCMS10}
-Carlo Motta, Matteo Giantomassi, Marco Cazzaniga, Katalin Gaál-Nagy,
-Xavier Gonze,
-Computational Materials Science, {\bf 50} 698-703 (2010). 
-
-\bibitem{kleinmanPRL82}
-L. Kleinman, S.M. Bylander, Phys. Rev. Lett. 48 (1982) 1425.
-
-\bibitem{adolphPRB96}
-B. Adolph, Phys. Rev. B 53 (1996) 9797.
-
-\bibitem{francesco}  
-cita?
-
-\bibitem{cual} 
-cita?
-
-\bibitem{valerie} V. Veniard, private communication. 
-The term, $\calt^{\rma\rmb}_{nm}(\bfk)$, besides being a
-  term with a small numerical value, its computational 
-time is 
-at least an
-  order of magnitude larger than what it takes to calculate all other
-  terms involved in the expressions for
-  $\chi^{s,\ell}_{\rma\rmb\rmc}$. Thus, we neglect it throughout the article.
 
 \end{thebibliography}
 
