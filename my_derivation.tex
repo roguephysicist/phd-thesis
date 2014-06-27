@@ -31,13 +31,13 @@ where $C = f_{mn}\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{LDA},\text{b}}_{nm}
 
 Time-reversal symmetry leads to the following relationships:
 
-\begin{align*}
-\mathbf{r}_{mn}(\mathbf{k})                                 &=  \mathbf{r}_{nm}(-\mathbf{k}),                               \\
-\mathbf{r}_{mn;\mathbf{k}}(\mathbf{k})                      &=  -\mathbf{r}_{nm;\mathbf{k}}(-\mathbf{k}),                   \\
-\mathcal{V}^{\Sigma,\text{a}}_{mn}(-\mathbf{k})             &=  -\mathbf{\mathcal{V}}_{nm}^{\Sigma,\text{a}}(\mathbf{k}),   \\
-\omega_{mn}^{S}(-\mathbf{k})                                &=  \omega_{mn}^{S}(\mathbf{k}),                                \\
-\Delta^a_{nm}(-\mathbf{k})                                  &=  -\Delta^a_{nm}(\mathbf{k}).
-\end{align*}
+\begin{align}\label{time_reversal}
+\mathbf{r}_{mn}(\mathbf{k})|_{-\mathbf{k}}                       &=  \mathbf{r}_{nm}(\mathbf{k})|_{\mathbf{k}},                                 \nonumber\\
+(\mathbf{r}_{mn})_{;\mathbf{k}}(\mathbf{k})|_{-\mathbf{k}}       &=  (-\mathbf{r}_{nm})_{;\mathbf{k}}(\mathbf{k})|_{\mathbf{k}},                \nonumber\\
+\mathcal{V}^{\Sigma,\text{a}}_{mn}(\mathbf{k})|_{-\mathbf{k}}    &=  -\mathbf{\mathcal{V}}_{nm}^{\Sigma,\text{a}}(\mathbf{k})|_{\mathbf{k}},             \\
+\omega_{mn}^{S}(\mathbf{k})|_{-\mathbf{k}}                       &=  \omega_{mn}^{S}(\mathbf{k})|_{\mathbf{k}},                                 \nonumber\\
+\Delta^a_{nm}(\mathbf{k})|_{-\mathbf{k}}                         &=  -\Delta^a_{nm}(\mathbf{k})|_{\mathbf{k}}.                                  \nonumber
+\end{align}
 
 For a clean cold semiconductor, $f_{n} = 1$ for an occupied or valence $(n = v)$ band, and $f_{n} = 0$ for an empty or conduction $(n = c)$ band independent of $\mathbf{k}$, and $f_{nm}=-f_{mn}$.
 
@@ -77,7 +77,39 @@ We use the fact that
 (\omega^S_{nm})_{;k^{\text{c}}}=(\omega^\text{LDA}_{nm})_{;k^{\text{c}}} = \frac{p_{nn}^{\text{c}}-p_{mm}^{\text{c}}}{m_{e}} \equiv \Delta_{nm}^{\text{c}},
 \end{equation}
 
-and for the last line, we performed an integration by parts over the Brillouin zone, where the contribution from the edges vanishes.
+and for the last line, we performed an integration by parts over the Brillouin zone, where the contribution from the edges vanishes. Using the chain rule, we obtain
 
+\begin{equation}\label{chr}
+\left(\frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{(\omega^{S}_{nm})^2}\right)_{;k^{\text{c}}} = \frac{r^{\text{b}}_{nm}}{(\omega^{S}_{nm})^2}\left(\mathcal{V} ^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}} + \frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}}{(\omega^{S}_{nm})^2}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}} - \frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{2(\omega^{S}_{nm})^3}\left(
+\omega^{S}_{nm}\right)_{;k^{\text{c}}}.
+\end{equation}
+
+%% verify that the generalized derivative actually behaves this way. you might need to look into older versions when we were still using calR.
+We will check each term of \eqref{chr} over $\mathbf{k} \rightarrow - \mathbf{k}$. The first term is reduced to
+
+\begin{align}\label{first_term_gen_deriv}
+\frac{r^{\text{b}}_{nm}}{(\omega^{S}_{nm})^{2}}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}|_{\mathbf{k}} + \frac{r^{\text{b}}_{nm}}{(\omega^{S}_{nm})^{2}}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}|_{-\mathbf{k}}
+&= \frac{r^{\text{b}}_{nm}}{(\omega^{S}_{nm})^{2}}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}|_{\mathbf{k}} - \frac{r^{\text{b}}_{mn}}{(\omega^{S}_{nm})^{2}}\left(\mathcal{V}^{\Sigma,\text{a}}_{nm}\right)_{;k^{\text{c}}}|_{\mathbf{k}}\nonumber\\
+&= \frac{1}{(\omega^{S}_{nm})^{2}}\left[r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}} - \left(r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right)^*\right]\nonumber\\
+&= \frac{2i}{(\omega^{S}_{nm})^{2}}\mathrm{Im}\left[r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right],
+\end{align}
+
+the second term is reduced to
+
+\begin{align}\label{second_term_gen_deriv}
+\frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}}{(\omega^{S}_{nm})^{2}}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}}|_{\mathbf{k}} + \frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}}{(\omega^{S}_{nm})^{2}}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}}|_{-\mathbf{k}}
+&= \frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}}{(\omega^{S}_{nm})^{2}}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}}|_{\mathbf{k}} + \frac{\mathcal{V}^{\Sigma,\text{a}}_{nm}}{(\omega^{S}_{nm})^{2}}\left(r^{\text{b}}_{mn}\right)_{;k^{\text{c}}}|_{\mathbf{k}}\nonumber\\
+&= \frac{1}{(\omega^{S}_{nm})^{2}}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}} + \left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}}\right)^*\right]\nonumber\\
+&= \frac{2}{(\omega^{S}_{nm})^{2}}\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}}\right],
+\end{align}
+
+and the third term is reduced to
+
+\begin{align}\label{third_term_gen_deriv}
+\frac{r^{\text{b}}_{nm}}{(\omega^{S}_{nm})^{2}}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}|_{\mathbf{k}} + \frac{r^{\text{b}}_{nm}}{(\omega^{S}_{nm})^{2}}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}|_{-\mathbf{k}}
+&= \frac{r^{\text{b}}_{nm}}{(\omega^{S}_{nm})^{2}}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}|_{\mathbf{k}} - \frac{r^{\text{b}}_{mn}}{(\omega^{S}_{nm})^{2}}\left(\mathcal{V}^{\Sigma,\text{a}}_{nm}\right)_{;k^{\text{c}}}|_{\mathbf{k}}\nonumber\\
+&= \frac{1}{(\omega^{S}_{nm})^{2}}\left[r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}} - \left(r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right)^*\right]\nonumber\\
+&= \frac{2i}{(\omega^{S}_{nm})^{2}}\mathrm{Im}\left[r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right].
+\end{align}
 
 \end{document}
