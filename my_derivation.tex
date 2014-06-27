@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{fullpage}
+\usepackage{showkeys}
+\usepackage[colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
+\allowdisplaybreaks[1]%biutiful equation breaker!!!
+%\usepackage{graphicx}
+%\usepackage{ulem}
+%\usepackage{subfigure}
+%\input{definitions}
+%\usepackage{bm}
+
+\begin{document}
+
+We start with the expression for the susceptibility for the intraband transtitions,
+
+\begin{equation}\label{chii}
+\chi_{i,\text{a}\text{b}\text{c}}^{s,\ell}=-\frac{e^3}{\Omega\hbar^2\omega_3}\sum_{mn\mathbf{k}}\frac{\mathcal{V}_{mn}^{\Sigma,\text{a},\ell}}{\omega^S_{nm}-\omega_3}\left(\frac{f_{mn}r_{nm}^{\text{b}}}{\omega^S_{nm}-\omega_\beta}\right)_{;k^{\text{c}}},
+\end{equation} 
+
+where \emph{s} denotes \emph{surface} and \emph{S} refers to the \emph{scissors} correction. This expression diverges as $\omega_{3} \rightarrow 0$. To eliminate this divergence we take the partial fraction expansion,
+
+\begin{eqnarray}\label{pfi} 
+I &=& C \left[-\frac{1}{2(\omega^{S}_{nm})^{2}}\frac{1}{\omega^{S}_{nm}-\omega}+\frac{2}{(\omega^{S}_{nm})^{2}}\frac{1}{\omega^{S}_{nm}-2\omega}+\frac{1}{2(\omega^{S}_{nm})^{2}}\frac{1}{\omega}\right]\nonumber\\
+&-& D \left[-\frac{3}{2(\omega^{S}_{nm})^{2}}\frac{1}{\omega^{S}_{nm}-\omega}+\frac{4}{(\omega^{S}_{nm})^{3}}\frac{1}{\omega^{S}_{nm}-2\omega}+\frac{1}{2(\omega^{S}_{nm})^{3}}\frac{1}{\omega}-\frac{1}{2(\omega^{S}_{nm})^{2}}\frac{1}{(\omega^{S}_{nm}-\omega)^2}\right],
+\end{eqnarray} 
+
+where $C = f_{mn}\mathcal{V}^{\Sigma,\text{a}}_{mn}(r^{\text{LDA},\text{b}}_{nm})_{;k^{\text{c}}}$, and $D=f_{mn}\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\Delta^{\text{c}}_{nm}$.
+
+Time-reversal symmetry leads to the following relationships:
+
+\begin{eqnarray*}
+\mathbf{r}_{mn}(\mathbf{k})                                 &=  \mathbf{r}_{nm}(-\mathbf{k}),                               \\
+\mathbf{r}_{mn;\mathbf{k}}(\mathbf{k})                      &=  -\mathbf{r}_{nm;\mathbf{k}}(-\mathbf{k}),                   \\
+\mathcal{V}^{\Sigma,\text{a}}_{mn}(-\mathbf{k})             &=  -\mathbf{\mathcal{V}}_{nm}^{\Sigma,\text{a}}(\mathbf{k}),   \\
+\omega_{mn}^{S}(-\mathbf{k})                                &=  \omega_{mn}^{S}(\mathbf{k}),                                \\
+\Delta^a_{nm}(-\mathbf{k})                                  &=  -\Delta^a_{nm}(\mathbf{k}).
+\end{eqnarray*}
+
+For a clean cold semiconductor, $f_{n} = 1$ for an occupied or valence $(n = v)$ band, and $f_{n} = 0$ for an empty or conduction $(n = c)$ band independent of $\mathbf{k}$, and $f_{nm}=-f_{mn}$.
+
+The $\frac{1}{\omega}$ terms cancel each other out. We notice that the energy denominators are invariant under $\mathbf{k} \rightarrow - \mathbf{k}$, and then we only look at the numerators, then
+\begin{eqnarray}\label{ct}
+C \rightarrow f_{mn}\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}}|_{\mathbf{k}} &+& f_{mn}\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}}|_{-\mathbf{k}}\nonumber\\
+&=& f_{mn}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}}|_{\mathbf{k}} + \left(-\mathcal{V}^{\Sigma,\text{a}}_{nm}\right)\left(-\left(r^{\text{LDA},\text{b}}_{mn}\right)_{;k^{\text{c}}}\right)|_{\mathbf{k}}\right]\nonumber\\
+&=& f_{mn}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}} + \mathcal{V}^{\Sigma,\text{a}}_{nm}\left(r^{\text{LDA},\text{b}}_{mn}\right)_{;k^{\text{c}}}\right]\nonumber\\
+&=& f_{mn}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}} + \left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}}\right)^*\right]\nonumber\\
+&=& 2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}}\right],
+\end{eqnarray}
+
+and likewise,
+
+\begin{eqnarray}\label{dt}
+D \rightarrow f_{mn}\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\Delta^{\text{c}}_{nm}|_{\mathbf{k}} &+& f_{mn}\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\Delta^{\text{c}}_{nm}|_{-\mathbf{k}}\nonumber\\
+&=& f_{mn}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\Delta^{\text{c}}_{nm}|_{\mathbf{k}} + \left(-\mathcal{V}^{\Sigma,\text{a}}_{nm}\right)r^{\text{b}}_{mn}\left(-\Delta^{\text{c}}_{nm}\right)|_{\mathbf{k}}\right]\nonumber\\
+&=& f_{mn}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm} + \mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{b}}_{mn}\right]\Delta^{\text{c}}_{nm}\nonumber\\
+&=& f_{mn}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm} + \left(\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\right)^*\right]\Delta^{\text{c}}_{nm}\nonumber\\
+&=& 2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\right]\Delta^{\text{c}}_{nm}.
+\end{eqnarray}
+
+The last term in the second line of \eqref{pfi} is dealt with as follows,
+
+\begin{eqnarray}\label{dresn}
+\frac{D}{2(\omega^S_{nm})^2}\frac{1}{(\omega^S_{nm}-\omega)^2} 
+&=& \frac{f_{mn}}{2}\frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{(\omega^S_{nm})^2}\frac{\Delta^{\text{c}}_{nm}}{(\omega^S_{nm}-\omega)^2} = \frac{f_{mn}}{2}\frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{(\omega^S_{nm})^2}\left(\frac{1}{\omega^S_{nm}-\omega}\right)_{;k^{\text{c}}}\nonumber\\
+&=& -\frac{f_{mn}}{2}\left(\frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{(\omega^S_{nm})^2}\right)_{;k^{\text{c}}}\frac{1}{\omega^S_{nm}-\omega}.
+\end{eqnarray} 
+
+We use the fact that
+
+\begin{equation}\label{wk}
+(\omega^S_{nm})_{;k^{\text{c}}}=(\omega^\text{LDA}_{nm})_{;k^{\text{c}}} = \frac{p_{nn}^{\text{c}}-p_{mm}^{\text{c}}}{m_{e}} \equiv \Delta_{nm}^{\text{c}},
+\end{equation}
+
+and for the last line, we performed an integration by parts over the Brillouin zone, where the contribution from the edges vanishes.
+
+
+\end{document}
