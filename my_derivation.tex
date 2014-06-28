@@ -85,7 +85,7 @@ and for the last line, we performed an integration by parts over the Brillouin z
 \end{equation}
 
 %% verify that the generalized derivative actually behaves this way. you might need to look into older versions when we were still using calR.
-We will check each term of \eqref{chr} over $\mathbf{k} \rightarrow - \mathbf{k}$. The first term is reduced to
+We will check each term of \eqref{chr} over $\mathbf{k} \rightarrow - \mathbf{k}$ using the relations in \eqref{time_reversal}. The first term is reduced to
 
 \begin{align}\label{first_term_gen_deriv}
 \frac{r^{\text{b}}_{nm}}{(\omega^{S}_{nm})^{2}}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}|_{\mathbf{k}} + \frac{r^{\text{b}}_{nm}}{(\omega^{S}_{nm})^{2}}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}|_{-\mathbf{k}}
@@ -103,14 +103,15 @@ the second term is reduced to
 &= \frac{2}{(\omega^{S}_{nm})^{2}}\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}}\right],
 \end{align}
 
-%% you also need to verify the properties for the generalized derivative of omega from appendix D.
-and the third term is reduced to
+%% the generalized derivative of \omega^{S}_{nm} is equivalent to \Delta_{nm}^{\text{c}} from \eqref{wk}.
+and by using \eqref{wk}, the third term is reduced to
 
 \begin{align}\label{third_term_gen_deriv}
 \frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{2(\omega^{S}_{nm})^{3}}\left(\omega^{S}_{nm}\right)_{;k^{\text{c}}}|_{\mathbf{k}} + \frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{2(\omega^{S}_{nm})^{3}}\left(\omega^{S}_{nm}\right)_{;k^{\text{c}}}|_{-\mathbf{k}}
-&= \frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{2(\omega^{S}_{nm})^{3}}\left(\omega^{S}_{nm}\right)_{;k^{\text{c}}}|_{\mathbf{k}} - \frac{\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{b}}_{mn}}{2(\omega^{S}_{nm})^{3}}\left(\omega^{S}_{nm}\right)_{;k^{\text{c}}}|_{\mathbf{k}}\nonumber\\
-%&= \frac{1}{(\omega^{S}_{nm})^{2}}\left[r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}} - \left(r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right)^*\right]\nonumber\\
-%&= \frac{2i}{(\omega^{S}_{nm})^{2}}\mathrm{Im}\left[r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right].
+&= \frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{2(\omega^{S}_{nm})^{3}}\Delta_{nm}^{\text{c}}|_{\mathbf{k}} + \frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{2(\omega^{S}_{nm})^{3}}\Delta_{nm}^{\text{c}}|_{-\mathbf{k}}\nonumber\\
+&= \frac{\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{b}}_{mn}}{2(\omega^{S}_{nm})^{3}}\Delta_{nm}^{\text{c}}|_{\mathbf{k}} + \frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}}{2(\omega^{S}_{nm})^{3}}\Delta_{nm}^{\text{c}}|_{\mathbf{k}}\nonumber\\
+&= \frac{1}{2(\omega^{S}_{nm})^{3}}\left[\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{b}}_{mn} + \left(\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{b}}_{mn}\right)^{*}\right]\Delta_{nm}^{\text{c}}\nonumber\\
+&= \frac{1}{(\omega^{S}_{nm})^{3}}\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{b}}_{mn}\right]\Delta_{nm}^{\text{c}}
 \end{align}
 
 \end{document}
