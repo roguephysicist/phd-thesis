@@ -1,4 +1,4 @@
-\documentclass[11pt,draft]{article}
+\documentclass[11pt]{article}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{parskip}
@@ -140,11 +140,33 @@ I =
 + \frac{4f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}}\right]}{(\omega^{S}_{nm})^{2}}\frac{1}{\omega^{S}_{nm}-2\omega}\nonumber\\
 + \frac{6f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{2(\omega^{S}_{nm})^{2}}&\frac{1}{\omega^{S}_{nm}-\omega} 
 \quad\,\,- \frac{8f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{(\omega^{S}_{nm})^{3}}\frac{1}{\omega^{S}_{nm}-2\omega}\nonumber\\
-- \frac{2f_{mn}\,\mathrm{Re}\left[r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right]}{2(\omega^{S}_{nm})^{2}}&\frac{1}{\omega^S_{nm}-\omega}\nonumber\\
-- \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}}\right]}{2(\omega^{S}_{nm})^{2}}&\frac{1}{\omega^S_{nm}-\omega}\nonumber\\
-+ \frac{f_{mn}\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{b}}_{mn}\right]\Delta_{nm}^{\text{c}}}{2(\omega^{S}_{nm})^{3}}&\frac{1}{\omega^S_{nm}-\omega},
+- \frac{2f_{mn}\,\mathrm{Re}\left[r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right]}{2(\omega^{S}_{nm})^{2}}&\frac{1}{\omega^{S}_{nm}-\omega}\nonumber\\
+- \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}}\right]}{2(\omega^{S}_{nm})^{2}}&\frac{1}{\omega^{S}_{nm}-\omega}\nonumber\\
++ \frac{f_{mn}\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{b}}_{mn}\right]\Delta_{nm}^{\text{c}}}{2(\omega^{S}_{nm})^{3}}&\frac{1}{\omega^{S}_{nm}-\omega},
 \end{align}
 
-we conveniently collect the terms in columns of $\omega$ and $2\omega$.
+we conveniently collect the terms in columns of $\omega$ and $2\omega$. We can now express the susceptibility in terms of $\omega$ and $2\omega$. Separating the $2\omega$ terms and substituting in  \eqref{chii}, % what about the two and the omega out front?
+
+\begin{align}\label{2wchii}
+I_{2\omega}
+&= -\frac{e^3}{\hbar^2}\sum_{mn\mathbf{k}}\left[\frac{4f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}}\right]}{(\omega^{S}_{nm})^{2}} - \frac{8f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{(\omega^{S}_{nm})^{3}}\right]\frac{1}{\omega^{S}_{nm}-2\omega}\nonumber\\
+&= \frac{e^3}{\hbar^2}\sum_{mn\mathbf{k}}\frac{4f_{mn}}{(\omega^{S}_{nm})^{2}}\left[-\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}}\right] + \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{(\omega^{S}_{nm})}\right]\frac{1}{\omega^{S}_{nm}-2\omega}
+\end{align}
+
+\textbf{Work in progress: I need to understand more about $\eta = 0$ and the switch to $\omega_{cv}$ in order to get equation (90) and (A16).}
+
+We do the same for the $\omega$ terms in \eqref{simplified_i} and substitute in \eqref{chii},
+\begin{align}\label{wchii}
+I_{\omega}
+= -\frac{e^3}{2\hbar^2}\sum_{mn\mathbf{k}}
+&\left[
+-\frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}}\right]}{2(\omega^{S}_{nm})^{2}}
++ \frac{6f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{2(\omega^{S}_{nm})^{2}}\right.\nonumber\\
+&\,\,\,- \left.\frac{2f_{mn}\,\mathrm{Re}\left[r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right]}{2(\omega^{S}_{nm})^{2}}
+- \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}}\right]}{2(\omega^{S}_{nm})^{2}}\right.\nonumber\\
+&\,\,\,+ \left.\frac{f_{mn}\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{b}}_{mn}\right]\Delta_{nm}^{\text{c}}}{2(\omega^{S}_{nm})^{3}}
+\right]\frac{1}{\omega^{S}_{nm}-\omega}
+\end{align}
+
 
 \end{document}
