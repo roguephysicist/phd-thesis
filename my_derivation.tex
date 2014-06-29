@@ -161,13 +161,26 @@ We do the same for the $\omega$ terms in \eqref{simplified_i} and substitute in 
 I_{\omega}
 = -\frac{e^3}{2\hbar^2}\sum_{mn\mathbf{k}}
 &\left[
--\frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}}\right]}{2(\omega^{S}_{nm})^{2}}
-+ \frac{6f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{2(\omega^{S}_{nm})^{2}}\right.\nonumber\\
-&\,\,\,- \left.\frac{2f_{mn}\,\mathrm{Re}\left[r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right]}{2(\omega^{S}_{nm})^{2}}
-- \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}}\right]}{2(\omega^{S}_{nm})^{2}}\right.\nonumber\\
-&\,\,\,+ \left.\frac{f_{mn}\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{b}}_{mn}\right]\Delta_{nm}^{\text{c}}}{2(\omega^{S}_{nm})^{3}}
-\right]\frac{1}{\omega^{S}_{nm}-\omega}
+-\frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}}\right]}{(\omega^{S}_{nm})^{2}}
++ \frac{6f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{(\omega^{S}_{nm})^{2}}\right.\nonumber\\
+&\quad\,\,\,- \left.\frac{2f_{mn}\,\mathrm{Re}\left[r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right]}{(\omega^{S}_{nm})^{2}}
+- \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}}\right]}{(\omega^{S}_{nm})^{2}}\right.\nonumber\\
+&\qquad\qquad\qquad\qquad\qquad\qquad\qquad + \left.\frac{f_{mn}\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{b}}_{mn}\right]\Delta_{nm}^{\text{c}}}{(\omega^{S}_{nm})^{3}}
+\right]\frac{1}{\omega^{S}_{nm}-\omega},
 \end{align}
 
+and we reduce in the same way as \eqref{2wchii},
+
+\begin{align}\label{wchii_simplified}
+I_{\omega}
+= \frac{e^3}{2\hbar^2}\sum_{mn\mathbf{k}}\frac{f_{mn}}{(\omega^{S}_{nm})^{2}}
+\Biggl[
+  &2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA},\text{b}}_{nm}\right)_{;k^{\text{c}}}\right]\nonumber\\
+- &6\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nm}\right]\Delta^{\text{c}}_{nm} 
++  2\,\mathrm{Re}\left[r^{\text{b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right]\nonumber\\
++ &2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{b}}_{nm}\right)_{;k^{\text{c}}}\right]
+- \frac{\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{b}}_{mn}\right]\Delta_{nm}^{\text{c}}}{(\omega^{S}_{nm})}
+\Biggr]\frac{1}{\omega^{S}_{nm}-\omega}
+\end{align}
 
 \end{document}
