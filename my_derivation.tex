@@ -3,7 +3,7 @@
 \usepackage{amsmath}
 \usepackage{parskip}
 \usepackage{fullpage}
-\usepackage{showkeys}
+%\usepackage{showkeys}
 \usepackage[colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
 %\usepackage{breqn}
 %\allowdisplaybreaks[1]%biutiful equation breaker!!!
@@ -181,6 +181,8 @@ I_{\omega}
 
 and we reduce in the same way as \eqref{2wchii},
 
+\textbf{I can't seem to reduce this any further. When using $\mathcal{R}^{\text{a},\ell}_{nm}$ there are \emph{i}'s that allow two terms to cancel out leaving only three. See (A17) and (A18).}
+
 \begin{align}\label{wchii_simplified}
 I_{\omega}
 = \frac{e^3}{2\hbar^2}\sum_{mn\mathbf{k}}\frac{f_{mn}}{(\omega^{S}_{nm})^{2}}
@@ -193,9 +195,9 @@ I_{\omega}
 \Biggr]\frac{1}{\omega^{S}_{nm}-\omega}\nonumber\\
 = \frac{e^3}{2\hbar^2}\sum_{mn\mathbf{k}}\frac{f_{mn}}{(\omega^{S}_{nm})^{2}}
 \Biggl[
-  &4\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]\nonumber\\
-- &6\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{LDA,b}}_{nm}\right]\Delta^{\text{c}}_{nm} 
+  &4\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]
 +  2\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right]\nonumber\\
+- &6\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{LDA,b}}_{nm}\right]\Delta^{\text{c}}_{nm}
 - \frac{\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{LDA,b}}_{mn}\right]\Delta_{nm}^{\text{c}}}{(\omega^{S}_{nm})}
 \Biggr]\frac{1}{\omega^{S}_{nm}-\omega}
 \end{align}
