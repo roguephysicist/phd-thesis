@@ -3,7 +3,7 @@
 \usepackage{amsmath}
 \usepackage{parskip}
 \usepackage{fullpage}
-\usepackage{showkeys}
+%\usepackage{showkeys}
 \usepackage[colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
 %\usepackage{breqn}
 %\allowdisplaybreaks[1]%biutiful equation breaker!!!
@@ -14,10 +14,10 @@
 %\usepackage{bm}
 
 \begin{document}
-\section{Interband Contributions}
-Hello world!
-
-\section{Intraband Contributions}
+%   \section{Interband Contributions}
+%   Hello world!
+%   
+%   \section{Intraband Contributions}
 We start with the expression for the susceptibility for the intraband transtitions,
 
 \begin{equation}\label{chii}
@@ -123,7 +123,7 @@ Combining the results from \eqref{first_term_gen_deriv}, \eqref{second_term_gen_
 
 \begin{align}\label{derivative_under_k}
 &\frac{f_{mn}}{2}\left[\left(\frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{LDA,b}}_{nm}}{(\omega^S_{nm})^2}\right)_{;k^{\text{c}}}|_{\mathbf{k}} + \left(\frac{\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{LDA,b}}_{nm}}{(\omega^S_{nm})^2}\right)_{;k^{\text{c}}}|_{-\mathbf{k}}\right]\frac{1}{\omega^S_{nm}-\omega} = \nonumber\\
-&f_{mn}\left(2\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right] + 2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right] - \frac{4}{\omega^{S}_{nm}}\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{LDA,b}}_{mn}\right]\Delta_{nm}^{\text{c}}\right)\frac{1}{2(\omega^{S}_{nm})^{2}}\frac{1}{\omega^S_{nm}-\omega}.
+&\left(2\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right] + 2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right] - \frac{4}{\omega^{S}_{nm}}\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{LDA,b}}_{mn}\right]\Delta_{nm}^{\text{c}}\right)\frac{f_{mn}}{2(\omega^{S}_{nm})^{2}}\frac{1}{\omega^S_{nm}-\omega}.
 \end{align}
 
 We have all the elements to be substituted in \eqref{pfi}. We substitute \eqref{ct}, \eqref{dt}, and \eqref{derivative_under_k} in \eqref{pfi},
@@ -159,7 +159,7 @@ I_{2\omega}
 
 We can express the energies in terms of transitions between bands. Therefore, $\omega^{S}_{nm} = \omega^{S}_{cv}$ for transitions between conduction and valence bands. We analyze the limit,
 
-\begin{equation}
+\begin{equation}\label{limit_eta}
 \lim_{\eta\to 0}\frac{1}{x\pm i\eta}=P\frac{1}{x}\mp i\pi\delta(x),
 \end{equation}
 
@@ -167,31 +167,42 @@ and can finally rewrite \eqref{2wchii} in the desired form,
 % we need to place the absolute value on the e, and check how the sign changes on the entire equation
 
 \begin{equation}\label{imchi2w}
-\mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},2\omega}^{s,\ell}] = -\frac{\pi e^{3}}{\hbar^2}\sum_{mn\mathbf{k}}\frac{4}{(\omega^{S}_{nm})^{2}}\left(\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right] - \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{LDA,b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{\omega^{S}_{nm}}\right)\delta(\omega^{S}_{nm}-2\omega).
+\mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},2\omega}^{s,\ell}] = -\frac{\pi \vert e\vert^{3}}{\hbar^2}\sum_{vc\mathbf{k}}\frac{4}{(\omega^{S}_{cv})^{2}}\left(\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}\left(r^{\text{LDA,b}}_{cv}\right)_{;k^{\text{c}}}\right] - \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}r^{\text{LDA,b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}}\right)\delta(\omega^{S}_{cv}-2\omega).
 \end{equation}
 
 We do the same for the $\omega$ terms in \eqref{simplified_i} and substitute in \eqref{chii},
 \begin{align}\label{wchii}
 I_{\omega}
-= -\frac{e^3}{2\hbar^2}\sum_{mn\mathbf{k}}
+= -\frac{e^3}{2\hbar^2}\sum_{nm\mathbf{k}}
 \Biggl[
  - \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}{(\omega^{S}_{nm})^{2}}
 &+ \frac{6f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{LDA,b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{(\omega^{S}_{nm})^{3}}\nonumber\\
  + \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}\left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}{(\omega^{S}_{nm})^{2}}
 &- \frac{4f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{LDA,b}}_{mn}\right]\Delta_{nm}^{\text{c}}}{(\omega^{S}_{nm})^{3}}\nonumber\\
 &+ \frac{2f_{mn}\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right]}{(\omega^{S}_{nm})^{2}}
-\Biggr]\frac{1}{\omega^{S}_{nm}-\omega},
+\Biggr]\frac{1}{\omega^{S}_{nm}-\omega}.
 \end{align}
 
-and we reduce in the same way as \eqref{2wchii}, % follow the derivation in the uncorrected doc, especially for the chain rule to see where this extra 2 comes from
+We reduce in the same way as \eqref{2wchii}, % follow the derivation in the uncorrected doc, especially for the chain rule to see where this extra 2 comes from
 
-\begin{align}\label{wchii_simplified}
+\begin{equation}\label{wchii_simplified}
 I_{\omega}
-= -\frac{e^3}{2\hbar^2}\sum_{mn\mathbf{k}}\frac{f_{mn}}{(\omega^{S}_{nm})^{2}}
+= -\frac{e^3}{2\hbar^2}\sum_{nm\mathbf{k}}\frac{f_{mn}}{(\omega^{S}_{nm})^{2}}
 \Biggl[
- \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{LDA,b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{\omega^{S}_{nm}} 
-+ 2\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right]
-\Biggr]\frac{1}{\omega^{S}_{nm}-\omega}\nonumber\\
-\end{align}
+2\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a}}_{mn}\right)_{;k^{\text{c}}}\right]
++\frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{LDA,b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{\omega^{S}_{nm}} 
+\Biggr]\frac{1}{\omega^{S}_{nm}-\omega},
+\end{equation}
+
+and using \eqref{limit_eta} we obtain our final form,
+
+\begin{equation}
+\mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},\omega}^{s,\ell}]
+= -\frac{\pi\vert e\vert^3}{\hbar^2}\sum_{cv\mathbf{k}}\frac{1}{(\omega^{S}_{cv})^{2}}
+\left(
+\mathrm{Re}\left[r^{\text{LDA,b}}_{cv}\left(\mathcal{V}^{\Sigma,\text{a}}_{vc}\right)_{;k^{\text{c}}}\right]
++\frac{\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}r^{\text{LDA,b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}} 
+\right)\delta(\omega^{S}_{cv}-\omega).
+\end{equation}
 
 \end{document}
