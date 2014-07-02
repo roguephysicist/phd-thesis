@@ -1324,6 +1324,7 @@ follows.
 \frac{f_{mn}}{2}\frac{\calv^{\gS,\rma}_{mn}r^{\rmb}_{nm}}{(\go^S_{nm})^2}
 \frac{\gD^{\rmc}_{nm}}{(\go^S_{nm}-\go)^2} 
 =
+-
 \frac{f_{mn}}{2}
 \frac{\calv^{\gS,\rma}_{mn}r^{\rmb}_{nm}}{(\go^S_{nm})^2}
 \left(
@@ -1331,7 +1332,6 @@ follows.
 \right)_{;k^{\rmc}}
 \nonumber\\
 &=&
--
 \frac{f_{mn}}{2}
 \left(
 \frac{\calv^{\gS,\rma}_{mn}r^{\rmb}_{nm}}{(\go^S_{nm})^2}
@@ -1344,7 +1344,7 @@ line, we performed an
 integration by parts over the Brillouin zone,
 where the contribution from the edges vanishes.\cite{aschcroft}
 Using the chain rule, we obtain
-\begin{eqnarray}\label{chrn}
+\begin{eqnarray}\label{chrn1}
 \left(
 \frac{\calv^{\gS,\rma}_{mn}r^{\rmb}_{nm}}{(\go^S_{nm})^2}
 \right)_{;k^{\rmc}}
@@ -1359,7 +1359,7 @@ Using the chain rule, we obtain
 r^{\rmb}_{nm}
 \right)_{;k^{\rmc}}
 -
-\frac{2\calv^{\gS,\rma}_{mn}r^{\rmb}_{nm}}{(\go^S_{nm})^3}
+2\frac{\calv^{\gS,\rma}_{mn}r^{\rmb}_{nm}}{(\go^S_{nm})^3}
 \left(
 \go^S_{nm}
 \right)_{;k^{\rmc}}
@@ -1412,7 +1412,7 @@ frequency.
 Using time-reversal invariance and simple index manipulation, we show
 in the appendix that
 
-\textcolor{red}{Still needs to be worked out!!}
+%\textcolor{red}{Still needs to be worked out!!}
 \begin{equation}\label{imchiewn}
 \mathrm{Im}[\chi_{e,\rma\rmb\rmc,\go}^{s,\ell}]
 =
@@ -1496,6 +1496,36 @@ by simple taking
 $\go_n\to\go_n^S$, where $\go_n^S=\go_n+(1-f_n)\Delta$ with $\gD$ the
 rigid scissor correction.\cite{nastosPRB05,cabellosPRB09}
 
+In terms of $\mathcal{V}^{\Sigma,\text{a}}_{mn}$,
+
+\begin{equation}\label{calvimchiewn}
+\mathrm{Im}[\chi_{e,\rma\rmb\rmc,\go}^{s,\ell}] =
+-\frac{\pi |e|^3}{2\hbar^2}\sum_{vc\bfk}\sum_{l\neq(v,c)}\frac{1}{(\omega^{S}_{cv})^{2}}
+\left[
+\frac{\go^S_{lc}\mathrm{Im}[\mathcal{V}^{\Sigma,\text{a}}_{lc}\{r^{\rmb}_{cv}r^{\rmc}_{vl}\}]}{(2\go^S_{cv}-\go^S_{cl})}
+-\frac{\go^S_{vl}\mathrm{Im}[\mathcal{V}^{\Sigma,\text{a}}_{vl}\{r^{\rmc}_{lc}r^{\rmb}_{cv}\}]}{(2\go^S_{cv}-\go^S_{lv})}
+\right]\gd(\go^S_{cv}-\go),
+\end{equation}  
+\begin{equation}\label{calvimchie2wn}
+\mathrm{Im}[\chi_{e,\rma\rmb\rmc,2\go}^{s,\ell}] =
+-\frac{\pi |e|^3}{2\hbar^2}\sum_{vc\bfk}\frac{4}{\omega^{S}_{cv}}
+\left[
+\sum_{v'\ne v}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\text{a}}_{vc}\{r^{\rmb}_{cv'}r^{\rmc}_{v'v}\}]}{2\go^S_{cv'}-\go^S_{cv}}
+- \sum_{c'\ne c}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\text{a}}_{vc}\{r^{\rmc}_{cc'}r^{\rmb}_{c'v}\}]}{2\go^S_{c'v}-\go^S_{cv}}
+\right]\gd(\go^S_{cv}-2\go),
+\end{equation}
+\begin{equation}\label{calvimchiwn}
+\mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},\omega}^{s,\ell}]
+= -\frac{\pi\vert e\vert^3}{2\hbar^2}\sum_{cv\mathbf{k}}\frac{1}{(\omega^{S}_{cv})^{2}}
+\left(
+\mathrm{Re}\left[r^{\text{LDA,b}}_{cv}\left(\mathcal{V}^{\Sigma,\text{a}}_{vc}\right)_{;k^{\text{c}}}\right]
++\frac{\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}r^{\text{LDA,b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}} 
+\right)\delta(\omega^{S}_{cv}-\omega),
+\end{equation}
+and
+\begin{equation}\label{calvimchi2wn}
+\mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},2\omega}^{s,\ell}] = -\frac{\pi \vert e\vert^{3}}{2\hbar^2}\sum_{vc\mathbf{k}}\frac{4}{(\omega^{S}_{cv})^{2}}\left(\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}\left(r^{\text{LDA,b}}_{cv}\right)_{;k^{\text{c}}}\right] - \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}r^{\text{LDA,b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}}\right)\delta(\omega^{S}_{cv}-2\omega).
+\end{equation}
 
 \section{Conclusions}\label{con}
 
@@ -2014,7 +2044,7 @@ with similar results for
 $D=-2f_{mn}\go_{mn}\mathrm{Im}[{\cal  R}^{\rma}_{mn}r^{\rmb}_{nm}]\gD^{\rmc}_{nm}$.
  Now, from Eq.~\eqref{chr}, we obtain
 that the first term reduces to
-\begin{eqnarray}\label{chrn}
+\begin{eqnarray}\label{chrn2}
 \frac{r^{\rmb}_{nm}}{\go_{nm}}\left({\cal R}^{\rma}_{mn}\right)_{;k^{\rmc}}|_{\bfk}
 +
 \frac{r^{\rmb}_{nm}}{\go_{nm}}\left({\cal R}^{\rma}_{mn}\right)_{;k^{\rmc}}|_{-\bfk}

@@ -167,8 +167,10 @@ and can finally rewrite \eqref{2wchii} in the desired form,
 % we need to place the absolute value on the e, and check how the sign changes on the entire equation
 
 \begin{equation}\label{imchi2w}
-\mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},2\omega}^{s,\ell}] = -\frac{\pi \vert e\vert^{3}}{\hbar^2}\sum_{vc\mathbf{k}}\frac{4}{(\omega^{S}_{cv})^{2}}\left(\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}\left(r^{\text{LDA,b}}_{cv}\right)_{;k^{\text{c}}}\right] - \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}r^{\text{LDA,b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}}\right)\delta(\omega^{S}_{cv}-2\omega).
+\mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},2\omega}^{s,\ell}] = -\frac{\pi \vert e\vert^{3}}{2\hbar^2}\sum_{vc\mathbf{k}}\frac{4}{(\omega^{S}_{cv})^{2}}\left(\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}\left(r^{\text{LDA,b}}_{cv}\right)_{;k^{\text{c}}}\right] - \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}r^{\text{LDA,b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}}\right)\delta(\omega^{S}_{cv}-2\omega).
 \end{equation}
+
+where we added a $1/2$ from the sum over $\mathbf{k} \rightarrow - \mathbf{k}$.
 
 We do the same for the $\omega$ terms in \eqref{simplified_i} and substitute in \eqref{chii},
 \begin{align}\label{wchii}
@@ -198,11 +200,13 @@ and using \eqref{limit_eta} we obtain our final form,
 
 \begin{equation}
 \mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},\omega}^{s,\ell}]
-= -\frac{\pi\vert e\vert^3}{\hbar^2}\sum_{cv\mathbf{k}}\frac{1}{(\omega^{S}_{cv})^{2}}
+= -\frac{\pi\vert e\vert^3}{2\hbar^2}\sum_{cv\mathbf{k}}\frac{1}{(\omega^{S}_{cv})^{2}}
 \left(
 \mathrm{Re}\left[r^{\text{LDA,b}}_{cv}\left(\mathcal{V}^{\Sigma,\text{a}}_{vc}\right)_{;k^{\text{c}}}\right]
 +\frac{\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}r^{\text{LDA,b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}} 
-\right)\delta(\omega^{S}_{cv}-\omega).
+\right)\delta(\omega^{S}_{cv}-\omega),
 \end{equation}
+
+where again we added a $1/2$ from the sum over $\mathbf{k} \rightarrow - \mathbf{k}$.
 
 \end{document}
