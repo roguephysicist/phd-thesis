@@ -1,22 +1,11 @@
-\documentclass[10pt]{article}
-\usepackage{amsfonts}
-\usepackage{amsmath}
-\usepackage{parskip}
-\usepackage{fullpage}
-%\usepackage{showkeys}
-\usepackage[colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
-%\usepackage{breqn}
-%\allowdisplaybreaks[1]%biutiful equation breaker!!!
-%\usepackage{graphicx}
-%\usepackage{ulem}
-%\usepackage{subfigure}
-%\input{definitions}
-%\usepackage{bm}
+\section{Deriving Expressions for $\chi^s_{\rma\rmb\rmc}$ in terms of $\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}$}
 
-\begin{document}
+\subsection{Interband Contributions}
+
+\subsection{Intraband Contributions}
 We start with the expression for the susceptibility for the intraband transtitions,
 
-\begin{equation}\label{chii}
+\begin{equation}\label{intra_first}
 \chi_{i,\text{a}\text{b}\text{c}}^{s,\ell}=-\frac{e^3}{\Omega\hbar^2\omega_3}\sum_{mn\mathbf{k}}\frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}}{\omega^S_{nm}-\omega_3}\left(\frac{f_{mn}r^{\text{LDA,b}}_{nm}}{\omega^S_{nm}-\omega_\beta}\right)_{;k^{\text{c}}},
 \end{equation} 
 
@@ -145,7 +134,7 @@ I =
 - \frac{4f_{mn}\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{nm}r^{\text{LDA,b}}_{mn}\right]\Delta_{nm}^{\text{c}}}{2(\omega^{S}_{nm})^{3}}&\frac{1}{\omega^{S}_{nm}-\omega},
 \end{align}
 
-we conveniently collect the terms in columns of $\omega$ and $2\omega$. We can now express the susceptibility in terms of $\omega$ and $2\omega$. Separating the $2\omega$ terms and substituting in \eqref{chii}, % what about the two and the omega out front?
+we conveniently collect the terms in columns of $\omega$ and $2\omega$. We can now express the susceptibility in terms of $\omega$ and $2\omega$. Separating the $2\omega$ terms and substituting in \eqref{intra_first}, % what about the two and the omega out front?
 
 \begin{align}\label{2wchii}
 I_{2\omega}
@@ -168,7 +157,7 @@ and can finally rewrite \eqref{2wchii} in the desired form,
 
 where we added a $1/2$ from the sum over $\mathbf{k} \rightarrow - \mathbf{k}$.
 
-We do the same for the $\omega$ terms in \eqref{simplified_i} and substitute in \eqref{chii},
+We do the same for the $\omega$ terms in \eqref{simplified_i} and substitute in \eqref{intra_first},
 \begin{align}\label{wchii}
 I_{\omega}
 = -\frac{e^3}{2\hbar^2}\sum_{nm\mathbf{k}}
@@ -204,5 +193,3 @@ and using \eqref{limit_eta} we obtain our final form,
 \end{equation}
 
 where again we added a $1/2$ from the sum over $\mathbf{k} \rightarrow - \mathbf{k}$.
-
-\end{document}

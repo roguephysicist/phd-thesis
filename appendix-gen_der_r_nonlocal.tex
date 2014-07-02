@@ -1,0 +1,403 @@
+\section{Generalized derivative $(\bfr_{nm}(\bfk))_{;\bfk}$ for
+  non-local potentials}\label{gder}
+
+We obtain the generalized derivative $(\bfr_{nm}(\bfk))_{;\bfk}$ for
+the case of a non-local potential in the Hamiltonian.
+We start from (see Eq.~\eqref{conhr})
+\begin{equation}\label{na_hrdab}
+[r^{\rma},v^{\lda,\rmb}]= 
+\frac{i\hbar}{m_e}\gd_{ab}+
+\frac{1}{i\hbar}[r^{\rma},v^{\nl,\rmb}]
+\equiv
+\calc^{\rma\rmb}
+,
+\end{equation} 
+then
+\begin{equation}\label{na_hrdab2}
+\bra{n\bfk}[r^{\rma},v^{\lda,\rmb}]\ket{m\bfk'}
+=
+\bra{n\bfk}\calc^{\rma\rmb}\ket{m\bfk'}
+=
+\calc^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
+,
+\end{equation}
+so
+\begin{equation}\label{na_hrdab3}
+\bra{n\bfk}[r^{\rma}_i,v^{\lda,\rmb}]\ket{m\bfk'}
++
+\bra{n\bfk}[r^{\rma}_e,v^{\lda,\rmb}]\ket{m\bfk'}
+=
+\calc^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
+.
+\end{equation}
+From Eq.~\eqref{conmri3} and ~\eqref{gendev}
+\begin{equation}\label{na_rip}
+\bra{n\bfk}[r^{\rma}_i,v_\lda^{\rmb}]\ket{m\bfk'}
+=i\gd(\bfk-\bfk')(v_{nm}^{\lda,\rmb})_{;k^{\rma}}
+\end{equation}
+\begin{equation}\label{na_ripn}
+(v^{\lda,\rmb}_{nm})_{;k^{\rma}}=
+\nabla_{k^{\rma}}
+v^{\lda,\rmb}_{n m}(\bfk)
+-
+i
+v^{\lda,\rmb}_{nm}(\bfk)
+\left(
+\xi^{\rma}_{nn}(\bfk)
+-
+\xi^{\rma}_{mm}(\bfk)
+\right)
+,
+\end{equation}
+and
+\begin{eqnarray}\label{na_rep}
+\bra{n\bfk}[r^{\rma}_e,v^{\lda,\rmb}]\ket{m\bfk'}&=&
+\sum_{\ell\bfk''}
+\bigg(
+\bra{n\bfk}r^{\rma}_e\ket{\ell\bfk''}\bra{\ell\bfk''}v^{\lda,\rmb}\ket{m\bfk'}
+\nonumber \\
+&&
+-
+\bra{n\bfk}v^{\lda,\rmb}\ket{\ell\bfk''}\bra{\ell\bfk''}r^{\rma}_e\ket{m\bfk'}
+\bigg)
+\nonumber \\
+&=&
+\sum_{\ell\bfk''}
+\bigg(
+(1-\gd_{n\ell})\gd(\bfk-\bfk'')\xi^{\rma}_{n\ell}
+\gd(\bfk''-\bfk')v^{\lda,\rmb}_{\ell m}
+\nonumber \\
+&&-
+\gd(\bfk-\bfk'')v^{\lda,\rmb}_{n\ell}
+(1-\gd_{\ell m})\gd(\bfk''-\bfk')\xi^{\rma}_{\ell m}
+\bigg)
+\nonumber \\
+&=&
+\gd(\bfk-\bfk')
+\sum_{\ell}
+\bigg(
+(1-\gd_{n\ell})
+\xi^{\rma}_{n\ell}
+v^{\lda,\rmb}_{\ell m}
+\nonumber \\
+&&-
+(1-\gd_{\ell m})
+v^{\lda,\rmb}_{n\ell}
+\xi^{\rma}_{\ell m}
+\bigg)
+\nonumber \\
+&=&
+\gd(\bfk-\bfk')
+\bigg(
+\sum_{\ell}
+\bigg(
+\xi^{\rma}_{n\ell}
+v^{\lda,\rmb}_{\ell m}
+-
+v^{\lda,\rmb}_{n\ell}
+\xi^{\rma}_{\ell m}
+\bigg)
+\nonumber \\
+&&+
+v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
+-
+\xi^{\rma}_{nn}
+)
+\bigg)
+.
+\end{eqnarray}
+Using Eqs.~\eqref{na_rip} and ~\eqref{na_rep}
+into Eq.~\eqref{na_hrdab3} gives
+\begin{eqnarray}\label{na_rapb}
+i\gd(\bfk-\bfk')
+\bigg(
+(v^{\lda,\rmb}_{nm})_{;k^{\rma}}
+&&
+-i
+\sum_{\ell}
+\bigg(
+\xi^{\rma}_{n\ell}
+v^{\lda,\rmb}_{\ell m}
+-
+v^{\lda,\rmb}_{n\ell}
+\xi^{\rma}_{\ell m}
+\bigg)
+\nonumber \\
+&&
+-i
+v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
+-
+\xi^{\rma}_{nn}
+)
+\bigg)
+=
+\calc^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
+,
+\end{eqnarray}
+then
+\begin{eqnarray}\label{na_rapb2}
+(v^{\lda,\rmb}_{nm})_{;k^{\rma}}&=&
+-i
+\calc^{\rma\rmb}_{nm}
++i
+\sum_{\ell}
+\bigg(
+\xi^{\rma}_{n\ell}
+v^{\lda,\rmb}_{\ell m}
+-
+v^{\lda,\rmb}_{n\ell}
+\xi^{\rma}_{\ell m}
+\bigg)
+\nonumber \\
+&&+i
+v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
+-
+\xi^{\rma}_{nn}
+)
+,
+\end{eqnarray}
+and from Eq.~\eqref{na_ripn},
+\begin{eqnarray}\label{ncogno}
+\nabla_{k^{\rma}}v^{\lda,\rmb}_{nm}=
+-i\calc^{\rma\rmb}_{nm}
++i
+\sum_{\ell}
+\bigg(
+\xi^{\rma}_{n\ell}
+v^{\lda,\rmb}_{\ell m}
+-
+v^{\lda,\rmb}_{n\ell}
+\xi^{\rma}_{\ell m}
+\bigg)
+.
+\end{eqnarray}
+Now, there are two cases. We use Eqs.~\eqref{xir} and ~\eqref{chon.98}.
+
+\noindent {\it Case} $n=m$
+\begin{eqnarray}\label{ntita}
+\nabla_{k^{\rma}}v^{\lda,\rmb}_{nn}&=&
+-i\calc^{\rma\rmb}_{nn}
++i
+\sum_{\ell}
+\bigg(
+\xi^{\rma}_{n\ell}
+v^{\lda,\rmb}_{\ell n}
+-
+v^{\lda,\rmb}_{n\ell}
+\xi^{\rma}_{\ell n}
+\bigg)
+\nonumber\\
+&=&
+-i\calc^{\rma\rmb}_{nn}
+-
+\sum_{\ell\ne n}
+\bigg(
+r^{\rma}_{n\ell}
+\go^\lda_{\ell n}
+r^\rmb_{\ell n}
+-
+\go^\lda_{n\ell}
+r^\rmb_{n\ell}
+r^{\rma}_{\ell n}
+\bigg)
+\nonumber\\
+&=&
+-i\calc^{\rma\rmb}_{nn}
+-
+\sum_{\ell\ne n}
+\go^\lda_{\ell n}
+\bigg(
+r^{\rma}_{n\ell}
+r^\rmb_{\ell n}
++
+r^\rmb_{n\ell}
+r^{\rma}_{\ell n}
+\bigg)
+,
+\end{eqnarray}
+since the $\ell=n$ cancels out. This
+would give the generalization of the familiar expansion for the inverse effective mass
+tensor $(m_n^{-1})_{ab}$.\cite{aschcroft}
+Indeed, if we neglect the commutator of $\bfv^\nl$ in
+Eq.~\eqref{na_hrdab}, we obtain 
+$-i\calc^{\rma\rmb}_{nn}=\hbar/m_e\gd_{\rma\rmb}$
+thus obtaining Eq.~\eqref{tita}.
+
+\noindent {\it Case} $n\ne m$
+\begin{eqnarray}\label{nmes}
+(v^{\lda,\rmb}_{nm})_{;k^{\rma}}&=&
+-i\calc^{\rma\rmb}_{nm}
++i
+\sum_{\ell\ne m\ne n}
+\bigg(
+\xi^{\rma}_{n\ell}
+v^{\lda,\rmb}_{\ell m}
+-
+v^{\lda,\rmb}_{n\ell}
+\xi^{\rma}_{\ell m}
+\bigg)
+\nonumber\\
+&&+
+i
+\bigg(
+\xi^{\rma}_{nm}
+v^{\lda,\rmb}_{mm}
+-
+v^{\lda,\rmb}_{nm}
+\xi^{\rma}_{mm}
+\bigg)
+\nonumber\\
+&&+
+i
+\bigg(
+\xi^{\rma}_{nn}
+v^{\lda,\rmb}_{nm}
+-
+v^{\lda,\rmb}_{nn}
+\xi^{\rma}_{nm}
+\bigg)
++i
+v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
+-
+\xi^{\rma}_{nn}
+)
+\nonumber \\
+&=&
+-i\calc^{\rma\rmb}_{nm}
+-
+\sum_{\ell}
+\bigg(
+\go^\lda_{\ell m}
+r^{\rma}_{n\ell}
+r^{\rmb}_{\ell m}
+-
+\go^\lda_{n\ell}
+r^{\rmb}_{n\ell}
+r^{\rma}_{\ell m}
+\bigg)
++i
+\xi^{\rma}_{nm}
+(v^{\lda,\rmb}_{mm}
+-
+v^{\lda,\rmb}_{nn}
+)
+\nonumber \\
+&=&
+-i\calc^{\rma\rmb}_{nm}
+-
+\sum_{\ell}
+\bigg(
+\go^\lda_{\ell m} 
+r^{\rma}_{n\ell} 
+r^{\rmb}_{\ell m}
+-
+\go^\lda_{n\ell} 
+r^{\rmb}_{n\ell} 
+r^{\rma}_{\ell m}
+\bigg)
++i 
+r^{\rma}_{nm}
+\Delta^{\rmb}_{mn}
+,
+\end{eqnarray} 
+where
+\begin{equation}\label{na_delta}
+\Delta^{\lda,\rma}_{mn}=
+v^{\lda,\rma}_{mm}-v^{\lda,\rma}_{nn}
+.
+\end{equation}
+Now, for $n \ne m$, Eqs.~\eqref{chon.98},
+~\eqref{a_gradw2} and 
+~\eqref{nmes} and the chain rule, give
+\begin{eqnarray}\label{na_rgendevn}
+(r^{\rmb}_{nm})_{;k^{\rma}}&=&\left(\frac{v^{\lda,\rmb}_{nm}}{i\go^\lda_{nm}}\right)_{;k^{\rma}}
+=
+\frac{1}
+{i\go^\lda_{nm}}
+\left(
+v^{\lda,\rmb}_{nm}
+\right)_{;k^{\rma}}
+-
+\frac{v^{\lda,\rmb}_{nm}}
+{i(\go^\lda_{nm})^2}
+\left(
+\go^\lda_{nm}
+\right)_{;k^{\rma}}
+\nonumber \\
+&=&
+-i\calc^{\rma\rmb}_{nm}
++
+\frac{i}{\go^\lda_{nm}}
+\sum_{\ell}
+\bigg(
+\go^\lda_{\ell m}
+r^{\rma}_{n\ell}
+r^{\rmb}_{\ell m}
+-
+\go^\lda_{n\ell}
+r^{\rmb}_{n\ell}
+r^{\rma}_{\ell m}
+\bigg)
++
+\frac{r^{\rma}_{nm}
+\Delta^{\lda,\rmb}_{mn}}
+{\go^\lda_{nm}}
+\nonumber \\
+&&
+-
+\frac{r^{\rmb}_{nm}}
+{\go^\lda_{nm}}
+\left(
+\go^\lda_{nm}
+\right)_{;k^{\rma}}
+\nonumber \\
+&=&
+-i\calc^{\rma\rmb}_{nm}
++
+\frac{i}{\go^\lda_{nm}}
+\sum_{\ell}
+\bigg(
+\go^\lda_{\ell m}
+r^{\rma}_{n\ell}
+r^{\rmb}_{\ell m}
+-
+\go^\lda_{n\ell}
+r^{\rmb}_{n\ell}
+r^{\rma}_{\ell m}
+\bigg)
++
+\frac{r^{\rma}_{nm}
+\Delta^{\lda,\rmb}_{mn}}
+{\go^\lda_{nm}}
+\nonumber \\
+&&
+-
+\frac{r^{\rmb}_{nm}}
+{\go_{nm}}
+\frac{v^{\lda,\rma}_{nn}-v^{\lda,\rma}_{mm}}{m_e}
+\nonumber \\
+&=&
+-i\calc^{\rma\rmb}_{nm}
++
+\frac{
+r^{\rma}_{nm}
+\Delta^{\lda,\rmb}_{mn}
++r^{\rmb}_{nm}
+\Delta^{\lda,\rma}_{mn}
+}
+{\go^\lda_{nm}}
++
+\frac{i}{\go^\lda_{nm}}
+\sum_{\ell}
+\bigg(
+\go^\lda_{\ell m}
+r^{\rma}_{n\ell}
+r^{\rmb}_{\ell m}
+-
+\go^\lda_{n\ell}
+r^{\rmb}_{n\ell}
+r^{\rma}_{\ell m}
+\bigg),\nonumber\\
+\end{eqnarray}
+which is the generalization of Eq.~\eqref{a_rgendevn} for the case of a
+non-local potential in the Hamiltonian.

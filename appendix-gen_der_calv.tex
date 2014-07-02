@@ -1,0 +1,392 @@
+\section{Generalized derivative $\Big({\cal V}^{\gS,\rma,\ell}_{nm}\Big)_{;k^\rmb}$}\label{calvs} 
+From Eq.~\eqref{vopii} %and \eqref{conhr}
+\begin{eqnarray}\label{a.1}
+\left(
+\calv^{\gS,\rma,\ell}_{nm}
+\right)_{;k^\rmb}
+=
+\left(
+\calv^{\lda,\rma,\ell}_{nm}
+\right)_{;k^\rmb}
++
+\left(
+\calv^{S,\rma,\ell}_{nm}
+\right)_{;k^\rmb}
+.
+\end{eqnarray}
+For the LDA terme we have
+\begin{eqnarray}\label{a.2}
+\calv^{\lda,\rma,\ell}_{nm}
+&=&
+\frac{1}{2}\left(
+v^{\lda,\rma}\calf^\ell+\calf^\ell v^{\lda,\rma}
+\right)_{nm}
+\nonumber\\
+&=&
+\frac{1}{2}\sum_q\left(
+v^{\lda,\rma}_{nq}\calf^\ell_{qm}+\calf^\ell_{nq} v^{\lda,\rma}_{qm}
+\right)
+\nonumber\\
+\left(\calv^{\lda,\rma}_{nm}\right)_{;k^\rmb}
+&=&
+\frac{1}{2}\sum_q\left(
+v^{\lda,\rma}_{nq}\calf^\ell_{qm}+\calf^\ell_{nq} p^{\lda,\rma}_{qm}
+\right) _{;k^\rmb}
+\nonumber\\
+&=&
+\frac{1}{2}\sum_q\left(
+(v^{\lda,\rma}_{nq})_{;k^\rmb}\calf^\ell_{qm}
++ 
+v^{\lda,\rma}_{nq}(\calf^\ell_{qm})_{;k^\rmb}
++
+(\calf^\ell_{nq})_{;k^\rmb} v^{\lda,\rma}_{qm}
++
+\calf^\ell_{nq} (v^{\lda,\rma}_{qm})_{;k^\rmb}
+\right)
+,
+\end{eqnarray} 
+where we omitted $\bfk$ in all quantities.
+From Eq.~\eqref{cn8} we know that $\bfv^\nl_{nm}(\bfk)$
+ can be readily
+calculated and thus 
+$\bfv^\lda_{nm}(\bfk)$ are known.
+For the generalized derivative 
+$(\bfv^\lda_{nm}(\bfk))_{;\bfk}$ we use Eq.~\eqref{chon.98}
+to write
+\begin{eqnarray}\label{a.3}
+(v^{\lda,\rma}_{nm})_{;k^\rmb}
+&=& 
+im_e(\go^\lda_{nm}r^\rma_{nm})_{;k^\rmb}
+\nonumber\\
+&=& 
+im_e(\go^\lda_{nm})_{;k^\rmb} r^\rma_{nm}
++ 
+im_e\go^\lda_{nm}(r^\rma_{nm})_{;k^\rmb}
+\nonumber\\
+&=& 
+im_e(v^{\lda,b}_{nn}-v^{\lda,b}_{mm})r^\rma_{nm}
++ 
+im_e\go^\lda_{nm}(r^\rma_{nm})_{;k^\rmb}
+\nonumber\\
+&=& 
+im_e\gD^{\lda,b}_{nm}r^\rma_{nm}
++ 
+im_e\go^\lda_{nm}(r^\rma_{nm})_{;k^\rmb}
+\quad\mathrm{for}\quad n\ne m
+,
+\end{eqnarray} 
+where we used Eqs.~\eqref{a_gradw2} (ann then Eq.~\eqref{na_delta})
+ for the first term in the r.h.s
+of the middle equation
+and for the second term of the last equation we use
+ \eqref{na_rgendevn} as follows
+\begin{eqnarray}\label{rgendevapn}
+(r^{\rmb}_{nm})_{;k^{\rma}}
+&=&
+-i\calt^{\rma\rmb}_{nm}
++
+\frac{ 
+r^{\rma}_{nm}
+\Delta^{\lda,\rmb}_{mn}
++r^{\rmb}_{nm}
+\Delta^{\lda,\rma}_{mn}
+}
+{\go^\lda_{nm}}
++
+\frac{i}{\go^\lda_{nm}}
+\sum_{\ell}
+\bigg(
+\go^\lda_{\ell m} 
+r^{\rma}_{n\ell} 
+r^{\rmb}_{\ell m}
+-
+\go^\lda_{n\ell} 
+r^{\rmb}_{n\ell} 
+r^{\rma}_{\ell m}
+\bigg)
+\nonumber\\
+&\approx&
+\frac{ 
+r^{\rma}_{nm}
+\Delta^{\lda,\rmb}_{mn}
++r^{\rmb}_{nm}
+\Delta^{\lda,\rma}_{mn}
+}
+{\go^\lda_{nm}}
++
+\frac{i}{\go^\lda_{nm}}
+\sum_{\ell}
+\bigg(
+\go^\lda_{\ell m} 
+r^{\rma}_{n\ell} 
+r^{\rmb}_{\ell m}
+-
+\go^\lda_{n\ell} 
+r^{\rmb}_{n\ell} 
+r^{\rma}_{\ell m}
+\bigg)
+,
+\end{eqnarray} 
+where from Eq.~\eqref{na_hrdabn} 
+$\calc^{\rma\rmb}_{nm}=\calt^{\rma\rmb}_{nm}$ for $n\ne m$, but 
+$\calt^{\rma\rmb}_{nm}\approx 0$, and thus we neglect it.\cite{valerie} 
+
+For $n=m$, 
+we use Eqs.~\eqref{na_ripn} and \eqref{ntita}, to write
+\begin{eqnarray}\label{a.3c}
+(v^{\lda,\rma}_{nn})_{;k^\rmb}
+=
+\nabla_{k^{\rma}}
+v^{\lda,\rmb}_{nn}(\bfk)
+&=&
+-i\calc^{\rma\rmb}_{nn}
+-
+\sum_{\ell\ne n}
+\go^\lda_{\ell n}
+\bigg(
+r^{\rma}_{n\ell}
+r^\rmb_{\ell n}
++
+r^\rmb_{n\ell}
+r^{\rma}_{\ell n}
+\bigg)
+\nonumber\\
+&=&
+\frac{\hbar}{m_e}\gd_{\rma\rmb}
+-
+\sum_{\ell\ne n}
+\go^\lda_{\ell n}
+\bigg(
+r^{\rma}_{n\ell}
+r^\rmb_{\ell n}
++
+r^\rmb_{n\ell}
+r^{\rma}_{\ell n}
+\bigg)
+,
+\end{eqnarray}
+which is the standard effective-mas sum rule.\cite{nastosPRB05} 
+Again, we used Eq.~\eqref{na_hrdabn}, that for $n=m$ leads to 
+$\calc^{\rma\rmb}_{nn}=i\hbar\gd_{ab}/m_e
++
+\calt_{nn}^{\rma\rmb}(\bfk)
+\approx i\hbar\gd_{ab}/m_e
+$.\cite{valerie}
+
+Likewise,
+\begin{eqnarray}\label{a.3b}
+\calv^{S,\rma,\ell}_{nm}
+&=&
+\frac{1}{2}\sum_q\left(
+(v^{S,\rma}_{nq})_{;k^\rmb}\calf_{qm}
++
+v^{S,\rma}_{nq}(\calf_{qm})_{;k^\rmb}
++
+(\calf_{nq})_{;k^\rmb} v_{qm}^{S,\rma}
++
+\calf_{nq} (v_{qm}^{S,\rma})_{;k^\rmb}
+\right)
+,
+\end{eqnarray}
+where $(v^{S,\rma}_{nm})_{;k^\rmb}$ is given in A(6) of
+Ref.~\ref{cabellosPRB09},
+\begin{eqnarray}\label{choni.1}
+(v^{S,\rma}_{nm})_{;k^\rmb}=i\gD f_{mn}
+(r^\rma_{nm})_{;k^\rmb}
+.
+\end{eqnarray}
+
+
+To evaluate $(\calf_{nm})_{;k^\rma}$, we use the fact that as
+$\calf(z)$ is only a function of the $z$ coordinate, its commutator
+with $\bfr$ is zero, then,
+\begin{eqnarray}\label{a.4}
+\bra{n\bfk}
+\left[r^\rma,\calf(z)\right]
+\ket{m\bfk'}
+&=&
+\bra{n\bfk}
+\left[r_e^\rma,\calf(z)\right]
+\ket{m\bfk'}
++
+\bra{n\bfk}
+\left[r_i^\rma,\calf(z)\right]
+\ket{m\bfk'}
+=
+ 0
+.
+\end{eqnarray} 
+The interband part reduces to,
+\begin{eqnarray}\label{a.5}
+\left[r_e^\rma,\calf(z)\right]_{nm}
+&=&
+\sum_{q\bfk''}
+\left(
+\bra{n\bfk}
+r_e^\rma
+\ket{q\bfk''}
+\bra{q\bfk''}
+\calf(z)
+\ket{m\bfk'}
+-
+\bra{n\bfk}
+\calf(z)
+ \ket{q\bfk''}
+\bra{q\bfk''}
+r_e^\rma
+\ket{m\bfk'}
+\right)
+\nonumber\\
+&=&
+\sum_{q\bfk''}
+\gd(\bfk-\bfk'')
+\gd(\bfk'-\bfk'')
+\left(
+(1-\gd_{qn})
+\xi_{nq}^\rma
+\calf_{qm}
+-
+(1-\gd_{qm})
+\calf_{nq}
+\xi_{qm}^\rma
+\right)
+\nonumber\\
+&=&
+\gd(\bfk-\bfk')
+\left(
+\sum_{q}
+\left(
+\xi_{nq}^\rma
+\calf_{qm}
+-
+\calf_{nq}
+\xi_{qm}^\rma
+\right)
++
+\calf_{nm}(\xi_{mm}^\rma-\xi_{nn}^\rma)
+\right)
+,
+\end{eqnarray}
+where we used Eq.~\eqref{rnme}, and the $\bfk$ and $z$ is implicitly
+understood. From Eq.~\eqref{conmri3} the intraband part is,
+\begin{equation}\label{a.6}
+\bra{n\bfk}[\hat\bfr_i,\calf(z)]\ket{m\bfk'}
+=i\gd(\bfk-\bfk')(\calf_{nm})_{;\bfk}
+,
+\end{equation}
+then from Eq.~\eqref{a.4}
+\begin{eqnarray}\label{a.7}
+&&
+\left(
+(\calf_{nm})_{;\bfk}
+-i
+\sum_{q}
+\left(
+\xi_{nq}^\rma
+\calf_{qm}
+-
+\calf_{nq}
+\xi_{qm}^\rma
+\right)
+-i
+\calf_{nm}(\xi_{mm}^\rma-\xi_{nn}^\rma)
+\right) i\gd(\bfk-\bfk')
+=0
+\nonumber\\
+\frac{1}{i}(\calf_{nm})_{;\bfk}
+&=&
+\sum_{q}
+\left(
+\xi_{nq}^\rma
+\calf_{qm}
+-
+\calf_{nq}
+\xi_{qm}^\rma
+\right)
++
+\calf_{nm}(\xi_{mm}^\rma-\xi_{nn}^\rma)
+\nonumber\\
+&=&
+\sum_{q\ne n,m}
+\left(
+\xi_{nq}^\rma
+\calf_{qm}
+-
+\calf_{nq}
+\xi_{qm}^\rma
+\right)
++
+\left(
+\xi_{nn}^\rma
+\calf_{nm}
+-
+\calf_{nn}
+\xi_{nm}^\rma
+\right)_{q=n}
++
+\left(
+\xi_{nm}^\rma
+\calf_{mm}
+-
+\calf_{nm}
+\xi_{mm}^\rma
+\right)_{q=m}
+\nonumber\\
+&+&
+\calf_{nm}(\xi_{mm}^\rma-\xi_{nn}^\rma)
+\nonumber\\
+(\calf_{nm})_{;\bfk}
+&=&
+i\sum_{q\ne n,m}
+\left(
+\xi_{nq}^\rma
+\calf_{qm}
+-
+\calf_{nq}
+\xi_{qm}^\rma
+\right)
++i\xi_{nm}^\rma(\calf_{mm}-\calf_{nn})
+\nonumber\\
+&=&
+i\sum_{q\ne n,m}
+\left(
+r_{nq}^\rma
+\calf_{qm}
+-
+\calf_{nq}
+r_{qm}^\rma
+\right)
++ir_{nm}^\rma(\calf_{mm}-\calf_{nn})
+,
+\end{eqnarray} 
+since in every $\xi_{nm}^\rma$, $n\ne m$. 
+
+For the general
+case of
+\begin{eqnarray}\label{a.8}
+\bra{n\bfk}
+\left[\hat r^\rma,\hat\calg(\bfr,\bfp)\right]
+\ket{m\bfk'}
+&=&
+\calc_{nm}(\bfk)
+,
+\end{eqnarray}
+above result would lead to a more general expression, 
+\begin{eqnarray}\label{a.9}
+(\calg_{nm}(\bfk))_{;k^\rma}
+&=&
+\calc_{nm}(\bfk)
++
+i\sum_{q\ne(nm)}
+\left(
+r_{nq}^\rma (\bfk)
+\calg_{qm}(\bfk)
+-
+\calg_{nq}(\bfk)
+r_{qm}^\rma (\bfk)
+\right)
++ir_{nm}^\rma (\bfk) (\calg_{mm}(\bfk)-\calg_{nn}(\bfk))
+,
+\nonumber\\
+\end{eqnarray}
+notice that the last term is zero for $n=m$.
