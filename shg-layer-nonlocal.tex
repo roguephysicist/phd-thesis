@@ -1,11 +1,10 @@
-\documentclass[floatfix,prb,aps,superscriptaddress,11pt,preprint]{revtex4}
-%\documentclass[11pt]{article}
-%\usepackage{fullpage}
+%\documentclass[floatfix,prb,aps,superscriptaddress,11pt,preprint]{revtex4}
+\documentclass{article}
+\usepackage{fullpage}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \allowdisplaybreaks[1]%biutiful equation breaker!!!
-%\usepackage{ulem}
 \usepackage{subfigure}
 \usepackage{bm}
 %\usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
@@ -18,32 +17,32 @@
 
 \title{Longitudinal Gauge Theory of Surface Second Harmonic Generation}
 \author{Bernardo S. Mendoza}
-\affiliation{Centro de Investigaciones en Optica, Le\'on, Guanajuato, M\'exico, bms@cio.mx}
+% \affiliation{Centro de Investigaciones en Optica, Le\'on, Guanajuato, M\'exico, bms@cio.mx}
 
-\begin{abstract}
-A theoretical review of surface second harmonic generation from semiconductor surfaces based on the longitudinal gauge is presented. The so called, layer-by-layer analysis is carefully presented in order to show how a surface calculation of second harmonic generation (SHG) can readily be carried out. The nonlinear susceptibility tensor $\boldsymbol{\chi}$ is split into two terms, one that is related to inter-band one-electron transitions, and the other is related to intra-band one-electron transitions.
+% \begin{abstract}
+% A theoretical review of surface second harmonic generation from semiconductor surfaces based on the longitudinal gauge is presented. The so called, layer-by-layer analysis is carefully presented in order to show how a surface calculation of second harmonic generation (SHG) can readily be carried out. The nonlinear susceptibility tensor $\boldsymbol{\chi}$ is split into two terms, one that is related to inter-band one-electron transitions, and the other is related to intra-band one-electron transitions.
 
-%The equivalence of this formulation to the transverse gauge approach is shown and the possibility of confirming its numerical accuracy is discussed. Also, the calculation of the surface second harmonic radiated intensity $R$ within the three-layer-model is derived. With $\boldsymbol{\chi}$ and $R$ one has a complete description of this fascinating optical phenomena.
-\end{abstract}
+% % The equivalence of this formulation to the transverse gauge approach is shown and the possibility of confirming its numerical accuracy is discussed. Also, the calculation of the surface second harmonic radiated intensity $R$ within the three-layer-model is derived. With $\boldsymbol{\chi}$ and $R$ one has a complete description of this fascinating optical phenomena.
+% \end{abstract}
 
 \maketitle
 \tableofcontents
 
 \section{Introduction}\label{intro}
 
-Second harmonic generation (SHG) has become a powerful spectroscopic  tool to study optical properties of surfaces and interfaces since it has the advantage of being surface sensitive. For centrosymmetric materials inversion symmetry forbids, within the dipole approximation, SHG from the bulk, but it is allowed at the surface, where the inversion symmetry is broken. Therefore, SHG should necessarily come from a localized surface region. SHG allows to study the structural atomic arrangement and phase transitions of clean and adsorbate covered surfaces, and since it is an optical probe, it can be used out of UHV conditions, and is non-invasive and non-destructive. On the experimental side, the new tunable high intensity laser systems have made SHG spectroscopy readily accessible and applicable to a wide range of systems.\cite{downer01} However, the theoretical development of the field is still an ongoing subject of research. Some recent advances for the case of semiconducting and metallic systems have appeared in the literature, where the confrontation of theoretical
-models with experiment has yield correct physical interpretations for the SHG spectra.\cite{downer01,mendoza01a,lim00,gav00,mendoza99,mendoza98a,mendoza96,guyot90}
+Second harmonic generation (SHG) has become a powerful spectroscopic  tool to study optical properties of surfaces and interfaces since it has the advantage of being surface sensitive. For centrosymmetric materials inversion symmetry forbids, within the dipole approximation, SHG from the bulk, but it is allowed at the surface, where the inversion symmetry is broken. Therefore, SHG should necessarily come from a localized surface region. SHG allows to study the structural atomic arrangement and phase transitions of clean and adsorbate covered surfaces, and since it is an optical probe, it can be used out of UHV conditions, and is non-invasive and non-destructive. On the experimental side, the new tunable high intensity laser systems have made SHG spectroscopy readily accessible and applicable to a wide range of systems.\cite{downer_optical_2001},\cite{lupke_characterization_1999} However, the theoretical development of the field is still an ongoing subject of research. Some recent advances for the case of semiconducting and metallic systems have appeared in the literature, where the confrontation of theoretical
+models with experiment has yield correct physical interpretations for the SHG spectra.\cite{downer_optical_2001,mendoza_ab_2001,lim_optical_2000,gavrilenko_optical_2000,mendoza_visible-infrared_1999,mendoza_microscopic_1998,mendoza_local-field_1996,mendoza_polarizable-bond_1997,guyot-sionnest_electronic_1990}
 
-In a previous article,\cite{mendoza01b} we reviewed some of the recent results in the study of SHG using the transverse gauge for the coupling between the electromagnetic field and the electron. In particular, we
-showed a method to systematically investigate the different contributions to the observed peaks in SHG.\cite{arzate00} The approach consisted in the separation of the different contributions tothe nonlinear susceptibility according to 1$\omega$ and 2$\omega$ transitions and tothe  surface or bulk character of the states among which the transitions take place. To complement above results, on this article we review the calculation of the nonlinear susceptibility using the longitudinal gauge, and show that it is posible to clearly obtain the ``layer-by-layer'' contribution for a slab scheme, used for a surface calculation.
+In a previous article,\cite{mendoza_epioptics_2001} we reviewed some of the recent results in the study of SHG using the transverse gauge for the coupling between the electromagnetic field and the electron. In particular, we
+showed a method to systematically investigate the different contributions to the observed peaks in SHG.\cite{arzate_microscopic_2001} The approach consisted in the separation of the different contributions tothe nonlinear susceptibility according to 1$\omega$ and 2$\omega$ transitions and tothe  surface or bulk character of the states among which the transitions take place. To complement above results, on this article we review the calculation of the nonlinear susceptibility using the longitudinal gauge, and show that it is posible to clearly obtain the ``layer-by-layer'' contribution for a slab scheme, used for a surface calculation.
 
 \section{Longitudinal Gauge}\label{longi}
 
 To calculate the optical properties of a given system
 within the longitudinal gauge, we follow the article by
-Aversa and Sipe.\cite{aversa95} A more recent derivation can also be
+Aversa and Sipe.\cite{aversa_nonlinear_1995} A more recent derivation can also be
 found in
-Ref. \ref{sipe00} and \ref{lambrecht00}.
+Ref. \cite{sipe_second-order_2000} and \cite{lambrecht_band_2000}.
  Assuming the long-wavelength approximation,
 which implies a position independent electric field, 
 $\bfE(t)$,  
@@ -232,8 +231,8 @@ and the we can write
 which gives the interband matrix elements of the position operator
 in terms of the matrix elements of $\bfv^\lda$. 
 For fully  separable pseudopotentials in the 
-Kleinman-Bylander form,\cite{mottaCMS10,kleinmanPRL82,adolphPRB96}
-the matrix elements $\bfv^\nl_{nm}(\bfk)$ can be readily calculated.\cite{francesco}
+Kleinman-Bylander form,\cite{motta_implementation_2010,kleinman_efficacious_1982,adolph_nonlocality_1996}
+the matrix elements $\bfv^\nl_{nm}(\bfk)$ can be readily calculated.%\cite{francesco}
 
 
 \section{Time-dependent Perturbation Theory}\label{tdpt}
@@ -691,7 +690,7 @@ $\Delta_\ell^f+\Delta_\ell^b$ is the thickness of layer $\ell$
 \begin{figure}[b]
 \centering
 %\includegraphics[height=5cm,width=7cm]{slab}
-\includegraphics[scale=.7]{slab}
+\includegraphics[scale=.7]{images/slab}
 \caption{
 We show a sketch of the slab, where the small
 circles represent the atoms. See the text for the details.
@@ -905,17 +904,17 @@ Actually,
 to limit the response to one surface, 
 the equivalent of Eq.~\eqref{nl.4} for $\calbv^\ell=\calbp^\ell/m_e$
  was proposed 
-in Ref.~\ref{reiningPRB94}, and latter used in Refs.
-\ref{mendozaPRB01} 
-and \ref{mejiaSMF04} in the context of SHG. Then, 
-the layer-by-layer analysis of Refs. \ref{hoganPRB03} 
-and \ref{castilloPRB03}
+in Ref.~\cite{reining_microscopic_1994}, and latter used in Refs.
+\cite{mendoza_ab_2001} 
+and \cite{mejia_layer-by-layer_2004} in the context of SHG. Then, 
+the layer-by-layer analysis of Refs. \cite{hogan_optical_2003} 
+and \cite{castillo_layer-by-layer_2003}
 actually used Eq.~\eqref{sz}
 thus limiting the current response
 to a particular layer of the slab, and used it to obtain the
 anisotropic linear optical response of semiconductor surfaces.
 However, the first formal derivation of this scheme is presented in
-Ref.~\ref{mendozaPRB06} for the linear optical response, and
+Ref.~\cite{mendoza_layer-by-layer_2006} for the linear optical response, and
 here for the non-linear optical response of semiconductors.
 
 \section{Non-linear Surface Susceptibility}\label{nonchi}
@@ -965,7 +964,7 @@ Note that we have kept the same susceptibility tensors, since as the
 system is centrosymmetric, they must be invariant under $\mbf{r} \to
 -\mbf{r}$. 
 Recalling that $\mbf{P}(\mbf{r})$ and
-$\mbf{E}(\mbf{r})$, are polar vectors,\cite{Jackson75} we have that
+$\mbf{E}(\mbf{r})$, are polar vectors,\cite{jackson_classical_1975} we have that
 Eq.~\eqref{mshg3} reduces to
 \begin{eqnarray}\label{mshg4}
 -P_{\rma}(\mbf{r})&=&\chi_{\rma\rmb\rmc}(-E_{\rmb}(\mbf{r}))(-E_{\rmc}(\mbf{r}))
@@ -988,7 +987,7 @@ leads to the conclusion that
 
 \begin{figure}[t]
 \centering
-\includegraphics[scale=0.6]{system}
+\includegraphics[scale=0.6]{images/system}
 \caption{(color online) We show a sketch of the 
 semi-infinite system with a centrosymmetric bulk. The surface region is
 of width $\sim d$. The incoming photon of frequency $\go$ is represented by
@@ -1049,7 +1048,7 @@ Although the bulk generated SH is in itself a very important optical
 phenomena, in here we concentrate only in the surface generated
 SH. Indeed, in centrosymmetric systems for which the quadrupolar bulk
 response is much smaller that the dipolar surface response, SH is
-readily used as a very useful and powerful optical surface probe.\cite{downer01}
+readily used as a very useful and powerful optical surface probe.\cite{downer_optical_2001}
 
 To calculate $\chi_{\rma\rmb\rmc}^s$,
 we start from the basic relation, $\bfJ=d\bfP/dt$ 
@@ -1118,7 +1117,7 @@ s$urface, whereas the capital case $S$ referes to the $\it S$cissors correction.
 We mention that
 Eq. (\ref{chii}) and Eq. (\ref{chie}) need to be symmetrized for intrinsic
 permutation symmetry, i.e.
-$\chi^{\rma\rmb\rmc}(-\go_3;\go_1,\go_2)=\chi^{\rma\rmc\rmb}(-\go_3;\go_2,\go_1)$,\cite{rashkeev98}
+$\chi^{\rma\rmb\rmc}(-\go_3;\go_1,\go_2)=\chi^{\rma\rmc\rmb}(-\go_3;\go_2,\go_1)$,\cite{rashkeev_efficient_1998}
 (for SHG $\go_1=\go_2=\go$ and $\go_3=2\go$). We mention that above
 equations diverge as $\go_3\to 0$. This apparent divergence is removed
 in the following section.
@@ -1138,7 +1137,7 @@ $(\go^S_{m})_{;k^a}=(\go^\lda_{m})_{;k^a}$, thus
 \frac{p_{nn}^{\rmc}-p_{mm}^{\rmc}}{m_e}\equiv\gD_{nm}^{\rmc}
 ,
 \end{equation}
-and that,\cite{nastosPRB05}
+and that,\cite{nastos_scissors_2005}
 \begin{eqnarray}\label{rgk}
 (r^{S,\rmb}_{nm})_{;k^{\rmc}}
 &=&
@@ -1285,7 +1284,7 @@ follows.
 where we used Eqs.~\eqref{wk} and ~\eqref{rcal}, and for the last
 line, we performed an
 integration by parts over the Brillouin zone,
-where the contribution from the edges vanishes.\cite{aschcroft}
+where the contribution from the edges vanishes.\cite{ashcroft_solid_1976}
 Using the chain rule, we obtain
 \begin{eqnarray}\label{chrn1}
 \left(
@@ -1437,7 +1436,7 @@ Also, since we are working in the length-gauge, it is trivial to
 incorporate the scissors operator in above expressions for $\bfgchi^{s,\ell}$
 by simple taking
 $\go_n\to\go_n^S$, where $\go_n^S=\go_n+(1-f_n)\Delta$ with $\gD$ the
-rigid scissor correction.\cite{nastosPRB05,cabellosPRB09}
+rigid scissor correction.\cite{nastos_scissors_2005,cabellos_effects_2009}
 
 In terms of $\mathcal{V}^{\Sigma,\text{a}}_{mn}$,
 
@@ -1501,7 +1500,7 @@ length gauge for the coupling of the external electric field to the electron.
 
 %\backmatter
 \bibliographystyle{unsrt}
-\nocite{*} 
-\bibliography{references}
+%\nocite{*} 
+\bibliography{ref}
 
 \end{document}
