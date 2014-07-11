@@ -7,16 +7,16 @@
 \allowdisplaybreaks[1]%biutiful equation breaker!!!
 \usepackage{subfigure}
 \usepackage{bm}
-%\usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
+\usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
 \usepackage{showlabels}
 %\usepackage{showkeys}
-%\input{/Users/bms/util/definitions}
-\input{definitions}
+\input{/Users/bms/util/definitions}
+%\input{definitions}
 
 \begin{document}
 
 \title{Longitudinal Gauge Theory of Surface Second Harmonic Generation}
-\author{Bernardo S. Mendoza}
+\author{Sean M. Anderson and Bernardo S. Mendoza}
 % \affiliation{Centro de Investigaciones en Optica, Le\'on, Guanajuato, M\'exico, bms@cio.mx}
 
 % \begin{abstract}
@@ -152,8 +152,9 @@ where we have defined
 \bfv
 +\bfv^\nl
 \end{eqnarray}  
-with $\hat\bfp=-i\hbar\bfgnabla$ the momentum operator
-Using Eq.~\eqref{chon.0} into above equation, we obtain that
+with $\hat\bfp=-i\hbar\bfgnabla$ the momentum operator.
+Using Eq.~\eqref{chon.0} into above equation, we obtain that the
+matrix elements of $\bfv^S$ are given by
 \begin{equation}\label{chon.2} 
 \bfv^S_{nm}=i\gD f_{mn}\bfr_{nm},
 %=\frac{\gD f_{mn}}{\go^\lda_{nm}}\bfv^\lda_{nm}
@@ -221,7 +222,7 @@ we can identify
 (1-\gd_{nm})\bfgxi_{nm}\equiv \bfr_{nm}
 ,
 \end{equation}
-and the we can write
+and then we can write
 \begin{equation}\label{chon.98}
 \bra{n\bfk}\hat\bfr_e\ket{m\bfk} =
 \bfr_{nm}(\bfk)=\frac{\bfv^\lda_{nm}(\bfk)}{i\go^\lda_{nm}(\bfk)}
@@ -230,9 +231,11 @@ and the we can write
 \end{equation}  
 which gives the interband matrix elements of the position operator
 in terms of the matrix elements of $\bfv^\lda$. 
+??
 For fully  separable pseudopotentials in the 
-Kleinman-Bylander form,\cite{motta_implementation_2010,kleinman_efficacious_1982,adolph_nonlocality_1996}
-the matrix elements $\bfv^\nl_{nm}(\bfk)$ can be readily calculated.%\cite{francesco}
+Kleinman-Bylander form,
+\cite{motta_implementation_2010,kleinman_efficacious_1982,adolph_nonlocality_1996}
+the matrix elements $\bfv^\nl_{nm}(\bfk)$ can be readily calculated.\cite{francesco}??
 
 
 \section{Time-dependent Perturbation Theory}\label{tdpt}
@@ -274,22 +277,18 @@ that leads to
 We assume that the interaction is switched-on adiabatically, and
 choose a time-periodic perturbing field, to write
 \begin{equation}\label{efield}
-\bfE(t)=\bfE e^{-i\go t}e^{\eta t}
-,
-\end{equation}
-where $\eta > 0$ assures
-that at $t=-\infty$ the interaction is zero and has its full strength, $\bfE$,
-at $t=0$. After the required time integrals are done, one takes
-$\eta\to 0$. Instead of Eq.~\eqref{efield} we use
-\begin{equation}\label{efield2}
-\bfE(t)=\bfE e^{-i\got t}
+\bfE(t)=\bfE e^{-i\go t}e^{\eta t}=\bfE e^{-i\got t}
 ,
 \end{equation}
 with
 \begin{equation}\label{got}
 \got=\go+i\eta
-.
-\end{equation}
+,
+\end{equation} 
+where $\eta > 0$ assures
+that at $t=-\infty$ the interaction is zero and has its full strength, $\bfE$,
+at $t=0$. After the required time integrals are done, one takes
+$\eta\to 0$. 
 Also, $\hat\gr_I(t=-\infty)$ should be independent of time, and thus 
 $[\hat{H},\hat\rho]_{t=-\infty}=0$, which implies that 
 $\hat\gr_I(t=-\infty)=\hat\rho(t=-\infty)\equiv\hat\rho_0$,
@@ -616,8 +615,10 @@ with
 E^{\rmb}_{\go_\ga}E_{\go_\gb}^{\rmc}
 \end{eqnarray} 
 where $\got_3=\got_\ga+\got_\gb$ and $\bfE_{\go_i}$ is the amplitude of the perturbing
-field with $\go_i$ for $i=\ga,\gb$. We use Eq.
-~\eqref{rho2} in section \ref{nonchi}. For the scissored hamiltonian,
+field with $\go_i$ for $i=\ga,\gb$. 
+%We use Eq.
+%~\eqref{rho2} in section \ref{nonchi}.
+ For the scissored hamiltonian,
 \begin{eqnarray}\label{rho2n}
 \gr_{nm}^{(2)}(\bfk;\go_3)&=&\frac{e}{i\hbar}\frac{1}{\go^S_{nm\bfk}-\got_3}
 \bigg[-(B_{nm}^{\rmc}(\bfk,\go_\gb)_{;k^{\rmb}}
@@ -656,30 +657,30 @@ the true surface that consists of the very first relaxed layer of atoms, and
 some of the sub-true-surface relaxed atomic layers.
 Since the front and the back
 surfaces of the slab are usually identical, the total slab is
-centrosymmetric. This fact (see Sec. \ref{cd}), will imply $\chi^{slab}_{abc}=0$, and thus we must
+centrosymmetric. This fact (see Sec. \ref{cd}), will imply $\chi^{slab}_{\rma\rmb\rmc}=0$, and thus we must
 device a way in which this artifact of a centrosymmetric slab is
-bypassed in order to have a finite $\chi^s_{abc}$ representative of the
+bypassed in order to have a finite $\chi^s_{\rma\rmb\rmc}$ representative of the
 surface. Even if the front and back surfaces of the slab 
 are different, thus breaking the centrosymmetry and therefore giving an
-overall $\chi^{slab}_{abc}\ne 0$, we
-need a procedure to extract the front surface $\chi^f_{abc}$
+overall $\chi^{slab}_{\rma\rmb\rmc}\ne 0$, we
+need a procedure to extract the front surface $\chi^f_{\rma\rmb\rmc}$
 and
-the back surface $\chi^b_{abc}$ from the slab non-linear
-susceptibility $\chi^{slab}_{abc}$.
+the back surface $\chi^b_{\rma\rmb\rmc}$ from the slab non-linear
+susceptibility $\chi^{slab}_{\rma\rmb\rmc}$.
 
 A convenient way to accomplish the separation of the SH signal of
 either surface is to introduce
 the so called
-``cut function'', $\calf(z)$, which is usually taken to be unity over one half
+``cut function'', $\calc(z)$, which is usually taken to be unity over one half
 of the slab, and zero over the other half.
-In this case, $\calf(z)$ will give the contribution of the side of the
-slab for which $\calf(z)=1$. However, we can generalize this simple choice
-for $\calf(z)$, 
+In this case, $\calc(z)$ will give the contribution of the side of the
+slab for which $\calc(z)=1$. However, we can generalize this simple choice
+for $\calc(z)$, 
 by a top-hat cut function
-$\calf_\ell(z)$, that selects a given layer,
+$\calc_\ell(z)$, that selects a given layer,
 \begin{equation}
 \label{sz}
-\calf_\ell(z)=\Theta(z-z_\ell+\Delta_\ell^{\rmb})
+\calc_\ell(z)=\Theta(z-z_\ell+\Delta_\ell^{\rmb})
             \Theta(z_\ell-z+\Delta_\ell^f),
 \end{equation}
 where $\Theta$ is the Heaviside function. Here, $\Delta_\ell^{f/b}$
@@ -698,8 +699,8 @@ circles represent the atoms. See the text for the details.
 \label{fslab}
 \end{figure}
 
-Now, we show how this ``cut function'' $\calf_\ell(z)$ is introduced in
-the calculation of $\chi_{ijl}$.
+Now, we show how this ``cut function'' $\calc_\ell(z)$ is introduced in
+the calculation of $\chi_{\rma\rmb\rmc}$.
 The microscopic current density is given by
 \begin{equation}\label{jmic}
 \bfj(\bfr,t)=\mathrm{Tr}(\hat\bfj(\bfr)\hat\rho(t)),
@@ -709,7 +710,7 @@ where the operator for the electron's current is
 \hat\bfj(\bfr)=\frac{e}{2}\left(\hat\bfv^\gS\ket{\bfr}\bra{\bfr}
 +\ket{\bfr}\bra{\bfr}\hat\bfv^\gS\right), 
 \end{equation}
-where $\hat{\mbf{v}}$ is the electron's velocity operator to be dealt
+where $\hat{\mbf{v}}^\gS$ is the electron's velocity operator to be dealt
 with below. We define
 $\hat\mu\equiv\ket{\bfr}\bra{\bfr}$ and use the cyclic invariance of
 the trace to write
@@ -767,7 +768,7 @@ current, we can integrate $\mathbf{j}({\mathbf r},t)$ over the
 desired region. The contribution to the current density from the
 $\ell$-th layer of the slab is given by
 \begin{equation}\label{jsz}
-\frac{1}{\Omega}\int d^3r\, \calf_\ell(z)\, \mathbf{j}(\mathbf{r},t)
+\frac{1}{\Omega}\int d^3r\, \calc_\ell(z)\, \mathbf{j}(\mathbf{r},t)
  \equiv \mathbf{J}^{\ell}(t),
 \end{equation}
 where $\mathbf{J}^{\ell}(t)$ is the microscopic current  in the
@@ -777,7 +778,7 @@ Therefore we define
 e{\boldsymbol{\mathcal{V}}}^{\gS,\ell}_{mn}(\mathbf{k})
 \equiv
 %\frac{1}{\Omega}
-\int d^3r\, \calf_\ell(z)\,\bfj_{mn}({\bfk};\bfr),
+\int d^3r\, \calc_\ell(z)\,\bfj_{mn}({\bfk};\bfr),
 \end{equation}
 to write
 \begin{equation}\label{jmac}
@@ -786,8 +787,10 @@ J_a^{(N,\ell)}(t)=\frac{e}{\gO}
 \mathcal{V}^{\gS,a,\ell}_{mn}(\mathbf{k})
 \rho^{(N)}_{nm}(\bfk;t),
 \end{equation}
-as the induced macroscopic current, to order $N$-th in the external
-perturbation, of the  $\ell$-th layer. The matrix elements of the
+as the induced macroscopic current of the  $\ell$-th layer,
+ to order $N$-th in the external
+perturbation.
+ The matrix elements of the
 density operator for $N=1,2$ are given by Eqs.~\eqref{rho1n} and
 ~\eqref{rho2n}, respectively. 
 The Fourier component of macroscopic current of Eq.~\eqref{jmac} is given by
@@ -806,7 +809,7 @@ Eqs.~\eqref{vcal} and \eqref{jmic3} we obtain
 {\boldsymbol{\mathcal{V}}}^{\gS,\ell}_{mn}({\mathbf k})=
 \frac{1}{2}
 \int \mathrm{d}^3 r\,
- \calf_\ell(z)
+ \calc_\ell(z)
 \bigg[
 \langle m\mathbf{k}|\mathbf{v}^\gS | \mathbf{r}\rangle
 \langle \mathbf{r} | n \mathbf k \rangle +
@@ -814,7 +817,7 @@ Eqs.~\eqref{vcal} and \eqref{jmic3} we obtain
 \langle \mathbf{r} | \mathbf{v}^\gS | n \mathbf k \rangle\bigg]
 ,
 \end{equation}  
-and the following property
+and using the following property
 \begin{equation}\label{nl.2}
 \langle \mathbf{r} | \hat\bfv^\gS(\bfr,\bfr')| n\mathbf{k} \rangle
 =\int d^3 r'' \bra{\mbf{r}}\hat\bfv^\gS(\bfr,\bfr')\ket{\mbf{r}''}
@@ -826,14 +829,14 @@ and the following property
 \psi_{n\mathbf{k}}(\mathbf{r})
 ,
 \end{equation}
-due to the fact that the operator $\bfv^\gS(\bfr,\bfr')$ does not act on
-$\bfr''$. Then,
+that stems from the fact that the operator $\bfv^\gS(\bfr,\bfr')$ does not act on
+$\bfr''$, we can write
 \begin{eqnarray}\label{nl.3}
 \calbv^{\gS,\ell}_{mn}({\mathbf k})
 &=&
 \frac{1}{2}
 \int \mathrm{d}^3 r\,
- \calf_\ell(z)
+ \calc_\ell(z)
  \bigg[
 \psi_{n\mathbf{k}}(\mathbf{r})
 \hat\bfv^{\gS *}\psi^*_{m\mathbf{k}}(\mathbf{r})
@@ -845,8 +848,8 @@ $\bfr''$. Then,
 &=&
 \int \mathrm{d}^3 r\,
 \psi^*_{m\mathbf{k}}(\mathbf{r})
-\left[\frac{\calf_\ell(z) \bfv^\gS +
-\bfv^\gS \calf_\ell(z)}{2}\right]
+\left[\frac{\calc_\ell(z) \bfv^\gS +
+\bfv^\gS \calc_\ell(z)}{2}\right]
 \psi_{n\mathbf{k}}(\mathbf{r})
 \nonumber\\
 &=&
@@ -856,26 +859,27 @@ $\bfr''$. Then,
 \psi_{n\mathbf{k}}(\mathbf{r})
 ,
 \end{eqnarray}
-where we used the hermitian property of $\bfp$ and $\bfv^\gS$ and  defined
+where we used the hermitian property of $\bfv^\gS$ and  defined
 \begin{eqnarray}\label{nl.4}
 \calbv^{\gS,\ell}
 =
-\frac{\calf_\ell(z) \bfv^\gS +
-\bfv^\gS \calf_\ell(z)}{2}
+\frac{\calc_\ell(z) \bfv^\gS +
+\bfv^\gS \calc_\ell(z)}{2}
 ,
 \end{eqnarray} 
-and the superscript $\ell$ is inherited from $\calf_\ell(z)$. 
+where the superscript $\ell$ is inherited from $\calc_\ell(z)$, and we
+supres the dependance on $z$ form the crowded notation.  
 Then,
 we see that the replacement
 \begin{equation}\label{vcali}
-\hat\bfv^\gS \to \hat\calbv^{\gS,\ell}=\left[\frac{\calf_\ell(z) \hat\bfv^\gS +
-\hat\bfv^\gS \calf_\ell(z)}{2}\right],
+\hat\bfv^\gS \to \hat\calbv^{\gS,\ell}=\left[\frac{\calc_\ell(z) \hat\bfv^\gS +
+\hat\bfv^\gS \calc_\ell(z)}{2}\right],
 \end{equation} 
 is what it takes to change the
 velocity operator of the electron, $\hat\bfv^\gS$, to the new velocity
 operator, $\calbv^{\gS,\ell}$
  that implicitly takes into account the
-contribution of the region of the slab given by $\calf_\ell(z)$.
+contribution of the region of the slab given by $\calc_\ell(z)$.
 From Eq.~\eqref{vop},
 \begin{eqnarray}\label{vopii}
 \calbv^{\gS,\ell}
@@ -896,9 +900,9 @@ From Eq.~\eqref{vop},
 \calbv^{\nl,\ell}
 ,
 \end{eqnarray}
-where the required expressions of above operators
+??where the required expressions of above operators
 are given in 
-App. \ref{calvs}.
+App. \ref{calvs}.??
 
 Actually, 
 to limit the response to one surface, 
@@ -1090,16 +1094,20 @@ which gives the surface susceptibility of layer $\ell$-th, where
 $\calbv^\gS$ is given in Eq.~\eqref{vop}.
 Using Eq.~\eqref{rho1n}, we
 split above equation into
-two, one coming from the first term and the other
+two contributions, one coming from the first term and the other
 from the second term on the r.h.s.,
 \begin{equation}\label{chii}
-\chi_{i,\rma\rmb\rmc}^{s,\ell}=-\frac{e^3}{\gO\hbar^2\go_3}\sum_{mn\bfk}
+\chi_{i,\rma\rmb\rmc}^{s,\ell}
+(-2\go;\go,\go)
+=-\frac{e^3}{\gO\hbar^2\go_3}\sum_{mn\bfk}
 \frac{\calv_{mn}^{\gS,\rma,\ell}}{\go^S_{nm}-\go_3}
 \left(\frac{f_{mn}r_{nm}^{\rmb}}{\go^S_{nm}-\go_\gb}\right)_{;k^{\rmc}},
 \end{equation} 
 and
 \begin{equation}\label{chie}
-\chi_{e,\rma\rmb\rmc}^{s,\ell}=\frac{ie^3}{\gO\hbar^2\go_3}\sum_{\ell mn\bfk}
+\chi_{e,\rma\rmb\rmc}^{s,\ell}
+(-2\go;\go,\go)
+=\frac{ie^3}{\gO\hbar^2\go_3}\sum_{\ell mn\bfk}
 \frac{\calv_{mn}^{\gS,\rma,\ell}}{\go^S_{nm}-\go_3}
 \left(
 \frac{r_{n\ell}^{\rmc} r_{\ell m}^{\rmb} 
@@ -1112,62 +1120,17 @@ where $\boldsymbol{\chi}^{s,\ell}_i$
  is related to intraband transitions and
 $\boldsymbol{\chi}^{s,\ell}_e$
 to interband transitions. We warn the reader not to be confused by the
-already confusing notation, lower case $s$ refers to the $\it
-s$urface, whereas the capital case $S$ referes to the $\it S$cissors correction.   
-We mention that
-Eq. (\ref{chii}) and Eq. (\ref{chie}) need to be symmetrized for intrinsic
-permutation symmetry, i.e.
-$\chi^{\rma\rmb\rmc}(-\go_3;\go_1,\go_2)=\chi^{\rma\rmc\rmb}(-\go_3;\go_2,\go_1)$,\cite{rashkeev_efficient_1998}
-(for SHG $\go_1=\go_2=\go$ and $\go_3=2\go$). We mention that above
-equations diverge as $\go_3\to 0$. This apparent divergence is removed
-in the following section.
-
-The generalized derivative
-in Eq. (\ref{chii}) is obtained from the chain rule as
-\begin{equation}\label{gene}
-\left(\frac{f_{mn}r_{nm}^{\rmb}}{\go^S_{nm}-\go_2}\right)_{;k^{\rmc}}=
-\frac{f_{mn}}{\go^S_{nm}-\go}\left(r_{nm}^{\rmb}\right)_{;k^{\rmc}}
--\frac{f_{mn}r_{nm}^{\rmb}}{(\go^S_{nm}-\go)^2}\left(\go^S_{nm}\right)_{;k^{\rmc}},
-\end{equation} 
-here $(\go^S_{nm})_{;k^a}=(\go^S_{n})_{;k^a}-(\go^S_{m})_{;k^a}$, and 
-from Appendix \ref{gwk} we show that 
-$(\go^S_{m})_{;k^a}=(\go^\lda_{m})_{;k^a}$, thus  
-\begin{equation}\label{wk}
-(\go^S_{nm})_{;k^{\rmc}}=(\go^\lda_{nm})_{;k^{\rmc}}=
-\frac{p_{nn}^{\rmc}-p_{mm}^{\rmc}}{m_e}\equiv\gD_{nm}^{\rmc}
-,
-\end{equation}
-and that,\cite{nastos_scissors_2005}
-\begin{eqnarray}\label{rgk}
-(r^{S,\rmb}_{nm})_{;k^{\rmc}}
-&=&
-(r^{\lda,\rmb}_{nm})_{;k^{\rmc}}=
-\frac{r_{nm}^{\rmc}\gD_{mn}^{\rmb}+r_{nm}^{\rmb}\gD_{mn}^{\rmc}}{\go^\lda_{nm}}
-+\frac{1}{m_e\go^\lda_{nm}}\sum_\ell\left(r_{n\ell}^{\rmc}p_{\ell m}^{\rmb}
--p_{n\ell}^{\rmb}r_{\ell m}^{\rmc}\right).
-\nonumber\\
-&=&
-\frac{r_{nm}^{\rmc}\gD_{mn}^{\rmb}+r_{nm}^{\rmb}\gD_{mn}^{\rmc}}{\go^\lda_{nm}}
-+\frac{i}{\go^\lda_{nm}}\sum_\ell\left(\go^\lda_{\ell m}r_{n\ell}^{\rmc}r_{\ell m}^{\rmb}
--\go^\lda_{n \ell}r_{n\ell}^{\rmb}r_{\ell m}^{\rmc}\right),
-\end{eqnarray} 
-where we used Eq.~\eqref{chon.98}. Therefore,
-\begin{equation}\label{gene2}
-\left(\frac{f_{mn}r_{nm}^{\rmb}}{\go^S_{nm}-\go_2}\right)_{;k^{\rmc}}=
-\frac{f_{mn}}{\go^S_{nm}-\go}\left(r_{nm}^{\lda,\rmb}\right)_{;k^{\rmc}}
--\frac{f_{mn}r_{nm}^{\rmb}\gD_{nm}^\rmc}{(\go^S_{nm}-\go)^2}
-,
-\end{equation}
-where LDA and scissored energies combine.
-
-Above formulas give a complete set of relationships in order to calculate
-the nonlinear susceptibility of any given layer $\ell$ as
-$\boldsymbol{\chi}^{s,\ell}=\boldsymbol{\chi}_e^{s,\ell}+\boldsymbol{\chi}_i^{s,\ell}$. 
-Then,
+already confusing notation, lower case $s$ refers to the 
+{\it s}urface, whereas the capital case $S$ referes to the {\it S}cissors correction.   
+In order to calculate
+the nonlinear susceptibility of any given layer $\ell$ we simply add above terms
+$\boldsymbol{\chi}^{s,\ell}=\boldsymbol{\chi}_e^{s,\ell}+\boldsymbol{\chi}_i^{s,\ell}$, 
+and 
+then,
 we can calculate the surface
 susceptibility as 
 \begin{equation}\label{chiijksur}
-\chi_{\rma\rmb\rmc}^s(2\go)\equiv \sum_{\ell_0}^{\ell_d}\chi_{\rma\rmb\rmc}^{\ell}(2\go),
+\bfgchi^s\equiv \sum_{\ell_0}^{\ell_d}\bfgchi^{\ell},
 \end{equation}
 where $\ell_0$ represents the first  layer right at the surface, and $\ell_d$ the
 layer at a distance $\sim d$ from the surface (see
@@ -1175,11 +1138,11 @@ Fig.~\ref{fsystem}). Of course we can use Eq.~\eqref{chiijksur} for
 either the front or the back surface.
 Likewise
 \begin{equation}\label{chiijklf}
-\chi_{\rma\rmb\rmc}^{(\ell_f)}(2\go)\equiv \sum_{\ell_d}^{\ell_f}\chi_{\rma\rmb\rmc}^{\ell}(2\go),
+\bfgchi^{(\ell_f)}\equiv \sum_{\ell_d}^{\ell_f}\bfgchi^{\ell},
 \end{equation}
 is a dipolar bulk susceptibility, with the property that,
 \begin{equation}\label{chiijkbul}
-\chi_{\rma\rmb\rmc}^{(\ell_f)}(2\go)\stackrel{\ell_f \to \ell_b}{=} 0,
+\bfgchi^{(\ell_f)}\stackrel{\ell_f \to \ell_b}{=} 0,
 \end{equation}
 where $\ell_b$ is a bulk layer such that the bulk centrosymmetry is
 fully stablished and the dipolar non-linear susceptibility is
@@ -1189,26 +1152,27 @@ not universal, and $\ell_b$ should be found according to Eq.~\eqref{chiijkbul}.
 
 \section{Divergence-free $\chi^s$}
 
-To obtain divergence free expressions for SHG that are manageable for
-programing, we take Eqs.~\eqref{chii} and \eqref{chie} and perform
-a partial fraction  expansion in $\go$ to get the following terms for
-the int$\it E$rband term (bellow, any energy is scissored, we have to
-change them!!)
+As can be seen from the prefactor of Eqs. ~\eqref{chii} and
+~\eqref{chie}, they 
+diverge as $\go\to 0$. To remove this apparent 
+divergence of $\bfgchi^s$, we perform
+a partial fraction  expansion in $\go$. To get the following terms for
+the int{\it E}rband term 
 \begin{eqnarray}\label{pfe}  
 E&=&  
 A
 \left[
--\frac{1}{2\go_{lm}(2\go_{lm}-\go_{nm})}\frac{1}{\go_{lm}-\go}
-+\frac{2}{\go_{nm}(2\go_{lm}-\go_{nm})}\frac{1}{\go_{nm}-2\go}
-+\frac{1}{2\go_{lm}\go_{nm}}\frac{1}{\go}
+-\frac{1}{2\go^S_{lm}(2\go^S_{lm}-\go^S_{nm})}\frac{1}{\go^S_{lm}-\go}
++\frac{2}{\go^S_{nm}(2\go^S_{lm}-\go^S_{nm})}\frac{1}{\go^S_{nm}-2\go}
++\frac{1}{2\go^S_{lm}\go^S_{nm}}\frac{1}{\go}
 \right]
 \nonumber\\
 &-& 
 B
 \left[
--\frac{1}{2\go_{nl}(2\go_{nl}-\go_{nm})}\frac{1}{\go_{nl}-\go}
-+\frac{2}{\go_{nm}(2\go_{nl}-\go_{nm})}\frac{1}{\go_{nm}-2\go}
-+\frac{1}{2\go_{nl}\go_{nm}}\frac{1}{\go}
+-\frac{1}{2\go^S_{nl}(2\go^S_{nl}-\go^S_{nm})}\frac{1}{\go^S_{nl}-\go}
++\frac{2}{\go^S_{nm}(2\go^S_{nl}-\go^S_{nm})}\frac{1}{\go^S_{nm}-2\go}
++\frac{1}{2\go^S_{nl}\go^S_{nm}}\frac{1}{\go}
 \right]
 ,
 \end{eqnarray}  
@@ -1216,23 +1180,23 @@ where
 $A=f_{ml}{\cal V}^{\gS,\rma}_{mn}r^{\rmc}_{nl}r^{\rmb}_{lm}$   
 and
 $B=f_{ln}{\cal V}^{\gS,\rma}_{mn}r^{\rmb}_{nl}r^{\rmc}_{lm}$,  
-and the following terms for the {\it i}ntraband terms
+and the following terms for the {\it I}ntraband terms
  (using Eq.~\eqref{gene2})
-\begin{eqnarray}\label{pfi} 
+\begin{eqnarray}\label{pfinn} 
 I&=& 
 C
 \left[
--\frac{1}{2\go^2_{nm}}\frac{1}{\go_{nm}-\go}
-+\frac{2}{\go^2_{nm}}\frac{1}{\go_{nm}-2\go}
-+\frac{1}{2\go^2_{nm}}\frac{1}{\go}
+-\frac{1}{2(\go^S_{nm})^2}\frac{1}{\go^S_{nm}-\go}
++\frac{2}{(\go^S_{nm})^2}\frac{1}{\go^S_{nm}-2\go}
++\frac{1}{2(\go^S_{nm})^2}\frac{1}{\go}
 \right]
 \nonumber\\
 &-&D
 \left[
--\frac{3}{2\go^3_{nm}}\frac{1}{\go_{nm}-\go}
-+\frac{4}{\go^3_{nm}}\frac{1}{\go_{nm}-2\go}
-+\frac{1}{2\go^3_{nm}}\frac{1}{\go}
--\frac{1}{2\go^2_{nm}}\frac{1}{(\go_{nm}-\go)^2}
+-\frac{3}{2(\go^S_{nm})^3}\frac{1}{\go^S_{nm}-\go}
++\frac{4}{(\go^S_{nm})^3}\frac{1}{\go^S_{nm}-2\go}
++\frac{1}{2(\go^S_{nm})^3}\frac{1}{\go}
+-\frac{1}{2(\go^S_{nm})^2}\frac{1}{(\go^S_{nm}-\go)^2}
 \right]
 ,
 \end{eqnarray} 
@@ -1243,10 +1207,6 @@ $D=f_{mn}{\cal V}^{\gS,\rma}_{mn}r^{\rmb}_{nm}\gD^{\rmc}_{nm}$.
 Time-reversal symmetry allow us to write,
 $\mathbf{r}_{mn}(\mathbf{k})=\mathbf{r}_{nm}(-\mathbf{k})$,
 $\mathbf{r}_{mn;\mathbf{k}}(\mathbf{k})=-\mathbf{r}_{nm;\mathbf{k}}(-\mathbf{k})$,
-% along with the hermiticity condition $\mathbf{r}%
-%_{mn}=\mathbf{r}_{nm}^{\ast }$, which implies that $\mathbf{r}_{mn;\mathbf{k}}=\mathbf{r}_{nm;\mathbf{k}%
-%}^{\ast }$, and arrive at the following results for the imaginary parts of $
-%\chi _{i,e}^{\rma\rmb\rmc}$, 
 $\calbv_{mn}^{\gS,\rma}(-\mathbf{k})=-\calbv_{nm}^{\gS,\rma}(\mathbf{k})$,
 $\omega_{mn}^{S}(-\mathbf{k})=\omega_{mn}^{S}(\mathbf{k})$,
 and
@@ -1256,9 +1216,9 @@ valence ($n=v$) band and $f_n=0$
 for an empty or conduction ($n=c$) band independent of $\bfk$ and
 $f_{nm}=-f_{mn}$. 
 Then adding the $\bfk$ and $-\bfk$ terms, we
-can easily show that the $1/\go$ terms in both Eq.~\eqref{pfe} and Eq.~\eqref{pfi}
+can easily show that the $1/\go$ terms in both Eq.~\eqref{pfe} and Eq.~\eqref{pfinn}
 cancel each other.
-The last term in the second line of Eq.~\eqref{pfi} is dealt with as
+The last term in the second line of Eq.~\eqref{pfinn} is dealt with as
 follows.
 \begin{eqnarray}\label{dresn}
 \frac{D}{2(\go^S_{nm})^2}\frac{1}{(\go^S_{nm}-\go)^2}
@@ -1285,6 +1245,104 @@ where we used Eqs.~\eqref{wk} and ~\eqref{rcal}, and for the last
 line, we performed an
 integration by parts over the Brillouin zone,
 where the contribution from the edges vanishes.\cite{ashcroft_solid_1976}
+Therefore, all the remaining non-zero terms in expressions \eqref{pfe}
+and \eqref{pfi} 
+are simple $\go$ and $2\go$ resonant denominators well behaved at zero
+frequency. 
+Thus, with the help of
+time-reversal invariance and simple index manipulation, we show
+in the appendix \ref{appv} that
+\begin{equation}\label{calvimchiewn}
+\mathrm{Im}[\chi_{e,\rma\rmb\rmc,\go}^{s,\ell}] =
+-\frac{\pi |e|^3}{2\hbar^2}\sum_{vc\bfk}\sum_{l\neq(v,c)}\frac{1}{\omega^{S}_{cv}}
+\left[
+\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\text{a}}_{lc}\{r^{\rmb}_{cv}r^{\rmc}_{vl}\}]}{(2\go^S_{cv}-\go^S_{cl})}
+-\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\text{a}}_{vl}\{r^{\rmc}_{lc}r^{\rmb}_{cv}\}]}{(2\go^S_{cv}-\go^S_{lv})}
+\right]\gd(\go^S_{cv}-\go),
+\end{equation}  
+\begin{equation}\label{calvimchie2wn}
+\mathrm{Im}[\chi_{e,\rma\rmb\rmc,2\go}^{s,\ell}] =
+-\frac{\pi |e|^3}{2\hbar^2}\sum_{vc\bfk}\frac{4}{\omega^{S}_{cv}}
+\left[
+\sum_{v'\ne v}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\text{a}}_{vc}\{r^{\rmb}_{cv'}r^{\rmc}_{v'v}\}]}{2\go^S_{cv'}-\go^S_{cv}}
+- \sum_{c'\ne c}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\text{a}}_{vc}\{r^{\rmc}_{cc'}r^{\rmb}_{c'v}\}]}{2\go^S_{c'v}-\go^S_{cv}}
+\right]\gd(\go^S_{cv}-2\go),
+\end{equation}
+\begin{equation}\label{calvimchiwn}
+\mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},\omega}^{s,\ell}]
+= -\frac{\pi\vert e\vert^3}{2\hbar^2}\sum_{cv\mathbf{k}}\frac{1}{(\omega^{S}_{cv})^{2}}
+\left(
+\mathrm{Re}\left[r^{\text{b}}_{cv}\left(\mathcal{V}^{\Sigma,\text{a}}_{vc}\right)_{;k^{\text{c}}}\right]
++\frac{\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}r^{\text{b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}} 
+\right)\delta(\omega^{S}_{cv}-\omega),
+\end{equation}
+and
+\begin{equation}\label{calvimchi2wn}
+\mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},2\omega}^{s,\ell}] = -\frac{\pi \vert e\vert^{3}}{2\hbar^2}\sum_{vc\mathbf{k}}\frac{4}{(\omega^{S}_{cv})^{2}}\left(\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}\left(r^{\text{b}}_{cv}\right)_{;k^{\text{c}}}\right] - \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}r^{\text{b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}}\right)\delta(\omega^{S}_{cv}-2\omega).
+\end{equation}
+where we have split the interband and intraband $1\go$ and $2\go$
+contributions. The real part of each contribution can be obtained through
+a Kramers-Kronig transformation,\cite{nicolas} and then
+$\chi^{s,\ell}_{\rma\rmb\rmc}=\chi^{s,\ell}_{e,\rma\rmb\rmc,\go}+\chi^{s,\ell}_{e,\rma\rmb\rmc,2\go}+\chi^{s,\ell}_{i,\rma\rmb\rmc,\go}+\chi^{s,\ell}_{i,\rma\rmb\rmc,2\go}
+$.
+To 
+fulfill the required intrinsic
+permutation symmetry,\cite{rashkeev_efficient_1998} 
+the
+$\{\}$ notation symmetrizes the Cartesian indices $\rmb\rmc$, i.e. 
+$\{u^{\rmb}s^{\rmc}\}=(u^{\rmb}s^{\rmc}+u^{\rmc}s^{\rmb})/2$,
+from where we obtain that
+$\chi_{\rma\rmb\rmc}^{s,\ell}=\chi_{\rma\rmc\rmb}^{s,\ell}$.
+
+
+% In the continuous limit of $\bfk$ 
+% $(1/\gO)\sum_{\bfk}\to\int d^3\bfk/(8\pi^3)$, and with the help of 
+% Eq.~\eqref{wk}, \eqref{rgk}, \eqref{rgkcal} and \eqref{cald}, 
+% Eqs.~\eqref{imchiewn}-\eqref{imchi2wn} could be
+% readily evaluated.
+
+
+\section{Ondi va esto?}
+******
+The generalized derivative
+in Eq. (\ref{chii}) is obtained from the chain rule as
+\begin{equation}\label{gene}
+\left(\frac{f_{mn}r_{nm}^{\rmb}}{\go^S_{nm}-\go_2}\right)_{;k^{\rmc}}=
+\frac{f_{mn}}{\go^S_{nm}-\go}\left(r_{nm}^{\rmb}\right)_{;k^{\rmc}}
+-\frac{f_{mn}r_{nm}^{\rmb}}{(\go^S_{nm}-\go)^2}\left(\go^S_{nm}\right)_{;k^{\rmc}},
+\end{equation} 
+here $(\go^S_{nm})_{;k^a}=(\go^S_{n})_{;k^a}-(\go^S_{m})_{;k^a}$, and 
+from Appendix \ref{gwk} we show that 
+\begin{equation}\label{wk}
+(\go^S_{nm})_{;k^{\rmc}}=(\go^\lda_{nm})_{;k^{\rmc}}=
+v_{nn}^{\lda,\rmc}-v_{mm}^{\lda,\rmc}\equiv\gD_{nm}^{\rmc}
+,
+\end{equation}
+and from Appendix ??\ref{gder}?? that,\cite{nastos_scissors_2005}
+\begin{eqnarray}\label{rgk}
+\nonumber\\
+(r^\rmb_{nm})_{;k^{\rmc}}
+&\approx&
+\frac{r_{nm}^{\rmc}\gD_{mn}^{\rmb}+r_{nm}^{\rmb}\gD_{mn}^{\rmc}}{\go^\lda_{nm}}
++\frac{i}{\go^\lda_{nm}}\sum_\ell\left(\go^\lda_{\ell m}r_{n\ell}^{\rmc}r_{\ell m}^{\rmb}
+-\go^\lda_{n \ell}r_{n\ell}^{\rmb}r_{\ell m}^{\rmc}\right);
+\end{eqnarray} 
+since
+$(r^{S,\rmb}_{nm})_{;k^{\rmc}}
+=
+(r^{\lda,\rmb}_{nm})_{;k^{\rmc}}
+$ there is no need for a label.
+Therefore,
+\begin{equation}\label{gene2}
+\left(\frac{f_{mn}r_{nm}^{\rmb}}{\go^S_{nm}-\go_2}\right)_{;k^{\rmc}}=
+\frac{f_{mn}}{\go^S_{nm}-\go}\left(r_{nm}^{\lda,\rmb}\right)_{;k^{\rmc}}
+-\frac{f_{mn}r_{nm}^{\rmb}\gD_{nm}^\rmc}{(\go^S_{nm}-\go)^2}
+,
+\end{equation}
+where LDA and scissored energies combine.
+
+****
+******
 Using the chain rule, we obtain
 \begin{eqnarray}\label{chrn1}
 \left(
@@ -1343,17 +1401,9 @@ r^{\rma}_{\ell m}
 \bigg)
 ,
 \end{eqnarray}
+******
 
-
-
-Therefore, all the remaining non-zero terms in expressions \eqref{pfe}
-and \eqref{pfi} 
-are simple $\go$ and $2\go$ resonant denominators well behaved at zero
-frequency. 
-
-Using time-reversal invariance and simple index manipulation, we show
-in the appendix that
-
+******
 %\textcolor{red}{Still needs to be worked out!!}
 \begin{equation}\label{imchiewn}
 \mathrm{Im}[\chi_{e,\rma\rmb\rmc,\go}^{s,\ell}]
@@ -1416,58 +1466,10 @@ and
 \right]\gd(\go^S_{cv}-2\go)
 ,
 \end{equation}
-where we have split the interband and intraband $1\go$ and $2\go$
-contributions. The real part of each contribution can be obtained through
-a Kramers-Kronig transformation, and then
-$\chi^{s,\ell}_{\rma\rmb\rmc}=\chi^{s,\ell}_{e,\rma\rmb\rmc,\go}+\chi^{s,\ell}_{e,\rma\rmb\rmc,2\go}+\chi^{s,\ell}_{i,\rma\rmb\rmc,\go}+\chi^{s,\ell}_{i,\rma\rmb\rmc,2\go}
-$. Also,
-the
-$\{\}$ notation symmetrizes the Cartesian indices $\rmb\rmc$, i.e. 
-$\{u^{\rmb}s^{\rmc}\}=(u^{\rmb}s^{\rmc}+u^{\rmc}s^{\rmb})/2$,
-from where we obtain that
-$\chi_{\rma\rmb\rmc}^{s,\ell}=\chi_{\rma\rmc\rmb}^{s,\ell}$.
-In the continuous limit of $\bfk$ 
-$(1/\gO)\sum_{\bfk}\to\int d^3\bfk/(8\pi^3)$, and with the help of 
-Eq.~\eqref{wk}, \eqref{rgk}, \eqref{rgkcal} and \eqref{cald}, 
-Eqs.~\eqref{imchiewn}-\eqref{imchi2wn} could be
-readily evaluated.
+*****
 
-Also, since we are working in the length-gauge, it is trivial to
-incorporate the scissors operator in above expressions for $\bfgchi^{s,\ell}$
-by simple taking
-$\go_n\to\go_n^S$, where $\go_n^S=\go_n+(1-f_n)\Delta$ with $\gD$ the
-rigid scissor correction.\cite{nastos_scissors_2005,cabellos_effects_2009}
 
-In terms of $\mathcal{V}^{\Sigma,\text{a}}_{mn}$,
 
-\begin{equation}\label{calvimchiewn}
-\mathrm{Im}[\chi_{e,\rma\rmb\rmc,\go}^{s,\ell}] =
--\frac{\pi |e|^3}{2\hbar^2}\sum_{vc\bfk}\sum_{l\neq(v,c)}\frac{1}{\omega^{S}_{cv}}
-\left[
-\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\text{a}}_{lc}\{r^{\rmb}_{cv}r^{\rmc}_{vl}\}]}{(2\go^S_{cv}-\go^S_{cl})}
--\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\text{a}}_{vl}\{r^{\rmc}_{lc}r^{\rmb}_{cv}\}]}{(2\go^S_{cv}-\go^S_{lv})}
-\right]\gd(\go^S_{cv}-\go),
-\end{equation}  
-\begin{equation}\label{calvimchie2wn}
-\mathrm{Im}[\chi_{e,\rma\rmb\rmc,2\go}^{s,\ell}] =
--\frac{\pi |e|^3}{2\hbar^2}\sum_{vc\bfk}\frac{4}{\omega^{S}_{cv}}
-\left[
-\sum_{v'\ne v}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\text{a}}_{vc}\{r^{\rmb}_{cv'}r^{\rmc}_{v'v}\}]}{2\go^S_{cv'}-\go^S_{cv}}
-- \sum_{c'\ne c}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\text{a}}_{vc}\{r^{\rmc}_{cc'}r^{\rmb}_{c'v}\}]}{2\go^S_{c'v}-\go^S_{cv}}
-\right]\gd(\go^S_{cv}-2\go),
-\end{equation}
-\begin{equation}\label{calvimchiwn}
-\mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},\omega}^{s,\ell}]
-= -\frac{\pi\vert e\vert^3}{2\hbar^2}\sum_{cv\mathbf{k}}\frac{1}{(\omega^{S}_{cv})^{2}}
-\left(
-\mathrm{Re}\left[r^{\text{LDA,b}}_{cv}\left(\mathcal{V}^{\Sigma,\text{a}}_{vc}\right)_{;k^{\text{c}}}\right]
-+\frac{\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}r^{\text{LDA,b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}} 
-\right)\delta(\omega^{S}_{cv}-\omega),
-\end{equation}
-and
-\begin{equation}\label{calvimchi2wn}
-\mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},2\omega}^{s,\ell}] = -\frac{\pi \vert e\vert^{3}}{2\hbar^2}\sum_{vc\mathbf{k}}\frac{4}{(\omega^{S}_{cv})^{2}}\left(\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}\left(r^{\text{LDA,b}}_{cv}\right)_{;k^{\text{c}}}\right] - \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a}}_{vc}r^{\text{LDA,b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}}\right)\delta(\omega^{S}_{cv}-2\omega).
-\end{equation}
 
 \section{Conclusions}\label{con}
 
