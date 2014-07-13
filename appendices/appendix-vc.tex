@@ -1,0 +1,57 @@
+\section{Explicit expressions for ${\cal V}^{a,\ell}_{nm}(\bfk)$ 
+and ${\cal C}^{\ell}_{nm}(\bfk)$}\label{calpcalc}
+
+Expanding the wave function in plane waves we obtain
+\begin{eqnarray}\label{eni.1}
+\psi_{n\bfk}(\bfr)=\sum_\bfG A_{n\bfk}(\bfG)e^{i(\bfk+\bfG)\cdot\bfr}
+,
+\end{eqnarray}
+where $\{\bfG\}$ are the reciprocal basis vectors satisfying
+$e^{\bfR\cdot\bfG}=1$, with $\{\bfR\}$ the translation vectors in real
+space, and $A_{n\bfk}(\bfG)$ are the expansion coefficients. Using
+$m_e\bfv=-i\hbar\bfgnabla$ into Eq.~\eqref{vcali} we obtain,\cite{mendozaPRB06}
+\begin{eqnarray}\label{eni.2}
+\calbv^\ell_{nm}(\bfk)=
+\frac{\hbar}{2m_e}
+\sum_{\bfG,\bfG'} A^*_{n\bfk}(\bfG')  A_{m\bfk}(\bfG)
+(2\bfk+\bfG+\bfG')
+\gd_{\bfG_\parallel \bfG'_\parallel}  
+f_\ell(G_\perp-G'_\perp)
+,
+\end{eqnarray}   
+where
+\begin{eqnarray}\label{eni.3}
+f_\ell(g)=\frac{1}{L}\int_{z_\ell-\gD^b_\ell}^{z_\ell+\gD^f_\ell} e^{igz}dz
+,
+\end{eqnarray}
+where the reciprocal lattice vectors $\bfG$ are decomposed into components
+parallel to the surface $\bfG_\parallel$, and perpendicular to the
+surface $G_\perp \hat z$, so
+that $\bfG = \bfG_\parallel + G_\perp\hat z$.
+Likewise we obtain that (Chon:de tu libreta copia el algebra que nos
+lleva a esta ecuaci\'on)
+\begin{eqnarray}\label{eni.4}
+\calc^\ell_{nm}(\bfk)=
+\sum_{\bfG,\bfG'} A^*_{n\bfk}(\bfG')  A_{m\bfk}(\bfG)
+\gd_{\bfG_\parallel \bfG'_\parallel}
+f_\ell(G_\perp-G'_\perp)
+.
+\end{eqnarray} 
+The double summation over the $\bfG$ vectors can be efficiently done by
+creating a pointer array to identify all the plane-wave coefficients
+associated with the same $G_\parallel$. We take $z_\ell$
+ at the center of an atom that
+belongs to layer $\ell$, and thus above equations gives the $\ell$-th
+ atomic-layer
+contribution to the optical response.\cite{mendozaPRB06} 
+
+If $\calc^\ell(z)=1$ from Eq.~\eqref{eni.2} we recover the well known
+result
+\begin{eqnarray}\label{eni.21}
+v_{nm}(\bfk)=
+\frac{\hbar}{m_e}
+\sum_{\bfG} A^*_{n\bfk}(\bfG)  A_{m\bfk}(\bfG)
+(\bfk+\bfG)
+,
+\end{eqnarray}  
+since for this case $f_\ell(g)=\gd_{g0}$.
