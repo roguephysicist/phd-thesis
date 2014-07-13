@@ -1,6 +1,7 @@
 \section{$\bfr_e$ and $\bfr_i$}
-********
-
+\label{reri}
+In this appendix, we derive the expressions for the matrix elements of
+the electron position operator $\bfr$. 
 The $r$ representation of the
 Bloch states is given by
 \begin{equation}\label{bloch}
@@ -90,7 +91,7 @@ function $f(\bfr)=f(\bfr+\bfR)$,
 ,
 \end{equation}
 to
-finally write,\cite{blount_solid_1962}
+finally write,\cite{blountSSP62}
 \begin{eqnarray}\label{dkbraket3}
 \nablak
 \braket{n\mbf{k}}{m\mbf{k}'}
@@ -121,7 +122,7 @@ u_{m\bfk}(\bfr)
 Therefore, we define
 \begin{equation}\label{zeta}
 \bfgxi_{nm}(\bfk) \equiv i\int_{\gO} d\bfr\, u^*_{n\bfk}(\bfr)\nabla_{\bfk}u_{m\bfk}(\bfr),
-\end{equation}
+\end{equation} 
 with $\partial/\partial\bfk=\nabla_{\bfk}$.
 Now, from Eqs.~\eqref{ddk1}, ~\eqref{dkbraket2},
 and ~\eqref{zeta},
@@ -138,7 +139,7 @@ $\hat\bfr_e$ ($\hat\bfr_i$) the interband (intraband) part, we obtain that
 +i\nabla_\bfk\gd(\bfk-\bfk')\right], \\
 \bra{n\bfk}\hat\bfr_e\ket{m\bfk'} &=& (1-\gd_{nm})\gd(\bfk-\bfk')\bfgxi_{nm}(\bfk).
 \label{rnme}
-\end{eqnarray}
+\end{eqnarray} 
 To proceed, we relate Eq.~\eqref{rnme} to the matrix elements of the
 momentum operator as follows. 
 
@@ -264,13 +265,13 @@ Then,
 \bra{n\bfk}[\hat\bfr_i,\hat\calo]\ket{m\bfk'}
 =i\gd(\bfk-\bfk')(\calo_{nm})_{;\bfk}
 ,
-\end{equation}  
+\end{equation}   
 with
 \begin{equation}\label{gendev}
 (\calo_{nm})_{;\bfk}=
 \nabla_\bfk
 \calo_{n m}(\bfk)
-- 
+-  
 i
 \calo_{nm}(\bfk)
 \left(
@@ -279,7 +280,7 @@ i
 \bfgxi_{mm}(\bfk)
 \right)
 ,
-\end{equation} 
+\end{equation}  
 the generalized derivative of $\calo_{nm}$ with respect to $\bfk$.
 Note that the highly singular term $\nabla_\bfk\gd(\bfk-\bfk')$
 cancels in Eq.~\eqref{conmri2}, thus giving a well defined commutator
