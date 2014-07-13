@@ -7,21 +7,22 @@ We start from
 \bra{n\bfk}\hat{H}^S_0\ket{m\bfk'}=\gd_{nm}\gd(\bfk-\bfk')\hbar\go^S_m(\bfk)
 ,
 \end{equation}
-then Eq.~\eqref{gendev} gives
+then Eq.~\eqref{gendev} gives for $n=m$
 \begin{eqnarray}\label{a_genderH0}
-(H^S_{0,nm})_{;\bfk}&=&
+(H^S_{0,nn})_{;\bfk}&=&
 \nabla_\bfk
-H^S_{0,n m}(\bfk)
+H^S_{0,n n}(\bfk)
 -
 i
-H^S_{0,nm}(\bfk)
+H^S_{0,nn}(\bfk)
 \left(
 \bfgxi_{nn}(\bfk)
 -
-\bfgxi_{mm}(\bfk)
+\bfgxi_{nn}(\bfk)
 \right)
 \nonumber\\
-&=&\gd_{nm}\hbar\nabla_\bfk\go^S_m(\bfk)
+&=&
+\hbar\nabla_\bfk\go^S_m(\bfk)
 ,
 \end{eqnarray}
 where from Eq.~\eqref{conmri3}, 
@@ -38,14 +39,6 @@ then
 \nabla_\bfk\go^S_n(\bfk)
 .
 \end{equation}
-% Now, from Eq.~\eqref{chon.98} 
-% \begin{equation}\label{a_hre}
-% \bra{n\bfk}[\hat\bfr_e,\hat{H}_0]\ket{m\bfk}=
-% i\hbar\frac{\bfp_{nm}(\bfk)}{m}
-% \quad\quad n\ne m 
-% ,
-% \end{equation}
-%and 
 From Eq.~\eqref{vop} 
 \begin{equation}\label{a_hr}
 \bra{n\bfk}[\hat\bfr,\hat{H}_0]\ket{m\bfk}=
@@ -94,5 +87,5 @@ Thus,  from Eq.~\eqref{a_wgendev}
 v^{\lda,\rma}_{nn}(\bfk)
 ,
 \end{equation}
-the same for the LDA and scissored Hamiltonians; $\bfv_{nn}^\lda$ are
+the same for the LDA and scissored Hamiltonians; $\bfv_{nn}^\lda(\bfk)$ are
 the LDA velocities of the electron in state $\ket{n\bfk}$.
