@@ -13,30 +13,30 @@ From Eq.~\eqref{vopii}
 \calv^{S,\rma,\ell}_{nm}
 \right)_{;k^\rmb}
 .
-\end{eqnarray}
+\end{eqnarray} 
 For the LDA term we have
 \begin{eqnarray}\label{a.2}
 \calv^{\lda,\rma,\ell}_{nm}
 &=&
-\frac{1}{2}\left(
+\frac{1}{2}\left(  
 v^{\lda,\rma}\calc^\ell+\calc^\ell v^{\lda,\rma}
 \right)_{nm}
 \nonumber\\
 &=&
-\frac{1}{2}\sum_q\left(
+\frac{1}{2}\sum_q\left(  
 v^{\lda,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{\lda,\rma}_{qm}
 \right)
 \nonumber\\
 \left(\calv^{\lda,\rma}_{nm}\right)_{;k^\rmb}
 &=&
-\frac{1}{2}\sum_q\left(
+\frac{1}{2}\sum_q\left(  
 v^{\lda,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} p^{\lda,\rma}_{qm}
 \right) _{;k^\rmb}
 \nonumber\\
 &=&
 \frac{1}{2}\sum_q\left(
 (v^{\lda,\rma}_{nq})_{;k^\rmb}\calc^\ell_{qm}
-+ 
++   
 v^{\lda,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 +
 (\calc^\ell_{nq})_{;k^\rmb} v^{\lda,\rma}_{qm}
@@ -44,7 +44,7 @@ v^{\lda,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 \calc^\ell_{nq} (v^{\lda,\rma}_{qm})_{;k^\rmb}
 \right)
 ,
-\end{eqnarray} 
+\end{eqnarray}   
 where we omitted $\bfk$ in all quantities.
 From Eq.~\eqref{cn8} we know that $\bfv^\nl_{nm}(\bfk)$
  can be readily
@@ -59,15 +59,15 @@ $(\bfv^\lda_{nm}(\bfk))_{;\bfk}$ we use Eq.~\eqref{chon.98}
 to write
 \begin{eqnarray}\label{a.3}
 (v^{\lda,\rma}_{nm})_{;k^\rmb}
-&=& 
+&=&  
 im_e(\go^\lda_{nm}r^\rma_{nm})_{;k^\rmb}
 \nonumber\\
-&=& 
+&=&  
 im_e(\go^\lda_{nm})_{;k^\rmb} r^\rma_{nm}
-+ 
++  
 im_e\go^\lda_{nm}(r^\rma_{nm})_{;k^\rmb}
 \nonumber\\
-&=& 
+&=&  
 im_e\gD^b_{nm}r^\rma_{nm}
 + 
 im_e\go^\lda_{nm}(r^\rma_{nm})_{;k^\rmb}
@@ -78,21 +78,40 @@ where we used Eq \eqref{eli.13} and $(r^\rma_{nm})_{;k^\rmb}$ is given
 in Eq.~\eqref{na_rgendevn}.
 
 Likewise,
+For the S term we have
 \begin{eqnarray}\label{a.3b}
 \calv^{S,\rma,\ell}_{nm}
 &=&
+\frac{1}{2}\left(  
+v^{S,\rma}\calc^\ell+\calc^\ell v^{S,\rma}
+\right)_{nm}
+\nonumber\\
+&=&
+\frac{1}{2}\sum_q\left(  
+v^{S,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{S,\rma}_{qm}
+\right)
+\nonumber\\
+\left(\calv^{S,\rma}_{nm}\right)_{;k^\rmb}
+&=&
+\frac{1}{2}\sum_q\left(  
+v^{S,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} p^{S,\rma}_{qm}
+\right) _{;k^\rmb}
+\nonumber\\
+&=&
 \frac{1}{2}\sum_q\left(
 (v^{S,\rma}_{nq})_{;k^\rmb}\calc^\ell_{qm}
-+
++   
 v^{S,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 +
-(\calc^\ell_{nq})_{;k^\rmb} v_{qm}^{S,\rma}
+(\calc^\ell_{nq})_{;k^\rmb} v^{S,\rma}_{qm}
 +
-\calc^\ell_{nq} (v_{qm}^{S,\rma})_{;k^\rmb}
+\calc^\ell_{nq} (v^{S,\rma}_{qm})_{;k^\rmb}
 \right)
 ,
-\end{eqnarray}
-where $(v^{S,\rma}_{nm})_{;k^\rmb}$ is given in Eq. A(6) of
+\end{eqnarray}   
+where $v^{S,\rma}_{nm}(\bfk)$ are given in Eq.~\eqref{chon.2}
+and
+$(v^{S,\rma}_{nm})_{;k^\rmb}$ is given in Eq. A(6) of
 Ref.~\onlinecite{cabellosPRB09},
 \begin{eqnarray}\label{choni.1}
 (v^{S,\rma}_{nm})_{;k^\rmb}=i\gD f_{mn}
@@ -172,11 +191,11 @@ r_e^\rma
 \end{eqnarray}
 where we used Eq.~\eqref{rnme}, and the $\bfk$ and $z$ dependence is implicitly
 understood. From Eq.~\eqref{conmri3} the intraband part is,
-\begin{equation}\label{a.6}
+\begin{eqnarray}\label{a.6}
 \bra{n\bfk}[\hat\bfr_i,\calc^\ell(z)]\ket{m\bfk'}
 =i\gd(\bfk-\bfk')(\calc^\ell_{nm})_{;\bfk}
 ,
-\end{equation}
+\end{eqnarray}
 then from Eq.~\eqref{a.4}
 \begin{eqnarray}\label{a.7}
 &&
@@ -263,6 +282,7 @@ r_{qm}^\rma
 ,
 \end{eqnarray} 
 since in every $\xi_{nm}^\rma$, $n\ne m$, thus we replace it by $r^\rma_{nm}$. 
+The matrix elements $\calc^\ell_{nm}(\bfk)$ are calculated in Appendix~\ref{calpcalc}. 
 
 For the general
 case of
