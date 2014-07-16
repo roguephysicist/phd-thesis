@@ -46,20 +46,20 @@ is succinctly verified.
  
 We calculate the matrix elements of $\bfp$ in the $\bfr$
 representation,
-\begin{eqnarray}\label{ap_matp}
-\bra{\bfr}\hat{p}_x\ket{\bfr'}&=&
+\begin{align}\label{ap_matp}
+\bra{\bfr}\hat{p}_x\ket{\bfr'}&=
 \int d\bfp
 \bra{\bfr}\hat{p}_x\ket{\bfp}\braket{\bfp}{\bfr'} \\ \nonumber
-&=&
+&=
 \int d\bfp
 p_x\braket{\bfr}{\bfp}\braket{\bfp}{\bfr'} \\ \nonumber
-&=&
+&=
 \frac{1}{(2\pi\hbar)^3}
 \int d\bfp
 p_x
 e^{i\bfp\cdot(\bfr-\bfr')/\hbar}
 \\ \nonumber
-&=&
+&=
 \frac{1}{(2\pi\hbar)^3}
 \int dp_x
 p_x
@@ -69,7 +69,7 @@ e^{ip_y(y-y')/\hbar}
 \int dp_z
 e^{ip_z(z-z')/\hbar}
 \\ \nonumber
-&=&
+&=
 \frac{1}{2\pi\hbar}
 \int dp_x
 p_x
@@ -77,7 +77,7 @@ e^{ip_x(x-x')/\hbar}
 \gd(y-y')
 \gd(z-z')
 ,
-\end{eqnarray}
+\end{align}
 where we used the fact that
 \begin{equation}\label{ap_otra}
 \hat\bfp\ket{\bfp}=\bfp\ket{\bfp}
@@ -114,17 +114,17 @@ from where we finally get
 \end{equation}
 with similar results for $\hat{p}_y$ and $\hat{p}_z$.
 Now we can calculate
-\begin{eqnarray}\label{ap_psi}
-\bra{\bfr}\hat{p}_x\ket{\psi}&=&
+\begin{align}\label{ap_psi}
+\bra{\bfr}\hat{p}_x\ket{\psi}&=
 \int d\bfr' \bra{\bfr}\hat{p}_x\ket{\bfr'}\braket{\bfr'}{\psi}
 \\ \nonumber
-&=&
+&=
 \int dx' (-i\hbar\frac{\partial}{\partial x}\gd(x-x'))
 \int dy' \gd(y-y')
 \int dz' \gd(z-z')
 \psi(x',y',z')
 \\ \nonumber
-&=&
+&=
 -i\hbar
 \int dx' (\frac{\partial}{\partial x}\gd(x-x'))
 \psi(x',y,z)
@@ -135,12 +135,12 @@ Now we can calculate
 \gd(x-x')
 \psi(x',y,z)
 \\ \nonumber
-&=&
+&=
 -i\hbar
 \frac{\partial}{\partial x}
 \psi(x,y,z)
 ,
-\end{eqnarray}
+\end{align}
 which confirms that in the $\bfr$ representation,
 the $\hat\bfp$ operator is replaced with the differential operator
 $-i\hbar\bfgnabla$. 
