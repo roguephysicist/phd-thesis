@@ -2,32 +2,32 @@
 We obtain the matrix elements of $\bfv^\nl_{nm}(\bfk)$ by using
 the following commutator in a
 real-space basis
-\begin{eqnarray}\label{cn0}
+\begin{align}\label{cn0}
 \bra{\bfR'}[\hat\bfr,\hat V(\hat\bfr,\hat\bfr')]\ket{\bfR}
-&=&
+&=
 \bra{\bfR'}(\hat\bfr\hat V(\hat\bfr,\hat\bfr')
 -
 \hat V(\hat\bfr,\hat\bfr')\hat\bfr
 )
 \ket{\bfR}
 \nonumber\\
-&=&
+&=
 \int d\bfR''\bra{\bfR'}\hat\bfr\ket{\bfR''}\bra{\bfR''}\hat V(\hat\bfr,\hat\bfr') \ket{\bfR}
 -
 \int d\bfR''\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr')\ket{\bfR''}\bra{\bfR''}\hat\bfr\ket{\bfR}
 \nonumber\\
-&=&
+&=
 \int d\bfR'' \bfR''\gd(\bfR'-\bfR'')
 \bra{\bfR''}\hat V(\hat\bfr,\hat\bfr') \ket{\bfR}
 -
 \int d\bfR''\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr')\ket{\bfR''}\bfR\gd(\bfR''-\bfR)
 \nonumber\\
-&=&
+&=
 \bfR'\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr') \ket{\bfR}
 -
 \bra{\bfR'}\hat V(\hat\bfr,\hat\bfr')\ket{\bfR}\bfR
 \nonumber\\
-&=&
+&=
 \bfR'
 V(\bfR,\bfR')
 -
@@ -41,7 +41,7 @@ V(\bfR,\bfR')
  V(\bfR,\bfR')
 \nonumber\\
 \bra{\bfR'}[\hat V(\hat\bfr,\hat\bfr'),\hat\bfr]\ket{\bfR}
-&=&
+&=
 \bfR
 V(\bfR,\bfR')
 -
@@ -49,14 +49,14 @@ V(\bfR,\bfR')
  V(\bfR,\bfR')
 \nonumber\\
 \bra{\bfR}[\hat V(\hat\bfr,\hat\bfr'),\hat\bfr]\ket{\bfR'}
-&=&
+&=
 \bfR'
 V(\bfR,\bfR')
 -
 \bfR
  V(\bfR,\bfR')
 ,
-\end{eqnarray} 
+\end{align} 
 where we used $\hat\bfr\ket{\bfR}=\bfR\ket{\bfR}$, and
 the matrix elements of the non-local operator
 $\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr')\ket{\bfR}=V(\bfR,\bfR')$ just a
@@ -64,9 +64,9 @@ function, no longer an operator, and thus it commutes with $\bfR$ and $\bfR'$.
 Now we distinguish operators and non-operators by the carate symbol,
 \verb=^=, on top.
 We want to calculate
-\begin{eqnarray}\label{cn2}
+\begin{align}\label{cn2}
 \bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^a]\ket{m\bfk'}
-&=&
+&=
 \int d\bfr d\bfr'
 \bra{n\bfk}
 \ket{\bfr}\bra{\bfr}
@@ -74,7 +74,7 @@ We want to calculate
 \ket{\bfr'}\bra{\bfr'}
 \ket{m\bfk'}
 \nonumber\\
-&=&
+&=
 \int d\bfr d\bfr'
 \psi^*_{n\bfk}(\bfr)
 (  
@@ -84,20 +84,20 @@ r^aV^\nl(\bfr,\bfr')
 )
 \psi_{m\bfk'}(\bfr')
 ,
-\end{eqnarray}  
+\end{align}  
 where due to the fact that the integrand is periodic in real space,
 $\bfk=\bfk'$ where $\bfk$ is restricted to the Brillouin Zone.
 In plane waves we have that
-\begin{eqnarray}\label{cn3}
+\begin{align}\label{cn3}
 \psi_{n\bfk}(\bfr)=\frac{1}{\sqrt{\gO}}
 \sum_{\bfK} C_{n\bfk}(\bfK)e^{i(\bfk+\bfK)\cdot\bfr}
 ,
-\end{eqnarray}
+\end{align}
 where $\gO$ is the volume of the unit cell.
 Then,
-\begin{eqnarray}\label{cn4}
+\begin{align}\label{cn4}
 \bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^a]\ket{m\bfk}
-&=&
+&=
 \frac{1}{\gO}
 \sum_{\bfK,\bfK'} 
 C^*_{n\bfk}(\bfK) 
@@ -112,15 +112,15 @@ r^aV^\nl(\bfr,\bfr')
 e^{i(\bfk+\bfK')\cdot \bfr'}
 .
 \nonumber\\
-\end{eqnarray} 
+\end{align} 
 Using the following identity 
-\begin{eqnarray}\label{cn51}
+\begin{align}\label{cn51}
 (\nabla_\bfK+\nabla_\bfK')
 \int e^{-i\bfK\cdot\bfr}
 V^\nl(\bfr,\bfr')
 e^{i\bfK'\cdot\bfr'}
 \,d\bfr d\bfr'
-&=&
+&=
 -i
 \int e^{-i\bfK\cdot\bfr}
 \left(
@@ -133,7 +133,7 @@ V^\nl(\bfr,\bfr')
 e^{i\bfK'\cdot\bfr'}
 \,d\bfr d\bfr'
 \nonumber\\
-&=&
+&=
 i
 \int e^{-i\bfK\cdot\bfr}
 \left(
@@ -147,11 +147,11 @@ e^{i\bfK'\cdot\bfr'}
 \,d\bfr d\bfr'
 ,
 \nonumber\\
-\end{eqnarray}
+\end{align}
 then, we obtain
-\begin{eqnarray}\label{cn52}
+\begin{align}\label{cn52}
 \bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^a]\ket{m\bfk}
-&=&
+&=
 -\frac{i}{\gO}
 \sum_{\bfK,\bfK'}
 C^*_{n\bfk}(\bfK)
@@ -162,7 +162,7 @@ V^\nl(\bfr,\bfr')
 e^{i\bfK'\cdot\bfr'}
 \,d\bfr d\bfr'
 \nonumber\\
-&=&
+&=
 -\frac{i}{\gO}
 \sum_{\bfK,\bfK'}
 C^*_{n\bfk}(\bfK)
@@ -172,9 +172,9 @@ C_{m\bfk}(\bfK')
 V^\nl
 \ket{\bfK'} 
 ,
-\end{eqnarray}
+\end{align}
 where
-\begin{eqnarray}\label{cn6}
+\begin{align}\label{cn6}
 \bra{\bfK} 
 V^\nl
 \ket{\bfK'} 
@@ -184,17 +184,17 @@ V^\nl(\bfr,\bfr')
 e^{i\bfK'\cdot\bfr'}
 \,d\bfr d\bfr'
 .
-\end{eqnarray}
+\end{align}
 For fully  separable pseudopotentials in the 
 Kleinman-Bylander form,\cite{motta_implementation_2010,kleinman_efficacious_1982,adolph_nonlocality_1996}
 above matrix elements 
 can be readily calculated.\cite{francesco}
 Therefore,
-\begin{eqnarray}\label{cn8}
+\begin{align}\label{cn8}
 \frac{i}{\hbar}
 \bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rma]\ket{m\bfk'}
 =\gd(\bfk-\bfk') \bfv^\nl_{nm}(\bfk)
 ,
-\end{eqnarray}
+\end{align}
 where $\bfv^\nl_{nm}(\bfk)$ are known quantities.
 

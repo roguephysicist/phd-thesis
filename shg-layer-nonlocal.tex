@@ -12,14 +12,15 @@
 \usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{showlabels}
-%\usepackage{showkeys}
+\usepackage{showkeys}
 
 
 \begin{document}
 
 \title{Longitudinal Gauge Theory of Surface Second Harmonic Generation}
 \author{Sean M. Anderson and Bernardo S. Mendoza}
-\affiliation{Centro de Investigaciones en Optica, Le\'on, Guanajuato, M\'exico, bms@cio.mx}
+\affiliation{Centro de Investigaciones en Optica, Le\'on, Guanajuato, M\'exico,
+ bms@cio.mx}
 
  \begin{abstract}
  A theoretical review of surface second harmonic generation from
@@ -99,32 +100,32 @@ is given by
 \hat{H}=\hat{H}^S_0-e \hat\bfr \cdot \bfE,
 \end{equation}
 with
-\begin{eqnarray}\label{ache.1}
+\begin{align}\label{ache.1}
 \hat H^S_0=\hat H^\lda_0
  + \hat S(\bfr,\bfp)
 ,
-\end{eqnarray} 
+\end{align} 
 and
-\begin{eqnarray}\label{ache.2}
-\hat H^\lda_0&=&\frac{\hat p^2}{2m_e}  + \hat V^\ps(\bfr,\bfr')
+\begin{align}\label{ache.2}
+\hat H^\lda_0&=\frac{\hat p^2}{2m_e}  + \hat V^\ps(\bfr,\bfr')
 \nonumber\\
 \hat V^\ps(\bfr,\bfr')
-&=&\hat V^l(\bfr) + \hat V^\nl(\bfr,\bfr')
+&=\hat V^l(\bfr) + \hat V^\nl(\bfr,\bfr')
 ,
-\end{eqnarray}  
+\end{align}  
 the LDA hamiltonian, 
 where $\hat V^l(\bfr)$ and $\hat V^\nl(\bfr,\bfr')$ are the local and
 the non-local part of the  
 crystal $\hat V^\ps(\bfr,\bfr')$ pseudopotential.
 The Schr\"odinger equation reads
-\begin{eqnarray}\label{ache.4} 
+\begin{align}\label{ache.4} 
 \left(
 \frac{-\hbar^2}{2m_e}\nabla^2
  + \hat V^l(\bfr)\right)\psi_{n\bfk}(\bfr)
  + \int d\bfr'\hat V^\nl(\bfr,\bfr')\psi_{n\bfk}(\bfr')
 =E_i\psi_{n\bfk}(\bfr)
 ,
-\end{eqnarray} 
+\end{align} 
 wit
 $\psi_{n\bfk}(\bfr)=\braket{\bfr}{n\bfk}=\sqrt{\gO/8\pi^3}e^{i\bfk\cdot\bfr}u_{n\bfk}(\bfr)$,
  the real space
@@ -145,17 +146,17 @@ S(\bfr,\bfp)=\hbar\gD\sum_n\int d^3k'(1-f_n) \ket{n\bfk'}\bra{n\bfk'}
 \end{equation}
 with $f_n$ the Fermi-Dirac factor.
 We have that
-\begin{eqnarray}\label{chon.1}  
-H^\lda_0\ket{n\bfk}&=&\hbar\go^\lda_n(\bfk)\ket{n\bfk}
+\begin{align}\label{chon.1}  
+H^\lda_0\ket{n\bfk}&=\hbar\go^\lda_n(\bfk)\ket{n\bfk}
 \nonumber\\
-H^S_0\ket{n\bfk}&=&\hbar\go^S_n(\bfk)\ket{n\bfk}
+H^S_0\ket{n\bfk}&=\hbar\go^S_n(\bfk)\ket{n\bfk}
 ,
-\end{eqnarray} 
+\end{align} 
 where 
-\begin{eqnarray}\label{chon.78}
+\begin{align}\label{chon.78}
 \hbar\go^S_n(\bfk)=\hbar\go^\lda_n(\bfk)+\gD(1-f_n)
 ,
-\end{eqnarray}
+\end{align}
  is the $\bfk$-independent scissored
 energy, with $\gD=E_g-E_g^\lda$, where $E_g$ could be the experimental
 or GW band gap. In above we used the fact that 
@@ -164,14 +165,14 @@ the Bloch states with LDA or S, superscripts.
 The matrix elements of $\bfr$ are split between its {\it interband}
 part $\bfr_i$ and {\it interband} part $\bfr_e$, where 
 $\bfr=\bfr_i+\bfr_e$ and\cite{adamsJCP53,blountSSP62,aversaPRB95}
-\begin{eqnarray}\label{rnminn}
-\bra{n\bfk}\hat\bfr_i\ket{m\bfk'} &=& \gd_{nm}\left[\gd(\bfk-\bfk')\bfgxi_{nn}(\bfk)
+\begin{align}\label{rnminn}
+\bra{n\bfk}\hat\bfr_i\ket{m\bfk'} &= \gd_{nm}\left[\gd(\bfk-\bfk')\bfgxi_{nn}(\bfk)
 +i\nabla_\bfk\gd(\bfk-\bfk')\right], \\
-\bra{n\bfk}\hat\bfr_e\ket{m\bfk'} &=&
+\bra{n\bfk}\hat\bfr_e\ket{m\bfk'} &=
 (1-\gd_{nm})\gd(\bfk-\bfk')\bfgxi_{nm}(\bfk)
 ,
 \label{rnmenn}
-\end{eqnarray}
+\end{align}
 where
 \begin{equation}\label{zetann}
 \bfgxi_{nm}(\bfk) \equiv i\frac{(2\pi)^3}{\gO}\int_{\gO} d\bfr\, u^*_{n\bfk}(\bfr)\nabla_{\bfk}u_{m\bfk}(\bfr).
@@ -180,11 +181,11 @@ The interband part $\bfr_e$ can
 be obtained as follows. 
 We start by introducing the 
 velocity operator
-\begin{eqnarray}\label{vop}
-\hat\bfv^\gS&=&
+\begin{align}\label{vop}
+\hat\bfv^\gS&=
 \frac{1}{i\hbar}[\hat\bfr,\hat{H}^S_0]
 ,
-\end{eqnarray}
+\end{align}
 and calculating its matrix elements
 \begin{equation}\label{conhrnm}
 i\hbar\bra{n\bfk}
@@ -199,13 +200,13 @@ i\hbar\bra{n\bfk}
 ,
 \end{equation}
 thus defining $\go^S_{nm\bfk}=\go^S_n(\bfk)-\go^S_m(\bfk)$ we get
-\begin{eqnarray}\label{pmnrmn}
+\begin{align}\label{pmnrmn}
 \bfr_{nm}(\bfk)
-&=&
+&=
 \frac{\bfv^\gS_{nm}(\bfk)}{i\go^S_{nm}(\bfk)}
 \quad\quad n\ne m
 ,
-\end{eqnarray} 
+\end{align} 
 which can be identified as 
 $\bfr_{nm}=(1-\gd_{nm})\bfgxi_{nm}\to \bfr_{e,nm}$.
 When  $\bfr_i$ appears in
@@ -236,15 +237,15 @@ As can be seen from Eq.~\eqref{ache.1} and \eqref{ache.2},
 both $\hat S$ and $\hat V^\nl$ are nonlocal potentials, which contribution 
 in the calculation of the optical response has to be taken with care.
 Then, we proceed as follows. From Eqs.~\eqref{vop} and \eqref{ache.1} we find
-\begin{eqnarray}\label{vop2}
-\hat\bfv^\gS&=&
+\begin{align}\label{vop2}
+\hat\bfv^\gS&=
 \frac{\hat\bfp}{m_e}
 +
 \frac{1}{i\hbar}[\hat\bfr,\hat V^\nl(\bfr,\bfr')]
 +
 \frac{1}{i\hbar}[\hat\bfr,\hat S(\bfr,\bfp)]
 \nonumber\\
-&\equiv&
+&\equiv
 \bfv
 +
 \bfv^\nl
@@ -253,25 +254,25 @@ Then, we proceed as follows. From Eqs.~\eqref{vop} and \eqref{ache.1} we find
 \bfv^\lda
 +\bfv^S
 ,
-\end{eqnarray}
+\end{align}
 where we have defined
-\begin{eqnarray}\label{conhr}
+\begin{align}\label{conhr}
 \bfv
-&=&\frac{\hat\bfp}{m_e}
+&=\frac{\hat\bfp}{m_e}
 \nonumber\\
 \bfv^\nl
-&=&
+&=
 \frac{1}{i\hbar}[\hat\bfr,\hat V^\nl(\bfr,\bfr')]
 \nonumber\\
 \bfv^S
-&=&
+&=
 \frac{1}{i\hbar}[\hat\bfr,\hat S(\bfr,\bfp)]
 \nonumber\\
 \bfv^\lda
-&=&
+&=
 \bfv
 +\bfv^\nl
-\end{eqnarray}  
+\end{align}  
 with $\hat\bfp=-i\hbar\bfgnabla$ the momentum operator.
 Using Eq.~\eqref{chon.0}, we obtain that the
 matrix elements of $\bfv^S$ are given by
@@ -281,33 +282,33 @@ matrix elements of $\bfv^S$ are given by
 \end{equation}
 with $f_{nm}=f_n-f_m$,
 where we see that $\bfv^S_{nn}=0$, then
-\begin{eqnarray}\label{chon.8}
+\begin{align}\label{chon.8}
 \bfv^\gS_{nm}
-&=&
+&=
 \bfv^\lda_{nm}+i\gD f_{mn}\bfr_{nm}
 \nonumber\\
-&=&
+&=
 \bfv^\lda_{nm}+i\gD f_{mn}\frac{\bfv^\gS_{nm}(\bfk)}{i\go^S_{nm}(\bfk)}
 \nonumber\\
 \bfv^\gS_{nm}
 \frac{\go^S_{nm}-\gD f_{mn}}{\go^S_{nm}}
-&=&
+&=
 \bfv^\lda_{nm}
 \nonumber\\
 \bfv^\gS_{nm}
 \frac{\go^\lda_{nm}}{\go^S_{nm}}
-&=&
+&=
 \bfv^\lda_{nm}
 \nonumber\\
 \frac{\bfv^\gS_{nm}}{\go^S_{nm}}
-&=&
+&=
 \frac{\bfv^\lda_{nm}}{\go^\lda_{nm}}
 ,
-\end{eqnarray}
+\end{align}
 since
 $\go^S_{nm}-\gD f_{mn}=\go^\lda_{nm}$. Therefore, 
 Eq.~\eqref{pmnrmn} gives
-\begin{eqnarray}\label{chon.10}
+\begin{align}\label{chon.10}
 \bfr_{nm}(\bfk)
 =
 \frac{\bfv^\gS_{nm}(\bfk)}{i\go^S_{nm}(\bfk)}
@@ -315,7 +316,7 @@ Eq.~\eqref{pmnrmn} gives
 \frac{\bfv^\lda_{nm}(\bfk)}{i\go^\lda_{nm}(\bfk)}
 \quad\quad n\ne m
 ,
-\end{eqnarray}
+\end{align}
 thus,
 the matrix elements
 of $\bfr_e$ are the same whether we use the LDA or the scissored
@@ -446,21 +447,21 @@ with
 \end{equation}
 
 Now we work out the commutator of Eq.~\eqref{rtilde}. Then,
-\begin{eqnarray}\label{conmu1}
+\begin{align}\label{conmu1}
 \bra{n\bfk}
 [\hat\bfr_I(t),\hat\gr^{(N)}_I(t)]
 \ket{m\bfk}
-&=&
+&=
 \bra{n\bfk}
 [\hat{U}\hat\bfr\hat{U}^\dagger,\hat{U}\hat\gr^{(N)}(t)\hat{U}^\dagger]
 \ket{m\bfk}
 \nonumber \\
-&=&
+&=
 \bra{n\bfk}
 \hat{U}[\hat\bfr,\hat\gr^{(N)}(t)]\hat{U}^\dagger
 \ket{m\bfk}
 \\
-&=&
+&=
 e^{i\go^S_{nm\bfk}t}
 \left(
 \bra{n\bfk}
@@ -471,17 +472,17 @@ e^{i\go^S_{nm\bfk}t}
 \right)
 \nonumber
 .
-\end{eqnarray}
+\end{align}
 % where the time dependence of operator's interaction picture is
 % explicitly shown by the exponential factor, and the implicit
 % dependence of $\hat\rho^{(N)}$ inherited from Eq.~\eqref{eqrho} is
 % shown by its $t$ argument.
 We calculate the interband term first, so using Eq.~\eqref{chon.98} we obtain
-\begin{eqnarray}\label{conmu2}
+\begin{align}\label{conmu2}
 \bra{n\bfk}
 [\hat\bfr_e,\hat\gr^{(N)}(t)]
 \ket{m\bfk}
-&=&
+&=
 \sum_{\ell}
 \left(
 \bra{n\bfk}
@@ -492,7 +493,7 @@ We calculate the interband term first, so using Eq.~\eqref{chon.98} we obtain
 \ket{m\bfk}
 \right.
 \nonumber \\
-&&
+&
 \left.
 -
 \bra{n\bfk}
@@ -503,7 +504,7 @@ We calculate the interband term first, so using Eq.~\eqref{chon.98} we obtain
 \ket{m\bfk}
 \right)
 \nonumber \\
-&=&
+&=
 \sum_{\ell\ne n,m}
 \left(
 \bfr_{n\ell}(\bfk)
@@ -513,10 +514,10 @@ We calculate the interband term first, so using Eq.~\eqref{chon.98} we obtain
 \bfr_{\ell m}(\bfk)
 \right)
 \nonumber\\
-&\equiv&
+&\equiv
 \bfR^{(N)}_e(\bfk;t)
 .
-\end{eqnarray}
+\end{align}
 
  Now, from Eq.~\eqref{conmri3n} we simply obtain,
 \begin{equation}\label{conmri4}
@@ -537,9 +538,9 @@ e^{i(\go^S_{nm\bfk}-\got)t'}
 $\rma,\rmb,\rmc$ denote Cartesian components that are summed over if repeated.
 We start with the linear response, 
  then from Eq.~\eqref{nrhon} and ~\eqref{conmu2},
-\begin{eqnarray}\label{R0e}
+\begin{align}\label{R0e}
 R_e^{\rmb(0)}(\bfk;t)
-&=&
+&=
 \sum_{\ell}
 \left(
 r^{\rmb}_{n\ell}(\bfk)
@@ -549,7 +550,7 @@ r^{\rmb}_{n\ell}(\bfk)
 r^{\rmb}_{\ell m}(\bfk)
 \right)
 \nonumber \\
-&=&
+&=
 \sum_{\ell}
 \left(
 r^{\rmb}_{n\ell}(\bfk)
@@ -559,11 +560,11 @@ r^{\rmb}_{n\ell}(\bfk)
 r^{\rmb}_{\ell m}(\bfk)
 \right)
 \nonumber \\
-&=&
+&=
 f_{mn\bfk}
 r^{\rmb}_{nm}(\bfk)
 ,
-\end{eqnarray}
+\end{align}
 where $f_{mn\bfk}=f_{m\bfk}-f_{n\bfk}$.
 From now on,
   it should be clear that the matrix elements of $\bfr_{nm}$ imply
@@ -580,29 +581,29 @@ Therefore
 the linear response has no contribution from
 intraband transitions.
  Then,
-\begin{eqnarray}\label{rtilde2n}
+\begin{align}\label{rtilde2n}
 \gr^{(1)}_{I,nm}(\bfk;t)
-&=&\frac{ie}{\hbar}
+&=\frac{ie}{\hbar}
 f_{mn\bfk}
 r^{\rmb}_{nm}(\bfk)E^{\rmb}
 \int_{-\infty}^t dt'
 e^{i(\go^S_{nm\bfk}-\got)t'}
 \nonumber \\
-&=&\frac{e}{\hbar}
+&=\frac{e}{\hbar}
 f_{mn\bfk}
 r^{\rmb}_{nm}(\bfk)E^{\rmb}
 \frac{e^{i(\go^S_{nm\bfk}-\got)t}}
 {\go^S_{nm\bfk}-\got}
 \nonumber \\
-&=&
+&=
 e^{i\go^S_{nm\bfk}t}
 B^{\rmb}_{mn}(\bfk)E^{\rmb}(t)
 \nonumber \\
-&=&
+&=
 e^{i\go^S_{nm\bfk}t}
 \rho^{(1)}_{nm}(\bfk;t)
 .
-\end{eqnarray}
+\end{align}
 We generalize this result since we need it for the non-linear response.
 In general we could have several perturbing fields with different
 frequencies,
@@ -618,9 +619,9 @@ B^{\rmb}_{nm}(\bfk,\go_\ga)=\frac{e}{\hbar}\frac{f_{mn\bfk}r^{\rmb}_{nm}(\bfk)}{
 \end{equation} 
 
 Now, we calculate the second-order response. Then, from Eq.~\eqref{conmu2}
-\begin{eqnarray}\label{R1e}
+\begin{align}\label{R1e}
 R_e^{\rmb(1)}(\bfk;t)
-&=&
+&=
 \sum_{\ell}
 \left(
 r^{\rmb}_{n\ell}(\bfk)
@@ -630,7 +631,7 @@ r^{\rmb}_{n\ell}(\bfk)
 r^{\rmb}_{\ell m}(\bfk)
 \right)
 \nonumber \\
-&=&
+&=
 \sum_{\ell}
 \left(
 r^{\rmb}_{n\ell}(\bfk)
@@ -640,7 +641,7 @@ B^{\rmc}_{n\ell}(\bfk,\go_\gb)
 r^{\rmb}_{\ell m}(\bfk)
 \right)E_{\go_\gb}^{\rmc}(t)
 ,
-\end{eqnarray}
+\end{align}
 and from Eq.~\eqref{conmri4}
 \begin{equation}\label{R1i}
 R_i^{\rmb(1)}(\bfk;t)=i(\rho^{(1)}_{nm}(t))_{;k^{\rmb}}=iE_{\go_\gb}^{\rmc}(t)(B^{\rmc}_{nm}(\bfk,\go_\gb))_{;k^{\rmb}}
@@ -650,9 +651,9 @@ R_i^{\rmb(1)}(\bfk;t)=i(\rho^{(1)}_{nm}(t))_{;k^{\rmb}}=iE_{\go_\gb}^{\rmc}(t)(B
 Using Eqs.~\eqref{R1e} and ~\eqref{R1i} in Eq. (\ref{rtilde2}),
 and generalizing to two different perturbing fields,
 we obtain
-\begin{eqnarray}\label{rtilde33}
+\begin{align}\label{rtilde33}
 \gr^{(2)}_{I,nm}(\bfk;t)
-&=&
+&=
 \frac{ie}{\hbar}
 \bigg[
 \sum_{\ell}
@@ -664,7 +665,7 @@ B^{\rmc}_{n\ell}(\bfk,\go_\gb)
 r^{\rmb}_{\ell m}(\bfk)
 \Big)
 \nonumber \\
-&&+
+&+
 i
 (B^{\rmc}_{nm}(\bfk,\go_\gb))_{;k^{\rmb}}
 \bigg]
@@ -672,7 +673,7 @@ E^{\rmb}_{\go_\ga}E_{\go_\gb}^{\rmc}
 \int_{-\infty}^t dt'
 e^{i(\go^S_{nm\bfk}-\got_\ga-\got_\gb)t'}
 \nonumber \\
-&=&
+&=
 \frac{e}{\hbar}
 \bigg[
 \sum_{\ell}
@@ -684,7 +685,7 @@ B^{\rmc}_{n\ell}(\bfk,\go_\gb)
 r^{\rmb}_{\ell m}(\bfk)
 \Big)
 \nonumber \\
-&&+
+&+
 i
 (B^{\rmc}_{nm}(\bfk,\go_\gb))_{;k^{\rmb}}
 \bigg]
@@ -692,24 +693,24 @@ E^{\rmb}_{\go_\ga}E_{\go_\gb}^{\rmc}
 \frac{e^{i(\go^S_{nm\bfk}-\got_3)t}}
 {\go^S_{nm\bfk}-\got_3}
 \nonumber \\
-&=&
+&=
 e^{i\go^S_{nm\bfk}t}
 \rho_{nm}^{(2)}(\bfk;t)
 .
-\end{eqnarray}
+\end{align}
 Now, we write
 $\rho_{nm}^{(2)}(\bfk;t)=\rho_{nm}^{(2)}(\bfk;\go_3)e^{-i\got_3 t}$,
 with
-\begin{eqnarray}\label{rho2}
-\gr_{nm}^{(2)}(\bfk;\go_3)&=&\frac{e}{i\hbar}\frac{1}{\go^S_{nm\bfk}-\got_3}
+\begin{align}\label{rho2}
+\gr_{nm}^{(2)}(\bfk;\go_3)&=\frac{e}{i\hbar}\frac{1}{\go^S_{nm\bfk}-\got_3}
 \bigg[-(B_{nm}^{\rmc}(\bfk,\go_\gb)_{;k^{\rmb}}
 \nonumber \\
-&&
+&
 +i\sum_\ell\Big(r_{n\ell}^{\rmb}B_{\ell m}^{\rmc}(\bfk,\go_\gb) - B_{n\ell}^{\rmc}(\bfk,\go_\gb)
   r_{\ell m}^{\rmb}\Big)
 \bigg] 
 E^{\rmb}_{\go_\ga}E_{\go_\gb}^{\rmc}
-\end{eqnarray} 
+\end{align} 
 where $\got_3=\got_\ga+\got_\gb$ and $\bfE_{\go_i}$ is the amplitude of the perturbing
 field with $\go_i$ for $i=\ga,\gb$, where $B_{\ell
   m}^{\rma}(\bfk,\go_\ga)$ are given by 
@@ -796,8 +797,8 @@ where $\hat{\mbf{v}}^\gS$ is the electron's velocity operator to be dealt
 with below. We define
 $\hat\mu\equiv\ket{\bfr}\bra{\bfr}$ and use the cyclic invariance of
 the trace to write
-\begin{eqnarray}\label{jmic2}
-\mathrm{Tr}(\hat\bfj(\bfr)\hat\rho(t)&=&\mathrm{Tr}(\hat\rho(t)\hat\bfj(\bfr))=
+\begin{align}\label{jmic2}
+\mathrm{Tr}(\hat\bfj(\bfr)\hat\rho(t)&=\mathrm{Tr}(\hat\rho(t)\hat\bfj(\bfr))=
 \frac{e}{2}
 \left(
 \mathrm{Tr}(\hat\rho\hat\bfv^\gS\hat\mu)
@@ -805,7 +806,7 @@ the trace to write
 \mathrm{Tr}(\hat\rho\hat\mu\hat\bfv^\gS)
 \right)
 \nonumber\\
-&=&
+&=
 \frac{e}{2}
 \sum_{n\bfk}
 \left(
@@ -814,7 +815,7 @@ the trace to write
 \bra{n\bfk}\hat\rho\hat\mu\hat\bfv^\gS\ket{n\bfk}
 \right)
 \nonumber\\
-&=&
+&=
 \frac{e}{2}
 \sum_{nm\bfk}
 \bra{n\bfk}\hat\rho\ket{m\bfk}
@@ -824,10 +825,10 @@ the trace to write
 \braket{m\bfk}{\bfr}\bra{\bfr}\hat\bfv^\gS\ket{n\bfk}
 \right)
 \nonumber\\
-\bfj(\bfr,t)&=&
+\bfj(\bfr,t)&=
 \sum_{nm\bfk}
 \rho_{nm}(\bfk;t)\bfj_{mn}(\bfk;\bfr),
-\end{eqnarray}
+\end{align}
 where
 \begin{equation}\label{jmic3}
 \bfj_{mn}(\bfk;\bfr)=
@@ -913,9 +914,9 @@ and using the following property
 \end{equation}
 that stems from the fact that the operator $\bfv^\gS(\bfr,\bfr')$ does not act on
 $\bfr''$, we can write
-\begin{eqnarray}\label{nl.3}
+\begin{align}\label{nl.3}
 \calbv^{\gS,\ell}_{mn}({\mathbf k})
-&=&
+&=
 \frac{1}{2}
 \int \mathrm{d}^3 r\,
  \calc^\ell(z)
@@ -927,52 +928,52 @@ $\bfr''$, we can write
 \psi_{n\mathbf{k}}(\mathbf{r})
 \bigg]
 \nonumber\\
-&=&
+&=
 \int \mathrm{d}^3 r\,
 \psi^*_{m\mathbf{k}}(\mathbf{r})
 \left[\frac{\calc^\ell(z) \bfv^\gS +
 \bfv^\gS \calc^\ell(z)}{2}\right]
 \psi_{n\mathbf{k}}(\mathbf{r})
 \nonumber\\
-&=&
+&=
 \int \mathrm{d}^3 r\,
 \psi^*_{m\mathbf{k}}(\mathbf{r})
 \calbv^{\gS,\ell}
 \psi_{n\mathbf{k}}(\mathbf{r})
 ,
-\end{eqnarray}
+\end{align}
 where we used the hermitian property of $\bfv^\gS$ and  defined
-\begin{eqnarray}\label{nl.4}
+\begin{align}\label{nl.4}
 \calbv^{\gS,\ell}
 =
 \frac{\calc^\ell(z) \bfv^\gS +
 \bfv^\gS \calc^\ell(z)}{2}
 ,
-\end{eqnarray} 
+\end{align} 
 where the superscript $\ell$ is inherited from $\calc^\ell(z)$, and we
 supres the dependance on $z$ form the crowded notation.  
 Then,
 we see that the replacement
-\begin{eqnarray}\label{vcali}
+\begin{align}\label{vcali}
 \hat\bfv^\gS \to \hat\calbv^{\gS,\ell}=\left[\frac{\calc^\ell(z) \hat\bfv^\gS +
 \hat\bfv^\gS \calc^\ell(z)}{2}\right]
 ,
-\end{eqnarray} 
+\end{align} 
 is what it takes to change the
 velocity operator of the electron, $\hat\bfv^\gS$, to the new velocity
 operator, $\calbv^{\gS,\ell}$
  that implicitly takes into account the
 contribution of the region of the slab given by $\calc^\ell(z)$.
 From Eq.~\eqref{vop},
-\begin{eqnarray}\label{vopii}
+\begin{align}\label{vopii}
 \calbv^{\gS,\ell}
-&=&
+&=
 \calbv^{\lda,\ell}
 +
 \calbv^{S,\ell}
 \nonumber\\
 \calbv^{\lda,\ell}
-&=&
+&=
 \calbv^{\ell}
 +
 \calbv^{\nl,\ell}
@@ -982,7 +983,7 @@ From Eq.~\eqref{vop},
 +
 \calbv^{\nl,\ell}
 .
-\end{eqnarray}
+\end{align}
 The matrix elements of $\calbv^{S,\ell}$ and $\calbv^{\lda,\ell}$
 are given in 
 Appendix \ref{calvs}.
@@ -1010,16 +1011,16 @@ In this section we obtain the expressions for the non-linear
 surface susceptibility tensor to second order in the perturbing fields.
 We start with the 
 non-linear polarization $\mbf{P}$ written as
-\begin{eqnarray}\label{mshg}
-P_{\rma}(\go_3)&=&\chi_{\rma\rmb\rmc}(-\go_3;\go_1,\go_2)
+\begin{align}\label{mshg}
+P_{\rma}(\go_3)&=\chi_{\rma\rmb\rmc}(-\go_3;\go_1,\go_2)
 E_{\rmb}(\go_1)
 E_{\rmc}(\go_2)
 \nonumber \\
-&&+
+&+
 \chi_{\rma\rmb\rmc\rml}(-\go_3;\go_1,\go_2)
 E_{\rmb}(\go_1)\nabla_{\rmc} E_{\rml}(\go_2)
 +\cdots,
-\end{eqnarray}
+\end{align}
 where $\chi_{\rma\rmb\rmc}$ and $\chi_{\rma\rmb\rmc\rml}$,
 correspond to the dipolar and quadrupolar susceptibilities,
 respectively,
@@ -1037,14 +1038,14 @@ P_{\rma}(\mbf{r})=\chi_{\rma\rmb\rmc}E_{\rmb}(\mbf{r})E_{\rmc}(\mbf{r})
 +\cdots,
 \end{equation}
 as the polarization with respect to the original coordinate system, and 
-\begin{eqnarray}\label{mshg3}
-P_{\rma}(-\mbf{r})&=&\chi_{\rma\rmb\rmc}E_{\rmb}(-\mbf{r})E_{\rmc}(-\mbf{r})
+\begin{align}\label{mshg3}
+P_{\rma}(-\mbf{r})&=\chi_{\rma\rmb\rmc}E_{\rmb}(-\mbf{r})E_{\rmc}(-\mbf{r})
 \nonumber \\
-&&+
+&+
 \chi_{\rma\rmb\rmc\rml}E_{\rmb}(-\mbf{r})\frac{\partial}{\partial(-
   \mbf{r}_{\rmc})} E_{\rml}(-\mbf{r}) 
 +\cdots, 
-\end{eqnarray}
+\end{align}
 as the polarization in the coordinate system where inversion is taken,
 i.e. $\mbf{r} \to -\mbf{r}$. 
 Note that we have kept the same susceptibility tensors, since as the
@@ -1053,19 +1054,19 @@ system is centrosymmetric, they must be invariant under $\mbf{r} \to
 Recalling that $\mbf{P}(\mbf{r})$ and
 $\mbf{E}(\mbf{r})$, are polar vectors,\cite{jackson_classical_1975} we have that
 Eq.~\eqref{mshg3} reduces to
-\begin{eqnarray}\label{mshg4}
--P_{\rma}(\mbf{r})&=&\chi_{\rma\rmb\rmc}(-E_{\rmb}(\mbf{r}))(-E_{\rmc}(\mbf{r}))
+\begin{align}\label{mshg4}
+-P_{\rma}(\mbf{r})&=\chi_{\rma\rmb\rmc}(-E_{\rmb}(\mbf{r}))(-E_{\rmc}(\mbf{r}))
 -
 \chi_{\rma\rmb\rmc\rml}(-E_{\rmb}(\mbf{r}))(-\frac{\partial}{\partial\mbf{r}_{\rmc}})(-
 E_{\rml}(\mbf{r})) 
 +\cdots,
 \nonumber \\
-P_{\rma}(\mbf{r})&=&-\chi_{\rma\rmb\rmc}E_{\rmb}(\mbf{r})E_{\rmc}(\mbf{r})
+P_{\rma}(\mbf{r})&=-\chi_{\rma\rmb\rmc}E_{\rmb}(\mbf{r})E_{\rmc}(\mbf{r})
 +
 \chi_{\rma\rmb\rmc\rml}E_{\rmb}(\mbf{r})\frac{\partial}{\partial\mbf{r}_{\rmc}}
 E_{\rml}(\mbf{r}) 
 +\cdots,
-\end{eqnarray}
+\end{align}
 that when compared with Eq.~\eqref{mshg2}
 leads to the conclusion that
 \begin{equation}\label{sshg}
@@ -1094,18 +1095,18 @@ Therefore, if we move to the surface of the semi-infinite system, the
 assumption of centrosymmetry necessarily breaks down, and there is no
 restriction in $\chi_{\rma\rmb\rmc}$. Thus, we conclude that the leading term
 of the polarization in a surface region is given by
-\begin{eqnarray}\label{sshgp1}
+\begin{align}\label{sshgp1}
 \int d\mbf{R}\int dz 
 P_{\rma}(\mbf{R},z)
-&\approx&
+&\approx
 \cals dP_{\rma}
 \nonumber\\
-&=&
+&=
 \cals P_{\rma}^{s}
 \nonumber\\
-&=&
+&=
 \chi_{\rma\rmb\rmc}E_{\rmb}E_{\rmc},
-\end{eqnarray}
+\end{align}
 where $\mbf{R}$ is a vector parallel to the surface which is
 perpendicular to $z$, $\cals$ is the surface area of the unit
 cell that characterizes the surface of the system, and $d$ is the
@@ -1113,12 +1114,12 @@ surface region from which the dipolar signal of $\bfP$ is
 different from zero (see Fig.~\ref{fsystem}).
 Also, $d\mbf{P}\equiv \mbf{P}^s$ is
 the surface SH polarization, given by
-\begin{eqnarray}\label{sshgp2}
-P_{\rma}^{s}&=&\frac{1}{\cals}
+\begin{align}\label{sshgp2}
+P_{\rma}^{s}&=\frac{1}{\cals}
 \chi_{\rma\rmb\rmc}E_{\rmb}E_{\rmc}
 =
 \chi^s_{\rma\rmb\rmc}E_{\rmb}E_{\rmc},
-\end{eqnarray}
+\end{align}
 with $\chi_{\rma\rmb\rmc}^s=\chi_{\rma\rmb\rmc}/\cals$ the surface
 non-linear susceptibility. 
 On the other hand, 
@@ -1150,15 +1151,15 @@ J_{\rma}^{(2,\ell)}(\go_3)=-i\go_3P_{\rma}(\go_3)
 ,
 \end{equation}
 which upon using Eqs.~\eqref{rho2} and ~\eqref{sshgp2} leads to
-\begin{eqnarray}\label{Pjikn2}
+\begin{align}\label{Pjikn2}
 \chi^{s,\ell}_{\rma\rmb\rmc}(-\go_3;\go_1,\go_2)
-&=&
+&=
 \frac{ie}{\gO E^{\rmb}_1E^{\rmc}_2\cals \go_3}
 \sum_{mn\bfk}
 \calv^{\gS,\rma,\ell}_{mn}(\mathbf{k})
 \rho^{(2)}_{nm}(\bfk;\go_3)
 \nonumber \\
-&=&
+&=
 \frac{e^2}{\cals\gO\hbar\go_3}
 \sum_{mn\bfk}
 \frac{\calv^{\gS,\rma,\ell}_{mn}(\mathbf{k})}
@@ -1166,13 +1167,13 @@ which upon using Eqs.~\eqref{rho2} and ~\eqref{sshgp2} leads to
 \bigg[
 -(B_{nm}^{\rmc}(\bfk,\go_\gb))_{;k^{\rmb}}
 \nonumber \\
-&&
+&
 +i\sum_\ell\left(r_{n\ell}^{\rmb}B_{\ell m}^{\rmc}(\bfk,\go_\gb) -
   B_{n\ell}^{\rmc}(\bfk,\go_\gb) 
   r_{\ell m}^{\rmb}\right)
 \bigg]
 ,
-\end{eqnarray}
+\end{align}
 which gives the surface susceptibility of layer $\ell$-th, where 
 $\calbv^\gS$ is given in Eq.~\eqref{vopii}.
 Using Eq.~\eqref{rho1}, we
@@ -1213,14 +1214,14 @@ For the generalized derivative in Eq.~\eqref{chii} we use the chain rule
 ,
 \end{equation}
 and 
-\begin{eqnarray}\label{eli.13}
+\begin{align}\label{eli.13}
 \left(\go^S_{nm}\right)_{;k^{\rma}}
 =
 \left(\go^\lda_{nm}\right)_{;k^{\rma}}
 = 
 v_{nn}^{\lda,\rma}-v_{mm}^{\lda,\rma}\equiv\gD_{nm}^{\rma}
 ,
-\end{eqnarray} 
+\end{align} 
 as shown in Appendix \ref{gwk}. 
 
 In order to calculate
@@ -1318,9 +1319,9 @@ In Appendices \ref{gdernl} and \ref{calvs} we show how to calculate
 the generalized derivatives of $\bfr_{nm;\bfk}$ and
 $\calv^{\gS,\rma,\ell}_{nm;\bfk}$, respectively. 
 Indeed, we find that
-\begin{eqnarray}\label{rgen.69}
+\begin{align}\label{rgen.69}
 (r^{\rmb}_{nm})_{;k^{\rma}}
-&=&
+&=
 -i\calt^{\rma\rmb}_{nm}
 +
 \frac{
@@ -1343,23 +1344,23 @@ r^{\rmb}_{n\ell}
 r^{\rma}_{\ell m}
 \bigg)
 ,
-\end{eqnarray}
+\end{align}
 where
-\begin{eqnarray}\label{tau.1}
+\begin{align}\label{tau.1}
 \calt_{nm}^{\rma\rmb}
 =
 [r^{\rma},v^{\lda,\rmb}]= 
 \frac{i\hbar}{m_e}\gd_{ab}\gd_{nm}+
 \call_{nm}^{\rma\rmb}
 ,
-\end{eqnarray}  
+\end{align}  
 with
-\begin{eqnarray}\label{tau.2}
+\begin{align}\label{tau.2}
 \call_{nm}^{\rma\rmb}
 =
 \frac{1}{i\hbar}[r^{\rma},v^{\nl,\rmb}]_{nm}
 ,
-\end{eqnarray}
+\end{align}
 the contribution to the generalized derivative of $\bfr_{nm}$
 coming from the nonlocal part of the pseudopotential.
 In Appendix \ref{calt} we calculate
@@ -1370,21 +1371,21 @@ its computational time is at least an order of magnitude larger
  than what it takes to calculate all other terms involved in the expressions for 
 $\chi^{s,\ell}_{\mathrm{abc}}$.\cite{valerie}
 Thus, we neglect it throughout the article, and take
-\begin{eqnarray}\label{tau.69}
+\begin{align}\label{tau.69}
 \calt_{nm}^{\rma\rmb}
 \approx
 \frac{i\hbar}{m_e}\gd_{ab}\gd_{nm}
 .
-\end{eqnarray} 
+\end{align} 
 Finally,
 for $\calv^{\gS,\rma,\ell}_{nm;\bfk}$, among other quantities we also
 need the following term (Eq.~\eqref{ntita})
-\begin{eqnarray}\label{a.3c}
+\begin{align}\label{a.3c}
 (v^{\lda,\rma}_{nn})_{;k^\rmb}
 =
 \nabla_{k^{\rma}}  
 v^{\lda,\rmb}_{nn}(\bfk)
-&=&
+&=
 -i\calt^{\rma\rmb}_{nn}
 -
 \sum_{\ell\ne n}
@@ -1397,7 +1398,7 @@ r^\rmb_{n\ell}
 r^{\rma}_{\ell n}
 \bigg)
 \nonumber\\
-&\approx&
+&\approx
 \frac{\hbar}{m_e}\gd_{\rma\rmb}
 -
 \sum_{\ell\ne n}
@@ -1410,7 +1411,7 @@ r^\rmb_{n\ell}
 r^{\rma}_{\ell n}
 \bigg)
 ,
-\end{eqnarray}  
+\end{align}  
 where we also use Eq.~\eqref{tau.69}. Above
 is the standard effective-mas sum rule.\cite{ashcroft_solid_1976} 
 In Appendix \ref{code}, we list all the quantities that should be

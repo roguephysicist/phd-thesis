@@ -39,29 +39,29 @@ p^{\rmb}_{nm}(\bfk)
 ,
 \end{equation}
 and
-\begin{eqnarray}\label{a_rep}
-\bra{n\bfk}[r^{\rma}_e,p^{\rmb}]\ket{m\bfk'}&=&
+\begin{align}\label{a_rep}
+\bra{n\bfk}[r^{\rma}_e,p^{\rmb}]\ket{m\bfk'}&=
 \sum_{\ell\bfk''}
 \bigg(
 \bra{n\bfk}r^{\rma}_e\ket{\ell\bfk''}\bra{\ell\bfk''}p^{\rmb}\ket{m\bfk'}
 \nonumber \\
-&&
+&
 -
 \bra{n\bfk}p^{\rmb}\ket{\ell\bfk''}\bra{\ell\bfk''}r^{\rma}_e\ket{m\bfk'}
 \bigg)
 \nonumber \\
-&=&
+&=
 \sum_{\ell\bfk''}
 \bigg(
 (1-\gd_{n\ell})\gd(\bfk-\bfk'')\xi^{\rma}_{n\ell}
 \gd(\bfk''-\bfk')p^{\rmb}_{\ell m}
 \nonumber \\
-&&-
+&-
 \gd(\bfk-\bfk'')p^{\rmb}_{n\ell}
 (1-\gd_{\ell m})\gd(\bfk''-\bfk')\xi^{\rma}_{\ell m}
 \bigg)
 \nonumber \\
-&=&
+&=
 \gd(\bfk-\bfk')
 \sum_{\ell}
 \bigg(
@@ -69,13 +69,13 @@ and
 \xi^{\rma}_{n\ell}
 p^{\rmb}_{\ell m}
 \nonumber \\
-&&-
+&-
 (1-\gd_{\ell m})
 p^{\rmb}_{n\ell}
 \xi^{\rma}_{\ell m}
 \bigg)
 \nonumber \\
-&=&
+&=
 \gd(\bfk-\bfk')
 \bigg(
 \sum_{\ell}
@@ -87,21 +87,21 @@ p^{\rmb}_{n\ell}
 \xi^{\rma}_{\ell m}
 \bigg)
 \nonumber \\
-&&+
+&+
 p^{\rmb}_{nm}(\xi^{\rma}_{mm}
 -
 \xi^{\rma}_{nn}
 )
 \bigg)
 .
-\end{eqnarray}
+\end{align}
 Using Eqs.~\eqref{a_rip} and ~\eqref{a_rep}
 into Eq.~\eqref{a_hrdab3} gives
-\begin{eqnarray}\label{a_rapb}
+\begin{align}\label{a_rapb}
 i\gd(\bfk-\bfk')
 \bigg(
 (p^{\rmb}_{nm})_{;k^{\rma}}
-&&
+&
 -i
 \sum_{\ell}
 \bigg(
@@ -112,7 +112,7 @@ p^{\rmb}_{n\ell}
 \xi^{\rma}_{\ell m}
 \bigg)
 \nonumber \\
-&&
+&
 -i
 p^{\rmb}_{nm}(\xi^{\rma}_{mm}
 -
@@ -122,10 +122,10 @@ p^{\rmb}_{nm}(\xi^{\rma}_{mm}
 =
 i\hbar\gd_{ab}\gd_{nm}\gd(\bfk-\bfk')
 ,
-\end{eqnarray}
+\end{align}
 then
-\begin{eqnarray}\label{a_rapb2}
-(p^{\rmb}_{nm})_{;k^{\rma}}&=&
+\begin{align}\label{a_rapb2}
+(p^{\rmb}_{nm})_{;k^{\rma}}&=
 \hbar\gd_{ab}\gd_{nm}
 +i
 \sum_{\ell}
@@ -137,15 +137,15 @@ p^{\rmb}_{n\ell}
 \xi^{\rma}_{\ell m}
 \bigg)
 \nonumber \\
-&&+i
+&+i
 p^{\rmb}_{nm}(\xi^{\rma}_{mm}
 -
 \xi^{\rma}_{nn}
 )
 ,
-\end{eqnarray}
+\end{align}
 and from Eq.~\eqref{a_ripn},
-\begin{eqnarray}\label{cogno}
+\begin{align}\label{cogno}
 \nabla_{k^{\rma}}p^{\rmb}_{nm}=
 \hbar\gd_{ab}\gd_{nm}
 +i
@@ -158,11 +158,11 @@ p^{\rmb}_{n\ell}
 \xi^{\rma}_{\ell m}
 \bigg)
 .
-\end{eqnarray}
+\end{align}
 Now, there are two cases. We use Eqs.~\eqref{xir} and ~\eqref{chon.98}.
 
 \noindent {\it Case} $n=m$
-\begin{eqnarray}\label{tita}
+\begin{align}\label{tita}
 \frac{1}{\hbar}\nabla_{k^{\rma}}p^{\rmb}_{nn}=
 \gd_{ab}
 -\frac{m_e}{\hbar}
@@ -176,13 +176,13 @@ r^{\rmb}_{n\ell}
 r^{\rma}_{\ell n}
 \bigg)
 ,
-\end{eqnarray}
+\end{align}
 that gives the familiar expansion for the inverse effective mass
 tensor $(m_n^{-1})_{ab}$.\cite{ashcroft_solid_1976}
 
 \noindent {\it Case} $n\ne m$
-\begin{eqnarray}\label{mes}
-(p^{\rmb}_{nm})_{;k^{\rma}}&=&
+\begin{align}\label{mes}
+(p^{\rmb}_{nm})_{;k^{\rma}}&=
 \hbar\gd_{ab}\gd_{nm}
 +i
 \sum_{\ell\ne m\ne n}
@@ -194,7 +194,7 @@ p^{\rmb}_{n\ell}
 \xi^{\rma}_{\ell m}
 \bigg)
 \nonumber\\
-&&+
+&+
 i
 \bigg(
 \xi^{\rma}_{nm}
@@ -204,7 +204,7 @@ p^{\rmb}_{nm}
 \xi^{\rma}_{mm}
 \bigg)
 \nonumber\\
-&&+
+&+
 i
 \bigg(
 \xi^{\rma}_{nn}
@@ -219,7 +219,7 @@ p^{\rmb}_{nm}(\xi^{\rma}_{mm}
 \xi^{\rma}_{nn}
 )
 \nonumber \\
-&=&
+&=
 -m_e
 \sum_{\ell}
 \bigg(
@@ -238,7 +238,7 @@ r^{\rma}_{\ell m}
 p^{\rmb}_{nn}
 )
 \nonumber \\
-&=&
+&=
 -m_e
 \sum_{\ell}
 \bigg(
@@ -254,7 +254,7 @@ r^{\rma}_{\ell m}
 m_er^{\rma}_{nm}
 \Delta^{\rmb}_{mn}
 ,
-\end{eqnarray} 
+\end{align} 
 where
 \begin{equation}\label{a_delta}
 \Delta^{\rmb}_{mn}=\frac{p^{\rmb}_{mm}-p^{\rmb}_{nn}}{m_e}
@@ -264,8 +264,8 @@ where
 Now, for $n \ne m$, Eqs.~\eqref{chon.98},
 ~\eqref{a_gradw2} and 
 ~\eqref{mes} and the chain rule, give
-\begin{eqnarray}\label{a_rgendevn}
-(r^{\rmb}_{nm})_{;k^{\rma}}&=&\left(\frac{p^{\rmb}_{nm}}{im_e\go_{nm}}\right)_{;k^{\rma}}
+\begin{align}\label{a_rgendevn}
+(r^{\rmb}_{nm})_{;k^{\rma}}&=\left(\frac{p^{\rmb}_{nm}}{im_e\go_{nm}}\right)_{;k^{\rma}}
 =
 \frac{1}
 {im_e\go_{nm}}
@@ -279,7 +279,7 @@ p^{\rmb}_{nm}
 \go_{nm}
 \right)_{;k^{\rma}}
 \nonumber \\
-&=&
+&=
 \frac{i}{\go_{nm}}
 \sum_{\ell}
 \bigg(
@@ -296,7 +296,7 @@ r^{\rma}_{\ell m}
 \Delta^{\rmb}_{mn}}
 {\go_{nm}}
 \nonumber \\
-&&
+&
 -
 \frac{r^{\rmb}_{nm}}
 {\go_{nm}}
@@ -304,7 +304,7 @@ r^{\rma}_{\ell m}
 \go_{nm}
 \right)_{;k^{\rma}}
 \nonumber \\
-&=&
+&=
 \frac{i}{\go_{nm}}
 \sum_{\ell}
 \bigg(
@@ -321,13 +321,13 @@ r^{\rma}_{\ell m}
 \Delta^{\rmb}_{mn}}
 {\go_{nm}}
 \nonumber \\
-&&
+&
 -
 \frac{r^{\rmb}_{nm}}
 {\go_{nm}}
 \frac{p^{\rma}_{nn}-p^{\rma}_{mm}}{m_e}
 \nonumber \\
-&=&
+&=
 \frac{
 r^{\rma}_{nm}
 \Delta^{\rmb}_{mn}
@@ -336,7 +336,7 @@ r^{\rma}_{nm}
 }
 {\go_{nm}}
 %\nonumber \\
-%&&
+%&
 +
 \frac{i}{\go_{nm}}
 \sum_{\ell}
@@ -349,4 +349,4 @@ r^{\rmb}_{\ell m}
 r^{\rmb}_{n\ell}
 r^{\rma}_{\ell m}
 \bigg)
-\end{eqnarray}
+\end{align}
