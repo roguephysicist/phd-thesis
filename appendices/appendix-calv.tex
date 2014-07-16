@@ -133,10 +133,10 @@ line, we performed an
 integration by parts over the Brillouin zone,
 where the contribution from the edges vanishes.\cite{ashcroft_solid_1976}
 Now, we apply the chain rule, to get
-\begin{equation}\label{chr}
+\begin{eqnarray}\label{chr}
 \left(\frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}}{(\omega^{S}_{nm})^2}\right)_{;k^{\text{c}}} = \frac{r^{\text{LDA,b}}_{nm}}{(\omega^{S}_{nm})^2}\left(\mathcal{V} ^{\Sigma,\text{a},\ell}_{mn}\right)_{;k^{\text{c}}} + \frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}}{(\omega^{S}_{nm})^2}\left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}} - \frac{2\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}}{(\omega^{S}_{nm})^3}\left(
 \omega^{S}_{nm}\right)_{;k^{\text{c}}},
-\end{equation}
+\end{eqnarray}
 and work the time-reversal on each term.
 The first term is reduced to
 \begin{align}\label{first_term_gen_deriv}
@@ -203,16 +203,16 @@ I_{2\omega}
 
 We can express the energies in terms of transitions between bands. Therefore, $\omega^{S}_{nm} = \omega^{S}_{cv}$ for transitions between conduction and valence bands. We analyze the limit,
 
-\begin{equation}\label{limit_eta}
+\begin{eqnarray}\label{limit_eta}
 \lim_{\eta\to 0}\frac{1}{x\pm i\eta}=P\frac{1}{x}\mp i\pi\delta(x),
-\end{equation}
+\end{eqnarray}
 
 and can finally rewrite \eqref{2wchii} in the desired form,
 % we need to place the absolute value on the e, and check how the sign changes on the entire equation
 
-\begin{equation}\label{imchi2w}
+\begin{eqnarray}\label{imchi2w}
 \mathrm{Im}[\chi_{i,\text{a},\ell\text{b}\text{c},2\omega}^{s,\ell}] = -\frac{\pi \vert e\vert^{3}}{2\hbar^2}\sum_{vc\mathbf{k}}\frac{4}{(\omega^{S}_{cv})^{2}}\left(\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}\left(r^{\text{LDA,b}}_{cv}\right)_{;k^{\text{c}}}\right] - \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}r^{\text{LDA,b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}}\right)\delta(\omega^{S}_{cv}-2\omega).
-\end{equation}
+\end{eqnarray}
 
 where we added a $1/2$ from the sum over $\mathbf{k} \rightarrow - \mathbf{k}$.
 
@@ -233,24 +233,24 @@ I_{\omega}
 
 We reduce in the same way as \eqref{2wchii}, % follow the derivation in the uncorrected doc, especially for the chain rule to see where this extra 2 comes from
 
-\begin{equation}\label{wchii_simplified}
+\begin{eqnarray}\label{wchii_simplified}
 I_{\omega}
 = -\frac{e^3}{2\hbar^2}\sum_{nm\mathbf{k}}\frac{f_{mn}}{(\omega^{S}_{nm})^{2}}
 \Biggl[
 2\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}\left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)_{;k^{\text{c}}}\right]
 +\frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{\omega^{S}_{nm}} 
 \Biggr]\frac{1}{\omega^{S}_{nm}-\omega},
-\end{equation}
+\end{eqnarray}
 
 and using \eqref{limit_eta} we obtain our final form,
 
-\begin{equation}
+\begin{eqnarray}
 \mathrm{Im}[\chi_{i,\text{a},\ell\text{b}\text{c},\omega}^{s,\ell}]
 = -\frac{\pi\vert e\vert^3}{2\hbar^2}\sum_{cv\mathbf{k}}\frac{1}{(\omega^{S}_{cv})^{2}}
 \left(
 \mathrm{Re}\left[r^{\text{LDA,b}}_{cv}\left(\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}\right)_{;k^{\text{c}}}\right]
 +\frac{\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}r^{\text{LDA,b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}} 
 \right)\delta(\omega^{S}_{cv}-\omega),
-\end{equation}
+\end{eqnarray}
 
 where again we added a $1/2$ from the sum over $\mathbf{k} \rightarrow - \mathbf{k}$.
