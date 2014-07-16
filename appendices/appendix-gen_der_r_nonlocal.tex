@@ -1,43 +1,43 @@
-\section{Generalized derivative $(\bfr_{nm}(\bfk))_{;\bfk}$ for
-  non-local potentials}\label{gdernl}
+\section{Generalized derivative \texorpdfstring{$(\bfr_{nm}(\bfk))_{;\bfk}$}
+{{rnm};k} for non-local potentials}\label{gdernl}
 
 We obtain the generalized derivative $(\bfr_{nm}(\bfk))_{;\bfk}$ for
 the case of a non-local potential in the Hamiltonian.
 We start from (see Eq.~\eqref{conhr})
-\begin{eqnarray}\label{na_hrdab}
+\begin{align}\label{na_hrdab}
 [r^{\rma},v^{\lda,\rmb}]= 
 \frac{i\hbar}{m_e}\gd_{ab}+
 \frac{1}{i\hbar}[r^{\rma},v^{\nl,\rmb}]
 \equiv
 \calt^{\rma\rmb}
 ,
-\end{eqnarray} 
+\end{align} 
 where the matrix elements of $\calt^{\rma\rmb}$ are calculated in
 Appendix \ref{calt}.
 Then,
-\begin{eqnarray}\label{na_hrdab2}
+\begin{align}\label{na_hrdab2}
 \bra{n\bfk}[r^{\rma},v^{\lda,\rmb}]\ket{m\bfk'}
 =
 \bra{n\bfk}\calt^{\rma\rmb}\ket{m\bfk'}
 =
 \calt^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
 ,
-\end{eqnarray}
+\end{align}
 so
-\begin{eqnarray}\label{na_hrdab3}
+\begin{align}\label{na_hrdab3}
 \bra{n\bfk}[r^{\rma}_i,v^{\lda,\rmb}]\ket{m\bfk'}
 +
 \bra{n\bfk}[r^{\rma}_e,v^{\lda,\rmb}]\ket{m\bfk'}
 =
 \calt^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
 .
-\end{eqnarray}
+\end{align}
 From Eq.~\eqref{conmri3} and ~\eqref{gendev}
-\begin{eqnarray}\label{na_rip}
+\begin{align}\label{na_rip}
 \bra{n\bfk}[r^{\rma}_i,v_\lda^{\rmb}]\ket{m\bfk'}
 =i\gd(\bfk-\bfk')(v_{nm}^{\lda,\rmb})_{;k^{\rma}}
-\end{eqnarray}
-\begin{eqnarray}\label{na_ripn}
+\end{align}
+\begin{align}\label{na_ripn}
 (v^{\lda,\rmb}_{nm})_{;k^{\rma}}=
 \nabla_{k^{\rma}}
 v^{\lda,\rmb}_{n m}(\bfk)
@@ -50,31 +50,31 @@ v^{\lda,\rmb}_{nm}(\bfk)
 \xi^{\rma}_{mm}(\bfk)
 \right)
 ,
-\end{eqnarray}
+\end{align}
 and
-\begin{eqnarray}\label{na_rep}
-\bra{n\bfk}[r^{\rma}_e,v^{\lda,\rmb}]\ket{m\bfk'}&=&
+\begin{align}\label{na_rep}
+\bra{n\bfk}[r^{\rma}_e,v^{\lda,\rmb}]\ket{m\bfk'}&=
 \sum_{\ell\bfk''}
 \bigg(
 \bra{n\bfk}r^{\rma}_e\ket{\ell\bfk''}\bra{\ell\bfk''}v^{\lda,\rmb}\ket{m\bfk'}
 \nonumber \\
-&&
+&
 -
 \bra{n\bfk}v^{\lda,\rmb}\ket{\ell\bfk''}\bra{\ell\bfk''}r^{\rma}_e\ket{m\bfk'}
 \bigg)
 \nonumber \\
-&=&
+&=
 \sum_{\ell\bfk''}
 \bigg(
 (1-\gd_{n\ell})\gd(\bfk-\bfk'')\xi^{\rma}_{n\ell}
 \gd(\bfk''-\bfk')v^{\lda,\rmb}_{\ell m}
 \nonumber \\
-&&-
+&-
 \gd(\bfk-\bfk'')v^{\lda,\rmb}_{n\ell}
 (1-\gd_{\ell m})\gd(\bfk''-\bfk')\xi^{\rma}_{\ell m}
 \bigg)
 \nonumber \\
-&=&
+&=
 \gd(\bfk-\bfk')
 \sum_{\ell}
 \bigg(
@@ -82,13 +82,13 @@ and
 \xi^{\rma}_{n\ell}
 v^{\lda,\rmb}_{\ell m}
 \nonumber \\
-&&-
+&-
 (1-\gd_{\ell m})
 v^{\lda,\rmb}_{n\ell}
 \xi^{\rma}_{\ell m}
 \bigg)
 \nonumber \\
-&=&
+&=
 \gd(\bfk-\bfk')
 \bigg(
 \sum_{\ell}
@@ -100,21 +100,21 @@ v^{\lda,\rmb}_{n\ell}
 \xi^{\rma}_{\ell m}
 \bigg)
 \nonumber \\
-&&+
+&+
 v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
 -
 \xi^{\rma}_{nn}
 )
 \bigg)
 .
-\end{eqnarray}
+\end{align}
 Using Eqs.~\eqref{na_rip} and ~\eqref{na_rep}
 into Eq.~\eqref{na_hrdab3} gives
-\begin{eqnarray}\label{na_rapb}
+\begin{align}\label{na_rapb}
 i\gd(\bfk-\bfk')
 \bigg(
 (v^{\lda,\rmb}_{nm})_{;k^{\rma}}
-&&
+&
 -i
 \sum_{\ell}
 \bigg(
@@ -125,7 +125,7 @@ v^{\lda,\rmb}_{n\ell}
 \xi^{\rma}_{\ell m}
 \bigg)
 \nonumber \\
-&&
+&
 -i
 v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
 -
@@ -135,10 +135,10 @@ v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
 =
 \calt^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
 ,
-\end{eqnarray}
+\end{align}
 then
-\begin{eqnarray}\label{na_rapb2}
-(v^{\lda,\rmb}_{nm})_{;k^{\rma}}&=&
+\begin{align}\label{na_rapb2}
+(v^{\lda,\rmb}_{nm})_{;k^{\rma}}&=
 -i
 \calt^{\rma\rmb}_{nm}
 +i
@@ -156,9 +156,9 @@ v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
 \xi^{\rma}_{nn}
 )
 ,
-\end{eqnarray}
+\end{align}
 and from Eq.~\eqref{na_ripn},
-\begin{eqnarray}\label{ncogno}
+\begin{align}\label{ncogno}
 \nabla_{k^{\rma}}v^{\lda,\rmb}_{nm}=
 -i\calt^{\rma\rmb}_{nm}
 +i
@@ -171,12 +171,12 @@ v^{\lda,\rmb}_{n\ell}
 \xi^{\rma}_{\ell m}
 \bigg)
 .
-\end{eqnarray}
+\end{align}
 Now, there are two cases. We use Eq.~\eqref{chon.98}.
 
 \noindent {\it Case} $n=m$
-\begin{eqnarray}\label{ntita}
-\nabla_{k^{\rma}}v^{\lda,\rmb}_{nn}&=&
+\begin{align}\label{ntita}
+\nabla_{k^{\rma}}v^{\lda,\rmb}_{nn}&=
 -i\calt^{\rma\rmb}_{nn}
 +i
 \sum_{\ell}
@@ -188,7 +188,7 @@ v^{\lda,\rmb}_{n\ell}
 \xi^{\rma}_{\ell n}
 \bigg)
 \nonumber\\
-&=&
+&=
 -i\calt^{\rma\rmb}_{nn}
 -
 \sum_{\ell\ne n}
@@ -202,7 +202,7 @@ r^\rmb_{n\ell}
 r^{\rma}_{\ell n}
 \bigg)
 \nonumber\\
-&=&
+&=
 -i\calt^{\rma\rmb}_{nn}
 -
 \sum_{\ell\ne n}
@@ -215,7 +215,7 @@ r^\rmb_{n\ell}
 r^{\rma}_{\ell n}
 \bigg)
 ,
-\end{eqnarray}
+\end{align}
 since the $\ell=n$ cancels out. 
 This
 would give the generalization for the inverse effective mass
@@ -226,8 +226,8 @@ $-i\calt^{\rma\rmb}_{nn}=\hbar/m_e\gd_{\rma\rmb}$
 thus obtaining the  familiar expression of $(m_n^{-1})_{ab}$.\cite{ashcroft_solid_1976}
 
 \noindent {\it Case} $n\ne m$
-\begin{eqnarray}\label{nmes}
-(v^{\lda,\rmb}_{nm})_{;k^{\rma}}&=&
+\begin{align}\label{nmes}
+(v^{\lda,\rmb}_{nm})_{;k^{\rma}}&=
 -i\calt^{\rma\rmb}_{nm}
 +i
 \sum_{\ell\ne m\ne n}
@@ -239,7 +239,7 @@ v^{\lda,\rmb}_{n\ell}
 \xi^{\rma}_{\ell m}
 \bigg)
 \nonumber\\
-&&+
+&+
 i
 \bigg(
 \xi^{\rma}_{nm}
@@ -249,7 +249,7 @@ v^{\lda,\rmb}_{nm}
 \xi^{\rma}_{mm}
 \bigg)
 \nonumber\\
-&&+
+&+
 i
 \bigg(
 \xi^{\rma}_{nn}
@@ -264,7 +264,7 @@ v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
 \xi^{\rma}_{nn}
 )
 \nonumber \\
-&=&
+&=
 -i\calt^{\rma\rmb}_{nm}
 -
 \sum_{\ell}
@@ -284,7 +284,7 @@ r^{\rma}_{\ell m}
 v^{\lda,\rmb}_{nn}
 )
 \nonumber \\
-&=&
+&=
 -i\calt^{\rma\rmb}_{nm}
 -
 \sum_{\ell}
@@ -301,14 +301,14 @@ r^{\rma}_{\ell m}
 r^{\rma}_{nm}
 \Delta^{\rmb}_{mn}
 ,
-\end{eqnarray} 
+\end{align} 
 where we use $\Delta^\rma_{mn}$ of Eq.~\eqref{eli.13}.
 Now, for $n \ne m$, Eqs.~\eqref{chon.98},
 ~\eqref{a_gradw2} and 
 ~\eqref{nmes} and the chain rule, give
-\begin{eqnarray}\label{na_rgendevn}
+\begin{align}\label{na_rgendevn}
 (r^{\rmb}_{nm})_{;k^{\rma}}
-&=&\left(\frac{v^{\lda,\rmb}_{nm}}{i\go^\lda_{nm}}\right)_{;k^{\rma}}
+&=\left(\frac{v^{\lda,\rmb}_{nm}}{i\go^\lda_{nm}}\right)_{;k^{\rma}}
 =
 \frac{1}
 {i\go^\lda_{nm}}
@@ -322,7 +322,7 @@ v^{\lda,\rmb}_{nm}
 \go^\lda_{nm}
 \right)_{;k^{\rma}}
 \nonumber \\
-&=&
+&=
 -i\calt^{\rma\rmb}_{nm}
 +
 \frac{i}{\go^\lda_{nm}}
@@ -341,7 +341,7 @@ r^{\rma}_{\ell m}
 \Delta^{\rmb}_{mn}}
 {\go^\lda_{nm}}
 \nonumber \\
-&&
+&
 -
 \frac{r^{\rmb}_{nm}}
 {\go^\lda_{nm}}
@@ -349,7 +349,7 @@ r^{\rma}_{\ell m}
 \go^\lda_{nm}
 \right)_{;k^{\rma}}
 \nonumber \\
-&=&
+&=
 -i\calt^{\rma\rmb}_{nm}
 +
 \frac{i}{\go^\lda_{nm}}
@@ -368,13 +368,13 @@ r^{\rma}_{\ell m}
 \Delta^{\rmb}_{mn}}
 {\go^\lda_{nm}}
 \nonumber \\
-&&
+&
 -
 \frac{r^{\rmb}_{nm}}
 {\go_{nm}}
 \frac{v^{\lda,\rma}_{nn}-v^{\lda,\rma}_{mm}}{m_e}
 \nonumber \\
-&=&
+&=
 -i\calt^{\rma\rmb}_{nm}
 +
 \frac{ 
@@ -397,7 +397,7 @@ r^{\rmb}_{n\ell}
 r^{\rma}_{\ell m}
 \bigg)
 ,
-\end{eqnarray} 
+\end{align} 
 where the $-i\calt_{nm}$ term, generalizes the usual expresion of
 $\bfr_{nm;\bfk}$ for local 
 Hamiltonians,\cite{aversaPRB95,nastosPRB05,cabellosPRB09,rashkeevPRB98}

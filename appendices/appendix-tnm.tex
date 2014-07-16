@@ -1,7 +1,7 @@
-\section{Matrix elements of $\calt^{\rma\rmb}_{nm}(\bfk)$}\label{calt}
+\section{Matrix elements of \texorpdfstring{$\calt^{\rma\rmb}_{nm}(\bfk)$}{tnm}}\label{calt}
 To calculate $\calt^{\rma\rmb}_{nm}$, first
 we need to calculate
-\begin{eqnarray}\label{3.1}
+\begin{align}\label{3.1}
 \call^{\rma\rmb}_{nm}(\bfk)=\frac{1}{i\hbar}
 \bra{n\bfk}
 [\hat r^{\rma},\hat v^{\nl,\rmb}]
@@ -12,20 +12,20 @@ we need to calculate
 \big[\hat r^{\rma},[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rmb]\big]
 \ket{m\bfk'}\gd(\bfk-\bfk')
 ,
-\end{eqnarray} 
+\end{align} 
 for which we need the following triple commutator
-\begin{eqnarray}\label{3.2}
+\begin{align}\label{3.2}
 \big[\hat r^{\rma},[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rmb]\big]
 =
 \big[\hat r^{\rmb},[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rma]\big]
 ,
-\end{eqnarray} 
+\end{align} 
 where the r.h.s follows form the Jacobi identity, since $[\hat
 r^\rma,\hat r^\rmb]=0$.
  We expand  the triple commutator as,
-\begin{eqnarray}\label{3.3}
+\begin{align}\label{3.3}
 \big[\hat r^{\rma},[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rmb]\big]
-&=&
+&=
 \big[\hat r^{\rma},
 \hat V^\nl(\hat\bfr,\hat\bfr')\hat r^\rmb
 \big]
@@ -34,7 +34,7 @@ r^\rma,\hat r^\rmb]=0$.
 \hat r^\rmb\hat V^\nl(\hat\bfr,\hat\bfr')
 \big]
 \nonumber\\
-&=&
+&=
 \big[\hat r^{\rma},
 \hat V^\nl(\hat\bfr,\hat\bfr')
 \big]\hat r^\rmb
@@ -44,7 +44,7 @@ r^\rma,\hat r^\rmb]=0$.
 \hat V^\nl(\hat\bfr,\hat\bfr')
 \big]
 \nonumber\\
-&=&
+&=
 \hat r^{\rma}
 \hat V^\nl(\hat\bfr,\hat\bfr')
 \hat r^\rmb
@@ -61,14 +61,14 @@ r^\rma,\hat r^\rmb]=0$.
 \hat V^\nl(\hat\bfr,\hat\bfr')
 \hat r^{\rma}
 .
-\end{eqnarray}
+\end{align}
 Then,
-\begin{eqnarray}\label{3.5}
+\begin{align}\label{3.5}
 \frac{1}{\hbar^2}
 \bra{n\bfk}
 \big[\hat r^{\rma},[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rmb]\big]
 \ket{m\bfk'}
-&=&
+&=
 \frac{1}{\hbar^2}
 \int d\bfr d\bfr'
 \bra{n\bfk}
@@ -77,7 +77,7 @@ Then,
 \ket{\bfr'}\bra{\bfr'}
 \ket{m\bfk'}\gd(\bfk-\bfk')
 \nonumber\\
-&=&
+&=
 \frac{1}{\hbar^2}
 \int d\bfr d\bfr'
 \psi^*_{n\bfk}(\bfr)
@@ -90,7 +90,7 @@ V^\nl(\bfr,\bfr')
 r'^\rma
 r'^{\rmb}
 \nonumber\\
-&-&
+&-
 r^\rmb
 r^{\rma}
 V^\nl(\bfr,\bfr')
@@ -102,7 +102,7 @@ r'^{\rma}
 \psi_{m\bfk}(\bfr')
 \gd(\bfk-\bfk')
 \nonumber\\
-&=&
+&=
 \frac{1}{\hbar^2\gO}
 \sum_{\bfK,\bfK'} 
 C^*_{n\bfk}(\bfK) 
@@ -119,7 +119,7 @@ V^\nl(\bfr,\bfr')
 r'^\rma
 r'^{\rmb}
 \nonumber\\
-&-&
+&-
 r^\rmb
 r^{\rma}
 V^\nl(\bfr,\bfr')
@@ -131,10 +131,10 @@ r'^{\rma}
  e^{i\bfK'\cdot\bfr'}
 \gd(\bfk-\bfk')
 .
-\end{eqnarray} 
+\end{align} 
 We use the following identity
-\begin{eqnarray}\label{3.4}
-&&
+\begin{align}\label{3.4}
+&
 \Big(
 \frac{\partial^2}{\partial K^\rma\partial K'^\rmb}
 +
@@ -150,7 +150,7 @@ d\bfr d\bfr'
 V^\nl(\bfr,\bfr')
 e^{i\bfK'\cdot\bfr'}
 \nonumber\\
-&=&
+&=
 \int d\bfr d\bfr'
  e^{-i\bfK\cdot\bfr}
 \Big( 
@@ -172,7 +172,7 @@ r'^{\rma}
 \Big)  
 e^{i\bfK'\cdot\bfr'}
 \nonumber\\
-&=&
+&=
 \Big(
 \frac{\partial^2}{\partial K^\rma\partial K'^\rmb}
 +
@@ -186,11 +186,11 @@ e^{i\bfK'\cdot\bfr'}
 V^\nl
 \ket{\bfK'} 
 ,
-\end{eqnarray}
+\end{align}
 to write
-\begin{eqnarray}\label{3.7}
+\begin{align}\label{3.7}
 \call^{\rma\rmb}_{nm}(\bfk)
-&=&
+&=
 \frac{1}{\hbar^2\gO}
 \sum_{\bfK,\bfK'} 
 C^*_{n\bfk}(\bfK) 
@@ -209,7 +209,7 @@ V^\nl
 \ket{\bfK'} 
 \nonumber\\
 .
-\end{eqnarray} 
+\end{align} 
 The double derivatives with respect to $\bfK$ and $\bfK'$ can be worked out as
 it is done in Appendix \ref{appvnl}  
 to obtain the matrix elements of
@@ -219,11 +219,11 @@ could have the value of the matrix elements of the triple commutator.\cite{valer
 
 With above results we can proceed to evaluate the matrix elements  $\calt_{nm}(\bfk)$.
 From Eq.~\eqref{na_hrdab}
-\begin{eqnarray}\label{na_hrdabn}
+\begin{align}\label{na_hrdabn}
 \bra{n\bfk}
 \calt^{\rma\rmb}
 \ket{m\bfk'}
-&=&
+&=
 \bra{n\bfk}
 \frac{i\hbar}{m_e}\gd_{ab}
 \ket{m\bfk'}
@@ -234,7 +234,7 @@ From Eq.~\eqref{na_hrdab}
 \nonumber\\
 \call^{\rma\rmb}_{nm}(\bfk)
 \gd(\bfk-\bfk')
-&=&
+&=
 \gd(\bfk-\bfk')
 \Big(
 \frac{i\hbar}{m_e}\gd_{ab}\gd_{nm}
@@ -243,10 +243,10 @@ From Eq.~\eqref{na_hrdab}
 \nonumber\\
 \calt^{\rma\rmb}_{nm}(\bfk)
 =\calt^{\rmb\rma}_{nm}(\bfk)
-&=&
+&=
 \frac{i\hbar}{m_e}\gd_{ab}\gd_{nm}
 +
 \call_{nm}^{\rma\rmb}(\bfk)
 ,
-\end{eqnarray}
+\end{align}
 which is an explicit expression that can be numerically calculated.
