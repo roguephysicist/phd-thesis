@@ -4,32 +4,32 @@ In this appendix, we derive the expressions for the matrix elements of
 the electron position operator $\bfr$. 
 The $r$ representation of the
 Bloch states is given by
-\begin{equation}\label{bloch}
+\begin{eqnarray}\label{bloch}
 \psi_{n\bfk}(\bfr)=\braket{\bfr}{n\bfk}=\sqrt{\frac{\gO}{8\pi^3}}
 e^{i\bfk \cdot \bfr}u_{n\bfk}(\bfr)
 ,
-\end{equation}
+\end{eqnarray}
 where
 $u_{n\bfk}(\bfr)=u_{n\bfk}(\bfr+\bfR)$ is cell periodic, and
-\begin{equation}\label{normal}
+\begin{eqnarray}\label{normal}
 \int_{\Omega}d^{3}r\, u_{n\mathbf{k}}^{*}(\mathbf{r})u_{m\mathbf{k}'}(\mathbf{r})=\delta_{nm}\delta_{\mathbf{\mathbf{k},\bfk'}}
 ,
-\end{equation}
+\end{eqnarray}
 with $\gO$ the volume of the unit cell.
 
 The key ingredient in the calculation are the matrix elements of the
 position operator $\bfr$, 
 so we start from the basic relation
-\begin{equation}\label{nbraket}
+\begin{eqnarray}\label{nbraket}
 \braket{n\mbf{k}}{m\mbf{k}'}
 =\gd_{nm}\gd(\mbf{k}-\mbf{k}'),
-\end{equation}
+\end{eqnarray}
 and take its derivative with respect to $\mbf{k}$ as follows.
 On one hand,
-\begin{equation}\label{ddk1}
+\begin{eqnarray}\label{ddk1}
 \nablak
 \braket{n\mbf{k}}{m\mbf{k}'}=\gd_{nm}\nablak\gd(\mbf{k}-\mbf{k}'),
-\end{equation}
+\end{eqnarray}
 on the other,
 \begin{eqnarray}\label{dkbraket}
 \nablak
@@ -49,14 +49,14 @@ on the other,
 \psi_{m\mbf{k}'}(\mbf{r}),
 \end{eqnarray}
 the derivative of the wavefunction is simply given by
-\begin{equation}\label{dpsi}
+\begin{eqnarray}\label{dpsi}
 \nablak
  \psi^*_{n\mbf{k}}(\mbf{r})
 =
 \sqrt{\frac{\gO}{8\pi^3}}
 \left(\nablak u^*_{n\mbf{k}}(\mbf{r})\right)e^{-i\mbf{k}\cdot\mbf{r}}
 -i\mbf{r}\psi^*_{n\mbf{k}}(\mbf{r}).
-\end{equation}
+\end{eqnarray}
 We take this back into Eq.~\eqref{dkbraket}, to obtain
 \begin{eqnarray}\label{dkbraket2}
 \nablak
@@ -86,10 +86,10 @@ u_{m\mbf{k}'}(\mbf{r})
 Restricting $\bfk$ and $\bfk'$ to the first Brillouin zone,
 we use the following result valid for any periodic
 function $f(\bfr)=f(\bfr+\bfR)$,
-\begin{equation}\label{periodic}
+\begin{eqnarray}\label{periodic}
 \int d^{3}r\, e^{i(\mathbf{q}-\mathbf{k})\cdot\mathbf{r}}f(\mathbf{r})=\frac{8\pi^{3}}{\Omega}\delta(\mathbf{q}-\mathbf{k})\int_{\Omega}d^{3}r\, f(\mathbf{r})
 ,
-\end{equation}
+\end{eqnarray}
 to
 finally write,\cite{blountSSP62}
 \begin{eqnarray}\label{dkbraket3}
@@ -105,11 +105,11 @@ u_{m\mbf{k}}(\mbf{r})
 \end{eqnarray}
 where $\gO$ is the volume of the unit cell.
 From
-\begin{equation}\label{dnm1}
+\begin{eqnarray}\label{dnm1}
 \int_\gO u_{m\bfk}u^*_{n\bfk}d\bfr=\gd_{nm},
-\end{equation}
+\end{eqnarray}
 we easily find that
-\begin{equation}\label{dnm2}
+\begin{eqnarray}\label{dnm2}
 \int_\gO d\bfr
 \left(\nablak u_{m\mbf{k}}(\mbf{r})\right)
 u^*_{n\bfk}(\bfr)=
@@ -118,20 +118,20 @@ d\bfr\,
 u_{m\bfk}(\bfr)
 \left(\nablak u^*_{n\mbf{k}}(\mbf{r})\right)
 .
-\end{equation}
+\end{eqnarray}
 Therefore, we define
-\begin{equation}\label{zeta}
+\begin{eqnarray}\label{zeta}
 \bfgxi_{nm}(\bfk) \equiv i\int_{\gO} d\bfr\, u^*_{n\bfk}(\bfr)\nabla_{\bfk}u_{m\bfk}(\bfr),
-\end{equation} 
+\end{eqnarray} 
 with $\partial/\partial\bfk=\nabla_{\bfk}$.
 Now, from Eqs.~\eqref{ddk1}, ~\eqref{dkbraket2},
 and ~\eqref{zeta},
  we have that the matrix elements of
 the position operator of the electron are given by
-\begin{equation}\label{erre}
+\begin{eqnarray}\label{erre}
 \bra{n\bfk}\hat\bfr\ket{m\bfk'} = \gd(\bfk-\bfk')\bfgxi_{nm}(\bfk)
 +i\gd_{nm}\nabla_\bfk\gd(\bfk-\bfk'),
-\end{equation}
+\end{eqnarray}
 Then, from Eq. (\ref{erre}), and writing $\hat\bfr=\hat\bfr_e+\hat\bfr_i$, with
 $\hat\bfr_e$ ($\hat\bfr_i$) the interband (intraband) part, we obtain that
 \begin{eqnarray}\label{rnmi}
@@ -261,13 +261,13 @@ i\gd(\bfk-\bfk')(\calo_{nm})_{;\bfk}
 .
 \end{eqnarray}
 Then,
-\begin{equation}\label{conmri3}
+\begin{eqnarray}\label{conmri3}
 \bra{n\bfk}[\hat\bfr_i,\hat\calo]\ket{m\bfk'}
 =i\gd(\bfk-\bfk')(\calo_{nm})_{;\bfk}
 ,
-\end{equation}   
+\end{eqnarray}   
 with
-\begin{equation}\label{gendev}
+\begin{eqnarray}\label{gendev}
 (\calo_{nm})_{;\bfk}=
 \nabla_\bfk
 \calo_{n m}(\bfk)
@@ -280,7 +280,7 @@ i
 \bfgxi_{mm}(\bfk)
 \right)
 ,
-\end{equation}  
+\end{eqnarray}  
 the generalized derivative of $\calo_{nm}$ with respect to $\bfk$.
 Note that the highly singular term $\nabla_\bfk\gd(\bfk-\bfk')$
 cancels in Eq.~\eqref{conmri2}, thus giving a well defined commutator

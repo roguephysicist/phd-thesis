@@ -10,11 +10,9 @@
 \usepackage{bm}
 %%%%*****************%%%% fine hyperef 
 \usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
-%%%%*****************%%%% \input{/Users/bms/util/definitions}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{showlabels}
-\usepackage{showkeys}
+%\usepackage{showkeys}
 
 
 \begin{document}
@@ -1219,10 +1217,10 @@ and
 \left(\go^S_{nm}\right)_{;k^{\rma}}
 =
 \left(\go^\lda_{nm}\right)_{;k^{\rma}}
-=
+= 
 v_{nn}^{\lda,\rma}-v_{mm}^{\lda,\rma}\equiv\gD_{nm}^{\rma}
 ,
-\end{equation}
+\end{eqnarray} 
 as shown in Appendix \ref{gwk}. 
 
 In order to calculate
@@ -1380,41 +1378,44 @@ Thus, we neglect it throughout the article, and take
 \end{eqnarray} 
 Finally,
 for $\calv^{\gS,\rma,\ell}_{nm;\bfk}$, among other quantities we also
-need the following term
+need the following term (Eq.~\eqref{ntita})
 \begin{eqnarray}\label{a.3c}
 (v^{\lda,\rma}_{nn})_{;k^\rmb}
 =
-\nabla_{k^{\rma}} 
+\nabla_{k^{\rma}}  
 v^{\lda,\rmb}_{nn}(\bfk)
 &=&
 -i\calt^{\rma\rmb}_{nn}
 -
 \sum_{\ell\ne n}
 \go^\lda_{\ell n}
-\bigg( 
-r^{\rma}_{n\ell} 
+\bigg(  
+r^{\rma}_{n\ell}  
 r^\rmb_{\ell n}
-+ 
-r^\rmb_{n\ell} 
++  
+r^\rmb_{n\ell}  
 r^{\rma}_{\ell n}
 \bigg)
 \nonumber\\
-&=&
+&\approx&
 \frac{\hbar}{m_e}\gd_{\rma\rmb}
 -
 \sum_{\ell\ne n}
 \go^\lda_{\ell n}
-\bigg( 
-r^{\rma}_{n\ell} 
+\bigg(  
+r^{\rma}_{n\ell}  
 r^\rmb_{\ell n}
-+ 
-r^\rmb_{n\ell} 
++  
+r^\rmb_{n\ell}  
 r^{\rma}_{\ell n}
 \bigg)
 ,
-\end{eqnarray} 
+\end{eqnarray}  
 where we also use Eq.~\eqref{tau.69}. Above
 is the standard effective-mas sum rule.\cite{ashcroft_solid_1976} 
+In Appendix \ref{code}, we list all the quantities that should be
+coded in order to calculate above expressions for $\bfgchi$.
+
 
 \section{Conclusions}\label{con}
 
@@ -1438,6 +1439,7 @@ length gauge for the coupling of the external electric field to the electron.
 \input{appendices/appendix-gen_der_r_nonlocal}%gdernl
 \input{appendices/appendix-tnm}%calt
 \input{appendices/appendix-vc}%calpcalc
+\input{appendices/appendix-code}%code
 %%%%
 %\input{appendices/appendix-div_free_exp_chi}
 %\input{appendices/appendix-dirac}

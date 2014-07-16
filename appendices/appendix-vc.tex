@@ -52,10 +52,10 @@ which we can express compactly as,
 \begin{eqnarray}\label{eni.4}
 \calc^\ell_{nm}(\bfk)=
 \sum_{\bfG,\bfG'} A^*_{n\bfk}(\bfG')  A_{m\bfk}(\bfG)
-\gd_{\bfG_\parallel \bfG'_\parallel}
+\gd_{\bfG_\parallel \bfG'_\parallel} 
 f_\ell(G_\perp-G'_\perp)
 .
-\end{eqnarray} 
+\end{eqnarray}  
 The double summation over the $\bfG$ vectors can be efficiently done by
 creating a pointer array to identify all the plane-wave coefficients
 associated with the same $G_\parallel$. We take $z_\ell$
@@ -64,13 +64,16 @@ belongs to layer $\ell$, and thus above equations gives the $\ell$-th
  atomic-layer
 contribution to the optical response.\cite{mendozaPRB06} 
 
-If $\calc^\ell(z)=1$ from Eq.~\eqref{eni.2} we recover the well known
+If $\calc^\ell(z)=1$ from Eqs.~\eqref{eni.2} and \eqref{eni.4}
+we recover the well known
 result
 \begin{eqnarray}\label{eni.21}
-v_{nm}(\bfk)=
+  v_{nm}(\bfk)&=&
 \frac{\hbar}{m_e}
 \sum_{\bfG} A^*_{n\bfk}(\bfG)  A_{m\bfk}(\bfG)
 (\bfk+\bfG)
+\nonumber\\
+\calc^\ell_{nm}&=&\gd_{nm}
 ,
 \end{eqnarray}  
 since for this case $f_\ell(g)=\gd_{g0}$.
