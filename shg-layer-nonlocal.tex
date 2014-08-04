@@ -12,7 +12,7 @@
 \usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{showlabels}
-\usepackage{showkeys}
+%\usepackage{showkeys}
 
 
 \begin{document}
@@ -22,23 +22,21 @@
 \affiliation{Centro de Investigaciones en Optica, Le\'on, Guanajuato, M\'exico,
  bms@cio.mx}
 
- \begin{abstract}
- A theoretical review of surface second harmonic generation from
- semiconductor surfaces based on the longitudinal gauge is
- presented. The so called, layer-by-layer analysis is carefully
- presented in order to show how a surface calculation of second
- harmonic generation (SHG) can readily be carried out. The nonlinear
- susceptibility tensor $\boldsymbol{\chi}$ is split into two terms,
- one that is related to inter-band one-electron transitions, and the
- other is related to intra-band one-electron transitions. 
+\begin{abstract}
+We present a theoretical review of surface second harmonic generation (SHG) 
+from semiconductor surfaces based on the longitudinal gauge. This 
+layer-by-layer analysis is carefully presented in order to show how a 
+surface SHG calculation can be readily evaluated. The nonlinear susceptibility 
+tensor $\boldsymbol{\chi}$ is split into two terms relating to inter-band 
+and intra-band one-electron transitions. 
 
-% % The equivalence of this formulation to the transverse gauge
-% % approach is shown and the possibility of confirming its numerical
-% % accuracy is discussed. Also, the calculation of the surface second
-% % harmonic radiated intensity $R$ within the three-layer-model is
-% % derived. With $\boldsymbol{\chi}$ and $R$ one has a complete
-% % description of this fascinating optical phenomena. 
-% 
+% The equivalence of this formulation to the transverse gauge
+% approach is shown and the possibility of confirming its numerical
+% accuracy is discussed. Also, the calculation of the surface second
+% harmonic radiated intensity $R$ within the three-layer-model is
+% derived. With $\boldsymbol{\chi}$ and $R$ one has a complete
+% description of this fascinating optical phenomena. 
+
 \end{abstract}  
 
 \maketitle
@@ -46,56 +44,59 @@
 
 \section{Introduction}\label{intro}
 
-Second harmonic generation (SHG) has become a powerful spectroscopic
-tool to study optical properties of surfaces and interfaces since it
-has the advantage of being surface sensitive. For centrosymmetric
-materials inversion symmetry forbids, within the dipole approximation,
-SHG from the bulk, but it is allowed at the surface, where the
-inversion symmetry is broken. Therefore, SHG should necessarily come
-from a localized surface region. SHG allows to study the structural
-atomic arrangement and phase transitions of clean and adsorbate
-covered surfaces, and since it is an optical probe, it can be used out
-of UHV conditions, and is non-invasive and non-destructive. On the
-experimental side, the new tunable high intensity laser systems have
-made SHG spectroscopy readily accessible and applicable to a wide
-range of
-systems.\cite{downer_optical_2001},\cite{lupke_characterization_1999}
-However, the theoretical development of the field is still an ongoing
-subject of research. Some recent advances for the case of
-semiconducting and metallic systems have appeared in the literature,
-where the confrontation of theoretical 
-models with experiment has yield correct physical interpretations for
-the SHG
-spectra.\cite{downer_optical_2001,mendoza_ab_2001,lim_optical_2000,gavrilenko_optical_2000,mendoza_visible-infrared_1999,mendoza_microscopic_1998,mendoza_local-field_1996,mendoza_polarizable-bond_1997,guyot-sionnest_electronic_1990} 
+Second harmonic generation (SHG) is a powerful spectroscopic tool for 
+studying the optical properties of surfaces and interfaces since it has 
+the advantage of being surface sensitive. Within the dipole approximation, 
+inversion symmetry forbids SHG from the bulk of controsymmetric materials. 
+SHG is allowed at the surface of these materials where the inversion symmetry 
+is broken and should necessarily come from the localized surface region. 
+SHG allows the study of the structural atomic arrangement and phase 
+transitions of clean and adsorbate covered surfaces. Since it is also an 
+optical probe it can be used out of UHV conditions and is non-invasive 
+and non-destructive. Experimentally, new tunable high intensity laser systems 
+have made SHG spectroscopy readily accessible and applicable to a wide range 
+of systems.\cite{downer_optical_2001,lupke_characterization_1999}
 
-In a previous article,\cite{mendoza_epioptics_2001} we reviewed some
-of the recent results in the study of SHG using the transverse gauge
-for the coupling between the electromagnetic field and the
-electron. In particular, we 
-showed a method to systematically investigate the different
-contributions to the observed peaks in
-SHG.\cite{arzate_microscopic_2001} The approach consisted in the
-separation of the different contributions tothe nonlinear
-susceptibility according to 1$\omega$ and 2$\omega$ transitions and
-tothe  surface or bulk character of the states among which the
-transitions take place. To complement above results, on this article
-we review the calculation of the nonlinear susceptibility using the
-longitudinal gauge, and show that it is posible to clearly obtain the
-``layer-by-layer'' contribution for a slab scheme, used for a surface
-calculation.
+However, theoretical development of the field is still an ongoing 
+subject of research. Some recent advances for the cases of semiconducting 
+and metallic systems have appeared in the literature, where the use of 
+theoretical models with experimental results have yielded correct 
+physical interpretations for observed SHG spectra.
+\cite{
+downer_optical_2001,
+mendoza_ab_2001,
+lim_optical_2000,
+gavrilenko_optical_2000,
+mendoza_visible-infrared_1999,
+mendoza_microscopic_1998,
+mendoza_local-field_1996,
+mendoza_polarizable-bond_1997,
+guyotPRB90} 
+
+In a previous article\cite{mendoza_epioptics_2001} we reviewed some 
+of the recent results in the study of SHG using the transverse gauge 
+for the coupling between the electromagnetic field and the electron. 
+In particular, we demonstrated a method to systematically analyze the 
+different contributions to the observed SHG peaks.\cite{arzatePRB01} 
+This approach consists of separating the different contributions to 
+the nonlinear susceptibility according to 1$\omega$ and 2$\omega$ 
+transitions, and the surface or bulk nature of the states among 
+which the transitions take place. 
+
+To compliment those results, in this article we review the calculation 
+of the nonlinear susceptibility using the longitudinal gauge. We show 
+that it is posible to clearly obtain the ``layer-by-layer'' contribution 
+for a slab scheme used for surface calculations.
 
 \section{Longitudinal Gauge}\label{longi}
 
-To calculate the optical properties of a given system
-within the longitudinal gauge, we follow the article by
-Aversa and Sipe.\cite{aversaPRB95} A more recent derivation can also be
-found in
-Ref. \cite{sipe_second-order_2000} and \cite{lambrecht_band_2000}.
- Assuming the long-wavelength approximation,
-which implies a position independent electric field, 
+We follow the article by Aversa and Sipe\cite{aversaPRB95} to calculate 
+the optical properties of a given system within the longitudinal gauge. 
+More recent derivations\cite{sipe_second-order_2000,lambrecht_band_2000} 
+can also be found. Assuming the long-wavelength approximation which implies 
+a position independent electric field, 
 $\bfE(t)$,  
-the hamiltonian in the so called length gauge approximation
-is given by
+the Hamiltonian in the length gauge approximation is given by
 \begin{equation}\label{ache}
 \hat{H}=\hat{H}^S_0-e \hat\bfr \cdot \bfE,
 \end{equation}
@@ -103,9 +104,9 @@ with
 \begin{align}\label{ache.1}
 \hat H^S_0=\hat H^\lda_0
  + \hat S(\bfr,\bfp)
-,
+.
 \end{align} 
-and
+The LDA Hamiltonian can be expressed as follows,
 \begin{align}\label{ache.2}
 \hat H^\lda_0&=\frac{\hat p^2}{2m_e}  + \hat V^\ps(\bfr,\bfr')
 \nonumber\\
@@ -113,9 +114,8 @@ and
 &=\hat V^l(\bfr) + \hat V^\nl(\bfr,\bfr')
 ,
 \end{align}  
-the LDA hamiltonian, 
 where $\hat V^l(\bfr)$ and $\hat V^\nl(\bfr,\bfr')$ are the local and
-the non-local part of the  
+the non-local parts of the  
 crystal $\hat V^\ps(\bfr,\bfr')$ pseudopotential.
 The Schr\"odinger equation reads
 \begin{align}\label{ache.4} 
@@ -126,25 +126,17 @@ The Schr\"odinger equation reads
 =E_i\psi_{n\bfk}(\bfr)
 ,
 \end{align} 
-wit
+where
 $\psi_{n\bfk}(\bfr)=\braket{\bfr}{n\bfk}=\sqrt{\gO/8\pi^3}e^{i\bfk\cdot\bfr}u_{n\bfk}(\bfr)$,
- the real space
-representation of the Bloch state $\ket{n\bfk}$
-labeled
-by  its
-band index $n$ and crystal momentum $\bfk$, and
-$u_{n\bfk}(\bfr)$ are cell periodic. 
-Also, 
-$m_e$ is the 
-bare mass of the 
-electron and
-$\gO$ is the unit cell volume. 
-The nonlocal scissors operator is given by 
+are the real space representations of the Bloch states $\ket{n\bfk}$ labelled
+by the band index $n$. The crystal momentum $\bfk$ and $u_{n\bfk}(\bfr)$
+are cell periodic. $m_e$ is the bare mass of the electron and $\gO$ is the 
+unit cell volume. The nonlocal scissors operator is given by 
 \begin{equation}\label{chon.0}
 S(\bfr,\bfp)=\hbar\gD\sum_n\int d^3k'(1-f_n) \ket{n\bfk'}\bra{n\bfk'}
 ,
 \end{equation}
-with $f_n$ the Fermi-Dirac factor.
+where $f_n$ is the Fermi-Dirac factor.
 We have that
 \begin{align}\label{chon.1}  
 H^\lda_0\ket{n\bfk}&=\hbar\go^\lda_n(\bfk)\ket{n\bfk}
@@ -157,13 +149,13 @@ where
 \hbar\go^S_n(\bfk)=\hbar\go^\lda_n(\bfk)+\gD(1-f_n)
 ,
 \end{align}
- is the $\bfk$-independent scissored
-energy, with $\gD=E_g-E_g^\lda$, where $E_g$ could be the experimental
-or GW band gap. In above we used the fact that 
-$\ket{n\bfk}^\lda\approx\ket{n\bfk}^S$, and thus there is no need to label
-the Bloch states with LDA or S, superscripts. 
-The matrix elements of $\bfr$ are split between its {\it interband}
-part $\bfr_i$ and {\it interband} part $\bfr_e$, where 
+is the $\bfk$-independent scissored
+energy. Here, $\gD=E_g-E_g^\lda$ where $E_g$ could be the experimental
+or GW band gap. We used the fact that 
+$\ket{n\bfk}^\lda\approx\ket{n\bfk}^S$, thus negating the need to label
+the Bloch states with the LDA or S superscripts. 
+The matrix elements of $\bfr$ are split between the {\it intraband} 
+($\bfr_i$) and {\it interband} ($\bfr_e$) parts , where 
 $\bfr=\bfr_i+\bfr_e$ and\cite{adamsJCP53,blountSSP62,aversaPRB95}
 \begin{align}\label{rnminn}
 \bra{n\bfk}\hat\bfr_i\ket{m\bfk'} &= \gd_{nm}\left[\gd(\bfk-\bfk')\bfgxi_{nn}(\bfk)
@@ -173,7 +165,7 @@ $\bfr=\bfr_i+\bfr_e$ and\cite{adamsJCP53,blountSSP62,aversaPRB95}
 ,
 \label{rnmenn}
 \end{align}
-where
+and
 \begin{equation}\label{zetann}
 \bfgxi_{nm}(\bfk) \equiv i\frac{(2\pi)^3}{\gO}\int_{\gO} d\bfr\, u^*_{n\bfk}(\bfr)\nabla_{\bfk}u_{m\bfk}(\bfr).
 \end{equation}
@@ -209,7 +201,7 @@ thus defining $\go^S_{nm\bfk}=\go^S_n(\bfk)-\go^S_m(\bfk)$ we get
 \end{align} 
 which can be identified as 
 $\bfr_{nm}=(1-\gd_{nm})\bfgxi_{nm}\to \bfr_{e,nm}$.
-When  $\bfr_i$ appears in
+When $\bfr_i$ appears in
 commutators we use\cite{aversaPRB95} 
 \begin{equation}\label{conmri3n}
 \bra{n\bfk}[\hat\bfr_i,\hat\calo]\ket{m\bfk'}
@@ -234,9 +226,9 @@ i
 where $;\bfk$ denotes the generalized derivative (see Appendix \ref{reri}). 
 
 As can be seen from Eq.~\eqref{ache.1} and \eqref{ache.2},
-both $\hat S$ and $\hat V^\nl$ are nonlocal potentials, which contribution 
+both $\hat S$ and $\hat V^\nl$ are nonlocal potentials. Their contribution 
 in the calculation of the optical response has to be taken with care.
-Then, we proceed as follows. From Eqs.~\eqref{vop} and \eqref{ache.1} we find
+We proceed as follows; from Eqs.~\eqref{vop} and \eqref{ache.1} we find
 \begin{align}\label{vop2}
 \hat\bfv^\gS&=
 \frac{\hat\bfp}{m_e}
@@ -315,13 +307,12 @@ Eq.~\eqref{pmnrmn} gives
 =
 \frac{\bfv^\lda_{nm}(\bfk)}{i\go^\lda_{nm}(\bfk)}
 \quad\quad n\ne m
-,
+.
 \end{align}
-thus,
-the matrix elements
+The matrix elements
 of $\bfr_e$ are the same whether we use the LDA or the scissored
-Hamiltonian, and then there is no need to label them with either LDA
-or S. Thus,
+Hamiltonian and there is no need to label them with either LDA
+or S superscripts. Thus,
 we can write
 \begin{equation}\label{chon.98}
 \bfr_{e,nm}\to
@@ -331,16 +322,14 @@ we can write
 \end{equation}   
 which gives the interband matrix elements of the position operator
 in terms of the matrix elements of $\bfv^\lda$. 
-These matrix elements do include the matrix elements of
-$\bfv^\nl_{nm}(\bfk)$ that
-for fully  separable nonlocal pseudopotentials in the 
+These matrix elements include the matrix elements of
+$\bfv^\nl_{nm}(\bfk)$ which can be readily calculated\cite{francesco} for 
+fully separable nonlocal pseudopotentials in the 
 Kleinman-Bylander 
-form,\cite{motta_implementation_2010,kleinman_efficacious_1982,adolph_nonlocality_1996}
-can be readily calculated.\cite{francesco}
+form.\cite{motta_implementation_2010,kleinman_efficacious_1982,adolph_nonlocality_1996}
+
 In Appendix \ref{appvnl} we outline how this  
-can be done. 
-
-
+can be accomplished. 
 
 \section{Time-dependent Perturbation Theory}\label{tdpt}
 
