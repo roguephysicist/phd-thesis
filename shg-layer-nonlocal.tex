@@ -333,21 +333,20 @@ can be accomplished.
 
 \section{Time-dependent Perturbation Theory}\label{tdpt}
 
-We use, in the independent particle approximation, the electron density
-operator $\hat\gr$ to obtain, the expectation value of any observable
+In the independent particle approximation, we use the electron density
+operator $\hat\gr$ to obtain the expectation value of any observable
 $\calo$ as
 \begin{equation}\label{traza}
-  \calo=\mathrm{Tr}(\hat\calo\hat\rho)=\mathrm{Tr}(\hat\rho\hat\calo),
+\calo=\mathrm{Tr}(\hat\calo\hat\rho)=\mathrm{Tr}(\hat\rho\hat\calo),
 \end{equation}
-where $\mathrm{Tr}$ is the trace, that is
-invariant under cyclic permutations.
-The dynamical equation of motion for $\gr$ is given by
+where $\mathrm{Tr}$ is the trace and is invariant under cyclic permutations.
+The dynamic equation of motion for $\gr$ is given by
 \begin{equation}\label{eqrho}
 i\hbar \frac{d\hat\gr}{dt}=[\hat{H},\hat\gr]
 ,
 \end{equation}
-where it is more convenient to work in the interaction picture, for
-which we transform all the operators according to 
+where it is more convenient to work in the interaction picture. We transform 
+all operators according to 
 \begin{equation}\label{ip}
 \hat{\calo}_I=\hat{U}\hat{\calo}\hat{U}^\dagger,
 \end{equation}
@@ -355,7 +354,7 @@ where
 \begin{equation}\label{ou}
 \hat{U}=e^{i\hat{H}_0t/\hbar},
 \end{equation}
-is the unitary operator that take us to the interaction picture.
+is the unitary operator that shifts us to the interaction picture.
 Note that $\hat\calo_I$ depends on time even if $\hat\calo$ does not.
 Then, we transform Eq.~\eqref{eqrho} into
 \begin{equation}\label{intrho}
@@ -367,7 +366,7 @@ that leads to
 +
 \frac{ie}{\hbar}\int_{-\infty}^t dt'[\hat\bfr_I(t')\cdot\bfE(t'),\hat\gr_I(t')].
 \end{equation}
-We assume that the interaction is switched-on adiabatically, and
+We assume that the interaction is switched-on adiabatically and
 choose a time-periodic perturbing field, to write
 \begin{equation}\label{efield}
 \bfE(t)=\bfE e^{-i\go t}e^{\eta t}=\bfE e^{-i\got t}
@@ -379,11 +378,11 @@ with
 ,
 \end{equation} 
 where $\eta > 0$ assures
-that at $t=-\infty$ the interaction is zero and has its full strength, $\bfE$,
-at $t=0$. After the required time integrals are done, one takes
+that at $t=-\infty$ the interaction is zero and has its full strength $\bfE$ 
+at $t=0$. After computing the required time integrals one takes
 $\eta\to 0$. 
-Also, $\hat\gr_I(t=-\infty)$ should be independent of time, and thus 
-$[\hat{H},\hat\rho]_{t=-\infty}=0$, which implies that 
+Also, $\hat\gr_I(t=-\infty)$ should be time independent and thus 
+$[\hat{H},\hat\rho]_{t=-\infty}=0$, This implies that 
 $\hat\gr_I(t=-\infty)=\hat\rho(t=-\infty)\equiv\hat\rho_0$,
 where $\hat\rho_0$ is
 the density matrix of the unperturbed ground state,
@@ -392,7 +391,7 @@ such that
 \bra{n\bfk}\hat\gr_0\ket{m\bfk'}=f_n(\hbar\go^S_n(\bfk))\gd_{nm}\gd(\bfk-\bfk')
 ,
 \end{equation}
-where $f_n(\hbar\go^S_n(\bfk))=f_{n\bfk}$ is the Fermi-Dirac distribution function.
+with $f_n(\hbar\go^S_n(\bfk))=f_{n\bfk}$ as the Fermi-Dirac distribution function.
 
 We solve Eq.~\eqref{intrho2} using the standard iterative
 solution, for which we write
@@ -435,7 +434,7 @@ with
 .
 \end{equation}
 
-Now we work out the commutator of Eq.~\eqref{rtilde}. Then,
+We now work out the commutator of Eq.~\eqref{rtilde}. Then,
 \begin{align}\label{conmu1}
 \bra{n\bfk}
 [\hat\bfr_I(t),\hat\gr^{(N)}_I(t)]
@@ -505,17 +504,17 @@ We calculate the interband term first, so using Eq.~\eqref{chon.98} we obtain
 \nonumber\\
 &\equiv
 \bfR^{(N)}_e(\bfk;t)
-.
+,
 \end{align}
 
- Now, from Eq.~\eqref{conmri3n} we simply obtain,
+and from Eq.~\eqref{conmri3n},
 \begin{equation}\label{conmri4}
 \bra{n\bfk}[\hat\bfr_i,\hat\rho^{(N)}(t)]\ket{m\bfk'}
 =i \gd(\bfk-\bfk') (\rho^{(N)}_{nm}(t))_{;\bfk}
 \equiv \gd(\bfk-\bfk')\bfR_i^{(N)}(\bfk;t)
 .
 \end{equation}
-Then Eq.~\eqref{rtilde} becomes,
+Then Eq.~\eqref{rtilde} becomes
 \begin{equation}\label{rtilde2}
 \gr^{(N+1)}_{I,nm}(\bfk;t)
 =\frac{ie}{\hbar}\int_{-\infty}^t dt'
@@ -523,10 +522,9 @@ e^{i(\go^S_{nm\bfk}-\got)t'}
 \left[R_e^{\rmb(N)}(\bfk;t')+R_i^{\rmb(N)}(\bfk;t')\right]E^{\rmb}
 ,
 \end{equation}
- where, the roman superindices
+where the roman superindices
 $\rma,\rmb,\rmc$ denote Cartesian components that are summed over if repeated.
-We start with the linear response, 
- then from Eq.~\eqref{nrhon} and ~\eqref{conmu2},
+Starting from the linear response and proceeding from Eq.~\eqref{nrhon} and ~\eqref{conmu2},
 \begin{align}\label{R0e}
 R_e^{\rmb(0)}(\bfk;t)
 &=
@@ -556,17 +554,16 @@ r^{\rmb}_{nm}(\bfk)
 \end{align}
 where $f_{mn\bfk}=f_{m\bfk}-f_{n\bfk}$.
 From now on,
-  it should be clear that the matrix elements of $\bfr_{nm}$ imply
- $n\neq m$.
-Also, from Eq.~\eqref{conmri4} and Eq.~\eqref{gendevnn}
+it should be clear that the matrix elements of $\bfr_{nm}$ imply
+$n\neq m$.
+We also have from Eq.~\eqref{conmri4} and Eq.~\eqref{gendevnn} that
 \begin{equation}\label{R0i}
 R_i^{\rmb(0)}(\bfk)=i(\rho^{(0)}_{nm})_{;k^{\rmb}}=i\gd_{nm}(f_{n\bfk})_{;k^{\rmb}}=i\gd_{nm}\nabla_{k^{\rmb}} f_{n\bfk}
 .
 \end{equation}
 For a semiconductor at $T=0$, $f_{n\bfk}$ is one if the state
-$\ket{n\bfk}$ is a valence state and zero if it is a conduction state,
-thus $\nabla_\bfk f_{n\bfk}=0$ and $\bfR_i^{(0)}=0$. 
-Therefore
+$\ket{n\bfk}$ is a valence state and zero if it is a conduction state; 
+thus $\nabla_\bfk f_{n\bfk}=0$ and $\bfR_i^{(0)}=0$ and
 the linear response has no contribution from
 intraband transitions.
  Then,
@@ -700,12 +697,12 @@ with
 \bigg] 
 E^{\rmb}_{\go_\ga}E_{\go_\gb}^{\rmc}
 \end{align} 
-where $\got_3=\got_\ga+\got_\gb$ and $\bfE_{\go_i}$ is the amplitude of the perturbing
-field with $\go_i$ for $i=\ga,\gb$, where $B_{\ell
-  m}^{\rma}(\bfk,\go_\ga)$ are given by 
-Eq.~\eqref{rho1}. We remark that $\bfr_{nm}(\bfk)$ for $n\ne m$ are
-the same whether calculated with the LDA or the scissored Hamiltonian,
-and we chose the former in this article.
+where $\got_3=\got_\ga+\got_\gb$ and $\bfE_{\go_i}$ is the amplitude of the 
+perturbing field with $\go_i$ for $i=\ga,\gb$, and 
+$B_{\ell m}^{\rma}(\bfk,\go_\ga)$ are given by Eq.~\eqref{rho1}. 
+We remark that $\bfr_{nm}(\bfk)$ for $n\ne m$ are
+the same whether calculated with the LDA or the scissored Hamiltonian. 
+We chose the former in this article.
 
 \section{Layered Current Density}\label{cd}
 
@@ -714,42 +711,37 @@ density of a given layer in the unit cell of the system.
 The approach we use to study the surface of a semi-infinite
 semiconductor crystal is as follows. Instead of using a
 semi-infinite system, we replace it by a slab (see Fig.~\ref{fslab}).
-The slab consists of
-two surfaces, say the front and the back surface, and in between these
-two surfaces the bulk of the system. 
-In
-general the surface of a crystal reconstructs as the atoms
+The slab consists of a front and back surface, and in between these
+two surfaces is the bulk of the system. 
+In general the surface of a crystal reconstructs as the atoms
 move to find equilibrium positions. This is due to the fact that
 the otherwise
-balanced forces are disrupted when the surface atoms do not find any
-more their bulk partner atoms, since these, by definition, are absent
-above (below) the front (back) surface of the slab. 
-Therefore, to take the reconstruction into account, by surface we really mean
-the true surface that consists of the very first relaxed layer of atoms, and
-some of the sub-true-surface relaxed atomic layers.
+balanced forces are disrupted when the surface atoms do not find their 
+partner atoms that are now absent at the surface of the slab. 
+
+To take the reconstruction into account, we take ``surface'' to mean
+the true surface of the first relaxed layer of atoms, and
+some of the relaxed atomic sub-layers adjacent to it.
 Since the front and the back
-surfaces of the slab are usually identical, the total slab is
-centrosymmetric. This fact (see Sec. \ref{cd}), will imply $\chi^{slab}_{\rma\rmb\rmc}=0$, and thus we must
-device a way in which this artifact of a centrosymmetric slab is
-bypassed in order to have a finite $\chi^s_{\rma\rmb\rmc}$ representative of the
+surfaces of the slab are usually identical the total slab is
+centrosymmetric. This (see Sec. \ref{cd}) implies that 
+$\chi^{slab}_{\rma\rmb\rmc}=0$, and thus we must
+find a way to bypass this characteristic of a centrosymmetric slab 
+in order to have a finite $\chi^s_{\rma\rmb\rmc}$ representative of the
 surface. Even if the front and back surfaces of the slab 
-are different, thus breaking the centrosymmetry and therefore giving an
-overall $\chi^{slab}_{\rma\rmb\rmc}\ne 0$, we
+are different, breaking the centrosymmetry and therefore giving an
+overall $\chi^{slab}_{\rma\rmb\rmc}\ne 0$, we still
 need a procedure to extract the front surface $\chi^f_{\rma\rmb\rmc}$
-and
-the back surface $\chi^b_{\rma\rmb\rmc}$ from the slab non-linear
-susceptibility $\chi^{slab}_{\rma\rmb\rmc}$.
+and the back surface $\chi^b_{\rma\rmb\rmc}$ from the non-linear
+susceptibility $\chi^{slab}_{\rma\rmb\rmc}$ of the entire slab.
 
 A convenient way to accomplish the separation of the SH signal of
-either surface is to introduce
-the so called
-``cut function'', $\calc(z)$, which is usually taken to be unity over one half
-of the slab, and zero over the other half.
-In this case, $\calc(z)$ will give the contribution of the side of the
-slab for which $\calc(z)=1$. However, we can generalize this simple choice
-for $\calc(z)$, 
-by a top-hat cut function
-$\calc^\ell(z)$, that selects a given layer,
+either surface is to introduce a ``cut function'', $\calc(z)$, which is 
+usually taken to be unity over one half of the slab and zero over 
+the other half. In this case $\calc(z)$ will give the contribution of the 
+side of the slab for which $\calc(z)=1$. We can generalize this 
+simple choice for $\calc(z)$ by a top-hat cut function
+$\calc^\ell(z)$ that selects a given layer,
 \begin{equation}
 \label{sz}
 \calc^\ell(z)=\Theta(z-z_\ell+\Delta_\ell^{\rmb})
@@ -757,22 +749,18 @@ $\calc^\ell(z)$, that selects a given layer,
 \end{equation}
 where $\Theta$ is the Heaviside function. Here, $\Delta_\ell^{f/b}$
 is the distance that the $\ell$-th layer extends towards the front
-$(f)$ or back $(b)$ from its $z_\ell$ position.  Thus
-$\Delta_\ell^f+\Delta_\ell^b$ is the thickness of layer $\ell$
+$(f)$ or back $(b)$ from its $z_\ell$ position. 
+$\Delta_\ell^f+\Delta_\ell^b$ is the thickness of layer $\ell$ 
 (see Fig.~\ref{fslab}).
 \begin{figure}[b]
 \centering
 %\includegraphics[height=5cm,width=7cm]{slab}
 \includegraphics[scale=.7]{images/slab}
-\caption{
-We show a sketch of the slab, where the small
-circles represent the atoms. See the text for the details.
-}
-\label{fslab}
+\caption{A sketch of a slab where the circles represent atoms.\label{fslab}}
 \end{figure}
 
 Now, we show how this ``cut function'' $\calc^\ell(z)$ is introduced in
-the calculation of $\chi_{\rma\rmb\rmc}$.
+the calculation of $\chi_{\rma\rmb\rmc}$. 
 The microscopic current density is given by
 \begin{equation}\label{jmic}
 \bfj(\bfr,t)=\mathrm{Tr}(\hat\bfj(\bfr)\hat\rho(t)),
@@ -833,17 +821,16 @@ and we have used the fact that the matrix elements between states $\ket{n\bfk}$
 are diagonal in $\bfk$, i.e. proportional to $\gd(\bfk-\bfk')$.
 
 Integrating the microscopic current $\mbf{j}(\mbf{r},t)$ over
-the entire slab gives the total macroscopic current density, 
- however, if we want the
-contribution from only one region of the unit cell towards the total
-current, we can integrate $\mathbf{j}({\mathbf r},t)$ over the
-desired region. The contribution to the current density from the
+the entire slab gives the total macroscopic current density. 
+If we want the contribution from only one region of the unit cell 
+towards the total current, we can integrate $\mathbf{j}({\mathbf r},t)$ 
+over the desired region. The contribution to the current density from the
 $\ell$-th layer of the slab is given by
 \begin{equation}\label{jsz}
 \frac{1}{\Omega}\int d^3r\, \calc^\ell(z)\, \mathbf{j}(\mathbf{r},t)
  \equiv \mathbf{J}^{\ell}(t),
 \end{equation}
-where $\mathbf{J}^{\ell}(t)$ is the microscopic current  in the
+where $\mathbf{J}^{\ell}(t)$ is the microscopic current in the
 $\ell$-th layer.
 Therefore we define
 \begin{equation}\label{vcal}
@@ -859,12 +846,10 @@ J_a^{(N,\ell)}(t)=\frac{e}{\gO}
 \mathcal{V}^{\gS,a,\ell}_{mn}(\mathbf{k})
 \rho^{(N)}_{nm}(\bfk;t),
 \end{equation}
-as the induced macroscopic current of the  $\ell$-th layer,
- to order $N$-th in the external
-perturbation.
- The matrix elements of the
+as the induced macroscopic current of the $\ell$-th layer, to order $N$ 
+in the external perturbation. The matrix elements of the 
 density operator for $N=1,2$ are given by Eqs.~\eqref{rho1} and
-~\eqref{rho2}, respectively. 
+\eqref{rho2} respectively. 
 The Fourier component of macroscopic current of Eq.~\eqref{jmac} is given by
 \begin{equation}\label{jmac2}
 J_{\rma}^{(N,\ell)}(\go_3)=\frac{e}{\gO}
@@ -929,9 +914,9 @@ $\bfr''$, we can write
 \psi^*_{m\mathbf{k}}(\mathbf{r})
 \calbv^{\gS,\ell}
 \psi_{n\mathbf{k}}(\mathbf{r})
-,
+.
 \end{align}
-where we used the hermitian property of $\bfv^\gS$ and  defined
+We used the hermitian property of $\bfv^\gS$ and defined
 \begin{align}\label{nl.4}
 \calbv^{\gS,\ell}
 =
@@ -939,19 +924,17 @@ where we used the hermitian property of $\bfv^\gS$ and  defined
 \bfv^\gS \calc^\ell(z)}{2}
 ,
 \end{align} 
-where the superscript $\ell$ is inherited from $\calc^\ell(z)$, and we
-supres the dependance on $z$ form the crowded notation.  
-Then,
-we see that the replacement
+where the superscript $\ell$ is inherited from $\calc^\ell(z)$ and we
+supress the dependance on $z$ from the increasingly crowded notation.  
+We see that the replacement
 \begin{align}\label{vcali}
 \hat\bfv^\gS \to \hat\calbv^{\gS,\ell}=\left[\frac{\calc^\ell(z) \hat\bfv^\gS +
 \hat\bfv^\gS \calc^\ell(z)}{2}\right]
 ,
 \end{align} 
-is what it takes to change the
-velocity operator of the electron, $\hat\bfv^\gS$, to the new velocity
-operator, $\calbv^{\gS,\ell}$
- that implicitly takes into account the
+is all that is needed to change the
+velocity operator of the electron $\hat\bfv^\gS$ to the new velocity
+operator $\calbv^{\gS,\ell}$ that implicitly takes into account the
 contribution of the region of the slab given by $\calc^\ell(z)$.
 From Eq.~\eqref{vop},
 \begin{align}\label{vopii}
@@ -977,21 +960,17 @@ The matrix elements of $\calbv^{S,\ell}$ and $\calbv^{\lda,\ell}$
 are given in 
 Appendix \ref{calvs}.
 
-Actually, 
-to limit the response to one surface, 
-the equivalent of Eq.~\eqref{nl.4} for $\calbv^\ell=\calbp^\ell/m_e$
- was proposed 
-in Ref.~\onlinecite{reining_microscopic_1994}, and latter used in Refs.
-\onlinecite{mendoza_ab_2001} 
-and \onlinecite{mejia_layer-by-layer_2004} in the context of SHG. Then, 
-the layer-by-layer analysis of Refs. \onlinecite{hogan_optical_2003} 
-and \onlinecite{castillo_layer-by-layer_2003}
-actually used Eq.~\eqref{sz}
-thus limiting the current response
-to a particular layer of the slab, and used it to obtain the
+To limit the response to one surface, the equivalent of Eq.~\eqref{nl.4} 
+for $\calbv^\ell=\calbp^\ell/m_e$ was proposed in 
+Ref.~\onlinecite{reining_microscopic_1994} and later used in Refs.
+\onlinecite{mendoza_ab_2001} and \onlinecite{mejia_layer-by-layer_2004} 
+for SHG. The layer-by-layer analysis of Refs. \onlinecite{hogan_optical_2003} 
+and \onlinecite{castillo_layer-by-layer_2003} used Eq.~\eqref{sz}, 
+limiting the current response
+to a particular layer of the slab and used to obtain the
 anisotropic linear optical response of semiconductor surfaces.
 However, the first formal derivation of this scheme is presented in
-Ref.~\onlinecite{mendozaPRB06} for the linear optical response, and
+Ref.~\onlinecite{mendozaPRB06} for the linear response and now
 here for the non-linear optical response of semiconductors.
 
 \section{Non-linear Surface Susceptibility}\label{nonchi}
