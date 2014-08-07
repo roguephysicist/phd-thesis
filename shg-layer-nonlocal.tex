@@ -69,7 +69,7 @@ lim_optical_2000,
 gavrilenko_optical_2000,
 mendoza_visible-infrared_1999,
 mendoza_microscopic_1998,
-mendoza_local-field_1996,
+mendozaPRB96,
 mendoza_polarizable-bond_1997,
 guyotPRB90} 
 
@@ -92,7 +92,7 @@ for a slab scheme used for surface calculations.
 
 We follow the article by Aversa and Sipe\cite{aversaPRB95} to calculate 
 the optical properties of a given system within the longitudinal gauge. 
-More recent derivations\cite{sipe_second-order_2000,lambrecht_band_2000} 
+More recent derivations\cite{sipe_second-order_2000,lambrechtPSSB00} 
 can also be found. Assuming the long-wavelength approximation which implies 
 a position independent electric field, 
 $\bfE(t)$,  
@@ -326,7 +326,7 @@ These matrix elements include the matrix elements of
 $\bfv^\nl_{nm}(\bfk)$ which can be readily calculated\cite{francesco} for 
 fully separable nonlocal pseudopotentials in the 
 Kleinman-Bylander 
-form.\cite{motta_implementation_2010,kleinman_efficacious_1982,adolph_nonlocality_1996}
+form.\cite{mottaCMS10,kleinman_efficacious_1982,adolphPRB96}
 
 In Appendix \ref{appvnl} we outline how this  
 can be accomplished. 
@@ -965,7 +965,7 @@ for $\calbv^\ell=\calbp^\ell/m_e$ was proposed in
 Ref.~\onlinecite{reining_microscopic_1994} and later used in Refs.
 \onlinecite{mendoza_ab_2001} and \onlinecite{mejia_layer-by-layer_2004} 
 for SHG. The layer-by-layer analysis of Refs. \onlinecite{hogan_optical_2003} 
-and \onlinecite{castillo_layer-by-layer_2003} used Eq.~\eqref{sz}, 
+and \onlinecite{castilloPRB03} used Eq.~\eqref{sz}, 
 limiting the current response
 to a particular layer of the slab and used to obtain the
 anisotropic linear optical response of semiconductor surfaces.
@@ -975,8 +975,8 @@ here for the non-linear optical response of semiconductors.
 
 \section{Non-linear Surface Susceptibility}\label{nonchi}
 
-In this section we obtain the expressions for the non-linear
-surface susceptibility tensor to second order in the perturbing fields.
+In this section we obtain the expressions for the second order non-linear
+surface susceptibility tensor for the perturbing fields.
 We start with the 
 non-linear polarization $\mbf{P}$ written as
 \begin{align}\label{mshg}
@@ -989,15 +989,13 @@ E_{\rmc}(\go_2)
 E_{\rmb}(\go_1)\nabla_{\rmc} E_{\rml}(\go_2)
 +\cdots,
 \end{align}
-where $\chi_{\rma\rmb\rmc}$ and $\chi_{\rma\rmb\rmc\rml}$,
-correspond to the dipolar and quadrupolar susceptibilities,
-respectively,
-and the sum continues
-with higher multipolar terms.
-If we consider a semi-infinite system with a centrosymmetric bulk,
-above equation splits, due to symmetry considerations alone, into two
-contributions, one from the surface of the system and the other from
-the bulk of the system. Indeed, let's take
+where $\chi_{\rma\rmb\rmc}$ and $\chi_{\rma\rmb\rmc\rml}$
+correspond to the dipolar and quadrupolar susceptibilities.
+The sum continues with higher multipolar terms.
+If we consider a semi-infinite system with a centrosymmetric bulk, the
+equation above can be separated into two contributions from symmetry 
+considerations alone; one from the surface of the system and the other from
+the bulk of the system. We take
 \begin{equation}\label{mshg2}
 P_{\rma}(\mbf{r})=\chi_{\rma\rmb\rmc}E_{\rmb}(\mbf{r})E_{\rmc}(\mbf{r})
 +
@@ -1016,12 +1014,10 @@ P_{\rma}(-\mbf{r})&=\chi_{\rma\rmb\rmc}E_{\rmb}(-\mbf{r})E_{\rmc}(-\mbf{r})
 \end{align}
 as the polarization in the coordinate system where inversion is taken,
 i.e. $\mbf{r} \to -\mbf{r}$. 
-Note that we have kept the same susceptibility tensors, since as the
-system is centrosymmetric, they must be invariant under $\mbf{r} \to
--\mbf{r}$. 
-Recalling that $\mbf{P}(\mbf{r})$ and
-$\mbf{E}(\mbf{r})$, are polar vectors,\cite{jackson_classical_1975} we have that
-Eq.~\eqref{mshg3} reduces to
+Note that we have kept the same susceptibility tensors, and they must be 
+invariant under $\mbf{r} \to -\mbf{r}$ since the system is centrosymmetric.
+Recalling that $\mbf{P}(\mbf{r})$ and $\mbf{E}(\mbf{r})$ are polar vectors 
+\cite{jackson_classical_1975}, we have that Eq.~\eqref{mshg3} reduces to
 \begin{align}\label{mshg4}
 -P_{\rma}(\mbf{r})&=\chi_{\rma\rmb\rmc}(-E_{\rmb}(\mbf{r}))(-E_{\rmc}(\mbf{r}))
 -
@@ -1035,33 +1031,30 @@ P_{\rma}(\mbf{r})&=-\chi_{\rma\rmb\rmc}E_{\rmb}(\mbf{r})E_{\rmc}(\mbf{r})
 E_{\rml}(\mbf{r}) 
 +\cdots,
 \end{align}
-that when compared with Eq.~\eqref{mshg2}
-leads to the conclusion that
+that when compared with Eq.~\eqref{mshg2} leads to the conclusion that
 \begin{equation}\label{sshg}
-\chi_{\rma\rmb\rmc}=0 \quad\quad\mbox{for a centrosymmetric bulk}.
+\chi_{\rma\rmb\rmc}=0
 \end{equation}
+for a centrosymmetric bulk.
 
 \begin{figure}[t]
 \centering
 \includegraphics[scale=0.6]{images/system}
-\caption{(color online) We show a sketch of the 
-semi-infinite system with a centrosymmetric bulk. The surface region is
-of width $\sim d$. The incoming photon of frequency $\go$ is represented by
+\caption{(Color Online) Sketch of the semi-infinite system with a 
+centrosymmetric bulk. The surface region is of width $\sim d$. 
+The incoming photon of frequency $\go$ is represented by
 a downward red arrow, whereas both the surface and bulk created second
-harmonic photons of frequency $2\go$ are represented by an upward
-green arrow. The red color suggests an infrared incoming photon whose
-second harmonic generated photon is in the green. The dipolar,
-$\chi_{\rma\rmb\rmc}$, and 
-quadrupolar, $\chi_{\rma\rmb\rmc\rml}$, susceptibility tensors are shown in the regions where they
-are different from zero. The axis are also shown, with $z$
-perpendicular to the surface and $\mbf{R}$ parallel to it.
-}
-\label{fsystem}
+harmonic photons of frequency $2\go$ are represented by upward
+green arrows. The red color suggests an incoming infrared photon with
+a green second harmonic photon. The dipolar ($\chi_{\rma\rmb\rmc}$), and 
+quadrupolar ($\chi_{\rma\rmb\rmc\rml}$) susceptibility tensors are shown 
+in the regions where they are different from zero. The axis has $z$
+perpendicular to the surface and $\mbf{R}$ parallel to it.\label{fsystem}}
 \end{figure}
 
-Therefore, if we move to the surface of the semi-infinite system, the
-assumption of centrosymmetry necessarily breaks down, and there is no
-restriction in $\chi_{\rma\rmb\rmc}$. Thus, we conclude that the leading term
+If we move to the surface of the semi-infinite system our assumption 
+of centrosymmetry breaks down, and there is no restriction in 
+$\chi_{\rma\rmb\rmc}$. We conclude that the leading term
 of the polarization in a surface region is given by
 \begin{align}\label{sshgp1}
 \int d\mbf{R}\int dz 
@@ -1080,36 +1073,35 @@ perpendicular to $z$, $\cals$ is the surface area of the unit
 cell that characterizes the surface of the system, and $d$ is the
 surface region from which the dipolar signal of $\bfP$ is
 different from zero (see Fig.~\ref{fsystem}).
-Also, $d\mbf{P}\equiv \mbf{P}^s$ is
-the surface SH polarization, given by
+$d\mbf{P}\equiv \mbf{P}^s$ is the surface SH polarization given by
 \begin{align}\label{sshgp2}
 P_{\rma}^{s}&=\frac{1}{\cals}
 \chi_{\rma\rmb\rmc}E_{\rmb}E_{\rmc}
 =
 \chi^s_{\rma\rmb\rmc}E_{\rmb}E_{\rmc},
 \end{align}
-with $\chi_{\rma\rmb\rmc}^s=\chi_{\rma\rmb\rmc}/\cals$ the surface
-non-linear susceptibility. 
+with $\chi_{\rma\rmb\rmc}^s=\chi_{\rma\rmb\rmc}/\cals$ the 
+non-linear surface susceptibility. 
 On the other hand, 
 \begin{equation}\label{sshgp3}
 P^b_{\rma}(\mbf{r})=\chi_{\rma\rmb\rmc\rml}E_{\rmb}(\mbf{r})\nabla_{\rmc}
 E_{\rml}(\mbf{r}),  
 \end{equation}
-gives the bulk polarization. Immediately we see that the surface
-polarization is of dipolar order, whereas the bulk polarization is of
-quadrupolar order, and that the rank of the susceptibility tensors is 3
-for the surface, i.e. $\chi_{\rma\rmb\rmc}$, and 4 for the bulk,
-i.e. $\chi_{\rma\rmb\rmc\rml}$. 
-Although the bulk generated SH is in itself a very important optical
-phenomena, in here we concentrate only in the surface generated
-SH. Indeed, in centrosymmetric systems for which the quadrupolar bulk
-response is much smaller that the dipolar surface response, SH is
-readily used as a very useful and powerful optical surface probe.\cite{downer_optical_2001}
+gives the bulk polarization. We immediately recognize that the surface
+polarization is of dipolar order while the bulk polarization is of
+quadrupolar order. The surface ($\chi_{\rma\rmb\rmc}$) and bulk 
+($\chi_{\rma\rmb\rmc\rml}$) susceptibility tensor ranks are three and 
+four, respectively. We will only concentrate on surface SHG in this article 
+even though nulk generated SH is also a very important optical phenomenon. 
+In centrosymmetric systems for which the quadrupolar bulk
+response is much smaller than the dipolar surface response, SH is
+readily used as a very useful and powerful optical surface probe.
+\cite{downer_optical_2001}
 
 To calculate $\chi_{\rma\rmb\rmc}^s$,
-we start from the basic relation, $\bfJ=d\bfP/dt$ 
-with $\bfJ$ the current calculated in Sec.~\ref{cd}, and
-from Eq.~\eqref{jmac2} we obtain
+we start with the basic relation $\bfJ=d\bfP/dt$ 
+with $\bfJ$ the current calculated in Sec.~\ref{cd}. From Eq.~\eqref{jmac2} 
+we obtain
 \begin{equation}\label{Pjikn}
 J_{\rma}^{(2,\ell)}(\go_3)=-i\go_3P_{\rma}(\go_3)
 =\frac{e}{\gO}
@@ -1118,7 +1110,7 @@ J_{\rma}^{(2,\ell)}(\go_3)=-i\go_3P_{\rma}(\go_3)
 \rho^{(2)}_{nm}(\bfk;\go_3)
 ,
 \end{equation}
-which upon using Eqs.~\eqref{rho2} and ~\eqref{sshgp2} leads to
+and using Eqs.~\eqref{rho2} and \eqref{sshgp2} leads to
 \begin{align}\label{Pjikn2}
 \chi^{s,\ell}_{\rma\rmb\rmc}(-\go_3;\go_1,\go_2)
 &=
@@ -1142,12 +1134,11 @@ which upon using Eqs.~\eqref{rho2} and ~\eqref{sshgp2} leads to
 \bigg]
 ,
 \end{align}
-which gives the surface susceptibility of layer $\ell$-th, where 
+which gives the surface susceptibility of $\ell$-th layer, where 
 $\calbv^\gS$ is given in Eq.~\eqref{vopii}.
-Using Eq.~\eqref{rho1}, we
-split above equation into
-two contributions, one coming from the first term and the other
-from the second term on the r.h.s.,
+Using Eq.~\eqref{rho1} we
+split this equation into
+two contributions from the first and second terms on the right hand side,
 \begin{equation}\label{chii}
 \chi_{i,\rma\rmb\rmc}^{s,\ell}
 (-2\go;\go,\go)
@@ -1172,7 +1163,7 @@ where $\boldsymbol{\chi}^{s,\ell}_i$
  is related to intraband transitions and
 $\boldsymbol{\chi}^{s,\ell}_e$
 to interband transitions. We warn the reader not to be confused by the
-already confusing notation, lower case $s$ refers to the 
+already busy notation; lower case $s$ refers to the 
 {\it s}urface, whereas the capital case $S$ referes to the {\it S}cissors correction.   
 For the generalized derivative in Eq.~\eqref{chii} we use the chain rule 
 \begin{equation}\label{gene2}
@@ -1192,42 +1183,36 @@ v_{nn}^{\lda,\rma}-v_{mm}^{\lda,\rma}\equiv\gD_{nm}^{\rma}
 \end{align} 
 as shown in Appendix \ref{gwk}. 
 
-In order to calculate
-the nonlinear susceptibility of any given layer $\ell$ we simply add above terms
-$\boldsymbol{\chi}^{s,\ell}=\boldsymbol{\chi}_e^{s,\ell}+\boldsymbol{\chi}_i^{s,\ell}$, 
-and 
-then,
-we can calculate the surface
-susceptibility as 
+In order to calculate the nonlinear susceptibility of any given layer 
+$\ell$ we simply add the above terms $\boldsymbol{\chi}^{s,\ell}=
+\boldsymbol{\chi}_e^{s,\ell}+\boldsymbol{\chi}_i^{s,\ell}$ and 
+then calculate the surface susceptibility as 
 \begin{equation}\label{chiijksur}
 \bfgchi^s\equiv \sum_{\ell_0}^{\ell_d}\bfgchi^{\ell},
 \end{equation}
-where $\ell_0$ represents the first  layer right at the surface, and $\ell_d$ the
-layer at a distance $\sim d$ from the surface (see
-Fig.~\ref{fsystem}). Of course we can use Eq.~\eqref{chiijksur} for
+where $\ell_0$ represents the first  layer right at the surface, 
+and $\ell_d$ the layer at a distance $\sim d$ from the surface (see
+Fig.~\ref{fsystem}). We can use Eq.~\eqref{chiijksur} for
 either the front or the back surface.
 Likewise
 \begin{equation}\label{chiijklf}
 \bfgchi^{\ell_f}\equiv \sum_{\ell_d}^{\ell_f}\bfgchi^{\ell},
 \end{equation}
-is a dipolar bulk susceptibility, with the property that,
+is a dipolar bulk susceptibility with the property
 \begin{equation}\label{chiijkbul}
 \bfgchi^{\ell_f}\stackrel{\ell_f \to \ell_b}{=} 0,
 \end{equation}
 where $\ell_b$ is a bulk layer such that the bulk centrosymmetry is
-fully stablished and the dipolar non-linear susceptibility is
-identically zero, in accordance with Eq.~\eqref{sshg}. We remark that 
-$\ell_d$  is
-not universal, and $\ell_b$ should be found according to Eq.~\eqref{chiijkbul}. 
+fully established and the dipolar non-linear susceptibility is
+identically zero in accordance to Eq.~\eqref{sshg}. We note that 
+$\ell_d$ is not universal and $\ell_b$ should be found according 
+to Eq.~\eqref{chiijkbul}. 
 
-As can be seen from the prefactor of Eqs. ~\eqref{chii} and
-~\eqref{chie}, they  
-diverge as $\go\to 0$. To remove this apparent  
-divergence of $\bfgchi^s$, we perform 
-a partial fraction  expansion in $\go$. 
-As shown in the Appendix \ref{appv} 
-using time-reversal invariance these divergences can be removed, and
-the following expressions for $\bfgchi$ are obtained  
+We can see from the prefactors of Eqs. \eqref{chii} and \eqref{chie} 
+that they diverge as $\go\to 0$. To remove this apparent divergence of 
+$\bfgchi^s$, we perform a partial fraction expansion over $\go$. 
+As shown in Appendix \ref{appv}, we use time-reversal invariance to 
+remove these divergences and obtain the following expressions for $\bfgchi$,
 \begin{equation}\label{calvimchiewn}
 \mathrm{Im}[\chi_{e,\rma\rmb\rmc,\go}^{s,\ell}] =
 -\frac{\pi |e|^3}{2\hbar^2}\sum_{vc\bfk}\sum_{l\neq(v,c)}\frac{1}{\omega^{S}_{cv}}
@@ -1270,23 +1255,20 @@ and
 \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}r^{\text{b}}_{cv}\right]
 \Delta^{\text{c}}_{cv}}{\omega^{S}_{cv}}\right)\delta(\omega^{S}_{cv}-2\omega).
 \end{equation}
-where we have split the interband and intraband $1\go$ and $2\go$
+We have split the interband and intraband $1\go$ and $2\go$
 contributions. The real part of each contribution can be obtained through
 a Kramers-Kronig transformation,\cite{nicolas} and then
 $\chi^{s,\ell}_{\rma\rmb\rmc}=\chi^{s,\ell}_{e,\rma\rmb\rmc,\go}+\chi^{s,\ell}_{e,\rma\rmb\rmc,2\go}+\chi^{s,\ell}_{i,\rma\rmb\rmc,\go}+\chi^{s,\ell}_{i,\rma\rmb\rmc,2\go}
 $.
-To 
-fulfill the required intrinsic
-permutation symmetry,\cite{rashkeevPRB98} 
-the
-$\{\}$ notation symmetrizes the Cartesian indices $\rmb\rmc$, i.e. 
+To fulfill the required intrinsic permutation symmetry,\cite{rashkeevPRB98} 
+the $\{\}$ notation symmetrizes the $\rmb\rmc$ Cartesian indices, i.e. 
 $\{u^{\rmb}s^{\rmc}\}=(u^{\rmb}s^{\rmc}+u^{\rmc}s^{\rmb})/2$,
-from where we obtain that
+and we show that
 $\chi_{\rma\rmb\rmc}^{s,\ell}=\chi_{\rma\rmc\rmb}^{s,\ell}$.
-In Appendices \ref{gdernl} and \ref{calvs} we show how to calculate  
+In Appendices \ref{gdernl} and \ref{calvs} we demonstrate how to calculate  
 the generalized derivatives of $\bfr_{nm;\bfk}$ and
-$\calv^{\gS,\rma,\ell}_{nm;\bfk}$, respectively. 
-Indeed, we find that
+$\calv^{\gS,\rma,\ell}_{nm;\bfk}$. 
+We find that
 \begin{align}\label{rgen.69}
 (r^{\rmb}_{nm})_{;k^{\rma}}
 &=
@@ -1322,23 +1304,22 @@ where
 \call_{nm}^{\rma\rmb}
 ,
 \end{align}  
-with
+and
 \begin{align}\label{tau.2}
 \call_{nm}^{\rma\rmb}
 =
 \frac{1}{i\hbar}[r^{\rma},v^{\nl,\rmb}]_{nm}
 ,
 \end{align}
-the contribution to the generalized derivative of $\bfr_{nm}$
+is the contribution to the generalized derivative of $\bfr_{nm}$
 coming from the nonlocal part of the pseudopotential.
 In Appendix \ref{calt} we calculate
-$\call^{\rma\rmb}_{nm}$.  
-As it turns out, $\call^{\rma\rmb}_{nm}$, 
-besides being a term with a very small numerical value, 
-its computational time is at least an order of magnitude larger
- than what it takes to calculate all other terms involved in the expressions for 
+$\call^{\rma\rmb}_{nm}$. $\call^{\rma\rmb}_{nm}$, 
+is a term with very small numerical value but with a computational time 
+at least an order of magnitude larger
+than for all the other terms involved in the expressions for 
 $\chi^{s,\ell}_{\mathrm{abc}}$.\cite{valerie}
-Thus, we neglect it throughout the article, and take
+Therefore, we neglect it throughout this article and take
 \begin{align}\label{tau.69}
 \calt_{nm}^{\rma\rmb}
 \approx
@@ -1346,8 +1327,7 @@ Thus, we neglect it throughout the article, and take
 .
 \end{align} 
 Finally,
-for $\calv^{\gS,\rma,\ell}_{nm;\bfk}$, among other quantities we also
-need the following term (Eq.~\eqref{ntita})
+we also need the following term (Eq.~\eqref{ntita})
 \begin{align}\label{a.3c}
 (v^{\lda,\rma}_{nn})_{;k^\rmb}
 =
@@ -1380,19 +1360,20 @@ r^{\rma}_{\ell n}
 \bigg)
 ,
 \end{align}  
-where we also use Eq.~\eqref{tau.69}. Above
-is the standard effective-mas sum rule.\cite{ashcroft_solid_1976} 
+among other quantities for $\calv^{\gS,\rma,\ell}_{nm;\bfk}$, where we 
+also use Eq.~\eqref{tau.69}. Above is the standard effective-mas sum rule.
+\cite{ashcroft_solid_1976} 
 In Appendix \ref{code}, we list all the quantities that should be
-coded in order to calculate above expressions for $\bfgchi$.
+coded in order to calculate the previous expressions for $\bfgchi$.
 
 
 \section{Conclusions}\label{con}
 
 We have presented a complete derivation of the required elements to
 calculate the surface SHG susceptibility tensor $\bfgchi^s(-2\go;\go,\go)$ 
-using the ``layer-by-layer'' approach. We have done so for a
-semiconductor using the 
-length gauge for the coupling of the external electric field to the electron. 
+using a layer-by-layer approach. We have done so for semiconductors using 
+the length gauge for the coupling of the external electric field to the 
+electron. 
 %Also,
 %we calculated the radiated efficiency $R$ within the three layer
 %model. 
