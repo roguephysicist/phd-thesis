@@ -4,17 +4,17 @@ We obtain the
 generalized derivative $(\go_n(\bfk))_{;\bfk}$.
 We start from
 \begin{align}\label{a_conH0}
-\bra{n\bfk}\hat{H}^S_0\ket{m\bfk'}=\gd_{nm}\gd(\bfk-\bfk')\hbar\go^S_m(\bfk)
+\bra{n\bfk}\hat{H}^\gs_0\ket{m\bfk'}=\gd_{nm}\gd(\bfk-\bfk')\hbar\go^\gs_m(\bfk)
 ,
 \end{align}
 then Eq.~\eqref{gendev} gives for $n=m$
 \begin{align}\label{a_genderH0}
-(H^S_{0,nn})_{;\bfk}&=
+(H^\gs_{0,nn})_{;\bfk}&=
 \nabla_\bfk
-H^S_{0,n n}(\bfk)
+H^\gs_{0,n n}(\bfk)
 -
 i
-H^S_{0,nn}(\bfk)
+H^\gs_{0,nn}(\bfk)
 \left(
 \bfgxi_{nn}(\bfk)
 -
@@ -22,67 +22,67 @@ H^S_{0,nn}(\bfk)
 \right)
 \nonumber\\
 &=
-\hbar\nabla_\bfk\go^S_m(\bfk)
+\hbar\nabla_\bfk\go^\gs_m(\bfk)
 ,
 \end{align}
 where from Eq.~\eqref{conmri3}, 
 \begin{align}\label{a_rih0}
 \bra{n\bfk}[\hat\bfr_i,\hat{H}_0]\ket{m\bfk}&=
-i\gd_{nm}\hbar(\go^S_m(\bfk))_{;\bfk}
+i\gd_{nm}\hbar(\go^\gs_m(\bfk))_{;\bfk}
 =
-i\gd_{nm}\hbar\nabla_\bfk\go^S_m(\bfk)
+i\gd_{nm}\hbar\nabla_\bfk\go^\gs_m(\bfk)
 ,
 \end{align}
 then
 \begin{align}\label{a_wgendev}
-(\go^S_n(\bfk))_{;\bfk}=
-\nabla_\bfk\go^S_n(\bfk)
+(\go^\gs_n(\bfk))_{;\bfk}=
+\nabla_\bfk\go^\gs_n(\bfk)
 .
 \end{align}
 From Eq.~\eqref{vop} 
 \begin{align}\label{a_hr}
-\bra{n\bfk}[\hat\bfr,\hat{H}_0]\ket{m\bfk}=
-i\hbar\bfv^\gS_{nm}
+\bra{n\bfk}[\hat\bfr,\hat{H}^\gs_0]\ket{m\bfk}=
+i\hbar\bfv^\gs_{nm}(\bfk)
 ,
 \end{align}
 therefore, substituting above into
 \begin{align}\label{a_hrt}
-\bra{n\bfk}[\hat\bfr,\hat{H}_0]\ket{m\bfk}=
-\bra{n\bfk}[\hat\bfr_i,\hat{H}_0]\ket{m\bfk}
+\bra{n\bfk}[\hat\bfr,\hat{H}^\gs_0]\ket{m\bfk}=
+\bra{n\bfk}[\hat\bfr_i,\hat{H}^\gs_0]\ket{m\bfk}
 +
-\bra{n\bfk}[\hat\bfr_e,\hat{H}_0]\ket{m\bfk}
+\bra{n\bfk}[\hat\bfr_e,\hat{H}^\gs_0]\ket{m\bfk}
 ,
 \end{align}
 we get
 \begin{align}\label{a_hrt2}
-i\hbar\bfv^\gS_{nm}=
-i\gd_{nm}\hbar\nabla_\bfk\go^S_m(\bfk)
+i\hbar\bfv^\gs_{nm}(\bfk)=
+i\gd_{nm}\hbar\nabla_\bfk\go^\gs_m(\bfk)
 +
-\go^S_{mn}\bfr_{e,nm}
+\go^\gs_{mn}\bfr_{e,nm}(\bfk)
 ,
 \end{align}
 from where
 \begin{align}\label{a_gradw}
-\nabla_\bfk\go^S_n(\bfk)
+\nabla_\bfk\go^\gs_n(\bfk)
 &=
-\bfv^\gS_{nn}
+\bfv^\gs_{nn}(\bfk)
 \nonumber\\
-\nabla_\bfk(\go^\lda_n(\bfk)+\frac{\gD}{\hbar}(1-f_n))
+\nabla_\bfk(\go^\lda_n(\bfk)+\frac{\gS}{\hbar}(1-f_n))
 &=
 \nabla_\bfk\go^\lda_n(\bfk)
 \nonumber\\
 \nabla_\bfk\go^\lda_n(\bfk)
 &=
-\bfv^\gS_{nn}
+\bfv^\gs_{nn}(\bfk)
 ,
 \end{align}
 where we used Eq.~\eqref{chon.78},
 but from 
-Eq.~\eqref{chon.2}, $v^S_{nn}=0$, and then
-$\bfv^\gS_{nn}=v^\lda_{nn}$.
+Eq.~\eqref{chon.2}, $v^\cals_{nn}=0$, and then
+$\bfv^\gs_{nn}=v^\lda_{nn}$.
 Thus,  from Eq.~\eqref{a_wgendev}
 \begin{align}\label{a_gradw2}
-(\go^S_n(\bfk))_{;k^{\rma}}=
+(\go^\gs_n(\bfk))_{;k^{\rma}}=
 (\go^\lda_n(\bfk))_{;k^{\rma}}=
 v^{\lda,\rma}_{nn}(\bfk)
 ,

@@ -3,7 +3,7 @@ We obtain the matrix elements of $\bfv^\nl_{nm}(\bfk)$ by using
 the following commutator in a
 real-space basis
 \begin{align}\label{cn0}
-\bra{\bfR'}[\hat\bfr,\hat V(\hat\bfr,\hat\bfr')]\ket{\bfR}
+\bra{\bfR'}[\hat\bfr,\hat V(\bfr,\bfr')]\ket{\bfR}
 &=
 \bra{\bfR'}(\hat\bfr\hat V(\hat\bfr,\hat\bfr')
 -
@@ -90,7 +90,7 @@ $\bfk=\bfk'$ where $\bfk$ is restricted to the Brillouin Zone.
 In plane waves we have that
 \begin{align}\label{cn3}
 \psi_{n\bfk}(\bfr)=\frac{1}{\sqrt{\gO}}
-\sum_{\bfK} C_{n\bfk}(\bfK)e^{i(\bfk+\bfK)\cdot\bfr}
+\sum_{\bfG} C_{n\bfk}(\bfG)e^{i(\bfk+\bfG)\cdot\bfr}
 ,
 \end{align}
 where $\gO$ is the volume of the unit cell.
@@ -99,17 +99,17 @@ Then,
 \bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^a]\ket{m\bfk}
 &=
 \frac{1}{\gO}
-\sum_{\bfK,\bfK'} 
-C^*_{n\bfk}(\bfK) 
-C_{m\bfk}(\bfK')
+\sum_{\bfG,\bfG'} 
+C^*_{n\bfk}(\bfG) 
+C_{m\bfk}(\bfG')
 \int d\bfr d\bfr' 
-e^{-i(\bfk+\bfK)\cdot \bfr}
+e^{-i(\bfk+\bfG)\cdot \bfr}
  ( 
-r'^a V^\nl(\bfr,\bfr')
+V^\nl(\bfr,\bfr') r'^a 
 - 
 r^aV^\nl(\bfr,\bfr')
 ) 
-e^{i(\bfk+\bfK')\cdot \bfr'}
+e^{i(\bfk+\bfG')\cdot \bfr'}
 .
 \nonumber\\
 \end{align} 
@@ -137,8 +137,8 @@ e^{i\bfK'\cdot\bfr'}
 i
 \int e^{-i\bfK\cdot\bfr}
 \left(
-\bfr'
 V^\nl(\bfr,\bfr')
+\bfr'
 -
 \bfr
  V^\nl(\bfr,\bfr')
@@ -153,9 +153,9 @@ then, we obtain
 \bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^a]\ket{m\bfk}
 &=
 -\frac{i}{\gO}
-\sum_{\bfK,\bfK'}
-C^*_{n\bfk}(\bfK)
-C_{m\bfk}(\bfK')
+\sum_{\bfG,\bfG'}
+C^*_{n\bfk}(\bfG)
+C_{m\bfk}(\bfG')
 (\nabla_{K^\rma}+\nabla_{K'^\rma})
 \int e^{-i\bfK\cdot\bfr}
 V^\nl(\bfr,\bfr')
@@ -165,15 +165,15 @@ e^{i\bfK'\cdot\bfr'}
 &=
 -\frac{i}{\gO}
 \sum_{\bfK,\bfK'}
-C^*_{n\bfk}(\bfK)
-C_{m\bfk}(\bfK')
+C^*_{n\bfk}(\bfG)
+C_{m\bfk}(\bfG')
 (\nabla_{K^\rma}+\nabla_{K'^\rma})
 \bra{\bfK} 
 V^\nl
 \ket{\bfK'} 
 ,
 \end{align}
-where
+where $\bfK=\bfk+\bfG$ and
 \begin{align}\label{cn6}
 \bra{\bfK} 
 V^\nl
