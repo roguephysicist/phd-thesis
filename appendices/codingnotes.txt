@@ -4,4 +4,4 @@ calpmn - we had already tried to place this code.
 
 eq. G2 is already coded. compare to eq. I15. These two can be stuck in the same subroutine and are possible completed already.
 
-so what I have to do is code eq. I15, I17, and verify that I17 yields the same result as G2 which is already coded.
+so what I have to do is code eq. I15, I17, and verify that I17 yields the same result as G2 which is already coded. all this is in integrands.
