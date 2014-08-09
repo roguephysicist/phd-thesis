@@ -1,8 +1,8 @@
-\section{Generalized derivative \texorpdfstring{$\Big({\cal V}^{\gS,\rma,\ell}_{nm}\Big)_{;k^\rmb}$}{(Vnm);kb}}\label{calvs} 
+\section{Generalized derivative \texorpdfstring{$\Big({\cal V}^{\gs,\rma,\ell}_{nm}\Big)_{;k^\rmb}$}{(Vnm);kb}}\label{calvs} 
 From Eq.~\eqref{vopii}
 \begin{align}\label{a.1}
 \left(
-\calv^{\gS,\rma,\ell}_{nm}
+\calv^{\gs,\rma,\ell}_{nm}
 \right)_{;k^\rmb}
 =
 \left(
@@ -10,7 +10,7 @@ From Eq.~\eqref{vopii}
 \right)_{;k^\rmb}
 +
 \left(
-\calv^{S,\rma,\ell}_{nm}
+\calv^{\cals,\rma,\ell}_{nm}
 \right)_{;k^\rmb}
 .
 \end{align} 
@@ -30,7 +30,7 @@ v^{\lda,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{\lda,\rma}_{qm}
 \left(\calv^{\lda,\rma}_{nm}\right)_{;k^\rmb}
 &=
 \frac{1}{2}\sum_q\left(  
-v^{\lda,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} p^{\lda,\rma}_{qm}
+v^{\lda,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{\lda,\rma}_{qm}
 \right) _{;k^\rmb}
 \nonumber\\
 &=
@@ -78,43 +78,42 @@ where we used Eq \eqref{eli.13} and $(r^\rma_{nm})_{;k^\rmb}$ is given
 in Eq.~\eqref{na_rgendevn}.
 
 Likewise,
-For the S term we have
 \begin{align}\label{a.3b}
-\calv^{S,\rma,\ell}_{nm}
+\calv^{\cals,\rma,\ell}_{nm}
 &=
 \frac{1}{2}\left(  
-v^{S,\rma}\calc^\ell+\calc^\ell v^{S,\rma}
+v^{\cals,\rma}\calc^\ell+\calc^\ell v^{\cals,\rma}
 \right)_{nm}
 \nonumber\\
 &=
 \frac{1}{2}\sum_q\left(  
-v^{S,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{S,\rma}_{qm}
+v^{\cals,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{\cals,\rma}_{qm}
 \right)
 \nonumber\\
-\left(\calv^{S,\rma}_{nm}\right)_{;k^\rmb}
+\left(\calv^{\cals,\rma}_{nm}\right)_{;k^\rmb}
 &=
 \frac{1}{2}\sum_q\left(  
-v^{S,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} p^{S,\rma}_{qm}
+v^{\cals,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{\cals,\rma}_{qm}
 \right) _{;k^\rmb}
 \nonumber\\
 &=
 \frac{1}{2}\sum_q\left(
-(v^{S,\rma}_{nq})_{;k^\rmb}\calc^\ell_{qm}
+(v^{\cals,\rma}_{nq})_{;k^\rmb}\calc^\ell_{qm}
 +   
-v^{S,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
+v^{\cals,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 +
-(\calc^\ell_{nq})_{;k^\rmb} v^{S,\rma}_{qm}
+(\calc^\ell_{nq})_{;k^\rmb} v^{\cals,\rma}_{qm}
 +
-\calc^\ell_{nq} (v^{S,\rma}_{qm})_{;k^\rmb}
+\calc^\ell_{nq} (v^{\cals,\rma}_{qm})_{;k^\rmb}
 \right)
 ,
 \end{align}   
-where $v^{S,\rma}_{nm}(\bfk)$ are given in Eq.~\eqref{chon.2}
+where $v^{\cals,\rma}_{nm}(\bfk)$ are given in Eq.~\eqref{chon.2}
 and
-$(v^{S,\rma}_{nm})_{;k^\rmb}$ is given in Eq. A(6) of
+$(v^{\cals,\rma}_{nm})_{;k^\rmb}$ is given in Eq. A(6) of
 Ref.~\onlinecite{cabellosPRB09},
 \begin{align}\label{choni.1}
-(v^{S,\rma}_{nm})_{;k^\rmb}=i\gD f_{mn}
+(v^{\cals,\rma}_{nm})_{;k^\rmb}=i\gD f_{mn}
 (r^\rma_{nm})_{;k^\rmb}
 .
 \end{align}
@@ -309,7 +308,6 @@ r_{nq}^\rma (\bfk)
 r_{qm}^\rma (\bfk)
 \right)
 +ir_{nm}^\rma (\bfk) (\calg_{mm}(\bfk)-\calg_{nn}(\bfk))
-,
+.
 \nonumber\\
 \end{align}
-notice that the last term is zero for $n=m$.
