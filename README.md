@@ -1,12 +1,17 @@
-EQ 81:
-Substitute A and B and w_lm --> w^s_lm
-Leads to Eq. A09, then subsitute w_vc --> -w_cv
-and you have the final equation for inter at w and 2w
+Length Gauge Theory of Surface Second Harmonic Generation
+=========================================================
 
-So you have to do the same for equation EQ82 following the same procedure. You can start from the first three lines of A13. Anything after that is unreliable.
+Abstract
+------------
+We present a theoretical review of surface second harmonic generation (SHG) from semiconductor surfaces based on the longitudinal gauge. This layer-by-layer analysis is carefully presented in order to show how a surface SHG calculation can be readily evaluated. The nonlinear susceptibility tensor for a surface, χS (−2ω; ω, ω) is split into two terms relating to inter-band and intra-band one-electron transitions.
 
-The goal is A16 and A19 but written in terms of w^s_nm and V^sigma
 
-Once programmed in Tiniba, temporarily use calMomMatElem instead of our new V^sigma
+Coding Notes (07/13/14)
+------------
+The work branch of TINIBA contains some preliminary work with calpmn.
 
-Look at equation F4
+The next stage is working on integrands.f90.
+
+First, take a look at Eq. I15 and compare to Eq. G2 that is already coded. These two can be placed in the same subroutine and may be readily completed.
+
+What needs to be done: code Eqs. I15, and I17 and verify that I17 yields the same result as G2.
