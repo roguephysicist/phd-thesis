@@ -1,127 +1,85 @@
-\section{Matrix elements of \texorpdfstring{$\bfv^\nl_{nm}(\bfk)$}{Vnonlocal}}\label{appvnl}
-We obtain the matrix elements of $\bfv^\nl_{nm}(\bfk)$ by using
-the following commutator in a
-real-space basis
-\begin{align}\label{cn0}
-\bra{\bfR'}[\hat\bfr,\hat V(\bfr,\bfr')]\ket{\bfR}
+\section{Matrix elements of 
+\texorpdfstring{$\bfv^\nl_{nm}(\bfk)$}{Vnonlocal}}\label{appvnl}
+From Eq.~\eqref{conhr}, we have that
+\begin{align}\label{vnln.0}
+\bfv^\nl_{nm}(\bfk)=\bra{n\bfk}\hat\bfv^\nl\ket{m\bfk'}
 &=
-\bra{\bfR'}(\hat\bfr\hat V(\hat\bfr,\hat\bfr')
--
-\hat V(\hat\bfr,\hat\bfr')\hat\bfr
-)
-\ket{\bfR}
+\frac{i}{\hbar}
+\bra{n\bfk}[\hat V^\nl,\hat\bfr]\ket{m\bfk'}
 \nonumber\\
 &=
-\int d\bfR''\bra{\bfR'}\hat\bfr\ket{\bfR''}\bra{\bfR''}\hat V(\hat\bfr,\hat\bfr') \ket{\bfR}
--
-\int d\bfR''\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr')\ket{\bfR''}\bra{\bfR''}\hat\bfr\ket{\bfR}
-\nonumber\\
-&=
-\int d\bfR'' \bfR''\gd(\bfR'-\bfR'')
-\bra{\bfR''}\hat V(\hat\bfr,\hat\bfr') \ket{\bfR}
--
-\int d\bfR''\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr')\ket{\bfR''}\bfR\gd(\bfR''-\bfR)
-\nonumber\\
-&=
-\bfR'\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr') \ket{\bfR}
--
-\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr')\ket{\bfR}\bfR
-\nonumber\\
-&=
-\bfR'
-V(\bfR,\bfR')
--
-V(\bfR,\bfR')
-\bfR
-=
-\bfR'
-V(\bfR,\bfR')
--
-\bfR
- V(\bfR,\bfR')
-\nonumber\\
-\bra{\bfR'}[\hat V(\hat\bfr,\hat\bfr'),\hat\bfr]\ket{\bfR}
-&=
-\bfR
-V(\bfR,\bfR')
--
-\bfR'
- V(\bfR,\bfR')
-\nonumber\\
-\bra{\bfR}[\hat V(\hat\bfr,\hat\bfr'),\hat\bfr]\ket{\bfR'}
-&=
-\bfR'
-V(\bfR,\bfR')
--
-\bfR
- V(\bfR,\bfR')
-,
-\end{align} 
-where we used $\hat\bfr\ket{\bfR}=\bfR\ket{\bfR}$, and
-the matrix elements of the non-local operator
-$\bra{\bfR'}\hat V(\hat\bfr,\hat\bfr')\ket{\bfR}=V(\bfR,\bfR')$ just a
-function, no longer an operator, and thus it commutes with $\bfR$ and $\bfR'$.
-Now we distinguish operators and non-operators by the carate symbol,
-\verb=^=, on top.
-We want to calculate
-\begin{align}\label{cn2}
-\bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^a]\ket{m\bfk'}
-&=
+\frac{i}{\hbar}
 \int d\bfr d\bfr'
-\bra{n\bfk}
-\ket{\bfr}\bra{\bfr}
-[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^a]
-\ket{\bfr'}\bra{\bfr'}
-\ket{m\bfk'}
+\braket{n\bfk}{\bfr}
+\bra{\bfr}
+[\hat V^\nl,\hat \bfr]
+\ket{\bfr'}
+\braket{\bfr'}{m\bfk'}
 \nonumber\\
 &=
+\frac{i}{\hbar}
+\gd(\bfk-\bfk')
 \int d\bfr d\bfr'
 \psi^*_{n\bfk}(\bfr)
-(  
-r'^a V^\nl(\bfr,\bfr')
--  
-r^aV^\nl(\bfr,\bfr')
-)
+\bra{\bfr}
+[\hat V^\nl,\hat \bfr]
+\ket{\bfr'}
 \psi_{m\bfk'}(\bfr')
 ,
-\end{align}  
+\end{align}   
 where due to the fact that the integrand is periodic in real space,
 $\bfk=\bfk'$ where $\bfk$ is restricted to the Brillouin Zone.
-In plane waves we have that
-\begin{align}\label{cn3}
-\psi_{n\bfk}(\bfr)=\frac{1}{\sqrt{\gO}}
-\sum_{\bfG} C_{n\bfk}(\bfG)e^{i(\bfk+\bfG)\cdot\bfr}
+Now,
+\begin{align}\label{vnln.1}
+\bra{\bfr}
+[\hat V^\nl,\hat \bfr]
+\ket{\bfr'}
+&=
+\bra{\bfr}
+\hat V^\nl\hat \bfr
+-
+\hat \bfr\hat V^\nl
+\ket{\bfr'}
+=
+\bra{\bfr}
+\hat V^\nl\hat \bfr
+\ket{\bfr'}
+-
+\bra{\bfr}
+\hat \bfr\hat V^\nl
+\ket{\bfr'}
+\nonumber\\
+&=
+\bra{\bfr}
+\hat V^\nl \bfr'
+\ket{\bfr'}
+-
+\bra{\bfr}
+\bfr\hat V^\nl
+\ket{\bfr'}
+=
+\bra{\bfr}
+\hat V^\nl
+\ket{\bfr'}
+\big(\bfr'-\bfr\big)
+=V^\nl(\bfr,\bfr') \big(\bfr'-\bfr\big)
 ,
 \end{align}
-where $\gO$ is the volume of the unit cell.
-Then,
-\begin{align}\label{cn4}
-\bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^a]\ket{m\bfk}
-&=
-\frac{1}{\gO}
-\sum_{\bfG,\bfG'} 
-C^*_{n\bfk}(\bfG) 
-C_{m\bfk}(\bfG')
-\int d\bfr d\bfr' 
-e^{-i(\bfk+\bfG)\cdot \bfr}
- ( 
-V^\nl(\bfr,\bfr') r'^a 
-- 
-r^aV^\nl(\bfr,\bfr')
-) 
-e^{i(\bfk+\bfG')\cdot \bfr'}
-.
-\nonumber\\
-\end{align} 
-Using the following identity 
+where we use 
+$\hat r \bra{\bfr}=r \bra{\bfr}$,
+$\bra{\bfr'}\hat r=\bra{\bfr}r'$,
+and $V^\nl(\bfr,\bfr')=\bra{\bfr}\hat V^\nl\ket{\bfr'}$ (Eq.~\eqref{ache.3n}).
+Also, we have the following identity which will be used shortly, 
 \begin{align}\label{cn51}
-(\nabla_\bfK+\nabla_\bfK')
+(\nabla_\bfK+\nabla_{\bfK'})
+\frac{1}{\gO}
 \int e^{-i\bfK\cdot\bfr}
 V^\nl(\bfr,\bfr')
 e^{i\bfK'\cdot\bfr'}
 \,d\bfr d\bfr'
 &=
 -i
+\frac{1}{\gO}
 \int e^{-i\bfK\cdot\bfr}
 \left(
 \bfr
@@ -133,68 +91,149 @@ V^\nl(\bfr,\bfr')
 e^{i\bfK'\cdot\bfr'}
 \,d\bfr d\bfr'
 \nonumber\\
+(\nabla_\bfK+\nabla_{\bfK'})
+\bra{\bfK}
+V^\nl
+\ket{\bfK'}
 &=
-i
+\frac{i}{\gO}
 \int e^{-i\bfK\cdot\bfr}
-\left(
 V^\nl(\bfr,\bfr')
+\big(
 \bfr'
 -
 \bfr
- V^\nl(\bfr,\bfr')
-\right)
+\big)
 e^{i\bfK'\cdot\bfr'}
 \,d\bfr d\bfr'
 ,
-\nonumber\\
 \end{align}
-then, we obtain
+where $\gO$ is the volume of the unit cell,  
+and we defined
 \begin{align}\label{cn52}
-\bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^a]\ket{m\bfk}
-&=
--\frac{i}{\gO}
-\sum_{\bfG,\bfG'}
-C^*_{n\bfk}(\bfG)
-C_{m\bfk}(\bfG')
-(\nabla_{K^\rma}+\nabla_{K'^\rma})
-\int e^{-i\bfK\cdot\bfr}
-V^\nl(\bfr,\bfr')
-e^{i\bfK'\cdot\bfr'}
-\,d\bfr d\bfr'
-\nonumber\\
-&=
--\frac{i}{\gO}
-\sum_{\bfK,\bfK'}
-C^*_{n\bfk}(\bfG)
-C_{m\bfk}(\bfG')
-(\nabla_{K^\rma}+\nabla_{K'^\rma})
-\bra{\bfK} 
+V^\nl(\bfK,\bfK')\equiv
+\bra{\bfK}
 V^\nl
-\ket{\bfK'} 
-,
-\end{align}
-where $\bfK=\bfk+\bfG$ and
-\begin{align}\label{cn6}
-\bra{\bfK} 
-V^\nl
-\ket{\bfK'} 
+\ket{\bfK'}
 =
+\frac{1}{\gO}
 \int e^{-i\bfK\cdot\bfr}
 V^\nl(\bfr,\bfr')
 e^{i\bfK'\cdot\bfr'}
 \,d\bfr d\bfr'
 .
 \end{align}
-For fully  separable pseudopotentials in the 
-Kleinman-Bylander form,\cite{mottaCMS10,kleinman_efficacious_1982,adolphPRB96}
-above matrix elements 
-can be readily calculated.\cite{francesco}
-Therefore,
-\begin{align}\label{cn8}
-\frac{i}{\hbar}
-\bra{n\bfk}[\hat V^\nl(\hat\bfr,\hat\bfr'),\hat r^\rma]\ket{m\bfk'}
-=\gd(\bfk-\bfk') \bfv^\nl_{nm}(\bfk)
+Using the 
+plane wave expansion
+\begin{align}\label{cn3}
+\psi_{n\bfk}(\bfr)=\frac{1}{\sqrt{\gO}}
+\sum_{\bfG} A_{n\bfk}(\bfG)e^{i\bfK\cdot\bfr}
 ,
 \end{align}
-where $\bfv^\nl_{nm}(\bfk)$ are known quantities.
+with $\bfK=\bfk+\bfG$, we
+obtain from Eq.~\eqref{vnln.0} and Eq.~\eqref{cn51}, that
+\begin{align}\label{vnln.2}
+\bfv^\nl_{nm}(\bfk)
+&=
+\frac{i}{\hbar}
+\gd(\bfk-\bfk')
+\sum_{\bfG,\bfG'}
+A^*_{n\bfk}(\bfG) 
+A_{m\bfk'}(\bfG')
+\frac{1}{\gO}
+\int d\bfr d\bfr'
+e^{-i\bfK\cdot\bfr}
+\bra{\bfr}
+[\hat V^\nl,\hat \bfr]
+\ket{\bfr'}
+e^{i\bfK'\cdot\bfr'}
+\nonumber\\
+&=
+\frac{1}{\hbar}
+\gd(\bfk-\bfk')
+\sum_{\bfG,\bfG'}
+A^*_{n\bfk}(\bfG) 
+A_{m\bfk'}(\bfG')
+\frac{i}{\gO}
+\int d\bfr d\bfr'
+e^{-i\bfK\cdot\bfr}
+V^\nl(\bfr,\bfr')
+\big(\bfr'-\bfr\big)
+e^{i\bfK'\cdot\bfr'}
+\nonumber\\
+&=
+\frac{1}{\hbar}
+\gd(\bfk-\bfk')
+\sum_{\bfG,\bfG'}
+A^*_{n\bfk}(\bfG) 
+A_{m\bfk'}(\bfG')
+(\nabla_\bfK+\nabla_{\bfK'})
+V^\nl(\bfK,\bfK')
+.
+\end{align}  
 
+For fully  separable pseudopotentials in the 
+Kleinman-Bylander (KB) form,\cite{mottaCMS10,kleinman_efficacious_1982,adolphPRB96}
+the
+matrix elements 
+ $\bra{\bfK}
+V^\nl
+\ket{\bfK'}
+=V^\nl(\bfK,\bfK')
+$
+can be readily calculated. \cite{mottaCMS10}
+Indeed,
+the Fourier representation assumes 
+the form,\cite{adolphPRB96,gordienkoRPJ04,fuchsCPC99}
+\begin{align}\label{ji.1}
+V^\nl_{\mathrm{KB}}(\bfK,\bfK')
+ &= 
+\sum_s e^{i(\bfK-\bfK')\cdot\bfgtau_s}
+\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_lF_{lm}^s(\bfK)F_{lm}^{s*}(\bfK')
+\nonumber\\
+ &= 
+\sum_s 
+\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_lf_{lm}^s(\bfK)f_{lm}^{s*}(\bfK')
+,
+\end{align}
+with $f^s_{lm}(\bfK)=e^{i\bfK\cdot\bfgtau_s}F^s_{lm}(\bfK)$, and
+\begin{align}\label{ji.2}
+F^s_{lm}(\bfK)=\int d\bfr\,e^{-i\bfK\cdot\bfr}
+\gd V^S_l(\bfr)
+\Phi^\ps_{lm}(\bfr) 
+.
+\end{align}
+Here $\gd V^S_l(\bfr)$ is the non-local contribution of the ionic
+pseudopotential centered at the atomic position $\bfgtau_s$ located in
+the unit cell, 
+$\Phi^\ps_{lm}(\bfr)$ is the pseudo-wavefunction of the corresponding
+atom, while $E_l$ is the so called 
+Kleinman-Bylander energy. Further details can be found in
+Ref. \onlinecite{fuchsCPC99}.
+From Eq.~\eqref{ji.1} in Eq.~\eqref{vnln.2} we find
+\begin{align}
+\bfv^\nl_{nm}(\bfk)
+&=
+\frac{1}{\hbar}
+\sum_s
+\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_l \sum_{\bfG\bfG'}
+A^*_{n,\vec{k}}(\bfG)A_{n',\vec{k}}(\bfG')
+\nonumber\\
+&\times
+( \nabla_{\bfK}f_{lm}^s(\bfK)f_{lm}^{s*}(\bfK') +
+f_{lm}^s(\bfK)\nabla_{\bfK'}f_{lm}^{s*}(\bfK') ) \nonumber\\
+&
+=\frac{1}{\hbar}
+ \sum_s \sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_l \Bigg[
+\Bigg(\sum_{\bfG}A^*_{n,\vec{k}}(\bfG)\nabla_{\bfK}f_{lm}^s(\bfK)\Bigg)
+\Bigg(\sum_{\bfG'}A_{n',\vec{k}}(\bfG')
+f_{lm}^{s*}(\bfK')\Bigg) \nonumber\\
+&+
+\Bigg(\sum_{\bfG}A^*_{n,\vec{k}}(\bfG)
+f_{lm}^s(\bfK)\Bigg)\Bigg
+(\sum_{\bfG'}A_{n',\vec{k}}(\bfG')
+\nabla_{\bfK'}f_{lm}^{s*}(\bfK')\Bigg) \Bigg]
+,
+\end{align}
+where there are only single sums over $\bfG$. Above is implemented in
+the DP code.\cite{francesco}

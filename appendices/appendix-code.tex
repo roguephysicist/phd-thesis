@@ -45,16 +45,35 @@ and
 \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\gs,\text{a},\ell}_{vc}r^{\text{b}}_{cv}\right]
 \Delta^{\text{c}}_{cv}}{\omega^{\gs}_{cv}}\right)\delta(\omega^{\gs}_{cv}-2\omega).
 \end{align}
-
-Eq.~\eqref{chon.98}
+To evaluate above expressions we need the following ($m_e=1$):
+\begin{align}\label{}
+\bfv^\lda_{nm}(\bfk) 
+=(1/m_e)\bfp_{nm}(\bfk)+\bfv^\nl_{nm}(\bfk)
+=\bfp_{nm}(\bfk)+\bfv^\nl_{nm}(\bfk)
+,
+\end{align}
+that
+ includes the local and nonlocal parts of the pseudopotential. They
+ correspond to the following files:\\
+$\bullet$ $\bfp_{nm}(\bfk)\to$ \verb=me_pmn_*=\\
+$\bullet$ $\bfv^\nl_{nm}(\bfk)\to$ \verb=me_vnlnm_*=\\
+where the \verb=nm= or \verb=mn= order in the files is irrelevant, and
+ought to be fixed just for the {\it biuty} of it.
+Option \verb=-n= in \verb=all_responses.sh= adds above files, so   
+$\bfv^\lda_{nm}(\bfk)$
+ is available in the code. 
+Then,
 \begin{align}\label{c-chon.98}
 \bfr_{nm}(\bfk)=\frac{\bfv^\lda_{nm}(\bfk)}{i\go^\lda_{nm}(\bfk)}
 \quad\quad n\ne m
 ,
 \end{align}   
-where $\bfv^\lda_{nm}(\bfk)$ include the local and nonlocal parts of the pseudopotential.
+is also available. 
+If option \verb=-n= is not chosen, then the contribution of $\bfv^\nl_{nm}(\bfk)$
+is neglected in the calculation of any response. Obviously, in this
+case the code only uses \verb=me_pmn_*=.
 
-Eq.~\eqref{a.1} and \eqref{a.2}
+We need Eq.~\eqref{a.1} and \eqref{a.2}
 \begin{align}\label{c-a.1}
 \calv^{\gs,\rma,\ell}_{nm}
 &=
@@ -75,15 +94,37 @@ Eq.~\eqref{a.1} and \eqref{a.2}
 \right)_{;k^\rmb}
 .
 \end{align}
-For the LDA term we have
+ The first LDA term is
 \begin{align}\label{c-a.2}
 \calv^{\lda,\rma,\ell}_{nm}
 &=
 \frac{1}{2}\sum_q\left(
 v^{\lda,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{\lda,\rma}_{qm}
 \right)
-\nonumber\\
-\left(\calv^{\lda,\rma}_{nm}\right)_{;k^\rmb}
+.
+\end{align} 
+If option \verb=-n= is not chosen in \verb=all_responses.sh= above is
+not calculated and\\
+$\bullet$ $\calv^{\lda,\rma,\ell}_{nm}\to$ \verb=me_cpmn_*=\\ 
+If option \verb=-n= is chosen above expresion must be calculated in
+\verb=set_input_ascii.f90=. We mention that
+$\calv^{\lda,\rma,\ell}_{nm}$ can be computed directly,\cite{nicolaspc}
+avoiding the sum over the full set of bands $q$, however we chose this route.
+Then, we need 
+Eq.~\eqref{eni.4}
+\begin{align}\label{c-eni.4}
+\calc^\ell_{nm}(\bfk)=
+\sum_{\bfG,\bfG'} A^*_{n\bfk}(\bfG')  A_{m\bfk}(\bfG)
+\gd_{\bfG_\parallel \bfG'_\parallel}
+f_\ell(G_\perp-G'_\perp)
+.
+\end{align} 
+which is coded in \verb=sub_pmn_ascii.f90= within the same subroutine of $\calbv^\ell_{nm}$
+calculated with Eq.~\eqref{eni.2}.
+
+ The second LDA term is
+\begin{align}\label{c-a.2n}
+\left(\calv^{\lda,\rma,\ell}_{nm}\right)_{;k^\rmb}
 &=
 \frac{1}{2}\sum_q\left(
 (v^{\lda,\rma}_{nq})_{;k^\rmb}\calc^\ell_{qm}
@@ -94,10 +135,11 @@ v^{\lda,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 +
 \calc^\ell_{nq} (v^{\lda,\rma}_{qm})_{;k^\rmb}
 \right)
-.
+,
 \end{align} 
- 
-Eqs.~\eqref{a.3}, \eqref{a.3b} and \eqref{choni.1}
+where\\
+$\bullet$ for $n\ne m$\\
+Eq.~\eqref{a.3}
 \begin{align}\label{c-a.3}
 (v^{\lda,\rma}_{nm})_{;k^\rmb}
 &=  
@@ -105,16 +147,17 @@ im_e\gD^b_{nm}r^\rma_{nm}
 + 
 im_e\go^\lda_{nm}(r^\rma_{nm})_{;k^\rmb}
 \quad\mathrm{for}\quad n\ne m
-.
+,
 \end{align} 
-
-Eqs.~\eqref{eli.13} and \eqref{na_rgendevn},
+with
+Eq.~\eqref{eli.13}
 \begin{align}\label{c-eli.13}
 \gD_{nm}^{\rma}
 =
 v_{nn}^{\lda,\rma}-v_{mm}^{\lda,\rma}
 ,
 \end{align}
+and \eqref{na_rgendevn}
 \begin{align}\label{c-na_rgendevn}
 (r^{\rmb}_{nm})_{;k^{\rma}}
 &=
@@ -139,10 +182,34 @@ r^{\rmb}_{\ell m}
 r^{\rmb}_{n\ell}
 r^{\rma}_{\ell m}
 \bigg)
+\nonumber\\
+&\approx
+\frac{
+r^{\rma}_{nm}
+\Delta^{\rmb}_{mn}
++r^{\rmb}_{nm}
+\Delta^{\rma}_{mn}
+}
+{\go^\lda_{nm}}
++
+\frac{i}{\go^\lda_{nm}}
+\sum_{\ell}
+\bigg(
+\go^\lda_{\ell m}
+r^{\rma}_{n\ell}
+r^{\rmb}_{\ell m}
+-
+\go^\lda_{n\ell}
+r^{\rmb}_{n\ell}
+r^{\rma}_{\ell m}
+\bigg)
 ,
 \end{align}
-with $\calt^{\rma\rmb}_{nm}\approx 0$ for $n\ne m$. Also, 
-Eq.~\eqref{a.3c}
+where $\calt^{\rma\rmb}_{nm}\approx 0$.\\
+$\bullet$ for $n=m$\\
+Since 
+$\calt^{\rma\rmb}_{nn}\approx (\hbar/m_e)\gd_{\rma\rmb}$,
+Eq.~\eqref{a.3c} gives
 \begin{align}\label{c-a.3c}
 (v^{\lda,\rma}_{nn})_{;k^\rmb}
 &=
@@ -170,11 +237,26 @@ r^\rmb_{\ell n}
 r^\rmb_{n\ell} 
 r^{\rma}_{\ell n}
 \bigg)
-,
+.
 \end{align} 
-since 
-$\calt^{\rma\rmb}_{nn}\approx (\hbar/m_e)\gd_{\rma\rmb}$ for $n=m$.
+For Eq.~\eqref{c-a.2n} we need
+\eqref{a.7}
+\begin{align}\label{c-a.7}
+ (\calc^\ell_{nm})_{;\bfk}
+&=
+i\sum_{q\ne nm}
+\left(
+r_{nq}^\rma
+\calc^\ell_{qm}
+-
+\calc^\ell_{nq}
+r_{qm}^\rma
+\right)
++ir_{nm}^\rma(\calc^\ell_{mm}-\calc^\ell_{nn})
+.
+\end{align} 
 
+For the scissor related term we have:
 Eq.~\eqref{a.3b} , \eqref{choni.1} and \eqref{chon.2}
 \begin{align}\label{c-a.3b}
 \calv^{\cals,\rma,\ell}_{nm}
@@ -196,7 +278,7 @@ v^{\cals,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 \right)
 ,
 \end{align}  
-with (Eqs.~\eqref{chon.2} and \eqref{choni.1})
+with Eqs.~\eqref{chon.2} and \eqref{choni.1}
 \begin{align}\label{c-chon.2} 
 v^{\cals,\rma}_{nm}=i\gS f_{mn}r^\rma_{nm}
 ,
@@ -208,31 +290,7 @@ v^{\cals,\rma}_{nm}=i\gS f_{mn}r^\rma_{nm}
 \end{align}
 where $\hbar\gS$ is the scissors correction.
 
-Eq.~\eqref{eni.4} and \eqref{a.7}
-\begin{align}\label{c-eni.4}
-\calc^\ell_{nm}(\bfk)=
-\sum_{\bfG,\bfG'} A^*_{n\bfk}(\bfG')  A_{m\bfk}(\bfG)
-\gd_{\bfG_\parallel \bfG'_\parallel}
-f_\ell(G_\perp-G'_\perp)
-.
-\end{align} 
-\begin{align}\label{c-a.7}
- (\calc^\ell_{nm})_{;\bfk}
-&=
-i\sum_{q\ne nm}
-\left(
-r_{nq}^\rma
-\calc^\ell_{qm}
--
-\calc^\ell_{nq}
-r_{qm}^\rma
-\right)
-+ir_{nm}^\rma(\calc^\ell_{mm}-\calc^\ell_{nn})
-.
-\end{align} 
-$\calc^\ell_{nm}(\bfk)$  
-must be coded in the same subroutine of $\calbv^\ell_{nm}$
- calculated with Eq.~\eqref{eni.2}
+
 
 \subsubsection{Consistency check-up}
 
@@ -260,4 +318,8 @@ p^\rma_{nq}\calc^\ell_{qm}
 \Big)
 ,
 \end{align}
-which must give the same results as those computed through Eq.~\eqref{eni.2}.
+which must give the same results as those computed through
+Eq.~\eqref{eni.2}.
+Indeed, we have checked that this is the case. The
+\verb=consistency-of-cfmn.f90=
+was used to check this.
