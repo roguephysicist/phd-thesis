@@ -59,19 +59,37 @@ $\bullet$ $\bfp_{nm}(\bfk)\to$ \verb=me_pmn_*=\\
 $\bullet$ $\bfv^\nl_{nm}(\bfk)\to$ \verb=me_vnlnm_*=\\
 where the \verb=nm= or \verb=mn= order in the files is irrelevant, and
 ought to be fixed just for the {\it biuty} of it.
-Option \verb=-n= in \verb=all_responses.sh= adds above files, so   
+Option \verb=-n= in \verb=all_responses.sh= does
+\begin{enumerate}
+\item 
+ \verb=> cp me_pmn_* me_pmn_*.o= 
+\item adds \verb=me_pmn_*= and \verb=me_vnlnm_*= into
+  \verb=me_pmn_*= 
+\item calculates the response
+\item \verb=> mv me_pmn_*.o me_pmn_*=
+\end{enumerate}
+so   
 $\bfv^\lda_{nm}(\bfk)$
- is available in the code. 
-Then,
+is available for the calculation of the response, and with it we calculate
+(Eqs.~\eqref{chon.9} and \eqref{chon.10}),
 \begin{align}\label{c-chon.98}
-\bfr_{nm}(\bfk)=\frac{\bfv^\lda_{nm}(\bfk)}{i\go^\lda_{nm}(\bfk)}
-\quad\quad n\ne m
-,
+\bfv^\gs_{nm}(\bfk)
+&=
+\left(1+\frac{\gS}{\go_c(\bfk)-\go_v(\bfk)}\right)\bfv^\lda_{nm}(\bfk)
+\quad\quad n\notin D_m
+\nonumber\\
+\bfv^\gs_{nn}(\bfk)
+&=
+\bfv^\lda_{nn}(\bfk)
+\nonumber\\
+\bfr_{nm}(\bfk)&=\frac{\bfv^\gs_{nm}(\bfk)}{i\go^\gs_{nm}(\bfk)}
+=\frac{\bfv^\lda_{nm}(\bfk)}{i\go^\lda_{nm}(\bfk)}
+\quad\quad n\notin D_m
+.
 \end{align}   
-is also available. 
 If option \verb=-n= is not chosen, then the contribution of $\bfv^\nl_{nm}(\bfk)$
 is neglected in the calculation of any response. Obviously, in this
-case the code only uses \verb=me_pmn_*=.
+case the code only uses \verb=me_pmn_*= without adding \verb=me_vnlnm_*= 
 
 We need Eq.~\eqref{a.1} and \eqref{a.2}
 \begin{align}\label{c-a.1}
@@ -103,13 +121,18 @@ v^{\lda,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{\lda,\rma}_{qm}
 \right)
 .
 \end{align} 
-If option \verb=-n= is not chosen in \verb=all_responses.sh= above is
+If option \verb=-n= is not chosen in \verb=all_responses.sh=
+Eq.~\eqref{c-a.2}
+ is
 not calculated and\\
 $\bullet$ $\calv^{\lda,\rma,\ell}_{nm}\to$ \verb=me_cpmn_*=\\ 
-If option \verb=-n= is chosen above expresion must be calculated in
+If option \verb=-n= is chosen Eq.~\eqref{c-a.2}
+ must be calculated in
 \verb=set_input_ascii.f90=. We mention that
 $\calv^{\lda,\rma,\ell}_{nm}$ can be computed directly,\cite{nicolaspc}
-avoiding the sum over the full set of bands $q$, however we chose this route.
+avoiding the sum over the full set of bands $q$, however we chose to
+compute Eq.~\eqref{c-a.2}, which is done in
+\verb=functions.f90=.
 Then, we need 
 Eq.~\eqref{eni.4}
 \begin{align}\label{c-eni.4}
@@ -289,9 +312,55 @@ v^{\cals,\rma}_{nm}=i\gS f_{mn}r^\rma_{nm}
 ,
 \end{align}
 where $\hbar\gS$ is the scissors correction.
+Notice that
+$v^{\cals,\rma}_{nn}=0$ and 
+$(v^{\cals,\rma}_{nn})_{;k^\rmb}=0$.
 
+\subsection{Bulk expressions}
 
-
+For a bulk $\calc^\ell_{nm}(\bfk)=\gd_{nm}$, then
+$(\calc^\ell_{nm}(\bfk))_{;\bfk}=0$, and Eq.~\eqref{c-a.1} reduces to
+\begin{align}\label{choni.9}
+v^{\gs,\rma}_{nm}
+&=
+v^{\lda,\rma}_{nm}
++
+v^{\cals,\rma}_{nm}
+\nonumber\\
+\bfv^\gs_{nm}(\bfk)
+&=
+\left(1+\frac{\gS}{\go_c(\bfk)-\go_v(\bfk)}\right)\bfv^\lda_{nm}(\bfk)
+\quad\quad n\notin D_m
+\nonumber\\
+\bfv^\gs_{nn}(\bfk)
+&=
+\bfv^\lda_{nn}(\bfk)
+,
+\end{align}
+where in \verb=$TINIBA/latm= the values are coded in the array
+called
+\verb=momMatElem=.  
+If option \verb=-n= is given while running
+\verb=all_resposnses.sh=, then $\bfv^\nl_{nm}(\bfk)$ are included in 
+\verb=momMatElem=. 
+Also,
+\begin{align}\label{c-a.1nn}
+\left(
+v^{\gs,\rma}_{nm}
+\right)_{;k^\rmb}
+&=
+\left(
+v^{\lda,\rma}_{nm}
+\right)_{;k^\rmb}
++
+\left(
+v^{\cals,\rma}_{nm}
+\right)_{;k^\rmb}
+,
+\end{align}
+where with the r.h.s. expressions are given above. The generalized
+derivative of $(\bfv^\gs_{nm})_{;\bfk}$ seems not to be needed  in any
+response so far, therefore is not coded.
 \subsection{Consistency check-up}
 
 To check that the coding of 
@@ -321,5 +390,23 @@ p^\rma_{nq}\calc^\ell_{qm}
 which must give the same results as those computed through
 Eq.~\eqref{eni.2}.
 Indeed, we have checked that this is the case. The
-\verb=consistency-of-cfmn.f90=
-was used to check this.
+\verb=$TINIBA/util/consistency-of-cfmn.sh=
+is used to check this.
+
+\subsection{Subroutines}
+
+The following subroutines/shells are involved in the coding,
+and are documented between\\
+\verb=#BMSd=\\
+$\vdots$\\
+\verb=#BMSu=\\
+marks.
+\begin{enumerate}
+\item \verb=$TINIBA/utils/all_responses.sh=
+\item \verb=$TINIBA/latm/SRC_1setinput/inparams.f90=\\
+\textcolor{red}{Warning:} compile both\\
+\verb=$TINIBA/latm/SRC_1setinput/= \\
+and\\
+\verb=$TINIBA/latm/SRC_2latm/= 
+\item \verb=$TINIBA/latm/SRC_1setinput/set_input_ascii.f90=\\
+\end{enumerate}

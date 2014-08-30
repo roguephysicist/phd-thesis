@@ -461,7 +461,19 @@ where we see that $\bfv^\cals_{nn}=0$, then
 \end{align}
 since
 $\go^\gs_{nm}-\gS f_{mn}=\go^\lda_{nm}$. Therefore, 
-Eq.~\eqref{pmnrmn} gives
+\begin{align}\label{chon.9}
+\bfv^\gs_{nm}(\bfk)
+&=
+\frac{\go^\gs_{nm}}{\go^\lda_{nm}}\bfv^\lda_{nm}(\bfk)
+=\left(1+\frac{\gS}{\go_c(\bfk)-\go_v(\bfk)}\right)\bfv^\lda_{nm}(\bfk)
+\quad\quad n\notin D_m
+\nonumber\\
+\bfv^\gs_{nn}(\bfk)
+&=
+\bfv^\lda_{nn}(\bfk)
+,
+\end{align} 
+and Eq.~\eqref{pmnrmn} gives
 \begin{align}\label{chon.10}
 \bfr_{nm}(\bfk)
 =
@@ -1118,9 +1130,102 @@ From Eq.~\eqref{vop2},
 \calbv^{\nl,\ell}
 .
 \end{align}
-The matrix elements of $\calbv^{\cals,\ell}$ and $\calbv^{\lda,\ell}$
-are given in 
+We remark that the simple relationship between 
+$\bfv^{\sigma}_{nm}(\bfk)$ 
+and 
+$\bfv^{\lda}_{nm}(\bfk)$,
+given in 
+Eq.~\eqref{chon.9}, 
+does not hold between
+$\calbv^{\sigma,\ell}_{nm}(\bfk)$   
+and 
+$\calbv^{\lda,\ell}_{nm}(\bfk)$,
+i.e.
+$\calbv^{\sigma,\ell}_{nm}(\bfk)\ne
+(\go^\gs_{nm}/\go_{nm})
+\calbv^{\lda,\ell}_{nm}(\bfk)$ 
+and
+$\calbv^{\sigma,\ell}_{nn}(\bfk)\ne
+\calbv^{\lda,\ell}_{nn}(\bfk)$
+,
+and thus, to calculate
+$\calbv^{\sigma,\ell}_{nm}(\bfk)$ 
+we must calculate the matrix elements of $\calbv^{\cals,\ell}$ and
+$\calbv^{\lda,\ell}$ (separately)
+according to the expressions of
 Appendix \ref{calvs}.
+% Using Eq.~\eqref{chon.9}, the matrix elements of Eq.~\eqref{vcali}
+% are given by
+% \begin{align}\label{end.1}
+% \calbv^{\sigma,\ell}_{nm}(\bfk)
+% &=
+% \frac{1}{2}
+% \sum_q
+% \Big(
+% \calc^\ell_{nq}\bfv^\sigma_{qm}
+% +
+% \bfv^\sigma_{nq}\calc^\ell_{qm}
+% \Big)
+% \nonumber\\
+% &=
+% \frac{1}{2}
+% \Big(
+% \calc^\ell_{nn}\bfv^\sigma_{nm}
+% +
+% \bfv^\sigma_{nn}\calc^\ell_{nm}
+% +
+% \calc^\ell_{nm}\bfv^\sigma_{mm}
+% +
+% \bfv^\sigma_{nm}\calc^\ell_{mm}
+% \Big)
+% \nonumber\\
+% &+
+% \frac{1}{2}
+% \sum_{q\neq(nm)}
+% \Big(
+% \frac{\go^\sigma_{qm}}{\go_{qm}}
+% \calc^\ell_{nq}\bfv^\lda_{qm}
+% +
+% \frac{\go^\sigma_{nq}}{\go_{nq}}
+% \bfv^\lda_{nq}\calc^\ell_{qm}
+% \Big)
+% ,
+% \end{align}
+% \begin{align}\label{end.2}
+% \calbv^{\sigma,\ell}_{nn}(\bfk)
+% &=
+% \frac{1}{2}
+% \Big(
+% \calc^\ell_{nn}\bfv^\sigma_{nn}
+% +
+% \bfv^\sigma_{nn}\calc^\ell_{nn}
+% \Big)
+% \nonumber\\
+% &+
+% \frac{1}{2}
+% \sum_{q\neq n}
+% \Big(
+% \frac{\go^\sigma_{qn}}{\go_{qn}}
+% \calc^\ell_{nq}\bfv^\lda_{qn}
+% +
+% \frac{\go^\sigma_{nq}}{\go_{nq}}
+% \bfv^\lda_{nq}\calc^\ell_{qn}
+% \Big)
+% \nonumber\\
+% &=
+% \calc^\ell_{nn}\bfv^\lda_{nn}
+% \nonumber\\
+% &+
+% \frac{1}{2}
+% \sum_{q\neq n}
+% \frac{\go^\sigma_{qn}}{\go_{qn}}
+% \Big(
+% \calc^\ell_{nq}\bfv^\lda_{qn}
+% +
+% \bfv^\lda_{nq}\calc^\ell_{qn}
+% \Big)
+% ,
+% \end{align}
 
 To limit the response to one surface, the equivalent of Eq.~\eqref{nl.4} 
 for $\calbv^\ell=\calbp^\ell/m_e$ was proposed in 
@@ -1139,6 +1244,12 @@ However, the first formal derivation of this scheme is presented in
 Ref.~\onlinecite{mendozaPRB06} for the linear response, and here in this 
 article, for the second harmonic optical response of semiconductors.
 
+%??d
+% debemos mencionar que v caligrafica con tijeras esta mal calculada
+% para la respuesta lineal y la inyeccion de corriente en el
+% tratamiento capa por capa. Tambien, habria que ver que pasa con la
+% inyeccion de espin capa-por-capa
+%??u 
 
 
 \section{Microscopic surface susceptibility}
