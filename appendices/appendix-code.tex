@@ -125,7 +125,7 @@ If option \verb=-n= is not chosen in \verb=all_responses.sh=
 Eq.~\eqref{c-a.2}
  is
 not calculated and\\
-$\bullet$ $\calv^{\lda,\rma,\ell}_{nm}\to$ \verb=me_cpmn_*=\\ 
+$\bullet$ $\calv^{\lda,\rma,\ell}_{nm}\to$ \verb=me_cpmn_*=\\  
 If option \verb=-n= is chosen Eq.~\eqref{c-a.2}
  must be calculated in
 \verb=set_input_ascii.f90=. We mention that
@@ -315,6 +315,71 @@ where $\hbar\gS$ is the scissors correction.
 Notice that
 $v^{\cals,\rma}_{nn}=0$ and 
 $(v^{\cals,\rma}_{nn})_{;k^\rmb}=0$.
+Substuiting Eq.~\eqref{c-chon.2} into \eqref{c-a.3b}, we obtain
+  \begin{align}\label{vs.cv}
+      \mathcal{V}^{S,a,\ell}_{cv}
+&= 
+      \frac{i\Sigma}{2}
+      \left[\sum_{v^{\prime}}r^{a}_{cv^{\prime}}C^{\ell}_{v^{\prime}v} 
+          + \sum_{c^{\prime}}C^{\ell}_{cc^{\prime}}r^{a}_{c^{\prime}v}\right],
+\nonumber\\
+      \mathcal{V}^{S,a,\ell}_{vc}
+&= 
+      (\mathcal{V}^{S,a,\ell}_{cv})^*
+    \end{align}
+and    
+  \begin{align}\label{vs.cc}
+    \mathcal{V}^{S,a,\ell}_{cc} 
+    &= -\Sigma\sum_{v}
+    \text{Im}\left[r^{a}_{cv}C^{\ell}_{vc}\right],
+  \end{align}
+ \begin{align}\label{vs.vv}
+    \mathcal{V}^{S,a,\ell}_{vv} 
+    &= \Sigma\sum_{c}
+    \text{Im}\left[r^{a}_{vc}C^{\ell}_{cv}\right],
+  \end{align}
+where the last two are real functions as they must, since they are velocities.
+\subsection{Coding for $\calv^{\gs,\rma,\ell}_{nm}(\bfk)$}
+Recall that 
+$\calv^{\lda,\rma,\ell}_{mn}=(\calv^{\lda,\rma,\ell}_{nm})^*$
+and 
+$\calv^{\cals,\rma,\ell}_{mn}=(\calv^{\cals,\rma,\ell}_{nm})^*$ 
+\begin{itemize}
+%%%
+\item If \verb=-n= option is chosen in \verb=all_responses.sh=
+\begin{itemize}
+\item $\calv^{\lda,\rma,\ell}_{nm}$, comes from
+  Eq.~\eqref{c-a.2}, coded in \verb=functions.f90=
+\end{itemize}
+%%%
+\item If \verb=-n= option is NOT chosen in \verb=all_responses.sh=
+\begin{itemize}
+\item $\calv^{\lda,\rma,\ell}_{nm}$ 
+is used from \verb=me_cpmn_*=
+  which is Eq.~\eqref{eni.2} and is coded in \verb=sub_pmn_ascii.f90=
+\end{itemize}
+%%%
+\end{itemize}
+For either case
+\begin{itemize}
+\item $\calv^{\cals,\rma,\ell}_{nm}$ 
+is obtained from
+  Eqs.~\eqref{vs.cv}, \eqref{vs.cc} or \eqref{vs.vv}, depending on
+  $nm$. This is coded in \verb=functions.f90= and used in 
+\verb=set_input_ascii.f90=  
+\end{itemize}
+Thus,\\
+$\bullet$ 
+$\calv^{\gs,\rma,\ell}_{nm}(\bfk)=\calv^{\lda,\rma,\ell}_{nm}(\bfk)+\calv^{\cals,\rma,\ell}_{nm}(\bfk)$\\
+is stored in \verb=calMomMatElem= 
+array, constructed in 
+\verb=set_input_ascii.f90=, and used in \verb=SRC_2latm= for
+integrating the response function. A brave young soul, should change   
+\verb=calMomMatElem= to \verb=calVelMatElem= in order to have a more
+appropriate name. But as good old DNA, we construct upon available
+ATGC; using the old structure, adding functionality and  keeping all
+the usles non-codifying crap, thus making Darwing proud of us! 
+
 
 \subsection{Bulk expressions}
 
