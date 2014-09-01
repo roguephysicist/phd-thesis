@@ -45,16 +45,53 @@ and
 \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\gs,\text{a},\ell}_{vc}r^{\text{b}}_{cv}\right]
 \Delta^{\text{c}}_{cv}}{\omega^{\gs}_{cv}}\right)\delta(\omega^{\gs}_{cv}-2\omega).
 \end{align}
-
-Eq.~\eqref{chon.98}
-\begin{align}\label{c-chon.98}
-\bfr_{nm}(\bfk)=\frac{\bfv^\lda_{nm}(\bfk)}{i\go^\lda_{nm}(\bfk)}
-\quad\quad n\ne m
+To evaluate above expressions we need the following ($m_e=1$):
+\begin{align}\label{}
+\bfv^\lda_{nm}(\bfk) 
+=(1/m_e)\bfp_{nm}(\bfk)+\bfv^\nl_{nm}(\bfk)
+=\bfp_{nm}(\bfk)+\bfv^\nl_{nm}(\bfk)
 ,
+\end{align}
+that
+ includes the local and nonlocal parts of the pseudopotential. They
+ correspond to the following files:\\
+$\bullet$ $\bfp_{nm}(\bfk)\to$ \verb=me_pmn_*=\\
+$\bullet$ $\bfv^\nl_{nm}(\bfk)\to$ \verb=me_vnlnm_*=\\
+where the \verb=nm= or \verb=mn= order in the files is irrelevant, and
+ought to be fixed just for the {\it biuty} of it.
+Option \verb=-n= in \verb=all_responses.sh= does
+\begin{enumerate}
+\item 
+ \verb=> cp me_pmn_* me_pmn_*.o= 
+\item adds \verb=me_pmn_*= and \verb=me_vnlnm_*= into
+  \verb=me_pmn_*= 
+\item calculates the response
+\item \verb=> mv me_pmn_*.o me_pmn_*=
+\end{enumerate}
+so   
+$\bfv^\lda_{nm}(\bfk)$
+is available for the calculation of the response, and with it we calculate
+(Eqs.~\eqref{chon.9} and \eqref{chon.10}),
+\begin{align}\label{c-chon.98}
+\bfv^\gs_{nm}(\bfk)
+&=
+\left(1+\frac{\gS}{\go_c(\bfk)-\go_v(\bfk)}\right)\bfv^\lda_{nm}(\bfk)
+\quad\quad n\notin D_m
+\nonumber\\
+\bfv^\gs_{nn}(\bfk)
+&=
+\bfv^\lda_{nn}(\bfk)
+\nonumber\\
+\bfr_{nm}(\bfk)&=\frac{\bfv^\gs_{nm}(\bfk)}{i\go^\gs_{nm}(\bfk)}
+=\frac{\bfv^\lda_{nm}(\bfk)}{i\go^\lda_{nm}(\bfk)}
+\quad\quad n\notin D_m
+.
 \end{align}   
-where $\bfv^\lda_{nm}(\bfk)$ include the local and nonlocal parts of the pseudopotential.
+If option \verb=-n= is not chosen, then the contribution of $\bfv^\nl_{nm}(\bfk)$
+is neglected in the calculation of any response. Obviously, in this
+case the code only uses \verb=me_pmn_*= without adding \verb=me_vnlnm_*= 
 
-Eq.~\eqref{a.1} and \eqref{a.2}
+We need Eq.~\eqref{a.1} and \eqref{a.2}
 \begin{align}\label{c-a.1}
 \calv^{\gs,\rma,\ell}_{nm}
 &=
@@ -75,15 +112,42 @@ Eq.~\eqref{a.1} and \eqref{a.2}
 \right)_{;k^\rmb}
 .
 \end{align}
-For the LDA term we have
+ The first LDA term is
 \begin{align}\label{c-a.2}
 \calv^{\lda,\rma,\ell}_{nm}
 &=
 \frac{1}{2}\sum_q\left(
 v^{\lda,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{\lda,\rma}_{qm}
 \right)
-\nonumber\\
-\left(\calv^{\lda,\rma}_{nm}\right)_{;k^\rmb}
+.
+\end{align} 
+If option \verb=-n= is not chosen in \verb=all_responses.sh=
+Eq.~\eqref{c-a.2}
+ is
+not calculated and\\
+$\bullet$ $\calv^{\lda,\rma,\ell}_{nm}\to$ \verb=me_cpmn_*=\\  
+If option \verb=-n= is chosen Eq.~\eqref{c-a.2}
+ must be calculated in
+\verb=set_input_ascii.f90=. We mention that
+$\calv^{\lda,\rma,\ell}_{nm}$ can be computed directly,\cite{nicolaspc}
+avoiding the sum over the full set of bands $q$, however we chose to
+compute Eq.~\eqref{c-a.2}, which is done in
+\verb=functions.f90=.
+Then, we need 
+Eq.~\eqref{eni.4}
+\begin{align}\label{c-eni.4}
+\calc^\ell_{nm}(\bfk)=
+\sum_{\bfG,\bfG'} A^*_{n\bfk}(\bfG')  A_{m\bfk}(\bfG)
+\gd_{\bfG_\parallel \bfG'_\parallel}
+f_\ell(G_\perp-G'_\perp)
+.
+\end{align} 
+which is coded in \verb=sub_pmn_ascii.f90= within the same subroutine of $\calbv^\ell_{nm}$
+calculated with Eq.~\eqref{eni.2}.
+
+ The second LDA term is
+\begin{align}\label{c-a.2n}
+\left(\calv^{\lda,\rma,\ell}_{nm}\right)_{;k^\rmb}
 &=
 \frac{1}{2}\sum_q\left(
 (v^{\lda,\rma}_{nq})_{;k^\rmb}\calc^\ell_{qm}
@@ -94,10 +158,11 @@ v^{\lda,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 +
 \calc^\ell_{nq} (v^{\lda,\rma}_{qm})_{;k^\rmb}
 \right)
-.
+,
 \end{align} 
- 
-Eqs.~\eqref{a.3}, \eqref{a.3b} and \eqref{choni.1}
+where\\
+$\bullet$ for $n\ne m$\\
+Eq.~\eqref{a.3}
 \begin{align}\label{c-a.3}
 (v^{\lda,\rma}_{nm})_{;k^\rmb}
 &=  
@@ -105,16 +170,17 @@ im_e\gD^b_{nm}r^\rma_{nm}
 + 
 im_e\go^\lda_{nm}(r^\rma_{nm})_{;k^\rmb}
 \quad\mathrm{for}\quad n\ne m
-.
+,
 \end{align} 
-
-Eqs.~\eqref{eli.13} and \eqref{na_rgendevn},
+with
+Eq.~\eqref{eli.13}
 \begin{align}\label{c-eli.13}
 \gD_{nm}^{\rma}
 =
 v_{nn}^{\lda,\rma}-v_{mm}^{\lda,\rma}
 ,
 \end{align}
+and \eqref{na_rgendevn}
 \begin{align}\label{c-na_rgendevn}
 (r^{\rmb}_{nm})_{;k^{\rma}}
 &=
@@ -139,10 +205,34 @@ r^{\rmb}_{\ell m}
 r^{\rmb}_{n\ell}
 r^{\rma}_{\ell m}
 \bigg)
+\nonumber\\
+&\approx
+\frac{
+r^{\rma}_{nm}
+\Delta^{\rmb}_{mn}
++r^{\rmb}_{nm}
+\Delta^{\rma}_{mn}
+}
+{\go^\lda_{nm}}
++
+\frac{i}{\go^\lda_{nm}}
+\sum_{\ell}
+\bigg(
+\go^\lda_{\ell m}
+r^{\rma}_{n\ell}
+r^{\rmb}_{\ell m}
+-
+\go^\lda_{n\ell}
+r^{\rmb}_{n\ell}
+r^{\rma}_{\ell m}
+\bigg)
 ,
 \end{align}
-with $\calt^{\rma\rmb}_{nm}\approx 0$ for $n\ne m$. Also, 
-Eq.~\eqref{a.3c}
+where $\calt^{\rma\rmb}_{nm}\approx 0$.\\
+$\bullet$ for $n=m$\\
+Since 
+$\calt^{\rma\rmb}_{nn}\approx (\hbar/m_e)\gd_{\rma\rmb}$,
+Eq.~\eqref{a.3c} gives
 \begin{align}\label{c-a.3c}
 (v^{\lda,\rma}_{nn})_{;k^\rmb}
 &=
@@ -170,11 +260,26 @@ r^\rmb_{\ell n}
 r^\rmb_{n\ell} 
 r^{\rma}_{\ell n}
 \bigg)
-,
+.
 \end{align} 
-since 
-$\calt^{\rma\rmb}_{nn}\approx (\hbar/m_e)\gd_{\rma\rmb}$ for $n=m$.
+For Eq.~\eqref{c-a.2n} we need
+\eqref{a.7}
+\begin{align}\label{c-a.7}
+ (\calc^\ell_{nm})_{;\bfk}
+&=
+i\sum_{q\ne nm}
+\left(
+r_{nq}^\rma
+\calc^\ell_{qm}
+-
+\calc^\ell_{nq}
+r_{qm}^\rma
+\right)
++ir_{nm}^\rma(\calc^\ell_{mm}-\calc^\ell_{nn})
+.
+\end{align} 
 
+For the scissor related term we have:
 Eq.~\eqref{a.3b} , \eqref{choni.1} and \eqref{chon.2}
 \begin{align}\label{c-a.3b}
 \calv^{\cals,\rma,\ell}_{nm}
@@ -196,7 +301,7 @@ v^{\cals,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 \right)
 ,
 \end{align}  
-with (Eqs.~\eqref{chon.2} and \eqref{choni.1})
+with Eqs.~\eqref{chon.2} and \eqref{choni.1}
 \begin{align}\label{c-chon.2} 
 v^{\cals,\rma}_{nm}=i\gS f_{mn}r^\rma_{nm}
 ,
@@ -207,33 +312,120 @@ v^{\cals,\rma}_{nm}=i\gS f_{mn}r^\rma_{nm}
 ,
 \end{align}
 where $\hbar\gS$ is the scissors correction.
+Notice that
+$v^{\cals,\rma}_{nn}=0$ and 
+$(v^{\cals,\rma}_{nn})_{;k^\rmb}=0$.
+Substuiting Eq.~\eqref{c-chon.2} into \eqref{c-a.3b}, we obtain
+  \begin{align}\label{vs.cv}
+      \mathcal{V}^{S,a,\ell}_{cv}
+&= 
+      \frac{i\Sigma}{2}
+      \left[\sum_{v^{\prime}}r^{a}_{cv^{\prime}}C^{\ell}_{v^{\prime}v} 
+          + \sum_{c^{\prime}}C^{\ell}_{cc^{\prime}}r^{a}_{c^{\prime}v}\right],
+\nonumber\\
+      \mathcal{V}^{S,a,\ell}_{vc}
+&= 
+      (\mathcal{V}^{S,a,\ell}_{cv})^*
+    \end{align}
+and    
+  \begin{align}\label{vs.cc}
+    \mathcal{V}^{S,a,\ell}_{cc} 
+    &= -\Sigma\sum_{v}
+    \text{Im}\left[r^{a}_{cv}C^{\ell}_{vc}\right],
+  \end{align}
+ \begin{align}\label{vs.vv}
+    \mathcal{V}^{S,a,\ell}_{vv} 
+    &= \Sigma\sum_{c}
+    \text{Im}\left[r^{a}_{vc}C^{\ell}_{cv}\right],
+  \end{align}
+where the last two are real functions as they must, since they are velocities.
+\subsection{Coding for $\calv^{\gs,\rma,\ell}_{nm}(\bfk)$}
+Recall that 
+$\calv^{\lda,\rma,\ell}_{mn}=(\calv^{\lda,\rma,\ell}_{nm})^*$
+and 
+$\calv^{\cals,\rma,\ell}_{mn}=(\calv^{\cals,\rma,\ell}_{nm})^*$ 
+\begin{itemize}
+%%%
+\item If \verb=-n= option is chosen in \verb=all_responses.sh=
+\begin{itemize}
+\item $\calv^{\lda,\rma,\ell}_{nm}$, comes from
+  Eq.~\eqref{c-a.2}, coded in \verb=functions.f90=
+\end{itemize}
+%%%
+\item If \verb=-n= option is NOT chosen in \verb=all_responses.sh=
+\begin{itemize}
+\item $\calv^{\lda,\rma,\ell}_{nm}$ 
+is used from \verb=me_cpmn_*=
+  which is Eq.~\eqref{eni.2} and is coded in \verb=sub_pmn_ascii.f90=
+\end{itemize}
+%%%
+\end{itemize}
+For either case
+\begin{itemize}
+\item $\calv^{\cals,\rma,\ell}_{nm}$ 
+is obtained from
+  Eqs.~\eqref{vs.cv}, \eqref{vs.cc} or \eqref{vs.vv}, depending on
+  $nm$. This is coded in \verb=functions.f90= and used in 
+\verb=set_input_ascii.f90=  
+\end{itemize}
+Thus,\\
+$\bullet$ 
+$\calv^{\gs,\rma,\ell}_{nm}(\bfk)=\calv^{\lda,\rma,\ell}_{nm}(\bfk)+\calv^{\cals,\rma,\ell}_{nm}(\bfk)$\\
+is stored in \verb=calMomMatElem= 
+array, constructed in 
+\verb=set_input_ascii.f90=, and used in \verb=SRC_2latm= for
+integrating the response function. A brave young soul, should change   
+\verb=calMomMatElem= to \verb=calVelMatElem= in order to have a more
+appropriate name. But as good old DNA, we construct upon available
+ATGC; using the old structure, adding functionality and  keeping all
+the usles non-codifying crap, thus making Darwing proud of us! 
 
-Eq.~\eqref{eni.4} and \eqref{a.7}
-\begin{align}\label{c-eni.4}
-\calc^\ell_{nm}(\bfk)=
-\sum_{\bfG,\bfG'} A^*_{n\bfk}(\bfG')  A_{m\bfk}(\bfG)
-\gd_{\bfG_\parallel \bfG'_\parallel}
-f_\ell(G_\perp-G'_\perp)
-.
-\end{align} 
-\begin{align}\label{c-a.7}
- (\calc^\ell_{nm})_{;\bfk}
+
+\subsection{Bulk expressions}
+
+For a bulk $\calc^\ell_{nm}(\bfk)=\gd_{nm}$, then
+$(\calc^\ell_{nm}(\bfk))_{;\bfk}=0$, and Eq.~\eqref{c-a.1} reduces to
+\begin{align}\label{choni.9}
+v^{\gs,\rma}_{nm}
 &=
-i\sum_{q\ne nm}
+v^{\lda,\rma}_{nm}
++
+v^{\cals,\rma}_{nm}
+\nonumber\\
+\bfv^\gs_{nm}(\bfk)
+&=
+\left(1+\frac{\gS}{\go_c(\bfk)-\go_v(\bfk)}\right)\bfv^\lda_{nm}(\bfk)
+\quad\quad n\notin D_m
+\nonumber\\
+\bfv^\gs_{nn}(\bfk)
+&=
+\bfv^\lda_{nn}(\bfk)
+,
+\end{align}
+where in \verb=$TINIBA/latm= the values are coded in the array
+called
+\verb=momMatElem=.  
+If option \verb=-n= is given while running
+\verb=all_resposnses.sh=, then $\bfv^\nl_{nm}(\bfk)$ are included in 
+\verb=momMatElem=. 
+Also,
+\begin{align}\label{c-a.1nn}
 \left(
-r_{nq}^\rma
-\calc^\ell_{qm}
--
-\calc^\ell_{nq}
-r_{qm}^\rma
-\right)
-+ir_{nm}^\rma(\calc^\ell_{mm}-\calc^\ell_{nn})
-.
-\end{align} 
-$\calc^\ell_{nm}(\bfk)$  
-must be coded in the same subroutine of $\calbv^\ell_{nm}$
- calculated with Eq.~\eqref{eni.2}
-
+v^{\gs,\rma}_{nm}
+\right)_{;k^\rmb}
+&=
+\left(
+v^{\lda,\rma}_{nm}
+\right)_{;k^\rmb}
++
+\left(
+v^{\cals,\rma}_{nm}
+\right)_{;k^\rmb}
+,
+\end{align}
+where with the r.h.s. expressions are given above. The generalized
+derivative of $(\bfv^\gs_{nm})_{;\bfk}$ seems not to be needed  in any
+response so far, therefore is not coded.
 \subsection{Consistency check-up}
 
 To check that the coding of 
@@ -260,4 +452,26 @@ p^\rma_{nq}\calc^\ell_{qm}
 \Big)
 ,
 \end{align}
-which must give the same results as those computed through Eq.~\eqref{eni.2}.
+which must give the same results as those computed through
+Eq.~\eqref{eni.2}.
+Indeed, we have checked that this is the case. The
+\verb=$TINIBA/util/consistency-of-cfmn.sh=
+is used to check this.
+
+\subsection{Subroutines}
+
+The following subroutines/shells are involved in the coding,
+and are documented between\\
+\verb=#BMSd=\\
+$\vdots$\\
+\verb=#BMSu=\\
+marks.
+\begin{enumerate}
+\item \verb=$TINIBA/utils/all_responses.sh=
+\item \verb=$TINIBA/latm/SRC_1setinput/inparams.f90=\\
+\textcolor{red}{Warning:} compile both\\
+\verb=$TINIBA/latm/SRC_1setinput/= \\
+and\\
+\verb=$TINIBA/latm/SRC_2latm/= 
+\item \verb=$TINIBA/latm/SRC_1setinput/set_input_ascii.f90=\\
+\end{enumerate}
