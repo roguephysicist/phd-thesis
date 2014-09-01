@@ -136,14 +136,22 @@ compute Eq.~\eqref{c-a.2}, which is done in
 Then, we need 
 Eq.~\eqref{eni.4}
 \begin{align}\label{c-eni.4}
-\calc^\ell_{nm}(\bfk)=
+\calc^\ell_{nm}(\bfk)&=
 \sum_{\bfG,\bfG'} A^*_{n\bfk}(\bfG')  A_{m\bfk}(\bfG)
 \gd_{\bfG_\parallel \bfG'_\parallel}
 f_\ell(G_\perp-G'_\perp)
-.
+\nonumber\\
+\calc^\ell_{mn}(\bfk)&=
+\big(\calc^\ell_{nm}(\bfk)\big)^*
+,
 \end{align} 
 which is coded in \verb=sub_pmn_ascii.f90= within the same subroutine of $\calbv^\ell_{nm}$
-calculated with Eq.~\eqref{eni.2}.
+calculated with Eq.~\eqref{eni.2}. However, Sean out of the blue, call
+it \verb=me_cfmn_*= in \verb=run_tiniba.sh=,
+ and Darwin won (what else? ID??), 
+thus I call it \verb=cfMatElem= in \verb=SRC_1setinput=. ID would call
+it  \verb=ccMatElem=
+but long live CD!
 
  The second LDA term is
 \begin{align}\label{c-a.2n}
@@ -166,9 +174,14 @@ Eq.~\eqref{a.3}
 \begin{align}\label{c-a.3}
 (v^{\lda,\rma}_{nm})_{;k^\rmb}
 &=  
-im_e\gD^b_{nm}r^\rma_{nm}
+im_e\left(\gD^b_{nm}r^\rma_{nm}
 + 
-im_e\go^\lda_{nm}(r^\rma_{nm})_{;k^\rmb}
+\go^\lda_{nm}(r^\rma_{nm})_{;k^\rmb}
+\right)
+\nonumber\\
+(v^{\lda,\rma}_{mn})_{;k^\rmb}
+&=
+\left((v^{\lda,\rma}_{nm})_{;k^\rmb}\right)^*
 \quad\mathrm{for}\quad n\ne m
 ,
 \end{align} 
@@ -226,6 +239,10 @@ r^{\rmb}_{\ell m}
 r^{\rmb}_{n\ell}
 r^{\rma}_{\ell m}
 \bigg)
+\nonumber\\
+(r^{\rmb}_{mn})_{;k^{\rma}}
+&=
+\left((r^{\rmb}_{nm})_{;k^{\rma}}\right)^*
 ,
 \end{align}
 where $\calt^{\rma\rmb}_{nm}\approx 0$.\\
@@ -265,8 +282,8 @@ r^{\rma}_{\ell n}
 For Eq.~\eqref{c-a.2n} we need
 \eqref{a.7}
 \begin{align}\label{c-a.7}
- (\calc^\ell_{nm})_{;\bfk}
-&=
+ (\calc^\ell_{nm})_{;k^\rma}
+&= 
 i\sum_{q\ne nm}
 \left(
 r_{nq}^\rma
@@ -276,6 +293,10 @@ r_{nq}^\rma
 r_{qm}^\rma
 \right)
 +ir_{nm}^\rma(\calc^\ell_{mm}-\calc^\ell_{nn})
+\nonumber\\
+ (\calc^\ell_{mn})_{;\bfk}
+&=
+\big( (\calc^\ell_{nm})_{;\bfk}\big)^*
 .
 \end{align} 
 
@@ -339,7 +360,7 @@ and
     \text{Im}\left[r^{a}_{vc}C^{\ell}_{cv}\right],
   \end{align}
 where the last two are real functions as they must, since they are velocities.
-\subsection{Coding for $\calv^{\gs,\rma,\ell}_{nm}(\bfk)$}
+\subsection{Coding for $\calv^{\gs,\rma,\ell}_{nm}(\bfk)$} 
 Recall that 
 $\calv^{\lda,\rma,\ell}_{mn}=(\calv^{\lda,\rma,\ell}_{nm})^*$
 and 
@@ -378,7 +399,31 @@ integrating the response function. A brave young soul, should change
 \verb=calMomMatElem= to \verb=calVelMatElem= in order to have a more
 appropriate name. But as good old DNA, we construct upon available
 ATGC; using the old structure, adding functionality and  keeping all
-the usles non-codifying crap, thus making Darwing proud of us! 
+the usles non-codifying crap, thus making Darwin
+ proud of us! 
+
+\subsection{Coding for $(\calv^{\gs,\rma,\ell}_{nm}(\bfk))_{;k^\rmb}$}
+\begin{itemize}
+\item $\gD^\rma_{nm}$ available in array \verb=Delta=, 
+calculated in \verb=set_input_ascii.f90=,
+ and contains the
+  contribution from $\bfv^\nl_{nm}(\bfk)$ if the \verb=-n= option is
+  chosen in \verb=all_responses.sh= 
+\item $(r^\rma_{nm}(\bfk))_{;k^\rmb}$
+ available in array
+  \verb=derMatElem=,
+calculated in \verb=set_input_ascii.f90= and \verb=functions.f90=,
+ and contains the
+  contribution from $\bfv^\nl_{nm}(\bfk)$ if the \verb=-n= option is
+  chosen in \verb=all_responses.sh= 
+\item With above two we compute $(v^{\lda,\rma}_{nm}(\bfk))_{;k^\rmb}$ 
+in \verb=set_input_ascii.f90=  and store it in \verb=gdVlda= for
+diagonal and off diagonal terms.
+\item $\big(\calc^\ell_{nm}(\bfk)\big)_{;k^\rma}$ is coded in 
+in \verb=set_input_ascii.f90=  and store it in \verb=gdf= for
+diagonal and off diagonal terms. Darwin at work!
+\end{itemize}
+
 
 
 \subsection{Bulk expressions}
