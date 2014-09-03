@@ -69,7 +69,7 @@ Option \verb=-n= in \verb=all_responses.sh= does
 \item \verb=> mv me_pmn_*.o me_pmn_*=
 \end{enumerate}
 so   
-$\bfv^\lda_{nm}(\bfk)$
+$\bfv^\lda_{nm}(\bfk)$, stored in \verb=vldaMatElem=
 is available for the calculation of the response, and with it we calculate
 (Eqs.~\eqref{chon.9} and \eqref{chon.10}),
 \begin{align}\label{c-chon.98}
@@ -127,7 +127,7 @@ Eq.~\eqref{c-a.2}
 not calculated and\\
 $\bullet$ $\calv^{\lda,\rma,\ell}_{nm}\to$ \verb=me_cpmn_*=\\  
 If option \verb=-n= is chosen Eq.~\eqref{c-a.2}
- must be calculated in
+ must be calculated as given in
 \verb=set_input_ascii.f90=. We mention that
 $\calv^{\lda,\rma,\ell}_{nm}$ can be computed directly,\cite{nicolaspc}
 avoiding the sum over the full set of bands $q$, however we chose to
@@ -159,7 +159,7 @@ but long live CD!
 &=
 \frac{1}{2}\sum_q\left(
 (v^{\lda,\rma}_{nq})_{;k^\rmb}\calc^\ell_{qm}
-+ 
++  
 v^{\lda,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 +
 (\calc^\ell_{nq})_{;k^\rmb} v^{\lda,\rma}_{qm}
@@ -167,7 +167,7 @@ v^{\lda,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 \calc^\ell_{nq} (v^{\lda,\rma}_{qm})_{;k^\rmb}
 \right)
 ,
-\end{align} 
+\end{align}  
 where\\
 $\bullet$ for $n\ne m$\\
 Eq.~\eqref{a.3}
@@ -305,15 +305,15 @@ Eq.~\eqref{a.3b} , \eqref{choni.1} and \eqref{chon.2}
 \begin{align}\label{c-a.3b}
 \calv^{\cals,\rma,\ell}_{nm}
 &=
-\frac{1}{2}\sum_q\left( 
+\frac{1}{2}\sum_q\left(  
 v^{\cals,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{\cals,\rma}_{qm}
 \right)
 \nonumber\\
-\left(\calv^{\cals,\rma}_{nm}\right)_{;k^\rmb}
+\left(\calv^{\cals,\rma,\ell}_{nm}\right)_{;k^\rmb}
 &=
 \frac{1}{2}\sum_q\left(
 (v^{\cals,\rma}_{nq})_{;k^\rmb}\calc^\ell_{qm}
-+  
++   
 v^{\cals,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 +
 (\calc^\ell_{nq})_{;k^\rmb} v^{\cals,\rma}_{qm}
@@ -321,7 +321,7 @@ v^{\cals,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 \calc^\ell_{nq} (v^{\cals,\rma}_{qm})_{;k^\rmb}
 \right)
 ,
-\end{align}  
+\end{align}   
 with Eqs.~\eqref{chon.2} and \eqref{choni.1}
 \begin{align}\label{c-chon.2} 
 v^{\cals,\rma}_{nm}=i\gS f_{mn}r^\rma_{nm}
@@ -360,6 +360,61 @@ and
     \text{Im}\left[r^{a}_{vc}C^{\ell}_{cv}\right],
   \end{align}
 where the last two are real functions as they must, since they are velocities.
+Substuiting Eqs.~\eqref{c-chon.2} and \eqref{c-choni.1} into \eqref{c-a.3b}, we obtain
+\begin{align}\label{dgvs.cv}
+\left(\calv^{\cals,\rma\,\ell}_{cv}\right)_{;k^\rmb}
+&=
+\frac{i\gS}{2}
+\left(
+\sum_{v'}\left(
+ (r^\rma_{cv'})_{;k^\rmb}\calc^\ell_{v'v}
++  
+r^\rma_{cv'}(\calc^\ell_{v'v})_{;k^\rmb}
+\right)
++
+\sum_{c'}\left(
+(\calc^\ell_{cc'})_{;k^\rmb} r^\rma_{c'v}
++
+\calc^\ell_{cc'} (r^\rma_{c'v})_{;k^\rmb}
+\right)
+\right)
+\nonumber\\
+\left(\calv^{\cals,\rma,\ell}_{vc}\right)_{;k^\rmb}
+&=
+\left(\left(\calv^{\cals,\rma,\ell}_{cv}\right)_{;k^\rmb}\right)^*
+,
+\end{align}  
+\begin{align}\label{dgvs.cc}
+\left(\calv^{\cals,\rma,\ell}_{cc}\right)_{;k^\rmb}
+&=
+-\gS
+\sum_{v}
+ \mathrm{Im}\left[(r^\rma_{cv})_{;k^\rmb}\calc^\ell_{vc}
++
+r^\rma_{cv}
+(\calc^\ell_{vc}) _{;k^\rmb}\right]
+,
+\end{align}  
+and
+\begin{align}\label{dgvs.vv}
+\left(\calv^{\cals,\rma,\ell}_{vv}\right)_{;k^\rmb}
+&=
+\gS
+\sum_{c}
+ \mathrm{Im}\left[(r^\rma_{vc})_{;k^\rmb}\calc^\ell_{cv}
++
+r^\rma_{vc}(\calc^\ell_{cv}) _{;k^\rmb}\right]
+.
+\end{align}  
+$\bullet$ Coding:\\
+$(r^\rma_{nm})_{;k^\rmb}\to$ \verb=derMatElem=
+$\calc^\ell_{nm}\to$ \verb=cfMatElem=
+$r^\rma_{nm}\to$ \verb=posMatElem=
+$(\calc^\ell_{nm})_{;k^\rmb}\to$ \verb=gdf=,
+
+
+
+
 \subsection{Coding for $\calv^{\gs,\rma,\ell}_{nm}(\bfk)$} 
 Recall that 
 $\calv^{\lda,\rma,\ell}_{mn}=(\calv^{\lda,\rma,\ell}_{nm})^*$
@@ -422,6 +477,30 @@ diagonal and off diagonal terms.
 \item $\big(\calc^\ell_{nm}(\bfk)\big)_{;k^\rma}$ is coded in 
 in \verb=set_input_ascii.f90=  and store it in \verb=gdf= for
 diagonal and off diagonal terms. Darwin at work!
+\item $(v^{\lda,\rma}_{nq})_{;k^\rmb}\to$ \verb=gdVlda=,
+  $\calc^\ell_{qm}\to$ \verb=cfMatElem=,
+$v^{\lda,\rma}_{nq}\to$ \verb=vldaMatElem=, 
+$(\calc^\ell_{qm})_{;k^\rmb}\to$
+\verb=gdf=
+
+ \begin{align}\label{c-a.2nn}
+\left(\calv^{\lda,\rma,\ell}_{nm}\right)_{;k^\rmb}
+&=
+\frac{1}{2}\sum_q\left(
+(v^{\lda,\rma}_{nq})_{;k^\rmb}\calc^\ell_{qm}
++ 
+v^{\lda,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
++
+(\calc^\ell_{nq})_{;k^\rmb} v^{\lda,\rma}_{qm}
++
+\calc^\ell_{nq} (v^{\lda,\rma}_{qm})_{;k^\rmb}
+\right)
+\nonumber\\
+\left(\calv^{\lda,\rma,\ell}_{mn}\right)_{;k^\rmb}&=\left(\left(\calv^{\lda,\rma,\ell}_{nm}\right)_{;k^\rmb}\right)^*
+,
+\end{align} 
+$\left(\calv^{\lda,\rma,\ell}_{nm}\right)_{;k^\rmb}\to$
+\verb=gdcalVlda= and coded in \verb=set_input_ascii.f90=
 \end{itemize}
 
 
