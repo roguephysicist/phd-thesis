@@ -1,50 +1,16 @@
 \section{Coding}\label{code}
 In this Appendix we reproduce all the quantities  that should be coded.
 
-Eqs.~\eqref{calvimchiewn}, \eqref{calvimchie2wn}, and \eqref{calvimchiwn}
-\eqref{calvimchi2wn}
-\begin{align}\label{c-calvimchiewn}
-\mathrm{Im}[\chi_{e,\rma\rmb\rmc,\go}^{S,\ell}] =
--\frac{\pi |e|^3}{2\hbar^2}\sum_{vc\bfk}\sum_{l\neq(v,c)}\frac{1}{\omega^{\gs}_{cv}}
-\left[
-\frac{\mathrm{Im}[\mathcal{V}^{\gs,\text{a},\ell}_{lc}\{r^{\rmb}_{cv}r^{\rmc}_{vl}\}]}
-{(2\go^\gs_{cv}-\go^\gs_{cl})} 
--\frac{\mathrm{Im}[\mathcal{V}^{\gs,\text{a},\ell}_{vl}\{r^{\rmc}_{lc}r^{\rmb}_{cv}\}]}
-{(2\go^\gs_{cv}-\go^\gs_{lv})}
-\right]\gd(\go^\gs_{cv}-\go),
-\end{align}  
-\begin{align}\label{c-calvimchie2wn}
-\mathrm{Im}[\chi_{e,\rma\rmb\rmc,2\go}^{S,\ell}] =
--\frac{\pi |e|^3}{2\hbar^2}\sum_{vc\bfk}\frac{4}{\omega^{\gs}_{cv}}
-\left[
-\sum_{v'\ne
-  v}\frac{\mathrm{Im}[\mathcal{V}^{\gs,\text{a},\ell}_{vc}\{r^{\rmb}_{cv'}r^{\rmc}_{v'v}\}]}
-{2\go^\gs_{cv'}-\go^\gs_{cv}}
-- \sum_{c'\ne
-  c}\frac{\mathrm{Im}[\mathcal{V}^{\gs,\text{a},\ell}_{vc}\{r^{\rmc}_{cc'}r^{\rmb}_{c'v}\}]}
-{2\go^\gs_{c'v}-\go^\gs_{cv}}
-\right]\gd(\go^\gs_{cv}-2\go),
-\end{align}
-\begin{align}\label{c-calvimchiwn}
-\mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},\omega}^{S,\ell}]
-= -\frac{\pi\vert e\vert^3}{2\hbar^2}\sum_{cv\mathbf{k}}\frac{1}{(\omega^{\gs}_{cv})^{2}}
-\left(
-\mathrm{Re}\left[r^{\text{b}}_{cv}\left(\mathcal{V}^{\gs,\text{a},\ell}_{vc}\right)_{;k^{\text{c}}}\right]
-+\frac{\,\mathrm{Re}\left[\mathcal{V}^{\gs,\text{a},\ell}_{vc}r^{\text{b}}_{cv}\right]
-\Delta^{\text{c}}_{cv}}{\omega^{\gs}_{cv}} 
-\right)\delta(\omega^{\gs}_{cv}-\omega),
-\end{align}
-and
-\begin{align}\label{c-calvimchi2wn}
-\mathrm{Im}[\chi_{i,\text{a}\text{b}\text{c},2\omega}^{S,\ell}] 
-=
- -\frac{\pi \vert
-   e\vert^{3}}{2\hbar^2}\sum_{vc\mathbf{k}}\frac{4}{(\omega^{\gs}_{cv})^{2}}
-\left(\mathrm{Re}\left[\mathcal{V}^{\gs,\text{a},\ell}_{vc}\left(r^{\text{b}}_{cv}\right)_{;k^{\text{c}}}
-\right] -
-\frac{2\,\mathrm{Re}\left[\mathcal{V}^{\gs,\text{a},\ell}_{vc}r^{\text{b}}_{cv}\right]
-\Delta^{\text{c}}_{cv}}{\omega^{\gs}_{cv}}\right)\delta(\omega^{\gs}_{cv}-2\omega).
-\end{align}
+Eqs.~\eqref{calvimchiewn}, \eqref{calvimchie2wn}, \eqref{calvimchiwn}
+ and \eqref{calvimchi2wn}
+\input{appendices/chis}
+\noindent$\bullet$ Coding:
+$\calv^{\gs,\rma,\ell}_{nm}\to$ \verb=calVsig=,
+$r^\rma_{nm}\to$ \verb=posMatElem=,
+$\left(\calv^{\gs,\rma,\ell}_{nm}\right)_{;k^\rmb}\to$ \verb=gdcalVsig=,
+and\\ $(r^\rma_{nm})_{;k^\rmb}\to$ \verb=derMatElem=
+
+$\bullet$ proof:\\
 To evaluate above expressions we need the following ($m_e=1$):
 \begin{align}\label{}
 \bfv^\lda_{nm}(\bfk) 
@@ -328,8 +294,8 @@ v^{\cals,\rma}_{nm}=i\gS f_{mn}r^\rma_{nm}
 ,
 \end{align}
 \begin{align}\label{c-choni.1}
-(v^{\cals,\rma}_{nm})_{;k^\rmb}=i\gS f_{mn}
-(r^\rma_{nm})_{;k^\rmb}
+(v^{\cals,\rma}_{nm})_{;k^\rmb}=
+i\gS f_{mn}(r^\rma_{nm})_{;k^\rmb}
 ,
 \end{align}
 where $\hbar\gS$ is the scissors correction.
@@ -410,10 +376,9 @@ $\bullet$ Coding:\\
 $(r^\rma_{nm})_{;k^\rmb}\to$ \verb=derMatElem=
 $\calc^\ell_{nm}\to$ \verb=cfMatElem=
 $r^\rma_{nm}\to$ \verb=posMatElem=
-$(\calc^\ell_{nm})_{;k^\rmb}\to$ \verb=gdf=,
-
-
-
+$(\calc^\ell_{nm})_{;k^\rmb}\to$ \verb=gdf=, and\\
+$\left(\calv^{\cals,\rma,\ell}_{nm}\right)_{;k^\rmb}\to$ 
+\verb=gdcalVS=
 
 \subsection{Coding for $\calv^{\gs,\rma,\ell}_{nm}(\bfk)$} 
 Recall that 
@@ -446,8 +411,8 @@ is obtained from
 \end{itemize}
 Thus,\\
 $\bullet$ 
-$\calv^{\gs,\rma,\ell}_{nm}(\bfk)=\calv^{\lda,\rma,\ell}_{nm}(\bfk)+\calv^{\cals,\rma,\ell}_{nm}(\bfk)$\\
-is stored in \verb=calMomMatElem= 
+$\calv^{\gs,\rma,\ell}_{nm}(\bfk)=\calv^{\lda,\rma,\ell}_{nm}(\bfk)+\calv^{\cals,\rma,\ell}_{nm}(\bfk)$\\ 
+is stored in \verb=calMomMatElem=  
 array, constructed in 
 \verb=set_input_ascii.f90=, and used in \verb=SRC_2latm= for
 integrating the response function. A brave young soul, should change   
@@ -503,7 +468,22 @@ $\left(\calv^{\lda,\rma,\ell}_{nm}\right)_{;k^\rmb}\to$
 \verb=gdcalVlda= and coded in \verb=set_input_ascii.f90=
 \end{itemize}
 
+\subsection{Summary}
+\begin{itemize}
+\item
+$\calv^{\gs,\rma,\ell}_{nm}(\bfk)=\calv^{\lda,\rma,\ell}_{nm}(\bfk)+\calv^{\cals,\rma,\ell}_{nm}(\bfk)\to$
+\verb=calMomMatElem= 
 
+\item $\left(\calv^{\lda,\rma,\ell}_{nm}\right)_{;k^\rmb}\to$
+\verb=gdcalVlda= 
+
+\item $\left(\calv^{\cals,\rma,\ell}_{nm}\right)_{;k^\rmb}\to$ 
+\verb=gdcalVS=
+
+\item $\left(\calv^{\gs,\rma,\ell}_{nm}\right)_{;k^\rmb}=
+\left(\calv^{\lda,\rma,\ell}_{nm}\right)_{;k^\rmb}+\left(\calv^{\cals,\rma,\ell}_{nm}\right)_{;k^\rmb}\to$ 
+\verb=gdcalVsig=
+\end{itemize}
 
 \subsection{Bulk expressions}
 
@@ -534,9 +514,7 @@ If option \verb=-n= is given while running
 \verb=momMatElem=. 
 Also,
 \begin{align}\label{c-a.1nn}
-\left(
-v^{\gs,\rma}_{nm}
-\right)_{;k^\rmb}
+\left(v^{\gs,\rma}_{nm}\right)_{;k^\rmb}
 &=
 \left(
 v^{\lda,\rma}_{nm}
@@ -545,12 +523,131 @@ v^{\lda,\rma}_{nm}
 \left(
 v^{\cals,\rma}_{nm}
 \right)_{;k^\rmb}
+\nonumber\\
+&=
+\left(
+v^{\lda,\rma}_{nm}
+\right)_{;k^\rmb}
++
+i\gS f_{mn}(r^\rma_{nm})_{;k^\rmb}
+\nonumber\\
+\left(v^{\gs,\rma}_{mn}\right)_{;k^\rmb}
+&=
+\left(\left(v^{\gs,\rma}_{nm}\right)_{;k^\rmb}\right)^*
 ,
 \end{align}
-where with the r.h.s. expressions are given above. The generalized
-derivative of $(\bfv^\gs_{nm})_{;\bfk}$ seems not to be needed  in any
-response so far, therefore is not coded.
-\subsection{Consistency check-up}
+where with the r.h.s. expressions are given above. 
+
+$\bullet$ Coding:
+$\bfv^\gs_{nm}(\bfk)\to$ \verb=momMatElem=,
+$\left(v^{\lda,\rma}_{nm}\right)_{;k^\rmb}\to$ \verb=gdVlda=,
+$\left(r^{\lda,\rma}_{nm}\right)_{;k^\rmb}\to$ \verb=derMatElem=, and
+$\left(v^{\gs,\rma}_{nm}\right)_{;k^\rmb}\to$ \verb=gdVsig=
+
+\subsection{Layer or Bulk calculation}
+\begin{itemize}
+\item Layer: The layer calculation is done by using
+Eqs.~\eqref{c-calvimchiewn}, \eqref{c-calvimchie2wn}, \eqref{c-calvimchiwn}
+ and \eqref{c-calvimchi2wn}. 
+\item Bulk:
+A bulk calculation can be performed by using the same
+Eqs.~\eqref{c-calvimchiewn}, \eqref{c-calvimchie2wn}, \eqref{c-calvimchiwn}
+ and \eqref{c-calvimchi2wn}, and by simply replacing
+\begin{enumerate}
+\item $\calbv^\gs_{nm}$ (\verb=calMomMatElem=) $\to \bfv^\gs_{nm}$ (\verb=momMatElem=) 
+\item $(\calbv^\gs_{nm})_{;\bfk}$ (\verb=gdcalVsig=) $\to
+  (\bfv^\gs_{nm})_{;\bfk}$ (\verb=gdVsig=) 
+\end{enumerate}
+\item Therefore: For the code to run either possibility we use the
+  same arrays as for the layered response, where, if bulk is chosen, it
+  simply copies the bulk matrix elements into the layer arrays, i.e.
+\begin{itemize}
+\item Layer: 
+$\calbv^\gs_{nm}$ (\verb=calMomMatElem=) and
+$(\calbv^\gs_{nm})_{;\bfk}$ (\verb=gdcalVsig=) 
+\item Bulk:
+$\bfv^\gs_{nm}$ (\verb=momMatElem=$\to$\verb=calVsig=) and
+$(\bfv^\gs_{nm})_{;\bfk}$ (\verb=gdVsig=$\to$\verb=gdcalVsig=) \\
+This change is done in \verb=set_input_ascii.f90= (look for
+\verb=layer-to-bulk= tag)
+\item ID: Notice that we have assigned\\
+  \verb=calMomMatElem=$\to$ \verb=calVsig= (keeping
+  \verb=calMomMatElem=), so it is easier to  code the responses.
+Therefore, we have\\
+$\calbv^\gs_{nm}\to$ \verb=calVsig= and
+$(\calbv^\gs_{nm})_{;\bfk}\to$ \verb=gdcalVsig=\\
+either for bulk or layered response. \\
+If \verb=calMomMatElem= is not used, we should get rid of it (ID at work).
+\end{itemize}
+\end{itemize}
+
+\subsection{$\calv$ vs ${\cal R}$}
+
+Using 
+$\mathrm{Re}[iz]=-\mathrm{Im}[z]$,
+$\mathrm{Im}[iz]=\mathrm{Re}[z]$,
+and
+\begin{equation}\label{rnmenm91}
+{\cal R}^\rma_{nm}=\frac{{\cal P}^\rma_{nm}}{im_e\go_{nm}}
+\quad\quad n\ne m
+,
+\end{equation}
+we can show the equivalence between the two formulations, i.e.
+\input{appendices/chis-v-r}
+\noindent If we take ${\cal R}^{\rma,\ell}_{nm}\to r^\rma_{nm}$, 
+we
+would recover the expressions for a bulk response.
+
+\textcolor{red}{Remark:} We mention that above expressions with 
+${\cal R}^{\rma,\ell}_{nm}\to r^\rma_{nm}$, are coded in
+\verb=integrands.f90=, instead of Eq. 40 and 41 of Cabellos et
+al.\cite{cabellosPRB09}, which were derived by using Eq. 19 of Aversa
+and Sipe.\cite{aversaPRB95} To obtain above equations, we started
+from Eq. 18 of Aversa and Sipe,\cite{aversaPRB95} which has the
+advantage that applying the layer-by-layer formalism is very
+transparent and straight forward. This coding is what constitutes the
+{\it Length}-gauge implementation in \tiniba, which is, within a very
+small numerical difference, equal to the {\it Velocity}-gauge
+implementation of Eq. 35 of Cabellos et al.\cite{cabellosPRB09}, also
+in \tiniba. 
+
+\subsection{Other responses}
+
+\textcolor{red}{Warning: the layered responses MUST be looked at
+  again, and modified according to the newly calculated 
+$\calbv^\gs_{nm}$  and
+$(\calbv^\gs_{nm})_{;\bfk}$. Linear response, current and
+spin injection, should be revisited again!!}
+ 
+\subsection{Consistency check-up 1}
+
+To check that the layered expressions
+Eqs.~\eqref{calvimchiewn}, \eqref{calvimchie2wn}, \eqref{calvimchiwn}
+ and \eqref{calvimchi2wn}, agree with a bulk calculation, we must
+ take 
+$\calbv^\gs_{nm}\to\bfv^\gs_{nm}$
+and
+$\calbv^\gs_{nm;\bfk}\to\bfv^\gs_{nm;\bfk}$. To do this, proceed as
+follows
+\begin{enumerate}
+\item run bulk GaAs using  \verb=rlayer.sh= and \verb=chose_layers.sh=
+is if it were a surface (even though they make no sense).
+\item in \verb=$TINIBA/latm/SRC_1setinput/set_input_ascii.f90= look for\\
+\verb=!########## MIMIC A BULK RESPONSE #######d=\\
+and follow instructions given there
+\item compile in \verb=$TINIBA/latm/SRC_1setinput=
+\item run \verb=all_responses.sh= using\\ 
+\verb=-w layer -r 44 ...=\\
+\verb=-w total -r 21 ...=\\
+and \\
+\verb=-w total -r 42 ...=\\
+thus obtaining a layered calculation using bulk matrix elements, a
+bulk calculation for the length  and the velocity gauge, and plot the
+three $\chi$'s, they ouught to be identical, if not CRY!.  
+\end{enumerate}
+
+
+\subsection{Consistency check-up 2}
 
 To check that the coding of 
 $\calc^\ell_{nm}(\bfk)$ 
