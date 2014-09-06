@@ -8,7 +8,8 @@ Eqs.~\eqref{calvimchiewn}, \eqref{calvimchie2wn}, \eqref{calvimchiwn}
 $\calv^{\gs,\rma,\ell}_{nm}\to$ \verb=calVsig=,
 $r^\rma_{nm}\to$ \verb=posMatElem=,
 $\left(\calv^{\gs,\rma,\ell}_{nm}\right)_{;k^\rmb}\to$ \verb=gdcalVsig=,
-and\\ $(r^\rma_{nm})_{;k^\rmb}\to$ \verb=derMatElem=
+\\ $(r^\rma_{nm})_{;k^\rmb}\to$ \verb=derMatElem= and
+$\gD^\rma_{nm}\to$ \verb=Delta=
 
 $\bullet$ proof:\\
 To evaluate above expressions we need the following ($m_e=1$):
@@ -98,7 +99,7 @@ If option \verb=-n= is chosen Eq.~\eqref{c-a.2}
 $\calv^{\lda,\rma,\ell}_{nm}$ can be computed directly,\cite{nicolaspc}
 avoiding the sum over the full set of bands $q$, however we chose to
 compute Eq.~\eqref{c-a.2}, which is done in
-\verb=functions.f90=.
+\verb=functions.f90= under the name \verb=calVlda=.
 Then, we need 
 Eq.~\eqref{eni.4}
 \begin{align}\label{c-eni.4}
@@ -271,7 +272,7 @@ Eq.~\eqref{a.3b} , \eqref{choni.1} and \eqref{chon.2}
 \begin{align}\label{c-a.3b}
 \calv^{\cals,\rma,\ell}_{nm}
 &=
-\frac{1}{2}\sum_q\left(  
+\frac{1}{2}\sum_q\left(   
 v^{\cals,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{\cals,\rma}_{qm}
 \right)
 \nonumber\\
@@ -279,7 +280,7 @@ v^{\cals,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{\cals,\rma}_{qm}
 &=
 \frac{1}{2}\sum_q\left(
 (v^{\cals,\rma}_{nq})_{;k^\rmb}\calc^\ell_{qm}
-+   
++    
 v^{\cals,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 +
 (\calc^\ell_{nq})_{;k^\rmb} v^{\cals,\rma}_{qm}
@@ -287,7 +288,7 @@ v^{\cals,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 \calc^\ell_{nq} (v^{\cals,\rma}_{qm})_{;k^\rmb}
 \right)
 ,
-\end{align}   
+\end{align}    
 with Eqs.~\eqref{chon.2} and \eqref{choni.1}
 \begin{align}\label{c-chon.2} 
 v^{\cals,\rma}_{nm}=i\gS f_{mn}r^\rma_{nm}
@@ -303,14 +304,28 @@ Notice that
 $v^{\cals,\rma}_{nn}=0$ and 
 $(v^{\cals,\rma}_{nn})_{;k^\rmb}=0$.
 Substuiting Eq.~\eqref{c-chon.2} into \eqref{c-a.3b}, we obtain
-  \begin{align}\label{vs.vc}
+\begin{align}\label{c-a.3bb}
+\calv^{\cals,\rma,\ell}_{nm}
+&=
+\frac{i\gS}{2}\sum_q\left(  
+f_{qn}r^\rma_{nq}\calc^\ell_{qm}+f_{mq}\calc^\ell_{nq} r^\rma_{qm}
+\right)
+,
+\end{align}   
+$\bullet$ Coding: \verb=functions.f90= array \verb=calVscissors= 
+where $f_n$ is coded in \verb=set_input_ascii.f90=\\
+Notice that $q=n$ and $q=m$ give zero contribution from the $f_{nm}$
+factors, but we set in the code $r^\rma_{nn}=0$ so the program would
+not complain that such values of the array \verb=posMatElem= do not
+exist, since actually, the diagonal elements do not exist.
+Explicitly (although, we don't code them), 
+\begin{align}\label{vs.vc}
       \mathcal{V}^{S,a,\ell}_{vc}
 &= 
       -\frac{i\Sigma}{2}
       \left[\sum_{v^{\prime}}r^{a}_{vv^{\prime}}C^{\ell}_{v^{\prime}c} 
           +
           \sum_{c^{\prime}}C^{\ell}_{vc^{\prime}}r^{a}_{c^{\prime}c}\right],
-\quad\quad\mathrm{Coded}
 \nonumber\\
       \mathcal{V}^{S,a,\ell}_{cv}
 &= 
@@ -334,8 +349,7 @@ and
     \text{Im}\left[r^{a}_{vc}C^{\ell}_{cv}\right],
   \end{align}
 where the last two are real functions as they must, since they are
-velocities, and are coded in:\\
-$\bullet$ Coding: \verb=functions.f90= array \verb=calVscissors=
+velocities. 
 
 Substuiting Eqs.~\eqref{c-chon.2} and \eqref{c-choni.1} into \eqref{c-a.3b}, we obtain
 \begin{align}\label{dgvs.cv}
@@ -599,7 +613,7 @@ $\mathrm{Re}[iz]=-\mathrm{Im}[z]$,
 $\mathrm{Im}[iz]=\mathrm{Re}[z]$,
 and
 \begin{equation}\label{rnmenm91}
-{\cal R}^\rma_{nm}=\frac{{\cal P}^\rma_{nm}}{im_e\go_{nm}}
+{\cal R}^\rma_{nm}=\frac{{\cal P}^\rma_{nm}}{im_e\go_{nm}}=\frac{\calv^\rma_{nm}}{i\go_{nm}}
 \quad\quad n\ne m
 ,
 \end{equation}
@@ -663,17 +677,37 @@ reproduce Fig.~\ref{gaas}
 \end{enumerate}
 \begin{figure}[b]
 \centering
-%\includegraphics[height=5cm,width=7cm]{slab}
 \includegraphics[scale=.7]{plots/shg-bulk}
 \caption{Im[$\chi_{xyz}$] for GaAs, 10 Ha and 47 $\bfk$-points, using
-  the layered formulation and mimicking a bulk. Also, the correction
-  due to $\bfv^\nl$, which agree with the velocity and the layered
-  approach (not shown).}
+  the layered formulation and mimicking a bulk. 
+The correction
+  due to $\bfv^\nl$, also agrees with the velocity and the layered
+  approach (not shown in the figure for clarity).}
 \label{gaas}
 \end{figure}
 
 
-\subsection{Consistency check-up 2}
+\subsection{Consistency check-up 3}
+
+In Fig.~\ref{si111as} we show
+Im[$\chi_{xx}$] for a surface, where the 
+The full-slab result is twice the half-slab
+result, with or without $\bfv^\nl$,  as it must be. Also, the scissors
+correction rigidly shifts the spectrum by $\hbar\gS$ as it should be.  
+
+\begin{figure}[b]
+\centering
+\includegraphics[scale=.7]{plots/surface-chi}
+\caption{Im[$\chi_{xx}$] 
+for a Si(111):As surface of 6-layers, 5 Ha and 14 $\bfk$-points using
+the layered formulation. 
+The full-slab result is twice the half-slab
+result, as it must be.
+}
+\label{si111as}
+\end{figure}
+
+\subsection{Consistency check-up 3}
 
 To check that the coding of 
 $\calc^\ell_{nm}(\bfk)$ 
