@@ -303,16 +303,24 @@ Notice that
 $v^{\cals,\rma}_{nn}=0$ and 
 $(v^{\cals,\rma}_{nn})_{;k^\rmb}=0$.
 Substuiting Eq.~\eqref{c-chon.2} into \eqref{c-a.3b}, we obtain
-  \begin{align}\label{vs.cv}
+  \begin{align}\label{vs.vc}
+      \mathcal{V}^{S,a,\ell}_{vc}
+&= 
+      -\frac{i\Sigma}{2}
+      \left[\sum_{v^{\prime}}r^{a}_{vv^{\prime}}C^{\ell}_{v^{\prime}c} 
+          +
+          \sum_{c^{\prime}}C^{\ell}_{vc^{\prime}}r^{a}_{c^{\prime}c}\right],
+\quad\quad\mathrm{Coded}
+\nonumber\\
       \mathcal{V}^{S,a,\ell}_{cv}
 &= 
       \frac{i\Sigma}{2}
       \left[\sum_{v^{\prime}}r^{a}_{cv^{\prime}}C^{\ell}_{v^{\prime}v} 
           + \sum_{c^{\prime}}C^{\ell}_{cc^{\prime}}r^{a}_{c^{\prime}v}\right],
 \nonumber\\
-      \mathcal{V}^{S,a,\ell}_{vc}
+      \mathcal{V}^{S,a,\ell}_{cv}
 &= 
-      (\mathcal{V}^{S,a,\ell}_{cv})^*
+      (\mathcal{V}^{S,a,\ell}_{vc})^*
     \end{align}
 and    
   \begin{align}\label{vs.cc}
@@ -325,7 +333,10 @@ and
     &= \Sigma\sum_{c}
     \text{Im}\left[r^{a}_{vc}C^{\ell}_{cv}\right],
   \end{align}
-where the last two are real functions as they must, since they are velocities.
+where the last two are real functions as they must, since they are
+velocities, and are coded in:\\
+$\bullet$ Coding: \verb=functions.f90= array \verb=calVscissors=
+
 Substuiting Eqs.~\eqref{c-chon.2} and \eqref{c-choni.1} into \eqref{c-a.3b}, we obtain
 \begin{align}\label{dgvs.cv}
 \left(\calv^{\cals,\rma\,\ell}_{cv}\right)_{;k^\rmb}
@@ -405,7 +416,7 @@ For either case
 \begin{itemize}
 \item $\calv^{\cals,\rma,\ell}_{nm}$ 
 is obtained from
-  Eqs.~\eqref{vs.cv}, \eqref{vs.cc} or \eqref{vs.vv}, depending on
+  Eqs.~\eqref{vs.vc}, \eqref{vs.cc} or \eqref{vs.vv}, depending on
   $nm$. This is coded in \verb=functions.f90= and used in 
 \verb=set_input_ascii.f90=  
 \end{itemize}
@@ -597,6 +608,10 @@ we can show the equivalence between the two formulations, i.e.
 \noindent If we take ${\cal R}^{\rma,\ell}_{nm}\to r^\rma_{nm}$, 
 we
 would recover the expressions for a bulk response.
+We prefer to use the expressions in terms of $\calv^\ell$, since they are
+more physically appealing, as the velocity is what gives the current
+of a given layer, from which the polarization is computed and the
+$\chi^\ell$ extracted.   
 
 \textcolor{red}{Remark:} We mention that above expressions with 
 ${\cal R}^{\rma,\ell}_{nm}\to r^\rma_{nm}$, are coded in
@@ -605,7 +620,7 @@ al.\cite{cabellosPRB09}, which were derived by using Eq. 19 of Aversa
 and Sipe.\cite{aversaPRB95} To obtain above equations, we started
 from Eq. 18 of Aversa and Sipe,\cite{aversaPRB95} which has the
 advantage that applying the layer-by-layer formalism is very
-transparent and straight forward. This coding is what constitutes the
+transparent and straightforward. This coding is what constitutes the
 {\it Length}-gauge implementation in \tiniba, which is, within a very
 small numerical difference, equal to the {\it Velocity}-gauge
 implementation of Eq. 35 of Cabellos et al.\cite{cabellosPRB09}, also
@@ -630,21 +645,32 @@ and
 $\calbv^\gs_{nm;\bfk}\to\bfv^\gs_{nm;\bfk}$. To do this, proceed as
 follows
 \begin{enumerate}
-\item run bulk GaAs using  \verb=rlayer.sh= and \verb=chose_layers.sh=
-is if it were a surface (even though they make no sense).
-\item in \verb=$TINIBA/latm/SRC_1setinput/set_input_ascii.f90= look for\\
+\item Run bulk GaAs using  \verb=rlayer.sh= and \verb=chose_layers.sh=
+as if it were a surface, even though it make no sense.
+\item In \verb=$TINIBA/latm/SRC_1setinput/set_input_ascii.f90= look for\\
 \verb=!########## MIMIC A BULK RESPONSE #######d=\\
-and follow instructions given there
-\item compile in \verb=$TINIBA/latm/SRC_1setinput=
+and follow instructions given there.
+\item Compile \verb=set_input_*= in \verb=$TINIBA/latm/SRC_1setinput=
 \item run \verb=all_responses.sh= using\\ 
 \verb=-w layer -r 44 ...=\\
 \verb=-w total -r 21 ...=\\
 and \\
 \verb=-w total -r 42 ...=\\
-thus obtaining a layered calculation using bulk matrix elements, a
-bulk calculation for the length  and the velocity gauge, and plot the
-three $\chi$'s, they ouught to be identical, if not CRY!.  
+thus obtaining a \verb=layer= calculation using bulk matrix elements, a
+\verb=total= calculation for the length  and the velocity gauge, and plot the
+three $\chi$'s, they ouught to be identical, if not CRY!. Try out to
+reproduce Fig.~\ref{gaas}  
 \end{enumerate}
+\begin{figure}[b]
+\centering
+%\includegraphics[height=5cm,width=7cm]{slab}
+\includegraphics[scale=.7]{plots/shg-bulk}
+\caption{Im[$\chi_{xyz}$] for GaAs, 10 Ha and 47 $\bfk$-points, using
+  the layered formulation and mimicking a bulk. Also, the correction
+  due to $\bfv^\nl$, which agree with the velocity and the layered
+  approach (not shown).}
+\label{gaas}
+\end{figure}
 
 
 \subsection{Consistency check-up 2}
