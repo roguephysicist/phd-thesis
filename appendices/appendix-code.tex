@@ -272,7 +272,7 @@ Eq.~\eqref{a.3b} , \eqref{choni.1} and \eqref{chon.2}
 \begin{align}\label{c-a.3b}
 \calv^{\cals,\rma,\ell}_{nm}
 &=
-\frac{1}{2}\sum_q\left(   
+\frac{1}{2}\sum_q\left(    
 v^{\cals,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{\cals,\rma}_{qm}
 \right)
 \nonumber\\
@@ -280,7 +280,7 @@ v^{\cals,\rma}_{nq}\calc^\ell_{qm}+\calc^\ell_{nq} v^{\cals,\rma}_{qm}
 &=
 \frac{1}{2}\sum_q\left(
 (v^{\cals,\rma}_{nq})_{;k^\rmb}\calc^\ell_{qm}
-+    
++     
 v^{\cals,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 +
 (\calc^\ell_{nq})_{;k^\rmb} v^{\cals,\rma}_{qm}
@@ -288,7 +288,7 @@ v^{\cals,\rma}_{nq}(\calc^\ell_{qm})_{;k^\rmb}
 \calc^\ell_{nq} (v^{\cals,\rma}_{qm})_{;k^\rmb}
 \right)
 ,
-\end{align}    
+\end{align}     
 with Eqs.~\eqref{chon.2} and \eqref{choni.1}
 \begin{align}\label{c-chon.2} 
 v^{\cals,\rma}_{nm}=i\gS f_{mn}r^\rma_{nm}
@@ -351,7 +351,38 @@ and
 where the last two are real functions as they must, since they are
 velocities. 
 
+
 Substuiting Eqs.~\eqref{c-chon.2} and \eqref{c-choni.1} into \eqref{c-a.3b}, we obtain
+\begin{align}\label{c-a.3bnn}
+\left(\calv^{\cals,\rma,\ell}_{nm}\right)_{;k^\rmb}
+&=
+\frac{i\gS}{2}\sum_q\left(
+f_{qn}\Big[
+(r^\rma_{nq})_{;k^\rmb}\calc^\ell_{qm}
++    
+r^\rma_{nq}(\calc^\ell_{qm})_{;k^\rmb}
+\Big]
++
+f_{mq}\Big[
+(\calc^\ell_{nq})_{;k^\rmb} r^\rma_{qm}
++
+\calc^\ell_{nq} (r^\rma_{qm})_{;k^\rmb}
+\Big]
+\right)
+\nonumber\\
+\left(\calv^{\cals,\rma,\ell}_{mn}\right)_{;k^\rmb}
+&=
+\left(\left(\calv^{\cals,\rma,\ell}_{nm}\right)_{;k^\rmb}\right)^*
+,
+\end{align}    
+$\bullet$ Coding:\\
+$(r^\rma_{nm})_{;k^\rmb}\to$ \verb=derMatElem=
+$\calc^\ell_{nm}\to$ \verb=cfMatElem=
+$r^\rma_{nm}\to$ \verb=posMatElem=
+$(\calc^\ell_{nm})_{;k^\rmb}\to$ \verb=gdf=, and\\
+$\left(\calv^{\cals,\rma,\ell}_{nm}\right)_{;k^\rmb}\to$ 
+\verb=gdcalVS=\\
+Also
 \begin{align}\label{dgvs.cv}
 \left(\calv^{\cals,\rma\,\ell}_{cv}\right)_{;k^\rmb}
 &=
@@ -397,13 +428,7 @@ and
 r^\rma_{vc}(\calc^\ell_{cv}) _{;k^\rmb}\right]
 .
 \end{align}  
-$\bullet$ Coding:\\
-$(r^\rma_{nm})_{;k^\rmb}\to$ \verb=derMatElem=
-$\calc^\ell_{nm}\to$ \verb=cfMatElem=
-$r^\rma_{nm}\to$ \verb=posMatElem=
-$(\calc^\ell_{nm})_{;k^\rmb}\to$ \verb=gdf=, and\\
-$\left(\calv^{\cals,\rma,\ell}_{nm}\right)_{;k^\rmb}\to$ 
-\verb=gdcalVS=
+
 
 \subsection{Coding for $\calv^{\gs,\rma,\ell}_{nm}(\bfk)$} 
 Recall that 
@@ -415,7 +440,7 @@ $\calv^{\cals,\rma,\ell}_{mn}=(\calv^{\cals,\rma,\ell}_{nm})^*$
 \item If \verb=-n= option is chosen in \verb=all_responses.sh=
 \begin{itemize}
 \item $\calv^{\lda,\rma,\ell}_{nm}$, comes from
-  Eq.~\eqref{c-a.2}, coded in \verb=functions.f90=
+  Eq.~\eqref{c-a.2}, coded in \verb=functions.f90= as \verb=calVlda=
 \end{itemize}
 %%%
 \item If \verb=-n= option is NOT chosen in \verb=all_responses.sh=
@@ -447,7 +472,23 @@ ATGC; using the old structure, adding functionality and  keeping all
 the usles non-codifying crap, thus making Darwin
  proud of us! 
 
-\subsection{Coding for $(\calv^{\gs,\rma,\ell}_{nm}(\bfk))_{;k^\rmb}$}
+\subsection{$\gD^{\gs,\rma,\ell}_{nm}(\bfk)$}
+$\gD^{\gs,\rma,\ell}_{nm}(\bfk)$  is given by
+\begin{align}\label{caldelta}
+\gD^{\gs,\rma,\ell}_{nm}(\bfk)&=\calv^{\gs,\rma,\ell}_{nn}(\bfk)-\calv^{\gs,\rma,\ell}_{mm}(\bfk)
+\end{align}
+\begin{align}\label{delta}
+\gD^{\gs,\rma}_{nm}(\bfk) &=v^{\gs,\rma,\ell}_{nn}(\bfk)-v^{\gs,\rma,\ell}_{mm}(\bfk)
+\nonumber\\
+&=v^{\lda,\rma,\ell}_{nn}(\bfk)-v^{\lda,\rma,\ell}_{mm}(\bfk)
+,
+\end{align}
+since $\bfv^\cals_{nn}=0$.\\
+$\bullet$ Coding: $\gD^{\gs,\rma,\ell}_{nm}(\bfk)\to$ \verb=calDelta= 
+and
+$\gD^{\gs,\rma}_{nm}(\bfk)\to$ \verb=Delta= both in \verb=set_input_ascii.f90= 
+
+\subsection{Coding for $(\calv^{\lda,\rma,\ell}_{nm}(\bfk))_{;k^\rmb}$}
 \begin{itemize}
 \item $\gD^\rma_{nm}$ available in array \verb=Delta=, 
 calculated in \verb=set_input_ascii.f90=,
@@ -471,7 +512,8 @@ diagonal and off diagonal terms. Darwin at work!
   $\calc^\ell_{qm}\to$ \verb=cfMatElem=,
 $v^{\lda,\rma}_{nq}\to$ \verb=vldaMatElem=, 
 $(\calc^\ell_{qm})_{;k^\rmb}\to$
-\verb=gdf=
+\verb=gdf=\\
+ $v^{\lda,\rma}_{nq}\to$ \verb=vldaMatElem=,
 
  \begin{align}\label{c-a.2nn}
 \left(\calv^{\lda,\rma,\ell}_{nm}\right)_{;k^\rmb}
