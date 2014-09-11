@@ -771,11 +771,13 @@ layer-by-layer scheme one should expect that
 since the contribution from the back surface (H-terminated), would
 have zero contribution, since this tensor component of $\chi$ is
 symmetry forbidden. Fancy at
-Fig.~\ref{si-2x1}.
+Fig.~\ref{si-2x1}.\\
+King-of-Kings: Rejoice at 
+Fig.~\ref{si-2x1-n-vs-b}.
 \begin{figure}[b]
 \centering
 \includegraphics[scale=.7]{plots/shg-si-2x1}
-\caption{Im[$\chi_{xxx}$] 
+\caption{$|\chi_{xxx}|$ 
 for a Si(100)$2\times 1$ surface of 12 Si-layers and one H layer, 5
 Ha, 100 bands and 74 $\bfk$-points using
 the layered formulation. We see that
@@ -783,8 +785,21 @@ $\chi^{\mathrm{half-slab}}_{xxx}
 \sim
 \chi^{\mathrm{full-slab}}_{xxx}$,
 validating the layer-by-layer approach.
+As can be seen, the results are not converged as a function of the number
+of $\bfk$-points, which is not the aim of this check-up.
 }
 \label{si-2x1}
+\end{figure}
+\begin{figure}[b]
+\centering
+\includegraphics[scale=.7]{plots/shg-si-2x1-n-vs-b}
+\caption{$|\chi_{xxx}|$ 
+for a Si(100)$2\times 1$ surface of 12 Si-layers and one H layer, 5
+Ha, 100 bands and 244 $\bfk$-points for the CIO-\tiniba-coding
+and 256 $\bfk$-point for the X-DP\copyr-coding.
+Both broadened by 0.1 eV.   
+}
+\label{si-2x1-n-vs-b}
 \end{figure}
 
 \subsection{Consistency check-up 4}
