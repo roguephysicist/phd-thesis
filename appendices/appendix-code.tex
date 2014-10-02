@@ -8,8 +8,8 @@ Eqs.~\eqref{calvimchiewn}, \eqref{calvimchie2wn}, \eqref{calvimchiwn}
 $\calv^{\gs,\rma,\ell}_{nm}\to$ \verb=calVsig=,
 $r^\rma_{nm}\to$ \verb=posMatElem=,
 $\left(\calv^{\gs,\rma,\ell}_{nm}\right)_{;k^\rmb}\to$ \verb=gdcalVsig=,
-\\ $(r^\rma_{nm})_{;k^\rmb}\to$ \verb=derMatElem= and
-$\gD^\rma_{nm}\to$ \verb=Delta=
+\\ $(r^\rma_{nm})_{;k^\rmb}\to$ \verb=derMatElem= 
+$\gD^\rma_{nm}\to$ \verb=Delta= and $\go^\gs_n\to$ \verb=band(n)=
 
 $\bullet$ proof:\\
 To evaluate above expressions we need the following ($m_e=1$):
@@ -690,6 +690,42 @@ $\calbv^\gs_{nm}$  and
 $(\calbv^\gs_{nm})_{;\bfk}$. Linear response, current and
 spin injection, should be revisited again!!}
  
+\begin{itemize}
+\item Injection Current\\
+We need 
+$\bfv^\gs_{nn}(\bfk)$
+ or 
+$\calbv^\gs_{nn}(\bfk)$, but $\bfv^\cals_{nn}(\bfk)=0$
+and 
+$\calbv^\cals_{nn}(\bfk)=0$ (proven numerically, would be nice to try
+analytically), since the velocity of the electron in the conduction
+bands should not depend on the scissors rigid ($\bfk$-independent) correction thus
+\begin{align}\label{z.1}
+\calbv^\gs_{nn}(\bfk)&=\calbv^\lda_{nn}(\bfk)
+\nonumber\\ 
+\bfv^\gs_{nn}(\bfk)&=\bfv^\lda_{nn}(\bfk) 
+,
+\end{align}
+contained in  \verb=CalMomMatElem= and  \verb=momMatElem=,
+respectively. Both would have the contribution from $\bfv^\nl$ if the
+options \verb=(-v,-n)= are used. If $\bfv^\nl$ is neglected, the
+option \verb=-l= for a layer calculation would be much faster as we
+only need to calculate the diagonal elements of Eq.~\eqref{eni.2}, but
+since the idea is to {\it always} include it, we are obliged to use
+Eq.~\eqref{c-a.2}, where $\calc^\ell_{nm}(\bfk)$ is needed, and thus
+we ought to use option \verb=-c=. 
+Since  \verb=CalMomMatElem= is calculated for off-diagonal elements
+only, we have added a \verb=do= loop in \verb=set_input_ascii.f90=
+ to compute the diagonal  part, Eq.~\eqref{z.1}, which is
+stored in \verb=calVsig=. In accordance to \ref{ccu4}, we have checked
+that we obtain the same results by using Eq.~\eqref{eni.2} or
+Eq.~\eqref{ccu.1}, in a layered injection current calculation, which
+means that the results obtained thus far in our articles are correct,
+of course, neglecting $\bfv^\nl$.
+
+INCLUDE FIGURES.
+\end{itemize}
+
 \subsection{Consistency check-up 1}
 
 To check that the layered expressions
@@ -802,7 +838,7 @@ Both broadened by 0.1 eV.
 \label{si-2x1-n-vs-b}
 \end{figure}
 
-\subsection{Consistency check-up 4}
+\subsection{Consistency check-up 4}\label{ccu4}
 
 To check that the coding of 
 $\calc^\ell_{nm}(\bfk)$ 
@@ -851,3 +887,5 @@ and\\
 \verb=$TINIBA/latm/SRC_2latm/= 
 \item \verb=$TINIBA/latm/SRC_1setinput/set_input_ascii.f90=\\
 \end{enumerate}
+
+prescindir
