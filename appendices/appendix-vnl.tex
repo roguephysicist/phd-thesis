@@ -185,17 +185,17 @@ can be readily calculated. \cite{mottaCMS10}
 Indeed,
 the Fourier representation assumes 
 the form,\cite{adolphPRB96,gordienkoRPJ04,fuchsCPC99}
-\begin{align}\label{ji.1}
-V^\nl_{\mathrm{KB}}(\bfK,\bfK')
+\begin{align}\label{ji.1} 
+V^\nl_{\mathrm{KB}}(\bfK,\bfK')  
  &= 
 \sum_s e^{i(\bfK-\bfK')\cdot\bfgtau_s}
-\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_lF_{lm}^s(\bfK)F_{lm}^{s*}(\bfK')
+\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_lF_{lm}^s(\bfK)F_{lm}^{s*}(\bfK')  
 \nonumber\\
  &= 
 \sum_s 
-\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_lf_{lm}^s(\bfK)f_{lm}^{s*}(\bfK')
+\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_lf_{lm}^s(\bfK)f_{lm}^{s*}(\bfK')  
 ,
-\end{align}
+\end{align} 
 with $f^s_{lm}(\bfK)=e^{i\bfK\cdot\bfgtau_s}F^s_{lm}(\bfK)$, and
 \begin{align}\label{ji.2}
 F^s_{lm}(\bfK)=\int d\bfr\,e^{-i\bfK\cdot\bfr}
@@ -210,7 +210,26 @@ $\Phi^\ps_{lm}(\bfr)$ is the pseudo-wavefunction of the corresponding
 atom, while $E_l$ is the so called 
 Kleinman-Bylander energy. Further details can be found in
 Ref. \onlinecite{fuchsCPC99}.
-From Eq.~\eqref{ji.1} in Eq.~\eqref{vnln.2} we find
+From Eq.~\eqref{ji.1} we find
+\begin{align}\label{ji.1n}
+(\nabla_\bfK+\nabla_{\bfK'})  
+V^\nl_{\mathrm{KB}}(\bfK,\bfK') 
+ &= 
+\sum_s 
+\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_l 
+(\nabla_\bfK+\nabla_{\bfK'})   
+f_{lm}^s (\bfK)f_{lm}^{s*}(\bfK') 
+\nonumber\\
+ &= 
+\sum_s 
+\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_l 
+\left(\left[\nabla_\bfK f_{lm}^s (\bfK)\right]f_{lm}^{s*}(\bfK') 
++
+f_{lm}^s (\bfK) \left[\nabla_{\bfK'}  f_{lm}^{s*}(\bfK') \right]
+\right),
+\end{align}
+and using this
+ in Eq.~\eqref{vnln.2} leads to
 \begin{align}
 \bfv^\nl_{nm}(\bfk)
 &=
@@ -236,4 +255,11 @@ f_{lm}^s(\bfK)\Bigg)\Bigg
 ,
 \end{align}
 where there are only single sums over $\bfG$. Above is implemented in
-the DP code.\cite{francesco}
+the \depe~code.\cite{francesco}
+
+Indeed, in \depe~\verb=calcolacommutatore.F90= above expansion
+coefficients are called\\
+ $E_lf_{lm}^s (\bfK)\to$ \verb=fnlkslm= and 
+$E_l\nabla_\bfK f_{lm}^s(\bfK)\to$ \verb=fnldkslm=, where 
+ \verb=fnlkslm= is an array indexed by $\bfk+\bfG$, and 
+ \verb=fnldkslm= is vector  array indexed by $\bfk+\bfG$.

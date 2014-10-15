@@ -295,10 +295,10 @@ v^{\cals,\rma}_{nm}=i\gS f_{mn}r^\rma_{nm}
 ,
 \end{align}
 \begin{align}\label{c-choni.1}
-(v^{\cals,\rma}_{nm})_{;k^\rmb}=
+(v^{\cals,\rma}_{nm})_{;k^\rmb}= 
 i\gS f_{mn}(r^\rma_{nm})_{;k^\rmb}
 ,
-\end{align}
+\end{align} 
 where $\hbar\gS$ is the scissors correction.
 Notice that
 $v^{\cals,\rma}_{nn}=0$ and 
@@ -869,6 +869,96 @@ Eq.~\eqref{eni.2}.
 Indeed, we have checked that this is the case. The
 \verb=$TINIBA/util/consistency-of-cfmn.sh=
 is used to check this.
+
+\subsection{Consistency check-up 5}\label{ccu5}
+
+When the \verb=-n= option is chosen, using \verb=all_responses.sh= as
+coded above doesn't give consistent results, i.e. $\chi$
+ with $\bfv^\nl$  
+is not smaller than $\chi$ 
+ without $\bfv^\nl$. Thus, we follow the bellow approach instead.
+
+With the help of Eq.~\eqref{chon.98}, we rewrite Eq.~\eqref{nmes}  as
+\begin{align}\label{ccu51}
+(v^{\lda,\rma}_{nm})_{;k^{\rmb}}&= 
+i  
+r^{\rmb}_{nm}
+\Delta^{\rma}_{mn}
++ 
+i\bigg(
+\sum_{\ell\neq n}  
+r^{\rmb}_{n\ell}  
+v^{\lda,\rma}_{\ell m}
+-
+\sum_{\ell\neq m}  
+v^{\lda,\rma}_{n\ell}  
+r^{\rmb}_{\ell m}
+\bigg) 
+,
+\end{align}  
+where $\calt^{\rma\rmb}_{nm}$ is neglected.
+We generalize this expression for the layer-by-layer scheme as
+follows,
+\begin{align}\label{ccu52}
+(\calv^{\lda,\rma}_{nm})_{;k^{\rmb}}&=
+i 
+r^{\rmb}_{nm}
+\tilde\Delta^{\rma}_{mn}
++
+i\bigg(
+\sum_{\ell\neq n} 
+r^{\rmb}_{n\ell} 
+\calv^{\lda,\rma}_{\ell m}
+-
+\sum_{\ell\neq m} 
+\calv^{\lda,\rma}_{n\ell}  
+r^{\rmb}_{\ell m}
+\bigg) 
+,
+\end{align} 
+where
+\begin{align}\label{ccu53}
+\tilde\Delta^{\rma}_{mn}
+=
+\calv^{\lda,\rma}_{mm} 
+-\calv^{\lda,\rma}_{nn} 
+,
+\end{align} 
+which is coded instead of Eq.~\eqref{c-a.2nn}. Likewise, with the help
+of Eq.~\eqref{a_gradw2} into
+Eq.~\eqref{c-choni.1}, we obain
+\begin{align}\label{ccu54}
+(v^{\cals,\rma}_{nm})_{;k^\rmb}&=
+i\gS f_{mn}(r^\rma_{nm})_{;k^\rmb}
+=
+i\gS f_{mn}\left(\frac{v^{\lda,\rma}_{nm}}{i\go^\lda_{nm}}\right)_{;k^\rmb}
+\nonumber\\
+&=
+\gS\frac{f_{mn}}{\go^\lda_{nm}}\left[
+\left(v^{\lda,a}_{nm}\right)_{;k^\rmb}
+-
+\frac{v^{\lda,a}_{nm}}{\go^\lda_{nm}}\left(\go^\lda_{nm}\right)_{;k^\rmb}
+\right]
+\nonumber\\
+&=
+\gS\frac{f_{mn}}{\go^\lda_{nm}}\left[
+\left(v^{\lda,a}_{nm}\right)_{;k^\rmb}
+-
+\frac{\gD^{b}_{nm}}{\go^\lda_{nm}}v^{\lda,a}_{nm}
+\right]
+,
+\end{align}
+which is generalized as follows 
+\begin{align}\label{ccu55}
+(\calv^{\cals,\rma}_{nm})_{;k^\rmb}&=
+\gS\frac{f_{mn}}{\go^\lda_{nm}}\left[
+\left(\calv^{\lda,a}_{nm}\right)_{;k^\rmb}
+-
+\frac{\gD^{b}_{nm}}{\go^\lda_{nm}}\calv^{\lda,a}_{nm}
+\right]
+,
+\end{align}
+which is coded instead of Eq.~\eqref{dgvs.cv}.
 
 \subsection{Subroutines}
 
