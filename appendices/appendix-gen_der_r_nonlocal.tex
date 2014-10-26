@@ -5,22 +5,26 @@ We obtain the generalized derivative $(\bfr_{nm}(\bfk))_{;\bfk}$ for
 the case of a non-local potential in the Hamiltonian.
 We start from (see Eq.~\eqref{conhr})
 \begin{align}\label{na_hrdab}
-[r^{\rma},v^{\lda,\rmb}]= 
+[r^{\rma},v^{\lda,\rmb}]
+&=
+[r^{\rma},v^\rmb]
++ 
+[r^{\rma},v^{\nl,\rmb}]
+=
 \frac{i\hbar}{m_e}\gd_{ab}+
-\frac{1}{i\hbar}[r^{\rma},v^{\nl,\rmb}]
-\equiv
-\calt^{\rma\rmb}
+[r^{\rma},v^{\nl,\rmb}]
+\equiv  
+\tau^{\rma\rmb}
 ,
-\end{align} 
-where the matrix elements of $\calt^{\rma\rmb}$ are calculated in
-Appendix \ref{calt}.
+\end{align}  
+where we used the fact that $[r^\rma,p^\rmb]=i\hbar\gd_{ab}$.
 Then,
 \begin{align}\label{na_hrdab2}
 \bra{n\bfk}[r^{\rma},v^{\lda,\rmb}]\ket{m\bfk'}
 =
-\bra{n\bfk}\calt^{\rma\rmb}\ket{m\bfk'}
+\bra{n\bfk}\tau^{\rma\rmb}\ket{m\bfk'}
 =
-\calt^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
+\tau^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
 ,
 \end{align}
 so
@@ -29,9 +33,11 @@ so
 +
 \bra{n\bfk}[r^{\rma}_e,v^{\lda,\rmb}]\ket{m\bfk'}
 =
-\calt^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
-.
+\tau^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
+,
 \end{align}
+where the matrix elements of $\tau^{\rma\rmb}_{nm}(\bfk)$ are calculated in  
+Appendix \ref{calt}.  
 From Eq.~\eqref{conmri3} and ~\eqref{gendev}
 \begin{align}\label{na_rip}
 \bra{n\bfk}[r^{\rma}_i,v_\lda^{\rmb}]\ket{m\bfk'}
@@ -133,14 +139,14 @@ v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
 )
 \bigg)
 =
-\calt^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
+\tau^{\rma\rmb}_{nm}(\bfk)\gd(\bfk-\bfk')
 ,
 \end{align}
 then
 \begin{align}\label{na_rapb2}
 (v^{\lda,\rmb}_{nm})_{;k^{\rma}}&=
 -i
-\calt^{\rma\rmb}_{nm}
+\tau^{\rma\rmb}_{nm}
 +i
 \sum_{\ell}
 \bigg(
@@ -160,7 +166,7 @@ v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
 and from Eq.~\eqref{na_ripn},
 \begin{align}\label{ncogno}
 \nabla_{k^{\rma}}v^{\lda,\rmb}_{nm}=
--i\calt^{\rma\rmb}_{nm}
+-i\tau^{\rma\rmb}_{nm}
 +i
 \sum_{\ell}
 \bigg(
@@ -177,7 +183,7 @@ Now, there are two cases. We use Eq.~\eqref{chon.98}.
 \noindent {\it Case} $n=m$
 \begin{align}\label{ntita}
 \nabla_{k^{\rma}}v^{\lda,\rmb}_{nn}&=
--i\calt^{\rma\rmb}_{nn}
+-i\tau^{\rma\rmb}_{nn}
 +i
 \sum_{\ell}
 \bigg(
@@ -189,7 +195,7 @@ v^{\lda,\rmb}_{n\ell}
 \bigg)
 \nonumber\\
 &=
--i\calt^{\rma\rmb}_{nn}
+-i\tau^{\rma\rmb}_{nn}
 -
 \sum_{\ell\ne n}
 \bigg(
@@ -203,7 +209,7 @@ r^{\rma}_{\ell n}
 \bigg)
 \nonumber\\
 &=
--i\calt^{\rma\rmb}_{nn}
+-i\tau^{\rma\rmb}_{nn}
 -
 \sum_{\ell\ne n}
 \go^\lda_{\ell n}
@@ -222,70 +228,50 @@ would give the generalization for the inverse effective mass
 tensor $(m_n^{-1})_{ab}$ for nonlocal potentials.
 Indeed, if we neglect the commutator of $\bfv^\nl$ in
 Eq.~\eqref{na_hrdab}, we obtain 
-$-i\calt^{\rma\rmb}_{nn}=\hbar/m_e\gd_{\rma\rmb}$
+$-i\tau^{\rma\rmb}_{nn}=\hbar/m_e\gd_{\rma\rmb}$
 thus obtaining the  familiar expression of $(m_n^{-1})_{ab}$.\cite{ashcroft_solid_1976}
 
 \noindent {\it Case} $n\ne m$
 \begin{align}\label{nmes}
 (v^{\lda,\rmb}_{nm})_{;k^{\rma}}&=
--i\calt^{\rma\rmb}_{nm}
+-i\tau^{\rma\rmb}_{nm}
 +i  
 \sum_{\ell\ne m\ne n}
 \bigg(
-\xi^{\rma}_{n\ell} 
+\xi^{\rma}_{n\ell}  
 v^{\lda,\rmb}_{\ell m}
-- 
+-  
 v^{\lda,\rmb}_{n\ell}
 \xi^{\rma}_{\ell m}
 \bigg)  
 \nonumber\\
-&+ 
+&+  
 i  
 \bigg(
-\xi^{\rma}_{nm} 
+\xi^{\rma}_{nm}  
 v^{\lda,\rmb}_{mm}
-- 
+-  
 v^{\lda,\rmb}_{nm}
 \xi^{\rma}_{mm}
 \bigg)  
 \nonumber\\
-&+ 
+&+  
 i  
 \bigg(
-\xi^{\rma}_{nn} 
+\xi^{\rma}_{nn}  
 v^{\lda,\rmb}_{nm}
-- 
+-  
 v^{\lda,\rmb}_{nn}
 \xi^{\rma}_{nm}
 \bigg)  
-+i  
++i   
 v^{\lda,\rmb}_{nm}(\xi^{\rma}_{mm}
 -
 \xi^{\rma}_{nn}
 )  
 \nonumber \\
 &=
--i\calt^{\rma\rmb}_{nm}
--
-\sum_{\ell}
-\bigg(
-\go^\lda_{\ell m} 
-r^{\rma}_{n\ell} 
-r^{\rmb}_{\ell m}
--
-\go^\lda_{n\ell} 
-r^{\rmb}_{n\ell} 
-r^{\rma}_{\ell m}
-\bigg)  
-+i  
-\xi^{\rma}_{nm}
-(v^{\lda,\rmb}_{mm}
-- 
-v^{\lda,\rmb}_{nn}
-)  
-\nonumber \\
-&=
--i\calt^{\rma\rmb}_{nm}
+-i\tau^{\rma\rmb}_{nm}
 -
 \sum_{\ell}
 \bigg(
@@ -298,10 +284,30 @@ r^{\rmb}_{n\ell}
 r^{\rma}_{\ell m}
 \bigg)  
 +i  
+\xi^{\rma}_{nm}
+(v^{\lda,\rmb}_{mm}
+-  
+v^{\lda,\rmb}_{nn}
+)  
+\nonumber \\
+&=
+-i\tau^{\rma\rmb}_{nm}
+-
+\sum_{\ell}
+\bigg(
+\go^\lda_{\ell m}   
+r^{\rma}_{n\ell}   
+r^{\rmb}_{\ell m}
+-
+\go^\lda_{n\ell}   
+r^{\rmb}_{n\ell}   
+r^{\rma}_{\ell m}
+\bigg)  
++i   
 r^{\rma}_{nm}
 \Delta^{\rmb}_{mn}
 ,
-\end{align}  
+\end{align}   
 where we use $\Delta^\rma_{mn}$ of Eq.~\eqref{eli.13}.
 Now, for $n \ne m$, Eqs.~\eqref{chon.98},
 ~\eqref{a_gradw2} and 
@@ -323,7 +329,7 @@ v^{\lda,\rmb}_{nm}
 \right)_{;k^{\rma}}
 \nonumber \\
 &=
--i\calt^{\rma\rmb}_{nm}
+-i\tau^{\rma\rmb}_{nm}
 +
 \frac{i}{\go^\lda_{nm}}
 \sum_{\ell}
@@ -350,7 +356,7 @@ r^{\rma}_{\ell m}
 \right)_{;k^{\rma}}
 \nonumber \\
 &=
--i\calt^{\rma\rmb}_{nm}
+-i\tau^{\rma\rmb}_{nm}
 +
 \frac{i}{\go^\lda_{nm}}
 \sum_{\ell}
@@ -375,7 +381,7 @@ r^{\rma}_{\ell m}
 \frac{v^{\lda,\rma}_{nn}-v^{\lda,\rma}_{mm}}{m_e}
 \nonumber \\
 &=
--i\calt^{\rma\rmb}_{nm}
+-i\tau^{\rma\rmb}_{nm}
 +
 \frac{ 
 r^{\rma}_{nm}
@@ -398,9 +404,90 @@ r^{\rma}_{\ell m}
 \bigg)
 ,
 \end{align} 
-where the $-i\calt_{nm}$ term, generalizes the usual expresion of
+where the $-i\tau^{\rma\rmb}_{nm}$ term, generalizes the usual expresion of
 $\bfr_{nm;\bfk}$ for local 
 Hamiltonians,\cite{aversaPRB95,nastosPRB05,cabellosPRB09,rashkeevPRB98}
 to
 the case of a
 nonlocal potential in the Hamiltonian.
+
+\subsection{Layer Case}
+
+To obtain the generalized derivative expressions for the case of the
+layered matrix elements ar required by Eq.~\eqref{nl.4}, we could
+start form Eq.~\eqref{na_hrdab} again, and replace $\hat\bfv^\lda$
+by $\calbv^\lda$, to obtain the equivalent of Eqs.~\eqref{ntita} and
+\eqref{nmes}, for which we need to calculate the new
+$\tau^{\rma\rmb}_{nm}$, that is given by
+\begin{align}\label{na_hrdab-n}
+\calt^{\rma\rmb}_{nm}&=
+[r^{\rma},\calv^{\lda,\rmb}]_{nm}
+= 
+[r^{\rma},\calv^\rmb]_{nm}+
+[r^{\rma},\calv^{\nl,\rmb}]_{nm}
+\nonumber\\
+&=
+\frac{1}{2}
+[r^{\rma},v^\rmb C^\ell(z)+C^\ell(z) v^\rmb]_{nm} 
++
+\frac{1}{2}
+[r^{\rma},v^{\nl,\rmb} C^\ell(z)+C^\ell(z) v^{\nl,\rmb}]_{nm} 
+\nonumber\\
+&=
+\Big([r^{\rma},v^\rmb]C^\ell(z)\Big)_{nm} 
++
+\Big(
+[r^{\rma},v^{\nl,\rmb}] C^\ell(z)\Big)_{nm} 
+\nonumber\\
+&=
+\sum_p[r^{\rma},v^\rmb]_{np}C^\ell_{pm} 
++
+\sum_p 
+[r^{\rma},v^{\nl,\rmb}]_{np}C^\ell_{pm} 
+\nonumber\\
+&=
+\frac{i\hbar}{m_e}\gd_{\rma\rmb} C^\ell_{nm} 
++
+\sum_p 
+[r^{\rma},v^{\nl,\rmb}]_{np}C^\ell_{pm} 
+.
+\end{align} 
+For a full-slab calculation, that would correspondo to a bulk
+calculation as well, $C^\ell(z)=1$ and then, $C^\ell_{nm}=\gd_{nm}$,
+and from above expression 
+$\calt^{\rma\rmb}_{nm}\to \tau^{\rma\rmb}_{nm}$.
+Thus, the layered expression for $\calv^{\lda,a}_{nm}$ becomes
+\begin{align}\label{nmesn}
+(\calv^{\lda,\rma}_{nm})_{;k^{\rmb}}&=
+\frac{\hbar}{m_e}\gd_{\rma\rmb}
+C^\ell_{nm} 
+-i
+\sum_p 
+[r^{\rmb},v^{\nl,\rma}]_{np}C^\ell_{pm} 
++i
+\sum_{\ell}
+\bigg(
+r^{\rmb}_{n\ell}  
+\calv^{\lda,\rma}_{\ell m}
+-
+\calv^{\lda,\rma}_{n\ell}   
+r^{\rmb}_{\ell m}
+\bigg)  
++i  
+r^{\rmb}_{nm}
+\tilde\Delta^{\rma}_{mn}
+,
+\end{align}  
+where
+\begin{eqnarray}\label{tdel}
+\tilde\Delta^{\rma}_{mn}
+=
+\calv^{\lda,\rma}_{nn}  
+-
+\calv^{\lda,\rma}_{mm}  
+.
+\end{eqnarray}
+As mentioned before, the term $[r^{\rmb},v^{\nl,\rma}]_{nm}$
+calculated in Appendix \ref{calt}, is small
+compared to the other terms, thus we neglect it throwout this work.\cite{valerie} 
+The expression for $C^\ell_{nm}$ is calculated in Appendix \ref{calpcalc}.

@@ -807,22 +807,22 @@ layer-by-layer scheme one should expect that
 since the contribution from the back surface (H-terminated), would
 have zero contribution, since this tensor component of $\chi$ is
 symmetry forbidden. Fancy at
-Fig.~\ref{si-2x1}.\\
+Fig.~\ref{si-2x1}, and notice that $\chi^\nl<\chi$. i.e. the
+susceptibility with the inclusion of the non-local part of the
+pseudopotential is smaller than that without it.\\
 King-of-Kings: Rejoice at 
 Fig.~\ref{si-2x1-n-vs-b}.
 \begin{figure}[b]
-\centering
-\includegraphics[scale=.7]{plots/shg-si-2x1}
+\centering 
+\includegraphics[scale=.7]{plots/shg-si-2x1-16}
 \caption{$|\chi_{xxx}|$ 
-for a Si(100)$2\times 1$ surface of 12 Si-layers and one H layer, 5
-Ha, 100 bands and 74 $\bfk$-points using
-the layered formulation. We see that
+for a Si(100)$2\times 1$ surface of 16 Si-layers and one H layer, 10 
+Ha, 132 bands and 244 $\bfk$-points using 
+the layered formulation. We see that 
 $\chi^{\mathrm{half-slab}}_{xxx}
-\sim
+\sim 
 \chi^{\mathrm{full-slab}}_{xxx}$,
-validating the layer-by-layer approach.
-As can be seen, the results are not converged as a function of the number
-of $\bfk$-points, which is not the aim of this check-up.
+validating the layer-by-layer approach. 
 }
 \label{si-2x1}
 \end{figure}
@@ -836,6 +836,25 @@ and 256 $\bfk$-point for the X-DP\copyr-coding.
 Both broadened by 0.1 eV.   
 }
 \label{si-2x1-n-vs-b}
+\end{figure}
+\begin{figure}[b]
+\centering 
+\includegraphics[scale=1]{plots/shg-si-2x1-16-compa}
+\caption{$|\chi_{xxx}|$ 
+for a Si(100)$2\times 1$ surface of 16 Si-layers and one H layer, 10 
+Ha, 132 bands and 244 $\bfk$-points using 
+the layered formulation. 
+``Full'' uses full coding of 
+$\calv^\cals_{nm}$ and 
+$\calv^\cals_{nm:\bfk}$ through Eq.~\eqref{a.3b};
+``only-$\calv^\cals$'' uses 
+$\calv^\cals_{nm}$ through Eq.~\eqref{a.3b} and 
+$\calv^\cals_{nm:\bfk}$ through Eq.~\eqref{ccu55};
+``alternative'' uses $\calv^\cals_{nm}$ through Eq.~\eqref{temp.1} and 
+$\calv^\cals_{nm:\bfk}$ through Eq.~\eqref{ccu55}.
+Notice that the three curves are almost identical.
+}
+\label{si-2x1-compa}
 \end{figure}
 
 \subsection{Consistency check-up 4}\label{ccu4}
@@ -878,53 +897,44 @@ coded above doesn't give consistent results, i.e. $\chi$
 is not smaller than $\chi$ 
  without $\bfv^\nl$. Thus, we follow the bellow approach instead.
 
-With the help of Eq.~\eqref{chon.98}, we rewrite Eq.~\eqref{nmes}  as
-\begin{align}\label{ccu51}
-(v^{\lda,\rma}_{nm})_{;k^{\rmb}}&= 
-i  
-r^{\rmb}_{nm}
-\Delta^{\rma}_{mn}
-+ 
-i\bigg(
-\sum_{\ell\neq n}  
-r^{\rmb}_{n\ell}  
-v^{\lda,\rma}_{\ell m}
--
-\sum_{\ell\neq m}  
-v^{\lda,\rma}_{n\ell}  
-r^{\rmb}_{\ell m}
-\bigg) 
-,
-\end{align}  
-where $\calt^{\rma\rmb}_{nm}$ is neglected.
-We generalize this expression for the layer-by-layer scheme as
-follows,
-\begin{align}\label{ccu52}
+We use Eq.~\eqref{nmesn}
+\begin{align}\label{nmesnn}
 (\calv^{\lda,\rma}_{nm})_{;k^{\rmb}}&=
-i 
-r^{\rmb}_{nm}
-\tilde\Delta^{\rma}_{mn}
-+
-i\bigg(
-\sum_{\ell\neq n} 
-r^{\rmb}_{n\ell} 
+\frac{\hbar}{m_e}\gd_{\rma\rmb}
+C^\ell_{nm} 
+-i 
+\sum_p 
+[r^{\rmb},v^{\nl,\rma}]_{np}C^\ell_{pm} 
++i 
+\sum_{\ell}
+\bigg(
+r^{\rmb}_{n\ell}  
 \calv^{\lda,\rma}_{\ell m}
 -
-\sum_{\ell\neq m} 
-\calv^{\lda,\rma}_{n\ell}  
+\calv^{\lda,\rma}_{n\ell}   
 r^{\rmb}_{\ell m}
-\bigg) 
+\bigg)  
++i  
+r^{\rmb}_{nm}
+\tilde\Delta^{\rma}_{mn}
 ,
-\end{align} 
-where
-\begin{align}\label{ccu53}
+\end{align}  
+where 
+\begin{eqnarray}\label{tdeln}
 \tilde\Delta^{\rma}_{mn}
 =
-\calv^{\lda,\rma}_{mm} 
--\calv^{\lda,\rma}_{nn} 
-,
-\end{align} 
-which is coded instead of Eq.~\eqref{c-a.2nn}. Likewise, with the help
+\calv^{\lda,\rma}_{nn}  
+-
+\calv^{\lda,\rma}_{mm}  
+, 
+\end{eqnarray}
+which is coded instead of Eq.~\eqref{c-a.2nn}. 
+ As mentioned before, the term $[r^{\rmb},v^{\nl,\rma}]_{nm}$
+calculated in Appendix \ref{calt}, is small 
+compared to the other terms, thus we neglect it throwout this work.\cite{valerie} 
+The expression for $C^\ell_{nm}$ is calculated in Appendix \ref{calpcalc}.
+
+Likewise, with the help
 of Eq.~\eqref{a_gradw2} into
 Eq.~\eqref{c-choni.1}, we obain
 \begin{align}\label{ccu54}
@@ -958,7 +968,27 @@ which is generalized as follows
 \right]
 ,
 \end{align}
-which is coded instead of Eq.~\eqref{dgvs.cv}.
+although, I haven't found a way to prove this rigorously, it gives 
+very similar results to those obtained by Eq.~\eqref{c-a.3bnn}, which 
+is coded. 
+%which is coded instead of 
+The following is also tempting,
+\begin{align}\label{temp.1}
+v^{\cals,a}_{nm}
+&=\gS\frac{f_{mn}}{\go^\lda_{nm}}
+v^{\lda,a}_{nm}
+\nonumber\\
+\calv^{\cals,a}_{nm}
+&=\gS\frac{f_{mn}}{\go^\lda_{nm}}
+\calv^{\lda,a}_{nm}
+.
+\end{align}
+Again, I haven't found a way to prove this rigorously, but it gives 
+very similar results to those obtained by Eq.~\eqref{a.3b}, which 
+is coded. In Fig.~\ref{si-2x1-compa} we show the comparison between
+the two alternatives, from where we see that they are basically equivalent. 
+
+
 
 \subsection{Subroutines}
 
