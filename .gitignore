@@ -1,8 +1,8 @@
 ## Specific files
-ondi-va.tex
 shg-layer-nonlocal.pdf
 .\#*
 .DS_Store
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

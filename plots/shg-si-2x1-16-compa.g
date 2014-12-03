@@ -12,5 +12,6 @@ set xlabel "\\Large photon-energy (eV)"
 abso(w,x,y,z)=sqrt((w+y)**2+(x+z)**2)
 p 'data/si-2x1/last/gdcalS-calS/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_.5_Nc_66' u 1:(abso($2,$3,$4,$5)) t "full" w l,\
 'data/si-2x1/last/only-calS/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_.5_Nc_66' u 1:(abso($2,$3,$4,$5)) t "only-${\\cal V}^{\\cal S}$" w l,\
-'data/si-2x1/last/alternative/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_.5_Nc_66' u 1:(abso($2,$3,$4,$5)) t "alternative" w l
+'data/si-2x1/last/alternative/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_.5_Nc_66' u 1:(abso($2,$3,$4,$5)) t "alternative" w l,\
+'data/si-2x1/last/gdcalS-calS/shgC.vnl.sm_xxx_244_half-slab_10-nospin_scissor_.5_Nc_65' u 1:(abso($2,$3,$4,$5)) t "full@2000" w l
 #

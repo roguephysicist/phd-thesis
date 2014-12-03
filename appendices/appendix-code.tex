@@ -681,7 +681,14 @@ transparent and straightforward. This coding is what constitutes the
 small numerical difference, equal to the {\it Velocity}-gauge
 implementation of Eq. 35 of Cabellos et al.\cite{cabellosPRB09}, also
 in \tiniba. 
-
+{\color{red} THE SPIN FACTOR IS PUT IN
+}\verb=file_control.f90=. 
+If there is no spin-orbit interaction the 
+factor \Verb+spin_factor=2+.  
+If there is spin-orbit interaction the 
+factor \Verb+spin_factor=1+. The final result is multiplied by  
+the \verb=spin_factor= variable. So above expressions are not
+multiplied by the spin degeneracy, the code multiplies them.   
 \subsection{Other responses}
 
 \textcolor{red}{Warning: the layered responses MUST be looked at
@@ -817,7 +824,8 @@ Fig.~\ref{si-2x1-n-vs-b}.
 \includegraphics[scale=.7]{plots/shg-si-2x1-16}
 \caption{$|\chi_{xxx}|$ 
 for a Si(100)$2\times 1$ surface of 16 Si-layers and one H layer, 10 
-Ha, 132 bands and 244 $\bfk$-points using 
+Ha, 132 bands,  244 $\bfk$-points, and 1000 pwvs in \depe,
+ using 
 the layered formulation. We see that 
 $\chi^{\mathrm{half-slab}}_{xxx}
 \sim 
@@ -839,10 +847,10 @@ Both broadened by 0.1 eV.
 \end{figure}
 \begin{figure}[b]
 \centering 
-\includegraphics[scale=1]{plots/shg-si-2x1-16-compa}
+\includegraphics[scale=1.5]{plots/shg-si-2x1-16-compa}
 \caption{$|\chi_{xxx}|$ 
 for a Si(100)$2\times 1$ surface of 16 Si-layers and one H layer, 10 
-Ha, 132 bands and 244 $\bfk$-points using 
+Ha, 132 bands, 244 $\bfk$-points and and 1000 pwvs in \depe, using 
 the layered formulation. 
 ``Full'' uses full coding of 
 $\calv^\cals_{nm}$ and 
@@ -852,7 +860,8 @@ $\calv^\cals_{nm}$ through Eq.~\eqref{a.3b} and
 $\calv^\cals_{nm:\bfk}$ through Eq.~\eqref{ccu55};
 ``alternative'' uses $\calv^\cals_{nm}$ through Eq.~\eqref{temp.1} and 
 $\calv^\cals_{nm:\bfk}$ through Eq.~\eqref{ccu55}.
-Notice that the three curves are almost identical.
+Also, we show the results for 2000 pwvs.
+Notice that all the curves are almost identical to each other. 
 }
 \label{si-2x1-compa}
 \end{figure}
@@ -1008,4 +1017,56 @@ and\\
 \item \verb=$TINIBA/latm/SRC_1setinput/set_input_ascii.f90=\\
 \end{enumerate}
 
-prescindir
+\subsection{Scissors renormalization for $\calv^\gS_{nm}$}\label{voila}
+
+\begin{align}\label{cdg.1}
+\bra{n\bfk}\calc(z)\bfr\ket{m\bfk}(E^\gS_m-E^\gS_n) 
+&=
+\int d\bfr\,\psi^*_{n\bfk}(\bfr) 
+\calc(z)\bfr (E^\gS_m-E^\gS_n) 
+\psi_{m\bfk}(\bfr) 
+\nonumber\\
+&=
+\int d\bfr\,\psi^*_{n\bfk}(\bfr) 
+\calc(z)[\bfr,H^\gS]
+\psi_{m\bfk}(\bfr) 
+\nonumber\\
+&=
+-i\int d\bfr\,\psi^*_{n\bfk}(\bfr) 
+\calc(z)\bfv^\gS 
+\psi_{m\bfk}(\bfr) 
+\to 
+\calbv^\gS_{nm}
+\nonumber\\
+\bra{n\bfk}\calc(z)\bfr\ket{m\bfk}
+&\to 
+\frac{\calbv^\gS_{nm}}{\go^\gS_{nm}}
+\nonumber\\
+\bra{n\bfk}\calc(z)\bfr\ket{m\bfk}(E^\lda_m-E^\lda_n) 
+&=
+\int d\bfr\,\psi^*_{n\bfk}(\bfr) 
+\calc(z)\bfr (E^\lda_m-E^\lda_n) 
+\psi_{m\bfk}(\bfr) 
+\nonumber\\
+&=
+\int d\bfr\,\psi^*_{n\bfk}(\bfr) 
+\calc(z)[\bfr,H^\lda]
+\psi_{m\bfk}(\bfr) 
+\nonumber\\
+&=
+-i\int d\bfr\,\psi^*_{n\bfk}(\bfr) 
+\calc(z)\bfv^\lda 
+\psi_{m\bfk}(\bfr) 
+\to 
+\calbv^\lda_{nm}
+\nonumber\\
+\bra{n\bfk}\calc(z)\bfr\ket{m\bfk}
+&\to 
+\frac{\calbv^\lda_{nm}}{\go^\lda_{nm}}
+\nonumber\\
+\calbv^\gS_{nm}
+&=
+\frac{\go^\gS_{nm}}{\go^\lda_{nm}}
+\calbv^\lda_{nm}\quad{\mathrm{voila}!!!}
+.
+\end{align}
