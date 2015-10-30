@@ -25,13 +25,9 @@
 % the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 % Boston, MA 02111-1307, USA.
 %
-% **************************************************************************************************************
-\RequirePackage{fix-cm} % fix some latex issues see: http://texdoc.net/texmf-dist/doc/latex/base/fixltx2e.pdf
-\documentclass[ twoside,openright,titlepage,numbers=noenddot,headinclude,%1headlines,% letterpaper a4paper
-                footinclude=true,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
-                BCOR=5mm,paper=a4,fontsize=11pt,%11pt,a4paper,%
-                ngerman,american,%
-                ]{scrreprt}
+% *********************************************************************
+\RequirePackage{fix-cm}
+\documentclass[twoside,openright,titlepage,numbers=noenddot,headinclude,footinclude=true,cleardoublepage=empty,abstractoff,BCOR=5mm,paper=letter,fontsize=11pt,ngerman,american,]{scrreprt}
 
 %********************************************************************
 % Note: Make all your adjustments in here
@@ -50,6 +46,7 @@
 %\hyphenation{put special hyphenation here}
 
 \begin{document}
+
 \frenchspacing
 \raggedbottom
 \selectlanguage{american} % american ngerman
@@ -57,6 +54,7 @@
 %\setbibpreamble{}
 \pagenumbering{roman}
 \pagestyle{plain}
+
 %********************************************************************
 % Frontmatter
 %*******************************************************
@@ -67,6 +65,7 @@
 \cleardoublepage\include{frontbackmatter/Acknowledgments}
 \pagestyle{scrheadings}
 \cleardoublepage\include{frontbackmatter/Contents}
+
 %********************************************************************
 % Mainmatter
 %*******************************************************
@@ -88,6 +87,7 @@ da. Le usate medical addresses pro, europa origine sanctificate nos se.}
 %\addtocontents{toc}{\protect\clearpage} % <--- just debug stuff, ignore
 \include{chapters/Chapter03}
 %\include{multiToC} % <--- just debug stuff, ignore for your documents
+
 % ********************************************************************
 % Backmatter
 %*******************************************************
