@@ -1,4 +1,4 @@
-\section{Coding}\label{code}
+\chapter{Coding}\label{code}
 In this Appendix we reproduce all the quantities  that should be coded.
 
 Eqs.~\eqref{calvimchiewn}, \eqref{calvimchie2wn}, \eqref{calvimchiwn}
@@ -430,7 +430,7 @@ r^\rma_{vc}(\calc^\ell_{cv}) _{;k^\rmb}\right]
 \end{align}  
 
 
-\subsection{Coding for $\calv^{\gs,\rma,\ell}_{nm}(\bfk)$} 
+\section{Coding for $\calv^{\gs,\rma,\ell}_{nm}(\bfk)$} 
 Recall that 
 $\calv^{\lda,\rma,\ell}_{mn}=(\calv^{\lda,\rma,\ell}_{nm})^*$
 and 
@@ -472,7 +472,7 @@ ATGC; using the old structure, adding functionality and  keeping all
 the usles non-codifying crap, thus making Darwin
  proud of us! 
 
-\subsection{$\gD^{\gs,\rma,\ell}_{nm}(\bfk)$}
+\section{$\gD^{\gs,\rma,\ell}_{nm}(\bfk)$}
 $\gD^{\gs,\rma,\ell}_{nm}(\bfk)$  is given by
 \begin{align}\label{caldelta}
 \gD^{\gs,\rma,\ell}_{nm}(\bfk)&=\calv^{\gs,\rma,\ell}_{nn}(\bfk)-\calv^{\gs,\rma,\ell}_{mm}(\bfk)
@@ -488,7 +488,7 @@ $\bullet$ Coding: $\gD^{\gs,\rma,\ell}_{nm}(\bfk)\to$ \verb=calDelta=
 and
 $\gD^{\gs,\rma}_{nm}(\bfk)\to$ \verb=Delta= both in \verb=set_input_ascii.f90= 
 
-\subsection{Coding for $(\calv^{\lda,\rma,\ell}_{nm}(\bfk))_{;k^\rmb}$}
+\section{Coding for $(\calv^{\lda,\rma,\ell}_{nm}(\bfk))_{;k^\rmb}$}
 \begin{itemize}
 \item $\gD^\rma_{nm}$ available in array \verb=Delta=, 
 calculated in \verb=set_input_ascii.f90=,
@@ -535,7 +535,7 @@ $\left(\calv^{\lda,\rma,\ell}_{nm}\right)_{;k^\rmb}\to$
 \verb=gdcalVlda= and coded in \verb=set_input_ascii.f90=
 \end{itemize}
 
-\subsection{Summary}
+\section{Summary}
 \begin{itemize}
 \item
 $\calv^{\gs,\rma,\ell}_{nm}(\bfk)=\calv^{\lda,\rma,\ell}_{nm}(\bfk)+\calv^{\cals,\rma,\ell}_{nm}(\bfk)\to$
@@ -552,7 +552,7 @@ $\calv^{\gs,\rma,\ell}_{nm}(\bfk)=\calv^{\lda,\rma,\ell}_{nm}(\bfk)+\calv^{\cals
 \verb=gdcalVsig=
 \end{itemize}
 
-\subsection{Bulk expressions}
+\section{Bulk expressions}
 
 For a bulk $\calc^\ell_{nm}(\bfk)=\gd_{nm}$, then
 $(\calc^\ell_{nm}(\bfk))_{;\bfk}=0$, and Eq.~\eqref{c-a.1} reduces to
@@ -611,7 +611,7 @@ $\left(v^{\lda,\rma}_{nm}\right)_{;k^\rmb}\to$ \verb=gdVlda=,
 $\left(r^{\lda,\rma}_{nm}\right)_{;k^\rmb}\to$ \verb=derMatElem=, and
 $\left(v^{\gs,\rma}_{nm}\right)_{;k^\rmb}\to$ \verb=gdVsig=
 
-\subsection{Layer or Bulk calculation}
+\section{Layer or Bulk calculation}
 \begin{itemize}
 \item Layer: The layer calculation is done by using
 Eqs.~\eqref{c-calvimchiewn}, \eqref{c-calvimchie2wn}, \eqref{c-calvimchiwn}
@@ -648,7 +648,7 @@ If \verb=calMomMatElem= is not used, we should get rid of it (ID at work).
 \end{itemize}
 \end{itemize}
 
-\subsection{$\calv$ vs ${\cal R}$}
+\section{$\calv$ vs ${\cal R}$}
 
 Using 
 $\mathrm{Re}[iz]=-\mathrm{Im}[z]$,
@@ -684,12 +684,12 @@ in \tiniba.
 {\color{red} THE SPIN FACTOR IS PUT IN
 }\verb=file_control.f90=. 
 If there is no spin-orbit interaction the 
-factor \Verb+spin_factor=2+.  
+factor \verb+spin_factor=2+.  
 If there is spin-orbit interaction the 
-factor \Verb+spin_factor=1+. The final result is multiplied by  
+factor \verb+spin_factor=1+. The final result is multiplied by  
 the \verb=spin_factor= variable. So above expressions are not
 multiplied by the spin degeneracy, the code multiplies them.   
-\subsection{Other responses}
+\section{Other responses}
 
 \textcolor{red}{Warning: the layered responses MUST be looked at
   again, and modified according to the newly calculated 
@@ -733,7 +733,7 @@ of course, neglecting $\bfv^\nl$.
 INCLUDE FIGURES.
 \end{itemize}
 
-\subsection{Consistency check-up 1}
+\section{Consistency check-up 1}
 
 To check that the layered expressions
 Eqs.~\eqref{calvimchiewn}, \eqref{calvimchie2wn}, \eqref{calvimchiwn}
@@ -762,7 +762,7 @@ reproduce Fig.~\ref{gaas}
 \end{enumerate}
 \begin{figure}[b]
 \centering
-\includegraphics[scale=.7]{plots/shg-bulk}
+\includegraphics[scale=.7]{figures/plots/shg-bulk}
 \caption{Im[$\chi_{xyz}$] for GaAs, 10 Ha and 47 $\bfk$-points, using
   the layered formulation and mimicking a bulk. 
 The correction
@@ -772,7 +772,7 @@ The correction
 \end{figure}
 
 
-\subsection{Consistency check-up 2}
+\section{Consistency check-up 2}
 
 In Fig.~\ref{si111as} we show
 Im[$\chi_{xx}$] for a surface, where the 
@@ -782,7 +782,7 @@ correction rigidly shifts the spectrum by $\hbar\gS$ as it should be.
 
 \begin{figure}[b]
 \centering
-\includegraphics[scale=.7]{plots/surface-chi}
+\includegraphics[scale=.7]{figures/plots/surface-chi}
 \caption{Im[$\chi_{xx}$] 
 for a Si(111):As surface of 6-layers, 5 Ha and 14 $\bfk$-points using
 the layered formulation. 
@@ -792,7 +792,7 @@ result, as it must be.
 \label{si111as}
 \end{figure}
 
-\subsection{Consistency check-up 3}
+\section{Consistency check-up 3}
 
 Check-of-Checks: 
 A (100) $2\times 1$ surface has $\chi_{xxx}$
@@ -821,7 +821,7 @@ King-of-Kings: Rejoice at
 Fig.~\ref{si-2x1-n-vs-b}.
 \begin{figure}[b]
 \centering 
-\includegraphics[scale=.7]{plots/shg-si-2x1-16}
+\includegraphics[scale=.7]{figures/plots/shg-si-2x1-16}
 \caption{$|\chi_{xxx}|$ 
 for a Si(100)$2\times 1$ surface of 16 Si-layers and one H layer, 10 
 Ha, 132 bands,  244 $\bfk$-points, and 1000 pwvs in \depe,
@@ -836,7 +836,7 @@ validating the layer-by-layer approach.
 \end{figure}
 \begin{figure}[b]
 \centering
-\includegraphics[scale=.7]{plots/shg-si-2x1-n-vs-b}
+\includegraphics[scale=.7]{figures/plots/shg-si-2x1-n-vs-b}
 \caption{$|\chi_{xxx}|$ 
 for a Si(100)$2\times 1$ surface of 12 Si-layers and one H layer, 5
 Ha, 100 bands and 244 $\bfk$-points for the CIO-\tiniba-coding
@@ -847,7 +847,7 @@ Both broadened by 0.1 eV.
 \end{figure}
 \begin{figure}[b]
 \centering 
-\includegraphics[scale=1.5]{plots/shg-si-2x1-16-compa}
+\includegraphics[scale=1.5]{figures/plots/shg-si-2x1-16-compa}
 \caption{$|\chi_{xxx}|$ 
 for a Si(100)$2\times 1$ surface of 16 Si-layers and one H layer, 10 
 Ha, 132 bands, 244 $\bfk$-points and and 1000 pwvs in \depe, using 
@@ -866,7 +866,7 @@ Notice that all the curves are almost identical to each other.
 \label{si-2x1-compa}
 \end{figure}
 
-\subsection{Consistency check-up 4}\label{ccu4}
+\section{Consistency check-up 4}\label{ccu4}
 
 To check that the coding of 
 $\calc^\ell_{nm}(\bfk)$ 
@@ -898,7 +898,7 @@ Indeed, we have checked that this is the case. The
 \verb=$TINIBA/util/consistency-of-cfmn.sh=
 is used to check this.
 
-\subsection{Consistency check-up 5}\label{ccu5}
+\section{Consistency check-up 5}\label{ccu5}
 
 When the \verb=-n= option is chosen, using \verb=all_responses.sh= as
 coded above doesn't give consistent results, i.e. $\chi$
@@ -999,7 +999,7 @@ the two alternatives, from where we see that they are basically equivalent.
 
 
 
-\subsection{Subroutines}
+\section{Subroutines}
 
 The following subroutines/shells are involved in the coding,
 and are documented between\\
@@ -1017,7 +1017,7 @@ and\\
 \item \verb=$TINIBA/latm/SRC_1setinput/set_input_ascii.f90=\\
 \end{enumerate}
 
-\subsection{Scissors renormalization for $\calv^\gS_{nm}$}\label{voila}
+\section{Scissors renormalization for $\calv^\gS_{nm}$}\label{voila}
 
 \begin{align}\label{cdg.1}
 \bra{n\bfk}\calc(z)\bfr\ket{m\bfk}(E^\gS_m-E^\gS_n) 

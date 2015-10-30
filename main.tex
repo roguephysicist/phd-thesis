@@ -33,12 +33,14 @@
 % Note: Make all your adjustments in here
 %*******************************************************
 \input{config}
+\input{definitions} % this needs to be removed ASAP
 
 %********************************************************************
 % Bibliographies
 %*******************************************************
 \addbibresource{Bibliography.bib}
 \addbibresource[label=ownpubs]{AMiede_Publications.bib}
+\addbibresource{ref.bib}
 
 %********************************************************************
 % Hyphenation
@@ -74,7 +76,8 @@
 % use \cleardoublepage here to avoid problems with pdfbookmark
 \cleardoublepage
 \part{Some Kind of Manual}
-\include{chapters/Chapter01}
+\include{chapters/00-introduction}
+\include{chapters/01-theory}
 \cleardoublepage
 \ctparttext{You can put some informational part preamble text here. 
 Illo principalmente su nos. Non message \emph{occidental} angloromanic
@@ -83,9 +86,9 @@ se avantiate publicationes via. Pan in terra summarios, capital
 interlingua se que. Al via multo esser specimen, campo responder que
 da. Le usate medical addresses pro, europa origine sanctificate nos se.}
 \part{The Showcase}
-\include{chapters/Chapter02}
+\include{chapters/02-results}
 %\addtocontents{toc}{\protect\clearpage} % <--- just debug stuff, ignore
-\include{chapters/Chapter03}
+\include{chapters/03-conclusions}
 %\include{multiToC} % <--- just debug stuff, ignore for your documents
 
 % ********************************************************************
@@ -95,7 +98,21 @@ da. Le usate medical addresses pro, europa origine sanctificate nos se.}
 %\renewcommand{\thechapter}{\alph{chapter}}
 \cleardoublepage
 \part{Appendix}
-\include{chapters/Chapter0A}
+\include{appendices/appendix-re_ri}%reri A
+\include{appendices/appendix-vnl}%appvnl B
+\include{appendices/appendix-gen_der_calv}%calvs C
+\include{appendices/appendix-gen_der_omega}%gwk D
+\include{appendices/appendix-calv}%appv E
+\include{appendices/appendix-tnm}%calt F
+\include{appendices/appendix-vc}%calpcalc G
+\include{appendices/appendix-gen_der_r_nonlocal}%gdernl H
+\include{appendices/appendix-code}%code I
+\include{appendices/appendix-div_free_exp_chi}
+\include{appendices/appendix-dirac}
+\include{appendices/appendix-basic_relationships}
+\include{appendices/appendix-gen_der_r}
+\include{appendices/appendix-gen_der_calr}
+\include{appendices/appendix-odds_ends}
 %********************************************************************
 % Other Stuff in the Back
 %*******************************************************

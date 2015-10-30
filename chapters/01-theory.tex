@@ -1,47 +1,21 @@
-\documentclass[floatfix,prb,aps,superscriptaddress,11pt,preprint,letterpaper]{revtex4}
-\usepackage{amsfonts}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\allowdisplaybreaks[1]%biutiful equation breaker!!!
-\usepackage{ulem}
-\usepackage{subfigure}
-\usepackage{fancyvrb}
-\input{../definitions}
-\usepackage{bm}
-%%%%*****************%%%% fine hyperef 
-\usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{showlabels}
-%\usepackage{showkeys}
+%\documentclass[floatfix,prb,aps,superscriptaddress,11pt,preprint,letterpaper]{revtex4}
+%\usepackage{amsfonts}
+%\usepackage{amsmath}
+%\usepackage{graphicx}
+%\allowdisplaybreaks[1]%biutiful equation breaker!!!
+%\usepackage{ulem}
+%\usepackage{subfigure}
+%\usepackage{fancyvrb}
+%\usepackage{bm}
+%%%%%*****************%%%% fine hyperef 
+%\usepackage[backref,pdffitwindow,colorlinks,linkcolor={blue},citecolor={red}]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\usepackage{showlabels}
+%%\usepackage{showkeys}
 
 
-\begin{document}
 
-\title{Length Gauge Theory of Surface Second Harmonic Generation}
-\author{Sean M. Anderson and Bernardo S. Mendoza}
-\affiliation{Centro de Investigaciones en Optica, Le\'on, Guanajuato, M\'exico,
- bms@cio.mx}
-
-\begin{abstract}
-We present a theoretical review of surface second harmonic generation (SHG) 
-from semiconductor surfaces based on the longitudinal gauge. This 
-layer-by-layer analysis is carefully presented in order to show how a 
-surface SHG calculation can be readily evaluated. The nonlinear susceptibility 
-tensor for a surface, $\boldsymbol{\chi}^S(-2\go;\go,\go)$
- is split into two terms relating to inter-band 
-and intra-band one-electron transitions. 
-
-% The equivalence of this formulation to the transverse gauge
-% approach is shown and the possibility of confirming its numerical
-% accuracy is discussed. Also, the calculation of the surface second
-% harmonic radiated intensity $R$ within the three-layer-model is
-% derived. With $\boldsymbol{\chi}$ and $R$ one has a complete
-% description of this fascinating optical phenomena. 
-
-\end{abstract}  
-
-\maketitle
-\tableofcontents
+\chapter{Theory}\label{ch:theory}
 
 \section{Introduction}\label{intro}
 
@@ -157,7 +131,7 @@ for a centrosymmetric bulk.
 
 \begin{figure}[t]
 \centering
-\includegraphics[scale=0.6]{images/system}
+\includegraphics[scale=0.6]{figures/images/system.pdf}
 \caption{(Color Online) Sketch of the semi-infinite system with a 
 centrosymmetric bulk. The surface region is of width $\sim d$. 
 The incoming photon of frequency $\go$ is represented by
@@ -226,7 +200,7 @@ surface susceptibility tensor $\chi^S_{\rma\rmb\rmc}$.
 We follow the article by Aversa and Sipe\cite{aversaPRB95} to calculate 
 the optical properties of a given system within the longitudinal gauge. 
 More recent derivations
-can also be found in Refs. \onlinecite{sipe_second-order_2000,lambrechtPSSB00}.  
+can also be found in Refs. \cite{sipe_second-order_2000,lambrechtPSSB00}.  
 Assuming the long-wavelength approximation which implies 
 a position independent electric field, 
 $\bfE(t)$,  
@@ -929,7 +903,7 @@ $\Delta_\ell^f+\Delta_\ell^b$ is the thickness of layer $\ell$
 \begin{figure}[b]
 \centering
 %\includegraphics[height=5cm,width=7cm]{slab}
-\includegraphics[scale=.7]{images/slab}
+\includegraphics[scale=.7]{figures/images/slab.pdf}
 \caption{A sketch of a slab where the circles represent atoms.\label{fslab}}
 \end{figure}
 
@@ -1230,19 +1204,19 @@ Appendix \ref{calvs}. {\color{red}Aeroport Charles de Gaulle, Nov. 30,
 
 To limit the response to one surface, the equivalent of Eq.~\eqref{nl.4} 
 for $\calbv^\ell=\calbp^\ell/m_e$ was proposed in 
-Ref.~\onlinecite{reining_microscopic_1994} and later used in Refs.
-\onlinecite{mendozaPRL98},
-\onlinecite{mendoza_ab_2001},
-\onlinecite{sanoPRB02},
- and \onlinecite{mejia_layer-by-layer_2004} 
+Ref.~\cite{reining_microscopic_1994} and later used in Refs.
+\cite{mendozaPRL98},
+\cite{mendoza_ab_2001},
+\cite{sanoPRB02},
+ and \cite{mejia_layer-by-layer_2004} 
 also in the context of SHG. 
-The layer-by-layer analysis of Refs. \onlinecite{hogan_optical_2003} 
-and \onlinecite{castilloPRB03} used Eq.~\eqref{sz}, 
+The layer-by-layer analysis of Refs. \cite{hogan_optical_2003} 
+and \cite{castilloPRB03} used Eq.~\eqref{sz}, 
 limiting the current response
 to a particular layer of the slab and used to obtain the
 anisotropic linear optical response of semiconductor surfaces.
 However, the first formal derivation of this scheme is presented in
-Ref.~\onlinecite{mendozaPRB06} for the linear response, and here in this 
+Ref.~\cite{mendozaPRB06} for the linear response, and here in this 
 article, for the second harmonic optical response of semiconductors.
 
 %??d
@@ -1481,10 +1455,9 @@ also use Eq.~\eqref{tau.69}. Above is the standard effective-mas sum rule.
 %In Appendix \ref{code}, we list all the quantities that should be
 %coded in order to calculate the previous expressions for $\bfgchi$.
 
-\begin{document}
-We follow the derivation established in Ref. \cite{mendozaEPI04}.
 
 \section{SHG yield in CGS}
+We follow the derivation established in Ref. \cite{mendozaEPI04}.
 
 We define the radiated SHG yied as 
 
@@ -1521,7 +1494,7 @@ where repeated indices are to be summed over. The unit vectors for the polarizat
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.7\textwidth]{plots/3layers}
+\includegraphics[width=0.7\textwidth]{figures/3layers.pdf}
 \caption{Sketch of the three layer model for SHG. Vacuum is on top with
 $\epsilon=1$, the layer with non-linear polarization
 $\boldsymbol{\mathcal{P}}(2\omega)$ is characterized with
@@ -1712,32 +1685,3 @@ electron.
 %model. 
 %The combination of $\boldsymbol{\chi}$ and $R$ allow us
 %to study this fascinating surface optical phenomena.
-
-\appendix
-\input{appendices/appendix-re_ri}%reri A
-\input{appendices/appendix-vnl}%appvnl B
-\input{appendices/appendix-gen_der_calv}%calvs C
-\input{appendices/appendix-gen_der_omega}%gwk D
-\input{appendices/appendix-calv}%appv E
-\input{appendices/appendix-tnm}%calt F
-\input{appendices/appendix-vc}%calpcalc G
-\input{appendices/appendix-gen_der_r_nonlocal}%gdernl H
-\input{appendices/appendix-code}%code I
-%%%%
-%\input{appendices/appendix-div_free_exp_chi}
-%\input{appendices/appendix-dirac}
-%\input{appendices/appendix-basic_relationships}
-%\input{appendices/appendix-gen_der_r}
-%\input{appendices/appendix-gen_der_calr}
-%\input{appendices/appendix-odds_ends}
-
-%\backmatter
-%\bibliographystyle{prb}
-%\nocite{*} 
-\bibliography{ref}
-
-\end{document}
-
-* smoother C(z)
-
-
