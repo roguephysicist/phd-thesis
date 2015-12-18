@@ -1,0 +1,392 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath}
+\usepackage[colorlinks=true,linkcolor=cyan,citecolor=magenta]{hyperref}
+%\usepackage{showframe}
+
+\title{A treatise on phenomenological models of surface second-harmonic
+generation from crystalline surfaces}
+\author{Bernardo S. Mendoza and Sean M. Anderson}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+
+\section{\texorpdfstring{SHG yield per Sipe, Moss, and van Driel
+\cite{sipePRB87}} {SHG yield per Sipe, Moss, and van Driel}}
+
+In this treatment, they define the following for all polarizations;
+\begin{align}\label{fcfs} % Eq. (4g)
+\begin{split}
+f_{s} &= \frac{\kappa}{n\tilde{\omega}}
+       = \frac{\kappa}{\sqrt{\epsilon(\omega)}\tilde{\omega}},\\
+f_{c} &= \frac{w}{n\tilde{\omega}}
+       = \frac{w}{\sqrt{\epsilon(\omega)}\tilde{\omega}},\\
+f^{2}_{s} &+ f^{2}_{c} = 1,
+\end{split}
+\end{align}
+where 
+\begin{align}
+\kappa &= \tilde{\omega}\sin\theta,\nonumber\\
+w_{0}  &= \sqrt{\tilde{\omega} - \kappa^{2}}
+        = \tilde{\omega}\cos\theta,\label{wzero}\\ % Eq. (3e)
+w      &= \sqrt{\tilde{\omega}\epsilon(\omega) - \kappa^{2}}
+        = \tilde{\omega}k_{z}(\omega).\label{w} % Eq. (4c)
+\end{align}
+From this point on, all capital letters and symbols indicate evaluation at
+$2\omega$. Common to all three polarization cases studied here, we require the
+nonzero components for the (111) face for crystals with $C_{3v}$ symmetry,
+\begin{align}\label{deltas} % Eq. (24)
+\begin{split}
+\delta_{11} &= \chi^{xxx} = -\chi^{xyy} = -\chi^{yyx},\\
+\delta_{15} &= \chi^{xxz} =  \chi^{yyz},\\
+\delta_{31} &= \chi^{zxx} =  \chi^{zyy},\\
+\delta_{33} &= \chi^{zzz}.
+\end{split}
+\end{align}
+Lastly, the remaining quantities that will be needed for all three cases are
+\begin{align}\label{apas} % Eq. (19)
+\begin{split}
+A_{p} &= \frac{4\pi\tilde{\Omega}\sqrt{\epsilon(2\omega)}}
+              {W_{0}\epsilon(2\omega) + W},\\
+A_{s} &= \frac{4\pi\tilde{\Omega}}{W_{0} + W}.
+\end{split}
+\end{align}
+
+
+\subsection{\texorpdfstring{$\mathcal{R}_{pP}$}{RpP}}
+
+For the (111) face ($m = 3$), we have 
+\begin{equation}\label{totalshgpp} % Eq. (32)
+\frac{E^{(2\omega)}(\parallel,\parallel)}{E^{2}_{p}A_{p}}
+= a_{\parallel,\parallel} + c^{(3)}_{\parallel,\parallel}\cos3\phi.
+\end{equation}
+We extract these coefficients from Table V, noting that $\Gamma = \gamma = 0$
+as we are only interested in the surface contribution,
+\begin{align*}
+a_{\parallel,\parallel}
+&= i\tilde{\Omega}F_{s}\epsilon(2\omega)\delta_{31}
+ + i\tilde{\Omega}\epsilon(2\omega)F_{s}f^{2}_{s}(\delta_{33} - \delta_{31})
+ - 2i\tilde{\Omega}f_{s}f_{c}F_{c}\delta_{15},\\
+c^{(3)}_{\parallel,\parallel} &= -i\tilde{\Omega}F_{c}f^{2}_{c}\delta_{11}.
+\end{align*}
+We substitute these in Eq. \eqref{totalshgpp},
+\begin{equation*}
+\begin{split}
+\frac{E^{(2\omega)}(\parallel,\parallel)}{E^{2}_{p}A_{p}}
+ = i\tilde{\Omega}F_{s}\epsilon(2\omega)\delta_{31} 
+&+ i\tilde{\Omega}\epsilon(2\omega)F_{s}f^{2}_{s}(\delta_{33} - \delta_{31})\\ 
+&- 2i\tilde{\Omega}f_{s}f_{c}F_{c}\delta_{15}
+ - i\tilde{\Omega}F_{c}f^{2}_{c}\delta_{11}\cos3\phi
+\end{split}
+\end{equation*}
+and reduce (omitting the $(\parallel,\parallel)$ notation),
+\begin{equation*}
+\begin{split}
+\frac{E^{(2\omega)}}{E^{2}_{p}}
+&= A_{p}i\tilde{\Omega}
+   \left[
+   F_{s}\epsilon(2\omega)(\delta_{31} + f^{2}_{s}(\delta_{33} - \delta_{31}))
+    - f_{c}F_{c}(2f_{s}\delta_{15} + f_{c}\delta_{11}\cos3\phi)
+   \right]\\
+&= A_{p}i\tilde{\Omega}
+   \left[
+   F_{s}\epsilon(2\omega)(f^{2}_{s}\delta_{33} + (1 - f^{2}_{s})\delta_{31})
+   - f_{c}F_{c}(2f_{s}\delta_{15} + f_{c}\delta_{11}\cos3\phi)
+   \right]\\
+&= A_{p}i\tilde{\Omega}
+   \left[
+   F_{s}\epsilon(2\omega)(f^{2}_{s}\delta_{33} + f^{2}_{c}\delta_{31}) 
+   - f_{c}F_{c}(2f_{s}\delta_{15} + f_{c}\delta_{11}\cos3\phi)
+   \right].
+\end{split}
+\end{equation*}
+As every term has an $f^{2}_{i}F_{i}$, we can factor out the common
+\begin{equation*}
+\frac{1}
+{\tilde{\omega}^2\tilde{\Omega}\epsilon(\omega)\sqrt{\epsilon(2\omega)}}
+\end{equation*}
+factor after substituting the appropriate terms from Eq. \eqref{fcfs},
+\begin{equation*}
+\begin{split}
+\frac{E^{(2\omega)}}{E^{2}_{p}}
+&= \frac{A_{p}i}{\epsilon(\omega)\sqrt{\epsilon(2\omega)}\tilde{\omega}^2}
+   \left[
+   K\epsilon(2\omega)(\kappa^{2}\delta_{33} + w^{2}\delta_{31})
+   - wW(2\kappa\delta_{15} + w\delta_{11}\cos3\phi)
+   \right]\\
+&= \frac{A_{p}i\tilde{\Omega}}{\epsilon(\omega)\sqrt{\epsilon(2\omega)}}
+   \big[
+   \sin\theta\epsilon(2\omega)(
+   \sin^{2}\theta\delta_{33} + k^{2}_{z}(\omega)\delta_{31})\\
+   &\qquad\qquad\qquad\quad- k_{z}(\omega)k_{z}(2\omega)(2\sin\theta\delta_{15}
+   + k_{z}(\omega)\delta_{11}\cos3\phi)
+   \big]\\
+&= \frac{A_{p}i\tilde{\Omega}}{\epsilon(\omega)\sqrt{\epsilon(2\omega)}}
+   \big[
+   \sin\theta\epsilon(2\omega)(
+   \sin^{2}\theta\chi^{zzz} + k^{2}_{z}(\omega)\chi^{zxx})\\
+   &\qquad\qquad\qquad\quad- k_{z}(\omega)k_{z}(2\omega)(2\sin\theta\chi^{xxz}
+   + k_{z}(\omega)\chi^{xxx}\cos3\phi)
+   \big].
+\end{split}
+\end{equation*}
+We substitute Eq. \eqref{apas} to complete the expression,
+\begin{equation*}
+\begin{split}
+\frac{E^{(2\omega)}}{E^{2}_{p}}
+&= \frac{4i\pi\tilde{\Omega}^{2}}{\epsilon(\omega)(W_{0}\epsilon(2\omega) + W)}
+   [\,\cdots]\\
+&= \frac{4i\pi\tilde{\Omega}}
+   {\epsilon(\omega)(\epsilon(2\omega)\cos\theta + k_{z}(2\omega))}
+   [\,\cdots]\\
+&= \frac{4i\pi\tilde{\omega}}{\cos\theta}
+   \frac{1}{\epsilon(\omega)}
+   \frac{2\cos\theta}{\epsilon(2\omega)\cos\theta + k_{z}(2\omega)}[\,\cdots].
+\end{split}
+\end{equation*}
+
+However, our interest lies in $\mathcal{R}_{pP}$ which is calculated as
+\begin{equation*}
+\mathcal{R}_{pP}
+  = \frac{I_{p}{(2\omega)}}{I_{p}^{2}(\omega)}
+  = \frac{2\pi}{c}
+  \left\vert
+  \frac{E^{(2\omega)}(\parallel,\parallel)}{E^{2}_{p}}
+  \right\vert^{2},
+\end{equation*}
+and we can finally complete the expression,
+\begin{align}
+\mathcal{R}_{pP}
+&= \frac{2\pi}{c}
+   \left\vert
+   \frac{4i\pi\tilde{\omega}}{\cos\theta}
+   \frac{1}{\epsilon(\omega)}
+   \frac{2\cos\theta}{\epsilon(2\omega)\cos\theta + k_{z}(2\omega)}r_{pP}
+   \right\vert^{2}\nonumber\\
+&= \frac{32\pi^{3}\tilde{\omega}^{2}}{c\cos^{2}\theta}
+   \left\vert t_{p}(\omega)T_{p}(2\omega)r_{pP}\right\vert^{2}\nonumber\\
+&= \frac{32\pi^{3}\omega^{2}}{c^{3}\cos^{2}\theta}
+   \left\vert t_{p}(\omega)T_{p}(2\omega)r_{pP}\right\vert^{2},\label{RpP}
+\end{align}
+where
+\begin{equation*}
+\begin{split}
+t_{p}(\omega)
+&= \frac{1}{\epsilon(\omega)},\\
+T_{p}(2\omega)
+&= \frac{2\cos\theta}{\epsilon(2\omega)\cos\theta + k_{z}(2\omega)},\\
+r_{pP} &= \sin\theta\epsilon(2\omega)
+(\sin^{2}\theta\chi^{zzz} + k^{2}_{z}(\omega)\chi^{zxx})\\
+&- k_{z}(\omega)k_{z}(2\omega)
+(2\sin\theta\chi^{xxz} + k_{z}(\omega)\chi^{xxx}\cos3\phi).
+\end{split}
+\end{equation*}
+
+
+\subsection{\texorpdfstring{$\mathcal{R}_{pS}$}{RpS}}
+We follow the same procedure as above. For the (111) face ($m = 3$),
+\begin{equation}\label{totalshgps}% Eq. (32)
+\frac{E^{(2\omega)}(\parallel,\perp)}{E^{2}_{p}A_{s}} 
+= b^{(3)}_{\parallel,\perp}\sin3\phi,
+\end{equation}
+and we extract the relevant coefficient from Table V with $\Gamma=\gamma=0$,
+\begin{equation*}
+b^{(3)}_{\parallel,\perp} = i\tilde{\Omega}f^{2}_{c}\delta_{11}.
+\end{equation*}
+Substituting this coeffecient and Eq. \eqref{apas} into Eq. \eqref{totalshgps},
+\begin{equation*}
+\begin{split}
+\frac{E^{(2\omega)}(\parallel,\perp)}{E^{2}_{p}}
+&= A_{s}i\tilde{\Omega}f^{2}_{c}\delta_{11}\sin3\phi\\
+&= \frac{A_{s}i\tilde{\Omega}}{\tilde{\omega}^{2}\epsilon(\omega)}
+    w^{2}\delta_{11}\sin3\phi\\
+&= \frac{A_{s}i\tilde{\Omega}}{\epsilon(\omega)}
+    k^{2}_{z}(\omega)\delta_{11}\sin3\phi\\
+&= \frac{A_{s}i\tilde{\Omega}}{\epsilon(\omega)}
+    k^{2}_{z}(\omega)\chi^{xxx}\sin3\phi\\
+&= \frac{4i\pi\tilde{\Omega}^{2}}{W_{0} + W}
+   \frac{1}{\epsilon(\omega)}k^{2}_{z}(\omega)\chi^{xxx}\sin3\phi\\
+&= 4i\pi\tilde{\Omega}\frac{1}{\epsilon(\omega)}
+   \frac{1}{\cos\theta + k_{z}(2\omega)}k^{2}_{z}(\omega)\chi^{xxx}\sin3\phi\\
+&= \frac{4i\pi\omega}{c\cos\theta}
+   \frac{1}{\epsilon(\omega)}
+   \frac{2\cos\theta}{\cos\theta + k_{z}(2\omega)}
+   k^{2}_{z}(\omega)\chi^{xxx}\sin3\phi
+\end{split}
+\end{equation*}
+
+As before, we must calculate
+\begin{equation*}
+\mathcal{R}_{pS}
+= \frac{2\pi}{c}
+  \left\vert\frac{E^{(2\omega)}(\parallel,\perp)}{E^{2}_{s}}\right\vert^{2},
+\end{equation*}
+to obtain the final expression,
+\begin{align}
+\mathcal{R}_{pS}
+&= \frac{2\pi}{c}
+   \left\vert
+   \frac{4i\pi\omega}{c\cos\theta}
+   \frac{1}{\epsilon(\omega)}
+   \frac{2\cos\theta}{\cos\theta + k_{z}(2\omega)}
+   k^{2}_{z}(\omega)\chi^{xxx}\sin3\phi
+   \right\vert^{2}\nonumber\\
+&= \frac{32\pi^{3}\omega^{2}}{c^{3}\cos^{2}\theta}
+   \left\vert
+   \frac{1}{\epsilon(\omega)}
+   \frac{2\cos\theta}{\cos\theta + k_{z}(2\omega)}
+   k^{2}_{z}(\omega)\chi^{xxx}\sin3\phi
+   \right\vert^{2}\nonumber\\
+&= \frac{32\pi^{3}\omega^{2}}{c^{3}\cos^{2}\theta}
+  \left\vert t_{p}(\omega)T_{s}(2\omega)k^{2}_{z}(\omega)r_{pS}\right\vert^{2},
+  \label{RpS}
+\end{align}
+where
+\begin{equation*}
+\begin{split}
+t_{p}(\omega)
+&= \frac{1}{\epsilon(\omega)},\\
+T_{s}(2\omega)
+&= \frac{2\cos\theta}{\cos\theta + k_{z}(2\omega)},\\
+r_{pS} &= k^{2}_{z}(\omega)\chi^{xxx}\sin3\phi.
+\end{split}
+\end{equation*}
+
+
+\subsection{\texorpdfstring{$\mathcal{R}_{sP}$}{RsP}}
+We follow the same procedure as above for the final polarization case. For the
+(111) face ($m = 3$),
+\begin{equation}\label{totalshgsp} % Eq. (32)
+\frac{E^{(2\omega)}(\perp,\parallel)}{E^{2}_{s}A_{p}}
+    = a_{\perp,\parallel} + c^{(3)}_{\perp,\parallel}\cos3\phi,
+\end{equation}
+and we extract the relevant coefficients from Table V with $\Gamma=\gamma=0$,
+\begin{align*}
+a_{\perp,\parallel} &= i\tilde{\Omega}F_{s}\epsilon(2\omega)\delta_{31},\\
+c^{(3)}_{\perp,\parallel} &= i\tilde{\Omega}F_{c}\delta_{11}.
+\end{align*}
+Substituting this coeffecient and Eq. \eqref{apas} into Eq. \eqref{totalshgsp},
+\begin{equation*}
+\begin{split}
+\frac{E^{(2\omega)}(\perp,\parallel)}{E^{2}_{s}}
+&= A_{p}(i\tilde{\Omega}F_{s}\epsilon(2\omega)\delta_{31}
+    + i\tilde{\Omega}F_{c}\delta_{11}\cos3\phi)\\
+&= A_{p}i\tilde{\Omega}(F_{s}\epsilon(2\omega)\delta_{31}
+    + F_{c}\delta_{11}\cos3\phi)\\
+&= \frac{A_{p}i\tilde{\Omega}}{\sqrt{\epsilon(2\omega)}}
+   (
+   \sin\theta\epsilon(2\omega)\delta_{31} + k_{z}(2\omega)\delta_{11}\cos3\phi
+   )\\
+&= \frac{A_{p}i\tilde{\Omega}}{\sqrt{\epsilon(2\omega)}}
+   (
+   \sin\theta\epsilon(2\omega)\chi^{zxx} + k_{z}(2\omega)\chi^{xxx}\cos3\phi
+   )\\
+&= \frac{4i\pi\tilde{\Omega}^{2}}{W_{0}\epsilon(2\omega) + W}
+   (
+   \sin\theta\epsilon(2\omega)\chi^{zxx} + k_{z}(2\omega)\chi^{xxx}\cos3\phi
+   )\\
+&= \frac{4i\pi\tilde{\Omega}}{\epsilon(2\omega)\cos\theta + k_{z}(2\omega)}
+   (
+   \sin\theta\epsilon(2\omega)\chi^{zxx} + k_{z}(2\omega)\chi^{xxx}\cos3\phi
+   )\\
+&= \frac{4i\pi\omega}{c\cos\theta}
+   \frac{2\cos\theta}{\epsilon(2\omega)\cos\theta + k_{z}(2\omega)}
+   (\sin\theta\epsilon(2\omega)\chi^{zxx} + k_{z}(2\omega)\chi^{xxx}\cos3\phi).
+\end{split}
+\end{equation*}
+
+And we finally obtain $\mathcal{R}_{sP}$,
+\begin{align}
+\mathcal{R}_{sP}
+&= \frac{2\pi}{c}
+   \left\vert\frac{E^{(2\omega)}(\perp,\parallel)}{E^{2}_{s}}\right\vert^{2}
+   \nonumber\\
+&= \frac{2\pi}{c}
+   \left\vert
+   \frac{4i\pi\omega}{c\cos\theta}
+   \frac{2\cos\theta}{\epsilon(2\omega)\cos\theta + k_{z}(2\omega)}
+   (\sin\theta\epsilon(2\omega)\chi^{zxx} + k_{z}(2\omega)\chi^{xxx}\cos3\phi)
+   \right\vert^{2}\nonumber\\
+&= \frac{32\pi^{3}\omega^{2}}{c^{3}\cos^{2}\theta}
+   \left\vert
+   \frac{2\cos\theta}{\epsilon(2\omega)\cos\theta + k_{z}(2\omega)}
+   (\sin\theta\epsilon(2\omega)\chi^{zxx} + k_{z}(2\omega)\chi^{xxx}\cos3\phi)
+   \right\vert^{2}\nonumber\\
+&= \frac{32\pi^{3}\omega^{2}}{c^{3}\cos^{2}\theta}
+   \left\vert t_{s}(\omega)T_{p}(2\omega)r_{sP}\right\vert^{2},
+   \label{RsP}
+\end{align}
+where
+\begin{equation*}
+\begin{split}
+t_{s}(\omega)
+&= 1,\\
+T_{p}(2\omega)
+&= \frac{2\cos\theta}{\epsilon(2\omega)\cos\theta + k_{z}(2\omega)},\\
+r_{sP} &=
+\sin\theta\epsilon(2\omega)\chi^{zxx} + k_{z}(2\omega)\chi^{xxx}\cos3\phi.
+\end{split}
+\end{equation*}
+
+
+\subsection{Summary}
+
+We unify the final expressions for the SHG yield, Eqs. \eqref{RpP},
+\eqref{RpS}, and \eqref{RsP}, as
+\begin{equation}\label{Rsipe}
+\mathcal{R}_iF = \frac{32\pi^{3}\omega^{2}}{c^{3}\cos^{2}\theta}
+\left\vert t_{i}(\omega)T_{F}(2\omega)r_{iF}\right\vert^{2}.
+\end{equation}
+The necessary factors are summarized in Table \ref{tabsipe}.
+
+\begin{table}
+\centering
+\begin{tabular}{ | c | c | c | p{180pt} | }
+\hline
+$iF$ & $t_{i}(\omega)$ & $T_{F}(2\omega)$ & \hspace{80pt}$r_{iF}$ \\
+\hline
+&&&\\
+$pP$ & $\dfrac{1}{\epsilon(\omega)}$ &
+{\small $\dfrac{2\cos\theta}{\epsilon(2\omega)\cos\theta + k_{z}(2\omega)}$} &
+{\small $\sin\theta\epsilon(2\omega)
+(\sin^{2}\theta\chi^{zzz} + k^{2}_{z}(\omega)\chi^{zxx})$\newline
+$- k_{z}(\omega)k_{z}(2\omega)
+(2\sin\theta\chi^{xxz} + k_{z}(\omega)\chi^{xxx}\cos3\phi)$} \\
+&&&\\
+$pS$ & $\dfrac{1}{\epsilon(\omega)}$ &
+$\dfrac{2\cos\theta}{\cos\theta + k_{z}(2\omega)}$ &
+$k^{2}_{z}(\omega)\chi^{xxx}\sin3\phi$ \\
+&&&\\
+$sP$ & $1$ & 
+{\small $\dfrac{2\cos\theta}{\epsilon(2\omega)\cos\theta + k_{z}(2\omega)}$} &
+$\sin\theta\epsilon(2\omega)\chi^{zxx} + k_{z}(2\omega)\chi^{xxx}\cos3\phi$ \\
+&&&\\
+\hline
+\end{tabular}
+\caption{The necessary factors for Eq. \eqref{Rsipe} for each polarization
+case.\label{tabsipe}}
+\end{table}
+
+
+\section{\texorpdfstring{SHG yield per Mizrahi and Sipe
+\cite{mizrahiJOSA88}}{SHG yield per Mizrahi and Sipe}}
+\subsection{\texorpdfstring{$\mathcal{R}_{pP}$}{RpP}}
+\subsection{\texorpdfstring{$\mathcal{R}_{pS}$}{RpS}}
+\subsection{\texorpdfstring{$\mathcal{R}_{sP}$}{RsP}}
+\subsection{Summary}
+
+
+\section{\texorpdfstring{SHG yield per Mendoza \cite{mendozaEPI04}}{SHG yield
+per Mendoza}}
+\subsection{\texorpdfstring{$\mathcal{R}_{pP}$}{RpP}}
+\subsection{\texorpdfstring{$\mathcal{R}_{pS}$}{RpS}}
+\subsection{\texorpdfstring{$\mathcal{R}_{sP}$}{RsP}}
+\subsection{Summary}
+
+
+\bibliographystyle{unsrt}
+\bibliography{ref}
+
+\end{document}
