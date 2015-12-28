@@ -565,7 +565,10 @@ r^{b}_{pS} = -k^{2}_{b}\sin3\phi\chi_{xxx},
 and 
 \begin{equation*}
 \Gamma^{b}_{pS} =
-T^{vb}_{s}\left(\frac{t^{vb}_{p}}{\epsilon_{b}(\omega)\sqrt{\epsilon_{b}(\omega)}}\right)^{2}.  
+T^{vb}_{s}
+\left(
+\frac{t^{vb}_{p}}{\epsilon_{b}(\omega)\sqrt{\epsilon_{b}(\omega)}}
+\right)^{2}.  
 \end{equation*} 
 
 
@@ -681,6 +684,50 @@ and
 \Gamma^{b}_{sP} =
 \frac{T^{v b}_{p}(t_s^{vb})^{2}}{\sqrt{\epsilon_{b}(2\omega)}}.  
 \end{equation*} 
+
+
+\subsection{\texorpdfstring{$\mathcal{R}_{sS}$}{RsS}}
+
+For $\mathcal{R}_{sS}$ we have that
+$\mathbf{e}^{\mathrm{in}}=\hat{\mathbf{s}}$ and
+$\mathbf{e}^{\mathrm{out}}=\hat{\mathbf{S}}$. This leads to
+\begin{align*}
+\hat{\mathbf{e}}^{2\omega}_{\ell} 
+&= T^{v\ell}_{s}T^{\ell b}_{s}
+\left[-\sin\phi\hat{\mathbf{x}} + \cos\phi\hat{\mathbf{y}}\right],\\
+\hat{\mathbf{e}}^{\omega}_{\ell}\hat{\mathbf{e}}^{\omega}_{\ell}
+&= \left(t^{v\ell}_{s}t^{\ell b}_{s}\right)^{2}
+\left(
+  \sin^{2}\phi\hat{\mathbf{x}}\hat{\mathbf{x}}
++ \cos^{2}\phi\hat{\mathbf{y}}\hat{\mathbf{y}} 
+- 2\sin\phi\cos\phi\hat{\mathbf{x}}\hat{\mathbf{y}}
+\right).
+\end{align*}
+Therefore,
+\begin{equation*}
+\begin{split}
+\hat{\mathbf{e}}^{2\omega}_{\ell}
+\cdot\boldsymbol{\chi}:
+\hat{\mathbf{e}}^{\omega}_{\ell}\hat{\mathbf{e}}^{\omega}_{\ell} =
+T^{v\ell}_{s}T^{\ell b}_{s}\left(t^{v\ell}_{s}t^{\ell b}_{s}\right)^{2}
+\big[&
+-  \sin^{3}\phi\chi_{xxx}
+-  \sin\phi\cos^{2}\phi\chi_{xyy}
++ 2\sin^{2}\phi\cos\phi\chi_{xxy}\\
+&+ \sin^{2}\phi\cos\phi\chi_{yxx}
++  \cos^{3}\phi\chi_{yyy}
+- 2\sin\phi\cos^{2}\phi\chi_{yxy}
+\big]\\
+=
+T^{v\ell}_{s}T^{\ell b}_{s}\left(t^{v\ell}_{s}t^{\ell b}_{s}\right)^{2}
+\big[&
+-  \sin^{3}\phi\chi_{xxx}
++ 3\sin\phi\cos^{2}\phi\chi_{xxx}
+\big]\\\\
+=T^{v\ell}_{s}T^{\ell b}_{s}\left(t^{v\ell}_{s}t^{\ell b}_{s}\right)^{2}
+\,\,\,&\chi_{xxx}\sin3\phi
+\end{split}
+\end{equation*}
 
 
 \section{Trials and tribulations}
@@ -893,13 +940,198 @@ R(2\omega) =
 \right\vert^{2}.
 \end{equation*}
 
-For the results of this test, see the adjoining ``2w\_fields\_bulk.png'' image.
-\textbf{Verdict: Failure!}
 
+\subsection{Taking the \texorpdfstring{$1\omega$}{1w} fields in the vacuum}
 
+To consider the $1\omega$ fields in the vacuum, we start with Eq. \eqref{m2}
+but substitute $\ell\rightarrow v$, thus
+\begin{equation*}
+\mathbf{E}_{v}(\omega)= E_{0}
+\left[
+  \hat{\mathbf{s}} t^{vv}_s(1+r^{v b}_s)\hat{\mathbf{s}}
++ \hat{\mathbf{p}}_{v-}t^{vv}_{p}\hat{\mathbf{p}}_{v-}
++ \hat{\mathbf{p}}_{v+}t^{vv}_{p}r^{v b}_{p}\hat{\mathbf{p}}_{v-}
+\right]
+\cdot\hat{\mathbf{e}}^{\mathrm{in}}
+,
+\end{equation*}
+$t_{p}^{vv}$ and $t_{s}^{vv}$ are one, so we are left with
+\begin{equation*}
+\begin{split}
+\mathbf{e}^{\omega}_{v}
+&= \left[
+  \hat{\mathbf{s}}(1+r^{v b}_s)\hat{\mathbf{s}}
++ \hat{\mathbf{p}}_{v-}\hat{\mathbf{p}}_{v-}
++ \hat{\mathbf{p}}_{v+}r^{v b}_{p}\hat{\mathbf{p}}_{v-}
+\right]
+\cdot\hat{\mathbf{e}}^{\mathrm{in}}\\
+&= \left[
+  \hat{\mathbf{s}}(t^{vb}_s)\hat{\mathbf{s}}
++ (\hat{\mathbf{p}}_{v-} + \hat{\mathbf{p}}_{v+}r^{v b}_{p})
+  \hat{\mathbf{p}}_{v-}
+\right]
+\cdot\hat{\mathbf{e}}^{\mathrm{in}}\\
+&= \left[
+  \hat{\mathbf{s}}(t^{vb}_s)\hat{\mathbf{s}}
++ \frac{1}{\sqrt{\epsilon_{v}(\omega)}}
+\big(
+  k_{v}(1 - r^{vb}_{p})\hat{\boldsymbol{\kappa}}
++ \sin\theta_{\mathrm{in}}(1 + r^{vb}_{p})
+\hat{\mathbf{z}}
+\big)
+  \hat{\mathbf{p}}_{v-}
+\right]\\
+&= \left[
+  \hat{\mathbf{s}}(t^{vb}_s)\hat{\mathbf{s}}
++ \left(
+  \frac{k_{b}}{\sqrt{\epsilon_{b}(\omega)}}
+  t^{v b}_{p}\hat{\boldsymbol{\kappa}} 
++ \sqrt{\epsilon_{b}(\omega)}\sin\theta_{\mathrm{in}}
+  t^{v b}_{p}\hat{\mathbf{z}}
+  \right)
+  \hat{\mathbf{p}}_{v-}
+\right]
+\cdot\hat{\mathbf{e}}^{\mathrm{in}}\\
+&= \left[
+  \hat{\mathbf{s}}(t^{vb}_s)\hat{\mathbf{s}}
++ \frac{t^{v b}_{p}}{\sqrt{\epsilon_{b}(\omega)}}\left(
+  k_{b}\cos\phi\hat{\mathbf{x}}
++ k_{b}\sin\phi\hat{\mathbf{y}}
++ \epsilon_{b}(\omega)\sin\theta_{\mathrm{in}}\hat{\mathbf{z}}
+  \right)
+  \hat{\mathbf{p}}_{v-}
+\right]
+\cdot\hat{\mathbf{e}}^{\mathrm{in}}.
+\end{split}
+\end{equation*}
+For $\mathcal{R}_{pP}$ we require that $\hat{\mathbf{e}}^{\mathrm{in}} =
+\hat{\mathbf{p}}_{v-}$, so
+\begin{equation*}
+\mathbf{e}^{\omega}_{v} =
+\frac{t^{v b}_{p}}{\sqrt{\epsilon_{b}(\omega)}}
+\left(
+  k_{b}\cos\phi\hat{\mathbf{x}}
++ k_{b}\sin\phi\hat{\mathbf{y}}
++ \epsilon_{b}(\omega)\sin\theta_{\mathrm{in}}\hat{\mathbf{z}}
+  \right),
+\end{equation*}
+and
+\begin{equation*}
+\begin{split}
+\mathbf{e}^{\omega}_{v}\mathbf{e}^{\omega}_{v} =
+\left(\frac{t^{v b}_{p}}{\sqrt{\epsilon_{b}(\omega)}}\right)^{2}
+&\big[
+   k^{2}_{b}\cos^{2}\phi\hat{\mathbf{x}}\hat{\mathbf{x}}\\
+&+ k^{2}_{b}\sin^{2}\phi\hat{\mathbf{y}}\hat{\mathbf{y}}\\
+&+ \epsilon^{2}_{b}(\omega)\sin^{2}\theta_{\mathrm{in}}
+   \hat{\mathbf{z}}\hat{\mathbf{z}}\\
+&+ 2k^{2}_{b}\sin\phi\cos\phi\hat{\mathbf{x}}\hat{\mathbf{y}}\\
+&+ 2\epsilon_{b}(\omega)k_{b}\sin\theta_{\mathrm{in}}\sin\phi
+   \hat{\mathbf{y}}\hat{\mathbf{z}}\\
+&+ 2\epsilon_{b}(\omega)k_{b}\sin\theta_{\mathrm{in}}\cos\phi
+   \hat{\mathbf{x}}\hat{\mathbf{z}}
+\big].
+\end{split}
+\end{equation*}
 
+We also require the $2\omega$ fields evaluated in the vacuum, which is Eq.
+\eqref{r13},
+\begin{equation}
+\mathbf{e}^{\,2\omega}_{v} = \hat{\mathbf{e}}^{\mathrm{out}}
+\cdot\left[
+\hat{\mathbf{s}}T_s^{v b}\hat{\mathbf{s}} + \hat{\mathbf{P}}_{v+}
+\frac{T^{v b}_{p}}{\sqrt{\epsilon_{b}(2\omega)}}
+\left(
+  \epsilon_{b}(2\omega)\sin\theta_{\mathrm{in}}\hat{\mathbf{z}}
+  - K_{b}\hat{\boldsymbol{\kappa}}
+\right) 
+\right],
+\end{equation}
+and with $\hat{\mathbf{e}}^{\mathrm{out}} = \hat{\mathbf{P}}_{v+}$ we have
+\begin{equation}
+\mathbf{e}^{\,2\omega}_{v} =
+\frac{T^{v b}_{p}}{\sqrt{\epsilon_{b}(2\omega)}}
+\left(
+\epsilon_{b}(2\omega)\sin\theta_{\mathrm{in}}\hat{\mathbf{z}}
+- K_{b}\cos\phi\hat{\mathbf{x}}
+- K_{b}\sin\phi\hat{\mathbf{y}}
+\right).
+\end{equation}
 
-
+So lastly, we have that
+\begin{equation*}
+\begin{split}
+\mathbf{e}^{\,2\omega}_{v}\cdot
+\boldsymbol{\chi}:\mathbf{e}^{\omega}_{v}\mathbf{v}^{\omega}_{v}
+=\qquad\qquad&\\
+\frac{T^{v b}_{p}}{\sqrt{\epsilon_{b}(2\omega)}}
+\left(\frac{t^{v b}_{p}}{\sqrt{\epsilon_{b}(\omega)}}\right)^{2}
+&\big[
+    \epsilon_{b}(2\omega)k^{2}_{b}
+    \sin\theta_{\mathrm{in}}\cos^{2}\phi\chi_{zxx}\\
+&+  \epsilon_{b}(2\omega)k^{2}_{b}
+    \sin\theta_{\mathrm{in}}\sin^{2}\phi\chi_{zyy}\\
+&+  \epsilon^{2}_{b}(\omega)\epsilon_{b}(2\omega)
+    \sin^{3}\theta_{\mathrm{in}}\chi_{zzz}\\
+&+ 2\epsilon_{b}(2\omega)k^{2}_{b}\sin\theta_{\mathrm{in}}
+    \sin\phi\cos\phi\chi_{zxy}\\
+&+ 2\epsilon_{b}(\omega)\epsilon_{b}(2\omega)k_{b}
+    \sin^{2}\theta_{\mathrm{in}}\sin\phi\chi_{zyz}\\
+&+ 2\epsilon_{b}(\omega)\epsilon_{b}(2\omega)k_{b}
+    \sin^{2}\theta_{\mathrm{in}}\cos\phi\chi_{zxz}\\
+&-  k^{2}_{b}K_{b}\cos^{3}\phi\chi_{xxx}\\
+&-  k^{2}_{b}K_{b}\sin^{2}\phi\cos\phi\chi_{xyy}\\
+&-  \epsilon^{2}_{b}(\omega)K_{b}
+    \sin^{2}\theta_{\mathrm{in}}\cos\phi\chi_{xzz}\\
+&- 2k^{2}_{b}K_{b}\sin\phi\cos^{2}\phi\chi_{xxy}\\
+&- 2\epsilon_{b}(\omega)k_{b}K_{b}
+    \sin\theta_{\mathrm{in}}\sin\phi\cos\phi\chi_{xyz}\\
+&- 2\epsilon_{b}(\omega)k_{b}K_{b}
+    \sin\theta_{\mathrm{in}}\cos^{2}\phi\chi_{xxz}\\
+&-  k^{2}_{b}K_{b}\sin\phi\cos^{2}\phi\chi_{yxx}\\
+&-  k^{2}_{b}K_{b}\sin^{3}\phi\chi{yyy}\\
+&-  \epsilon^{2}_{b}(\omega)K_{b}
+    \sin^{2}\theta_{\mathrm{in}}\sin\phi\chi_{yzz}\\
+&- 2k^{2}_{b}K_{b}\sin^{2}\phi\cos\phi\chi_{yxy}\\
+&- 2\epsilon_{b}(\omega)k_{b}K_{b}
+    \sin\theta_{\mathrm{in}}\sin^{2}\phi\chi_{yyz}\\
+&- 2\epsilon_{b}(\omega)k_{b}K_{b}
+    \sin\theta_{\mathrm{in}}\sin\phi\cos\phi\chi_{yxz}
+\big],
+\end{split}
+\end{equation*}
+and after eliminating components,
+\begin{equation*}
+\begin{split}
+= \Gamma^{v}_{pP}&\big[
+    \epsilon^{2}_{b}(\omega)\epsilon_{b}
+    (2\omega)\sin^{3}\theta_{\mathrm{in}}\chi_{zzz}\\
+&+  \epsilon_{b}(2\omega)k^{2}_{b}
+    \sin\theta_{\mathrm{in}}\cos^{2}\phi\chi_{zxx}\\
+&+  \epsilon_{b}(2\omega)k^{2}_{b}
+    \sin\theta_{\mathrm{in}}\sin^{2}\phi\chi_{zxx}\\
+&- 2\epsilon_{b}(\omega)k_{b}K_{b}
+    \sin\theta_{\mathrm{in}}\cos^{2}\phi\chi_{xxz}\\
+&- 2\epsilon_{b}(\omega)k_{b}K_{b}
+    \sin\theta_{\mathrm{in}}\sin^{2}\phi\chi_{xxz}\\
+&+ 3k^{2}_{b}K_{b}\sin^{2}\phi\cos\phi\chi_{xxx}\\
+&-  k^{2}_{b}K_{b}\cos^{3}\phi\chi_{xxx}
+\big]\\\\
+= \Gamma^{v}_{pP}&\big[
+    \epsilon^{2}_{b}(\omega)\epsilon_{b}(2\omega)
+    \sin^{3}\theta_{\mathrm{in}}\chi_{zzz}
+ +  \epsilon_{b}(2\omega)k^{2}_{b}\sin\theta_{\mathrm{in}}\chi_{zxx}\\
+&- 2\epsilon_{b}(\omega)k_{b}K_{b}\sin\theta_{\mathrm{in}}\chi_{xxz}
+ -  k^{2}_{b}K_{b}\chi_{xxx}\cos3\phi
+\big],
+\end{split}
+\end{equation*}
+where
+\begin{equation*}
+\Gamma^{v}_{pP} =
+\frac{T^{v b}_{p}}{\sqrt{\epsilon_{b}(2\omega)}}
+\left(\frac{t^{v b}_{p}}{\sqrt{\epsilon_{b}(\omega)}}\right)^{2}.
+\end{equation*}
 
 
 \section{Two layer model for SHG radiation}
