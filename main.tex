@@ -1,3 +1,23 @@
+\documentclass{book}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[colorlinks=true]{hyperref}
+\input{/Users/sma/Dropbox/shared/bernie/definitions.tex}
+
+\title{phd thesis}
+\author{Sean M. Anderson}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+\include{chapters/01-theory}
+
+\appendix
 \include{appendices/appendix-re_ri}%reri A
 \include{appendices/appendix-vnl}%appvnl B
 \include{appendices/appendix-gen_der_calv}%calvs C
@@ -13,3 +33,10 @@
 \include{appendices/appendix-gen_der_r}
 \include{appendices/appendix-gen_der_calr}
 \include{appendices/appendix-odds_ends}
+\include{appendices/appendix-explicit_derivations_r}
+\include{appendices/appendix-sipe_moss_vandriel}
+
+\bibliographystyle{unsrt}
+\bibliography{ref}
+
+\end{document}
