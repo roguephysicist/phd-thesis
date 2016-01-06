@@ -379,10 +379,18 @@ and then
 
 \subsection{\texorpdfstring{$\mathcal{R}_{pP}$}{RpP}}
 
-To obtain $R_{pP}(2\omega)$ we use
-$\mathbf{e}^{\mathrm{in}}=\hat{\mathbf{p}}_{v-}$ in Eq. \eqref{m12}, and
-$\mathbf{e}^{\mathrm{out}}=\hat{\mathbf{P}}_{v+}$ in Eq. \eqref{r12}, to obtain
-that for a $C_{3v}$ symmetry characteristic of a (111) surface,
+We develop five different scenarios for $\mathcal{R}_{pP}$ that explore
+different cases for where the polarization and fundamental fields are located.
+In all these scenarios, we use
+$\hat{\mathbf{e}}^{\mathrm{in}}=\hat{\mathbf{p}}_{v-}$ in Eq. \eqref{m12}, and
+$\hat{\mathbf{e}}^{\mathrm{out}}=\hat{\mathbf{P}}_{v+}$ in Eq.
+\eqref{r12}.
+
+\subsubsection{Three layer model}
+
+This scenario involves $\mathcal{P}(2\omega)$ and the fundamental fields to be
+taken in a thin layer of material below the surface, which we designate as
+$\ell$. Thus,
 \begin{equation*}\label{m80}
 \mathbf{e}^{\,2\omega}_{\ell}\cdot\boldsymbol{\chi}:
 \mathbf{e}^\omega_{\ell}\mathbf{e}^\omega_{\ell}
@@ -413,16 +421,29 @@ and
      {\epsilon_{\ell}(\omega)\sqrt{\epsilon_{b}(\omega)}}
 \right)^{2} 
 .  
-\end{equation} 
+\end{equation}
+
+
+\subsubsection{Two layer model}
+
 In order to reduce above result to that of Ref. \cite{mizrahiJOSA88} and
-\cite{sipePRB87},  we take the $2\omega$ radiations factors for vacuum by
-taking $\ell=v$, thus $\epsilon_{\ell}(2\omega)=1$, $T^{\ell v}_{p}=1$,
-$T^{\ell b}_{p}=T^{vb}_{p}$, and the fundamental field inside medium $b$ by
-taking $\ell=b$, thus $\epsilon_{\ell}(\omega)=\epsilon_{b}(\omega)$,
-$t^{v\ell}_{p}=t^{vb}_{p}$, and $t^{\ell b}_{p}=1$. With these choices,
+\cite{sipePRB87}, we now consider that $\mathcal{P}(2\omega)$ is evaluated in
+the vacuum region, while the fundamental fields are evaluated in the bulk
+region. To do this, we take the $2\omega$ radiations factors for vacuum by
+taking $\ell=v$, thus $\epsilon_{\ell}(2\omega)=1$, $T^{\ell v}_{p}=1$, $T^{\ell
+b}_{p}=T^{vb}_{p}$, and the fundamental field inside medium $b$ by taking
+$\ell=b$, thus $\epsilon_{\ell}(\omega)=\epsilon_{b}(\omega)$,
+$t^{v\ell}_{p}=t^{vb}_{p}$, and $t^{\ell b}_{p}=1$. With these choices
+\begin{equation*}\label{m800}
+\mathbf{e}^{\,2\omega}_{v}\cdot\boldsymbol{\chi}:
+\mathbf{e}^\omega_{b}\mathbf{e}^\omega_{b}
+\equiv\Gamma^{vb}_{pP}\,r^{vb}_{pP}
+,
+\end{equation*}
+where,
 \begin{equation*}\label{m82}
 \begin{split}
-r^{b}_{pP}
+r^{vb}_{pP}
 &= \epsilon_{b}(2\omega)\sin\theta_{\mathrm{in}}
 \Big(
 \sin^2\theta_{\mathrm{in}}\chi_{zzz} + k^{2}_{b}chi_{zxx}
@@ -436,16 +457,19 @@ r^{b}_{pP}
 \end{equation*}
 and 
 \begin{equation*}\label{m78}
-\Gamma^b_{pP}
+\Gamma^{vb}_{pP}
 = \frac{T^{v b}_{p}(t^{vb}_{p})^2}
        {\epsilon_{b}(\omega)\sqrt{\epsilon_{b}(2\omega)}}.
 \end{equation*}
 
 
-\subsubsection{Taking all fields in the bulk}
-To evaluate the $2\omega$ fields in the bulk, we take Eq. \eqref{r9}
-considering that $\ell\rightarrow b$. We have already considered the $1\omega$
-fields in the bulk in Eq. \eqref{m13}. After some algebra, we get that
+\subsubsection{Taking \texorpdfstring{$\mathcal{P}(2\omega)$}{P(2w)} and the
+fundamental fields in the bulk}
+
+To evaluate the $2\omega$ fields in the bulk, we
+take Eq. \eqref{r9} considering that $\ell\rightarrow b$. We have already
+considered the $1\omega$ fields in the bulk in Eq. \eqref{m13}. After some
+algebra, we get that
 \begin{equation*}
 \mathbf{e}^{\,2\omega}_{b}\cdot
 \boldsymbol{\chi}:\mathbf{e}^{\omega}_{b}\mathbf{e}^{\omega}_{b} =
@@ -467,7 +491,9 @@ and
 \end{equation*}
 
 
-\subsubsection{Taking all fields in the vacuum}
+\subsubsection{Taking \texorpdfstring{$\mathcal{P}(2\omega)$}{P(2w)} and the
+fundamental fields in the vacuum}
+
 To evaluate the $1\omega$ fields in the vacuum, we take Eq. \eqref{m2}
 considering that $\ell\rightarrow v$. We have already considered the $2\omega$
 fields in the vacuum in Eq. \eqref{r13}. After some algebra, we get that
@@ -495,12 +521,38 @@ and
 \end{equation*}
 
 
+\subsubsection{Taking \texorpdfstring{$\mathcal{P}(2\omega)$}{P(2w)} in
+\texorpdfstring{$\ell$}{l} and the fundamental fields in the bulk}
+
+For this scenario, we have
+\begin{equation*}
+\mathbf{e}^{\,2\omega}_{\ell}\cdot
+\boldsymbol{\chi}:\mathbf{e}^{\omega}_{b}\mathbf{e}^{\omega}_{b} =
+\Gamma^{\ell b}_{pP}r^{\ell b}_{pP}
+\end{equation*}
+where
+\begin{equation*}
+\begin{split}
+r^{\ell b}_{pP} &= 
+  \epsilon_{b}(2\omega)\sin^{3}\theta_{\mathrm{in}}\chi_{zzz}
++ \epsilon_{b}(2\omega)k^{2}_{b}\sin\theta_{\mathrm{in}}\chi_{zxx}\\
+&- 2\epsilon_{\ell}(2\omega)k_{b}K_{b}\sin\theta_{\mathrm{in}}\chi_{xxz}
+- \epsilon_{\ell}(2\omega)k^{2}_{b}K_{b}\chi_{xxx}\cos3\phi,
+\end{split}
+\end{equation*}
+and
+\begin{equation*}
+\Gamma^{\ell b}_{pP}=
+\frac{T^{v\ell}_{p}T^{\ell b}_{p}\left(t^{vb}_{p}\right)^{2}}
+  {\epsilon_{\ell}({2\omega})\epsilon_{b}(\omega)\sqrt{\epsilon_{b}(2\omega)}}.
+\end{equation*}
+
 \subsection{\texorpdfstring{$\mathcal{R}_{pS}$}{RpS}}
 
 To obtain $R_{pS}(2\omega)$ we use
-$\mathbf{e}^{\mathrm{in}}=\hat{\mathbf{p}}_{v-}$ in Eq. \eqref{m12}, and
-$\mathbf{e}^{\mathrm{out}}=\hat{\mathbf{S}}$ in Eq. \eqref{r12}. We also use
-the unit vectors defined in Eqs. \eqref{mc1} and
+$\hat{\mathbf{e}}^{\mathrm{in}}=\hat{\mathbf{p}}_{v-}$ in Eq. \eqref{m12}, and
+$\hat{\mathbf{e}}^{\mathrm{out}}=\hat{\mathbf{S}}$ in Eq. \eqref{r12}. We also
+use the unit vectors defined in Eqs. \eqref{mc1} and
 \eqref{mc2}. Substituting, we get
 \begin{equation*}
 \mathbf{e}^{\,2\omega}_{\ell}\cdot
@@ -539,9 +591,10 @@ T^{vb}_{s}
 
 \subsection{\texorpdfstring{$\mathcal{R}_{sP}$}{RsP}}
 
-To obtain $R_{sP}(2\omega)$ we use $\mathbf{e}^{\mathrm{in}}=\hat{\mathbf{s}}$
-in Eq. \eqref{m12}, and $\mathbf{e}^{\mathrm{out}}=\hat{\mathbf{P}}_{v+}$ in
-Eq. \eqref{r12}. We also use the unit vectors defined in Eqs. \eqref{mc1} and
+To obtain $R_{sP}(2\omega)$ we use
+$\hat{\mathbf{e}}^{\mathrm{in}}=\hat{\mathbf{s}}$ in Eq. \eqref{m12}, and
+$\hat{\mathbf{e}}^{\mathrm{out}}=\hat{\mathbf{P}}_{v+}$ in Eq. \eqref{r12}. We
+also use the unit vectors defined in Eqs. \eqref{mc1} and
 \eqref{mc2}. Substituting, we get
 \begin{equation*}
 \mathbf{e}^{\,2\omega}_{\ell}\cdot
@@ -574,14 +627,14 @@ and
 \begin{equation*}
 \Gamma^{b}_{sP} =
 \frac{T^{v b}_{p}(t_s^{vb})^{2}}{\sqrt{\epsilon_{b}(2\omega)}}.  
-\end{equation*} 
+\end{equation*}
 
 
 \subsection{\texorpdfstring{$\mathcal{R}_{sS}$}{RsS}}
 
 For $\mathcal{R}_{sS}$ we have that
-$\mathbf{e}^{\mathrm{in}}=\hat{\mathbf{s}}$ and
-$\mathbf{e}^{\mathrm{out}}=\hat{\mathbf{S}}$. This leads to
+$\hat{\mathbf{e}}^{\mathrm{in}}=\hat{\mathbf{s}}$ and
+$\hat{\mathbf{e}}^{\mathrm{out}}=\hat{\mathbf{S}}$. This leads to
 \begin{equation*}
 \mathbf{e}^{\,2\omega}_{\ell}\cdot
 \boldsymbol{\chi}:\mathbf{e}^\omega_{\ell}\mathbf{e}^\omega_{\ell}

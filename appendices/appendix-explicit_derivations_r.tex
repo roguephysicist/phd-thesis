@@ -4,7 +4,8 @@ polarization cases}
 \subsection{\texorpdfstring{$\mathcal{R}_{pP}$}{RpP}}
 
 
-\subsubsection{Taking all fields in the bulk}
+\subsubsection{Taking \texorpdfstring{$\mathcal{P}(2\omega)$}{P(2w)} and the
+fundamental fields in the bulk}
 
 To consider the $2\omega$ fields in the bulk, we start with Eq. \eqref{r9} but
 substitute $\ell\rightarrow b$, thus
@@ -213,7 +214,8 @@ R(2\omega) =
 \end{equation*}
 
 
-\subsubsection{Taking all fields in the vacuum}
+\subsubsection{Taking \texorpdfstring{$\mathcal{P}(2\omega)$}{P(2w)} and the
+fundamental fields in the vacuum}
 
 To consider the $1\omega$ fields in the vacuum, we start with Eq. \eqref{m2}
 but substitute $\ell\rightarrow v$, thus
@@ -334,7 +336,7 @@ So lastly, we have that
 \begin{equation*}
 \begin{split}
 \mathbf{e}^{\,2\omega}_{v}\cdot
-\boldsymbol{\chi}:\mathbf{e}^{\omega}_{v}\mathbf{v}^{\omega}_{v}
+\boldsymbol{\chi}:\mathbf{e}^{\omega}_{v}\mathbf{e}^{\omega}_{v}
 =\qquad\qquad&\\
 \frac{T^{v b}_{p}}{\sqrt{\epsilon_{b}(2\omega)}}
 \left(\frac{t^{v b}_{p}}{\sqrt{\epsilon_{b}(\omega)}}\right)^{2}
@@ -406,21 +408,124 @@ where
 \end{equation*}
 
 
+\subsubsection{Taking \texorpdfstring{$\mathcal{P}(2\omega)$}{P(2w)} in
+\texorpdfstring{$\ell$}{l} and the fundamental fields in the bulk}
+
+For this scenario with $\hat{\mathbf{e}}^{\mathrm{in}}=\hat{\mathbf{p}}_{v-}$
+and $\hat{\mathbf{e}}^{\mathrm{out}}=\hat{\mathbf{P}}_{v+}$, we obtain from Eq.
+\eqref{r12},
+\begin{equation*}\label{ri12}
+\mathbf{e}^{2\omega}_{\ell} =
+\frac{T^{v\ell}_{p}T^{\ell b}_{p}}
+     {\epsilon_{\ell}({2\omega})\sqrt{\epsilon_{b}(2\omega)}}
+\left(
+  \epsilon_{b}(2\omega)\sin\theta_{\mathrm{in}}\hat{\mathbf{z}}
+- \epsilon_{\ell}(2\omega)K_{b}\cos\phi\hat{\mathbf{x}}
+- \epsilon_{\ell}(2\omega)K_{b}\sin\phi\hat{\mathbf{y}}
+\right),
+\end{equation*}
+and Eq. \eqref{m13},
+\begin{equation*}
+\begin{split}
+\mathbf{e}^{\omega}_{b}\mathbf{e}^{\omega}_{b}
+&= \frac{\left(t^{vb}_{p}\right)^{2}}{\epsilon_{b}(\omega)}
+\big(
+  \sin^{2}\theta_{\mathrm{in}}\hat{\mathbf{z}}\hat{\mathbf{z}}
++ k^{2}_{b}\cos^{2}\phi\hat{\mathbf{x}}\hat{\mathbf{x}}
++ k^{2}_{b}\sin^{2}\phi\hat{\mathbf{y}}\hat{\mathbf{y}}\\
+&\qquad\qquad
++ 2k_{b}\sin\theta_{\mathrm{in}}\cos\phi\hat{\mathbf{z}}\hat{\mathbf{x}}
++ 2k_{b}\sin\theta_{\mathrm{in}}\sin\phi\hat{\mathbf{z}}\hat{\mathbf{y}}
++ 2k^{2}_{b}\sin\phi\cos\phi\hat{\mathbf{x}}\hat{\mathbf{y}}
+\big).
+\end{split}
+\end{equation*}
+Thus,
+\begin{equation*}
+\begin{split}
+\mathbf{e}^{\,2\omega}_{\ell}\cdot
+\boldsymbol{\chi}:\mathbf{e}^{\omega}_{b}\mathbf{e}^{\omega}_{b} = 
+\frac{T^{v\ell}_{p}T^{\ell b}_{p}\left(t^{vb}_{p}\right)^{2}}
+     {\epsilon_{\ell}({2\omega})\epsilon_{b}(\omega)\sqrt{\epsilon_{b}(2\omega)}}
+\bigg[
+&+ \epsilon_{b}(2\omega)\sin^{3}\theta_{\mathrm{in}}\chi_{zzz}\\
+&+ \epsilon_{b}(2\omega)k^{2}_{b}\sin\theta_{\mathrm{in}}\cos^{2}\phi\chi_{zxx}\\
+&+ \epsilon_{b}(2\omega)k^{2}_{b}\sin\theta_{\mathrm{in}}\sin^{2}\phi\chi_{zyy}\\
+&+ 2\epsilon_{b}(2\omega)k_{b}\sin^{2}\theta_{\mathrm{in}}\cos\phi\chi_{zzx}\\
+&+ 2\epsilon_{b}(2\omega)k_{b}\sin^{2}\theta_{\mathrm{in}}\sin\phi\chi_{zzy}\\
+&+ 2\epsilon_{b}(2\omega)k^{2}_{b}\sin\theta_{\mathrm{in}}\sin\phi\cos\phi\chi_{zxy}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&- \epsilon_{\ell}(2\omega)\sin^{2}\theta_{\mathrm{in}}K_{b}\cos\phi\chi_{xzz}\\
+&- \epsilon_{\ell}(2\omega)k^{2}_{b}K_{b}\cos^{3}\phi\chi_{xxx}\\
+&- \epsilon_{\ell}(2\omega)k^{2}_{b}K_{b}\sin^{2}\phi\cos\phi\chi_{xyy}\\
+&- 2\epsilon_{\ell}(2\omega)k_{b}K_{b}\sin\theta_{\mathrm{in}}\cos^{2}\phi\chi_{xzx}\\
+&- 2\epsilon_{\ell}(2\omega)k_{b}K_{b}\sin\theta_{\mathrm{in}}\sin\phi\cos\phi\chi_{xzy}\\
+&- 2\epsilon_{\ell}(2\omega)k^{2}_{b}K_{b}\sin\phi\cos^{2}\phi\chi_{xxy}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&- \epsilon_{\ell}(2\omega)K_{b}\sin^{2}\theta_{\mathrm{in}}\sin\phi\chi_{yzz}\\
+&- \epsilon_{\ell}(2\omega)k^{2}_{b}K_{b}\cos^{2}\phi\sin\phi\chi_{yxx}\\
+&- \epsilon_{\ell}(2\omega)k^{2}_{b}K_{b}\sin^{3}\phi\chi_{yyy}\\
+&- 2\epsilon_{\ell}(2\omega)k_{b}K_{b}\sin\theta_{\mathrm{in}}\cos\phi\sin\phi\chi_{yzx}\\
+&- 2\epsilon_{\ell}(2\omega)k_{b}K_{b}\sin\theta_{\mathrm{in}}\sin^{2}\phi\chi_{yzy}\\
+&- 2\epsilon_{\ell}(2\omega)k^{2}_{b}K_{b}\sin^{2}\phi\cos\phi\chi_{yxy}
+\bigg].
+\end{split}
+\end{equation*}
+We eliminate and replace components,
+\begin{equation*}
+\begin{split}
+\mathbf{e}^{\,2\omega}_{\ell}\cdot
+\boldsymbol{\chi}:\mathbf{e}^{\omega}_{b}\mathbf{e}^{\omega}_{b} = 
+\Gamma^{\ell b}_{pP}
+\bigg[
+&+ \epsilon_{b}(2\omega)\sin^{3}\theta_{\mathrm{in}}\chi_{zzz}\\
+&+ \epsilon_{b}(2\omega)k^{2}_{b}\sin\theta_{\mathrm{in}}\cos^{2}\phi\chi_{zxx}\\
+&+ \epsilon_{b}(2\omega)k^{2}_{b}\sin\theta_{\mathrm{in}}\sin^{2}\phi\chi_{zxx}\\
+&- 2\epsilon_{\ell}(2\omega)k_{b}K_{b}\sin\theta_{\mathrm{in}}\cos^{2}\phi\chi_{xxz}\\
+&- 2\epsilon_{\ell}(2\omega)k_{b}K_{b}\sin\theta_{\mathrm{in}}\sin^{2}\phi\chi_{xxz}\\
+&- \epsilon_{\ell}(2\omega)k^{2}_{b}K_{b}\cos^{3}\phi\chi_{xxx}\\
+&+ \epsilon_{\ell}(2\omega)k^{2}_{b}K_{b}\sin^{2}\phi\cos\phi\chi_{xxx}\\
+&+ 2\epsilon_{\ell}(2\omega)k^{2}_{b}K_{b}\sin^{2}\phi\cos\phi\chi_{xxx}
+\bigg],
+\end{split}
+\end{equation*}
+so lastly
+\begin{equation*}
+\begin{split}
+\mathbf{e}^{\,2\omega}_{\ell}\cdot
+\boldsymbol{\chi}:\mathbf{e}^{\omega}_{b}\mathbf{e}^{\omega}_{b} = 
+\Gamma^{\ell b}_{pP}&
+\bigg[
+  \epsilon_{b}(2\omega)\sin^{3}\theta_{\mathrm{in}}\chi_{zzz}
++ \epsilon_{b}(2\omega)k^{2}_{b}\sin\theta_{\mathrm{in}}\chi_{zxx}\\
+&- 2\epsilon_{\ell}(2\omega)k_{b}K_{b}\sin\theta_{\mathrm{in}}\chi_{xxz}
+- \epsilon_{\ell}(2\omega)k^{2}_{b}K_{b}\chi_{xxx}\cos3\phi
+\bigg],
+\end{split}
+\end{equation*}
+where
+\begin{equation*}
+\Gamma^{\ell b}_{pP}=
+\frac{T^{v\ell}_{p}T^{\ell b}_{p}\left(t^{vb}_{p}\right)^{2}}
+  {\epsilon_{\ell}({2\omega})\epsilon_{b}(\omega)\sqrt{\epsilon_{b}(2\omega)}}.
+\end{equation*}
+
+
 \subsection{\texorpdfstring{$\mathcal{R}_{pS}$}{RpS}}
 
 To obtain $R_{pS}(2\omega)$ we use
-$\mathbf{e}^{\mathrm{in}}=\hat{\mathbf{p}}_{v-}$ in Eq. \eqref{m12}, and
-$\mathbf{e}^{\mathrm{out}}=\hat{\mathbf{S}}$ in Eq. \eqref{r12}. We also use
+$\hat{\mathbf{e}}^{\mathrm{in}}=\hat{\mathbf{p}}_{v-}$ in Eq. \eqref{m12}, and
+$\hat{\mathbf{e}}^{\mathrm{out}}=\hat{\mathbf{S}}$ in Eq. \eqref{r12}. We also use
 the unit vectors defined in Eqs. \eqref{mc1} and
 \eqref{mc2}. Substituting, we get
 \begin{equation*}
-\hat{\mathbf{e}}^{2\omega}_{\ell} 
+\mathbf{e}^{2\omega}_{\ell} 
 = T^{v\ell}_{s}T^{\ell b}_{s}
 \left[-\sin\phi\hat{\mathbf{x}} + \cos\phi\hat{\mathbf{y}}\right],
 \end{equation*}
 for $2\omega$, and for the fundamental fields,
 \begin{align*}
-\hat{\mathbf{e}}^{\omega}_{\ell}\hat{\mathbf{e}}^{\omega}_{\ell}
+\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell}
 = \left(
 \frac{t^{v\ell}_{p}t^{\ell b}_{p}}
        {\epsilon_{\ell}(\omega)\sqrt{\epsilon_{b}(\omega)}}
@@ -435,7 +540,8 @@ for $2\omega$, and for the fundamental fields,
        {\epsilon_{\ell}(\omega)\sqrt{\epsilon_{b}(\omega)}}
 \right)^{2}
 &\big(
-  \epsilon_{b}^{2}(\omega)\sin^{2}\theta_{\mathrm{in}}\hat{\mathbf{z}}\hat{\mathbf{z}}
+  \epsilon_{b}^{2}(\omega)\sin^{2}\theta_{\mathrm{in}}
+  \hat{\mathbf{z}}\hat{\mathbf{z}}
 + 2\epsilon_{b}(\omega)\epsilon_{\ell}(\omega)k_{b}\sin\theta_{\mathrm{in}}
    \cos\phi\hat{\mathbf{z}}\hat{\mathbf{x}}\\
 + &\epsilon^{2}_{\ell}(\omega)k^{2}_{b}\cos^{2}\phi
@@ -444,16 +550,17 @@ for $2\omega$, and for the fundamental fields,
    \hat{\mathbf{x}}\hat{\mathbf{y}}\\
 + &\epsilon^{2}_{\ell}(\omega)k^{2}_{b}\sin^{2}\phi
    \hat{\mathbf{y}}\hat{\mathbf{y}}
-+ 2\epsilon_{b}(\omega)\epsilon_{\ell}(\omega)k_{b}\sin\theta_{\mathrm{in}}\sin\phi
++ 2\epsilon_{b}(\omega)\epsilon_{\ell}(\omega)k_{b}\sin\theta_{\mathrm{in}}
+  \sin\phi
    \hat{\mathbf{y}}\hat{\mathbf{z}}
 \big).
 \end{align*}
 Therefore,
 \begin{equation*}
 \begin{split}
-\hat{\mathbf{e}}^{2\omega}_{\ell}
+\mathbf{e}^{2\omega}_{\ell}
 \cdot\boldsymbol{\chi}:
-\hat{\mathbf{e}}^{\omega}_{\ell}\hat{\mathbf{e}}^{\omega}_{\ell} =
+\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell} =
 \qquad\qquad\qquad&\\\\
 T^{v\ell}_{s}T^{\ell b}_{s}\left(\frac{t^{v\ell}_{p}t^{\ell b}_{p}}
       {\epsilon_{\ell}(\omega)\sqrt{\epsilon_{b}(\omega)}}\right)^{2}
@@ -541,12 +648,12 @@ T^{vb}_{s}
 
 \subsection{\texorpdfstring{$\mathcal{R}_{sP}$}{RsP}}
 
-To obtain $R_{sP}(2\omega)$ we use $\mathbf{e}^{\mathrm{in}}=\hat{\mathbf{s}}$
-in Eq. \eqref{m12}, and $\mathbf{e}^{\mathrm{out}}=\hat{\mathbf{P}}_{v+}$ in
+To obtain $R_{sP}(2\omega)$ we use $\hat{\mathbf{e}}^{\mathrm{in}}=\hat{\mathbf{s}}$
+in Eq. \eqref{m12}, and $\hat{\mathbf{e}}^{\mathrm{out}}=\hat{\mathbf{P}}_{v+}$ in
 Eq. \eqref{r12}. We also use the unit vectors defined in Eqs. \eqref{mc1} and
 \eqref{mc2}. Substituting, we get
 \begin{equation*}
-\hat{\mathbf{e}}^{2\omega}_{\ell} 
+\mathbf{e}^{2\omega}_{\ell} 
 = \frac{T^{v\ell}_{p}T^{\ell b}_{p}}
        {\epsilon_{\ell}(2\omega)\sqrt{\epsilon_{b}(2\omega)}}
 \left[
@@ -557,7 +664,7 @@ Eq. \eqref{r12}. We also use the unit vectors defined in Eqs. \eqref{mc1} and
 \end{equation*}
 for $2\omega$, and for the fundamental fields,
 \begin{equation*}
-\hat{\mathbf{e}}^{\omega}_{\ell}\hat{\mathbf{e}}^{\omega}_{\ell}
+\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell}
 = \left(t^{v\ell}_{s}t^{\ell b}_{s}\right)^{2}
 \left(
   \sin^{2}\phi\hat{\mathbf{x}}\hat{\mathbf{x}}
@@ -568,9 +675,9 @@ for $2\omega$, and for the fundamental fields,
 Therefore,
 \begin{equation*}
 \begin{split}
-\hat{\mathbf{e}}^{2\omega}_{\ell}
+\mathbf{e}^{2\omega}_{\ell}
 \cdot\boldsymbol{\chi}:&
-\hat{\mathbf{e}}^{\omega}_{\ell}\hat{\mathbf{e}}^{\omega}_{\ell} =\\
+\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell} =\\
 &\frac{T^{v\ell}_{p}T^{\ell b}_{p}\left(t^{v\ell}_{s}t^{\ell b}_{s}\right)^{2}}
       {\epsilon_{\ell}(2\omega)\sqrt{\epsilon_{b}(2\omega)}}
 \big[
@@ -655,13 +762,13 @@ and
 \subsection{\texorpdfstring{$\mathcal{R}_{sS}$}{RsS}}
 
 For $\mathcal{R}_{sS}$ we have that
-$\mathbf{e}^{\mathrm{in}}=\hat{\mathbf{s}}$ and
-$\mathbf{e}^{\mathrm{out}}=\hat{\mathbf{S}}$. This leads to
+$\hat{\mathbf{e}}^{\mathrm{in}}=\hat{\mathbf{s}}$ and
+$\hat{\mathbf{e}}^{\mathrm{out}}=\hat{\mathbf{S}}$. This leads to
 \begin{align*}
-\hat{\mathbf{e}}^{2\omega}_{\ell} 
+\mathbf{e}^{2\omega}_{\ell} 
 &= T^{v\ell}_{s}T^{\ell b}_{s}
 \left[-\sin\phi\hat{\mathbf{x}} + \cos\phi\hat{\mathbf{y}}\right],\\
-\hat{\mathbf{e}}^{\omega}_{\ell}\hat{\mathbf{e}}^{\omega}_{\ell}
+\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell}
 &= \left(t^{v\ell}_{s}t^{\ell b}_{s}\right)^{2}
 \left(
   \sin^{2}\phi\hat{\mathbf{x}}\hat{\mathbf{x}}
@@ -672,9 +779,9 @@ $\mathbf{e}^{\mathrm{out}}=\hat{\mathbf{S}}$. This leads to
 Therefore,
 \begin{equation*}
 \begin{split}
-\hat{\mathbf{e}}^{2\omega}_{\ell}
+\mathbf{e}^{2\omega}_{\ell}
 \cdot\boldsymbol{\chi}:
-\hat{\mathbf{e}}^{\omega}_{\ell}\hat{\mathbf{e}}^{\omega}_{\ell} =
+\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell} =
 T^{v\ell}_{s}T^{\ell b}_{s}\left(t^{v\ell}_{s}t^{\ell b}_{s}\right)^{2}
 \big[&
 -  \sin^{3}\phi\chi_{xxx}
