@@ -13,7 +13,7 @@
     * Coding nonrefco
 3. Results
     * Comparison with Si(111) 1x1
-    * Recalculate and calculate for all other Si surfaces, look for experiment data
+    * Recalculate and calculate for all other Si surfaces, look for experiment data (major housecleaning on shg-si-surfaces)
     * Multiple reflections
 4. Conclusions
     * How we improved on old calculations, both in quality and speed
