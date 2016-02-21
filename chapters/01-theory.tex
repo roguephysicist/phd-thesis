@@ -1,5 +1,3 @@
-\chapter{Theory}\label{ch:theory}
-
 \section{Introduction}\label{intro}
 
 Second harmonic generation (SHG) is a powerful spectroscopic tool for 
@@ -1439,236 +1437,6 @@ also use Eq.~\eqref{tau.69}. Above is the standard effective-mas sum rule.
 %coded in order to calculate the previous expressions for $\bfgchi$.
 
 
-\section{SHG yield in CGS}
-We follow the derivation established in Ref. \cite{mendozaEPI04}.
-
-We define the radiated SHG yied as 
-
-\begin{equation*}
-R(\omega) = \frac{I(2\omega)}{I^{2}(\omega)},
-\end{equation*}
-with the intensity as\footnote{The original derivation, and Ref. \cite{reiningPRB94} state the intensity has a factor of $c/8\pi$.}
-\begin{equation*}
-I(\omega) = \frac{c}{2\pi}\vert E(\omega)\vert^{2},
-\end{equation*}
-so,
-\begin{equation}\label{final}
-R(\omega) = \frac{\frac{c}{2\pi}\vert E(2\omega)\vert^{2}}{(\frac{c}{2\pi})^{2}\vert E(\omega)\vert^{4}} = \frac{2\pi}{c}\frac{\vert E(2\omega)\vert^{2}}{\vert E(\omega)\vert^{4}}.
-\end{equation}
-
-We start from the derivation in Ref. \cite{mizrahiJOSA88}. See Fig. \ref{3layers}. The electric field radiated by a polarized sheet is
-\begin{align}
-E_{p\pm} &= \frac{2\pi i\omega}{c k_{z}}\hat{\mathbf{p}}_{\pm}\cdot\boldsymbol{\mathcal{P}},\label{eq:ep_miz}\\
-E_{s} & = \frac{2\pi i\omega}{c k_{z}}\hat{\mathbf{s}}\cdot\boldsymbol{\mathcal{P}}\label{eq:es_miz},
-\end{align}
-where,
-\begin{equation}
-k_{z} = \sqrt{\epsilon(\omega) - \sin^{2}\theta},
-\end{equation}
-and the nonlinear polarization produced by the incoming fields is,
-\begin{equation}
-\mathcal{P}_{i}=\chi_{ijk}E_j(\omega)E_k(\omega),
-\end{equation} 
-where repeated indices are to be summed over. The unit vectors for the polarization in $s$ and $p$ directions are
-\begin{align}
-\hat{\mathbf{p}}_{\pm} &= \frac{1}{\sqrt{\epsilon}}(\mp k_{z}\hat{\mathbf{x}} - \sin\theta\hat{\mathbf{z}}),\label{eq:pvectors}\\
-\hat{\mathbf{s}} &= \hat{\mathbf{y}}.\label{eq:svectors}
-\end{align}
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.7\textwidth]{figures/3layers.pdf}
-\caption{Sketch of the three layer model for SHG. Vacuum is on top with
-$\epsilon=1$, the layer with non-linear polarization
-$\boldsymbol{\mathcal{P}}(2\omega)$ is characterized with
-$\epsilon_{\ell(}\omega)$ and the bulk with $\epsilon_{b}(\omega)$. In the
-dipolar approximation the bulk does not radiate SHG. The thin arrows are along
-the direction of propagation, and the unit vectors for $p$-polarization are
-denoted with thick arrows (capital letters denote SH components). The unit
-vector for $s$-polarization points along $y$ (out of the page). $N$ is normal
-to the surface, and $\theta$ is the angle of incidence for $p$ or $s$ input
-polarization.\label{3layers}}
-\end{figure}
-
-We define the transmission, $\mathbf{T}$, and reflection, $\mathbf{R}$, tensors as,
-\begin{equation}\label{r5}
-\mathbf{T}_{\ell v}= \hat{\mathbf{s}}T_{s}^{\ell v}\hat{\mathbf{s}} + \hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v} \hat{\mathbf{P}}_{\ell +},
-\end{equation}
-and
-\begin{equation}\label{r6}
-\mathbf{R}_{\ell b}= \hat{\mathbf{s}}R_{s}^{\ell b}\hat{\mathbf{s}} + \hat{\mathbf{P}}_{\ell +}R_{p}^{\ell b} \hat{\mathbf{P}}_{\ell -},
-\end{equation}
-where variables in capital letters are evaluated at the harmonic frequency
-$2\omega$. Notice that since $\hat{\mathbf{s}}$ is independent of $\omega$, then
-$\hat{\mathbf{s}}=\hat{\mathbf{s}}$. The Fresnel factors, $T_{i}$, $R_{i}$,
-and $\tilde{T}_{p}$, for $i=s,p$ polarization, are evaluated at the appropriate
-interface $\ell v$ or $\ell b$, and will be given below. The extra subscript
-in $\hat{\mathbf{P}}$ denotes the corresponding dielectric function to be used in its
-evaluation, i.e. $\epsilon_{v}=1$ for vacuum ($v$),
-$\epsilon_{\ell}$ for the layer ($\ell$),
-and $\epsilon_{b}$ for the bulk ($b$).
-Therefore, the total radiated field at $2\omega$ is
-\begin{align}\label{r7}
-\mathbf{E}(2\omega) &=
-E_{s}(2\omega)\left(\mathbf{T}_{\ell v} + \mathbf{T}_{\ell v}\cdot\mathbf{R}_{\ell b}\right)\cdot\hat{\mathbf{s}}\nonumber\\ 
-&+ E_{p+}(2\omega)\mathbf{T}_{\ell v}\cdot\hat{\mathbf{P}}_{\ell +} + E_{p-}(2\omega)\mathbf{T}_{\ell v}\cdot\mathbf{R}_{\ell b}\cdot\hat{\mathbf{P}}_{\ell -}.
-\end{align}
-First, we develop an intermediate result,
-\begin{align*}
-\mathbf{T}_{\ell v}\cdot\mathbf{R}_{\ell b} &= (\hat{\mathbf{s}}T_{s}^{\ell v}\hat{\mathbf{s}} + \hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v} \hat{\mathbf{P}}_{\ell +})\cdot(\hat{\mathbf{s}}R_{s}^{\ell b}\hat{\mathbf{s}} + \hat{\mathbf{P}}_{\ell +}R_{p}^{\ell b} \hat{\mathbf{P}}_{\ell -})\\
-&= \hat{\mathbf{s}}T_{s}^{\ell v}R_{s}^{\ell b}\hat{\mathbf{s}} + \hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v}R_{p}^{\ell b}\hat{\mathbf{P}}_{\ell -}
-\end{align*}
-
-We apply this result for the $E_{s}$ term in Eq. \eqref{r7},
-\begin{align}\label{eq:es}
-\left(\mathbf{T}_{\ell v} + \mathbf{T}_{\ell v}\cdot\mathbf{R}_{\ell b}\right)\cdot\hat{\mathbf{s}} = &\Bigl[\hat{\mathbf{s}}T_{s}^{\ell v}\hat{\mathbf{s}} + \hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v} \hat{\mathbf{P}}_{\ell +}\nonumber\\
-&+ \hat{\mathbf{s}}T_{s}^{\ell v}R_{s}^{\ell b}\hat{\mathbf{s}} + \hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v}R_{p}^{\ell b}\hat{\mathbf{P}}_{\ell -} \Bigr]\cdot\hat{\mathbf{s}}\nonumber\\
-= &\Bigl[\hat{\mathbf{s}}\tilde{T}_{s}^{\ell v}\bigl(1 + R_{s}^{\ell b})\hat{\mathbf{s}}\Bigr]\cdot\hat{\mathbf{s}}\nonumber\\
-= &\hat{\mathbf{s}}\tilde{T}_{s}^{\ell v}\bigl(1 + R_{s}^{\ell b})
-\end{align}
-For $E_{p+}$,
-\begin{align}\label{eq:ep+}
-\mathbf{T}_{\ell v}\cdot\hat{\mathbf{P}}_{\ell +} &= (\hat{\mathbf{s}}T_{s}^{\ell v}\hat{\mathbf{s}} + \hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v} \hat{\mathbf{P}}_{\ell +})\cdot\hat{\mathbf{P}}_{\ell +}\nonumber\\
-&= \hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v}
-\end{align}
-and lasty for For $E_{p-}$,
-\begin{align}\label{eq:ep-}
-\mathbf{T}_{\ell v}\cdot\mathbf{R}_{\ell b}\cdot\hat{\mathbf{P}}_{\ell -} &= (\hat{\mathbf{s}}T_{s}^{\ell v}R_{s}^{\ell b}\hat{\mathbf{s}} + \hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v}R_{p}^{\ell b}\hat{\mathbf{P}}_{\ell -})\cdot\hat{\mathbf{P}}_{\ell -}\nonumber\\
-&= \hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v}R_{p}^{\ell b}
-\end{align}
-We replace Eqs. \eqref{eq:es}, \eqref{eq:ep+}, and \eqref{eq:ep-} into Eq. \eqref{r7},
-\begin{align}\label{eq:e2w}
-\mathbf{E}(2\omega) &=
-E_{s}(2\omega)\Bigl[\hat{\mathbf{s}}\tilde{T}_{s}^{\ell v}\bigl(1 + R_{s}^{\ell b})\Bigr]\nonumber\\ 
-&+ E_{p+}(2\omega)\Bigl[\hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v}\Bigr] + E_{p-}(2\omega)\Bigl[\hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v}R_{p}^{\ell b}\Bigr].
-\end{align}
-
-From Eqs. \eqref{eq:ep_miz} and \eqref{eq:es_miz}, we get that 
-\begin{align}
-E_{p\pm}(2\omega) &= \frac{4\pi i\omega}{c K_{z}}\hat{\mathbf{p}}_{\pm}\cdot\boldsymbol{\mathcal{P}},\label{eq:ep_miz2w}\\
-E_{s}(2\omega) & = \frac{4\pi i\omega}{c K_{z}}\hat{\mathbf{s}}\cdot\boldsymbol{\mathcal{P}}\label{eq:es_miz2w},
-\end{align}
-
-Combining Eqs. \eqref{eq:ep_miz2w} and \eqref{eq:es_miz2w} into Eq. \eqref{eq:e2w}
-\begin{align}
-\mathbf{E}(2\omega) &= \frac{4\pi i\omega}{c K_{z}}\Bigl[\hat{\mathbf{s}}\tilde{T}_{s}^{\ell v}\bigl(1 + R_{s}^{\ell b})\hat{\mathbf{s}} + \hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v}\hat{\mathbf{P}}_{\ell +} + \hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v}R_{p}^{\ell b}\hat{\mathbf{P}}_{\ell -}\Bigr]\cdot\boldsymbol{\mathcal{P}}\\
-&= \frac{4\pi i\omega}{c K_{z}}\Bigl[\hat{\mathbf{s}}\tilde{T}_{s}^{\ell v}\bigl(1 + R_{s}^{\ell b})\hat{\mathbf{s}} + \hat{\mathbf{P}}_{v+}\tilde{T}_{p}^{\ell v}\bigl(\hat{\mathbf{P}}_{\ell +} + R_{p}^{\ell b}\hat{\mathbf{P}}_{\ell -}\bigr)\Bigr]\cdot\boldsymbol{\mathcal{P}}\\
-&= \frac{4\pi i\omega}{c K_{z}}\mathbf{H}\cdot\boldsymbol{\mathcal{P}}
-\end{align}
-which matches Eq. (31) from Ref. \cite{mendozaEPI04}. We establish some simple relationships between $T$ and $R$,
-\begin{align}\label{r11}
-T_{s}^{\ell v} &= \frac{K_{z\ell}}{\cos\theta}\,T_{s}^{v\ell},  \quad\quad
-\tilde{T}_p^{\ell v} = \frac{\sqrt{\epsilon_{\ell}(2\omega)}K_{z\ell}}{\cos\theta}\,T^{v\ell}_{p},\\
-1 - R^{\ell b}_{p} &= \frac{\epsilon_{\ell}(2\omega)K_{zb}}{K_{z\ell}}\,T_{p}^{\ell b}, \quad\quad 
-1 + R_{p}^{\ell b} = \epsilon_{b}(2\omega)T_{p}^{\ell b},\label{r11d}
-\end{align}
-
-The magnitude of the radiated field is given by
-$E(2\omega)=\hat{\mathbf{e}}^{out}\cdot\mathbf{E}(2\omega)$,
-where $\hat{\mathbf{e}}^{out}$ is the polarization vector of the radiated field, for
-instance $\hat{\mathbf{s}}$ or $\hat{\mathbf{P}}_{v+}$. Then we write
-\begin{equation}\label{r10}
-E(2\omega)=\frac{4\pi i\omega}{c}\mathbf{e}^{\,2\omega}\cdot\boldsymbol{\mathcal{P}},
-\end{equation}
-so
-\begin{equation}
-\mathbf{e}^{\,2\omega} = \frac{1}{K_{z\ell}}\hat{\mathbf{e}}^{out}\cdot\mathbf{H}
-\end{equation}
-
-We rewrite $\mathbf{H}$ using Eqs. \eqref{r11}, \eqref{r11d}, \eqref{eq:pvectors}, and \eqref{eq:svectors},
-\begin{equation}
-\mathbf{H} = \frac{K_{zl}}{\cos\theta}\left[\hat{\mathbf{s}}T_{s}^{v\ell}T_{s}^{\ell b}\hat{\mathbf{y}} - \hat{\mathbf{P}}_{v+}T_{p}^{v\ell}T_{p}^{\ell b}\bigl(\epsilon_{\ell}(2\omega)K_{zb}\hat{\mathbf{x}} + \epsilon_{b}(2\omega)\sin\theta\hat{\mathbf{z}}\bigr)\right],
-\end{equation}
-and so,
-\begin{equation}
-\mathbf{e}^{\,2\omega} = \frac{1}{\cos\theta}\hat{\mathbf{e}}^{out}\cdot\left[\hat{\mathbf{s}}T_{s}^{v\ell}T_{s}^{\ell b}\hat{\mathbf{y}} - \hat{\mathbf{P}}_{v+}T_{p}^{v\ell}T_{p}^{\ell b}\bigl(\epsilon_{\ell}(2\omega)K_{zb}\hat{\mathbf{x}} + \epsilon_{b}(2\omega)\sin\theta\hat{\mathbf{z}}\bigr)\right]
-\end{equation}
-
-We can now write our $2\omega$ radiated fields as,
-\begin{align}
-E_{s}(2\omega) &= \frac{4\pi i \omega}{c\cos\theta}\Bigl[T_{s}^{v\ell}T_{s}^{\ell b}\hat{\mathbf{y}}\Bigr]\cdot\boldsymbol{\mathcal{P}} = \frac{4\pi i \omega}{c\cos\theta}T_{s}^{v\ell}T_{s}^{\ell b}\chi_{yij}E_{i}(\omega)E_{j}(\omega),\label{eq:es2w}\\
-E_{p}(2\omega) &= -\frac{4\pi i \omega}{c\cos\theta}T_{p}^{v\ell}T_{p}^{\ell b}\Bigl[\epsilon_{\ell}(2\omega)K_{zb}\hat{\mathbf{x}} + \epsilon_{b}(2\omega)\sin\theta\hat{\mathbf{z}}\Bigr]\cdot\boldsymbol{\mathcal{P}}\nonumber\\
-&= -\frac{4\pi i \omega}{c\cos\theta}T_{p}^{v\ell}T_{p}^{\ell b}\Bigl[\epsilon_{\ell}(2\omega)K_{zb}\chi_{xij} + \epsilon_{b}(2\omega)\sin\theta\chi_{zij}\Bigr]E_{i}(\omega)E_{j}(\omega).\label{eq:ep2w}
-\end{align}
-
-As mentioned before $E_{i}(\omega)$ is the incident field given by the external
-field properly screened; then we have
-\begin{equation}\label{r15}
-\mathbf{E}_{s}(\omega)=E_{o} t_{s}^{v\ell}\left(1 + r_{s}^{\ell b}\right)\hat{\mathbf{y}},
-\end{equation}
-and
-\begin{equation}\label{r16}
-\mathbf{E}_{p}(\omega)=E_{o}\left[
-\tilde{t}_p^{v\ell}\left(1-r_p^{\ell b}\right)\cos\theta_\ell\hat{\mathbf{x}}
--\tilde{t}_p^{v\ell}\left(1+r_p^{\ell
-b}\right)\sin\theta_\ell\hat{\mathbf{z}}\right],
- \end{equation}
-where $E_{o}$ is the incoming amplitude and $\theta_\ell$ is the angle of
-refraction in the layer. Notice that the transmitted and reflected fields in
-the layer are taken into $\mathbf{E}_{s}$ and $\mathbf{E}_{p}$. From Eqs.
-(\ref{r11}-\ref{r11d}) we get
-\begin{equation}\label{r17}
-\mathbf{E}_{s}(\omega)=E_{o} t_s^{v\ell}t_s^{\ell b}\hat{\mathbf{y}},
-\end{equation}
-and
-\begin{equation}\label{r18}
-\mathbf{E}_{p}(\omega)=E_{o} t_p^{v\ell}t_p^{\ell b}\left(\epsilon_{\ell}(\omega)k_{zb}\hat{\mathbf{x}} - \epsilon_{b}(\omega)\sin\theta\hat{\mathbf{z}}\right).
-\end{equation}
-
-Substituting Eqs. \eqref{r17} and \eqref{r18} into Eqs. \eqref{eq:es2w} and \eqref{eq:ep2w}, then finally substituting those into Eq. \eqref{final}, we get
-
-\begin{equation}\label{r19}
- R_{iF}=\frac{32\pi^3\omega^2}{(n_oe)^2c^3\cos^2\theta}
-\left|T_F^{v\ell}T_F^{\ell b}(t_i^{v\ell}t_i^{\ell b})^2\,r_{iF}\right|^2,
-\end{equation}
-where $i$ (lower case) stands for initial polarization and $F$ (upper case)
-stands for final polarization, with
-\begin{equation}\label{r20}
-r_{iP}=\left(\epsilon_\ell(2\omega)K_{zb}\chi_{xjk} + \epsilon_b(2\omega)\sin\theta\chi_{zjk}\right)
-E_j^i E_k^i,
-\end{equation}
-and
-\begin{equation}\label{r21}
-r_{iS}=\chi_{yjk}  E_j^i E_k^i,
-\end{equation}
-where from Eqs. (\ref{r17}-\ref{r18}),
-\begin{subequations}\label{r23}
-\begin{align}
-\mathbf{E}^s&=\hat{\mathbf{y}}\\
-\mathbf{E}^p&=\epsilon_\ell(\omega)k_{zb}\hat{\mathbf{x}}-\epsilon_b(\omega)\sin\theta\hat{\mathbf{z}}.
-\end{align}
-\end{subequations}
-The $n_oe$ factor in Eq. (\ref{r19}), with $n_o$ the electronic density,
-renders $\boldsymbol{\chi}$ dimensionless.
-To complete the required formulas, we write down the Fresnel factors,
-\begin{equation}\label{e.f1}
-t_s^{v\ell}=\frac{2\cos\theta}{\cos\theta+k_{z\ell}},
-\quad\quad
-t_p^{v\ell}=\frac{2\cos\theta}{\epsilon_\ell(\omega)\cos\theta+k_{z\ell}},
-\end{equation}
-\begin{equation}\label{e.f3}
-t_s^{\ell b}=\frac{2k_{z\ell}}{k_{z\ell}+k_{zb}},
-\quad\quad
-t_p^{\ell b}=\frac{2k_{z\ell}}{\epsilon_b(\omega)k_{z\ell}+\epsilon_s(\omega)k_{zb}},
-\end{equation}
-where the appropriate term $\sqrt{\epsilon(\omega)}$ from the usual definition of
-$t_p$ has been taken out to give Eqs. (\ref{r20}) and
-(\ref{r21}).
-
-\section{Conclusions}\label{con}
-
-We have presented a complete derivation of the required elements to
-calculate in the independent particle approach (IPA) the microscopic  
-surface second harmonic susceptibility tensor $\bfgchi^S(-2\go;\go,\go)$ 
-using a layer-by-layer approach. We have done so for semiconductors using 
-the length gauge for the coupling of the external electric field to the 
-electron. 
-%Also,
-%we calculated the radiated efficiency $R$ within the three layer
-%model. 
-%The combination of $\boldsymbol{\chi}$ and $R$ allow us
-%to study this fascinating surface optical phenomena.
-
 \section{Three layer model for SHG radiation}
 
 In this section we derive the formulas required for the calculation of the SHG
@@ -2034,10 +1802,18 @@ and then
 
 \subsection{\texorpdfstring{$\mathcal{R}_{pP}$}{RpP}}
 
-To obtain $R_{pP}(2\omega)$ we use
-$\mathbf{e}^{\mathrm{in}}=\hat{\mathbf{p}}_{v-}$ in Eq. \eqref{m12}, and
-$\mathbf{e}^{\mathrm{out}}=\hat{\mathbf{P}}_{v+}$ in Eq. \eqref{r12}, to obtain
-that for a $C_{3v}$ symmetry characteristic of a (111) surface,
+We develop five different scenarios for $\mathcal{R}_{pP}$ that explore
+different cases for where the polarization and fundamental fields are located.
+In all these scenarios, we use
+$\hat{\mathbf{e}}^{\mathrm{in}}=\hat{\mathbf{p}}_{v-}$ in Eq. \eqref{m12}, and
+$\hat{\mathbf{e}}^{\mathrm{out}}=\hat{\mathbf{P}}_{v+}$ in Eq.
+\eqref{r12}.
+
+\subsubsection{Three layer model}
+
+This scenario involves $\mathcal{P}(2\omega)$ and the fundamental fields to be
+taken in a thin layer of material below the surface, which we designate as
+$\ell$. Thus,
 \begin{equation*}\label{m80}
 \mathbf{e}^{\,2\omega}_{\ell}\cdot\boldsymbol{\chi}:
 \mathbf{e}^\omega_{\ell}\mathbf{e}^\omega_{\ell}
@@ -2050,12 +1826,12 @@ r^{\ell}_{pP} &=
 \epsilon_{b}(2\omega)\sin\theta_{\mathrm{in}}
 \Big(
   \epsilon^2_{b}(\omega)\sin^2\theta_{\mathrm{in}}\chi_{zzz}
-+ \epsilon^2_{\ell}(\omega) k^2_{b}(\omega)\chi_{zxx}
++ \epsilon^2_{\ell}(\omega)k^2_{b}\chi_{zxx}
 \Big)\\
-&- \epsilon_{\ell}(2\omega)\epsilon_{\ell}(\omega)k_{b}(\omega)k_{b}(2\omega)
+&- \epsilon_{\ell}(2\omega)\epsilon_{\ell}(\omega)k_{b}K_{b}
 \Big(
   2\epsilon_{b}(\omega)\sin\theta_{\mathrm{in}}\chi_{xxz}
-+ \epsilon_{\ell}(\omega)k_{b}(\omega)\chi_{xxx}\cos(3\phi) 
++ \epsilon_{\ell}(\omega)k_{b}\chi_{xxx}\cos(3\phi) 
 \Big),\nonumber
 \end{align}
 and  
@@ -2068,39 +1844,55 @@ and
      {\epsilon_{\ell}(\omega)\sqrt{\epsilon_{b}(\omega)}}
 \right)^{2} 
 .  
-\end{equation} 
+\end{equation}
+
+
+\subsubsection{Two layer model}
+
 In order to reduce above result to that of Ref. \cite{mizrahiJOSA88} and
-\cite{sipePRB87},  we take the $2\omega$ radiations factors for vacuum by
-taking $\ell=v$, thus $\epsilon_{\ell}(2\omega)=1$, $T^{\ell v}_{p}=1$,
-$T^{\ell b}_{p}=T^{vb}_{p}$, and the fundamental field inside medium $b$ by
-taking $\ell=b$, thus $\epsilon_{\ell}(\omega)=\epsilon_{b}(\omega)$,
-$t^{v\ell}_{p}=t^{vb}_{p}$, and $t^{\ell b}_{p}=1$. With these choices,
+\cite{sipePRB87}, we now consider that $\mathcal{P}(2\omega)$ is evaluated in
+the vacuum region, while the fundamental fields are evaluated in the bulk
+region. To do this, we take the $2\omega$ radiations factors for vacuum by
+taking $\ell=v$, thus $\epsilon_{\ell}(2\omega)=1$, $T^{\ell v}_{p}=1$, $T^{\ell
+b}_{p}=T^{vb}_{p}$, and the fundamental field inside medium $b$ by taking
+$\ell=b$, thus $\epsilon_{\ell}(\omega)=\epsilon_{b}(\omega)$,
+$t^{v\ell}_{p}=t^{vb}_{p}$, and $t^{\ell b}_{p}=1$. With these choices
+\begin{equation*}\label{m800}
+\mathbf{e}^{\,2\omega}_{v}\cdot\boldsymbol{\chi}:
+\mathbf{e}^\omega_{b}\mathbf{e}^\omega_{b}
+\equiv\Gamma^{vb}_{pP}\,r^{vb}_{pP}
+,
+\end{equation*}
+where,
 \begin{equation*}\label{m82}
 \begin{split}
-r^{b}_{pP}
+r^{vb}_{pP}
 &= \epsilon_{b}(2\omega)\sin\theta_{\mathrm{in}}
 \Big(
-\sin^2\theta_{\mathrm{in}}\chi_{zzz} + k^{2}_{b}(\omega)\chi_{zxx}
+\sin^2\theta_{\mathrm{in}}\chi_{zzz} + k^{2}_{b}chi_{zxx}
 \Big)\\
-&- k_{b}(\omega)k_{b}(2\omega)
+&- k_{b}K_{b}
 \Big(
-2\sin\theta_{\mathrm{in}}\chi_{xxz} + k_{b}(\omega)\chi_{xxx}\cos(3\phi) 
+2\sin\theta_{\mathrm{in}}\chi_{xxz} + k_{b}\chi_{xxx}\cos(3\phi) 
 \Big) 
 ,
 \end{split}
 \end{equation*}
 and 
 \begin{equation*}\label{m78}
-\Gamma^b_{pP}
+\Gamma^{vb}_{pP}
 = \frac{T^{v b}_{p}(t^{vb}_{p})^2}
        {\epsilon_{b}(\omega)\sqrt{\epsilon_{b}(2\omega)}}.
 \end{equation*}
 
 
-\subsubsection{Taking all fields in the bulk}
-To evaluate the $2\omega$ fields in the bulk, we take Eq. \eqref{r9}
-considering that $\ell\rightarrow b$. We have already considered the $1\omega$
-fields in the bulk in Eq. \eqref{m13}. After some algebra, we get that
+\subsubsection{Taking \texorpdfstring{$\mathcal{P}(2\omega)$}{P(2w)} and the
+fundamental fields in the bulk}
+
+To evaluate the $2\omega$ fields in the bulk, we
+take Eq. \eqref{r9} considering that $\ell\rightarrow b$. We have already
+considered the $1\omega$ fields in the bulk in Eq. \eqref{m13}. After some
+algebra, we get that
 \begin{equation*}
 \mathbf{e}^{\,2\omega}_{b}\cdot
 \boldsymbol{\chi}:\mathbf{e}^{\omega}_{b}\mathbf{e}^{\omega}_{b} =
@@ -2122,7 +1914,9 @@ and
 \end{equation*}
 
 
-\subsubsection{Taking all fields in the vacuum}
+\subsubsection{Taking \texorpdfstring{$\mathcal{P}(2\omega)$}{P(2w)} and the
+fundamental fields in the vacuum}
+
 To evaluate the $1\omega$ fields in the vacuum, we take Eq. \eqref{m2}
 considering that $\ell\rightarrow v$. We have already considered the $2\omega$
 fields in the vacuum in Eq. \eqref{r13}. After some algebra, we get that
@@ -2145,17 +1939,43 @@ r^{v}_{pP} &=
 and
 \begin{equation*}
 \Gamma^{v}_{pP} =
-\frac{T^{v b}_{p}}{\sqrt{\epsilon_{b}(2\omega)}}
-\left(\frac{t^{v b}_{p}}{\sqrt{\epsilon_{b}(\omega)}}\right)^{2}.
+\frac{T^{v b}_{p}\left(t^{v b}_{p}\right)^{2}}
+     {\epsilon_{b}(\omega)\sqrt{\epsilon_{b}(2\omega)}}.
 \end{equation*}
 
+
+\subsubsection{Taking \texorpdfstring{$\mathcal{P}(2\omega)$}{P(2w)} in
+\texorpdfstring{$\ell$}{l} and the fundamental fields in the bulk}
+
+For this scenario, we have
+\begin{equation*}
+\mathbf{e}^{\,2\omega}_{\ell}\cdot
+\boldsymbol{\chi}:\mathbf{e}^{\omega}_{b}\mathbf{e}^{\omega}_{b} =
+\Gamma^{\ell b}_{pP}r^{\ell b}_{pP}
+\end{equation*}
+where
+\begin{equation*}
+\begin{split}
+r^{\ell b}_{pP} &= 
+  \epsilon_{b}(2\omega)\sin^{3}\theta_{\mathrm{in}}\chi_{zzz}
++ \epsilon_{b}(2\omega)k^{2}_{b}\sin\theta_{\mathrm{in}}\chi_{zxx}\\
+&- 2\epsilon_{\ell}(2\omega)k_{b}K_{b}\sin\theta_{\mathrm{in}}\chi_{xxz}
+- \epsilon_{\ell}(2\omega)k^{2}_{b}K_{b}\chi_{xxx}\cos3\phi,
+\end{split}
+\end{equation*}
+and
+\begin{equation*}
+\Gamma^{\ell b}_{pP}=
+\frac{T^{v\ell}_{p}T^{\ell b}_{p}\left(t^{vb}_{p}\right)^{2}}
+  {\epsilon_{\ell}({2\omega})\epsilon_{b}(\omega)\sqrt{\epsilon_{b}(2\omega)}}.
+\end{equation*}
 
 \subsection{\texorpdfstring{$\mathcal{R}_{pS}$}{RpS}}
 
 To obtain $R_{pS}(2\omega)$ we use
-$\mathbf{e}^{\mathrm{in}}=\hat{\mathbf{p}}_{v-}$ in Eq. \eqref{m12}, and
-$\mathbf{e}^{\mathrm{out}}=\hat{\mathbf{S}}$ in Eq. \eqref{r12}. We also use
-the unit vectors defined in Eqs. \eqref{mc1} and
+$\hat{\mathbf{e}}^{\mathrm{in}}=\hat{\mathbf{p}}_{v-}$ in Eq. \eqref{m12}, and
+$\hat{\mathbf{e}}^{\mathrm{out}}=\hat{\mathbf{S}}$ in Eq. \eqref{r12}. We also
+use the unit vectors defined in Eqs. \eqref{mc1} and
 \eqref{mc2}. Substituting, we get
 \begin{equation*}
 \mathbf{e}^{\,2\omega}_{\ell}\cdot
@@ -2194,9 +2014,10 @@ T^{vb}_{s}
 
 \subsection{\texorpdfstring{$\mathcal{R}_{sP}$}{RsP}}
 
-To obtain $R_{sP}(2\omega)$ we use $\mathbf{e}^{\mathrm{in}}=\hat{\mathbf{s}}$
-in Eq. \eqref{m12}, and $\mathbf{e}^{\mathrm{out}}=\hat{\mathbf{P}}_{v+}$ in
-Eq. \eqref{r12}. We also use the unit vectors defined in Eqs. \eqref{mc1} and
+To obtain $R_{sP}(2\omega)$ we use
+$\hat{\mathbf{e}}^{\mathrm{in}}=\hat{\mathbf{s}}$ in Eq. \eqref{m12}, and
+$\hat{\mathbf{e}}^{\mathrm{out}}=\hat{\mathbf{P}}_{v+}$ in Eq. \eqref{r12}. We
+also use the unit vectors defined in Eqs. \eqref{mc1} and
 \eqref{mc2}. Substituting, we get
 \begin{equation*}
 \mathbf{e}^{\,2\omega}_{\ell}\cdot
@@ -2229,14 +2050,14 @@ and
 \begin{equation*}
 \Gamma^{b}_{sP} =
 \frac{T^{v b}_{p}(t_s^{vb})^{2}}{\sqrt{\epsilon_{b}(2\omega)}}.  
-\end{equation*} 
+\end{equation*}
 
 
 \subsection{\texorpdfstring{$\mathcal{R}_{sS}$}{RsS}}
 
 For $\mathcal{R}_{sS}$ we have that
-$\mathbf{e}^{\mathrm{in}}=\hat{\mathbf{s}}$ and
-$\mathbf{e}^{\mathrm{out}}=\hat{\mathbf{S}}$. This leads to
+$\hat{\mathbf{e}}^{\mathrm{in}}=\hat{\mathbf{s}}$ and
+$\hat{\mathbf{e}}^{\mathrm{out}}=\hat{\mathbf{S}}$. This leads to
 \begin{equation*}
 \mathbf{e}^{\,2\omega}_{\ell}\cdot
 \boldsymbol{\chi}:\mathbf{e}^\omega_{\ell}\mathbf{e}^\omega_{\ell}
@@ -2264,3 +2085,18 @@ and
 \begin{equation*}
 \Gamma^{b}_{sS} = T^{vb}_{s}\left(t^{vb}_{s}\right)^{2}.
 \end{equation*} 
+
+
+\section{Conclusions}\label{con}
+
+We have presented a complete derivation of the required elements to
+calculate in the independent particle approach (IPA) the microscopic  
+surface second harmonic susceptibility tensor $\bfgchi^S(-2\go;\go,\go)$ 
+using a layer-by-layer approach. We have done so for semiconductors using 
+the length gauge for the coupling of the external electric field to the 
+electron. 
+%Also,
+%we calculated the radiated efficiency $R$ within the three layer
+%model. 
+%The combination of $\boldsymbol{\chi}$ and $R$ allow us
+%to study this fascinating surface optical phenomena.
