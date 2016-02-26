@@ -1,0 +1,2 @@
+* Verificar Eqs. 15 y 16, usa fig. 1 y trigonometría pitagórica
+* Partir de la Eq. r12 y seguir los mismos pasos que antes, pero ya no se puede reemplazar 1+R^M = T. Hay que cargar las R^M a traves del algebra.
