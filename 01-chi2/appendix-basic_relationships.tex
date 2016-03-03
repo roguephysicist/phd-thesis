@@ -1,0 +1,61 @@
+We present some basic results needed in the derivation of the main
+results. 
+ The normalization of the
+states $\psi_{n\mathbf{q}}(\mathbf{r})$ are chosen such that
+\begin{equation}\label{a_uno}
+\psi_{m\mathbf{q}}(\mathbf{r})=\left(\frac{\Omega}{8\pi^{3}}\right)^{\frac{1}{2}}u_{m\mathbf{q}}(\mathbf{r})e^{i\mathbf{q}\cdot\mathbf{r}}
+,
+\end{equation}
+and
+\begin{equation}\label{a_dos}
+\int_{\Omega}d^{3}r\,
+u_{n\mathbf{k}}^{*}(\mathbf{r})u_{m\mathbf{q}}(\mathbf{r})=\delta_{nm}\delta_{\mathbf{\mathbf{k},q}}
+,
+\end{equation}
+where $\Omega$ is the volume is the unit cell and $\gd_{a,b}$ is the
+Kronecker delta that gives one if $a=b$ and zero otherwise.
+For box normalization,
+where we have $N$ unit cells in some volume $V=N\gO$, this gives
+\begin{equation}\label{a_tres}
+\int_{V}d^{3}r\,\psi_{n\mathbf{k}}^{*}(\mathbf{r})\psi_{m\mathbf{q}}(\mathbf{r})=\frac{V}{8\pi^{3}}\delta_{nm}\delta_{\mathbf{\mathbf{k},q}},
+\end{equation}
+which lets us have in the limit of $N\rightarrow\infty$
+\begin{equation}\label{a_4}
+\int
+d^{3}r\,\psi_{n\mathbf{k}}^{*}(\mathbf{r})\psi_{m\mathbf{q}}(\mathbf{r})
+=\delta_{nm}\delta(\mathbf{k}-\mathbf{q})
+,
+\end{equation}
+for which the Kornecker-$\gd$ is replaced by
+\begin{equation}\label{a_5}
+\gd_{\bfk,\bfq}\rightarrow\frac{8\pi^3}{V}\gd(\bfk-\bfq)
+,
+\end{equation}
+and we recall that $\gd(x)=\gd(-x)$. Now, for any periodic function
+$f(\bfr)=f(\bfr+\bfR)$ we have
+\begin{align}\label{a_6}
+\int d^{3}r\, e^{i(\mathbf{q}-\mathbf{k})\cdot\mathbf{r}}f(\mathbf{r})
+& = &
+\sum_{j}^{\mbox{unit cells}}\int_{\Omega}d^{3}r\,
+e^{i(\mathbf{q}-\mathbf{k})\cdot(\mathbf{r}+\mathbf{R}_{j})}f(\mathbf{r}+\mathbf{R}_{j}),
+\nonumber
+\\
+ & =&\sum_{j}^{\mbox{unit cells}}\int_{\Omega}d^{3}r\,
+ e^{i(\mathbf{q}-\mathbf{k})\cdot(\mathbf{r}+\mathbf{R}_{j})}f(\mathbf{r}),
+\nonumber
+\\
+ & =&\int_{\Omega}d^{3}r\, e^{i(\mathbf{q}-\mathbf{k})\cdot\mathbf{r}}f(\mathbf{r})\sum_{j}^{\mbox{unit cells}}e^{i(\mathbf{q}-\mathbf{k})\cdot\mathbf{R}_{j}},\nonumber
+\\
+ & =&\int_{\Omega}d^{3}r\, e^{i(\mathbf{q}-\mathbf{k})\cdot\mathbf{r}}f(\mathbf{r})N\sum_{\mathbf{K}}\delta_{\mathbf{K},\mathbf{q}-\mathbf{k}},\nonumber
+\\
+ & =&N\int_{\Omega}d^{3}r\, e^{i(\mathbf{q}-\mathbf{k})\cdot\mathbf{r}}f(\mathbf{r})\delta_{\mathbf{0},\mathbf{q}-\mathbf{k}},\nonumber
+\\
+ & =&N\delta_{\mathbf{q},\mathbf{k}}\int_{\Omega}d^{3}r\, f(\mathbf{r}),\nonumber
+\\
+ &
+ =&\frac{8\pi^{3}}{\Omega}\delta(\mathbf{q}-\mathbf{k})\int_{\Omega}d^{3}r\,
+ f(\mathbf{r})
+,
+\end{align}
+where we have assumed that $\bfk$ and $\bfq$ are restricted to the
+first Brillouin zone, and thus the reciprocal lattice vector $\bfK=0$.
