@@ -10,7 +10,8 @@
     * appendices with math
     * adding Vnl from dp
 3. SHG Yield
-    * New model with multiple reflections
+    * Combine 3layer-shg.tex into shgyield, to create one super-document
+    * Talk about how derived equations are totally consistent with Sipe et al.
     * Radiation models for SHG developed
     * Coding nonrefco
 3. Results
