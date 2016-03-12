@@ -4,15 +4,7 @@
 \usepackage[colorlinks=true,linkcolor=cyan,citecolor=magenta]{hyperref}
 %\usepackage{showframe}
 
-\title{A treatise on phenomenological models of surface second-harmonic
-generation from crystalline surfaces}
-\author{Bernardo S. Mendoza and Sean M. Anderson}
-\date{\today}
-
 \begin{document}
-\maketitle
-\tableofcontents
-%\pagebreak
 
 \chapter{SHG Yield}
 
@@ -20,203 +12,425 @@ generation from crystalline surfaces}
 
 In this section we derive the formulas required for the calculation of the SHG
 yield, defined by
-\begin{equation*}\label{uno}
-R(\omega)=\frac{I(2\omega)}{I^2(\omega)}
+\begin{equation}\label{uno}
+\mathcal{R}(\omega)=\frac{I(2\omega)}{I^2(\omega)}
 ,
-\end{equation*}
-with the intensity
-\begin{equation*}\label{dos}
-I(\omega)=\frac{c}{2\pi}|E(\omega)|^2
+\end{equation}
+with the intensity in the MKS system is given by\cite{boyd}
+\begin{equation}\label{dos}
+I(\omega)=2n(\omega)\epsilon_{0}c
+|E(\omega)|^2
 ,
-\end{equation*}
+\end{equation}
+where $n(\omega)=\sqrt{\epsilon(\omega)}$ is the index of refraction with
+$\epsilon\omega$ the dielectric function, $\epsilon_{0}$ is the vacuum permittivity,
+and $c$ the speed of light in vacuum.
+
 There are several ways to calculate $R$, one of which is the procedure followed
 by Cini \cite{ciniPRB91}. This approach calculates the nonlinear susceptibility
 and at the same time the radiated fields. However, we present an alternative
 derivation based in the work of Mizrahi and Sipe \cite{mizrahiJOSA88}, since
-the derivation of the three-layer-model is straightforward. Within our level of
-approximation this is the best model that we can use. In this scheme, we assume
-that the SH conversion takes place in a thin layer, just below the surface,
-that is characterized by a surface dielectric function
-$\epsilon_{\ell}(\omega)$. This layer is below vacuum and sits on top of the
-bulk characterized by $\epsilon_{b}(\omega)$ (see Fig. \ref{3layer}). The
-nonlinear polarization immersed in the thin layer, will radiate an electric
-field directly into vacuum and also into the bulk. This bulk directed field,
-will be reflected back into vacuum. Thus, the total field radiated into vacuum
-will be the sum of these two contributions (see Fig. \ref{3layer}). We
-decompose the field into $s$ and $p$ polarizations, then the electric field
-radiated by a polarization sheet,
-\begin{align}\label{tres}
-\mathcal{P}_i(2\omega)=\chi_{ijk}E_{j}(\omega)E_{k}(\omega)
+the derivation of the three-layer-model is straightforward. 
+In this scheme, 
+we represent the surface by three regions or layers. The first layer
+is the vacuum region (denoted by $v$) with a dielectric function $\epsilon_v(\omega)=1$ from
+where the fundamental electric field $\mathbf{E}_v(\omega)$ impinges on the material. 
+The second  layer is a thin layer (denoted by $\ell$) of thickness $d$ characterized
+by a dielectric function $\epsilon_\ell(\omega)$. Is in this layer where the
+second harmonic generation takes place. The third layer is the bulk
+region denoted by $b$ and characterized by $\epsilon_b(\omega)$. 
+Both the vacuum layer and the
+bulk layer are semiinfinite  (see Fig. \ref{3layer}). 
+
+To model the electromagnetic response of the three-layer model 
+we follow Ref. \cite{mizrahiJOSA88},
+and assume a polarization sheet of the form
+\begin{align}\label{m31}
+\mathbf{P}(\mathbf{r},t)=\boldsymbol{\mathcal{P}}
+e^{i\boldsymbol{\kappa}\cdot\mathbf{R}}e^{-i\omega t}\delta(z-z_\beta)+\mathrm{c.c.}
 ,
 \end{align}
-is given by \cite{mizrahiJOSA88},
-\begin{equation*}\label{r2}
-(E_{p\pm},E_s) = 
-(\frac{2\pi i\tilde{\omega}^2}{w}
-\,\hat{\mathbf{p}}_\pm\cdot\boldsymbol{\mathcal{P}},
-\frac{2\pi i\tilde{\omega}^2}{w}
+where $\mathbf{R}=(x,y)$, $\boldsymbol{\kappa}$ 
+is the component of the wave
+vector $\boldsymbol{\nu}^{\strut}_\beta$ paralel to the surface, and
+$z_\beta$ is the position of the sheet within
+medium $\beta$ (see Fig.~\ref{3layer}).
+In Ref. \cite{sipeJOSAB87} it has been shown 
+that the solution of the Maxwell equations for the radiated fields 
+$E_{\beta,p\pm}$ and $E_{\beta,s}$
+with $\mathbf{P}(\mathbf{r},t)$as a source can be written, at points
+$z\neq 0$, as 
+\begin{equation}\label{r2}
+(E_{\beta,p\pm},E_{\beta,s}) = 
+(\frac{\gamma i\tilde\omega^2}{\tilde w_\beta}
+\,\hat{\mathbf{p}}_{\beta\pm}\cdot\boldsymbol{\mathcal{P}},
+\frac{\gamma i\tilde\omega^2}{\tilde w_\beta}
 \,\hat{\mathbf{s}}\cdot\boldsymbol{\mathcal{P}}),
-\end{equation*}
-where $\hat{\mathbf{s}}$ and $\hat{\mathbf{p}}_\pm$ are the unitary vectors for
-$s$ and $p$ polarization, respectively, and the $\pm$ refers to upward ($+$) or
-downward ($-$) direction of propagation. Also, $\tilde\omega=\omega/c$ and
-$w_i=\tilde\omega k_i$, with
-\begin{equation*}\label{r3}
-k_i(\omega)=\sqrt{\epsilon_i(\omega) - \sin^2\theta_i},
-\end{equation*}
-where $i=v,\ell,b$, with
-\begin{equation*}\label{r4}
-\hat{\mathbf{p}}_{i\pm} =
-\frac{\mp k_i(\omega)\hat{\mathbf{x}} + \sin\theta_i\hat{\mathbf{z}}}
-{\sqrt{\epsilon_i(\omega)}}
-\end{equation*}
+\end{equation} 
+where $\gamma=2\pi$ in cgs units and $\gamma=1/2\epsilon_{0}$ in MKS units.
+Also,
+$\hat{\mathbf{s}}$ and $\hat{\mathbf{p}}_{\beta\pm}$ are the unitary vectors for
+the $s$ and $p$ polarization of the radiated field, 
+respectively, and the $\pm$ refers to upward ($+$) or
+downward ($-$) direction of propagation within medium $\beta$, as shown in
+Fig.~\ref{3layer}, and $\tilde\omega=\omega/c$.
+Also, $\tilde w_\beta(\omega)=\tilde\omega w_\beta$, where
+\begin{equation}\label{r3}
+w^{\strut}_\beta(\omega)=(\epsilon^{\strut}_\beta(\omega) - \sin^2\theta_0\big)^{1/2},
+\end{equation}
+where $\theta_0$ is the angle of incidence of $\mathbf{E}_v(\omega)$, 
+and
+\begin{equation}\label{r4}
+\hat{\mathbf{p}}^{\strut}_{\beta\pm}(\omega) =
+\frac{\kappa(\omega)\hat{\mathbf{z}}\mp \tilde 
+  w_\beta(\omega)\hat{\boldsymbol{\kappa}}} 
+{\tilde\omega n_\beta(\omega)}
+=
+\frac{\sin\theta_0\hat{\mathbf{z}}\mp 
+  w_\beta(\omega)\hat{\boldsymbol{\kappa}}} 
+{n_\beta(\omega)}
+,
+\end{equation}
+where $\kappa(\omega)=|\boldsymbol{\kappa}|=\tilde\omega\sin\theta_0$,
+$n_\beta(\omega)=\sqrt{\epsilon_\beta(\omega)}$ is
+the index of refraction of medium $\beta$, and
+$z$ is the direction perpendicular to the surface that 
+points towards the vacuum.
+We chose the plane of incidence along the  
+$\boldsymbol{\kappa}z$ plane, then 
+\begin{equation}\label{mc1}
+\hat{\boldsymbol{\kappa}}
+= \cos\phi\hat{\mathbf{x}} + \sin\phi\hat{\mathbf{y}},
+\end{equation}
+and
+\begin{equation}\label{mmc2}
+\hat{\mathbf{s}} = -\sin\phi\hat{\mathbf{x}} + \cos\phi\hat{\mathbf{y}},
+\end{equation}
+where
+$\phi$ the angle with respect to the $x$ axis.
+
+In the three-layer model the nonlinear polarization responsible for 
+the second harmonic generation (SHG) is immersed in the thin $\beta=\ell$
+layer, and is given by 
+\begin{equation}\label{tres}
+\mathcal{P}_i(2\omega)=
+\left\{
+\begin{array}{cc}
+\chi_{ijk}(2\omega)E_{j}(\omega)E_{k}(\omega) & \text{(cgs units)} \\
+\epsilon_{0}\chi_{ijk}(2\omega)E_{j}(\omega)E_{k}(\omega) & \text{(MKS units)}
+\end{array}
+\right.
+,
+\end{equation}
+where the  
+tensor $\boldsymbol{\chi}(2\omega)$ is the surface nonlinear  
+dipolar susceptibility and the Cartesian indices $i,j,k$ are summed if repeated. 
+Also, $\chi_{ijk}(2\omega)=\chi_{ikj}(2\omega)$ 
+is the intrinsic permutation symmetry
+due to the fact that SHG is degenerate in $E_j(\omega)$ and $E_k(\omega)$.
+As it was done in Ref. \cite{mizrahiJOSA88},
+in presenting the results Eq.~\eqref{r2}-\eqref{mmc2}
+we have taken the
+polarization sheet (Eq.~\eqref{m31}) to be oscillating at some frequency
+$\omega$. However,
+ in the following we find it convenient to use $\omega$
+exclusively to denote the fundamental frequency and
+$\boldsymbol{\kappa}$
+ to denote the
+component of the incident wave vector parallel to the surface. Then
+the nonlinear 
+generated polarization is oscillating at $\Omega= 2\omega$
+and will be characterized
+by a wave vector parallel to the surface 
+$\mathbf{K}=2\boldsymbol{\kappa}$. 
+We can carry over
+Eqs. \eqref{m31}-\eqref{mmc2} 
+simply by replacing the lowercase symbols 
+($\omega,\tilde\omega,\boldsymbol{\kappa},n_\beta,\tilde w_\beta,w_\beta,\hat{\mathbf{p}}_{\beta\pm},\hat{\mathbf{s}}$)  
+with uppercase symbols 
+($\Omega,\tilde\Omega,\mathbf{K},N_\beta,\tilde W_\beta,W_\beta,\hat{\mathbf{P}}_{\beta\pm},\hat{\mathbf{S}}$),
+all evaluated at $2\omega$ and
+we always have $\hat{\mathbf{S}}=\hat{\mathbf{s}}$.
+
 \begin{figure}[t]
 \centering
-\includegraphics[scale=.5]{../figures/3layers}
-\caption{Sketch of the three layer model for SHG. Vacuum is on top with
-$\epsilon=1$, the layer with nonlinear polarization $\mathbf{P}(2\omega)$
-ischaracterized with $\epsilon_{\ell}(\omega)$ and the bulk with
-$\epsilon_{b}(\omega)$. In the dipolar approximation the bulk does not radiate
-SHG. The thin arrows are along the direction of propagation, and the unit
-vectors for $p$-polarization are denoted with thick arrows (capital letters
-denote SH components). The unit vector for $s$-polarization points along $-y$
-(out of the page).}
+\includegraphics[scale=.5]{../figures/multi}
+\caption{(Color Online) Sketch of the three layer model for SHG. Vacuum ($v$) is
+on top with $\epsilon_v=1$; the layer $\ell$, of thickness $d=d_1+d_2$, is
+characterized with $\epsilon_{\ell}(\omega)$, and it is where the SH
+polarization sheet $\boldsymbol{\mathcal{P}}(2\omega)$ is located at
+$z_\ell=d_1$; The bulk $b$ is described with $\epsilon_{b}(\omega)$. The arrows
+point along the direction of propagation, and the $p$-polarization unit vector,
+$\hat{\mathbf{P}}_{\ell -(+)}$, along the downward (upward) direction is denoted
+with a thick arrow. The $s$-polarization unit vector $\hat{\mathbf{s}}$, points
+out of the page. The fundamental field $\mathbf{E}(\omega)$ is incident from the
+vacuum side along the $\hat{\boldsymbol{\kappa}}z$-plane, with $\theta_0$ its
+angle of incidence and $\boldsymbol{\nu}_{v-}$ its wave vector.
+$\Delta\varphi_i$ denote the phase difference of the multiply reflected beams
+with respect to the first vacuum transmitted beam (dashed-red arrow), where the
+dotted lines are perpendicular to this beam (see the text for details).}
 \label{3layer}
 \end{figure}
 
-In the above equations $z$ is the direction perpendicular to the surface that
-points towards the vacuum, $x$ is parallel to the surface, and $\theta$ is the
-angle of incidence, where the plane of incidence is chosen as the $xz$ plane
-(see Fig. \ref{3layer}), thus $\hat{\mathbf{s}}=-\hat{\mathbf{y}}$. The
-function $k_i(\omega)$ is the projection of the wave vector perpendicular to
-the surface. As we see from Fig. \ref{3layer}, the SH field is refracted at the
-layer-vacuum interface ($\ell v$), and reflected from the layer-bulk ($\ell b$)
-interface, thus we can define the transmission, $\mathbf{T}$, and reflection,
-$\mathbf{R}$, tensors as,
-\begin{equation*}\label{r5}
-\mathbf{T}_{\ell v}
+To describe the propagation of the SH field, we  see from
+Fig. \ref{3layer}, that it is refracted at the 
+layer-vacuum interface ($\ell v$), and multiply reflected from the
+layer-bulk ($\ell b$)
+and layer-vacuum ($\ell v$)
+interfaces, thus we can define,
+\begin{equation}\label{r5}
+\mathbf{T}^{\ell v}
 = \hat{\mathbf{s}}T_s^{\ell v}\hat{\mathbf{s}} 
 + \hat{\mathbf{P}}_{v+}T_{p}^{\ell v} \hat{\mathbf{P}}_{\ell +},
-\end{equation*}
-and
-\begin{equation*}\label{r6}
-\mathbf{R}_{\ell b}
+\end{equation}
+as the tensor for transmission from $\ell v$ interface,
+\begin{equation}\label{r6}
+\mathbf{R}^{\ell b}
 = \hat{\mathbf{s}}R_s^{\ell b}\hat{\mathbf{s}}
 + \hat{\mathbf{P}}_{\ell +}R_{p}^{\ell b} \hat{\mathbf{P}}_{\ell -},
-\end{equation*}
-where variables in capital letters are evaluated at the harmonic frequency
-$2\omega$. Notice that since $\hat{\mathbf{s}}$ is independent of $\omega$,
-then $\hat{\mathbf{S}}=\hat{\mathbf{s}}$. The Fresnel factors, $T_i$, $R_i$,
-for $i=s,p$ polarization, are evaluated at the appropriate interface $\ell v$
-or $\ell b$, and will be given below. The extra subscript in $\hat{\mathbf{P}}$
-denotes the corresponding dielectric function to be used in its evaluation,
-i.e. $\epsilon_v=1$ for vacuum ($v$), $\epsilon_{\ell}$ for the layer ($\ell$),
-and $\epsilon_{b}$ for the bulk ($b$). Therefore, the total radiated field at
-$2\omega$ is
-\begin{equation*}\label{r7}
+\end{equation} 
+as the tensor of reflection from the $\ell b$ interface, 
+and
+\begin{equation}\label{r6b}
+\mathbf{R}^{\ell v}
+= \hat{\mathbf{s}}R_s^{\ell v}\hat{\mathbf{s}}
++ \hat{\mathbf{P}}_{\ell -}R_{p}^{\ell v} \hat{\mathbf{P}}_{\ell +},
+\end{equation} 
+as that of the $\ell v$ interface. 
+The Fresnel factors in uppercase letters, $T^{ij}_{s,p}$ and $R^{ij}_{s,p}$,
+are evaluated at $2\omega$  from the following well known formulas 
+\begin{equation}\label{e.f1}
 \begin{split}
-\mathbf{E}(2\omega)
-&= E_s(2\omega)
-\left(
-\mathbf{T}^{\ell v} + \mathbf{T}^{\ell v}\cdot\mathbf{R}^{\ell b}
-\right)
-\cdot\hat{\mathbf{s}}\nonumber\\
-&+ E_{p+}(2\omega)\mathbf{T}^{\ell v}\cdot\hat{\mathbf{P}}_{\ell +}
- + E_{p-}(2\omega)\mathbf{T}^{\ell v}
-\cdot\mathbf{R}^{\ell b}\cdot\hat{\mathbf{P}}_{\ell-}.
+t_s^{ij}(\omega) &=
+\frac{2k_{i}(\omega)}{k_{i}(\omega)+k_{j}(\omega)},
+\quad\quad  
+t_{p}^{ij}(\omega) =
+\frac{2k_{i}(\omega)\sqrt{\epsilon_{i}(\omega)\epsilon_j(\omega)}}
+     {k_{i}(\omega)\epsilon_{j}(\omega)+k_{j}(\omega)\epsilon_{i}(\omega)},\\
+r_s^{ij}(\omega) &=
+\frac{k_{i}(\omega) - k_{j}(\omega)}
+     {k_{i}(\omega) + k_{j}(\omega)},
+\quad\quad 
+r_{p}^{ij}(\omega) =
+\frac{k_{i}(\omega)\epsilon_{j}(\omega) - k_{j}\epsilon_{i}(\omega)}
+     {k_{i}(\omega)\epsilon_{j}(\omega) + k_{j}(\omega)\epsilon_{i}(\omega)}. 
 \end{split}
-\end{equation*}
-The first term is  the transmitted $s$-polarized field, the second one is the
-reflected and then transmitted $s$-polarized field and the third and fourth
-terms are the equivalent fields for $p$-polarization. The transmission is from
-the layer into vacuum, and the reflection between the layer and the bulk. After
-some simple algebra, we obtain
-\begin{equation*}\label{r8}
-\mathbf{E}(2\omega) = \frac{2\pi i\tilde{\Omega}}{K_{\ell}}
+\end{equation}
+From these expressions one can show that,
+\begin{align}\label{mf}
+1 + r^{\ell b}_{s} &= t^{\ell b}_{s}\nonumber\\
+1 + r^{\ell b}_{p}
+&= \frac{n_b}{n_\ell}
+t^{\ell b}_{p} 
+\nonumber\\
+1 - r^{\ell b}_{p}
+&= \frac{n_\ell}{n_b}
+   \frac{w_{b}}{w_{\ell}}t^{\ell b}_{p}\\
+t^{\ell v}_{p} &= \frac{w_{\ell}}{w_{v}}t^{v\ell}_{p}\nonumber\\
+t^{\ell v}_{s} &= \frac{w_{\ell}}{w_{v}}t^{v\ell}_{s}\nonumber 
+.
+\end{align}
+
+
+\subsection{Multiple SH reflections}
+
+The SH field $\mathbf{E}(2\omega)$ radiated by the SH polarization 
+$\boldsymbol{\mathcal{P}}(2\omega)$
+will radiate directly into vacuum and also into the bulk,
+where it will be reflected back at the thin-layer-bulk interface into 
+the thin layer again and this beam will be multiple-transmitted and 
+reflected as shown in Fig.~\ref{3layer}. 
+As the two beams propagate a phase difference will develop between
+them, according to
+\begin{align}\label{m99}
+\Delta\varphi_m&=\tilde{\omega}\Big((L_3+L_4+2mL_5)N_\ell
+-\big( L_2N_\ell+(L_1+mL_6)N_v\big)
+\Big)
+\nonumber\\
+&=\delta_0 + m\delta\quad m=0,1,2,\ldots
+,
+\end{align}
+where
+\begin{align}\label{m97}
+\delta_0=8\pi\left(\frac{d_2}{\lambda_0}\right)\sqrt{n^2_\ell(2\omega)-\sin^2\theta_0}
+,
+\end{align}
+\begin{align}\label{m96}
+\delta=8\pi\left(\frac{d}{\lambda_0}\right)\sqrt{n^2_\ell(2\omega)-\sin^2\theta_0}
+,
+\end{align}
+where $\lambda_0$ is the wavelength of the fundamental field in
+vacuum, $d$ the thickness of layer $\ell$ and $d_2$ the distance of
+$\boldsymbol{\mathcal{P}}(2\omega)$  
+from the $\ell b$ interface 
+(see Fig.~\ref{3layer}).
+We see that
+$\delta_0$ is the phase difference of 
+the first and second transmitted beams, and $m\delta$ that of the first 
+and  third ($m=1$), fourth ($m=2$), etc. beams (see 
+Fig.~\ref{3layer}). 
+
+To take into account the multiple reflections of the generated SH
+field in the layer $\ell$, we proceed as follows. We show the algebra
+for the $p$-polarized SH field, the $s$-polarized field could be
+worked out along the same steps. The multiple-reflected $\mathbf{E}_p(2\omega)$
+field is given by
+\begin{equation}\label{m7}
+\begin{split}
+\mathbf{E}(2\omega) 
+&=  
+E_{p+}(2\omega)\mathbf{T}^{\ell v}\cdot\hat{\mathbf{P}}_{\ell +}
++ E_{p-}(2\omega)\mathbf{T}^{\ell v}
+\cdot\mathbf{R}^{\ell b}\cdot\hat{\mathbf{P}}_{\ell-}e^{i\Delta\varphi_0}
++ E_{p-}(2\omega)\mathbf{T}^{\ell v}
+\cdot\mathbf{R}^{\ell b}\cdot\mathbf{R}^{\ell v}
+\cdot\mathbf{R}^{\ell b}\cdot\hat{\mathbf{P}}_{\ell-}e^{i\Delta\varphi_1}
+\\
+&
++ E_{p-}(2\omega)\mathbf{T}^{\ell v}
+\cdot\mathbf{R}^{\ell b}\cdot\mathbf{R}^{\ell v}
+\cdot\mathbf{R}^{\ell b}\cdot\mathbf{R}^{\ell v}
+\cdot\mathbf{R}^{\ell b}\cdot\hat{\mathbf{P}}_{\ell-}e^{i\Delta\varphi_2}
++\cdots 
+\\
+&= 
+E_{p+}(2\omega)\mathbf{T}^{\ell v}\cdot\hat{\mathbf{P}}_{\ell +}
++ E_{p-}(2\omega) \mathbf{T}^{\ell v}
+\cdot\sum_{m=0}^\infty  
+\big(
+\mathbf{R}^{\ell b}\cdot\mathbf{R}^{\ell v} 
+e^{i\delta}\Big)^m 
+\cdot\mathbf{R}^{\ell b}\cdot\hat{\mathbf{P}}_{\ell-}e^{i\delta_0}
+.
+\end{split}
+\end{equation} 
+From Eqs.~\eqref{r5}-\eqref{r6b} is easy to show
+that
+\begin{align}\label{m1}
+\mathbf{T}^{\ell v}\cdot 
+\Big(\mathbf{R}^{\ell b}\cdot\mathbf{R}^{\ell v}\Big)^n 
+\cdot \mathbf{R}^{\ell b}
+&=
+\hat{\mathbf{s}}
+T^{\ell v}_s\Big(R^{\ell b}_sR^{\ell v}_s\Big)^n 
+ R^{\ell b}_s 
+\hat{\mathbf{s}}
++
+\hat{\mathbf{P}}_{v+}
+T^{\ell v}_p\Big(R^{\ell b}_pR^{\ell v}_p\Big)^n 
+ R^{\ell b}_p 
+\hat{\mathbf{P}}_{\ell-}
+,
+\end{align}
+then,
+\begin{equation}\label{m7}
+\begin{split}
+\mathbf{E}(2\omega) 
+&= 
+\hat{\mathbf{P}}_{\ell +}T^{\ell v}_p
+\Big(
+E_{p+}(2\omega) 
++
+\frac{R^{\ell b}_pe^{i\delta_0}}{1+R^{v\ell}_pR^{\ell b}_pe^{i\delta}}
+E_{p-}(2\omega) 
+\Big)
+,
+\end{split}
+\end{equation}
+where we used $R^{ij}_{s,p}=-R^{ji}_{s,p}$.
+Using Eq.~\eqref{r2}, we can readily write
+\begin{equation}\label{mr8}
+\mathbf{E}(2\omega) = \frac{\gamma i\tilde{\Omega}}{W_{\ell}}
 \mathbf{H}_{\ell}\cdot\boldsymbol{\mathcal{P}}(2\omega),
-\end{equation*}
-where,
-\begin{equation}\label{r9}
+\end{equation}
+where
+\begin{equation}\label{mr9}
 \mathbf{H}_{\ell}
-= \hat{\mathbf{s}}\,T_s^{\ell v}\left(1+R_s^{\ell b}\right)\hat{\mathbf{s}}
+= \hat{\mathbf{s}}\,T_s^{\ell v}
+\left(1+
+R^M_s
+\right)
+\hat{\mathbf{s}}
 + \hat{\mathbf{P}}_{v+}T_{p}^{\ell v}
 \left(
-\hat{\mathbf{P}}_{\ell +} +R_{p}^{\ell b}\hat{\mathbf{P}}_{\ell -}
+\hat{\mathbf{P}}_{\ell +} +
+R^M_p
+ \hat{\mathbf{P}}_{\ell -}
 \right). 
 \end{equation}
+and
+\begin{align}\label{m61}
+R^M_l\equiv\frac{R^{\ell b}_le^{i\delta_0}}{1+R^{v\ell}_l R^{\ell b}_l e^{i\delta}}
+\quad l=s,p
+,
+\end{align}
+is defined as the multiple  ($M$) reflection coefficient.
+To make touch with the work of Ref. \cite{mizrahiJOSA88} where
+$\boldsymbol{\mathcal{P}}(2\omega)$ is located on top of the
+vacuum-surface interface and only the vacuum radiated beam and the
+first (and only) reflected beam need to be considered, we take
+$\ell=v$ and $d_2=0$, then 
+$T^{\ell v}=1$, $R^{v\ell}=0$ and $\delta_0=0$, with which
+$R^M_l=R^{vb}_l$. 
+Thus, Eq.~\eqref{mr9} coincides with Eq. (3.8) of
+Ref. \cite{mizrahiJOSA88}. 
+
+\subsection{SHG Yield}
+
 The magnitude of the radiated field is given by
 $E(2\omega)=\hat{\mathbf{e}}^{\mathrm{out}}\cdot\mathbf{E}(2\omega)$, where
 $\hat{\mathbf{e}}^{\mathrm{out}}$ is the polarization vector of the radiated
 field, for instance $\hat{\mathbf{s}}$ or $\hat{\mathbf{P}}_{v+}$. Then, we
 write
-\begin{equation*}\label{m1}
+\begin{equation}\label{m1}
 \begin{split}
-\hat{\mathbf{P}}_{\ell +} + R_{p}^{\ell b}\hat{\mathbf{P}}_{\ell -}
-&= \frac{\sin\theta_{\mathrm{in}}\hat{\mathbf{z}} - K_{\ell}\hat{\mathbf{x}}}
-        {\sqrt{\epsilon_{\ell}(2\omega)}}
- + R_{p}^{\ell b}
-   \frac{\sin\theta_{\mathrm{in}}\hat{\mathbf{z}} + K_{\ell}\hat{\mathbf{x}}}
-        {\sqrt{\epsilon_{\ell}(2\omega)}}
-\\\nonumber
-&= \frac{1}{\sqrt{\epsilon_{\ell}(2\omega)}}
+\hat{\mathbf{P}}_{\ell +} + R^M_p\hat{\mathbf{P}}_{\ell -}
+&= \frac{\sin\theta_0\hat{\mathbf{z}} - W_{\ell}\hat{\boldsymbol{\kappa}}}
+        {N_{\ell}}
+ + R^M_p
+   \frac{\sin\theta_0\hat{\mathbf{z}} + W_{\ell}\hat{\boldsymbol{\kappa}}}
+        {N_{\ell}}
+\\
+&= \frac{1}{N_{\ell}}
 \left(
-\sin\theta_{\mathrm{in}}(1+R^{\ell b}_{p})\hat{\mathbf{z}}
-- K_{\ell}(1-R^{\ell b}_{p})\hat{\mathbf{x}} 
-\right)
-\\\nonumber 
-&= \frac{T^{\ell b}_{p}}{\epsilon_{\ell}(2\omega)\sqrt{\epsilon_{b}(2\omega)}}
-\left(
-  \epsilon_{b}(2\omega)\sin\theta_{\mathrm{in}}\hat{\mathbf{z}} 
-- \epsilon_{\ell}(2\omega)K_{b}\hat{\mathbf{x}}
+\sin\theta_0R^M_{p+}\hat{\mathbf{z}}
+- K_{\ell}R^M_{p-}\hat{\boldsymbol{\kappa}}
 \right)
 ,
 \end{split}
-\end{equation*}
-where using
-\begin{align}
-1 + R^{\ell b}_{s} &= T^{\ell b}_{s}\nonumber\\
-1 + R^{\ell b}_{p}
-&= \sqrt{\frac{\epsilon_{b}(2\omega)}{\epsilon_{\ell}(2\omega)}}T^{\ell b}_{p} 
-\nonumber\\
-1 - R^{\ell b}_{p}
-&= \sqrt{\frac{\epsilon_{\ell}(2\omega)}{\epsilon_{b}(2\omega)}}
-   \frac{K_{b}}{K_{\ell}}T^{\ell b}_{p}\\
-T^{\ell v}_{p} &= \frac{K_{\ell}}{K_{v}}T^{v\ell}_{p}\nonumber\\
-T^{\ell v}_{s} &= \frac{K_{\ell}}{K_{v}}T^{v\ell}_{s}\nonumber
-,
-\end{align}
-we can write
-\begin{equation*}\label{r10}
-E(2\omega) = \frac{4\pi i \omega}{cK_{v}}
-\hat{\mathbf{e}}^{\mathrm{out}}\cdot
-\mathbf{H}_{\ell}\cdot
-\boldsymbol{\mathcal{P}}(2\omega) 
-= \frac{4\pi i\omega}{cK_{v}}
-  \mathbf{e}^{\,2\omega}_{\ell}\cdot\boldsymbol{\mathcal{P}}(2\omega). 
-\end{equation*}
-where,
-\begin{equation}\label{r12}
-\begin{split}
-\mathbf{e}^{2\omega}_{\ell} &= \\ &\hat{\mathbf{e}}^{\mathrm{out}}\cdot
-\Bigg[
-\hat{\mathbf{s}}T_{s}^{v\ell}T_{s}^{\ell b}\hat{\mathbf{s}} + 
-\hat{\mathbf{P}}_{v+}
-\frac{T^{v\ell}_{p}T^{\ell b}_{p}}
-     {\epsilon_{\ell}({2\omega})\sqrt{\epsilon_{b}(2\omega)}}
-\left(
-  \epsilon_{b}(2\omega)\sin\theta_{\mathrm{in}}\hat{\mathbf{z}}
-- \epsilon_{\ell}(2\omega)K_{b}\hat{\mathbf{x}}
-\right)
-\Bigg]
+\end{equation}
+where
+\begin{align}\label{rm}
+R^{M\pm}_l\equiv 1 \pm R^M_l \quad l=s,p
 .
+\end{align}
+ Using Eq.~\eqref{mf}
+ we write Eq.~\eqref{mr8} as
+\begin{equation}\label{r10}
+E(2\omega) = \frac{2\gamma i \omega}{cW_\ell}
+\hat{\mathbf{e}}^{\mathrm{out}}\cdot 
+\mathbf{H}_{\ell}\cdot 
+\boldsymbol{\mathcal{P}}(2\omega) 
+= \frac{2\gamma i \omega}{cW_v}
+ \mathbf{e}^{\,2\omega}_{\ell}\cdot\boldsymbol{\mathcal{P}}(2\omega). 
+\end{equation}
+\begin{equation}\label{r12mm}
+\begin{split}
+\mathbf{e}^{2\omega}_{\ell} &=\hat{\mathbf{e}}^{\mathrm{out}}\cdot 
+\Bigg[
+\hat{\mathbf{s}}T_{s}^{v\ell}R^{M+}_s\hat{\mathbf{s}} + 
+\hat{\mathbf{P}}_{v+}
+\frac{T^{v\ell}_{p}}
+     {N_\ell}
+\left(
+\sin\theta_0R^{M+}_p\hat{\mathbf{z}}
+- W_{\ell}R^{M-}_p\hat{\boldsymbol{\kappa}}
+\right) 
+\Bigg]
+. 
 \end{split}
 \end{equation}  
-% We mention that
-% $n_v\sin\theta_{\mathrm{in}}=n_{\ell}\sin\theta_{\mathrm{in}}$, from which
-% $\sin\theta_{\mathrm{in}}=\sin\theta_{\mathrm{in}}/n_{\ell}$ with
-% $n_i=\sqrt{\epsilon_i(\omega)}$.
-
-We pause here to reduce above result to the case where the nonlinear
+ We pause here to reduce above result to the case where the nonlinear
 polarization $\mathbf{P}(2\omega)$ radiates from vacuum instead from the layer
 $\ell$. For such case we simply take $\epsilon_{\ell}(2\omega)=1$ and $\ell=v$
 ($T^{\ell v}_{s,p}=1$), to get
@@ -226,17 +440,17 @@ $\ell$. For such case we simply take $\epsilon_{\ell}(2\omega)=1$ and $\ell=v$
 \hat{\mathbf{s}}T_s^{v b}\hat{\mathbf{s}} + \hat{\mathbf{P}}_{v+}
 \frac{T^{v b}_{p}}{\sqrt{\epsilon_{b}(2\omega)}}
 \left(
-  \epsilon_{b}(2\omega)\sin\theta_{\mathrm{in}}\hat{\mathbf{z}}
-  - K_{b}\hat{\mathbf{x}}
+  \epsilon_{b}(2\omega)\sin\theta_0\hat{\mathbf{z}}
+  - W_{b}\hat{\boldsymbol{\kappa}}
 \right) 
 \right] 
 ,
 \end{equation}
-which agrees with Eq. (3.8) of Ref. \cite{mizrahiJOSA88}.
+which agrees with Eq. (3.10) of Ref. \cite{mizrahiJOSA88}.
 
-In the three layer model the nonlinear polarization is located in layer $\ell$,
-and then we evaluate the fundamental field required in Eq. \eqref{tres} in this
-layer as well, then we write
+In the three layer model the SH polarization $\boldsymbol{\mathcal{p}}(2\omega)$ is located in layer $\ell$,
+where we evaluate the fundamental field required in Eq. \eqref{tres}.
+We write
 \begin{equation}\label{m2}
 \mathbf{E}_{\ell}(\omega)=E_0\left(
 \hat{\mathbf{s}} t^{v\ell}_s(1+r^{\ell b}_s)\hat{\mathbf{s}}
@@ -251,82 +465,192 @@ t^{v\ell}_{p}r^{\ell b}_{p}
 \right)\cdot\hat{\mathbf{e}}^{\mathrm{in}}=E_0\mathbf{e}^\omega_{\ell}
 ,
 \end{equation} 
-and following the steps that lead to Eq. \eqref{r12}, we find that
+where $\mathbf{e}^{\mathrm{in}}$ is the $s$ ($\hat{\mathbf{s}}$) or $p$
+($\hat{\mathbf{p}}_{v-}$)
+incoming polarization of
+the fundamental electric field. 
+Above field is composed of the transmitted field and its first
+reflection from the $\ell b$ interface for $s$ and $p$ polarizations.
+The fundamental field, once inside the layer $\ell$ will be multiply
+reflected at the $\ell v$ and $\ell b$ interfaces, however each
+reflection will diminish the intensity of the fundamental field, and as the SHG
+yield goes with the square of this field, the contribution of the
+subsequent reflections, other than the one considered in
+Eq.~\eqref{m2},  could be safely neglected.
+From Eq.~\eqref{mf}
+we find that
 \begin{equation}\label{m12}
 \mathbf{e}^{\omega}_{\ell}
 = \left[
 \hat{\mathbf{s}}t_{s}^{v\ell}t_{s}^{\ell b}\hat{\mathbf{s}} 
 + \frac{t^{v\ell}_{p}t^{\ell b}_{p}}
-       {\epsilon_{\ell}(\omega)\sqrt{\epsilon_{b}(\omega)}}
+       {n^2_\ell n_b}
 \left(
-  \epsilon_{b}(\omega)\sin\theta_{\mathrm{in}}\hat{\mathbf{z}}
-+ \epsilon_{\ell}(\omega)k_{b}\hat{\mathbf{x}}
+  n^2_b
+\sin\theta_0\hat{\mathbf{z}}
++ n^2_\ell w_b\hat{\boldsymbol{\kappa}}
 \right)
 \hat{\mathbf{p}}_{v-}
 \right]
 \cdot\hat{\mathbf{e}}^{\mathrm{in}}.  
 \end{equation}  
-If we would like to evaluate the fields in the bulk, instead of the layer
-$\ell$, we simply take $\epsilon_{\ell}(\omega)=\epsilon_{b}(\omega)\,(t^{\ell
-b}_{s,p}=1$), to obtain
+Again, to touch base with Ref. \cite{mizrahiJOSA88},
+if we would like to evaluate the fields in the bulk, instead of the layer
+$\ell$, we simply take 
+$n_\ell=n_b,\,(t^{\ell b}_{s,p}=1$), to obtain
 \begin{equation}\label{m13}
 \mathbf{e}^{\omega}_{b}
 = \left[
 \hat{\mathbf{s}}t_{s}^{vb}\hat{\mathbf{s}}
-+ \frac{t^{vb}_{p}}{\sqrt{\epsilon_{b}(\omega)}}
++ \frac{t^{vb}_{p}}{n_b}
 \left(
-\sin\theta_{\mathrm{in}}\hat{\mathbf{z}} + k_{b}\hat{\mathbf{x}}
+\sin\theta_0\hat{\mathbf{z}} + w_b\hat{\boldsymbol{\kappa}}
 \right) 
 \hat{\mathbf{p}}_{v-}
 \right]
 \cdot\hat{\mathbf{e}}^{\mathrm{in}},  
 \end{equation} 
 that is in agreement with Eq. (3.5) of Ref. \cite{mizrahiJOSA88}.
-
-With $\mathbf{e}^{\omega}$ we can write Eq. \eqref{tres} as
-\begin{equation*}\label{m4}
-\boldsymbol{\mathcal{P}}(2\omega) = E^{2}_{0}\boldsymbol{\chi}:
-\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell}
+Then,
+ we can write Eq. \eqref{tres} as
+\begin{equation}\label{m4}
+\boldsymbol{\mathcal{P}}(2\omega) = 
+\left\{
+\begin{array}{cc}  
+E^{2}_{0}\,\boldsymbol{\chi}:\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell}
+& \text{(cgs units)} \\
+\epsilon_{0}E^{2}_{0}\,\boldsymbol{\chi}:\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell}
+& \text{(MKS units)} \\
+\end{array}
+\right.
 ,
-\end{equation*}
-and then from Eq. \eqref{r10} we obtain that
-\begin{align}\label{r01}
-|E(2\omega)|^2 
-&= |E_{0}|^4\frac{16\pi^{2}\omega^{2}}{c^{2}K^{2}_{v}}
-\left\vert
-\mathbf{e}^{\,2\omega}_{\ell}\cdot\boldsymbol{\chi}:
-\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell}
-\right\vert^{2}
-\nonumber\\
-\frac{c}{2\pi}|E(2\omega)|^{2} 
-&= \frac{32\pi^{3}\omega^{2}}{c^{3}\cos^{2}\theta_{\mathrm{in}}}
-\left\vert
-\mathbf{e}^{\,2\omega}_{\ell}\cdot\boldsymbol{\chi}:
-\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell}
-\right\vert^{2} 
-\left(\frac{c}{2\pi}|E_{0}|^{2}\right)^{2},
-\nonumber\\
-I(2\omega) 
-&= \frac{32\pi^{3}\omega^{2}}{c^{3}\cos^{2}\theta_{\mathrm{in}}}
-\left\vert
-\mathbf{e}^{\,2\omega}_{\ell}\cdot\boldsymbol{\chi}:
-\mathbf{e}^\omega_{\ell}\mathbf{e}^\omega_{\ell}
-\right\vert^{2}I^{2}(\omega),
-\nonumber\\
-R(2\omega) 
-&= \frac{32\pi^{3}\omega^{2}}{c^{3}\cos^{2}\theta_{\mathrm{in}}}
-\left\vert
-\mathbf{e}^{\,2\omega}_{\ell}\cdot\boldsymbol{\chi}:
-\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell}\right\vert^{2} 
+\end{equation}
+where $E_0$ is the intensity of the fundamental electric field.
+Finally, with above equation we write Eq.~\eqref{r10} as
+\begin{equation}\label{mr10}
+E(2\omega) 
+= \frac{2\eta i \omega}{cW_v}
+\mathbf{e}^{2\omega}_{\ell}\cdot\boldsymbol{\chi}:\mathbf{e}^{\omega}_{\ell}
+\mathbf{e}^{\omega}_{\ell}
+,
+\end{equation}
+where $\eta=2\pi$ for cgs units and $\eta=1/2$ for MKS units.
+To ease on the notation, we define
+\begin{align}\label{mc0}
+\Upsilon_{\mathrm{iO}}
+\equiv 
+\mathbf{e}^{2\omega}_{\ell}\cdot\boldsymbol{\chi}:\mathbf{e}^{\omega}_{\ell}
+\mathbf{e}^{\omega}_{\ell}
 ,
 \end{align}
-as the SHG yield. At this point we mention that to recover the results of Ref.
+where i stands for the incoming polarization of the fundamental
+electric field given by $\hat{\mathbf{e}}^{\mathrm{in}}$ in Eq.~\eqref{m12},
+and O for the outgoing polarization of the SH electric field
+given by $\hat{\mathbf{e}}^{\mathrm{out}}$ in Eq.~\eqref{r12mm}.
+
+From Eqs. \eqref{uno} and \eqref{dos} we obtain that
+in the cgs units ($\eta=2\pi$)
+\begin{align}\label{r01}
+|E(2\omega)|^2 
+&= |E_{0}|^4\frac{16\pi^{2}\omega^{2}}{c^{2}W^2_v}
+\left\vert  
+\Upsilon_{\mathrm{iO}}
+\right\vert^{2}
+\nonumber\\
+\frac{c}{2\pi}|\sqrt{N_v}E(2\omega)|^{2} 
+&=
+\frac{32\pi^{3}\omega^{2}}{c^{3}\cos^2\theta_0}
+\left\vert  
+\frac{\sqrt{N_v}}{n^2_\ell}
+\Upsilon_{\mathrm{iO}}
+\right\vert^{2} 
+\left(\frac{c}{2\pi}|\sqrt{n_\ell}E_{0}|^{2}\right)^{2},
+\nonumber\\ 
+I(2\omega) 
+&= \frac{32\pi^{3}\omega^{2}}{c^{3}\cos^2\theta_0}
+\left\vert  
+\frac{\sqrt{N_v}}{n^2_\ell}
+\Upsilon_{\mathrm{iO}}
+\right\vert^{2}I^{2}(\omega),
+\nonumber\\
+\mathcal{R}_{\mathrm{iO}}(2\omega) 
+&= 
+\frac{32\pi^{3}\omega^{2}}{c^{3}\cos^2\theta_0}
+\left\vert  
+\frac{1}{n^2_\ell}
+\Upsilon_{\mathrm{iO}}
+\right\vert^{2}
+,
+\end{align} 
+and in MKS units ($\eta=1/2$)
+\begin{align}\label{r01m}
+|E(2\omega)|^2 
+&= |E_{0}|^4
+\frac{\omega^{2}}{c^{2}W^2_v}
+\left\vert  
+\Upsilon_{\mathrm{iO}}
+\right\vert^{2}
+\nonumber\\
+2\epsilon_{0}c|\sqrt{N_v}E(2\omega)|^{2} 
+&=
+\frac{2\epsilon_{0}\omega^{2}}{c\cos^2\theta_0}
+\left\vert  
+\frac{\sqrt{N_v}}{n^2_\ell}
+\Upsilon_{\mathrm{iO}}
+\right\vert^{2} 
+\frac{1}{4\epsilon^2_0c^2}\left(2\epsilon_{0}c|\sqrt{n_\ell}E_{0}|^{2}\right)^{2},
+\nonumber\\ 
+I(2\omega) 
+&= 
+\frac{\omega^{2}}{2\epsilon_{0}c^3\cos^2\theta_0}
+\left\vert  
+\frac{\sqrt{N_v}}{n^2_\ell}
+\Upsilon_{\mathrm{iO}}
+\right\vert^{2}I^{2}(\omega),
+\nonumber\\
+\mathcal{R}_{\mathrm{iO}}(2\omega) 
+&= \frac{\omega^{2}}{2\epsilon_{0}c^3\cos^2\theta_0}
+\left\vert  
+\frac{1}{n^2_\ell}
+\Upsilon_{\mathrm{iO}}
+\right\vert^{2} 
+,
+\end{align} 
+\begin{equation}\label{mc6}
+\mathcal{R}_{\mathrm{iO}}(2\omega) 
+\left\{
+\begin{array}{cc} 
+\frac{32\pi^{3}\omega^{2}}{c^{3}\cos^2\theta_0}
+\left\vert  
+\frac{1}{n^2_\ell}
+\Upsilon_{\mathrm{iO}}
+\right\vert^{2} 
+& \text{(cgs units)} \\
+\frac{\omega^{2}}{2\epsilon_{0}c^3\cos^2\theta_0}
+\left\vert  
+\frac{1}{n^2_\ell}
+\Upsilon_{\mathrm{iO}}
+\right\vert^{2} 
+& \text{(MKS units)} 
+\end{array}
+\right.
+,
+\end{equation}
+as the SHG yield, where $N_v=1$ and $W_v=\cos\theta_0$.
+In the MKS unit system $\boldsymbol{\chi}$ is given in m$^2$/V, since
+it is a surface second order nonlinear susceptibility, and
+$\mathcal{R}_{\mathrm{iO}}$ is given in m$^2$/W. 
+
+
+\verb=tal vez esto al apendice=
+At this point we mention that to recover the results of Ref.
 \cite{mizrahiJOSA88} which are equivalent of those of Ref. \cite{sipePRB87}, we
 take $\mathbf{e}^{2\omega}_{\ell}\to \mathbf{e}^{2\omega}_v$,
-$\mathbf{e}^{\omega}_{\ell}\to \mathbf{e}^{\omega}_{b}$ and then
+$\mathbf{e}^{\omega}_{\ell}\to \mathbf{e}^{\omega}_{b}$, 
+and then
 \begin{equation}\label{m69}
-R(2\omega) =
-\frac{32\pi^{3} \omega^{2}}{c^{3}\cos^{2}\theta_{\mathrm{in}}}
+\mathcal{R}(2\omega) =
+\frac{32\pi^{3} \omega^{2}}{c^{3}\cos^{2}\theta_0}
 \left\vert
 \mathbf{e}^{\,2\omega}_{v}\cdot\boldsymbol{\chi}:
 \mathbf{e}^{\omega}_{b}\mathbf{e}^{\omega}_{b}
@@ -337,25 +661,41 @@ will give the SHG yield of a nonlinear polarization sheet radiating from vacuum
 on top of the surface and where the fundamental field is evaluated below the
 surface that is characterized by $\epsilon_{b}(\omega)$.
 
-To complete the required formulas, we write down the Fresnel factors,
-\begin{equation*}\label{e.f1}
-\begin{split}
-t_s^{ij}(\omega) &=
-\frac{2k_{i}(\omega)}{k_{i}(\omega)+k_{j}(\omega)},
-\quad\quad  
-t_{p}^{ij}(\omega) =
-\frac{2k_{i}(\omega)\sqrt{\epsilon_{i}(\omega)\epsilon_j(\omega)}}
-     {k_{i}(\omega)\epsilon_{j}(\omega)+k_{j}(\omega)\epsilon_{i}(\omega)},\\
-r_s^{ij}(\omega) &=
-\frac{k_{i}(\omega) - k_{j}(\omega)}
-     {k_{i}(\omega) + k_{j}(\omega)},
-\quad\quad 
-r_{p}^{ij}(\omega) =
-\frac{k_{i}(\omega)\epsilon_{j}(\omega) - k_{j}\epsilon_{i}(\omega)}
-     {k_{i}(\omega)\epsilon_{j}(\omega) + k_{j}(\omega)\epsilon_{i}(\omega)}.
-\end{split}
-\end{equation*}
 
+\section{One SH Reflection}
+Therefore, the total radiated field at 
+$2\omega$ is 
+\begin{equation}\label{r7}
+\begin{split}
+\mathbf{E}(2\omega)  
+&= E_s(2\omega)  
+\left(
+\mathbf{T}^{\ell v} + \mathbf{T}^{\ell v}\cdot\mathbf{R}^{\ell b}
+\right)  
+\cdot\hat{\mathbf{s}}\nonumber\\
+&+ E_{p+}(2\omega)\mathbf{T}^{\ell v}\cdot\hat{\mathbf{P}}_{\ell +}
+ + E_{p-}(2\omega)\mathbf{T}^{\ell v}
+\cdot\mathbf{R}^{\ell b}\cdot\hat{\mathbf{P}}_{\ell-}.  
+\end{split}
+\end{equation} 
+The first term is  the transmitted $s$-polarized field, the second one is the 
+reflected and then transmitted $s$-polarized field and the third and fourth 
+terms are the equivalent fields for $p$-polarization. The transmission is from 
+the layer into vacuum, and the reflection between the layer and the bulk. After 
+some simple algebra, we obtain 
+\begin{equation}\label{r8}
+\mathbf{E}(2\omega) = \frac{2\pi i\tilde{\Omega}}{K_{\ell}}
+\mathbf{H}_{\ell}\cdot\boldsymbol{\mathcal{P}}(2\omega),
+\end{equation} 
+where,
+\begin{equation}\label{r9}
+\mathbf{H}_{\ell}
+= \hat{\mathbf{s}}\,T_s^{\ell v}\left(1+R_s^{\ell b}\right)\hat{\mathbf{s}}
++ \hat{\mathbf{P}}_{v+}T_{p}^{\ell v}
+\left(
+\hat{\mathbf{P}}_{\ell +} +R_{p}^{\ell b}\hat{\mathbf{P}}_{\ell -}
+\right). 
+\end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
