@@ -48,7 +48,8 @@ and neglecting the multiple reflections reduces this expression to
 \frac{T^{v\ell}_{p}T^{\ell b}_{p}}
      {N^{2}_{\ell}N_{b}}
 \left(
-N^{2}_{b}\sin\theta_{0}\hat{\mathbf{z}} - N^{2}_{\ell}W_{b}\hat{\mathbf{x}}
+N^{2}_{b}\sin\theta_{0}\hat{\mathbf{z}} - 
+N^{2}_{\ell}W_{b}\hat{\boldsymbol{\kappa}}
 \right)
 \Bigg].
 \end{split}
@@ -94,8 +95,9 @@ T_{s}^{v\ell}R^{M+}_{s}
 + \cos\phi\hat{\mathbf{y}}
 \right).
 \end{equation}
-Likewise, we do the exact same for Eq. \eqref{eq:e2well}, and get the
-following term for $\hat{\mathbf{P}}_{v+}$,
+If we wish to neglect the effects from the multiple reflections, we do the exact
+same for Eq. \eqref{eq:e2well}, and get the following term for
+$\hat{\mathbf{P}}_{v+}$,
 \begin{equation}\label{eq:e2wp}
 \mathbf{e}^{2\omega}_{\ell} =
 \frac{T^{v\ell}_{p}T^{\ell b}_{p}}
@@ -116,8 +118,66 @@ and $\hat{\mathbf{s}}$,
 
 \subsection{\texorpdfstring{$1\omega$}{1w} terms}
 
-We posit that the effects of the multiple reflections can be neglected for the
-$\mathbf{e}^{\omega}_{\ell}$ term. This term is
+We have that the $\mathbf{e}^{\omega}_{\ell}$ term is 
+\begin{equation*}\label{eq:ewellmr}
+\mathbf{e}^{\omega}_{\ell} = 
+\left[
+\hat{\mathbf{s}}t_{s}^{v\ell}r_{s}^{M+}\hat{\mathbf{s}} 
++ \frac{t^{v\ell}_{p}}{n_{\ell}}
+\left(
+  r^{M+}_{p}\sin\theta_{0}\hat{\mathbf{z}} 
++ r^{M-}_{p}w_{\ell}\hat{\boldsymbol{\kappa}}
+\right)
+\hat{\mathbf{p}}_{v-}
+\right]
+\cdot\hat{\mathbf{e}}^{\mathrm{in}}.
+\end{equation*}
+We are interested in finding
+$\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell}$ for both polarizations.
+For $\hat{\mathbf{e}}^{\mathrm{in}} = \hat{\mathbf{p}}_{v-}$ we have
+\begin{equation*}
+\mathbf{e}^{\omega}_{\ell} = 
+\frac{t^{v\ell}_{p}}{n_{\ell}}
+\left(
+  r^{M+}_{p}\sin\theta_{0}\hat{\mathbf{z}} 
++ r^{M-}_{p}w_{\ell}\cos\phi\hat{\mathbf{x}}
++ r^{M-}_{p}w_{\ell}\sin\phi\hat{\mathbf{y}}
+\right),
+\end{equation*}
+so
+\begin{equation}\label{eq:ewewpmr}
+\begin{split}
+\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell} =
+\left(\frac{t^{v\ell}_{p}}{n_{\ell}}\right)^{2}
+\bigg(&
+   \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\cos^{2}\phi
+   \hat{\mathbf{x}}\hat{\mathbf{x}}
+ + 2\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin\phi\cos\phi
+   \hat{\mathbf{x}}\hat{\mathbf{y}}\\
+&+ 2r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin\theta_{0}\cos\phi
+   \hat{\mathbf{x}}\hat{\mathbf{z}}
+ + \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin^{2}\phi
+   \hat{\mathbf{y}}\hat{\mathbf{y}}\\
+&+ 2r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin\theta_{0}\sin\phi
+   \hat{\mathbf{z}}\hat{\mathbf{y}}
+ + \left(r^{M+}_{p}\right)^{2}\sin^{2}\theta_{0}
+   \hat{\mathbf{z}}\hat{\mathbf{z}}
+\bigg),
+\end{split}
+\end{equation}
+and for $\hat{\mathbf{e}}^{\mathrm{in}} = \hat{\mathbf{s}}$,
+\begin{equation}\label{eq:ewewsmr}
+\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell}
+= \left(t^{v\ell}_{s}r^{M+}_{s}\right)^{2}
+\left(
+  \sin^{2}\phi\hat{\mathbf{x}}\hat{\mathbf{x}}
++ \cos^{2}\phi\hat{\mathbf{y}}\hat{\mathbf{y}} 
+- 2\sin\phi\cos\phi\hat{\mathbf{x}}\hat{\mathbf{y}}
+\right).
+\end{equation}
+
+Neglecting the effects of the multiple reflections for the
+$\mathbf{e}^{\omega}_{\ell}$ term yields
 \begin{equation*}\label{eq:ewell}
 \mathbf{e}^{\omega}_{\ell} = 
 \left[
@@ -184,19 +244,19 @@ Case               & $\hat{\mathbf{e}}^{\mathrm{out}}$
 $\mathcal{R}_{pP}$ & $\hat{\mathbf{P}}_{v+}$
                    & $\hat{\mathbf{p}}_{v-}$
                    &  Eq. \eqref{eq:e2wpmr} or \eqref{eq:e2wp}
-                   & Eq. \eqref{eq:ewewp} \\
+                   & Eq. \eqref{eq:ewewpmr} or Eq. \eqref{eq:ewewp} \\
 $\mathcal{R}_{pS}$ & $\hat{\mathbf{s}}$
                    & $\hat{\mathbf{p}}_{v-}$
                    &  Eq. \eqref{eq:e2wsmr} or \eqref{eq:e2ws}
-                   & Eq. \eqref{eq:ewewp} \\
+                   & Eq. \eqref{eq:ewewpmr} or Eq. \eqref{eq:ewewp} \\
 $\mathcal{R}_{sP}$ & $\hat{\mathbf{P}}_{v+}$
                    & $\hat{\mathbf{s}}$
                    &  Eq. \eqref{eq:e2wpmr} or \eqref{eq:e2wp}
-                   & Eq. \eqref{eq:ewews} \\
+                   & Eq. \eqref{eq:ewewsmr} or Eq. \eqref{eq:ewews} \\
 $\mathcal{R}_{sS}$ & $\hat{\mathbf{s}}$
                    & $\hat{\mathbf{s}}$
                    &  Eq. \eqref{eq:e2wsmr} or \eqref{eq:e2ws}
-                   & Eq. \eqref{eq:ewews} \\
+                   & Eq. \eqref{eq:ewewsmr} or Eq. \eqref{eq:ewews} \\
 \hline
 \end{tabular}
 \caption{Polarization unit vectors for $\hat{\mathbf{e}}^{\mathrm{out}}$ and
@@ -245,40 +305,52 @@ nonzero components:
 
 \section{\texorpdfstring{$\mathcal{R}_{pP}$}{RpP}}
 
-Per Table \ref{tab:review}, $\mathcal{R}_{pP}$ requires Eqs. \eqref{eq:e2wp}
-and \eqref{eq:ewewp}. After some algebra, we obtain that
+Per Table \ref{tab:review}, $\mathcal{R}_{pP}$ requires Eqs. \eqref{eq:e2wpmr}
+and \eqref{eq:ewewpmr}. After some algebra, we obtain that
 \begin{equation}\label{eq:rppfullmr}
 \begin{split}
 \Upsilon^{\mathrm{MR}}_{pP} =
 \Gamma^{\mathrm{MR}}_{pP}
 \bigg[
-- R^{M-}_{p}&W_{\ell}\big(
-   n^{4}_{\ell}w^{2}_{b}\cos^{3}\phi\chi_{xxx}
- + 2n^{4}_{\ell}w^{2}_{b}\sin\phi\cos^{2}\phi\chi_{xxy}\\
-&+ 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\cos^{2}\phi\chi_{xxz}
- + n^{4}_{\ell}w^{2}_{b}\sin^{2}\phi\cos\phi\chi_{xyy}\\
-&+ 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\sin\phi\cos\phi\chi_{xyz}
- + n^{4}_{b}\sin^{2}\theta_{0}\cos\phi\chi_{xzz}
- \big)\\\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-- R^{M-}_{p}&W_{\ell}\big(
-  n^{4}_{\ell}w^{2}_{b}\sin\phi\cos^{2}\phi\chi_{yxx}
-+ 2n^{4}_{\ell}w^{2}_{b}\sin^{2}\phi\cos\phi\chi_{yxy}\\
-&+ 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\sin\phi\cos\phi\chi_{yxz}
- + n^{4}_{\ell}w^{2}_{b}\sin^{3}\phi\chi_{yyy}\\
-&+ 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\sin^{2}\phi\chi_{yyz}
- + n^{4}_{b}\sin^{2}\theta_{0}\sin\phi\chi_{yzz}
- \big)\\\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-+ R^{M+}_{p}&\sin\theta_{0}\big(
-  n^{4}_{\ell}w^{2}_{b}\cos^{2}\phi\chi_{zxx}
- + 2n^{4}_{\ell}w^{2}_{b}\sin\phi\cos\phi\chi_{zxy}\\
-&+ n^{4}_{\ell}w^{2}_{b}\sin^{2}\phi\chi_{zyy}
- + 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\cos\phi\chi_{zzx}\\
-&+ 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\sin\phi\chi_{zzy}
- + n^{4}_{b}\sin^{2}\theta_{0}\chi_{zzz}
- \big)
-\bigg].
+&-R^{M-}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}W_{\ell}\cos^{3}\phi
+\chi_{xxx}\\
+&-2R^{M-}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}W_{\ell}\sin\phi\cos^{2}\phi
+\chi_{xxy}\\
+&-2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}\sin\theta_{0}\cos^{2}\phi
+\chi_{xxz}\\
+&-R^{M-}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}W_{\ell}\sin^{2}\phi\cos\phi
+\chi_{xyy}\\
+&-2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}\sin\theta_{0}\sin\phi\cos\phi
+\chi_{xyz}\\
+&-R^{M-}_{p}\left(r^{M+}_{p}\right)^{2}W_{\ell}\sin^{2}\theta_{0}\cos\phi
+\chi_{xzz}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&-R^{M-}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}W_{\ell}\sin\phi\cos^{2}\phi
+\chi_{yxx}\\
+&-2R^{M-}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}W_{\ell}\sin^{2}\phi\cos\phi
+\chi_{yxy}\\
+&-2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}\sin\theta_{0}\sin\phi\cos\phi
+\chi_{yxz}\\
+&-R^{M-}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}W_{\ell}\sin^{3}\phi
+\chi_{yyy}\\
+&-2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}\sin\theta_{0}\sin^{2}\phi
+\chi_{yyz}\\
+&-R^{M-}_{p}\left(r^{M+}_{p}\right)^{2}W_{\ell}\sin^{2}\theta_{0}\sin\phi
+\chi_{yzz}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&+R^{M+}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin\theta_{0}\cos^{2}\phi
+\chi_{zxx}\\
+&+2R^{M+}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin^{2}\theta_{0}\cos\phi
+\chi_{zxz}\\
+&+2R^{M+}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin\theta_{0}\sin\phi
+\cos\phi\chi_{zxy}\\
+&+R^{M+}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin\theta_{0}\sin^{2}\phi
+\chi_{zyy}\\
+&+2R^{M+}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin^{2}\theta_{0}\sin\phi
+\chi_{zzy}\\
+&+R^{M+}_{p}\left(r^{M+}_{p}\right)^{2}\sin^{3}\theta_{0}
+\chi_{zzz}
+\bigg],
 \end{split}
 \end{equation}
 We take this opportunity to introduce a quantity that will be repeated
@@ -286,8 +358,7 @@ throughout this section,
 \begin{equation}\label{eq:gammappmr}
 \Gamma^{\mathrm{MR}}_{pP} =
 \frac{T^{v\ell}_{p}}{N_{\ell}}
-\left(\frac{t^{v\ell}_{p}t^{\ell b}_{p}}
-{n^{2}_{\ell}n_{b}}\right)^{2}.
+\left(\frac{t^{v\ell}_{p}}{n_{\ell}}\right)^{2}.
 \end{equation}
 
 If we neglect the multiple reflections, as described in the manuscript, we have
@@ -346,18 +417,23 @@ follows,
 \begin{split}
 \Upsilon^{\mathrm{MR},(111)}_{pP} =
 \Gamma^{\mathrm{MR}}_{pP}
-\big[
-&+ R^{M+}_{p}n^{4}_{b}\sin^{3}\theta_{0}\chi_{zzz}\\
-&+ R^{M+}_{p}n^{4}_{\ell}w^{2}_{b}\sin\theta_{0}\cos^{2}\phi\chi_{zxx}\\
-&+ R^{M+}_{p}n^{4}_{\ell}w^{2}_{b}\sin\theta_{0}\sin^{2}\phi\chi_{zxx}\\
-&- 2R^{M-}_{p}n^{2}_{\ell}n^{2}_{b}w_{b}W_{\ell}\sin\theta_{0}\cos^{2}\phi
-   \chi_{xxz}\\
-&- 2R^{M-}_{p}n^{2}_{\ell}n^{2}_{b}w_{b}W_{\ell}\sin\theta_{0}\sin^{2}\phi
-   \chi_{xxz}\\
-&- R^{M-}_{p}n^{4}_{\ell}w^{2}_{b}W_{\ell}\cos^{3}\phi\chi_{xxx}\\
-&+ R^{M-}_{p}n^{4}_{\ell}w^{2}_{b}W_{\ell}\sin^{2}\phi\cos\phi\chi_{xxx}\\
-&+ 2R^{M-}_{p}n^{4}_{\ell}w^{2}_{b}W_{\ell}\sin^{2}\phi\cos\phi\chi_{xxx}
-\big].
+\bigg[
+&- R^{M-}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}W_{\ell}
+   \cos^{3}\phi\chi_{xxx}\\
+&+ R^{M-}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}W_{\ell}
+   \sin^{2}\phi\cos\phi\chi_{xxx}\\
+&+ 2R^{M-}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}W_{\ell}
+   \sin^{2}\phi\cos\phi\chi_{xxx}\\
+&- 2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}
+   \sin\theta_{0}\cos^{2}\phi\chi_{xxz}\\
+&- 2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}
+   \sin\theta_{0}\sin^{2}\phi\chi_{xxz}\\
+&+ R^{M+}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}
+   \sin\theta_{0}\cos^{2}\phi\chi_{zxx}\\
+&+ R^{M+}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}
+   \sin\theta_{0}\sin^{2}\phi\chi_{zxx}\\
+&+ R^{M+}_{p}\left(r^{M+}_{p}\right)^{2}\sin^{3}\theta_{0}\chi_{zzz}
+\bigg].
 \end{split}
 \end{equation*}
 We reduce terms,
@@ -366,34 +442,45 @@ We reduce terms,
 \Upsilon^{\mathrm{MR},(111)}_{pP} &=
 \Gamma^{\mathrm{MR}}_{pP}
 \big[
-+ R^{M+}_{p}n^{4}_{b}\sin^{3}\theta_{0}\chi_{zzz}\\
-&\qquad\qquad+ R^{M+}_{p}n^{4}_{\ell}w^{2}_{b}\sin\theta_{0}
-   (\sin^{2}\phi+\cos^{2}\phi)\chi_{zxx}\\
-&\qquad\qquad- 2R^{M-}_{p}n^{2}_{\ell}n^{2}_{b}w_{b}W_{\ell}\sin\theta_{0}
-   (\sin^{2}\phi+\cos^{2}\phi)\chi_{xxz}\\
-&\qquad\qquad+ R^{M-}_{p}n^{4}_{\ell}w^{2}_{b}W_{\ell}
-   (3\sin^{2}\phi\cos\phi - \cos^{3}\phi)\chi_{xxx}
+R^{M-}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}W_{\ell}
+  (3\sin^{2}\phi\cos\phi - \cos^{3}\phi)\chi_{xxx}\\
+&- 2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}\sin\theta_{0}
+  (\sin^{2}\phi + \cos^{2}\phi)\chi_{xxz}\\
+&+ R^{M+}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin\theta_{0}
+  (\sin^{2}\phi + \cos^{2}\phi)\chi_{zxx}\\
+&+ R^{M+}_{p}\left(r^{M+}_{p}\right)^{2}\sin^{3}\theta_{0}\chi_{zzz}
 \big]\\\\
 &=
 \Gamma^{\mathrm{MR}}_{pP}
-\big[
-R^{M+}_{p}\sin\theta_{0}(n^{4}_{b}\sin^{2}\theta_{0}\chi_{zzz} 
-+ n^{4}_{\ell}w^{2}_{b}\chi_{zxx})\\
-&\qquad\qquad- R^{M-}_{p}n^{2}_{\ell}w_{b}W_{\ell}(2n^{2}_{b}\sin\theta_{0}
-\chi_{xxz}
-+ n^{2}_{\ell}w_{b}\chi_{xxx}\cos3\phi)
-\big]\\\\
+\bigg[
+R^{M+}_{p}\sin\theta_{0}
+\Big(
+  \left(r^{M+}_{p}\right)^{2}\sin^{2}\theta_{0}\chi_{zzz}
++ \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\chi_{zxx}
+\Big)\\
+&- R^{M-}_{p}w_{\ell}W_{\ell}
+\Big(
+  2r^{M+}_{p}r^{M-}_{p}\sin\theta_{0}\chi_{xxz}
++ \left(r^{M-}_{p}\right)^{2}w_{\ell}\chi_{xxx}\cos3\phi
+\Big)
+\bigg]\\\\
 & = \Gamma^{\mathrm{MR}}_{pP}\,r^{\mathrm{MR},(111)}_{pP},
 \end{split}
 \end{equation*}
 where
 \begin{equation}\label{eq:final-rpp.mr.111}
 \begin{split}
-r^{\mathrm{MR},(111)}_{pP} = 
-&R^{M+}_{p}\sin\theta_{0}(n^{4}_{b}\sin^{2}\theta_{0}\chi_{zzz} 
-+ n^{4}_{\ell}w^{2}_{b}\chi_{zxx})\\
-&- R^{M-}_{p}n^{2}_{\ell}w_{b}W_{\ell}(2n^{2}_{b}\sin\theta_{0}\chi_{xxz}
-+ n^{2}_{\ell}w_{b}\chi_{xxx}\cos3\phi).
+r^{\mathrm{MR},(111)}_{pP} &= 
+R^{M+}_{p}\sin\theta_{0}
+\Big(
+  \left(r^{M+}_{p}\right)^{2}\sin^{2}\theta_{0}\chi_{zzz}
++ \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\chi_{zxx}
+\Big)\\
+&- R^{M-}_{p}w_{\ell}W_{\ell}
+\Big(
+  2r^{M+}_{p}r^{M-}_{p}\sin\theta_{0}\chi_{xxz}
++ \left(r^{M-}_{p}\right)^{2}w_{\ell}\chi_{xxx}\cos3\phi
+\Big).
 \end{split}
 \end{equation}
 
@@ -466,42 +553,46 @@ follows,
 \Upsilon^{\mathrm{MR},(110)}_{pP} &=
 \Gamma^{\mathrm{MR}}_{pP}
 \bigg[
-R^{M+}_{p}\sin\theta_{0}
-\big(
-  n^{4}_{b}\sin^{2}\theta_{0}\chi_{zzz}
-+ n^{4}_{\ell}w^{2}_{b}(\sin^{2}\phi\chi_{zyy} + \cos^{2}\phi\chi_{zxx})
-\big)\\
-&\qquad- 2R^{M-}_{p}n^{2}_{\ell}n^{2}_{b}w_{b}W_{\ell}\sin\theta_{0}
-(\sin^{2}\phi\chi_{yyz} + \cos^{2}\phi\chi_{xxz})
+R^{M+}_{p}\left(r^{M+}_{p}\right)^{2}\sin^{3}\theta_{0}\chi_{zzz}\\
+&\qquad\qquad+ R^{M+}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}
+      \sin\theta_{0}\sin^{2}\phi\chi_{zyy}\\
+&\qquad\qquad+ R^{M+}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}
+      \sin\theta_{0}\cos^{2}\phi\chi_{zxx}\\
+&\qquad\qquad- 2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}
+      \sin\theta_{0}\sin^{2}\phi\chi_{yyz}\\
+&\qquad\qquad- 2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}
+      \sin\theta_{0}\cos^{2}\phi\chi_{xxz}
 \bigg]\\\\
 &=
 \Gamma^{\mathrm{MR}}_{pP}
 \bigg[
 R^{M+}_{p}\sin\theta_{0}
 \bigg(
-  n^{4}_{b}\sin^{2}\theta_{0}\chi_{zzz}\\
-&+ n^{4}_{\ell}w^{2}_{b}
+\left(r^{M+}_{p}\right)^{2}\sin^{2}\theta_{0}\chi_{zzz}\\
+&\qquad\qquad+ \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}
 \left(
 \frac{1}{2}(1-\cos2\phi)\chi_{zyy} + \frac{1}{2}(\cos2\phi+1)\chi_{zxx}
 \right)
 \bigg)\\
-&- 2R^{M-}_{p}n^{2}_{\ell}n^{2}_{b}w_{b}W_{\ell}\sin\theta_{0}
-\left(
-\frac{1}{2}(1-\cos2\phi)\chi_{yyz} + \frac{1}{2}(\cos2\phi+1)\chi_{xxz}
-\right)
+&- 2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}\sin\theta_{0}
+\bigg(
+\frac{1}{2}(1-\cos2\phi)\chi_{yyz}\\
+&\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
++ \frac{1}{2}(\cos2\phi+1)\chi_{xxz}
+\bigg)
 \bigg]\\\\
 &=
 \Gamma^{\mathrm{MR}}_{pP}
 \bigg[
 R^{M+}_{p}\sin\theta_{0}
 \bigg(
-n^{4}_{b}\sin^{2}\theta_{0}\chi_{zzz}\\
-&\qquad+ n^{4}_{\ell}w^{2}_{b}
+\left(r^{M+}_{p}\right)^{2}\sin^{2}\theta_{0}\chi_{zzz}\\
+&\qquad+ \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}
 \left(
 \frac{\chi_{zyy} + \chi_{zxx}}{2} + \frac{\chi_{zyy} - \chi_{zxx}}{2}\cos2\phi
 \right)
 \bigg)\\
-&\qquad- 2R^{M-}_{p}n^{2}_{\ell}n^{2}_{b}w_{b}W_{\ell}\sin\theta_{0}
+&- 2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}\sin\theta_{0}
 \left(
 \frac{\chi_{yyz} + \chi_{xxz}}{2} + \frac{\chi_{yyz} - \chi_{xxz}}{2}\cos2\phi
 \right)
@@ -512,16 +603,16 @@ n^{4}_{b}\sin^{2}\theta_{0}\chi_{zzz}\\
 where
 \begin{equation}\label{eq:final-rpp.mr.110}
 \begin{split}
-r^{\mathrm{MR},(110)}_{pP} &= 
+r^{\mathrm{MR},(110)}_{pP} &=
 R^{M+}_{p}\sin\theta_{0}
-\bigg[
-n^{4}_{b}\sin^{2}\theta_{0}\chi_{zzz}\\
-&\qquad+ n^{4}_{\ell}w^{2}_{b}
+\bigg(
+\left(r^{M+}_{p}\right)^{2}\sin^{2}\theta_{0}\chi_{zzz}\\
+&\qquad+ \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}
 \left(
 \frac{\chi_{zyy} + \chi_{zxx}}{2} + \frac{\chi_{zyy} - \chi_{zxx}}{2}\cos2\phi
 \right)
-\bigg]\\
-&\qquad- 2R^{M-}_{p}n^{2}_{\ell}n^{2}_{b}w_{b}W_{\ell}\sin\theta_{0}
+\bigg)\\
+&- 2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}\sin\theta_{0}
 \left(
 \frac{\chi_{yyz} + \chi_{xxz}}{2} + \frac{\chi_{yyz} - \chi_{xxz}}{2}\cos2\phi
 \right).
@@ -594,22 +685,25 @@ follows,
 \Upsilon^{\mathrm{MR},(001)}_{pP} &=
 \Gamma^{\mathrm{MR}}_{pP}
 \big[
-   R^{M+}_{p}n^{4}_{b}\sin^{3}\theta_{0}\chi_{zzz}\\
-&\qquad\qquad+ R^{M+}_{p}n^{4}_{\ell}w^{2}_{b}\sin\theta_{0}\cos^{2}\phi
-\chi_{zxx}\\
-&\qquad\qquad+ R^{M+}_{p}n^{4}_{\ell}w^{2}_{b}\sin\theta_{0}\sin^{2}\phi
-\chi_{zxx}\\
-&\qquad\qquad- 2R^{M-}_{p}n^{2}_{\ell}n^{2}_{b}w_{b}W_{\ell}\sin\theta_{0}
-\cos^{2}\phi\chi_{xxz}\\
-&\qquad\qquad- 2R^{M-}_{p}n^{2}_{\ell}n^{2}_{b}w_{b}W_{\ell}\sin\theta_{0}
-\sin^{2}\phi\chi_{xxz}
+R^{M+}_{p}\left(r^{M+}_{p}\right)^{2}\sin^{3}\theta_{0}\chi_{zzz}\\
+&+R^{M+}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}
+            \sin\theta_{0}\sin^{2}\phi\chi_{zxx}\\
+&+R^{M+}_{p}\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}
+            \sin\theta_{0}\cos^{2}\phi\chi_{zxx}\\
+&-2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}
+            \sin\theta_{0}\sin^{2}\phi\chi_{xxz}\\
+&-2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}
+            \sin\theta_{0}\cos^{2}\phi\chi_{xxz}
 \big]\\\\
 &=
-\Gamma^{\ell}_{pP}
+\Gamma^{\mathrm{MR}}_{pP}
 \big[
-R^{M+}_{p}\sin\theta_{0}(n^{4}_{b}\sin^{2}\theta_{0}\chi_{zzz}
-+ n^{4}_{\ell}w^{2}_{b}\chi_{zxx})\\
-&\qquad\qquad- 2R^{M-}_{p}n^{2}_{\ell}n^{2}_{b}w_{b}W_{\ell}\sin\theta_{0}
+R^{M+}_{p}\sin\theta_{0}
+\bigg(
+\left(r^{M+}_{p}\right)^{2}\sin^{2}\theta_{0}\chi_{zzz}
++ \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\chi_{zxx}
+\bigg)\\
+&\qquad\qquad- 2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}\sin\theta_{0}
 \chi_{xxz}
 \big]\\\\
 &= \Gamma^{\mathrm{MR}}_{pP}\,r^{\mathrm{MR},(001)}_{pP},
@@ -619,9 +713,13 @@ where
 \begin{equation}\label{eq:final-rpp.mr.001}
 \begin{split}
 r^{\mathrm{MR},(001)}_{pP} = 
-&R^{M+}_{p}\sin\theta_{0}(n^{4}_{b}\sin^{2}\theta_{0}\chi_{zzz}
-+ n^{4}_{\ell}w^{2}_{b}\chi_{zxx})\\
-&- 2R^{M-}_{p}n^{2}_{\ell}n^{2}_{b}w_{b}W_{\ell}\sin\theta_{0}\chi_{xxz},
+&R^{M+}_{p}\sin\theta_{0}
+\bigg(
+\left(r^{M+}_{p}\right)^{2}\sin^{2}\theta_{0}\chi_{zzz}
++ \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\chi_{zxx}
+\bigg)\\
+&\qquad\qquad- 2R^{M-}_{p}r^{M+}_{p}r^{M-}_{p}w_{\ell}W_{\ell}\sin\theta_{0}
+\chi_{xxz},
 \end{split}
 \end{equation}
 
@@ -657,27 +755,27 @@ r^{(001)}_{pP} =
 
 \section{\texorpdfstring{$\mathcal{R}_{pS}$}{RpS}}
 
-Per Table \ref{tab:summary}, $\mathcal{R}_{pS}$ requires Eqs. \eqref{eq:e2wsmr}
-and \eqref{eq:ewewp}. After some algebra, we obtain that
+Per Table \ref{tab:review}, $\mathcal{R}_{pS}$ requires Eqs. \eqref{eq:e2wsmr}
+and \eqref{eq:ewewpmr}. After some algebra, we obtain that
 \begin{equation}\label{eq:rpsfullmr}
 \begin{split}
 \Upsilon^{\mathrm{MR}}_{pS}
 = 
 \Gamma^{\mathrm{MR}}_{pS}
 \big[
-&- n^{4}_{\ell}w^{2}_{b}\sin\phi\cos^{2}\phi\chi_{xxx}
- - 2n^{4}_{\ell}w^{2}_{b}\sin^{2}\phi\cos\phi\chi_{xxy}\\
-&- 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\sin\phi\cos\phi\chi_{xxz}
- - n^{4}_{\ell}w^{2}_{b}\sin^{3}\phi\chi_{xyy}\\
-&- 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\sin^{2}\phi\chi_{xyz}
- - n^{4}_{b}\sin^{2}\theta_{0}\sin\phi\chi_{xzz}\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&+ n^{4}_{\ell}w^{2}_{b}\cos^{3}\phi\chi_{yxx}
- + 2n^{4}_{\ell}w^{2}_{b}\sin\phi\cos^{2}\phi\chi_{yxy}\\
-&+ 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\cos^{2}\phi\chi_{yxz}
- + n^{4}_{\ell}w^{2}_{b}\sin^{2}\phi\cos\phi\chi_{yyy}\\
-&+ 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\sin\phi\cos\phi\chi_{yyz}
- + n^{4}_{b}\sin^{2}\theta_{0}\cos\phi\chi_{yzz}
+&- \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin\phi\cos^{2}\phi\chi_{xxx}
+ - 2\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin^{2}\phi\cos\phi\chi_{xxy}\\
+&- 2r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin\theta_{0}\sin\phi\cos\phi\chi_{xxz}
+ - \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin^{3}\phi\chi_{xyy}\\
+&- 2r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin\theta_{0}\sin^{2}\phi\chi_{xzy}
+ - \left(r^{M+}_{p}\right)^{2}\sin^{2}\theta_{0}\sin\phi\chi_{xzz}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&+ \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\cos^{3}\phi\chi_{yxx}
+ + 2\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin\phi\cos^{2}\phi\chi_{yxy}\\
+&+ 2r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin\theta_{0}\cos^{2}\phi\chi_{yxz}
+ + \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin^{2}\phi\cos\phi\chi_{yyy}\\
+&+ 2r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin\theta_{0}\sin\phi\cos\phi\chi_{yzy}
+ + \left(r^{M+}_{p}\right)^{2}\sin^{2}\theta_{0}\cos\phi\chi_{yzz}
 \big].
 \end{split}
 \end{equation}
@@ -686,8 +784,7 @@ throughout this section,
 \begin{equation}\label{eq:gammapsmr}
 \Gamma^{\mathrm{MR}}_{pS} =
 T_{s}^{v\ell}R^{M+}_{s}
-\left(\frac{t^{v\ell}_{p}t^{\ell b}_{p}}
-{n^{2}_{\ell}n_{b}}\right)^{2}
+\left(\frac{t^{v\ell}_{p}}{n_{\ell}}\right)^{2}
 \end{equation}
 
 If we neglect the multiple reflections, as described in the manuscript, we have
@@ -720,10 +817,7 @@ and again we introduce a quantity that will be repeated throughout this section,
 T^{v\ell}_{s}T^{\ell b}_{s}\left(\frac{t^{v\ell}_{p}t^{\ell b}_{p}}
       {n^{2}_{\ell}n_{b}}\right)^{2}.
 \end{equation}
-We note that both Eqs. \eqref{eq:rpsfullmr} and \eqref{eq:rpsfull} are identical
-save for the different $\Gamma_{pS}$ terms. Therefore, we can safely derive the
-equations only once, and then use $\Gamma^{\mathrm{MR}}_{pS}$ when we wish to
-include multiple reflections, or $\Gamma_{pS}$ when we do not.
+
 
 \subsection{For the (111) surface}
 
@@ -732,15 +826,14 @@ components that do not contribute, and apply the the symmetry relations as
 follows,
 \begin{equation*}
 \begin{split}
-\Upsilon^{\mathrm{MR},(111)}_{pS}
-= 
+\Upsilon^{\mathrm{MR},(111)}_{pS} = 
 \Gamma^{\mathrm{MR}}_{pS}
 \big[
-&+ n^{4}_{\ell}w^{2}_{b}\sin^{3}\phi\chi_{xxx}\\
-&- n^{4}_{\ell}w^{2}_{b}\sin\phi\cos^{2}\phi\chi_{xxx}\\
-&- 2n^{4}_{\ell}w^{2}_{b}\sin\phi\cos^{2}\phi\chi_{xxx}\\
-&- 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\sin\phi\cos\phi\chi_{xxz}\\
-&+ 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\sin\phi\cos\phi\chi_{xxz}
+&  2r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin\theta_{0}\sin\phi\cos\phi\chi_{xxz}\\
+&- 2r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin\theta_{0}\sin\phi\cos\phi\chi_{xxz}\\
+&-  \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin\phi\cos^{2}\phi\chi_{xxx}\\
+&- 2\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin\phi\cos^{2}\phi\chi_{xxx}\\
+&+ \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\sin^{3}\phi\chi_{xxx}
 \big].
 \end{split}
 \end{equation*}
@@ -750,27 +843,43 @@ We reduce terms,
 \Upsilon^{\mathrm{MR},(111)}_{pS} &=
 \Gamma^{\mathrm{MR}}_{pS}
 \big[
-n^{4}_{\ell}w^{2}_{b}(\sin^{3}\phi - 3\sin\phi\cos^{2}\phi)\chi_{xxx}
+\left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}
+      (\sin^{3}\phi - 3\sin\phi\cos^{2}\phi)\chi_{xxx}
 \big]\\\\
 &=
 \Gamma^{\mathrm{MR}}_{pS}
 \big[
-- n^{4}_{\ell}w^{2}_{b}\chi_{xxx}\sin3\phi
+- \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\chi_{xxx}\sin3\phi
 \big]\\\\
 & = \Gamma^{\mathrm{MR}}_{pS}\,r^{\mathrm{MR},(111)}_{pS},
 \end{split}
 \end{equation*}
 where
 \begin{equation}\label{eq:final-rps.mr.111}
-r^{\mathrm{MR},(111)}_{pS} = - n^{4}_{\ell}w^{2}_{b}\chi_{xxx}\sin3\phi.
+r^{\mathrm{MR},(111)}_{pS} = 
+- \left(r^{M-}_{p}\right)^{2}w^{2}_{\ell}\chi_{xxx}\sin3\phi.
 \end{equation}
-As mentioned above,
+If we wish to neglect the effects of the multiple reflections, we follow the
+exact same procedure but starting with Eq. \eqref{eq:rpsfull},
+\begin{equation}
+\begin{split}
+\Upsilon_{pS} &= 
+\Gamma_{pS}
+\big[
+n^{4}_{\ell}w^{2}_{b}(\sin^{3}\phi - 3\sin\phi\cos^{2}\phi)\chi_{xxx}
+\big]\\\\
+&= \Gamma_{pS}
+\big[
+- n^{4}_{\ell}w^{2}_{b}\chi_{xxx}\sin3\phi
+\big]\\\\
+&= \Gamma_{pS}\,r^{(111)}_{pS},
+\end{split}
+\end{equation}
+where
 \begin{equation}\label{eq:final-rps.111}
-r^{(111)}_{pS} = r^{\mathrm{MR},(111)}_{pS},
+r^{(111)}_{pS} = - n^{4}_{\ell}w^{2}_{b}\chi_{xxx}\sin3\phi,
 \end{equation}
-so if we wish to neglect the effects of the multiple reflections, we simply use
-$\Gamma_{pS}$ instead of $\Gamma^{\mathrm{MR}}_{pS}$.
-
+and we use $\Gamma_{pS}$ instead of $\Gamma^{\mathrm{MR}}_{pS}$.
 
 
 \subsection{For the (110) surface}
@@ -780,17 +889,16 @@ components that do not contribute, and apply the the symmetry relations as
 follows,
 \begin{equation*}
 \begin{split}
-\Upsilon^{\mathrm{MR},(110)}_{pS}
-&= 
+\Upsilon^{\mathrm{MR},(110)}_{pS} &= 
 \Gamma^{\mathrm{MR}}_{pS}
 \big[
-2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\sin\phi\cos\phi
+2r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin\theta_{0}\sin\phi\cos\phi
 (\chi_{yyz} - \chi_{xxz})
 \big]\\\\\
 &= 
 \Gamma^{\mathrm{MR}}_{pS}
 \big[
-n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}(\chi_{yyz} - \chi_{xxz})\sin2\phi
+r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin\theta_{0}(\chi_{yyz} - \chi_{xxz})\sin2\phi
 \big]\\\\
 &= 
 \Gamma^{\mathrm{MR}}_{pS}r^{\mathrm{MR},(110)}_{pS}.
@@ -799,14 +907,15 @@ n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}(\chi_{yyz} - \chi_{xxz})\sin2\phi
 where
 \begin{equation}\label{eq:final-rps.mr.110}
 r^{\mathrm{MR},(110)}_{pS} =
-n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}(\chi_{yyz} - \chi_{xxz})\sin2\phi.
+r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin\theta_{0}(\chi_{yyz} - \chi_{xxz})\sin2\phi.
 \end{equation}
-As mentioned above,
+If we neglect the effects of the multiple reflections as mentioned above, we
+have
 \begin{equation}\label{eq:final-rps.110}
-r^{(110)}_{pS} = r^{\mathrm{MR},(110)}_{pS},
+r^{(110)}_{pS} = 
+n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}(\chi_{yyz} - \chi_{xxz})\sin2\phi,
 \end{equation}
-so if we wish to neglect the effects of the multiple reflections, we simply use
-$\Gamma_{pS}$ instead of $\Gamma^{\mathrm{MR}}_{pS}$.
+and we use $\Gamma_{pS}$ instead of $\Gamma^{\mathrm{MR}}_{pS}$.
 
 
 \subsection{For the (001) surface}
@@ -820,12 +929,13 @@ follows,
 = 
 \Gamma^{\mathrm{MR}}_{pS}
 \big[
-&- 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\sin\phi\cos\phi\chi_{xxz}\\
-&+ 2n^{2}_{\ell}n^{2}_{b}w_{b}\sin\theta_{0}\sin\phi\cos\phi\chi_{xxz}
-\big] = 0,
+&- 2r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin\theta_{0}\sin\phi\cos\phi\chi_{xxz}\\
+&+ 2r^{M+}_{p}r^{M-}_{p}w_{\ell}\sin\theta_{0}\sin\phi\cos\phi\chi_{xxz}
+\big] = 0.
 \end{split}
 \end{equation*}
-and thus,
+Neglecting the effects of multiple reflections will obviously yield the same
+result, thus
 \begin{equation}\label{eq:final-rps.mr.001}
 \Upsilon^{\mathrm{MR},(001)}_{pS} = \Upsilon^{(001)}_{pS} = 0.
 \end{equation}
@@ -837,30 +947,33 @@ and thus,
 
 \section{\texorpdfstring{$\mathcal{R}_{sP}$}{RsP}}
 
-Per Table \ref{tab:summary}, $\mathcal{R}_{sP}$ requires Eqs. \eqref{eq:e2wpmr}
-and \eqref{eq:ewews}. After some algebra, we obtain that
+Per Table \ref{tab:review}, $\mathcal{R}_{sP}$ requires Eqs. \eqref{eq:e2wpmr}
+and \eqref{eq:ewewsmr}. After some algebra, we obtain that
 \begin{equation}\label{eq:rspfullmr}
 \begin{split}
 \Upsilon^{\mathrm{MR}}_{sP} =
 \Gamma^{\mathrm{MR}}_{sP}
 \bigg[
-&R^{M-}_{p}W_{\ell}\big(
-- \sin^{2}\phi\cos\phi\chi_{xxx}
+&R^{M-}_{p}W_{\ell}
+\big(
+-\sin^{2}\phi\cos\phi\chi_{xxx}
 + 2\sin\phi\cos^{2}\phi\chi_{xxy}
 - \cos^{3}\phi\chi_{xyy}
- \big)\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-+&R^{M-}_{p}W_{\ell}\big(
+\big)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
++&R^{M-}_{p}W_{\ell}
+\big(
 - \sin^{3}\phi\chi_{yxx}
-+ 2\sin^{2}\phi\cos\phi\chi_{yxy}
++ 2\sin^{2}\phi\cos\phi \chi_{yyx}
 - \sin\phi\cos^{2}\phi\chi_{yyy}
- \big)\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-+&R^{M+}_{p}\sin\theta_{0}\big(
-+ \sin^{2}\phi\chi_{zxx}
+\big)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
++&R^{M+}_{p}\sin\theta_{0}
+\big(
+\sin^{2}\phi\chi_{zxx}
 - 2\sin\phi\cos\phi\chi_{zxy}
 + \cos^{2}\phi\chi_{zyy}
- \big)
+\big)
 \bigg].
 \end{split}
 \end{equation}
@@ -869,7 +982,7 @@ throughout this section,
 \begin{equation}\label{eq:gammaspmr}
 \Gamma^{\mathrm{MR}}_{sP} =
 \frac{T^{v\ell}_{p}}{N_{\ell}}
-\left(t^{v\ell}_{s}t^{\ell b}_{s}\right)^{2}
+\left(t^{v\ell}_{s}r^{M+}_{s}\right)^{2}
 \end{equation}
 
 If we neglect the multiple reflections, as described in the manuscript, we have
@@ -901,7 +1014,7 @@ that
 \end{equation}
 and again we introduce a quantity that will be repeated throughout this section,
 \begin{equation}\label{eq:gammasp}
-\Gamma_{pS} =
+\Gamma_{sP} =
 \frac{T^{v\ell}_{p}T^{\ell b}_{p}}{N^{2}_{\ell}N_{b}}
 \left(t^{v\ell}_{s}t^{\ell b}_{s}\right)^{2}.
 \end{equation}
@@ -1122,8 +1235,8 @@ N^{2}_{b}\sin\theta_{0}\chi_{zxx}.
 
 \section{\texorpdfstring{$\mathcal{R}_{sS}$}{RsS}}
 
-Per Table \ref{tab:summary}, $\mathcal{R}_{sS}$ requires Eqs. \eqref{eq:e2ws}
-and \eqref{eq:ewews}. After some algebra, we obtain that
+Per Table \ref{tab:review}, $\mathcal{R}_{sS}$ requires Eqs. \eqref{eq:e2wsmr}
+and \eqref{eq:ewewsmr}. After some algebra, we obtain that
 \begin{equation}\label{eq:rssfullmr}
 \begin{split}
 \Upsilon^{\mathrm{MR}}_{sS} = 
@@ -1142,7 +1255,7 @@ We take this opportunity to introduce a quantity that will be repeated
 throughout this section,
 \begin{equation}\label{eq:gammassmr}
 \Gamma^{\mathrm{MR}}_{sS} =
-T_{s}^{v\ell}R^{M+}_{s}\left(t^{v\ell}_{s}t^{\ell b}_{s}\right)^{2}
+T_{s}^{v\ell}R^{M+}_{s}\left(t^{v\ell}_{s}r^{M+}_{s}\right)^{2}.
 \end{equation}
 
 If we neglect the multiple reflections, as described in the manuscript, we have
