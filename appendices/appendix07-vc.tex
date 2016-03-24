@@ -1,0 +1,126 @@
+\chapter{Explicit expressions for \texorpdfstring{${\cal V}^{a,\ell}_{nm}(\bfk)$ and ${\cal C}^{\ell}_{nm}(\bfk)$}{Vnm and Cnm}}\label{calpcalc}
+
+Expanding the wave function in plane waves we obtain
+\begin{align}\label{eni.1}
+\psi_{n\bfk}(\bfr)=\sum_\bfG A_{n\bfk}(\bfG)e^{i(\bfk+\bfG)\cdot\bfr}
+,
+\end{align}
+where $\{\bfG\}$ are the reciprocal basis vectors satisfying
+$e^{\bfR\cdot\bfG}=1$, with $\{\bfR\}$ the translation vectors in real
+space, and $A_{n\bfk}(\bfG)$ are the expansion coefficients. Using
+$m_e\bfv=-i\hbar\bfgnabla$ into Eqs.~\eqref{vcali}
+and \eqref{nl.3}
+ we obtain,\cite{mendozaPRB06}
+\begin{align}\label{eni.2}
+\calbv^\ell_{nm}(\bfk)=
+\frac{\hbar}{2m_e}
+\sum_{\bfG,\bfG'} A^*_{n\bfk}(\bfG')  A_{m\bfk}(\bfG)
+(2\bfk+\bfG+\bfG')
+\gd_{\bfG_\parallel \bfG'_\parallel}  
+f_\ell(G_\perp-G'_\perp)
+,
+\end{align}   
+where
+\begin{align}\label{eni.3}
+f_\ell(g)=\frac{1}{L}\int_{z_\ell-\gD^b_\ell}^{z_\ell+\gD^f_\ell} e^{igz}dz
+,
+\end{align}
+where the reciprocal lattice vectors $\bfG$ are decomposed into components
+parallel to the surface $\bfG_\parallel$, and perpendicular to the
+surface $G_\perp \hat z$, so
+that $\bfG = \bfG_\parallel + G_\perp\hat z$.
+Likewise we obtain that
+\begin{align*}
+\mathcal{C}_{nm}(\mathbf{k})
+&=  \int\psi^{*}_{n\mathbf{k}}(\mathbf{r})f(z)
+    \psi_{m\mathbf{k}}(\mathbf{r})\,\text{d}\mathbf{r}\\
+&=  \sum_{\mathbf{G},\mathbf{G^{\prime}}}
+    A^{*}_{n\mathbf{k}}(\mathbf{G^{\prime}})
+    A_{m\mathbf{k}}(\mathbf{G})
+    \int f(z)e^{-i(\mathbf{G}-\mathbf{G^{\prime}})\cdot\mathbf{r}}\\
+&=  \sum_{\mathbf{G},\mathbf{G^{\prime}}}
+    A^{*}_{n\mathbf{k}}(\mathbf{G^{\prime}})
+    A_{m\mathbf{k}}(\mathbf{G})
+    \,\underbrace{
+    \int e^{-i(\mathbf{G}_{\parallel}-\mathbf{G}^{\prime}_{\parallel})
+    \cdot\mathbf{R}_{\parallel}}\,\text{d}\mathbf{R}_{\parallel}
+    }_{\delta_{\mathbf{G}_{\parallel}\mathbf{G}^{\prime}_{\parallel}}}
+    \,\underbrace{
+    \int e^{-i(g-g^{\prime})z}f(z)\,\text{d}z
+    }_{f_{\ell}(G_{\perp} - G^{\prime}_{\perp})},
+\end{align*}
+which we can express compactly as,
+\begin{align}\label{eni.4}
+\calc^\ell_{nm}(\bfk)=
+\sum_{\bfG,\bfG'} A^*_{n\bfk}(\bfG')  A_{m\bfk}(\bfG)
+\gd_{\bfG_\parallel \bfG'_\parallel} 
+f_\ell(G_\perp-G'_\perp)
+.
+\end{align}  
+The double summation over the $\bfG$ vectors can be efficiently done by
+creating a pointer array to identify all the plane-wave coefficients
+associated with the same $G_\parallel$. We take $z_\ell$
+ at the center of an atom that
+belongs to layer $\ell$, and thus above equations gives the $\ell$-th
+ atomic-layer
+contribution to the optical response.\cite{mendozaPRB06} 
+
+If $\calc^\ell(z)=1$ from Eqs.~\eqref{eni.2} and \eqref{eni.4}
+we recover the well known
+result
+\begin{align}\label{eni.21}
+  v_{nm}(\bfk)&=
+\frac{\hbar}{m_e}
+\sum_{\bfG} A^*_{n\bfk}(\bfG)  A_{m\bfk}(\bfG)
+(\bfk+\bfG)
+\nonumber\\
+\calc^\ell_{nm}&=\gd_{nm}
+,
+\end{align}  
+since for this case $f_\ell(g)=\gd_{g0}$.
+
+We remark that $\calbv^\ell_{nm}(\bfk)$ of Eq.~\eqref{eni.2} does not
+contain the contribution coming from the scissors operator.
+As commented in the paragraph after Eq.~\eqref{vopii}
+$\calbv^{\sigma,\ell}_{nm}(\bfk)\ne
+(\go^\gs_{nm}/\go_{nm})
+\calbv^{\lda,\ell}_{nm}(\bfk)$ 
+and
+$\calbv^{\sigma,\ell}_{nn}(\bfk)\ne
+\calbv^{\lda,\ell}_{nn}(\bfk)$,
+relations that are correct whether or not the contribution of
+$\bfv^\nl$ is taken into account.
+Therefore, in order to take the scissors correction correctly, we must
+follow Appendix \ref{calvs}.
+
+
+\section{Time--reversal relations}
+The following relations hold for time--reversal symmetry.
+\begin{equation*}
+A_{n\mathbf{k}}^{*}(\mathbf{G}) = A_{n-\mathbf{k}}(\mathbf{G}),
+\end{equation*}
+\begin{equation*}
+\mathbf{P}_{n\ell }(-\mathbf{k}) 
+=   \hbar\sum_{\mathbf{G}}
+    A_{n-\mathbf{k}}^{*}(\mathbf{G})
+    A_{\ell -\mathbf{k}}(\mathbf{G})(-\mathbf{k}+\mathbf{G}),
+\end{equation*}
+\begin{equation*}
+(\mathbf{G}\rightarrow-\mathbf{G})
+=   -\hbar\sum_{\mathbf{G}}
+    A_{n\mathbf{k}}(\mathbf{G})
+    A_{\ell\mathbf{k}}^{*}(\mathbf{G})(\mathbf{k}+\mathbf{G})
+=   -\mathbf{P}_{\ell n}(\mathbf{k}),
+\end{equation*}
+\begin{align*}
+\mathcal{C}_{nm} (L;-\mathbf{k}) 
+&=  \sum_{\mathbf{G}_{\parallel},g,g'}
+    A_{n-\mathbf{k}}^{*}(\mathbf{G}_{\parallel},g)
+    A_{m-\mathbf{k}}(\mathbf{G}_{\parallel},g')
+    f_{\ell}(g-g') \\
+&=  \sum_{\mathbf{G}_{\parallel},g,g'}
+    A_{n\mathbf{k}} (\mathbf{G}_{\parallel},g)
+    A_{m\mathbf{k}}^{*} (\mathbf{G}_{\parallel},g')
+    f_{\ell}(g-g') \\
+&=  \mathcal{C}_{mn}(L;\mathbf{k}).
+\end{align*}

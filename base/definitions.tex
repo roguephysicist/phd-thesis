@@ -1,0 +1,67 @@
+\usepackage{xmpincl}% For including licensing XMP metadata
+\usepackage{amsmath}% AMS Math
+%\usepackage{amssymb}% AMS Symbol
+%\usepackage{parskip}% No indent, line skipping paragraph breaks
+\usepackage{float}% For better control of figure placement and additional floats
+
+\usepackage{fancyhdr}% Fancy headers and footers.
+\pagestyle{empty}% Empty for \frontmatter
+
+\usepackage{graphicx}% You know it, baby!
+%\graphicspath{{.}{content/images/}}
+
+\usepackage{color}% For link colors
+\definecolor{linkcol}{rgb}{0,0,0.4} 
+\definecolor{citecol}{rgb}{0.5,0,0}
+\definecolor{emerald}{rgb}{0,0.5,0.5}
+
+\usepackage[bookmarksdepth=2,colorlinks=true,linkcolor=linkcol,citecolor=citecol,filecolor=magenta,urlcolor=linkcol,breaklinks=true]{hyperref}
+\urlstyle{same}% For all links within the document and URLs
+
+\usepackage{minitoc}% Mini table of contents for each chapter
+\setcounter{minitocdepth}{2}
+
+\usepackage[nottoc,notlof,notlot]{tocbibind}% Fine tuning table of contents
+\setcounter{tocdepth}{2}% Number of levels shown in TOC
+\setcounter{secnumdepth}{3}% Levels of section numbering
+\addtocontents{toc}{\protect\thispagestyle{empty}}% Ensures no page
+\addtocontents{lof}{\protect\thispagestyle{empty}}% numbers on toc,
+\addtocontents{lot}{\protect\thispagestyle{empty}}% lof, or lot
+
+%------------------------------ Definitions --------------------------------%
+
+% Centered page environment for frontmatter.
+% Credit to Matthieu Herrb (matthieu@laas.fr)
+\newenvironment{vcenterpage}
+{\newpage\vspace*{\fill}\thispagestyle{empty}\renewcommand{\headrulewidth}{0pt}}
+{\vspace*{\fill}}
+
+% Changes line spacing to be slightly easier to read
+%\renewcommand{\baselinestretch}{1.05}
+
+% Modifies book class defaults for better looking
+% chapter pages with small caps titles
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{1\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \LARGE\sc \@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 10\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \sc #1\par\nobreak
+    \vskip 25\p@
+  }}
+\def\@makeschapterhead#1{%
+  \vspace*{1\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \sc  #1\par\nobreak
+    \vskip 30\p@
+  }}
+\makeatother

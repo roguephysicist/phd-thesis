@@ -1,31 +1,74 @@
-\documentclass[11pt]{book}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{color}
-\usepackage[colorlinks=true]{hyperref}
+%%  TO-DO
+%%  1. Figure out why list of figures doesn't work
+%%  2. Page numbers on chapter headers
+%%  3. Page numbers on front matter
+%%  4. Consider separating main thesis from extended appendices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Optimized Software for Theoretical Optical Calculations}
-\author{Sean M. Anderson}
+\documentclass[letterpaper,11pt,openany]{book}
+\usepackage{MinionPro}
+
+\input{base/definitions}% Packages and new defintions
+\includexmp{base/CC_Attribution-NonCommercial-ShareAlike_3.0_Unported}
+\hypersetup{% PDF display options
+    pdftitle={Optimized Software for Theoretical Optical Calculations},
+    pdfauthor={Sean M. Anderson},
+    pdfsubject={A very modular LaTeX template that is appropriate for a masters 
+                or doctoral thesis.},
+    pdfkeywords={masters} {doctoral} {phd} {thesis} {dissertation} {latex}}
+
+\input{/Users/sma/Dropbox/shared/Bernie/definitions}
 
 \begin{document}
+\dominitoc
 
 \frontmatter
-\maketitle
+\include{frontmatter/titlepage_generic}
+\include{frontmatter/copyright}
+\include{frontmatter/signature_page}
+\include{frontmatter/epigraph}
+\include{frontmatter/abstract}
+\include{frontmatter/dedication}
+\include{frontmatter/acknowledgments}
+
 \tableofcontents
+\listoftables
+%\listoffigures
+
+\input{base/fancyheaders}
 
 \mainmatter
-%\chapter{Introduction}\label{ch:intro}
-%\include{chapters/00-intro}
-%% \chapter{chi2}\label{ch:chi2}
-%% \include{chapters/01-chi2}
-%% \chapter{SHG yield}\label{ch:shgyield}
-%% \include{chapters/02-code}
+\part{The Thesis}
+\include{chapters/00-intro}
+\include{chapters/01-nonlocal_chi2}
+\include{chapters/02-shgyield}
 %% \chapter{A study of the Si(111)(1$\times$1):H surface}\label{ch:si111}
 %% \include{chapters/03-results}
 %% \chapter{Conclusions}\label{ch:conc}
 %% \include{chapters/03-conc}
 
+\part{Appendices}
+\appendix
+\include{appendices/appendix01-re_ri}%reri A
+\include{appendices/appendix02-vnl}%appvnl B
+\include{appendices/appendix03-gen_der_calv}%calvs C
+\include{appendices/appendix04-gen_der_omega}%gwk D
+\include{appendices/appendix05-calv}%appv E
+\include{appendices/appendix06-tnm}%calt F
+\include{appendices/appendix07-vc}%calpcalc G
+\include{appendices/appendix08-gen_der_r_nonlocal}%gdernl H
+\include{appendices/appendix09-code}%code I
+\include{appendices/appendix10-div_free_exp_chi}
+\include{appendices/appendix11-dirac}
+\include{appendices/appendix12-basic_relationships}
+\include{appendices/appendix13-gen_der_r}
+\include{appendices/appendix14-gen_der_calr}
+\include{appendices/appendix15-odds_ends}
+\include{appendices/appendix16-explicit_derivations_r}
+\include{appendices/appendix17-limiting_cases}
+\include{appendices/appendix18-sipe_moss_vandriel}
 
+\backmatter
 \bibliographystyle{unsrt}
 \bibliography{/Users/sma/Dropbox/docs/academics/master,old}
 
