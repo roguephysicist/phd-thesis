@@ -20,3 +20,10 @@
 4. Conclusions
     * How we improved on old calculations, both in quality and speed
     * Future work on the coding, implementation of gw, mbpt, tddft, etc.
+
+
+# TO-DO
+1. Figure out why list of figures doesn't work
+2. Page numbers on chapter headers
+3. Page numbers on front matter
+4. Consider separating main thesis from extended appendices
