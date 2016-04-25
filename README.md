@@ -1,7 +1,5 @@
 # Thesis Overview
 
-1. Intro
-    Ask for nicolas thesis to get clues.
 2. chi2
     * New additions to chi2
     * Overview of TINIBA 
@@ -27,3 +25,5 @@
 2. Page numbers on chapter headers
 3. Page numbers on front matter
 4. Consider separating main thesis from extended appendices
+5. make plot where we compare with and without MR for linear part at average depth
+
