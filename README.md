@@ -27,3 +27,6 @@
 4. Consider separating main thesis from extended appendices
 5. make plot where we compare with and without MR for linear part at average depth
 
+
+
+CONVENTIONS
