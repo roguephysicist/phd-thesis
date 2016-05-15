@@ -21,12 +21,9 @@
 
 
 # TO-DO
-1. Figure out why list of figures doesn't work
-2. Page numbers on chapter headers
-3. Page numbers on front matter
-4. Consider separating main thesis from extended appendices
-5. make plot where we compare with and without MR for linear part at average depth
+2. change part titles to small caps
 
 
-
-CONVENTIONS
+Figures
+4.1.01: black line should go all the way
+4.3.01: see if you can fix the cross on the experiment label

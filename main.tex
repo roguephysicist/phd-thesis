@@ -1,131 +1,92 @@
 \documentclass[letterpaper,11pt,openany]{book}
 
-%\usepackage{MinionPro}
-\usepackage{amsmath}% AMS Math
-\usepackage{showframe}
-\usepackage{fancyhdr}% Fancy headers and footers.
-%\usepackage{xmpincl}% For including licensing XMP metadata
-%\usepackage{amssymb}% AMS Symbol
-%\usepackage{parskip}% No indent, line skipping paragraph breaks
-%\usepackage{float}% For better control of figure placement and additional floats
+% \usepackage{MinionPro}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+% \usepackage{showframe}
+% \usepackage{amssymb}
+% \usepackage{float}
 
 \usepackage{graphicx}% You know it, baby!
-%\graphicspath{{.}{content/images/}}
+% \graphicspath{{.}{content/images/}}
 
 \usepackage{color}% For link colors
 \definecolor{linkcol}{rgb}{0,0,0.4} 
 \definecolor{citecol}{rgb}{0.5,0,0}
 \definecolor{emerald}{rgb}{0,0.5,0.5}
 
-\usepackage[bookmarksdepth=2,colorlinks=true,linkcolor=linkcol,citecolor=citecol,filecolor=magenta,urlcolor=linkcol,breaklinks=true]{hyperref}
-\urlstyle{same}% For all links within the document and URLs
+\usepackage[bookmarksdepth=2,colorlinks=true,linkcolor=linkcol,
+            citecolor=citecol,filecolor=magenta,urlcolor=linkcol,
+            breaklinks=true]{hyperref}
+\urlstyle{same}
 
-%\usepackage{minitoc}% Mini table of contents for each chapter
-%\setcounter{minitocdepth}{2}
+\usepackage{minitoc}
+\setcounter{minitocdepth}{2}
 
-%\usepackage[nottoc,notlof,notlot]{tocbibind}% Fine tuning table of contents
-%\setcounter{tocdepth}{2}% Number of levels shown in TOC
-%\setcounter{secnumdepth}{3}% Levels of section numbering
-%\addtocontents{toc}{\protect\thispagestyle{empty}}% Ensures no page
-%\addtocontents{lof}{\protect\thispagestyle{empty}}% numbers on toc,
-%\addtocontents{lot}{\protect\thispagestyle{empty}}% lof, or lot
+% \usepackage[nottoc,notlof,notlot]{tocbibind}% Fine tuning table of contents
+% \setcounter{tocdepth}{2}% Number of levels shown in TOC
+% \setcounter{secnumdepth}{3}% Levels of section numbering
 
-%\includexmp{base/CC_Attribution-NonCommercial-ShareAlike_3.0_Unported}
-%\hypersetup{% PDF display options
-%    pdftitle={Optimized Software for Theoretical Optical Calculations},
-%    pdfauthor={Sean M. Anderson},
-%    pdfsubject={Nonlinear optical studies of gold and silicon nanoparticles
-%                using the XP2SHG/SFG technique.},
-%    pdfkeywords={nonlinear} {optics} {shg} {sfg} {nanoparticles} {spectroscopy}
-%    {surface} {techniques}}
+\hypersetup{% PDF display options
+   pdftitle={Optimized Software for Theoretical Optical Calculations},
+   pdfauthor={Sean M. Anderson},
+   pdfsubject={Theory of SHG in crystalline semiconductors, from the nonlinear
+   polarization and susceptility, to the SSHG radiation with results.},
+   pdfkeywords={nonlinear} {optics} {shg} {radiation} {semiconductors}
+   {spectroscopy} {surface} {experiment}
+   }
 
-%------------------------------ Definitions --------------------------------%
+\input{base/definitions}
+\input{base/bms}
 
-% Centered page environment for frontmatter.
-% Credit to Matthieu Herrb (matthieu@laas.fr)
-\newenvironment{vcenterpage}
-{\newpage\vspace*{\fill}\thispagestyle{empty}\renewcommand{\headrulewidth}{0pt}}
-{\vspace*{\fill}}
-
-% Changes line spacing to be slightly easier to read
-%\renewcommand{\baselinestretch}{1.05}
-
-% Modifies book class defaults for better looking
-% chapter pages with small caps titles
-\makeatletter
-\def\@makechapterhead#1{%
-  \vspace*{1\p@}%
-  {\parindent \z@ \raggedright \normalfont
-    \ifnum \c@secnumdepth >\m@ne
-      \if@mainmatter
-        \LARGE\sc \@chapapp\space \thechapter
-        \par\nobreak
-        \vskip 10\p@
-      \fi
-    \fi
-    \interlinepenalty\@M
-    \Huge \sc #1\par\nobreak
-    \vskip 25\p@
-  }}
-\def\@makeschapterhead#1{%
-  \vspace*{1\p@}%
-  {\parindent \z@ \raggedright
-    \normalfont
-    \interlinepenalty\@M
-    \Huge \sc  #1\par\nobreak
-    \vskip 30\p@
-  }}
-\makeatother
-
-%\input{/Users/sma/Dropbox/shared/Bernie/definitions}
 
 \begin{document}
-%\dominitoc
+\dominitoc
 
-%\pagestyle{empty}% Empty for \frontmatter
-%\frontmatter
-%\include{frontmatter/titlepage_generic}
-%\include{frontmatter/copyright}
-%\include{frontmatter/signature_page}
-%\include{frontmatter/epigraph}
-%\include{frontmatter/abstract}
-%\include{frontmatter/dedication}
-%\include{frontmatter/acknowledgments}
+\pagestyle{plain}
+\frontmatter
+\include{frontmatter/titlepage_generic}
+\include{frontmatter/copyright}
+\include{frontmatter/signature_page}
+\include{frontmatter/epigraph}
+\include{frontmatter/abstract}
+\include{frontmatter/dedication}
+\include{frontmatter/acknowledgments}
 
-%\tableofcontents
-%\listoftables
-%\listoffigures
+\tableofcontents
+\listoftables
+\listoffigures
+\clearpage
 
-%\input{base/fancyheaders}
-
+\input{base/fancyheaders}
 \mainmatter
-%\part{The Thesis}
-%\include{chapters/00-intro}
+\part{The Thesis}
+\include{chapters/00-intro}
 \include{chapters/01-nonlocal_chi2}
 \include{chapters/02-shgyield}
-%\include{chapters/03-results}
-%\include{chapters/04-conc}
+\include{chapters/03-results}
+\include{chapters/04-conclusion}
 
-%%\part{Appendices}
-%%\appendix
-%%\include{appendices/appendix01-re_ri}%reri A
-%%\include{appendices/appendix02-vnl}%appvnl B
-%%\include{appendices/appendix03-gen_der_calv}%calvs C
-%%\include{appendices/appendix04-gen_der_omega}%gwk D
-%%\include{appendices/appendix05-calv}%appv E
-%%\include{appendices/appendix06-tnm}%calt F
-%%\include{appendices/appendix07-vc}%calpcalc G
-%%\include{appendices/appendix08-gen_der_r_nonlocal}%gdernl H
-%%\include{appendices/appendix09-code}%code I
-%%\include{appendices/appendix10-div_free_exp_chi}
-%%\include{appendices/appendix11-dirac}
-%%\include{appendices/appendix12-basic_relationships}
-%%\include{appendices/appendix13-gen_der_r}
-%%\include{appendices/appendix14-gen_der_calr}
-%%\include{appendices/appendix15-odds_ends}
-%%\include{appendices/appendix16-explicit_derivations_r}
-%%\include{appendices/appendix17-limiting_cases}
-%%\include{appendices/appendix18-sipe_moss_vandriel}
+\part{Appendices}
+\appendix
+\include{appendices/appendix01-re_ri}%reri A
+\include{appendices/appendix02-vnl}%appvnl B
+\include{appendices/appendix03-gen_der_calv}%calvs C
+\include{appendices/appendix04-gen_der_omega}%gwk D
+\include{appendices/appendix05-calv}%appv E
+\include{appendices/appendix06-tnm}%calt F
+\include{appendices/appendix07-vc}%calpcalc G
+\include{appendices/appendix08-gen_der_r_nonlocal}%gdernl H
+\include{appendices/appendix09-code}%code I
+\include{appendices/appendix10-div_free_exp_chi}
+\include{appendices/appendix11-dirac}
+\include{appendices/appendix12-basic_relationships}
+\include{appendices/appendix13-gen_der_r}
+\include{appendices/appendix14-gen_der_calr}
+\include{appendices/appendix15-odds_ends}
+\include{appendices/appendix16-explicit_derivations_r}
+\include{appendices/appendix17-limiting_cases}
+\include{appendices/appendix18-sipe_moss_vandriel}
 
 \backmatter
 \bibliographystyle{unsrt}
