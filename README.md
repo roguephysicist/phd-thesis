@@ -12,18 +12,12 @@
     * Talk about how derived equations are totally consistent with Sipe et al.
     * Radiation models for SHG developed
     * Coding nonrefco
-3. Results
-    * Comparison with Si(111) 1x1 (article)
-    * Multiple reflections
 4. Conclusions
     * How we improved on old calculations, both in quality and speed
     * Future work on the coding, implementation of gw, mbpt, tddft, etc.
 
 
 # TO-DO
+1. switch over to memoir, which means changing to fancy headers and titlepage
+    that are built in.
 2. change part titles to small caps
-
-
-Figures
-4.1.01: black line should go all the way
-4.3.01: see if you can fix the cross on the experiment label

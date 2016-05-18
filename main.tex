@@ -1,40 +1,41 @@
-\documentclass[letterpaper,11pt,openany]{book}
+\documentclass[letterpaper,11pt,twoside,openany]{book}
 
-% \usepackage{MinionPro}
 \usepackage{amsmath}
 \usepackage{fancyhdr}
+\usepackage{subcaption}
+\usepackage{graphicx}
+
+% \usepackage{MinionPro}
 % \usepackage{showframe}
 % \usepackage{amssymb}
 % \usepackage{float}
-
-\usepackage{graphicx}% You know it, baby!
-% \graphicspath{{.}{content/images/}}
-
-\usepackage{color}% For link colors
-\definecolor{linkcol}{rgb}{0,0,0.4} 
-\definecolor{citecol}{rgb}{0.5,0,0}
-\definecolor{emerald}{rgb}{0,0.5,0.5}
 
 \usepackage[bookmarksdepth=2,colorlinks=true,linkcolor=linkcol,
             citecolor=citecol,filecolor=magenta,urlcolor=linkcol,
             breaklinks=true]{hyperref}
 \urlstyle{same}
-
-\usepackage{minitoc}
-\setcounter{minitocdepth}{2}
-
-% \usepackage[nottoc,notlof,notlot]{tocbibind}% Fine tuning table of contents
-% \setcounter{tocdepth}{2}% Number of levels shown in TOC
-% \setcounter{secnumdepth}{3}% Levels of section numbering
-
 \hypersetup{% PDF display options
    pdftitle={Optimized Software for Theoretical Optical Calculations},
    pdfauthor={Sean M. Anderson},
    pdfsubject={Theory of SHG in crystalline semiconductors, from the nonlinear
    polarization and susceptility, to the SSHG radiation with results.},
    pdfkeywords={nonlinear} {optics} {shg} {radiation} {semiconductors}
-   {spectroscopy} {surface} {experiment}
-   }
+   {spectroscopy} {surface} {experiment}}
+
+\usepackage{color}% For link colors
+\definecolor{linkcol}{rgb}{0,0,0.4} 
+\definecolor{citecol}{rgb}{0.5,0,0}
+\definecolor{emerald}{rgb}{0,0.5,0.5}
+
+%\setsecnumdepth{subsection}
+
+\usepackage{minitoc}
+\setcounter{minitocdepth}{1}
+
+% \usepackage[nottoc,notlof,notlot]{tocbibind}% Fine tuning table of contents
+% \setcounter{tocdepth}{2}% Number of levels shown in TOC
+% \setcounter{secnumdepth}{3}% Levels of section numbering
+
 
 \input{base/definitions}
 \input{base/bms}
@@ -43,53 +44,53 @@
 \begin{document}
 \dominitoc
 
-\pagestyle{plain}
+\pagestyle{empty}
 \frontmatter
-\include{frontmatter/titlepage_generic}
-\include{frontmatter/copyright}
-\include{frontmatter/signature_page}
-\include{frontmatter/epigraph}
-\include{frontmatter/abstract}
-\include{frontmatter/dedication}
-\include{frontmatter/acknowledgments}
+% \include{frontmatter/titlepage_generic}
+% \include{frontmatter/copyright}
+% \include{frontmatter/signature_page}
+% \include{frontmatter/epigraph}
+% \include{frontmatter/abstract}
+% \include{frontmatter/dedication}
+% \include{frontmatter/acknowledgments}
 
 \tableofcontents
-\listoftables
-\listoffigures
-\clearpage
+% \listoftables
+% \listoffigures
+% \clearpage
 
-\input{base/fancyheaders}
 \mainmatter
+\input{base/fancyheaders}
 \part{The Thesis}
-\include{chapters/00-intro}
-\include{chapters/01-nonlocal_chi2}
-\include{chapters/02-shgyield}
-\include{chapters/03-results}
-\include{chapters/04-conclusion}
+% \include{chapters/intro}
+% \include{chapters/chi2}
+\include{chapters/shgyield}
+\include{chapters/results}
+% \include{chapters/conclusion}
 
 \part{Appendices}
 \appendix
-\include{appendices/appendix01-re_ri}%reri A
-\include{appendices/appendix02-vnl}%appvnl B
-\include{appendices/appendix03-gen_der_calv}%calvs C
-\include{appendices/appendix04-gen_der_omega}%gwk D
-\include{appendices/appendix05-calv}%appv E
-\include{appendices/appendix06-tnm}%calt F
-\include{appendices/appendix07-vc}%calpcalc G
-\include{appendices/appendix08-gen_der_r_nonlocal}%gdernl H
-\include{appendices/appendix09-code}%code I
-\include{appendices/appendix10-div_free_exp_chi}
-\include{appendices/appendix11-dirac}
-\include{appendices/appendix12-basic_relationships}
-\include{appendices/appendix13-gen_der_r}
-\include{appendices/appendix14-gen_der_calr}
-\include{appendices/appendix15-odds_ends}
+% \include{appendices/appendix01-re_ri}%reri A
+% \include{appendices/appendix02-vnl}%appvnl B
+% \include{appendices/appendix03-gen_der_calv}%calvs C
+% \include{appendices/appendix04-gen_der_omega}%gwk D
+% \include{appendices/appendix05-calv}%appv E
+% \include{appendices/appendix06-tnm}%calt F
+% \include{appendices/appendix07-vc}%calpcalc G
+% \include{appendices/appendix08-gen_der_r_nonlocal}%gdernl H
+% \include{appendices/appendix09-code}%code I
+% \include{appendices/appendix10-div_free_exp_chi}
+% \include{appendices/appendix11-dirac}
+% \include{appendices/appendix12-basic_relationships}
+% \include{appendices/appendix13-gen_der_r}
+% \include{appendices/appendix14-gen_der_calr}
+% \include{appendices/appendix15-odds_ends}
 \include{appendices/appendix16-explicit_derivations_r}
 \include{appendices/appendix17-limiting_cases}
 \include{appendices/appendix18-sipe_moss_vandriel}
 
 \backmatter
 \bibliographystyle{unsrt}
-\bibliography{/Users/sma/Dropbox/docs/academics/master,old}
+\bibliography{/Users/sma/Dropbox/docs/academics/master}
 
 \end{document}
