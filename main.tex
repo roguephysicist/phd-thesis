@@ -1,14 +1,15 @@
-\documentclass[letterpaper,11pt,twoside,openany]{book}
+\documentclass[letterpaper,11pt,twoside,openany]{memoir}
 
 \usepackage{amsmath}
-\usepackage{fancyhdr}
 \usepackage{subcaption}
 \usepackage{graphicx}
 
 % \usepackage{MinionPro}
+% \usepackage{fancyhdr}
 % \usepackage{showframe}
 % \usepackage{amssymb}
 % \usepackage{float}
+% \usepackage{showkeys}
 
 \usepackage[bookmarksdepth=2,colorlinks=true,linkcolor=linkcol,
             citecolor=citecol,filecolor=magenta,urlcolor=linkcol,
@@ -27,7 +28,8 @@
 \definecolor{citecol}{rgb}{0.5,0,0}
 \definecolor{emerald}{rgb}{0,0.5,0.5}
 
-%\setsecnumdepth{subsection}
+\maxtocdepth{subsection}
+\setsecnumdepth{subsection}
 
 \usepackage{minitoc}
 \setcounter{minitocdepth}{1}
@@ -37,14 +39,14 @@
 % \setcounter{secnumdepth}{3}% Levels of section numbering
 
 
-\input{base/definitions}
-\input{base/bms}
+% \input{base/definitions}
+% \input{base/bms}
 
 
 \begin{document}
 \dominitoc
 
-\pagestyle{empty}
+% \pagestyle{empty}
 \frontmatter
 % \include{content/frontmatter/titlepage_generic}
 % \include{content/frontmatter/copyright}
@@ -60,7 +62,7 @@
 % \clearpage
 
 \mainmatter
-\input{base/fancyheaders}
+% \input{base/fancyheaders}
 \part{The Thesis}
 % \include{content/chapters/intro}
 % \include{content/chapters/chi2}
@@ -85,10 +87,10 @@
 % \include{content/appendices/appendix13-gen_der_r}
 % \include{content/appendices/appendix14-gen_der_calr}
 % \include{content/appendices/appendix15-odds_ends}
-\include{content/appendices/sshgyieldnomr}
-\include{content/appendices/appendix16-explicit_derivations_r}
-\include{content/appendices/appendix17-limiting_cases}
-\include{content/appendices/appendix18-sipe_moss_vandriel}
+\include{content/appendices/sshg-without_multiref}
+\include{content/appendices/sshg-explicit_expressions_rif}
+\include{content/appendices/sshg-limiting_cases}
+\include{content/appendices/sshg-sipe_moss_vandriel}
 
 \backmatter
 \bibliographystyle{unsrt}

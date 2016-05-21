@@ -21,3 +21,4 @@
 1. switch over to memoir, which means changing to fancy headers and titlepage
     that are built in.
 2. change part titles to small caps
+3. REMEMBER TO CHECK CONSISTENCY BETWEEN CHAP3 and article-multiref!
