@@ -1,6 +1,6 @@
 %!TEX root = ../../main.tex
 \chapter{Results}\label{chap:results}
-\minitoc
+\partialtoc
 
 In this chapter I present results for the Si(001)(2$\times$1), and the Si(111)(1$\times$1):H surfaces. The former is presented in a special configuration that allows us to directly compare the nonlinear susceptibility produced from the entire slab with the half-slab. I also present the effect that the scissors operator and the addition of $\mathbf{v}^{\mathrm{nl}}$ has on the spectrum.
 
@@ -33,6 +33,7 @@ out of the surface with the $x$ coordinate along the crystallographic [011]
 direction, parallel to the dimers.
 
 \begin{figure}
+    \centering
     \begin{minipage}[b]{0.31\textwidth}
         \centering
         \includegraphics[width=\textwidth]{content/figures/source/structure/Si2x1-front}
@@ -315,6 +316,7 @@ assassin long-chain hydrocarbons stimulate construct sentient realism DIY Legba
 hotdog neural.
 
 \begin{figure}
+    \centering
     \begin{minipage}[b]{0.5\textwidth}
         \centering
         \includegraphics[height=5.8cm]{content/figures/fig-4_2_01}
@@ -342,6 +344,7 @@ Tower advert carbon city camera soul-delay fluidity RAF kanji corrupted
 refrigerator skyscraper cartel nodality nodal point dead.
 
 \begin{figure}
+    \centering
     \begin{minipage}[b]{0.5\textwidth}
         \centering
         \includegraphics[height=5.8cm]{content/figures/fig-4_2_03}
@@ -413,6 +416,7 @@ contiguous surfaces of the full crystal formed by the repeated super-cell
 scheme.\cite{mendozaPRB06}
 
 \begin{figure}
+    \centering
     \begin{minipage}[b]{0.31\textwidth}
         \centering
         \includegraphics[width=\textwidth]{content/figures/source/structure/Si1x1-front}
@@ -458,8 +462,8 @@ to be a very reasonable value for the scissors correction.
 The method of calculation is as follows. I first calculated
 $\varepsilon_{b}(\omega)$, $\varepsilon_{\ell}(\omega)$, and then
 $\chi^{\mathrm{abc}}(-2\omega;\omega,\omega)$ from Eq. \eqref{eq:chis}. I used
-these for the Fresnel factors and in Eqs. \eqref{eq:rpP}, \eqref{eq:rpS}, and
-\eqref{eq:rsP}, and finally, those into Eq. \eqref{eq:r19} to obtain the
+these for the Fresnel factors and in Eqs. \eqref{eq:rpp111}, \eqref{eq:rps111},
+and \eqref{eq:rsp111}, and finally, those into Eq. \eqref{eq:mc6} to obtain the
 theoretical SSHG yield for different polarizations that can then be compared
 with the experimental data. All results for
 $\chi^{\mathrm{abc}}(-2\omega;\omega,\omega)$ and ${\mathcal R_{\mathrm{iF}}}$
@@ -546,7 +550,7 @@ I first compare the calculated $\mathcal{R}_{pS}$ spectra with room temperature
 experimental data from Ref. \cite{mejiaPRB02}. Adhering to the experimental
 setup, I set an angle of incidence $\theta=65^{\circ}$ and an azimuthal angle of
 $\phi=30^\circ$ with respect to the $x$-axis. This azimuthal angle maximizes
-$r_{pS}$, as shown in Eq. \eqref{eq:rpS}. Fig. \ref{fig:RpS}, shows that all
+$r_{pS}$, as shown in Eq. \eqref{eq:rps111}. Fig. \ref{fig:RpS}, shows that all
 three models reproduce the lineshape of the experimental spectrum which includes
 the peaks corresponding to both the E$_{1}$ (3.4\,eV) and E$_{2}$ (4.3\,eV)
 critical points of bulk silicon, and a smaller feature at around 3.8\,eV. The
@@ -600,27 +604,27 @@ from Ref. \cite{mitchellSS01}, measured at room temperature.}
 \label{fig:mitchellRpS}
 \end{figure}
 
-From Fig.~\ref{fig:Xxxx}, I presented that our calculation for
+From Fig. \ref{fig:Xxxx}, I presented that our calculation for
 $\chi^{xxx}(-2\omega;\omega,\omega)$ coincides with the measurement taken at a
 low temperature of 80 K. It is well known that temperature causes shifting in
 the peak position of SSHG spectra \cite{dadapPRB97}. As $\mathcal{R}_{pS}$ only
-depends on this component (see Eq.~\eqref{eq:rpS}), the position of the
+depends on this component (see Eq. \eqref{eq:rps111}), the position of the
 theoretical peak should be correct in Figs. \ref{fig:RpS} and
 \ref{fig:mitchellRpS}. Thus, the difference in peak position should stem from
 the higher temperature at which the experiments were measured.
 
 Both the 2-layer-fresnel and 2-layer-bulk models are identical and roughly four
-times smaller than the experiment. It is clear from Eq. \eqref{eq:rpS} that
+times smaller than the experiment. It is clear from Eq. \eqref{eq:rps111} that
 $\mathcal{R}_{pS}$ only has $1\omega$ terms ($\varepsilon_{\ell}(\omega)$ and
 $k_{b}$). For both of these models, the fundamental fields are evaluated in the
-bulk, which means that the only change to Eq. \eqref{eq:rpS} is that
+bulk, which means that the only change to Eq. \eqref{eq:rps111} is that
 $\varepsilon_{\ell}(\omega) \rightarrow \varepsilon_{b}(\omega)$. Additionally,
 $\Gamma^{\ell}_{pS}$ also remains identical between the two models and has no
 $2\omega$ terms in the denominator. Therefore, $r_{pS}$ is identical between
 these two models. Ultimately, the intensity of the 3-layer model is the closest
 to the experiment.
 
-Per Eq. \eqref{eq:rpS}, the intensity of $\mathcal{R}_{pS}$ depends only on
+Per Eq. \eqref{eq:rps111}, the intensity of $\mathcal{R}_{pS}$ depends only on
 $\chi^{xxx}$, which is not affected by local field effects
 \cite{tancognedejean:tel-01235611}. These effects are neglected in this
 calculation, but $\mathcal{R}_{pS}$ maintains an accurate lineshape and provides
@@ -682,7 +686,7 @@ more intense than experiment and produces an enlarged E$_{2}$ peak. The
 3-layer model.
 
 The differences between the 2-layer-fresnel and 2-layer-bulk models are not
-derived from Eq. \eqref{eq:rsP}, as the $\varepsilon_{b}(2\omega)$ does not
+derived from Eq. \eqref{eq:rsp111}, as the $\varepsilon_{b}(2\omega)$ does not
 change and the second term vanishes for this azimuthal angle of $\phi = 30$.
 However, $\Gamma^{\ell}_{sP}$ does cause a significant change in the intensity
 as there is an $\varepsilon_{\ell}(2\omega)$ term in the denominator. This will
@@ -724,7 +728,7 @@ intense. The calculated E$_{2}$ peak is similar, but the E$_{1}$ peak lacks the
 sharpness present in the experiment. The 2-layer-bulk model is almost identical
 in lineshape to the 3-layer model, but with eight times less intensity.
 
-From Eq. \eqref{eq:rpP}, it is clear that $\mathcal{R}_{pP}$ has several
+From Eq. \eqref{eq:rpp111}, it is clear that $\mathcal{R}_{pP}$ has several
 $2\omega$ terms that will change between models; this will have a deep effect on
 the lineshape. Additionally, $\Gamma^{\ell}_{pP}$ also has
 $\varepsilon_{\ell}(2\omega)$ in the denominator, and so we have a significant
@@ -747,7 +751,7 @@ with $\sigma=0.075\,\text{eV}$. Experimental data taken from Ref.
 \label{fig:RpP}
 \end{figure}
 
-Reviewing Eq. \eqref{eq:rpP}, we see that $\mathcal{R}_{pP}$ is by far the most involved calculation, since it includes all four nonzero components. In particular, $\chi_{\perp\perp\perp}$ and $\chi_{\parallel\parallel\perp}$ include out-of-plane incoming fields. These are affected by local field effects\cite{tancognedejean:tel-01235611} that reveal the inhomogeneities in the material, which are by far more prevalent perpendicular to the surface than in the surface plane. This can be evidenced for Si, as Reflectance Anisotropy Spectroscopy (RAS) measurements are well described by \emph{ab initio} calculations neglecting local field effects.\cite{palummoPRB99, gaalPRB09} It is therefore expected that the out-of-plane components will be more sensitive to the inclusion of local fields. These will not change the transition energies, only their relative weights of the resonant peaks,\cite{tancognedejean:tel-01235611} but including these effects is challenging to compute,\cite{nicolasPRB15} and beyond the scope of this paper. We speculate that $\mathcal{R}_{pP}$ requires the proper inclusion of these effects in order to accurately describe the experimental peaks.
+Reviewing Eq. \eqref{eq:rpp111}, we see that $\mathcal{R}_{pP}$ is by far the most involved calculation, since it includes all four nonzero components. In particular, $\chi_{\perp\perp\perp}$ and $\chi_{\parallel\parallel\perp}$ include out-of-plane incoming fields. These are affected by local field effects\cite{tancognedejean:tel-01235611} that reveal the inhomogeneities in the material, which are by far more prevalent perpendicular to the surface than in the surface plane. This can be evidenced for Si, as Reflectance Anisotropy Spectroscopy (RAS) measurements are well described by \emph{ab initio} calculations neglecting local field effects.\cite{palummoPRB99, gaalPRB09} It is therefore expected that the out-of-plane components will be more sensitive to the inclusion of local fields. These will not change the transition energies, only their relative weights of the resonant peaks,\cite{tancognedejean:tel-01235611} but including these effects is challenging to compute,\cite{nicolasPRB15} and beyond the scope of this paper. We speculate that $\mathcal{R}_{pP}$ requires the proper inclusion of these effects in order to accurately describe the experimental peaks.
 
 In Fig. \ref{fig:mitchellRpP}, I compare the theoretical spectra to results from
 Ref. \cite{mitchellSS01}. The 3-layer model is, as before, close to the
@@ -787,6 +791,7 @@ Lastly, for linear optics and SHG, $GW$ transition energies are needed. Doing a 
 \subsection{}
 
 \begin{figure}
+    \centering
     \begin{minipage}[b]{0.5\textwidth}
         \centering
         \includegraphics[height=6cm]{content/figures/fig-4_4_08}
@@ -806,6 +811,7 @@ Lastly, for linear optics and SHG, $GW$ transition energies are needed. Doing a 
 \end{figure}
 
 \begin{figure}
+    \centering
     \begin{minipage}[b]{0.5\textwidth}
         \centering
         \includegraphics[height=6cm]{content/figures/fig-4_4_10}
@@ -832,7 +838,7 @@ including the effects of multiple reflections}\label{sec:rifmr}
 
 We consider a Si(111)(1$\times$1):H surface as a test case for the three layer model and to study the effects that multiple reflections have on the SSHG radiation. This surface is well characterized experimentally,\cite{mitchellSS01, mejiaPRB02, bergfeldPRL04} and there has been success in reproducing these experimental results using the three layer model without multiple reflections.\cite{andersonPRB16} The details of the \emph{ab initio} calculation of $\chi_{ijk}$ are not needed for the following discussion, and are left for the reader in Ref. \cite{andersonPRB16}. However, we mention that we apply a scissors shift of 0.7 eV to the theoretical spectra. In a first approximation, this includes the effects of the electronic many-body interactions within the independent particle approach for the \emph{ab initio} calculation. This 0.7 eV value allows the SH resonant peaks to acquire their corresponding energy positions, and is calculated with what is known as a $G_{0}W_{0}$ calculation.\cite{andersonPRB16} As mentioned in Sec. \ref{sec:intro}, we are interested in finding the thickness of the layer $\ell$ where $\chi_{ijk} \ne 0$. For this surface, we found well-converged results for a thickness of $\sim 5$ nm, that is equivalent to 24 atomic sheets of Si along the (111) direction. As this represents only the upper half of the slab, we find it reasonable to choose the thickness of the layer $\ell$ to be between $d\sim 5-10$ nm. This corresponds to a half-slab comprised of 24 to 48 atomic layers to get well-converged values of $\chi_{ijk}$.
 
-We begin our comparisons in Fig. \ref{fig:average}, in which we compare the theoretical results for the SHG radiation with the experimental results from Ref. \cite{mejiaPRB02}. The theoretical curves that include multiple reflections are featured with the average value $\bar{R}^{M}_{i}$, Eq. \eqref{eq:mcave2}, with two values for the total thickness, $d$, and Eqs. \eqref{eq:mc78} and \eqref{rpp111}. We contrast these with the standard three layer model excluding the effects of multiple reflections from Sec. \ref{sec:nomr}. We see that the $E_{2}$ peak is blueshifted by around 0.3\,eV, and the yield does not go to zero after 4.75\,eV. $\mathcal{R}_{pP}$ is by far the most involved calculation out of the four different polarization cases, since it includes all four nonzero components. In particular, $\chi_{\perp\perp\perp}$ and $\chi_{\parallel\parallel\perp}$ include out-of-plane incoming fields. These are affected by local field effects that can change both intensity and peak position.\cite{tancognedejean:tel-01235611} Including these effects is computationally very expensive and is beyond the scope of this paper. We speculate that $\mathcal{R}_{pP}$ requires the proper inclusion of these effects in order to accurately describe the experimental peaks.
+We begin our comparisons in Fig. \ref{fig:average}, in which we compare the theoretical results for the SHG radiation with the experimental results from Ref. \cite{mejiaPRB02}. The theoretical curves that include multiple reflections are featured with the average value $\bar{R}^{M}_{i}$, Eq. \eqref{eq:mcave2}, with two values for the total thickness, $d$, and Eqs. \eqref{eq:mc78} and \eqref{eq:rpp111}. We contrast these with the standard three layer model excluding the effects of multiple reflections from Sec. \ref{sec:nomr}. We see that the $E_{2}$ peak is blueshifted by around 0.3\,eV, and the yield does not go to zero after 4.75\,eV. $\mathcal{R}_{pP}$ is by far the most involved calculation out of the four different polarization cases, since it includes all four nonzero components. In particular, $\chi_{\perp\perp\perp}$ and $\chi_{\parallel\parallel\perp}$ include out-of-plane incoming fields. These are affected by local field effects that can change both intensity and peak position.\cite{tancognedejean:tel-01235611} Including these effects is computationally very expensive and is beyond the scope of this paper. We speculate that $\mathcal{R}_{pP}$ requires the proper inclusion of these effects in order to accurately describe the experimental peaks.
 
 \begin{figure}
 \centering
@@ -853,7 +859,7 @@ temperature.}
 \label{fig:mr2}
 \end{figure}
 
-In Fig. \ref{fig:d2values}, we compare the theoretical results for the SSHG yield with the experimental results from Ref. \cite{mejiaPRB02}. We mention that the experimental results where produced with an angle of incidence of $\theta=65^\circ$, and an azimuthal angle of $\phi=30^\circ$, which eliminates the contribution from $\chi_{xxx}$ from Eq. \eqref{rpp111}. First, we note that the experimental spectrum shows two very well defined resonances which come from electronic transitions from the valence to the conduction bands around the well known $E_{1}\sim 3.4$ eV and $E_{2}\sim 4.3$ eV critical points of Si.\cite{yubook} As can be seen, the theoretical results reproduce the features of the spectrum, although we see that the $E_{2}$ peak is blueshifted by around 0.3\,eV. Here we focus on the SSHG yield itself rather than on the physics that lead to such a blueshifted theoretical spectrum. The interested reader can refer to Ref. \cite{andersonPRB16} for those details.
+In Fig. \ref{fig:d2values}, we compare the theoretical results for the SSHG yield with the experimental results from Ref. \cite{mejiaPRB02}. We mention that the experimental results where produced with an angle of incidence of $\theta=65^\circ$, and an azimuthal angle of $\phi=30^\circ$, which eliminates the contribution from $\chi_{xxx}$ from Eq. \eqref{eq:rpp111}. First, we note that the experimental spectrum shows two very well defined resonances which come from electronic transitions from the valence to the conduction bands around the well known $E_{1}\sim 3.4$ eV and $E_{2}\sim 4.3$ eV critical points of Si.\cite{yubook} As can be seen, the theoretical results reproduce the features of the spectrum, although we see that the $E_{2}$ peak is blueshifted by around 0.3\,eV. Here we focus on the SSHG yield itself rather than on the physics that lead to such a blueshifted theoretical spectrum. The interested reader can refer to Ref. \cite{andersonPRB16} for those details.
 
 All curves in this figure that include multiple reflections consider $d = 10$ nm. We compare the theoretical SSHG yield for $d_{2} = 0$ nm and $d_{2} = 10$ nm, with the SSHG yield that neglects multiple reflections. When $d_{2} = 0$ nm, we have placed the polarization sheet at the bottom of the layer region. This minimizes the effect of the multiple reflections, and thus the curve is very similar to the three layer model that neglects multiple reflections entirely. When $d_{2} = 10$ nm, the polarization sheet is placed at the top of the layer region. This maximizes the effect of the multiple reflections and therefore leads to the largest yield. We also notice that the average value obtained by using $\bar{R}^{M}_{i}$ (Eq. \eqref{eq:mcave}) is intermediate between $d_{2} = 0$ and $d_{2} = 10$ nm, as expected. This is very similar to selecting $d_{2} = d/2$, which can be interpreted as placing the nonlinear polarization sheet $\mathbf{P}(\mathbf{r},t)$ at the middle of layer $\ell$. It is important to remark that these enhancements are larger for $E_{2}$ than for $E_{1}$. This can be understood from the fact that the corresponding $\lambda_{0}$ for $E_{1}$ is larger than that of $E_{2}$. From Eqs. \eqref{delta0}, \eqref{delta}, and \eqref{mphi}, we see that the phase shifts are larger for $E_{2}$ than for $E_{1}$, producing a larger enhancement of the SSHG yield at $E_{2}$ from the multiple reflections. As the phase shifts grow with $d$, so does the enhancement caused by the multiple reflections. We have verified that the effects of the multiple reflections from the linear field are significantly smaller than those of the SH field. This is clear since the phase shift of Eq. \eqref{mphi} is not only a factor of 2 smaller than that of Eqs. \eqref{delta0} and \eqref{delta}, but also $w_\ell < W_\ell$.
 
@@ -865,3 +871,5 @@ From this figure, it becomes evident that the inclusion of multiple reflections 
 \caption{Comparison between the three layer model with the effects of multiple reflections for two different values of $d_{2}$, using the average value $\bar{R}^{M}_{i}$ Eq. of Eq. \eqref{eq:mcave2}, the three layer model without the effects of multiple reflections, and the experimental data from Ref. \cite{mejiaPRB02}. All curves that include multiple reflections consider a layer $\ell$ thickness of $d = 10\,\mathrm{nm}$.}
 \label{fig:d2values}
 \end{figure}
+
+\stopcontents[chapters]
