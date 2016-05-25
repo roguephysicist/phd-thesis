@@ -14,19 +14,9 @@ function plotex() {
     clear
 }
 
-cd structure
-pdflatex Si2x1structure.tex
-# pdfcrop Si2x1structure.pdf
-rm -f Si2x1structure.log Si2x1structure.aux
-mv Si2x1structure.pdf ../fig-4_1_01.pdf
-cd ..
-
 plotex plots.gp
 plotex plots3D-Si1x1.gp
 plotex plots3D-Si2x1.gp
 
 mv fig-*.pdf ../
-
-# for file in fig-*.pdf; do 
-#     mv "${file}" ../"${file//_/.}"
-# done
+mv 3D-*.pdf ../

@@ -1,23 +1,27 @@
-\documentclass[letterpaper,11pt,oneside,draft]{memoir}
+\documentclass[letterpaper,11pt,oneside]{memoir}
 \usepackage{fullpage}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{color}
 \usepackage{titletoc}
-\usepackage{subcaption}
-\usepackage{showkeys}
+% \usepackage{showkeys}
 % \usepackage{MinionPro}
 % \usepackage{showframe}
+
+\changecaptionwidth
+\captionwidth{0.8\textwidth}
 
 \maxtocdepth{subsection}
 \setsecnumdepth{subsection}
 
 \newcommand{\partialtoc}{
-
 \vspace*{2pc}\vbox{\bfseries\Large Outline}\vspace*{5pt}\hrule\vspace*{1pc}%
 \startcontents[chapters]
 \printcontents[chapters]{}{1}{\setcounter{tocdepth}{2}}
 \vspace*{1pc}\hrule\vspace*{2pc}}
+
+\newsubfloat{figure}
 
 \definecolor{linkcol}{rgb}{0,0,0.4} 
 \definecolor{citecol}{rgb}{0.5,0,0}
@@ -40,7 +44,7 @@
 \begin{document}
 
 % \pagestyle{empty}
-% \frontmatter
+\frontmatter
 % \include{content/frontmatter/titlepage_generic}
 % \include{content/frontmatter/copyright}
 % \include{content/frontmatter/signature_page}
@@ -49,7 +53,7 @@
 % \include{content/frontmatter/dedication}
 % \include{content/frontmatter/acknowledgments}
 
-% \tableofcontents
+\tableofcontents
 % \listoftables
 % \listoffigures
 % \clearpage
@@ -60,11 +64,11 @@
 % \include{content/chapters/intro}
 % \include{content/chapters/chi2}
 \include{content/chapters/shgyield}
-% \include{content/chapters/results}
-% \include{content/chapters/conclusion}
+\include{content/chapters/results}
+\include{content/chapters/conclusions}
 
-% \part{Appendices}
 \appendix
+% \part{Appendices}
 % \include{content/appendices/appendix01-re_ri}%reri A
 % \include{content/appendices/appendix02-vnl}%appvnl B
 % \include{content/appendices/appendix03-gen_der_calv}%calvs C

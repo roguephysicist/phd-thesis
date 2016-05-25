@@ -1,6 +1,8 @@
 %!TEX root = ../../main.tex
 \chapter{Deriving the SSHG yield without multiple reflections}
 \label{app:shgyieldnomr}
+\partialtoc
+
 
 \section{Three layer model for SSHG radiation}\label{sec:threelayer}
 
@@ -336,7 +338,79 @@ and following the steps that lead to Eq. \eqref{r12mm}, we find that
 \hat{\mathbf{p}}_{v-}
 \right]
 \cdot\hat{\mathbf{e}}^{\mathrm{i}}.
+\end{equation}
+
+We pause here to reduce this result to the case where the nonlinear polarization
+$\mathbf{P}(2\omega)$ radiates from vacuum instead from the layer $\ell$. For
+such case we simply take $\epsilon_{\ell}(2\omega) = 1$ and $\ell = v$ ($T^{\ell
+v}_{s,p} = 1$), to get
+\begin{equation}\label{eq:r13}
+\mathbf{e}^{\,2\omega}_{v} = \hat{\mathbf{e}}^{\mathrm{F}}\cdot
+\left[
+\hat{\mathbf{s}}T_{s}^{v b}\hat{\mathbf{s}} + \hat{\mathbf{P}}_{v+}
+\frac{T^{v b}_{p}}{\sqrt{\epsilon_{b}(2\omega)}}
+\left(
+  \epsilon_{b}(2\omega)\sin\theta_{0}\hat{\mathbf{z}}
+- W_{b}\hat{\boldsymbol{\kappa}}
+\right) 
+\right],
+\end{equation}
+which agrees with Eq. (3.10) of Ref. \cite{mizrahiJOSA88}.
+
+In the 3-layer model the SH polarization $\boldsymbol{\mathcal{P}}(2\omega)$ is
+located in layer $\ell$, where we evaluate the fundamental field required in Eq.
+\eqref{eq:tres}. We write
+\begin{equation}\label{eq:m2}
+\begin{split}
+\mathbf{E}_{\ell}(\omega) 
+&= E_{0}
+\left(
+  \hat{\mathbf{s}} t^{v\ell}_{s}(1+r^{\ell b}_{s})\hat{\mathbf{s}}
++ \hat{\mathbf{p}}_{\ell-}t^{v\ell}_{p}\hat{\mathbf{p}}_{v-}
++ \hat{\mathbf{p}}_{\ell+}t^{v\ell}_{p}r^{\ell b}_{p}\hat{\mathbf{p}}_{v-}
+\right)
+\cdot\hat{\mathbf{e}}^{\mathrm{i}}\\
+&= E_{0}\mathbf{e}^\omega_{\ell},
+\end{split}
+\end{equation} 
+where $\hat{\mathbf{e}}^{\mathrm{i}}$ is the $s$ ($\hat{\mathbf{s}}$) or $p$
+($\hat{\mathbf{p}}_{v-}$) incoming polarization of the fundamental electric
+field. This field is composed of the transmitted field and its first reflection
+from the $\ell b$ interface for $s$ and $p$ polarizations. The fundamental
+field, once inside the layer $\ell$ will be reflected multiple times at the
+$\ell v$ and $\ell b$ interfaces. However, each reflection will diminish the
+intensity of the fundamental field. As the SSHG yield scales with the square of
+this field, the contribution of the subsequent reflections after the one
+considered in Eq. \eqref{eq:m2} can be safely neglected. From Eq. \eqref{eq:mf}
+we find that
+\begin{equation}\label{eq:m12}
+\mathbf{e}^{\omega}_{\ell} =
+\left[
+  \hat{\mathbf{s}}t_{s}^{v\ell}t_{s}^{\ell b}\hat{\mathbf{s}} 
++ \frac{t^{v\ell}_{p}t^{\ell b}_{p}}{n^{2}_{\ell} n_{b}}
+\left(
+  n^{2}_{b}\sin\theta_{0}\hat{\mathbf{z}} 
++ n^{2}_{\ell} w_b\hat{\boldsymbol{\kappa}}
+\right)
+\hat{\mathbf{p}}_{v-}
+\right]
+\cdot\hat{\mathbf{e}}^{\mathrm{in}}.  
 \end{equation}  
+To connect with the work in Ref. \cite{mizrahiJOSA88}, we evaluate the fields in
+the bulk instead of the layer $\ell$and simply take $n_{\ell} = n_{b}$
+$(t^{\ell b}_{s,p} = 1)$, to obtain
+\begin{equation}\label{eq:m13}
+\mathbf{e}^{\omega}_{b} =
+\left[
+  \hat{\mathbf{s}}t_{s}^{vb}\hat{\mathbf{s}}
++ \frac{t^{vb}_{p}}{n_{b}}
+\left(\sin\theta_{0}\hat{\mathbf{z}} + w_b\hat{\boldsymbol{\kappa}}\right) 
+\hat{\mathbf{p}}_{v-}
+\right]
+\cdot\hat{\mathbf{e}}^{\mathrm{in}},  
+\end{equation} 
+that is in agreement with Eq. (3.5) of Ref. \cite{mizrahiJOSA88}.
+
 Replacing $\mathbf{E}(\omega)\to E_0\mathbf{e}^{\omega,\mathrm{i}}_\ell$,  
 in Eq. \eqref{tres}, we obtain that
 \begin{equation}\label{m4}
@@ -379,11 +453,28 @@ From Eqs. \eqref{uno},
 \left\vert  
 \frac{1}{n_{\ell}}
 \Upsilon_{\mathrm{iF}}
-\right\vert^{2} 
-,
+\right\vert^{2},
 \end{equation}
 as the SSHG yield, where $\eta =32\pi^3$ for cgs units and
 $\eta=1/(2\epsilon_0)$ in MKS units. Since $\boldsymbol{\chi}$ is a surface
 second order nonlinear susceptibility, in the MKS unit system is given in
 $\mathrm{m}^{2}/\mathrm{V}$, and thus $\mathcal{R}_{\mathrm{iF}}$ is given in
 $\mathrm{m}^{2}/\mathrm{W}$.
+
+It is worth mentioning that we can easily recover the results from Ref.
+\cite{mizrahiJOSA88}, which are in turn equivalent to those in Ref.
+\cite{sipePRB87}. We simply take
+$\mathbf{e}^{2\omega}_{\ell}\to\mathbf{e}^{2\omega}_{v}$,
+$\mathbf{e}^{\omega}_{\ell}\to\mathbf{e}^{\omega}_{b}$, and we have
+\begin{equation}\label{eq:m69}
+\mathcal{R}_{\mathrm{iF}}(2\omega) =
+\frac{\eta\omega^{2}}{c^{3}\cos^{2}\theta_{0}}
+\left\vert\mathbf{e}^{\,2\omega}_{v}\cdot
+\boldsymbol{\chi}:\mathbf{e}^{\omega}_{b}\mathbf{e}^{\omega}_{b}
+\right\vert^{2}.
+\end{equation}
+This is the SSHG yield  of a nonlinear polarization sheet radiating from the
+vacuum region above the surface, with the fundamental field evaluated below the
+surface in the bulk of the material characterized by $\epsilon_{b}(\omega)$.
+
+\stopcontents[chapters]

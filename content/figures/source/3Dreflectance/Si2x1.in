@@ -2,13 +2,13 @@
 mode: 3layer
 theta: 270
 phi: 45
-# chi1 normalization and broadening (sigma = 0.075 eV)
+# chi1 normalization and broadening (sigma = 0.10 eV)
 norm: 1.2535831585
-sigma: 3.19999995
+sigma: 4.2666666666
 # Multiple reflections
-multiref: no
+multiref: yes
 thickness: 10
-depth: 0
+depth: average
 # Components
 chib: ../../../data/SiBulk/chi1-vnl.sm_0.075_xx_yy_zz_3107_25-nospin_scissor_0.50_Nc_26
 chil: ../../../data/Si2x1/32layers/calChi1-vnl.sm_0.075_xx_yy_zz_244_half-slab_10-nospin_scissor_0.50_Nc_130

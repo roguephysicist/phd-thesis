@@ -1,0 +1,70 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{fullpage}
+
+\pagestyle{empty}
+% \setmainfont{SourceCodePro-Regular}
+\setmonofont[Scale=0.95]{SourceCodePro-Regular}
+\usemintedstyle{manni}
+\definecolor{bg}{HTML}{F1F3F3}
+\renewcommand{\theFancyVerbLine}{{\ttfamily\arabic{FancyVerbLine}}}
+
+\begin{document}
+
+\begin{minted}[bgcolor=bg,linenos,mathescape]{ruby}
+ONEE = np.linspace(0.01, 10, 1000) # $1\omega$ energy array
+
+# The prefactor, $\omega^{2}/2\epsilon_{0}c^{3}\cos^{2}\theta_{0}$
+PREFACTOR = (ONEE**2)/(2*EPS0*HBAR**2 * LSPEED**3 * math.cos(THETA0)**2)
+
+nl = np.sqrt(epsl1w) # The index of refraction, $n_{\ell} = \sqrt{\epsilon_{\ell}(\omega)}$
+Nl = np.sqrt(epsl2w) # The index of refraction, $N_{\ell} = \sqrt{\epsilon_{\ell}(2\omega)}$
+
+# The wave vectors, $w_{\ell} = \sqrt{\epsilon_{\ell}(\omega) - \sin^{2}\theta_{0}}$, etc.
+wb1w = np.sqrt(epsb1w - (math.sin(THETA0)**2))
+wb2w = np.sqrt(epsb2w - (math.sin(THETA0)**2))
+wl1w = np.sqrt(epsl1w - (math.sin(THETA0)**2))
+wl2w = np.sqrt(epsl2w - (math.sin(THETA0)**2))
+
+# The Fresnel factors, $r^{lb}_{s} = (w_{\ell} - w_{b})/(w_{\ell} + w_{b})$, etc.
+tvls = (2*math.cos(THETA0))/(math.cos(THETA0) + wl1w)
+Tvlp = (2*math.cos(THETA0)*Nl)/(math.cos(THETA0)*epsl2w + wl2w)
+rvls = (math.cos(THETA0) - wl1w)/(math.cos(THETA0) + wl1w)
+rlbs = (wl1w - wb1w)/(wl1w + wb1w)
+Rvlp = (math.cos(THETA0)*epsl2w - wl2w)/(math.cos(THETA0)*epsl2w + wl2w)
+Rlbp = (wl2w*epsb2w - wb2w*epsl2w)/(wl2w*epsb2w + wb2w*epsl2w)
+
+# $\delta = 8\pi\left(d/\lambda_{0}\right)W_{\ell}$, $\varphi = 4\pi\left(d/\lambda_{0}\right)w_{\ell}$
+delta = 8*math.pi*((ONEE*THICKNESS*1e-9)/(PLANCK*LSPEED))*wl2w
+varphi = 4*math.pi*((ONEE*THICKNESS*1e-9)/(PLANCK*LSPEED))*wl1w
+
+# $r^{M}_{s}=(r^{\ell b}_{s}e^{i\varphi})/(1+r^{v\ell}_{s}r^{\ell b}_{s}e^{i\varphi})$, etc.
+rMs = ((rlbs*np.exp(1j*varphi))/(1 + rvls*rlbs*np.exp(1j * varphi)))
+RMpav = (Rlbp*np.exp(1j*delta/2)*(2/delta)*np.sin(delta/2))*
+        (1 + Rvlp*Rlbp*np.exp(1j*delta))**-1
+rMpluss = 1 + rMs
+RMplusp = 1 + RMpav
+RMminusp = 1 - RMpav
+
+# $\Gamma_{sP} = (T^{v\ell}_{p}/N_{\ell})\left(t^{v\ell}_{s}r^{M+}_{s}\right)^{2}$
+GammasP = (Tvlp/Nl)*(tvls*rMpluss)**2
+
+# $r_{sP} = -R^{M-}_{p}W_{\ell}\sin^{2}\phi\cos\phi\chi^{xxx} + R^{M-}_{p}W_{\ell}2\sin\phi\cos^{2}\phi\chi^{xxy} - \ldots$
+rsP = - (RMminusp*wl2w*math.sin(PHI)**2*math.cos(PHI) * XXX) \
+      + (RMminusp*wl2w*2*math.sin(PHI)*math.cos(PHI)**2 * XXY) \
+      - (RMminusp*wl2w*math.cos(PHI)**3 * XYY) \
+      - (RMminusp*wl2w*math.sin(PHI)**3 * YXX) \
+      + (RMminusp*wl2w*2*math.sin(PHI)**2*math.cos(PHI) * YYX) \
+      - (RMminusp*wl2w*math.sin(PHI)*math.cos(PHI)**2 * YYY) \
+      + (RMplusp*math.sin(THETA0)*math.sin(PHI)**2 * ZXX) \
+      - (RMplusp*math.sin(THETA0)*2*math.sin(PHI)*math.cos(PHI) * ZXY) \
+      + (RMplusp*math.sin(THETA0)*math.cos(PHI)**2 * ZYY)
+
+# $\mathcal{R}_{sP} = (\omega^{2}/2\epsilon_{0}c^3\cos^{2}\theta_{0})\left\vert n^{-1}_{\ell}\Gamma_{sP}\,r_{sP}\right\vert^{2}$
+RsP = PREFACTOR * np.absolute((1/nl) * GammasP * rsP)**2
+\end{minted}
+
+\end{document}

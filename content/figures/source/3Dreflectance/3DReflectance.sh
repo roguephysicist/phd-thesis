@@ -1,11 +1,11 @@
 #!/bin/bash
 infile="Si1x1.in"
-mode="phi"
+mode="theta"
 
 if [ $mode == "theta" ]; then
-    outfile="../../../data/Si1x1/3Dtheta.dat"
+    outfile="../../../data/Si1x1/rif-3Dtheta.dat"
 elif [ $mode == "phi" ]; then
-    outfile="../../../data/Si1x1/3Dphi.dat"
+    outfile="../../../data/Si1x1/rif-3Dphi.dat"
 fi
 
 if [ -e $outfile ]; then

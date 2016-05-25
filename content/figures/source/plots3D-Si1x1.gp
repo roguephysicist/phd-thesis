@@ -28,29 +28,29 @@ unset grid
 set size ratio 1
 
 ## varying theta, phi = 30
-set ytics ('$-\frac{\pi}{2}$' -90, "0" 0, '$\frac{\pi}{2}$' 90, '$\pi$' 180, '$\frac{3\pi}{2}$' 270,)
-set ylabel 'Angle of incidence $(\theta_{0})$' offset 1,0
+# set ytics ('$-\frac{\pi}{2}$' -90, "0" 0, '$\frac{\pi}{2}$' 90, '$\pi$' 180, '$\frac{3\pi}{2}$' 270,)
+set ytics 90
+set ylabel 'Angle of incidence $\theta_{0}$ ($^{\circ}$)' offset -0.5,0
+set cblabel '$\mathcal{R}_{pP}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0
 set cbtics auto
-set output 'fig-4_4_08.tex'
-sp '../../data/Si1x1/3Dtheta.dat' u (2*$2):1:3 w image
-unset ylabel
-set ytics 90
-set format y ' '
+set output '3D-Si1x1-RpP.tex'
+sp '../../data/Si1x1/Rif-3Dtheta.dat' u (2*$2):1:3 w image
+set cblabel '$\mathcal{R}_{sP}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0
 set cbtics 0.02
-set output 'fig-4_4_09.tex'
-sp '../../data/Si1x1/3Dtheta.dat' u (2*$2):1:5 w image
+set output '3D-Si1x1-RsP.tex'
+sp '../../data/Si1x1/Rif-3Dtheta.dat' u (2*$2):1:5 w image
 
-set ytics ('$-\frac{\pi}{2}$' -90, "0" 0, '$\frac{\pi}{2}$' 90, '$\pi$' 180, '$\frac{3\pi}{2}$' 270,)
-set ylabel 'Angle of incidence $(\theta_{0})$' offset 1,0
-set cbtics 0.1
-set output 'fig-4_4_10.tex'
-sp '../../data/Si1x1/3Dtheta.dat' u (2*$2):1:4 w image
-unset ylabel
+# set ytics ('$-\frac{\pi}{2}$' -90, "0" 0, '$\frac{\pi}{2}$' 90, '$\pi$' 180, '$\frac{3\pi}{2}$' 270,)
 set ytics 90
-set format y ' '
+set ylabel 'Angle of incidence $\theta_{0}$ ($^{\circ}$)' offset -0.5,0
+set cblabel '$\mathcal{R}_{pS}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0
 set cbtics 0.2
-set output 'fig-4_4_11.tex'
-sp '../../data/Si1x1/3Dtheta.dat' u (2*$2):1:6 w image
+set output '3D-Si1x1-RpS.tex'
+sp '../../data/Si1x1/Rif-3Dtheta.dat' u (2*$2):1:4 w image
+set cblabel '$\mathcal{R}_{sS}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0
+set cbtics 0.2
+set output '3D-Si1x1-RsS.tex'
+sp '../../data/Si1x1/Rif-3Dtheta.dat' u (2*$2):1:6 w image
 
 
 

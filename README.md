@@ -22,3 +22,5 @@
     that are built in.
 2. change part titles to small caps
 3. REMEMBER TO CHECK CONSISTENCY BETWEEN CHAP3 and article-multiref!
+4. use larger font size for labels on multiref diagrams
+5. remember about putting the darn average epsilon, and copy from article
