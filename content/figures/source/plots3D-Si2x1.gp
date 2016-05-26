@@ -33,24 +33,24 @@ set ytics 90
 set ylabel 'Angle of incidence $\theta_{0}$ ($^{\circ}$)' offset -0.5,0
 set cblabel '$\mathcal{R}_{pP}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0
 set cbtics 4.0
-set output 'fig-4_2_01.tex'
-sp '../../data/Si2x1/3Dtheta.dat' u (2*$2):1:3 w image
+set output '3D-Si2x1-RpP.tex'
+p '../../data/Si2x1/Rif-3Dtheta.dat' u (2*$2):1:3 w image
 set cblabel '$\mathcal{R}_{sP}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0
 set cbtics 1.0
-set output 'fig-4_2_02.tex'
-sp '../../data/Si2x1/3Dtheta.dat' u (2*$2):1:5 w image
+set output '3D-Si2x1-RsP.tex'
+p '../../data/Si2x1/Rif-3Dtheta.dat' u (2*$2):1:5 w image
 
 # set ytics ('$-\frac{\pi}{2}$' -90, "0" 0, '$\frac{\pi}{2}$' 90, '$\pi$' 180, '$\frac{3\pi}{2}$' 270,)
 set ytics 90
 set ylabel 'Angle of incidence $\theta_{0}$ ($^{\circ}$)' offset -0.5,0
 set cblabel '$\mathcal{R}_{pS}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0
 set cbtics 1.0
-set output 'fig-4_2_03.tex'
-sp '../../data/Si2x1/3Dtheta.dat' u (2*$2):1:4 w image
+set output '3D-Si2x1-RpS.tex'
+p '../../data/Si2x1/Rif-3Dtheta.dat' u (2*$2):1:4 w image
 set cblabel '$\mathcal{R}_{sS}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0
-set cbtics 1.0
-set output 'fig-4_2_04.tex'
-sp '../../data/Si2x1/3Dtheta.dat' u (2*$2):1:6 w image
+set cbtics 2.0
+set output '3D-Si2x1-RsS.tex'
+p '../../data/Si2x1/Rif-3Dtheta.dat' u (2*$2):1:6 w image
 
 
 ## varying phi, theta = 30

@@ -2,37 +2,39 @@
 \contentsline {chapter}{\chapternumberline {1}Surface Second-Harmonic Generation Yield}{1}{chapter.1}
 \ttl@starttoc {chapters@1}
 \contentsline {section}{\numberline {1.1}The three layer model for the SSHG yield}{2}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Multiple SHG reflections}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Multiple SHG reflections}{5}{subsection.1.1.1}
 \contentsline {subsection}{\numberline {1.1.2}Multiple reflections for the linear field}{6}{subsection.1.1.2}
-\contentsline {subsection}{\numberline {1.1.3}Deriving the SSHG yield}{8}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.3}Deriving the SSHG yield}{7}{subsection.1.1.3}
 \contentsline {section}{\numberline {1.2}$\mathcal {R}_{\mathrm {iF}}$ for different polarization cases}{9}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}$\mathcal {R}_{pP}$ ($p$-in, $P$-out)}{10}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}$\mathcal {R}_{sP}$ ($s$-in, $P$-out)}{11}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.1}$\mathcal {R}_{pP}$ ($p$-in, $P$-out)}{11}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}$\mathcal {R}_{sP}$ ($s$-in, $P$-out)}{12}{subsection.1.2.2}
 \contentsline {subsection}{\numberline {1.2.3}$\mathcal {R}_{pS}$ ($p$-in, $S$-out)}{12}{subsection.1.2.3}
 \contentsline {subsection}{\numberline {1.2.4}$\mathcal {R}_{sS}$ ($s$-in, $S$-out)}{13}{subsection.1.2.4}
-\contentsline {section}{\numberline {1.3}Some scenarios of interest}{13}{section.1.3}
+\contentsline {section}{\numberline {1.3}Some scenarios of interest}{14}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}The 3-layer model without multiple reflections}{14}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}The two layer, or Fresnel (2-layer-fresnel) model}{14}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.2}The two layer, or Fresnel (2-layer-fresnel) model}{15}{subsection.1.3.2}
 \contentsline {subsection}{\numberline {1.3.3}The 2-layer-bulk model: evaluating $\boldsymbol {\mathcal {P}}(2\omega )$ and $\mathbf {E}(\omega )$ in the bulk}{15}{subsection.1.3.3}
 \contentsline {subsection}{\numberline {1.3.4}The 2-layer-vacuum model: evaluating $\boldsymbol {\mathcal {P}}(2\omega )$ and $\mathbf {E}(\omega )$ in the vacuum}{15}{subsection.1.3.4}
-\contentsline {subsection}{\numberline {1.3.5}The 3-layer-hybrid model: evaluating $\boldsymbol {\mathcal {P}}(2\omega )$ in $\ell $ and $\mathbf {E}(\omega )$ in the bulk}{15}{subsection.1.3.5}
-\contentsline {section}{\numberline {1.4}About coding the SSHG yield}{15}{section.1.4}
+\contentsline {subsection}{\numberline {1.3.5}The 3-layer-hybrid model: evaluating $\boldsymbol {\mathcal {P}}(2\omega )$ in $\ell $ and $\mathbf {E}(\omega )$ in the bulk}{16}{subsection.1.3.5}
+\contentsline {section}{\numberline {1.4}About coding the SSHG yield}{16}{section.1.4}
 \ttl@stoptoc {chapters@1}
-\contentsline {chapter}{\chapternumberline {2}Results}{17}{chapter.2}
+\contentsline {chapter}{\chapternumberline {2}Results}{18}{chapter.2}
 \ttl@stoptoc {chapters@1}
 \ttl@starttoc {chapters@2}
-\contentsline {section}{\numberline {2.1}Calculating $\boldsymbol {\chi }$ for the Si(001)(2$\times $1)}{18}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Full-slab results}{20}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Half-slab vs. full-slab}{21}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Results for $\chi ^{xxx}_{\mathrm {half-slab}}$}{23}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Calculating $\boldsymbol {\chi }$ for the Si(111)(1$\times $1):H surface}{24}{section.2.2}
-\contentsline {section}{\numberline {2.3}Si(001)(2$\times $1) -- Calculating the SSHG yield}{27}{section.2.3}
-\contentsline {section}{\numberline {2.4}Si(111)(1$\times $1):H -- Calculating the SSHG yield}{29}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Overview of the calculated $\mathcal {R}$ spectra}{29}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Calculating $\mathcal {R}_{\mathrm {pP}}$ including the effects of multiple reflections}{31}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Calculated $\mathcal {R}_{pP}$ compared to experiment}{34}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Calculated $\mathcal {R}_{sP}$ compared to experiment}{36}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}Calculated $\mathcal {R}_{pS}$ compared to experiment}{37}{subsection.2.4.5}
+\contentsline {section}{\numberline {2.1}Results for the Si(001)(2$\times $1) surface}{19}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Calculating $\chi ^{xxx}$}{20}{subsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.1}Full-slab results}{21}{subsubsection.2.1.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.2}Half-slab vs full-slab}{22}{subsubsection.2.1.1.2}
+\contentsline {subsubsection}{\numberline {2.1.1.3}Half-slab results}{24}{subsubsection.2.1.1.3}
+\contentsline {subsection}{\numberline {2.1.2}Overview of the calculated $\mathcal {R}$ spectra}{25}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Results for the Si(111)(1$\times $1):H surface}{26}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Calculating $\chi ^{xxx}$}{28}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Comparing the theoretical $\mathcal {R}$ to experiment}{30}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Overview of the calculated $\mathcal {R}$ spectra}{30}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.2}$\mathcal {R}_{pP}$ ($p$-in, $P$-out)}{31}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.3}Calculated $\mathcal {R}_{pP}$ compared to experiment}{34}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.2.4}Calculated $\mathcal {R}_{sP}$ compared to experiment}{37}{subsubsection.2.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.2.5}Calculated $\mathcal {R}_{pS}$ compared to experiment}{38}{subsubsection.2.2.2.5}
 \ttl@stoptoc {chapters@2}
 \contentsline {chapter}{\chapternumberline {3}Final Remarks}{41}{chapter.3}
 \ttl@stoptoc {chapters@2}

@@ -108,6 +108,39 @@ and
 \end{equation}
 where $\phi$ is the azimuthal angle with respect to the $x$ axis.
 
+{\color{red}
+It is important to mention that we must also calculate the bulk and surface
+dielectric functions, $\boldsymbol{\epsilon}_b(\omega)$ and
+$\boldsymbol{\epsilon}_\ell(\omega)$. For this, we follow the method presented
+in Ref. \cite{mendozaPRB06}. For the bulk, the tensor components are equal in
+all three directions due to the cubic symmetry,
+\begin{equation*}
+\varepsilon_{b}(\omega) = 
+\epsilon^{xx}_{b}(\omega) = 
+\epsilon^{yy}_{b}(\omega) = 
+\epsilon^{zz}_{b}(\omega).
+\end{equation*}
+For the purpose of this calculation, we introduce the average value for the
+surface dielectric function, $\varepsilon_\ell(\omega)$. This entails that
+$\epsilon^{xx}_{\ell}(\omega) = \epsilon^{yy}_{\ell}(\omega) \approx
+\epsilon^{zz}_{\ell}(\omega)$, since symmetry is broken in the $zz$ direction
+because of the surface. We find the average in the conventional way,
+\begin{equation*}
+\varepsilon_{\ell}(\omega) = 
+\frac{\epsilon^{xx}_{\ell}(\omega) + 
+\epsilon^{yy}_{\ell}(\omega) + 
+\epsilon^{zz}_{\ell}(\omega)}{3},
+\end{equation*}
+and use that quantity in the equations for the SSHG yield. In order to obtain a
+result which does not depend on the size of the vacuum region
+\cite{nicolasPRB15}, we have normalized the surface dielectric function to the
+volume of the slab, instead of the volume of the super-cell. We remark that we
+could calculate $\epsilon^{\mathrm{ab}}_{\mathrm{half-slab}}(\omega)$ using
+${\mathcal{C}}(z)=1$ for the upper half of our slab and normalize to the volume
+of the half-slab. Nevertheless, $\epsilon^{\mathrm{ab}}_{\ell}(\omega)$ and
+$\epsilon^{\mathrm{ab}}_{\mathrm{half-slab}}(\omega)$ give the same
+result \cite{hoganPRB03, castilloPRB03, nicolasPRB15}.}
+
 In the 3-layer model the nonlinear polarization responsible for the SHG is
 immersed in the thin layer ($\beta=\ell$), and is given by
 \begin{equation}\label{eq:tres}

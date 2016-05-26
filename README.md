@@ -7,11 +7,6 @@
     * How we coded the theory into TINIBA
     * appendices with math
     * adding Vnl from dp
-3. SHG Yield
-    * Combine 3layer-shg.tex into shgyield, to create one super-document
-    * Talk about how derived equations are totally consistent with Sipe et al.
-    * Radiation models for SHG developed
-    * Coding nonrefco
 4. Conclusions
     * How we improved on old calculations, both in quality and speed
     * Future work on the coding, implementation of gw, mbpt, tddft, etc.
@@ -21,6 +16,7 @@
 1. switch over to memoir, which means changing to fancy headers and titlepage
     that are built in.
 2. change part titles to small caps
-3. REMEMBER TO CHECK CONSISTENCY BETWEEN CHAP3 and article-multiref!
 4. use larger font size for labels on multiref diagrams
 5. remember about putting the darn average epsilon, and copy from article
+6. CONSIDER ADDING A DFT PRIMER!!!!!!
+7. chi^abc or chi^ijk !!!
