@@ -20,3 +20,5 @@
 5. remember about putting the darn average epsilon, and copy from article
 6. CONSIDER ADDING A DFT PRIMER!!!!!!
 7. chi^abc or chi^ijk !!!
+8. change d to l in diagrams in chapter 2
+9. little sigma o big sigma :/
