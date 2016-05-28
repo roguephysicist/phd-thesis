@@ -1,0 +1,621 @@
+\documentclass[letterpaper,aps]{revtex4}
+\usepackage{amsmath}
+\usepackage[colorlinks=true]{hyperref}
+
+\input{../../base/bms}
+
+\begin{document}
+
+\section{Matrix elements of
+\texorpdfstring{$\mathbf{v}^\mathrm{nl}_{nm}(\mathbf{k})$}{vnl} and 
+\texorpdfstring{$\boldsymbol{\mathcal{V}}^{\mathrm{nl},\ell}_{nm}(\mathbf{k})$}
+{calVnl}}
+\label{appvnl}
+
+From Eq. \eqref{conhr}, we have that
+\begin{align}\label{vnln.0}
+\mathbf{v}^\mathrm{nl}_{nm}(\mathbf{k}) = \bra{n\mathbf{k}}\hat{\mathbf{v}}^\mathrm{nl}\ket{m\mathbf{k}'}
+&=
+\frac{i}{\hbar}
+\bra{n\mathbf{k}}[\hat{V}^\mathrm{nl},\hat{\mathbf{r}}]\ket{m\mathbf{k}'}
+\nonumber\\
+&=
+\frac{i}{\hbar}
+\int d\mathbf{r} d\mathbf{r}'
+\braket{n\mathbf{k}}{\mathbf{r}}
+\bra{\mathbf{r}}
+[\hat{V}^\mathrm{nl},\hat{\mathbf{r}}]
+\ket{\mathbf{r}'}
+\braket{\mathbf{r}'}{m\mathbf{k}'}
+\nonumber\\
+&=
+\frac{i}{\hbar}
+\delta(\mathbf{k}-\mathbf{k}')
+\int d\mathbf{r} d\mathbf{r}'
+\psi^*_{n\mathbf{k}}(\mathbf{r})
+\bra{\mathbf{r}}
+[\hat{V}^\mathrm{nl},\hat{\mathbf{r}}]
+\ket{\mathbf{r}'}
+\psi_{m\mathbf{k}'}(\mathbf{r}')
+,
+\end{align}   
+where due to the fact that the integrand is periodic in real space,
+$\mathbf{k}=\mathbf{k}'$ where $\mathbf{k}$ is restricted to the Brillouin Zone.
+Now,
+\begin{align}\label{vnln.1}
+\bra{\mathbf{r}}
+[\hat{V}^\mathrm{nl},\hat{\mathbf{r}}]
+\ket{\mathbf{r}'}
+&=
+\bra{\mathbf{r}}
+\hat{V}^\mathrm{nl}\hat{\mathbf{r}}
+-
+\hat{\mathbf{r}}\hat{V}^\mathrm{nl}
+\ket{\mathbf{r}'}
+=
+\bra{\mathbf{r}}
+\hat{V}^\mathrm{nl}\hat{\mathbf{r}}
+\ket{\mathbf{r}'}
+-
+\bra{\mathbf{r}}
+\hat{\mathbf{r}}\hat{V}^\mathrm{nl}
+\ket{\mathbf{r}'}
+\nonumber\\
+&=
+\bra{\mathbf{r}}
+\hat{V}^\mathrm{nl} \mathbf{r}'
+\ket{\mathbf{r}'}
+-
+\bra{\mathbf{r}}
+\mathbf{r}\hat{V}^\mathrm{nl}
+\ket{\mathbf{r}'}
+=
+\bra{\mathbf{r}}
+\hat{V}^\mathrm{nl}
+\ket{\mathbf{r}'}
+\big(\mathbf{r}'-\mathbf{r}\big)
+=V^\mathrm{nl}(\mathbf{r},\mathbf{r}') \big(\mathbf{r}'-\mathbf{r}\big)
+,
+\end{align}
+where we use 
+$\hat r \bra{\mathbf{r}}=r \bra{\mathbf{r}}$,
+$\bra{\mathbf{r}'}\hat r=\bra{\mathbf{r}}r'$,
+and $V^\mathrm{nl}(\mathbf{r},\mathbf{r}')=\bra{\mathbf{r}}\hat{V}^\mathrm{nl}\ket{\mathbf{r}'}$ (Eq. \eqref{ache.3n}).
+Also, we have the following identity which will be used shortly, 
+\begin{align}\label{cn51}
+(\nabla_\mathbf{K}+\nabla_{\mathbf{K}'})
+\frac{1}{\gO}
+\int e^{-i\mathbf{K}\cdot\mathbf{r}}
+V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
+e^{i\mathbf{K}'\cdot\mathbf{r}'}
+\,d\mathbf{r} d\mathbf{r}'
+&=
+-i
+\frac{1}{\gO}
+\int e^{-i\mathbf{K}\cdot\mathbf{r}}
+\left(
+\mathbf{r}
+V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
+-
+V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
+\mathbf{r}'
+\right)
+e^{i\mathbf{K}'\cdot\mathbf{r}'}
+\,d\mathbf{r} d\mathbf{r}'
+\nonumber\\
+(\nabla_\mathbf{K}+\nabla_{\mathbf{K}'})
+\bra{\mathbf{K}}
+V^\mathrm{nl}
+\ket{\mathbf{K}'}
+&=
+\frac{i}{\gO}
+\int e^{-i\mathbf{K}\cdot\mathbf{r}}
+V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
+\big(
+\mathbf{r}'
+-
+\mathbf{r}
+\big)
+e^{i\mathbf{K}'\cdot\mathbf{r}'}
+\,d\mathbf{r} d\mathbf{r}'
+,
+\end{align}
+where $\gO$ is the volume of the unit cell,  
+and we defined
+\begin{align}\label{cn52}
+V^\mathrm{nl}(\mathbf{K},\mathbf{K}') 
+\equiv
+\bra{\mathbf{K}}
+V^\mathrm{nl}
+\ket{\mathbf{K}'}
+=
+\frac{1}{\gO}
+\int e^{-i\mathbf{K}\cdot\mathbf{r}}
+V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
+e^{i\mathbf{K}'\cdot\mathbf{r}'}
+\,d\mathbf{r} d\mathbf{r}'
+,
+\end{align}
+where 
+$V^\mathrm{nl}(\mathbf{K}',\mathbf{K}) =V^{\mathrm{nl} *}(\mathbf{K},\mathbf{K}')$, since
+$V^\mathrm{nl}(\mathbf{r}',\mathbf{r})=V^{\mathrm{nl}*}(\mathbf{r},\mathbf{r}')$ due to the fact that $\hat
+V^\mathrm{nl}$ is a hermitian operator.
+Using the 
+plane wave expansion
+\begin{align}\label{cn3}
+\braket{\mathbf{r}}{n\mathbf{k}}=\psi_{n\mathbf{k}}(\mathbf{r})=\frac{1}{\sqrt{\gO}}
+\sum_{\bfG} A_{n\mathbf{k}}(\bfG)e^{i\mathbf{K}\cdot\mathbf{r}}
+,
+\end{align}
+with $\mathbf{K}=\mathbf{k}+\bfG$, we
+obtain from Eq. \eqref{vnln.0} and Eq. \eqref{cn51}, that
+\begin{align}\label{vnln.2}
+\mathbf{v}^\mathrm{nl}_{nm}(\mathbf{k})
+&=
+\frac{i}{\hbar}
+\delta(\mathbf{k}-\mathbf{k}')
+\sum_{\bfG,\bfG'}
+A^*_{n\mathbf{k}}(\bfG) 
+A_{m\mathbf{k}'}(\bfG')
+\frac{1}{\gO}
+\int d\mathbf{r} d\mathbf{r}'
+e^{-i\mathbf{K}\cdot\mathbf{r}}
+\bra{\mathbf{r}}
+[\hat{V}^\mathrm{nl},\hat{\mathbf{r}}]
+\ket{\mathbf{r}'}
+e^{i\mathbf{K}'\cdot\mathbf{r}'}
+\nonumber\\
+&=
+\frac{1}{\hbar}
+\delta(\mathbf{k}-\mathbf{k}')
+\sum_{\bfG,\bfG'}
+A^*_{n\mathbf{k}}(\bfG) 
+A_{m\mathbf{k}'}(\bfG')
+\frac{i}{\gO}
+\int d\mathbf{r} d\mathbf{r}'
+e^{-i\mathbf{K}\cdot\mathbf{r}}
+V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
+\big(\mathbf{r}'-\mathbf{r}\big)
+e^{i\mathbf{K}'\cdot\mathbf{r}'}
+\nonumber\\
+&=
+\frac{1}{\hbar}
+\delta(\mathbf{k}-\mathbf{k}')
+\sum_{\bfG,\bfG'}
+A^*_{n\mathbf{k}}(\bfG) 
+A_{m\mathbf{k}'}(\bfG')
+(\nabla_\mathbf{K}+\nabla_{\mathbf{K}'})
+V^\mathrm{nl}(\mathbf{K},\mathbf{K}')
+.
+\end{align}  
+
+For fully  separable pseudopotentials in the  
+Kleinman-Bylander (KB) form,\cite{mottaCMS10,kleinmanPRL82,adolphPRB96} 
+the
+matrix elements 
+ $\bra{\mathbf{K}}
+V^\mathrm{nl}
+\ket{\mathbf{K}'}
+=V^\mathrm{nl}(\mathbf{K},\mathbf{K}')
+$
+can be readily calculated. \cite{mottaCMS10}
+Indeed,
+the Fourier representation assumes 
+the form,\cite{adolphPRB96,gordienkoRPJ04,fuchsCPC99}
+\begin{align}\label{ji.1} 
+V^\mathrm{nl}_{\mathrm{KB}}(\mathbf{K},\mathbf{K}')  
+ &= 
+\sum_s e^{i(\mathbf{K}-\mathbf{K}')\cdot\bfgtau_s}
+\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_lF_{lm}^s(\mathbf{K})F_{lm}^{s*}(\mathbf{K}')  
+\nonumber\\
+ &= 
+\sum_s 
+\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_lf_{lm}^s(\mathbf{K})f_{lm}^{s*}(\mathbf{K}')  
+,
+\end{align} 
+with $f^s_{lm}(\mathbf{K})=e^{i\mathbf{K}\cdot\bfgtau_s}F^s_{lm}(\mathbf{K})$, and
+\begin{align}\label{ji.2}
+F^s_{lm}(\mathbf{K})=\int d\mathbf{r}\,e^{-i\mathbf{K}\cdot\mathbf{r}}
+\delta V^S_l(\mathbf{r})
+\Phi^\ps_{lm}(\mathbf{r}) 
+.
+\end{align}
+Here $\delta V^S_l(\mathbf{r})$ is the non-local contribution of the ionic
+pseudopotential centered at the atomic position $\bfgtau_s$ located in
+the unit cell, 
+$\Phi^\ps_{lm}(\mathbf{r})$ is the pseudo-wavefunction of the corresponding
+atom, while $E_l$ is the so called 
+Kleinman-Bylander energy. Further details can be found in
+Ref. \cite{fuchsCPC99}.
+From Eq. \eqref{ji.1} we find
+\begin{align}\label{ji.1n}
+(\nabla_\mathbf{K}+\nabla_{\mathbf{K}'})  
+V^\mathrm{nl}_{\mathrm{KB}}(\mathbf{K},\mathbf{K}') 
+ &= 
+\sum_s 
+\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_l 
+(\nabla_\mathbf{K}+\nabla_{\mathbf{K}'})   
+f_{lm}^s (\mathbf{K})f_{lm}^{s*}(\mathbf{K}') 
+\nonumber\\
+ &= 
+\sum_s 
+\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_l 
+\left(\left[\nabla_\mathbf{K} f_{lm}^s (\mathbf{K})\right]f_{lm}^{s*}(\mathbf{K}') 
++
+f_{lm}^s (\mathbf{K}) \left[\nabla_{\mathbf{K}'}  f_{lm}^{s*}(\mathbf{K}') \right]
+\right),
+\end{align}
+and using this
+ in Eq. \eqref{vnln.2} leads to
+\begin{align}\label{forg}
+\mathbf{v}^\mathrm{nl}_{nm}(\mathbf{k})
+&=
+\frac{1}{\hbar}
+\sum_s
+\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_l \sum_{\bfG\bfG'}
+A^*_{n,\vec{k}}(\bfG)A_{n',\vec{k}}(\bfG')
+\nonumber\\
+&\times
+( \nabla_{\mathbf{K}}f_{lm}^s(\mathbf{K})f_{lm}^{s*}(\mathbf{K}') +
+f_{lm}^s(\mathbf{K})\nabla_{\mathbf{K}'}f_{lm}^{s*}(\mathbf{K}') ) \nonumber\\
+&
+=\frac{1}{\hbar}
+ \sum_s \sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_l \Bigg[
+\Bigg(\sum_{\bfG}A^*_{n,\vec{k}}(\bfG)\nabla_{\mathbf{K}}f_{lm}^s(\mathbf{K})\Bigg)
+\Bigg(\sum_{\bfG'}A_{n',\vec{k}}(\bfG')
+f_{lm}^{s*}(\mathbf{K}')\Bigg) \nonumber\\
+&+
+\Bigg(\sum_{\bfG}A^*_{n,\vec{k}}(\bfG)
+f_{lm}^s(\mathbf{K})\Bigg)\Bigg
+(\sum_{\bfG'}A_{n',\vec{k}}(\bfG')
+\nabla_{\mathbf{K}'}f_{lm}^{s*}(\mathbf{K}')\Bigg) \Bigg]
+,
+\end{align}
+where there are only single sums over $\bfG$. 
+Above is implemented in 
+the DP code.\cite{olevanoDP}
+
+Indeed, in DP \verb=calcolacommutatore.F90= above expansion
+coefficients are called\\
+ $E_lf_{lm}^s (\mathbf{K})\to$ \verb=fnlkslm= and 
+$E_l\nabla_\mathbf{K} f_{lm}^s(\mathbf{K})\to$ \verb=fnldkslm=, where 
+ \verb=fnlkslm= is an array indexed by $\mathbf{k}+\bfG$, and 
+ \verb=fnldkslm= is vector  array indexed by $\mathbf{k}+\bfG$.
+
+Now we derive $\boldsymbol{\mathcal{V}}^{\mathrm{nl},\ell}_{nm}(\mathbf{k})$. First we prove that
+\begin{eqnarray}\label{cvnl.1}
+\sum_{\bfG}
+\ket{\mathbf{k}+\bfG}\bra{\mathbf{k}+\bfG}
+=1
+.
+\end{eqnarray}
+\noindent Proof:
+\begin{align}\label{cvnl.2}
+\bra{n\mathbf{k}}1\ket{n'\mathbf{k}}=\delta_{nn'}
+,
+\end{align}
+take
+\begin{align}\label{cvnl.3}
+\sum_\bfG \bra{n\mathbf{k}}\ket{\mathbf{k}+\bfG}\bra{\mathbf{k}+\bfG}\ket{n'\mathbf{k}}
+&=
+\int d\mathbf{r} d\mathbf{r}' 
+\sum_\bfG \bra{n\mathbf{k}}
+\ket{\mathbf{r}}\bra{\mathbf{r}}
+\ket{\mathbf{k}+\bfG}\bra{\mathbf{k}+\bfG}
+\ket{\mathbf{r}'}\bra{\mathbf{r}'}
+\ket{n'\mathbf{k}}
+\nonumber\\
+&=
+\int d\mathbf{r} d\mathbf{r}' 
+\sum_\bfG 
+\psi^*_{n\mathbf{k}}(\mathbf{r}) 
+\frac{1}{\sqrt{\gO}}e^{i(\mathbf{k}+\bfG)\cdot\mathbf{r}}
+\frac{1}{\sqrt{\gO}}e^{-i(\mathbf{k}+\bfG)\cdot\mathbf{r}'}
+\psi_{m\mathbf{k}}(\mathbf{r}') 
+\nonumber\\
+&=
+\int d\mathbf{r} d\mathbf{r}' 
+\psi^*_{n\mathbf{k}}(\mathbf{r}) 
+\psi_{m\mathbf{k}}(\mathbf{r}') 
+\frac{1}{V}
+\sum_\bfG 
+e^{i(\mathbf{k}+\bfG)\cdot(\mathbf{r}-\mathbf{r}')}
+\nonumber\\
+&=
+\int d\mathbf{r} d\mathbf{r}' 
+\psi^*_{n\mathbf{k}}(\mathbf{r}) 
+\psi_{m\mathbf{k}}(\mathbf{r}') 
+\delta(\mathbf{r}-\mathbf{r}')
+=
+\int d\mathbf{r}
+\psi^*_{n\mathbf{k}}(\mathbf{r}) 
+\psi_{m\mathbf{k}}(\mathbf{r})=\delta_{nn'} ,
+\end{align}
+and thus Eq. \eqref{cvnl.1} follows. \verb=Q.E.D.=
+We used
+\begin{align}\label{vnl.4}
+\braket{\mathbf{r}}{\mathbf{k}+\bfG}=\frac{1}{\sqrt{\gO}}e^{i(\mathbf{k}+\bfG)\cdot\mathbf{r}}
+.
+\end{align}
+
+From Eq. \eqref{nl.4}, we would like to calculate
+\begin{align}\label{vnl.5}
+\boldsymbol{\mathcal{V}}^{\mathrm{nl},\ell}_{nm}(\mathbf{k})=\frac{1}{2}
+\bra{n\mathbf{k}} 
+C^\ell(z)\mathbf{v}^\mathrm{nl}+\mathbf{v}^\mathrm{nl} C^\ell(z)  
+\ket{m\mathbf{k}}
+.
+\end{align}  
+We work out the first term in the r.h.s,
+\begin{align}\label{vnl.6}
+\bra{n\mathbf{k}}C^\ell(z) 
+\mathbf{v}^\mathrm{nl}\ket{m\mathbf{k}}
+&=\sum_{\bfG}
+\bra{n\mathbf{k}}C^\ell(z)\ket{\mathbf{k}+\bfG}
+\bra{\mathbf{k}+\bfG}\mathbf{v}^\mathrm{nl}\ket{m\mathbf{k}}
+\nonumber\\
+&=\sum_{\bfG}
+\int d\mathbf{r} 
+\int d\mathbf{r}' 
+\bra{n\mathbf{k}}
+\ket{\mathbf{r}}\bra{\mathbf{r}}  
+C^\ell(z) 
+\ket{\mathbf{r}'}\bra{\mathbf{r}'}
+\ket{\mathbf{k}+\bfG}
+\nonumber\\
+&\times 
+\int d\mathbf{r}'' 
+\int d\mathbf{r}''' 
+\bra{\mathbf{k}+\bfG}
+\ket{\mathbf{r}''}\bra{\mathbf{r}''} 
+\mathbf{v}^\mathrm{nl} 
+\ket{\mathbf{r}'''}\bra{\mathbf{r}'''} 
+\ket{m\mathbf{k}}
+\nonumber\\
+&=\sum_{\bfG}
+\int d\mathbf{r} 
+\int d\mathbf{r}' 
+\braket{n\mathbf{k}}{\mathbf{r}}
+C^\ell(z) 
+\delta(\mathbf{r}-\mathbf{r}') 
+\braket{\mathbf{r}'}{\mathbf{k}+\bfG}
+\nonumber\\
+&\times 
+\int d\mathbf{r}'' 
+\int d\mathbf{r}''' 
+\braket{\mathbf{k}+\bfG}{\mathbf{r}''}
+\bra{\mathbf{r}''} 
+\mathbf{v}^\mathrm{nl} 
+\ket{\mathbf{r}'''}
+\braket{\mathbf{r}'''}{m\mathbf{k}}
+\nonumber\\
+&=\sum_{\bfG}
+\int d\mathbf{r} 
+\braket{n\mathbf{k}}{\mathbf{r}}
+C^\ell(z) 
+\braket{\mathbf{r}}{\mathbf{k}+\bfG}
+\nonumber\\
+&\times 
+\frac{i}{\hbar}
+\int d\mathbf{r}'' 
+\int d\mathbf{r}''' 
+\braket{\mathbf{k}+\bfG}{\mathbf{r}''}
+V^\mathrm{nl}(\mathbf{r}'',\mathbf{r}''')(\mathbf{r}'''-\mathbf{r}'') 
+\braket{\mathbf{r}'''}{m\mathbf{k}}
+,
+\end{align}
+where we used Eq. \eqref{vnln.1} and \eqref{conhr}. 
+We use Eq. \eqref{cn3}, \eqref{vnl.4} and \eqref{cn51}  to obtain
+\begin{align}\label{vnl.7}
+\bra{n\mathbf{k}}C^\ell(z) 
+\mathbf{v}^\mathrm{nl}\ket{m\mathbf{k}}
+&=\sum_{\bfG}
+\sum_{\bfG'}
+A^*_{n\mathbf{k}}(\bfG') 
+\frac{1}{\gO}
+\int d\mathbf{r} 
+e^{-i(\mathbf{k}+\bfG')\cdot\mathbf{r}}
+C^\ell(z) 
+e^{i(\mathbf{k}+\bfG)\cdot\mathbf{r}}
+\nonumber\\
+&\times 
+\sum_{\bfG''}
+A_{m\mathbf{k}}(\bfG'') 
+\frac{i}{\hbar\gO}
+\int d\mathbf{r}'' 
+\int d\mathbf{r}''' 
+e^{-i(\mathbf{k}+\bfG)\cdot\mathbf{r}''} 
+V^\mathrm{nl}(\mathbf{r}'',\mathbf{r}''')(\mathbf{r}'''-\mathbf{r}'') 
+e^{i(\mathbf{k}+\bfG'')\cdot\mathbf{r}'''}
+\nonumber\\
+&=
+\frac{1}{\hbar}
+\sum_{\bfG}
+\sum_{\bfG'}
+A^*_{n\mathbf{k}}(\bfG') 
+\delta_{\bfG_\parallel \bfG'_\parallel}f_\ell(\bfG_\perp-\bfG'_\perp) 
+\sum_{\bfG''}
+A_{m\mathbf{k}}(\bfG'') 
+(\nabla_{\mathbf{K}}+\nabla_{\mathbf{K}''}) 
+V^\mathrm{nl}(\mathbf{K},\mathbf{K}'') 
+,
+\end{align}
+where
+\begin{align}\label{vnl.8}
+\frac{1}{\gO}
+\int d\mathbf{r}\, 
+C^\ell(z) 
+e^{i(\bfG-\bfG')\cdot\mathbf{r}}
+=\delta_{\bfG_\parallel \bfG'_\parallel}f_\ell(\bfG_\perp-\bfG'_\perp)
+,
+\end{align} 
+and
+\begin{align}\label{vnl.9}
+f_\ell(g)=\frac{1}{L}\int_{z_\ell-\Delta^b_\ell}^{z_\ell+\Delta^f_\ell} e^{igz}dz  
+ ,
+\end{align}
+where $f^*(g)=f(-g)$.
+We define
+\begin{align}\label{vnl.10}
+\calf^\ell_{n\mathbf{k}}(\bfG) 
+=
+\sum_{\bfG'}
+A_{n\mathbf{k}}(\bfG') 
+\delta_{\bfG_\parallel \bfG'_\parallel}f_\ell(\bfG'_\perp-\bfG_\perp) 
+,
+\end{align}
+and
+\begin{align}\label{vnl.11}
+\calh_{n\mathbf{k}}(\bfG)&=
+\sum_{\bfG'}
+A_{n\mathbf{k}}(\bfG') 
+(\nabla_{\mathbf{K}}+\nabla_{\mathbf{K}'}) 
+V^\mathrm{nl}(\mathbf{K},\mathbf{K}') 
+,
+\end{align}
+thus we can compactly write,
+\begin{align}\label{vn.12}
+\bra{n\mathbf{k}}C^\ell(z) 
+\mathbf{v}^\mathrm{nl}\ket{m\mathbf{k}}
+&=
+\frac{1}{\hbar}
+\sum_{\bfG}
+\calf^{\ell*}_{n\mathbf{k}}(\bfG) 
+\calh_{m\mathbf{k}}(\bfG) 
+.
+\end{align}
+Now, the second term of Eq. \eqref{vnl.5}
+\begin{align}\label{vnl.12}
+\bra{n\mathbf{k}}
+\mathbf{v}^\mathrm{nl}
+C^\ell(z) \ket{m\mathbf{k}}
+&=\sum_{\bfG}
+\bra{n\mathbf{k}}
+\mathbf{v}^\mathrm{nl} 
+\ket{\mathbf{k}+\bfG}
+\bra{\mathbf{k}+\bfG}C^\ell(z)
+\ket{m\mathbf{k}}
+\nonumber\\
+&=\sum_{\bfG}
+\int d\mathbf{r}'' 
+\int d\mathbf{r}''' 
+\bra{n\mathbf{k}}
+\ket{\mathbf{r}''}\bra{\mathbf{r}''} 
+\mathbf{v}^\mathrm{nl} 
+\ket{\mathbf{r}'''}\bra{\mathbf{r}'''} 
+\ket{\mathbf{k}+\bfG}
+\nonumber\\
+&\times 
+\int d\mathbf{r} 
+\int d\mathbf{r}' 
+\bra{\mathbf{k}+\bfG}
+\ket{\mathbf{r}}\bra{\mathbf{r}}  
+C^\ell(z) 
+\ket{\mathbf{r}'}\bra{\mathbf{r}'}
+\ket{m\mathbf{k}}
+\nonumber\\
+&=\sum_{\bfG}
+\frac{i}{\hbar}
+\int d\mathbf{r}'' 
+\int d\mathbf{r}''' 
+\braket{n\mathbf{k}}{\mathbf{r}''}
+V^\mathrm{nl}(\mathbf{r}'',\mathbf{r}''')(\mathbf{r}'''-\mathbf{r}'') 
+\braket{\mathbf{r}'''}{\mathbf{k}+\bfG}
+\nonumber\\
+&\times 
+\int d\mathbf{r} 
+\braket{\mathbf{k}+\bfG}{\mathbf{r}}
+C^\ell(z) 
+\braket{\mathbf{r}}{m\mathbf{k}}
+\nonumber\\
+&=\sum_{\bfG}
+\sum_{\bfG'}
+A^*_{n\mathbf{k}}(\bfG') 
+\frac{i}{\hbar\gO}
+\int d\mathbf{r}'' 
+\int d\mathbf{r}''' 
+e^{-i(\mathbf{k}+\bfG')\cdot\mathbf{r}''} 
+V^\mathrm{nl}(\mathbf{r}'',\mathbf{r}''')(\mathbf{r}'''-\mathbf{r}'') 
+e^{i(\mathbf{k}+\bfG)\cdot\mathbf{r}'''}
+\nonumber\\
+&\times 
+\sum_{\bfG''}
+A_{m\mathbf{k}}(\bfG'') 
+\frac{1}{\gO}
+\int d\mathbf{r} 
+e^{-i(\mathbf{k}+\bfG)\cdot\mathbf{r}} 
+C^\ell(z) 
+e^{i(\mathbf{k}+\bfG'')\cdot\mathbf{r}}
+\nonumber\\
+&=
+\frac{1}{\hbar}
+\sum_{\bfG}
+\sum_{\bfG'}
+A^*_{n\mathbf{k}}(\bfG') 
+(\nabla_\mathbf{K}+\nabla_{\mathbf{K}'})
+V^\mathrm{nl}(\mathbf{K}',\mathbf{K})
+\nonumber\\
+&\times 
+\sum_{\bfG''}
+A_{m\mathbf{k}}(\bfG'') 
+\delta_{\bfG_\parallel \bfG''_\parallel}f_\ell(\bfG''_\perp-\bfG_\perp)
+\nonumber\\
+&=
+\frac{1}{\hbar}
+\sum_{\bfG}
+\calh^*_{n\mathbf{k}}(\bfG) 
+\calf^\ell_{m\mathbf{k}}(\bfG) 
+.
+\end{align}
+Therefore Eq. \eqref{vnl.5} is compactly given by
+\begin{align}\label{vnl.13}
+\boldsymbol{\mathcal{V}}^{\mathrm{nl},\ell}_{nm}(\mathbf{k})=\frac{1}{2 \hbar}
+\sum_{\bfG}
+\left(
+\calf^{\ell*}_{n\mathbf{k}}(\bfG) 
+\calh_{m\mathbf{k}}(\bfG) 
++
+\calh^*_{n\mathbf{k}}(\bfG) 
+\calf^\ell_{m\mathbf{k}}(\bfG) 
+\right)
+.
+\end{align} 
+For fully  separable pseudopotentials in the Kleinman-Bylander (KB) form
+\cite{mottaCMS10,kleinmanPRL82,adolphPRB96}, we can use Eq. \eqref{ji.1n} and
+evaluate above expression, that we have implemented in the DP code
+\cite{olevanoDP}. Explicitly,
+\begin{eqnarray}\label{vnl.14}
+\boldsymbol{\mathcal{V}}^{\mathrm{nl},\ell}_{nm}(\mathbf{k})=\frac{1}{2 \hbar}
+\sum_s\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_l \nonumber\\
+\Bigg[ \Bigg(\sum_{{\bfG''}}
+\nabla_{{\bfG''}}f_{lm}^s({\bfG''})
+\sum_{\bfG}A^*_{n{\mathbf{k}}}(\bfG)\delta_{\bfG_{||}{\bfG''}_{||}}
+f_\ell(G_z-G''_z) \Bigg)  
+\Bigg( \sum_{{\bfG'}}A_{m{\mathbf{k}}}({\bfG'})f_{lm}^{s*}({\mathbf{K}'}) \Bigg) \nonumber\\
+%
++ \Bigg(\sum_{{\bfG''}}
+f_{lm}^s({\bfG''})\sum_{\bfG}A^*_{n{\mathbf{k}}}(\bfG)\delta_{\bfG_{||}{\bfG''}_{||}}
+f_\ell(G_z-G''_z) \Bigg)  
+\Bigg( \sum_{{\bfG'}}A_{m{\mathbf{k}}}({\bfG'})\nabla_{{\mathbf{K}'}}f_{lm}^{s*}({\mathbf{K}'}) \Bigg)  \nonumber\\
++
+\Bigg(\sum_{\bfG}A^*_{n{\mathbf{k}}}(\bfG)\nabla_{\bfG}f_{lm}^s(\bfG)\Bigg)\Bigg(
+\sum_{{\bfG''}}
+f_{lm}^{s*}({\bfG''})\sum_{{\bfG'}}A_{m{\mathbf{k}}}({\bfG'})\delta_{{\bfG'}_{||}{\bfG''}_{||}}
+f_\ell(G''_z-G'_z) \Bigg) \nonumber\\ 
++
+\Bigg(\sum_{\bfG}A^*_{n{\mathbf{k}}}(\bfG)f_{lm}^s(\bfG)
+\Bigg) \Bigg(
+\sum_{{\bfG''}}\nabla_{{\bfG''}}f_{lm}^{s*}({\bfG''})
+\sum_{{\bfG'}}A_{m{\mathbf{k}}}({\bfG'})\delta_{{\bfG'}_{||}{\bfG''}_{||}}
+f_\ell(G''_z-G'_z) \Bigg) \Bigg].\nonumber\\ 
+\end{eqnarray} 
+For a full slab calculation, equivalent to a bulk calculation,
+$C^\ell(z)=1$ and then 
+$f_\ell(g) =\delta_{g0}$, and Eq. \eqref{vnl.14}
+reduces to 
+Eq. \eqref{forg}. 
+
+\bibliographystyle{unsrt}
+\bibliography{/Users/sma/Dropbox/docs/academics/master}
+
+\end{document}

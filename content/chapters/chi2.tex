@@ -1,5 +1,5 @@
 %!TEX root = ../../main.tex
-\chapter{The nonlinear surface susceptibility}\label{chap:chi2}
+\chapter{The Nonlinear Surface Susceptibility}\label{chap:chi2}
 \partialtoc
 
 In this section I will outline the general procedure to obtain the surface
@@ -68,7 +68,7 @@ We conclude that the leading term of the polarization in a surface region is
 given by
 \begin{equation}\label{sshgp1}
 \int P^{\mathrm{a}}(\mathbf{R},z)\,dz \approx lP^{\mathrm{a}}
-\equiv P^{\mathrm{a}}_{\mathrm{aurface}}
+\equiv P^{\mathrm{a}}_{\mathrm{surface}}
 \equiv \chi^{\mathrm{abc}}_{S}E^{\mathrm{b}}E^{\mathrm{c}},
 \end{equation}
 where $l$ is the surface region from which the dipolar signal of $\mathbf{P}$ is
@@ -231,7 +231,7 @@ where $\Omega$ is the unit cell volume. The interband part, $\mathbf{r}_{e}$,
 can be obtained as follows. We start by introducing the velocity operator
 \begin{align}\label{vop}
 \hat{\mathbf{v}}^{\Sigma} &=
-\frac{1}{i\hbar}[\hat{\mathbf{r}},\hat{H}^{\Sigma}_{0}],
+\frac{1}{i\hbar}\left[\hat{\mathbf{r}},\hat{H}^{\Sigma}_{0}\right],
 \end{align}
 and calculating its matrix elements
 \begin{equation}\label{conhrnm}
@@ -255,7 +255,7 @@ Defining $\omega^\Sigma_{nm}(\mathbf{k}) =
 \begin{equation}\label{pmnrmn}
 \mathbf{r}_{nm}(\mathbf{k})
 = \frac{\mathbf{v}^\Sigma_{nm}(\mathbf{k})}{i\omega^\Sigma_{nm}(\mathbf{k})}
-\quad\quad n\notin D_{m},
+\qquad n\notin D_{m},
 \end{equation} 
 which can be identified as
 $\mathbf{r}_{nm}=(1-\delta_{nm})\boldsymbol{\xi}_{nm}\to \mathbf{r}_{e,nm}$.
@@ -279,138 +279,106 @@ with
 \right),
 \end{equation} 
 where ``$;\mathbf{k}$'' denotes the generalized derivative (see Appendix
-\ref{reri}).
+\ref{app:re_ri}).
 
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-As can be seen from Eq. \eqref{ache.1} and \eqref{ache.2},
-both $\hat{S}$ and $\hat{V}^{\mathrm{nl}}$ are nonlocal potentials. Their contribution 
-in the calculation of the optical response has to be taken in order to
-get reliable results.\cite{ismailPRL01}
-We proceed as follows; from Eqs. \eqref{vop}, \eqref{ache.1} and
-\eqref{ache.2}
- we find
+As can be seen from Eq. \eqref{ache.1} and \eqref{ache.2}, both $\mathcal{S}$
+and $\hat{V}^{\mathrm{nl}}$ are nonlocal potentials. Their contribution in the
+calculation of the optical response has to be considered in order to get
+reliable results \cite{ismailPRL01}. We proceed as follows: from Eqs.
+\eqref{vop}, \eqref{ache.1} and \eqref{ache.2} we find
 \begin{align}\label{vop2}
 \hat{\mathbf{v}}^{\Sigma} &=
-\frac{\hat{\mathbf{p}}}{m_{e}}
-+
-\frac{1}{i\hbar}[\hat{\mathbf{r}},\hat{V}^{\mathrm{nl}}(\mathbf{r},\mathbf{r}')]
-+
-\frac{1}{i\hbar}[\hat{\mathbf{r}},\hat{\mathcal{S}}(\mathbf{r},\mathbf{p})]
+\frac{\hat{\mathbf{p}}}{m_{e}} + \frac{1}{i\hbar}
+\left[\hat{\mathbf{r}},\hat{V}^{\mathrm{nl}}(\mathbf{r},\mathbf{r}')\right]
++ \frac{1}{i\hbar}
+  \left[\hat{\mathbf{r}},\hat{\mathcal{S}}(\mathbf{r},\mathbf{p})\right]
 \nonumber\\
 &\equiv
-\hat{\mathbf{v}}
-+
-\hat{\mathbf{v}}^{\mathrm{nl}}
-+\hat{\mathbf{v}}^\mathcal{S}
-=
-\hat{\mathbf{v}}^\mathrm{LDA}
-+\hat{\mathbf{v}}^\mathcal{S}
-,
+\hat{\mathbf{v}} + \hat{\mathbf{v}}^{\mathrm{nl}} + \hat{\mathbf{v}}^\mathcal{S}
+= \hat{\mathbf{v}}^\mathrm{LDA} + \hat{\mathbf{v}}^\mathcal{S},
 \end{align}
 where we have defined
-\begin{align}\label{conhr}
-\hat{\mathbf{v}}
-&=\frac{\hat{\mathbf{p}}}{m_{e}}
-\nonumber\\
-\hat{\mathbf{v}}^{\mathrm{nl}}
-&=
-\frac{1}{i\hbar}[\hat{\mathbf{r}},\hat{V}^{\mathrm{nl}}]
-\nonumber\\
-\hat{\mathbf{v}}^\mathcal{S}
-&=
-\frac{1}{i\hbar}[\hat{\mathbf{r}},\hat{S}(\mathbf{r},\mathbf{p})]
-\nonumber\\
-\hat{\mathbf{v}}^\mathrm{LDA}
-&=
-\hat{\mathbf{v}}
-+\hat{\mathbf{v}}^{\mathrm{nl}}
-\end{align}  
-with $\hat{\mathbf{p}}=-i\hbar\boldsymbol{\nabla}$ the momentum operator.
-Using Eq. \eqref{chon.0}, we obtain that the
-matrix elements of $\hat{\mathbf{v}}^\mathcal{S}$ are given by
+\begin{equation}\label{conhr}
+\begin{split}
+\hat{\mathbf{v}} &=\frac{\hat{\mathbf{p}}}{m_{e}}\\
+\hat{\mathbf{v}}^{\mathrm{nl}} &= \frac{1}{i\hbar}
+  \left[\hat{\mathbf{r}},\hat{V}^{\mathrm{nl}}\right]\\
+\hat{\mathbf{v}}^\mathcal{S} &= \frac{1}{i\hbar}
+  \left[\hat{\mathbf{r}},\hat{S}(\mathbf{r},\mathbf{p})\right]\\
+\hat{\mathbf{v}}^\mathrm{LDA} &= \hat{\mathbf{v}}+\hat{\mathbf{v}}^{\mathrm{nl}}
+\end{split}
+\end{equation}  
+with $\hat{\mathbf{p}}= -i\hbar\boldsymbol{\nabla}$ the momentum operator. Using
+Eq. \eqref{chon.0}, we obtain that the matrix elements of
+$\hat{\mathbf{v}}^\mathcal{S}$ are given by
 \begin{equation}\label{chon.2} 
-\mathbf{v}^\mathcal{S}_{nm}=i\Delta f_{mn}\mathbf{r}_{nm},
-%=\frac{\Delta f_{mn}}{\omega^{\mathrm{LDA}}_{nm}}\mathbf{v}^\mathrm{LDA}_{nm}
+\mathbf{v}^\mathcal{S}_{nm} = i\Delta f_{mn}\mathbf{r}_{nm},
 \end{equation}
-with $f_{nm}=f_n-f_m$,
-where we see that $\mathbf{v}^\mathcal{S}_{nn}=0$, then
+with $f_{nm} = f_{n} - f_{m}$, where we see that $\mathbf{v}^\mathcal{S}_{nn} =
+0$, then
 \begin{align}\label{chon.8}
+\mathbf{v}^\Sigma_{nm} 
+&= \mathbf{v}^\mathrm{LDA}_{nm} + i\Delta f_{mn}\mathbf{r}_{nm}\nonumber\\
+&= \mathbf{v}^\mathrm{LDA}_{nm} + i\Delta f_{mn}
+   \frac{\mathbf{v}^\Sigma_{nm}(\mathbf{k})}{i\omega^\Sigma_{nm}(\mathbf{k})}
+   \nonumber\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mathbf{v}^\Sigma_{nm}
-&=
-\mathbf{v}^\mathrm{LDA}_{nm}+i\Delta f_{mn}\mathbf{r}_{nm}
-\nonumber\\
-&=
-\mathbf{v}^\mathrm{LDA}_{nm}+i\Delta f_{mn}\frac{\mathbf{v}^\Sigma_{nm}(\mathbf{k})}{i\omega^\Sigma_{nm}(\mathbf{k})}
-\nonumber\\
-\mathbf{v}^\Sigma_{nm}
-\frac{\omega^\Sigma_{nm}-\Delta f_{mn}}{\omega^\Sigma_{nm}}
-&=
-\mathbf{v}^\mathrm{LDA}_{nm}
-\nonumber\\
-\mathbf{v}^\Sigma_{nm}
-\frac{\omega^{\mathrm{LDA}}_{nm}}{\omega^\Sigma_{nm}}
-&=
-\mathbf{v}^\mathrm{LDA}_{nm}
-\nonumber\\
+  \frac{\omega^\Sigma_{nm}-\Delta f_{mn}}{\omega^\Sigma_{nm}}
+&= \mathbf{v}^\mathrm{LDA}_{nm}\nonumber\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mathbf{v}^\Sigma_{nm}\frac{\omega^{\mathrm{LDA}}_{nm}}{\omega^\Sigma_{nm}}
+&= \mathbf{v}^\mathrm{LDA}_{nm}\nonumber\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frac{\mathbf{v}^\Sigma_{nm}}{\omega^\Sigma_{nm}}
-&=
-\frac{\mathbf{v}^\mathrm{LDA}_{nm}}{\omega^{\mathrm{LDA}}_{nm}}
-,
+&= \frac{\mathbf{v}^\mathrm{LDA}_{nm}}{\omega^{\mathrm{LDA}}_{nm}},
 \end{align}
-since
-$\omega^\Sigma_{nm}-\Delta f_{mn}=\omega^{\mathrm{LDA}}_{nm}$. Therefore, 
+since $\omega^\Sigma_{nm}-\Delta f_{mn}=\omega^{\mathrm{LDA}}_{nm}$. Therefore,
 \begin{align}\label{chon.9}
-\mathbf{v}^\Sigma_{nm}(\mathbf{k})
-&=
-\frac{\omega^\Sigma_{nm}}{\omega^{\mathrm{LDA}}_{nm}}\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k})
-=\left(1+\frac{\Delta}{\omega_c(\mathbf{k})-\omega_v(\mathbf{k})}\right)\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k})
-\quad\quad n\notin D_m
-\nonumber\\
-\mathbf{v}^\Sigma_{nn}(\mathbf{k})
-&=
-\mathbf{v}^\mathrm{LDA}_{nn}(\mathbf{k})
-,
+\begin{split}
+\mathbf{v}^\Sigma_{nm}(\mathbf{k}) &=
+\frac{\omega^\Sigma_{nm}}{\omega^{\mathrm{LDA}}_{nm}}
+\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k})
+= \left(
+1 + \frac{\Delta}{\omega_c(\mathbf{k})-\omega_v(\mathbf{k})}
+\right)
+\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k})\qquad n\notin D_{m}\\\\
+\mathbf{v}^\Sigma_{nn}(\mathbf{k}) &= \mathbf{v}^\mathrm{LDA}_{nn}(\mathbf{k}),
+\end{split}
 \end{align} 
 and Eq. \eqref{pmnrmn} gives
 \begin{align}\label{chon.10}
 \mathbf{r}_{nm}(\mathbf{k})
-=
-\frac{\mathbf{v}^\Sigma_{nm}(\mathbf{k})}{i\omega^\Sigma_{nm}(\mathbf{k})}
-=
-\frac{\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k})}{i\omega^{\mathrm{LDA}}_{nm}(\mathbf{k})}
-\quad\quad n\notin D_m
-.
+= \frac{\mathbf{v}^\Sigma_{nm}(\mathbf{k})}{i\omega^\Sigma_{nm}(\mathbf{k})}
+= \frac{\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k})}
+{i\omega^{\mathrm{LDA}}_{nm}(\mathbf{k})} \qquad n\notin D_{m}.
 \end{align}
-The matrix elements
-of $\mathbf{r}_e$ are the same whether we use the LDA or the scissored
-Hamiltonian and there is no need to label them with either LDA
-or S superscripts. Thus,
-we can write
+The matrix elements of $\mathbf{r}_{e}$ are the same whether we use the LDA or
+the scissored Hamiltonian. Therefore, there is no need to label them with either
+LDA or $S$ superscripts. Thus, we can write
 \begin{equation}\label{chon.98}
-\mathbf{r}_{e,nm}\to
-\mathbf{r}_{nm}(\mathbf{k})=\frac{\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k})}{i\omega^{\mathrm{LDA}}_{nm}(\mathbf{k})}
-\quad\quad n\notin D_m
-,
+\mathbf{r}_{e,nm}\to\mathbf{r}_{nm}(\mathbf{k}) =
+\frac{\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k})}
+     {i\omega^{\mathrm{LDA}}_{nm}(\mathbf{k})}
+\qquad n\notin D_{m},
 \end{equation}   
-which gives the interband matrix elements of the position operator
-in terms of the matrix elements of $\hat{\mathbf{v}}^\mathrm{LDA}$. 
-These matrix elements include the matrix elements of
-$\mathbf{v}^{\mathrm{nl}}_{nm}(\mathbf{k})$ which can be readily calculated\cite{francesco} for 
-fully separable nonlocal pseudopotentials in the 
-Kleinman-Bylander 
-form.\cite{mottaCMS10, kleinmanPRL82, adolphPRB96}
-In Appendix \ref{appvnl} we outline how this  
-can be accomplished. 
+which gives the interband matrix elements of the position operator in terms of
+the matrix elements of $\hat{\mathbf{v}}^\mathrm{LDA}$. These matrix elements
+include the matrix elements of $\mathbf{v}^{\mathrm{nl}}_{nm}(\mathbf{k})$ which
+can be readily calculated for fully separable nonlocal pseudopotentials in the
+Kleinman-Bylander form \cite{mottaCMS10, kleinmanPRL82, adolphPRB96}. In
+Appendix \ref{appvnl} we outline how this is accomplished.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 \section{Time-dependent Perturbation Theory}\label{tdpt}
 
