@@ -5,7 +5,6 @@
 \contentsline {section}{\numberline {1.2}Time-dependent Perturbation Theory}{6}{section.1.2}
 \contentsline {section}{\numberline {1.3}Layered Current Density}{9}{section.1.3}
 \contentsline {section}{\numberline {1.4}Microscopic surface susceptibility}{12}{section.1.4}
-\contentsline {section}{\numberline {1.5}Conclusions}{14}{section.1.5}
 \ttl@stoptoc {chapters@1}
 \contentsline {chapter}{\chapternumberline {2}Surface Second-Harmonic Generation Yield}{15}{chapter.2}
 \ttl@stoptoc {chapters@1}
@@ -51,58 +50,65 @@
 \contentsline {section}{\numberline {4.1}Conclusions}{55}{section.4.1}
 \contentsline {section}{\numberline {4.2}Future Work}{56}{section.4.2}
 \ttl@stoptoc {chapters@4}
-\contentsline {appendix}{\chapternumberline {A}Useful derivations for the nonlinear surface susceptibility}{57}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}Supplementary Derivations for the Nonlinear Surface Susceptibility}{57}{appendix.A}
 \ttl@stoptoc {chapters@4}
 \ttl@starttoc {chapters@5}
 \contentsline {section}{\numberline {A.1}$\mathbf {r}_{e}$ and $\mathbf {r}_{i}$}{57}{section.A.1}
-\contentsline {section}{\numberline {A.2}Matrix elements of $\mathbf {v}^\mathrm {nl}_{nm}(\mathbf {k})$ and $\boldsymbol {\mathcal {V}}^{\mathrm {nl},\ell }_{nm}(\mathbf {k})$}{59}{section.A.2}
+\contentsline {section}{\numberline {A.2}Matrix elements of $\mathbf {v}^\mathrm {nl}_{nm}(\mathbf {k})$ and $\boldsymbol {\mathcal {V}}^{\mathrm {nl},\ell }_{nm}(\mathbf {k})$}{60}{section.A.2}
 \contentsline {section}{\numberline {A.3}Explicit expressions for $\mathcal {V}^{a,\ell }_{nm}(\mathbf {k})$ and $\mathcal {C}^{\ell }_{nm}(\mathbf {k})$}{64}{section.A.3}
 \contentsline {subsection}{\numberline {A.3.1}Time-reversal relations}{65}{subsection.A.3.1}
 \contentsline {section}{\numberline {A.4} $\mathcal {V}^{\Sigma ,\mathrm {a},\ell }_{nm}$ and $\left (\mathcal {V}^{\Sigma ,\mathrm {a},\ell }_{nm}\right )_{;k^\mathrm {b}}$}{66}{section.A.4}
 \contentsline {section}{\numberline {A.5}Generalized derivative $(\omega _{n}(\mathbf {k}))_{;\mathbf {k}}$}{68}{section.A.5}
+\contentsline {section}{\numberline {A.6}Expressions for $\chi _{\mathrm {surface}}^{\mathrm {abc}}$ in terms of $\mathcal {V}^{\Sigma ,\text {a},\ell }_{mn}$}{69}{section.A.6}
+\contentsline {subsection}{\numberline {A.6.1}Intraband Contributions}{69}{subsection.A.6.1}
+\contentsline {subsection}{\numberline {A.6.2}Interband Contributions}{73}{subsection.A.6.2}
+\contentsline {section}{\numberline {A.7}Generalized derivative $(\mathbf {r}_{nm}(\mathbf {k}))_{;\mathbf {k}}$ for nonlocal potentials}{76}{section.A.7}
+\contentsline {subsection}{\numberline {A.7.1}Case $n=m$}{77}{subsection.A.7.1}
+\contentsline {subsection}{\numberline {A.7.2}Case $n\not =m$}{77}{subsection.A.7.2}
+\contentsline {subsection}{\numberline {A.7.3}Layer Case}{78}{subsection.A.7.3}
+\contentsline {section}{\numberline {A.8}Matrix elements of $\tau ^{\mathrm {a}\mathrm {b}}_{nm}(\mathbf {k})$}{78}{section.A.8}
 \ttl@stoptoc {chapters@5}
-\contentsline {appendix}{\chapternumberline {B}Derived expressions for the SHG yield}{69}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}Complete Derivations for the SSHG yield}{80}{appendix.B}
 \ttl@stoptoc {chapters@5}
 \ttl@starttoc {chapters@6}
-\contentsline {section}{\numberline {B.1}Some useful expressions}{69}{section.B.1}
-\contentsline {subsection}{\numberline {B.1.1}$2\omega $ terms}{70}{subsection.B.1.1}
-\contentsline {subsection}{\numberline {B.1.2}$1\omega $ terms}{71}{subsection.B.1.2}
-\contentsline {subsection}{\numberline {B.1.3}Nonzero components of $\boldsymbol {\chi }(-2\omega ; \omega , \omega )$}{72}{subsection.B.1.3}
-\contentsline {section}{\numberline {B.2}$\mathcal {R}_{pP}$}{73}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}For the (111) surface}{74}{subsection.B.2.1}
-\contentsline {subsection}{\numberline {B.2.2}For the (110) surface}{77}{subsection.B.2.2}
-\contentsline {subsection}{\numberline {B.2.3}For the (001) surface}{78}{subsection.B.2.3}
-\contentsline {section}{\numberline {B.3}$\mathcal {R}_{pS}$}{79}{section.B.3}
-\contentsline {subsection}{\numberline {B.3.1}For the (111) surface}{80}{subsection.B.3.1}
-\contentsline {subsection}{\numberline {B.3.2}For the (110) surface}{80}{subsection.B.3.2}
-\contentsline {subsection}{\numberline {B.3.3}For the (001) surface}{81}{subsection.B.3.3}
-\contentsline {section}{\numberline {B.4}$\mathcal {R}_{sP}$}{81}{section.B.4}
-\contentsline {subsection}{\numberline {B.4.1}For the (111) surface}{82}{subsection.B.4.1}
-\contentsline {subsection}{\numberline {B.4.2}For the (110) surface}{83}{subsection.B.4.2}
-\contentsline {subsection}{\numberline {B.4.3}For the (001) surface}{83}{subsection.B.4.3}
-\contentsline {section}{\numberline {B.5}$\mathcal {R}_{sS}$}{84}{section.B.5}
-\contentsline {subsection}{\numberline {B.5.1}For the (111) surface}{84}{subsection.B.5.1}
-\contentsline {subsection}{\numberline {B.5.2}For the (110) surface}{85}{subsection.B.5.2}
-\contentsline {subsection}{\numberline {B.5.3}For the (001) surface}{85}{subsection.B.5.3}
+\contentsline {section}{\numberline {B.1}Some useful expressions}{81}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}$2\omega $ terms}{81}{subsection.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}$1\omega $ terms}{82}{subsection.B.1.2}
+\contentsline {subsection}{\numberline {B.1.3}Nonzero components of $\boldsymbol {\chi }(-2\omega ; \omega , \omega )$}{83}{subsection.B.1.3}
+\contentsline {section}{\numberline {B.2}$\mathcal {R}_{pP}$}{84}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}For the (111) surface}{85}{subsection.B.2.1}
+\contentsline {subsection}{\numberline {B.2.2}For the (110) surface}{88}{subsection.B.2.2}
+\contentsline {subsection}{\numberline {B.2.3}For the (001) surface}{89}{subsection.B.2.3}
+\contentsline {section}{\numberline {B.3}$\mathcal {R}_{pS}$}{90}{section.B.3}
+\contentsline {subsection}{\numberline {B.3.1}For the (111) surface}{91}{subsection.B.3.1}
+\contentsline {subsection}{\numberline {B.3.2}For the (110) surface}{91}{subsection.B.3.2}
+\contentsline {subsection}{\numberline {B.3.3}For the (001) surface}{92}{subsection.B.3.3}
+\contentsline {section}{\numberline {B.4}$\mathcal {R}_{sP}$}{92}{section.B.4}
+\contentsline {subsection}{\numberline {B.4.1}For the (111) surface}{93}{subsection.B.4.1}
+\contentsline {subsection}{\numberline {B.4.2}For the (110) surface}{94}{subsection.B.4.2}
+\contentsline {subsection}{\numberline {B.4.3}For the (001) surface}{94}{subsection.B.4.3}
+\contentsline {section}{\numberline {B.5}$\mathcal {R}_{sS}$}{95}{section.B.5}
+\contentsline {subsection}{\numberline {B.5.1}For the (111) surface}{95}{subsection.B.5.1}
+\contentsline {subsection}{\numberline {B.5.2}For the (110) surface}{96}{subsection.B.5.2}
+\contentsline {subsection}{\numberline {B.5.3}For the (001) surface}{96}{subsection.B.5.3}
 \ttl@stoptoc {chapters@6}
-\contentsline {appendix}{\chapternumberline {C}Deriving the SSHG yield without multiple reflections}{86}{appendix.C}
+\contentsline {appendix}{\chapternumberline {C}Deriving the SSHG yield without multiple reflections}{97}{appendix.C}
 \ttl@stoptoc {chapters@6}
 \ttl@starttoc {chapters@7}
-\contentsline {section}{\numberline {C.1}Three layer model for SSHG radiation}{86}{section.C.1}
-\contentsline {subsection}{\numberline {C.1.1}SSHG Yield}{89}{subsection.C.1.1}
-\contentsline {section}{\numberline {C.2}Some limiting cases of interest}{91}{section.C.2}
-\contentsline {subsection}{\numberline {C.2.1}The two layer model}{91}{subsection.C.2.1}
-\contentsline {subsection}{\numberline {C.2.2}Taking $\mathcal {P}(2\omega )$ and the fundamental fields in the bulk}{92}{subsection.C.2.2}
-\contentsline {subsection}{\numberline {C.2.3}Taking $\mathcal {P}(2\omega )$ and the fundamental fields in the vacuum}{94}{subsection.C.2.3}
-\contentsline {subsection}{\numberline {C.2.4}Taking $\mathcal {P}(2\omega )$ in $\ell $ and the fundamental fields in the bulk}{96}{subsection.C.2.4}
+\contentsline {section}{\numberline {C.1}Three layer model for SSHG radiation}{97}{section.C.1}
+\contentsline {subsection}{\numberline {C.1.1}SSHG Yield}{100}{subsection.C.1.1}
+\contentsline {section}{\numberline {C.2}Some limiting cases of interest}{102}{section.C.2}
+\contentsline {subsection}{\numberline {C.2.1}The two layer model}{102}{subsection.C.2.1}
+\contentsline {subsection}{\numberline {C.2.2}Taking $\mathcal {P}(2\omega )$ and the fundamental fields in the bulk}{103}{subsection.C.2.2}
+\contentsline {subsection}{\numberline {C.2.3}Taking $\mathcal {P}(2\omega )$ and the fundamental fields in the vacuum}{105}{subsection.C.2.3}
+\contentsline {subsection}{\numberline {C.2.4}Taking $\mathcal {P}(2\omega )$ in $\ell $ and the fundamental fields in the bulk}{107}{subsection.C.2.4}
 \ttl@stoptoc {chapters@7}
-\ttl@stoptoc {chapters@7}
-\contentsline {appendix}{\chapternumberline {D}The two layer model for SHG radiation from Sipe, Moss, and van Driel}{99}{appendix.D}
+\contentsline {appendix}{\chapternumberline {D}The two layer model for SHG radiation from Sipe, Moss, and van Driel}{110}{appendix.D}
 \ttl@stoptoc {chapters@7}
 \ttl@starttoc {chapters@8}
-\contentsline {section}{\numberline {D.1}$\mathcal {R}_{pP}$}{100}{section.D.1}
-\contentsline {section}{\numberline {D.2}$\mathcal {R}_{pS}$}{102}{section.D.2}
-\contentsline {section}{\numberline {D.3}$\mathcal {R}_{sP}$}{103}{section.D.3}
-\contentsline {section}{\numberline {D.4}Summary}{104}{section.D.4}
-\contentsline {chapter}{Bibliography}{105}{section*.3}
+\contentsline {section}{\numberline {D.1}$\mathcal {R}_{pP}$}{111}{section.D.1}
+\contentsline {section}{\numberline {D.2}$\mathcal {R}_{pS}$}{113}{section.D.2}
+\contentsline {section}{\numberline {D.3}$\mathcal {R}_{sP}$}{114}{section.D.3}
+\contentsline {section}{\numberline {D.4}Summary}{115}{section.D.4}
+\contentsline {chapter}{Bibliography}{116}{section*.3}
 \contentsfinish 

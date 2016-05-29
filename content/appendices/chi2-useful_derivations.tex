@@ -1,5 +1,5 @@
 %!TEX root = ../../main.tex
-\chapter{Useful derivations for the nonlinear surface susceptibility}
+\chapter{Supplementary Derivations for the Nonlinear Surface Susceptibility}
 \label{app:chi2deriv}
 \partialtoc
 
@@ -1166,5 +1166,1408 @@ which is the same for the LDA and scissored Hamiltonians;
 $\mathbf{v}_{nn}{^\mathrm{LDA}}(\mathbf{k})$ are the LDA velocities of the
 electron in state $\vert n\mathbf{k}\rangle$.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Expressions for 
+\texorpdfstring{$\chi_{\mathrm{surface}}^{\mathrm{abc}}$}{Xabc} in terms of
+\texorpdfstring{$\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}$}{Vmn}}
+\label{appv}
+
+The prefactor of Eqs. \eqref{chii} and \eqref{chie} diverges as $\tilde\omega\to
+0$. To remove this apparent divergence of $\boldsymbol{\chi}$, we perform a
+partial fraction expansion in $\tilde\omega$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Intraband Contributions}
+
+For the intraband term of Eq. \eqref{chii}, we obtain
+\begin{align}\label{pfinn} 
+I&= 
+C
+\left[
+-\frac{1}{2(\omega^\Sigma_{nm})^2}\frac{1}{\omega^\Sigma_{nm}-\tilde\omega}
++\frac{2}{(\omega^\Sigma_{nm})^2}\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
++\frac{1}{2(\omega^\Sigma_{nm})^2}\frac{1}{\tilde\omega}
+\right]
+\nonumber\\
+&-D
+\left[
+-\frac{3}{2(\omega^\Sigma_{nm})^3}\frac{1}{\omega^\Sigma_{nm}-\tilde\omega}
++\frac{4}{(\omega^\Sigma_{nm})^3}\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
++\frac{1}{2(\omega^\Sigma_{nm})^3}\frac{1}{\tilde\omega}
+-\frac{1}{2(\omega^\Sigma_{nm})^2}\frac{1}{(\omega^\Sigma_{nm}-\tilde\omega)^2}
+\right],
+\end{align} 
+where $C = f_{mn}\mathcal{V}^{\Sigma,\mathrm{a}}_{mn}
+(r^{\mathrm{LDA},\mathrm{b}}_{nm})_{;k^{\mathrm{c}}}$, and $D =
+f_{mn}\mathcal{V}^{\Sigma,\mathrm{a}}_{mn}
+r^{\mathrm{b}}_{nm}\Delta^{\mathrm{c}}_{nm}$.
+
+Time-reversal symmetry leads to the following relationships:
+\begin{equation}\label{time_reversal}
+\begin{split}
+   \mathbf{r}_{mn}(\mathbf{k})\vert_{-\mathbf{k}}
+&= \mathbf{r}_{nm}(\mathbf{k})\vert_{\mathbf{k}},\\
+   (\mathbf{r}_{mn})_{;\mathbf{k}}(\mathbf{k})\vert_{-\mathbf{k}}
+&= (-\mathbf{r}_{nm})_{;\mathbf{k}}(\mathbf{k})\vert_{\mathbf{k}},\\
+   \mathcal{V}^{\Sigma,\text{a},\ell}_{mn}(\mathbf{k})\vert_{-\mathbf{k}}
+&= -\mathbf{\mathcal{V}}_{nm}^{\Sigma,\text{a},\ell}(\mathbf{k})
+   \vert_{\mathbf{k}},\\
+   (\mathcal{V}^{\Sigma,\text{a},\ell}_{mn})_{;\mathbf{k}}
+   (\mathbf{k})\vert_{-\mathbf{k}}
+&= (\mathbf{\mathcal{V}}_{nm}^{\Sigma,\text{a},\ell})_{;\mathbf{k}}
+   (\mathbf{k})\vert_{\mathbf{k}},\\
+   \omega_{mn}^{\Sigma}(\mathbf{k})\vert_{-\mathbf{k}}
+&= \omega_{mn}^{\Sigma}(\mathbf{k})\vert_{\mathbf{k}},\\
+   \Delta^{a}_{nm}(\mathbf{k})\vert_{-\mathbf{k}}
+&= -\Delta^{a}_{nm}(\mathbf{k})\vert_{\mathbf{k}}.
+\end{split}
+\end{equation}
+For a clean, cold semiconductor, $f_{n} = 1$ for an occupied or valence $(n =
+v)$ band, and $f_{n} = 0$ for an empty or conduction $(n = c)$ band independent
+of $\mathbf{k}$, and $f_{nm} = -f_{mn}$. Using the relationships above, we can
+show that the $1/\omega$ terms cancel each other out. Therefore, all the
+remaining nonzero terms in expressions \eqref{pfinn} are simple $\omega$ and
+$2\omega$ resonant denominators that are well behaved at $\omega = 0$.
+
+To apply time-reversal invariance, we notice that the energy denominators are
+invariant under $\mathbf{k}\rightarrow -\mathbf{k}$, so we only need to review
+the numerators. So,
+\begin{align}\label{ct}
+C \rightarrow f_{mn}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\vert_{\mathbf{k}}
+&+  f_{mn}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\vert_{-\mathbf{k}}
+    \nonumber\\
+&=  f_{mn}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\vert_{\mathbf{k}} 
++   \left(-\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}\right)
+    \left(-r^{\text{LDA,b}}_{mn}\right)_{;k^{\text{c}}}\vert_{\mathbf{k}}\right]
+    \nonumber\\
+&= f_{mn}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}
++   \mathcal{V}^{\Sigma,\text{a},\ell}_{nm}
+    \left(r^{\text{LDA,b}}_{mn}\right)_{;k^{\text{c}}}\right]\nonumber\\
+&= f_{mn}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn} 
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}
++   \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right)^{*}\right]
+    \nonumber\\
+&=  2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right],
+\end{align}
+and likewise,
+\begin{align}\label{dt}
+D \rightarrow f_{mn}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}\Delta^{\text{c}}_{nm}\vert_{\mathbf{k}} 
+&+  f_{mn}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}
+    \Delta^{\text{c}}_{nm}\vert_{-\mathbf{k}}\nonumber\\
+&=  f_{mn}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}
+    \Delta^{\text{c}}_{nm}\vert_{\mathbf{k}}
++   \left(-\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}\right)r^{\text{LDA,b}}_{mn}
+    \left(-\Delta^{\text{c}}_{nm}\right)\vert_{\mathbf{k}}\right]\nonumber\\
+&=  f_{mn}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}
++   \mathcal{V}^{\Sigma,\text{a},\ell}_{nm}r^{\text{LDA,b}}_{mn}\right]
+    \Delta^{\text{c}}_{nm}\nonumber\\
+&=  f_{mn}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}
++   \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}\right)^{*}\right]\Delta^{\text{c}}_{nm}\nonumber\\
+&=  2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}\right]\Delta^{\text{c}}_{nm}.
+\end{align}
+
+The last term in the second line of Eq. \eqref{pfinn} is dealt with as follows,
+\begin{align}\label{dresn}
+\frac{D}{2(\omega^\Sigma_{nm})^2}\frac{1}{(\omega^\Sigma_{nm}-\tilde\omega)^2}
+&= \frac{f_{mn}}{2}
+   \frac{\mathcal{V}^{\Sigma,\mathrm{a}}_{mn}r^{\mathrm{b}}_{nm}}
+        {(\omega^\Sigma_{nm})^2}
+   \frac{\Delta^{\mathrm{c}}_{nm}}{(\omega^\Sigma_{nm}-\tilde\omega)^2} 
+= -\frac{f_{mn}}{2}
+   \frac{\mathcal{V}^{\Sigma,\mathrm{a}}_{mn}r^{\mathrm{b}}_{nm}}
+        {(\omega^\Sigma_{nm})^2}
+\left(
+\frac{1}{\omega^\Sigma_{nm}-\tilde\omega}
+\right)_{;k^{\mathrm{c}}}\nonumber\\
+&= \frac{f_{mn}}{2}
+\left(
+\frac{\mathcal{V}^{\Sigma,\mathrm{a}}_{mn}r^{\mathrm{b}}_{nm}}
+     {(\omega^\Sigma_{nm})^2}
+\right)_{;k^{\mathrm{c}}}
+\frac{1}{\omega^\Sigma_{nm}-\tilde\omega},
+\end{align} 
+where we used Eq. \eqref{eli.13}. For the last line, we performed an integration
+by parts over the Brillouin zone where the contribution from the edges vanishes
+\cite{ashcroftbook}. Now, we apply the chain rule, to get
+\begin{equation}\label{chr}
+    \left(\frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}}
+    {(\omega^{\Sigma}_{nm})^2}\right)_{;k^{\text{c}}}
+=   \frac{r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^2}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)_{;k^{\text{c}}}
++   \frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}}{(\omega^{\Sigma}_{nm})^2}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}
+-   \frac{2\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^3}
+    \left(\omega^{\Sigma}_{nm}\right)_{;k^{\text{c}}},
+\end{equation}
+and work the time-reversal on each term. The first term is reduced to
+\begin{align}\label{first_term_gen_deriv}
+    \frac{r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{2}}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)
+    _{;k^{\text{c}}}\vert_{\mathbf{k}}
++   \frac{r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{2}}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)
+    _{;k^{\text{c}}}\vert_{-\mathbf{k}}
+&=  \frac{r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{2}}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)
+    _{;k^{\text{c}}}\vert_{\mathbf{k}}
++   \frac{r^{\text{LDA,b}}_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}\right)
+    _{;k^{\text{c}}}\vert_{\mathbf{k}}\nonumber\\
+&=  \frac{1}{(\omega^{\Sigma}_{nm})^{2}}\left[r^{\text{LDA,b}}_{nm}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)
+    _{;k^{\text{c}}}
++   \left(r^{\text{LDA,b}}_{nm}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)
+    _{;k^{\text{c}}}\right)^{*}\right]\nonumber\\
+&=  \frac{2}{(\omega^{\Sigma}_{nm})^{2}}\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)_{;k^{\text{c}}}\right],
+\end{align}
+the second term is reduced to
+\begin{align}\label{second_term_gen_deriv}
+    \frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\vert_{\mathbf{k}}
++   \frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\vert_{-\mathbf{k}}
+&=  \frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\vert_{\mathbf{k}}
++   \frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}}{(\omega^{\Sigma}_{nm})^{2}}
+    \left(r^{\text{LDA,b}}_{mn}\right)_{;k^{\text{c}}}\vert_{\mathbf{k}}
+    \nonumber\\
+&=  \frac{1}{(\omega^{\Sigma}_{nm})^{2}}
+    \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}
++   \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right)^{*}\right]
+    \nonumber\\
+&=  \frac{2}{(\omega^{\Sigma}_{nm})^{2}}\mathrm{Re}
+    \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right],
+\end{align}
+and by using \eqref{eli.13}, the third term is reduced to
+\begin{align}\label{third_term_gen_deriv}
+    \frac{2\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}
+    \left(\omega^{\Sigma}_{nm}\right)_{;k^{\text{c}}}\vert_{\mathbf{k}}
++   \frac{2\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}
+    \left(\omega^{\Sigma}_{nm}\right)_{;k^{\text{c}}}\vert_{-\mathbf{k}}
+&=  \frac{2\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}
+    \Delta_{nm}^{\text{c}}\vert_{\mathbf{k}}
++   \frac{2\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}
+    \Delta_{nm}^{\text{c}}\vert_{-\mathbf{k}}\nonumber\\
+&=  \frac{2\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}
+    r^{\text{LDA,b}}_{mn}}{(\omega^{\Sigma}_{nm})^{3}}
+    \Delta_{nm}^{\text{c}}\vert_{\mathbf{k}}
++   \frac{2\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}
+    \Delta_{nm}^{\text{c}}\vert_{\mathbf{k}}\nonumber\\
+&=  \frac{2}{(\omega^{\Sigma}_{nm})^{3}}
+    \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}r^{\text{LDA,b}}_{mn}
++   \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}
+    r^{\text{LDA,b}}_{mn}\right)^{*}\right]\Delta_{nm}^{\text{c}}\nonumber\\
+&=  \frac{4}{(\omega^{\Sigma}_{nm})^{3}}\mathrm{Re}
+    \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}r^{\text{LDA,b}}_{mn}\right]
+    \Delta_{nm}^{\text{c}}.
+\end{align}
+
+Combining the results from \eqref{first_term_gen_deriv},
+\eqref{second_term_gen_deriv}, and \eqref{third_term_gen_deriv}
+into \eqref{chr},
+\begin{align}\label{derivative_under_k}
+&\frac{f_{mn}}{2}
+\left[
+\left(
+\frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+r^{\text{LDA,b}}_{nm}}{(\omega^\Sigma_{nm})^2}
+\right)_{;k^{\text{c}}}\vert_{\mathbf{k}} 
++ \left(
+  \frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+  r^{\text{LDA,b}}_{nm}}{(\omega^\Sigma_{nm})^2}
+  \right)_{;k^{\text{c}}}\vert_{-\mathbf{k}}
+  \right]
+  \frac{1}{\omega^\Sigma_{nm}-\tilde\omega}
+= \nonumber\\
+& \left(
+  2\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}
+  \left(
+  \mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+  \right)_{;k^{\text{c}}}
+  \right]
++ 2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+  \left(
+  r^{\text{LDA,b}}_{nm}
+  \right)_{;k^{\text{c}}}
+  \right] 
+- \frac{4}{\omega^{\Sigma}_{nm}}\mathrm{Re}
+  \left[
+  \mathcal{V}^{\Sigma,\text{a},\ell}_{nm}r^{\text{LDA,b}}_{mn}
+  \right]
+  \Delta_{nm}^{\text{c}}
+  \right)
+  \frac{f_{mn}}{2(\omega^{\Sigma}_{nm})^{2}}
+  \frac{1}{\omega^\Sigma_{nm}-\tilde\omega}.
+\end{align}
+We substitute \eqref{ct}, \eqref{dt}, and \eqref{derivative_under_k} in 
+\eqref{pfinn},
+\begin{align*}
+I
+=   &\left[
+    -\frac{2f_{mn}\,\mathrm{Re}
+    \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
+    {2(\omega^{\Sigma}_{nm})^{2}}\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega} 
++   \frac{4f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
+    {(\omega^{\Sigma}_{nm})^{2}}\frac{1}{\omega^{\Sigma}_{nm}-2\tilde\omega}
+    \right]\nonumber\\
++   &\left[\frac{6f_{mn}\,\mathrm{Re}
+    \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}\right]
+    \Delta^{\text{c}}_{nm}}{2(\omega^{\Sigma}_{nm})^{3}}
+    \frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega} 
+-   \frac{8f_{mn}\,\mathrm{Re}
+    \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}\right]
+    \Delta^{\text{c}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}
+    \frac{1}{\omega^{\Sigma}_{nm}-2\tilde\omega}\right.\nonumber\\
+&\,\,\,+ 
+    \left.\frac{f_{mn}\left(2\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)_{;k^{\text{c}}}\right]
++   2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right] 
+-   \frac{4}{\omega^{\Sigma}_{nm}}\,\mathrm{Re}
+    \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}r^{\text{LDA,b}}_{mn}\right]
+    \Delta_{nm}^{\text{c}}\right)}{2(\omega^{\Sigma}_{nm})^{2}}
+    \frac{1}{\omega^\Sigma_{nm}-\tilde\omega}\right]
+.
+\end{align*}
+If we simplify,
+\begin{align}\label{simplified_i} 
+I =
+-   \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
+    {2(\omega^{\Sigma}_{nm})^{2}}&\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega}
++   \frac{4f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
+    {(\omega^{\Sigma}_{nm})^{2}}\frac{1}{\omega^{\Sigma}_{nm}-2\tilde\omega}
+    \nonumber\\
++   \frac{6f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}\right]
+    \Delta^{\text{c}}_{nm}}{2(\omega^{\Sigma}_{nm})^{3}}
+    &\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega} 
+\,- \frac{8f_{mn}\,\mathrm{Re}
+    \left[
+    \mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}
+    \right]
+    \Delta^{\text{c}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}
+    \frac{1}{\omega^{\Sigma}_{nm}-2\tilde\omega}\nonumber\\
++   \frac{2f_{mn}\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)
+    _{;k^{\text{c}}}\right]}{2(\omega^{\Sigma}_{nm})^{2}}
+    &\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega}\nonumber\\
++   \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
+    {2(\omega^{\Sigma}_{nm})^{2}}&\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega}
+    \nonumber\\
+-   \frac{4f_{mn}\mathrm{Re}
+    \left[
+    \mathcal{V}^{\Sigma,\text{a},\ell}_{nm}
+    r^{\text{LDA,b}}_{mn}
+    \right]
+    \Delta_{nm}^{\text{c}}}{2(\omega^{\Sigma}_{nm})^{3}}
+    &\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega},
+\end{align}
+we conveniently collect the terms in columns of $\omega$ and $2\omega$. We can
+now express the susceptibility in terms of $\omega$ and $2\omega$. Separating
+the $2\omega$ terms and substituting in the equation above,
+\begin{align}\label{2wchii}
+I_{2\omega}
+&=  -\frac{e^{3}}{\hbar^2}\sum_{mn\mathbf{k}}\left[\frac{4f_{mn}\,\mathrm{Re}
+    \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
+    {(\omega^{\Sigma}_{nm})^{2}} - \frac{8f_{mn}\,\mathrm{Re}
+    \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}\right]
+    \Delta^{\text{c}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}\right]
+    \frac{1}{\omega^{\Sigma}_{nm}-2\tilde\omega}\nonumber\\
+&=  -\frac{e^3}{\hbar^2}\sum_{mn\mathbf{k}}
+    \frac{4f_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
+    \left[
+    \mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right] 
+-   \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{\omega^{\Sigma}_{nm}}
+    \right]
+    \frac{1}{\omega^{\Sigma}_{nm}-2\tilde\omega}.
+\end{align}
+
+We can express the energies in terms of transitions between bands. Therefore,
+$\omega^{\Sigma}_{nm} = \omega^{\Sigma}_{cv}$ for transitions between conduction
+and valence bands. To take the limit $\eta\to 0$, we use
+\begin{equation}\label{limit_eta}
+\lim_{\eta\to 0}\frac{1}{x\pm i\eta} = P\frac{1}{x}\mp i\pi\delta(x),
+\end{equation}
+and can finally rewrite \eqref{2wchii} in the desired form,
+\begin{equation}\label{imchi2w}
+    \mathrm{Im}[\chi_{i,\text{a},\ell\text{b}\text{c},2\omega}^{s,\ell}] 
+=   -\frac{\pi \vert e\vert^{3}}{2\hbar^2}\sum_{vc\mathbf{k}}
+    \frac{4}{(\omega^{\Sigma}_{cv})^{2}}\left(\mathrm{Re}
+    \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
+    \left(r^{\text{LDA,b}}_{cv}\right)_{;k^{\text{c}}}\right] 
+-   \frac{2\,\mathrm{Re}
+    \left[
+    \mathcal{V}^{\Sigma,\text{a},\ell}_{vc}r^{\text{LDA,b}}_{cv}
+    \right]
+    \Delta^{\text{c}}_{cv}}{\omega^{\Sigma}_{cv}}\right)
+    \delta(\omega^{\Sigma}_{cv}-2\omega).
+\end{equation}
+where we added a $1/2$ from the sum over $\mathbf{k} \rightarrow - \mathbf{k}$.
+We do the same for the $\tilde\omega$ terms in \eqref{simplified_i} to obtain
+\begin{align}\label{wchii}
+I_{\omega}
+= -\frac{e^3}{2\hbar^2}\sum_{nm\mathbf{k}}
+\Biggl[
+-   \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
+    {(\omega^{\Sigma}_{nm})^{2}}
+&+  \frac{6f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}\right]
+    \Delta^{\text{c}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}
+    \nonumber\\
++   \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
+    {(\omega^{\Sigma}_{nm})^{2}}
+&-  \frac{4f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}
+    r^{\text{LDA,b}}_{mn}\right]
+    \Delta_{nm}^{\text{c}}}{(\omega^{\Sigma}_{nm})^{3}}
+    \nonumber\\
+&+  \frac{2f_{mn}\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)
+    _{;k^{\text{c}}}\right]}{(\omega^{\Sigma}_{nm})^{2}}
+\Biggr]\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega}.
+\end{align}
+We reduce in the same way as \eqref{2wchii}, 
+\begin{equation}\label{wchii_simplified}
+I_{\omega}
+=   -\frac{e^3}{2\hbar^2}\sum_{nm\mathbf{k}}
+    \frac{f_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
+\Biggl[
+    2\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)_{;k^{\text{c}}}\right]
++   \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{LDA,b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{\omega^{\Sigma}_{nm}} 
+\Biggr]\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega},
+\end{equation}
+and using \eqref{limit_eta} we obtain our final form,
+\begin{equation}
+\mathrm{Im}[\chi_{i,\text{a},\ell\text{b}\text{c},\omega}^{s,\ell}]
+=   -\frac{\pi\vert e\vert^3}{2\hbar^2}
+    \sum_{cv}\frac{1}{(\omega^{\Sigma}_{cv})^{2}}
+\left(
+    \mathrm{Re}\left[r^{\text{LDA,b}}_{cv}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}\right)_{;k^{\text{c}}}\right]
++   \frac{\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
+    r^{\text{LDA,b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{\Sigma}_{cv}} 
+\right)\delta(\omega^{\Sigma}_{cv}-\omega)
+,
+\end{equation}
+where again we added a $1/2$ from the sum over $\mathbf{k} \rightarrow -
+\mathbf{k}$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Interband Contributions}
+
+We follow an equivalent procedure for the interband contribution. From Eq.
+\eqref{chie} we have
+\begin{align}\label{ewithaandb}  
+E&= A
+\left[
+-\frac{1}{2\omega^\Sigma_{lm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
+ \frac{1}{\omega^\Sigma_{lm}-\tilde\omega}
++\frac{2}{\omega^\Sigma_{nm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
+ \frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
++\frac{1}{2\omega^\Sigma_{lm}\omega^\Sigma_{nm}}
+ \frac{1}{\tilde\omega}
+\right]
+\nonumber\\
+&- B
+\left[
+-\frac{1}{2\omega^\Sigma_{nl}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
+ \frac{1}{\omega^\Sigma_{nl}-\tilde\omega}
++\frac{2}{\omega^\Sigma_{nm}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
+ \frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
++\frac{1}{2\omega^\Sigma_{nl}\omega^\Sigma_{nm}}
+ \frac{1}{\tilde\omega}
+\right],
+\end{align}  
+where 
+$A=f_{ml}\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{c}}_{nl}r^{\text{b}}_{lm}$   
+and
+$B=f_{ln}\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nl}r^{\text{c}}_{lm}$.
+
+Just as above, the $\frac{1}{\tilde\omega}$ terms cancel out. We multiply out
+the $A$ and $B$ terms,
+\begin{align}\label{emultipied}  
+E&=  
+\left[
+-\frac{A}{2\omega^\Sigma_{lm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
+ \frac{1}{\omega^\Sigma_{lm}-\tilde\omega}
++\frac{2A}{\omega^\Sigma_{nm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
+ \frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
+\right]\nonumber\\
+&+ 
+\left[
+ \frac{B}{2\omega^\Sigma_{nl}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
+ \frac{1}{\omega^\Sigma_{nl}-\tilde\omega}
+-\frac{2B}{\omega^\Sigma_{nm}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
+ \frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
+\right].
+\end{align}  
+As before, we notice that the energy denominators are invariant under
+$\mathbf{k} \rightarrow - \mathbf{k}$ so we need only to review the numerators.
+Starting with $A$,
+\begin{align*}
+A \rightarrow f_{ml}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{c}}_{nl}r^{\text{b}}_{lm}\vert_{\mathbf{k}}
+&+  f_{ml}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{c}}_{nl}
+    r^{\text{b}}_{lm}\vert_{-\mathbf{k}}\nonumber\\
+&=  f_{ml}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{c}}_{nl}r^{\text{b}}_{lm}\vert_{\mathbf{k}} 
++   \left(-\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}\right)
+    r^{\text{c}}_{ln}r^{\text{b}}_{ml}\vert_{\mathbf{k}}\right]\nonumber\\
+&=  f_{ml}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{c}}_{nl}r^{\text{b}}_{lm} 
+-   \mathcal{V}^{\Sigma,\text{a},\ell}_{nm}
+    r^{\text{c}}_{ln}r^{\text{b}}_{ml}\right]\nonumber\\
+&=  f_{ml}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{c}}_{nl}r^{\text{b}}_{lm}
+-   \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{c}}_{nl}r^{\text{b}}_{lm}\right)^{*}\right]\nonumber\\
+&= -2f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{c}}_{nl}r^{\text{b}}_{lm}\right],
+\end{align*}
+then $B$,
+\begin{align*}
+B \rightarrow f_{ln}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{b}}_{nl}r^{\text{c}}_{lm}\vert_{\mathbf{k}}
+&+  f_{ln}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{b}}_{nl}
+    r^{\text{c}}_{lm}\vert_{-\mathbf{k}}\nonumber\\
+&=  f_{ln}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{b}}_{nl}r^{\text{c}}_{lm}\vert_{\mathbf{k}} 
++   \left(-\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}\right)
+    r^{\text{b}}_{ln}r^{\text{c}}_{ml}\vert_{\mathbf{k}}\right]\nonumber\\
+&=  f_{ln}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{b}}_{nl}r^{\text{c}}_{lm} 
+-   \mathcal{V}^{\Sigma,\text{a},\ell}_{nm}
+    r^{\text{b}}_{ln}r^{\text{c}}_{ml}\right]\nonumber\\
+&=  f_{ln}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{b}}_{nl}r^{\text{c}}_{lm}
+-   \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{b}}_{nl}r^{\text{c}}_{lm}\right)^{*}\right]\nonumber\\
+&= -2f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{b}}_{nl}r^{\text{c}}_{lm}\right].
+\end{align*}
+We then substitute in \eqref{emultipied},
+\begin{align*}
+E =  
+\Bigg[
+  \frac{2f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{c}}_{nl}
+        r^{\text{b}}_{lm}\right]}
+        {2\omega^\Sigma_{lm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
+\frac{1}{\omega^\Sigma_{lm}-\tilde\omega}
+&-\frac{4f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{c}}_{nl}
+        r^{\text{b}}_{lm}\right]}
+        {\omega^\Sigma_{nm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
+\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}\nonumber\\
+-\frac{2f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{b}}_{nl}
+        r^{\text{c}}_{lm}\right]}
+        {2\omega^\Sigma_{nl}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
+\frac{1}{\omega^\Sigma_{nl}-\tilde\omega}
+&+\frac{4f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{b}}_{nl}
+        r^{\text{c}}_{lm}\right]}
+        {\omega^\Sigma_{nm}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
+\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
+\Bigg]
+.
+\end{align*}
+We manipulate indices and simplify,
+\begin{align*}
+E &=  
+\Bigg[
+  \frac{f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{c}}_{nl}
+        r^{\text{b}}_{lm}\right]}
+        {\omega^\Sigma_{lm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
+\frac{1}{\omega^\Sigma_{lm}-\tilde\omega}
+ -\frac{f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{b}}_{nl}
+        r^{\text{c}}_{lm}\right]}
+        {\omega^\Sigma_{nl}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
+\frac{1}{\omega^\Sigma_{nl}-\tilde\omega}
+\Bigg]\nonumber\\
+&\qquad+
+\Bigg[
+  \frac{f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{b}}_{nl}
+        r^{\text{c}}_{lm}\right]}
+        {2\omega^\Sigma_{nl}-\omega^\Sigma_{nm}}
+ -\frac{f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{c}}_{nl}
+        r^{\text{b}}_{lm}\right]}
+        {2\omega^\Sigma_{lm}-\omega^\Sigma_{nm}}
+\Bigg]\frac{4}{\omega^\Sigma_{nm}}\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
+\nonumber\\
+&=  
+\Bigg[
+  \frac{f_{mn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{ml}
+        r^{\text{c}}_{ln}
+        r^{\text{b}}_{nm}\right]}
+        {2\omega^\Sigma_{nm}-\omega^\Sigma_{lm}}
+ -\frac{f_{mn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{ln}
+        r^{\text{b}}_{nm}
+        r^{\text{c}}_{ml}\right]}
+        {2\omega^\Sigma_{nm}-\omega^\Sigma_{nl}}
+\Bigg]\frac{1}{\omega^\Sigma_{nm}}\frac{1}{\omega^\Sigma_{nm}-\tilde\omega}
+\nonumber\\
+&\qquad+
+\Bigg[
+  \frac{f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{b}}_{nl}
+        r^{\text{c}}_{lm}\right]}
+        {2\omega^\Sigma_{nl}-\omega^\Sigma_{nm}}
+ -\frac{f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{c}}_{nl}
+        r^{\text{b}}_{lm}\right]}
+        {2\omega^\Sigma_{lm}-\omega^\Sigma_{nm}}
+\Bigg]\frac{4}{\omega^\Sigma_{nm}}\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega},
+\end{align*}
+and substitute in \eqref{chie},
+\begin{align*}
+I = -\frac{e^3}{2\hbar^2}\sum_{nm}\frac{1}{\omega^\Sigma_{nm}}
+&\left[
+  \frac{f_{mn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{ml}
+        \{r^{\text{c}}_{ln}
+        r^{\text{b}}_{nm}\}\right]}
+        {2\omega^\Sigma_{nm}-\omega^\Sigma_{lm}}
+ -\frac{f_{mn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{ln}
+        \{r^{\text{b}}_{nm}
+        r^{\text{c}}_{ml}\}\right]}
+        {2\omega^\Sigma_{nm}-\omega^\Sigma_{nl}}
+\right]\frac{1}{\omega^\Sigma_{nm}-\tilde\omega}\nonumber\\
++
+4&\left[
+  \frac{f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        \{r^{\text{b}}_{nl}
+        r^{\text{c}}_{lm}\}\right]}
+        {2\omega^\Sigma_{nl}-\omega^\Sigma_{nm}}
+ -\frac{f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        \{r^{\text{c}}_{nl}
+        r^{\text{b}}_{lm}\}\right]}
+        {2\omega^\Sigma_{lm}-\omega^\Sigma_{nm}}
+\right]\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}.
+\end{align*}
+Finally, we take $n = c$, $m = v$, and $l = q$ and substitute,
+\begin{align*}
+I &= -\frac{e^3}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
+  \left(\left[
+  \frac{f_{vc}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vq}
+        \{r^{\text{c}}_{qc}
+        r^{\text{b}}_{cv}\}\right]}
+        {2\omega^\Sigma_{cv}-\omega^\Sigma_{qv}}
+ -\frac{f_{vc}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{qc}
+        \{r^{\text{b}}_{cv}
+        r^{\text{c}}_{vq}\}\right]}
+        {2\omega^\Sigma_{cv}-\omega^\Sigma_{cq}}
+\right]\frac{1}{\omega^\Sigma_{cv}-\tilde\omega}\right.\nonumber\\
+&\qquad
++4\left.\left[
+  \frac{f_{qc}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
+        \{r^{\text{b}}_{cq}
+        r^{\text{c}}_{qv}\}\right]}
+        {2\omega^\Sigma_{cq}-\omega^\Sigma_{cv}}
+ -\frac{f_{vq}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
+        \{r^{\text{c}}_{cq}
+        r^{\text{b}}_{qv}\}\right]}
+        {2\omega^\Sigma_{qv}-\omega^\Sigma_{cv}}
+\right]\frac{1}{\omega^\Sigma_{cv}-2\tilde\omega}\right)\nonumber\\
+&= \frac{e^3}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
+\left(\left[
+ \frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{qc}
+        \{r^{\text{b}}_{cv}
+        r^{\text{c}}_{vq}\}\right]}
+        {2\omega^\Sigma_{cv}-\omega^\Sigma_{cq}}
+ -\frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vq}
+        \{r^{\text{c}}_{qc}
+        r^{\text{b}}_{cv}\}\right]}
+        {2\omega^\Sigma_{cv}-\omega^\Sigma_{qv}}
+\right]\frac{1}{\omega^\Sigma_{cv}-\tilde\omega}\right.\nonumber\\
+&\qquad-4
+\left.\left[
+  \frac{f_{qc}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
+        \{r^{\text{b}}_{cq}
+        r^{\text{c}}_{qv}\}\right]}
+        {2\omega^\Sigma_{cq}-\omega^\Sigma_{cv}}
+ -\frac{f_{vq}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
+        \{r^{\text{c}}_{cq}
+        r^{\text{b}}_{qv}\}\right]}
+        {2\omega^\Sigma_{qv}-\omega^\Sigma_{cv}}
+\right]\frac{1}{\omega^\Sigma_{cv}-2\tilde\omega}\right).
+\end{align*}
+We use \eqref{limit_eta},
+\begin{align*}
+I = \frac{\pi|e^3|}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
+&\left(\left[
+ \frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{qc}
+        \{r^{\text{b}}_{cv}
+        r^{\text{c}}_{vq}\}\right]}
+        {2\omega^\Sigma_{cv}-\omega^\Sigma_{cq}}
+ -\frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vq}
+        \{r^{\text{c}}_{qc}
+        r^{\text{b}}_{cv}\}\right]}
+        {2\omega^\Sigma_{cv}-\omega^\Sigma_{qv}}
+\right]\delta(\omega^{\Sigma}_{cv}-\omega)\right.\nonumber\\
+-
+4&\left.\left[
+  \frac{f_{qc}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
+        \{r^{\text{b}}_{cq}
+        r^{\text{c}}_{qv}\}\right]}
+        {2\omega^\Sigma_{cq}-\omega^\Sigma_{cv}}
+ -\frac{f_{vq}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
+        \{r^{\text{c}}_{cq}
+        r^{\text{b}}_{qv}\}\right]}
+        {2\omega^\Sigma_{qv}-\omega^\Sigma_{cv}}
+\right]\delta(\omega^{\Sigma}_{cv}-2\omega)\right)
+,
+\end{align*}
+and recognize that for the $1\omega$ terms, $q\neq (v,c)$, and for the $2\omega$
+q can have two distinct values such that,
+\begin{align*}  
+I = \frac{\pi|e^3|}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
+&\left(
+\sum_{q\neq (v,c)}
+\left[
+ \frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{qc}
+        \{r^{\text{b}}_{cv}
+        r^{\text{c}}_{vq}\}\right]}
+        {2\omega^\Sigma_{cv}-\omega^\Sigma_{cq}}
+ -\frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vq}
+        \{r^{\text{c}}_{qc}
+        r^{\text{b}}_{cv}\}\right]}
+        {2\omega^\Sigma_{cv}-\omega^\Sigma_{qv}}
+\right]\delta(\omega^{\Sigma}_{cv}-\omega)\right.\nonumber\\
+-
+4&\left.\left[
+ \sum_{v^{\prime}\neq v}
+  \frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
+        \{r^{\text{b}}_{cv^{\prime}}
+        r^{\text{c}}_{v^{\prime}v}\}\right]}
+        {2\omega^\Sigma_{cv^{\prime}}-\omega^\Sigma_{cv}}
+ -\sum_{c^{\prime}\neq c}
+ \frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
+        \{r^{\text{c}}_{cc^{\prime}}
+        r^{\text{b}}_{c^{\prime}v}\}\right]}
+        {2\omega^\Sigma_{c^{\prime}v}-\omega^\Sigma_{cv}}
+\right]\delta(\omega^{\Sigma}_{cv}-2\omega)\right).
+\end{align*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Generalized derivative
+\texorpdfstring{$(\mathbf{r}_{nm}(\mathbf{k}))_{;\mathbf{k}}$} {{rnm};k} for
+nonlocal potentials}\label{app:gdernl}
+
+We will derive the generalized derivative
+$(\mathbf{r}_{nm}(\mathbf{k}))_{;\mathbf{k}}$ for the case of a nonlocal
+potential in the Hamiltonian. We start from Eq. \eqref{conhr},
+\begin{align}\label{na_hrdab}
+[r^{\mathrm{a}},v^{\mathrm{LDA},\mathrm{b}}]
+&= [r^{\mathrm{a}},v^\mathrm{b}] + [r^{\mathrm{a}},v^{\mathrm{nl},\mathrm{b}}]
+= \frac{i\hbar}{m_e}\delta_{ab}+ [r^{\mathrm{a}},v^{\mathrm{nl},\mathrm{b}}]
+\equiv  
+\tau^{\mathrm{a}\mathrm{b}},
+\end{align}  
+where we used the fact that $[r^\mathrm{a},p^\mathrm{b}]=i\hbar\delta_{ab}$.
+Then,
+\begin{align}\label{na_hrdab2}
+\langle n\mathbf{k}\vert[r^{\mathrm{a}},v^{\mathrm{LDA},\mathrm{b}}]\vert m\mathbf{k}'\rangle
+=
+\langle n\mathbf{k}\vert\tau^{\mathrm{a}\mathrm{b}}\vert m\mathbf{k}'\rangle
+=
+\tau^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k})\delta(\mathbf{k}-\mathbf{k}')
+,
+\end{align}
+so
+\begin{align}\label{na_hrdab3}
+\langle n\mathbf{k}\vert[r^{\mathrm{a}}_i,v^{\mathrm{LDA},\mathrm{b}}]\vert m\mathbf{k}'\rangle
++
+\langle n\mathbf{k}\vert[r^{\mathrm{a}}_e,v^{\mathrm{LDA},\mathrm{b}}]\vert m\mathbf{k}'\rangle
+=
+\tau^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k})\delta(\mathbf{k}-\mathbf{k}')
+,
+\end{align}
+where the matrix elements of $\tau^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k})$ are calculated in  
+Sec. \ref{app:calt}.  
+From Eq. \eqref{conmri3} and  \eqref{gendev}
+\begin{align}\label{na_rip}
+\langle n\mathbf{k}\vert[r^{\mathrm{a}}_i,v_\mathrm{LDA}^{\mathrm{b}}]\vert m\mathbf{k}'\rangle
+=i\delta(\mathbf{k}-\mathbf{k}')(v_{nm}^{\mathrm{LDA},\mathrm{b}})_{;k^{\mathrm{a}}}
+\end{align}
+\begin{align}\label{na_ripn}
+(v^{\mathrm{LDA},\mathrm{b}}_{nm})_{;k^{\mathrm{a}}}=
+\nabla_{k^{\mathrm{a}}}
+v^{\mathrm{LDA},\mathrm{b}}_{n m}(\mathbf{k})
+-
+i
+v^{\mathrm{LDA},\mathrm{b}}_{nm}(\mathbf{k})
+\left(
+\xi^{\mathrm{a}}_{nn}(\mathbf{k})
+-
+\xi^{\mathrm{a}}_{mm}(\mathbf{k})
+\right)
+,
+\end{align}
+and
+\begin{align}\label{na_rep}
+\langle n\mathbf{k}\vert[r^{\mathrm{a}}_e,v^{\mathrm{LDA},\mathrm{b}}]\vert m\mathbf{k}'\rangle&=
+\sum_{\ell\mathbf{k}''}
+\bigg(
+\langle n\mathbf{k}\vert r^{\mathrm{a}}_e\vert\ell\mathbf{k}''\rangle\langle \ell\mathbf{k}''\vert v^{\mathrm{LDA},\mathrm{b}}\vert m\mathbf{k}'\rangle
+-
+\langle n\mathbf{k}\vert v^{\mathrm{LDA},\mathrm{b}}\vert\ell\mathbf{k}''\rangle\langle \ell\mathbf{k}''\vert r^{\mathrm{a}}_e\vert m\mathbf{k}'\rangle
+\bigg)
+\nonumber \\
+&=
+\sum_{\ell\mathbf{k}''}
+\bigg(
+(1-\delta_{n\ell})\delta(\mathbf{k}-\mathbf{k}'')\xi^{\mathrm{a}}_{n\ell}
+\delta(\mathbf{k}''-\mathbf{k}')v^{\mathrm{LDA},\mathrm{b}}_{\ell m}
+-
+\delta(\mathbf{k}-\mathbf{k}'')v^{\mathrm{LDA},\mathrm{b}}_{n\ell}
+(1-\delta_{\ell m})\delta(\mathbf{k}''-\mathbf{k}')\xi^{\mathrm{a}}_{\ell m}
+\bigg)
+\nonumber \\
+&=
+\delta(\mathbf{k}-\mathbf{k}')
+\sum_{\ell}
+\bigg(
+(1-\delta_{n\ell})
+\xi^{\mathrm{a}}_{n\ell}
+v^{\mathrm{LDA},\mathrm{b}}_{\ell m}
+-
+(1-\delta_{\ell m})
+v^{\mathrm{LDA},\mathrm{b}}_{n\ell}
+\xi^{\mathrm{a}}_{\ell m}
+\bigg)
+\nonumber \\
+&=
+\delta(\mathbf{k}-\mathbf{k}')
+\bigg(
+\sum_{\ell}
+\bigg(
+\xi^{\mathrm{a}}_{n\ell}
+v^{\mathrm{LDA},\mathrm{b}}_{\ell m}
+-
+v^{\mathrm{LDA},\mathrm{b}}_{n\ell}
+\xi^{\mathrm{a}}_{\ell m}
+\bigg)
++
+v^{\mathrm{LDA},\mathrm{b}}_{nm}(\xi^{\mathrm{a}}_{mm}
+-
+\xi^{\mathrm{a}}_{nn}
+)
+\bigg)
+.
+\end{align}
+Using Eqs. \eqref{na_rip} and  \eqref{na_rep}
+into Eq. \eqref{na_hrdab3} gives
+\begin{align}\label{na_rapb}
+i\delta(\mathbf{k}-\mathbf{k}')
+\bigg(
+(v^{\mathrm{LDA},\mathrm{b}}_{nm})_{;k^{\mathrm{a}}}
+&
+-i
+\sum_{\ell}
+\bigg(
+\xi^{\mathrm{a}}_{n\ell}
+v^{\mathrm{LDA},\mathrm{b}}_{\ell m}
+-
+v^{\mathrm{LDA},\mathrm{b}}_{n\ell}
+\xi^{\mathrm{a}}_{\ell m}
+\bigg)
+-i
+v^{\mathrm{LDA},\mathrm{b}}_{nm}(\xi^{\mathrm{a}}_{mm}
+-
+\xi^{\mathrm{a}}_{nn}
+)
+\bigg)
+=
+\tau^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k})\delta(\mathbf{k}-\mathbf{k}')
+,
+\end{align}
+then
+\begin{align}\label{na_rapb2}
+(v^{\mathrm{LDA},\mathrm{b}}_{nm})_{;k^{\mathrm{a}}}&=
+-i
+\tau^{\mathrm{a}\mathrm{b}}_{nm}
++i
+\sum_{\ell}
+\bigg(
+\xi^{\mathrm{a}}_{n\ell}
+v^{\mathrm{LDA},\mathrm{b}}_{\ell m}
+-
+v^{\mathrm{LDA},\mathrm{b}}_{n\ell}
+\xi^{\mathrm{a}}_{\ell m}
+\bigg)
++i
+v^{\mathrm{LDA},\mathrm{b}}_{nm}(\xi^{\mathrm{a}}_{mm}
+-
+\xi^{\mathrm{a}}_{nn}
+)
+,
+\end{align}
+and from Eq. \eqref{na_ripn},
+\begin{align}\label{ncogno}
+\nabla_{k^{\mathrm{a}}}v^{\mathrm{LDA},\mathrm{b}}_{nm}=
+-i\tau^{\mathrm{a}\mathrm{b}}_{nm}
++i
+\sum_{\ell}
+\bigg(
+\xi^{\mathrm{a}}_{n\ell}
+v^{\mathrm{LDA},\mathrm{b}}_{\ell m}
+-
+v^{\mathrm{LDA},\mathrm{b}}_{n\ell}
+\xi^{\mathrm{a}}_{\ell m}
+\bigg)
+.
+\end{align}
+Now, there are two cases. We use Eq. \eqref{chon.98}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Case \texorpdfstring{$n=m$}{n=m}}
+
+\begin{align}\label{ntita}
+\nabla_{k^{\mathrm{a}}}v^{\mathrm{LDA},\mathrm{b}}_{nn}&=
+-i\tau^{\mathrm{a}\mathrm{b}}_{nn}
++i
+\sum_{\ell}
+\bigg(
+\xi^{\mathrm{a}}_{n\ell}
+v^{\mathrm{LDA},\mathrm{b}}_{\ell n}
+-
+v^{\mathrm{LDA},\mathrm{b}}_{n\ell}
+\xi^{\mathrm{a}}_{\ell n}
+\bigg)
+\nonumber\\
+&=
+-i\tau^{\mathrm{a}\mathrm{b}}_{nn}
+-
+\sum_{\ell\ne n}
+\bigg(
+r^{\mathrm{a}}_{n\ell}
+\omega^\mathrm{LDA}_{\ell n}
+r^\mathrm{b}_{\ell n}
+-
+\omega^\mathrm{LDA}_{n\ell}
+r^\mathrm{b}_{n\ell}
+r^{\mathrm{a}}_{\ell n}
+\bigg)
+\nonumber\\
+&=
+-i\tau^{\mathrm{a}\mathrm{b}}_{nn}
+-
+\sum_{\ell\ne n}
+\omega^\mathrm{LDA}_{\ell n}
+\bigg(
+r^{\mathrm{a}}_{n\ell}
+r^\mathrm{b}_{\ell n}
+-
+r^\mathrm{b}_{n\ell}
+r^{\mathrm{a}}_{\ell n}
+\bigg)
+,
+\end{align}
+since the $\ell=n$ cancels out. This would give the generalization for the
+inverse effective mass tensor $(m_n^{-1})_{ab}$ for nonlocal potentials. Indeed,
+if we neglect the commutator of $\mathbf{v}^\mathrm{nl}$ in
+Eq. \eqref{na_hrdab}, we obtain
+$-i\tau^{\mathrm{a}\mathrm{b}}_{nn}=\hbar/m_e\delta_{\mathrm{a}\mathrm{b}}$ thus
+obtaining the  familiar expression of $(m_n^{-1})_{ab}$ \cite{ashcroftbook}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Case \texorpdfstring{$n\ne m$}{n!=m}}
+
+\begin{align}\label{nmes}
+(v^{\mathrm{LDA},\mathrm{b}}_{nm})_{;k^{\mathrm{a}}}&=
+-i\tau^{\mathrm{a}\mathrm{b}}_{nm}
++i  
+\sum_{\ell\ne m\ne n}
+\bigg(
+\xi^{\mathrm{a}}_{n\ell}  
+v^{\mathrm{LDA},\mathrm{b}}_{\ell m}
+-  
+v^{\mathrm{LDA},\mathrm{b}}_{n\ell}
+\xi^{\mathrm{a}}_{\ell m}
+\bigg)  
++i  
+\bigg(
+\xi^{\mathrm{a}}_{nm}  
+v^{\mathrm{LDA},\mathrm{b}}_{mm}
+-  
+v^{\mathrm{LDA},\mathrm{b}}_{nm}
+\xi^{\mathrm{a}}_{mm}
+\bigg)  
+\nonumber\\
+&\qquad\qquad\qquad\quad\,\,+  
+i  
+\bigg(
+\xi^{\mathrm{a}}_{nn}  
+v^{\mathrm{LDA},\mathrm{b}}_{nm}
+-  
+v^{\mathrm{LDA},\mathrm{b}}_{nn}
+\xi^{\mathrm{a}}_{nm}
+\bigg)  
++i   
+v^{\mathrm{LDA},\mathrm{b}}_{nm}(\xi^{\mathrm{a}}_{mm}
+-
+\xi^{\mathrm{a}}_{nn}
+)  
+\nonumber \\
+&=
+-i\tau^{\mathrm{a}\mathrm{b}}_{nm}
+-
+\sum_{\ell}
+\bigg(
+\omega^\mathrm{LDA}_{\ell m}  
+r^{\mathrm{a}}_{n\ell}  
+r^{\mathrm{b}}_{\ell m}
+-
+\omega^\mathrm{LDA}_{n\ell}  
+r^{\mathrm{b}}_{n\ell}  
+r^{\mathrm{a}}_{\ell m}
+\bigg)  
++i  
+\xi^{\mathrm{a}}_{nm}
+(v^{\mathrm{LDA},\mathrm{b}}_{mm}
+-  
+v^{\mathrm{LDA},\mathrm{b}}_{nn}
+)  
+\nonumber \\
+&=
+-i\tau^{\mathrm{a}\mathrm{b}}_{nm}
+-
+\sum_{\ell}
+\bigg(
+\omega^\mathrm{LDA}_{\ell m}   
+r^{\mathrm{a}}_{n\ell}   
+r^{\mathrm{b}}_{\ell m}
+-
+\omega^\mathrm{LDA}_{n\ell}   
+r^{\mathrm{b}}_{n\ell}   
+r^{\mathrm{a}}_{\ell m}
+\bigg)  
++i   
+r^{\mathrm{a}}_{nm}
+\Delta^{\mathrm{b}}_{mn}
+,
+\end{align}   
+where we use $\Delta^\mathrm{a}_{mn}$ of Eq. \eqref{eli.13}.
+Now, for $n \ne m$, Eqs. \eqref{chon.98},
+ \eqref{a_gradw2} and 
+ \eqref{nmes} and the chain rule, give
+\begin{align}\label{na_rgendevn}
+(r^{\mathrm{b}}_{nm})_{;k^{\mathrm{a}}}
+&=\left(\frac{v^{\mathrm{LDA},\mathrm{b}}_{nm}}{i\omega^\mathrm{LDA}_{nm}}\right)_{;k^{\mathrm{a}}}
+=
+\frac{1}
+{i\omega^\mathrm{LDA}_{nm}}
+\left( 
+v^{\mathrm{LDA},\mathrm{b}}_{nm}
+\right)_{;k^{\mathrm{a}}}
+-
+\frac{v^{\mathrm{LDA},\mathrm{b}}_{nm}}
+{i(\omega^\mathrm{LDA}_{nm})^2}
+\left(
+\omega^\mathrm{LDA}_{nm}
+\right)_{;k^{\mathrm{a}}}
+\nonumber \\
+&=
+-i\tau^{\mathrm{a}\mathrm{b}}_{nm}
++
+\frac{i}{\omega^\mathrm{LDA}_{nm}}
+\sum_{\ell}
+\bigg(
+\omega^\mathrm{LDA}_{\ell m} 
+r^{\mathrm{a}}_{n\ell} 
+r^{\mathrm{b}}_{\ell m}
+-
+\omega^\mathrm{LDA}_{n\ell} 
+r^{\mathrm{b}}_{n\ell} 
+r^{\mathrm{a}}_{\ell m}
+\bigg)
++
+\frac{r^{\mathrm{a}}_{nm}
+\Delta^{\mathrm{b}}_{mn}}
+{\omega^\mathrm{LDA}_{nm}}
+-
+\frac{r^{\mathrm{b}}_{nm}}
+{\omega^\mathrm{LDA}_{nm}}
+\left(
+\omega^\mathrm{LDA}_{nm}
+\right)_{;k^{\mathrm{a}}}
+\nonumber \\
+&=
+-i\tau^{\mathrm{a}\mathrm{b}}_{nm}
++
+\frac{i}{\omega^\mathrm{LDA}_{nm}}
+\sum_{\ell}
+\bigg(
+\omega^\mathrm{LDA}_{\ell m} 
+r^{\mathrm{a}}_{n\ell} 
+r^{\mathrm{b}}_{\ell m}
+-
+\omega^\mathrm{LDA}_{n\ell} 
+r^{\mathrm{b}}_{n\ell} 
+r^{\mathrm{a}}_{\ell m}
+\bigg)
++
+\frac{r^{\mathrm{a}}_{nm}
+\Delta^{\mathrm{b}}_{mn}}
+{\omega^\mathrm{LDA}_{nm}}
+-
+\frac{r^{\mathrm{b}}_{nm}}
+{\omega_{nm}}
+\frac{v^{\mathrm{LDA},\mathrm{a}}_{nn}-v^{\mathrm{LDA},\mathrm{a}}_{mm}}{m_e}
+\nonumber \\
+&=
+-i\tau^{\mathrm{a}\mathrm{b}}_{nm}
++
+\frac{ 
+r^{\mathrm{a}}_{nm}
+\Delta^{\mathrm{b}}_{mn}
++r^{\mathrm{b}}_{nm}
+\Delta^{\mathrm{a}}_{mn}
+}
+{\omega^\mathrm{LDA}_{nm}}
++
+\frac{i}{\omega^\mathrm{LDA}_{nm}}
+\sum_{\ell}
+\bigg(
+\omega^\mathrm{LDA}_{\ell m} 
+r^{\mathrm{a}}_{n\ell} 
+r^{\mathrm{b}}_{\ell m}
+-
+\omega^\mathrm{LDA}_{n\ell} 
+r^{\mathrm{b}}_{n\ell} 
+r^{\mathrm{a}}_{\ell m}
+\bigg)
+,
+\end{align} 
+where the $-i\tau^{\mathrm{a}\mathrm{b}}_{nm}$ term, generalizes the usual expresion of
+$\mathbf{r}_{nm;\mathbf{k}}$ for local 
+Hamiltonians,\cite{aversaPRB95,nastosPRB05,cabellosPRB09,rashkeevPRB98}
+to
+the case of a
+nonlocal potential in the Hamiltonian.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Layer Case}
+
+To obtain the generalized derivative expressions for the case of the layered
+matrix elements ar required by Eq. \eqref{nl.4}, we could start form
+Eq. \eqref{na_hrdab} again, and replace $\hat{\mathbf{v}}^\mathrm{LDA}$ by
+$\boldsymbol{\mathcal{V}}^\mathrm{LDA}$, to obtain the equivalent of
+Eqs. \eqref{ntita} and \eqref{nmes}, for which we need to calculate the new
+$\tau^{\mathrm{a}\mathrm{b}}_{nm}$, that is given by
+\begin{align}\label{na_hrdab-n}
+\mathcal{T}^{\mathrm{a}\mathrm{b}}_{nm}&=
+[r^{\mathrm{a}},\mathcal{V}^{\mathrm{LDA},\mathrm{b}}]_{nm}
+= [r^{\mathrm{a}},\mathcal{V}^\mathrm{b}]_{nm}+
+[r^{\mathrm{a}},\mathcal{V}^{\mathrm{nl},\mathrm{b}}]_{nm}
+\nonumber\\
+&= \frac{1}{2}
+[r^{\mathrm{a}},v^\mathrm{b} C^{\ell}(z)+C^{\ell}(z) v^\mathrm{b}]_{nm} 
++ \frac{1}{2}
+[r^{\mathrm{a}},v^{\mathrm{nl},\mathrm{b}}C^{\ell}(z)+C^{\ell}(z) v^{\mathrm{nl},\mathrm{b}}]_{nm} 
+\nonumber\\
+&=
+\Big([r^{\mathrm{a}},v^\mathrm{b}]C^{\ell}(z)\Big)_{nm} 
++
+\Big(
+[r^{\mathrm{a}},v^{\mathrm{nl},\mathrm{b}}] C^{\ell}(z)\Big)_{nm} 
+\nonumber\\
+&=
+\sum_p[r^{\mathrm{a}},v^\mathrm{b}]_{np}C^{\ell}_{pm} 
++
+\sum_p 
+[r^{\mathrm{a}},v^{\mathrm{nl},\mathrm{b}}]_{np}C^{\ell}_{pm} 
+\nonumber\\
+&=
+\frac{i\hbar}{m_e}\delta_{\mathrm{a}\mathrm{b}} C^{\ell}_{nm} 
++
+\sum_p 
+[r^{\mathrm{a}},v^{\mathrm{nl},\mathrm{b}}]_{np}C^{\ell}_{pm} 
+.
+\end{align} 
+For a full-slab calculation, that would correspondo to a bulk calculation as well, $C^{\ell}(z)=1$ and then, $C^{\ell}_{nm}=\delta_{nm}$, and from above expression $\mathcal{T}^{\mathrm{a}\mathrm{b}}_{nm}\to \tau^{\mathrm{a}\mathrm{b}}_{nm}$. Thus, the layered expression for $\mathcal{V}^{\mathrm{LDA},a}_{nm}$ becomes
+\begin{align}\label{nmesn}
+(\mathcal{V}^{\mathrm{LDA},\mathrm{a}}_{nm})_{;k^{\mathrm{b}}}&=
+\frac{\hbar}{m_e}\delta_{\mathrm{a}\mathrm{b}}
+C^{\ell}_{nm} 
+-i
+\sum_p 
+[r^{\mathrm{b}},v^{\mathrm{nl},\mathrm{a}}]_{np}C^{\ell}_{pm} 
++i
+\sum_{\ell}
+\bigg(
+r^{\mathrm{b}}_{n\ell}  
+\mathcal{V}^{\mathrm{LDA},\mathrm{a}}_{\ell m}
+-
+\mathcal{V}^{\mathrm{LDA},\mathrm{a}}_{n\ell}   
+r^{\mathrm{b}}_{\ell m}
+\bigg)  
++i  
+r^{\mathrm{b}}_{nm}
+\tilde\Delta^{\mathrm{a}}_{mn}
+,
+\end{align}  
+where
+\begin{equation}\label{tdel}
+\tilde\Delta^{\mathrm{a}}_{mn}
+=
+\mathcal{V}^{\mathrm{LDA},\mathrm{a}}_{nn}  
+-
+\mathcal{V}^{\mathrm{LDA},\mathrm{a}}_{mm}  
+.
+\end{equation}
+As mentioned before, the term $[r^{\mathrm{b}},v^{\mathrm{nl},\mathrm{a}}]_{nm}$ calculated in Sec. \ref{app:calt}, is small compared to the other terms, thus we neglect it throwout this work.\cite{valerie} The expression for $C^{\ell}_{nm}$ is calculated in Sec. \ref{app:calpcalc}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Matrix elements of 
+\texorpdfstring{$\tau^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k})$}{tnm}}
+\label{app:calt}
+
+To calculate $\tau^{\mathrm{a}\mathrm{b}}_{nm}$, we first need to calculate
+\begin{align}\label{3.1}
+\mathcal{L}^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k})
+=\frac{1}{i\hbar}\langle n\mathbf{k}\vert 
+\left[\hat{r}^{\mathrm{a}},\hat{v}^{\mathrm{nl},\mathrm{b}}\right]
+\vert m\mathbf{k}'\rangle \delta(\mathbf{k}-\mathbf{k}')
+= \frac{1}{\hbar^{2}}
+\langle n\mathbf{k}\vert 
+\left[\hat{r}^{\mathrm{a}},
+\left[\hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}'),\hat{r}^\mathrm{b}
+\right]
+\right]
+\vert m\mathbf{k}'\rangle\delta(\mathbf{k}-\mathbf{k}'),
+\end{align} 
+for which we need the following triple commutator
+\begin{align}\label{3.2}
+\left[\hat{r}^{\mathrm{a}},
+\left[\hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}'),\hat{r}^\mathrm{b}
+\right]
+\right]
+= \left[\hat{r}^{\mathrm{b}},
+\left[\hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}'),\hat{r}^\mathrm{a}
+\right]
+\right],
+\end{align} 
+where the right hand side follows from the Jacobi identity, since
+$[\hat{r}^\mathrm{a},\hat{r}^\mathrm{b}] = 0$. We expand the triple commutator
+as
+\begin{align}\label{3.3}
+\left[
+  \hat{r}^{\mathrm{a}},
+\left[
+  \hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}'),
+  \hat{r}^\mathrm{b}
+\right]
+\right]
+&=\left[
+  \hat{r}^{\mathrm{a}},
+  \hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}')
+  \hat{r}^\mathrm{b}
+\right]
+-\left[
+  \hat{r}^{\mathrm{a}},
+  \hat{r}^\mathrm{b}\hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}')
+\right]\nonumber\\
+&=\left[
+  \hat{r}^{\mathrm{a}},
+\hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}')
+\right]\hat{r}^\mathrm{b}
+- \hat{r}^\mathrm{b}
+\left[
+  \hat{r}^{\mathrm{a}},
+  \hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}')
+\right]\nonumber\\
+&=\hat{r}^{\mathrm{a}}
+  \hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}')
+  \hat{r}^\mathrm{b}
+- \hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}')
+  \hat{r}^\mathrm{a}
+  \hat{r}^{\mathrm{b}}
+- \hat{r}^\mathrm{b}
+  \hat{r}^{\mathrm{a}}
+  \hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}')
++ \hat{r}^\mathrm{b}
+  \hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}')
+  \hat{r}^{\mathrm{a}}.
+\end{align}
+Then,
+\begin{align}\label{3.5}
+\frac{1}{\hbar^{2}}&
+\langle n\mathbf{k}\vert 
+\left[
+\hat{r}^{\mathrm{a}},
+\left[
+\hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}'),\hat{r}^\mathrm{b}
+\right]
+\right]
+\vert m\mathbf{k}'\rangle
+= \frac{1}{\hbar^{2}}
+\int \langle n\mathbf{k}\vert \vert\mathbf{r}\rangle\langle\mathbf{r}\vert 
+\left[
+\hat{r}^{\mathrm{a}},
+\left[
+\hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}'),\hat{r}^\mathrm{b}
+\right]
+\right]
+\vert\mathbf{r}'\rangle\langle\mathbf{r}'\vert \vert m\mathbf{k}'\rangle
+\delta(\mathbf{k}-\mathbf{k}')\,d\mathbf{r}\,d\mathbf{r}'\nonumber\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&= \frac{1}{\hbar^{2}}
+\int \psi^{*}_{n\mathbf{k}}(\mathbf{r})
+\Big(
+  r^{\mathrm{a}}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{b}}
+- V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{a}}r^{\prime\mathrm{b}}
+- r^\mathrm{b}r^{\mathrm{a}}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
++ r^\mathrm{b}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{a}}
+\Big)
+\psi_{m\mathbf{k}}(\mathbf{r}')
+\delta(\mathbf{k}-\mathbf{k}')\,d\mathbf{r}\,d\mathbf{r}'\nonumber\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&= \frac{1}{\hbar^{2}\Omega}
+\sum_{\mathbf{K},\mathbf{K}'}
+C^{*}_{n\mathbf{k}}(\mathbf{K})C_{m\mathbf{k}}(\mathbf{K}')
+\int e^{-i\mathbf{K}\cdot\mathbf{r}}
+\Big(
+  r^{\mathrm{a}}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{b}}
+- V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{a}}r^{\prime\mathrm{b}}
+\nonumber\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\hspace{7cm} -
+  r^\mathrm{b}r^{\mathrm{a}}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
++ r^\mathrm{b}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{a}}
+\Big) 
+e^{i\mathbf{K}'\cdot\mathbf{r}'}
+\delta(\mathbf{k}-\mathbf{k}')\,d\mathbf{r}\,d\mathbf{r}'.
+\end{align} 
+We use the following identity,
+\begin{align}\label{3.4}
+\Big(
+ \frac{\partial^{2}}{\partial K^\mathrm{a}\partial K^{\prime\mathrm{b}}}
+&+\frac{\partial^{2}}{\partial K^{\prime\mathrm{a}}\partial K^{\prime\mathrm{b}}}
++\frac{\partial^{2}}{\partial K^\mathrm{a}\partial K^\mathrm{b}}
++\frac{\partial^{2}}{\partial K^\mathrm{b}\partial K^{\prime\mathrm{a}}}
+\Big)
+\int
+e^{-i\mathbf{K}\cdot\mathbf{r}}
+V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
+e^{i\mathbf{K}'\cdot\mathbf{r}'}
+\,d\mathbf{r}\,d\mathbf{r}'\nonumber\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&= \int e^{-i\mathbf{K}\cdot\mathbf{r}}
+\Big( 
+  r^{\mathrm{a}}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{b}}
+- V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{a}}r^{\prime\mathrm{b}}
+- r^\mathrm{b}r^{\mathrm{a}}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
++ r^\mathrm{b}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{a}}
+\Big)  
+e^{i\mathbf{K}'\cdot\mathbf{r}'}\,d\mathbf{r}\,d\mathbf{r}'\nonumber\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&= \Big(
+ \frac{\partial^{2}}{\partial K^\mathrm{a}\partial K^{\prime\mathrm{b}}}
++\frac{\partial^{2}}{\partial K^{\prime\mathrm{a}}\partial K^{\prime\mathrm{b}}}
++\frac{\partial^{2}}{\partial K^\mathrm{a}\partial K^\mathrm{b}}
++\frac{\partial^{2}}{\partial K^\mathrm{b}\partial K^{\prime\mathrm{a}}}
+\Big)
+\langle\mathbf{K}\vert V^\mathrm{nl} \vert\mathbf{K}'\rangle,
+\end{align}
+to write
+\begin{align}\label{3.7}
+\mathcal{L}^{\mathrm{ab}}_{nm}(\mathbf{k})
+&= \frac{1}{\hbar^{2}\Omega}
+\sum_{\mathbf{K},\mathbf{K}'} 
+C^{*}_{n\mathbf{k}}(\mathbf{K})C_{m\mathbf{k}}(\mathbf{K}')
+\Big(
+ \frac{\partial^{2}}{\partial K^\mathrm{a}\partial K^{\prime\mathrm{b}}}
++\frac{\partial^{2}}{\partial K^{\prime\mathrm{a}}\partial K^{\prime\mathrm{b}}}
++\frac{\partial^{2}}{\partial K^\mathrm{a}\partial K^\mathrm{b}}
++\frac{\partial^{2}}{\partial K^\mathrm{b}\partial K^{\prime\mathrm{a}}}
+\Big)
+\langle\mathbf{K}\vert V^\mathrm{nl} \vert\mathbf{K}'\rangle.
+\end{align} 
+The double derivatives with respect to $\mathbf{K}$ and $\mathbf{K}'$ can be
+worked out as shown in Sec. \ref{app:vnlme}, to obtain the matrix elements of
+$[\hat{V}^\mathrm{nl}(\hat{\mathbf{r}},\hat{\mathbf{r}}'),\hat{r}^\mathrm{b}]$
+\cite{olevano}. Therefore, we can obtain the value of the matrix elements of the
+triple commutator \cite{valerie}.
+
+With above results we can proceed to evaluate the matrix elements
+$\tau_{nm}(\mathbf{k})$. From Eq. \eqref{na_hrdab}
+\begin{align}\label{na_hrdabn}
+\langle n\mathbf{k}\vert \tau^{\mathrm{a}\mathrm{b}} \vert m\mathbf{k}'\rangle
+&=\langle n\mathbf{k}\vert\frac{i\hbar}{m_e}\delta_{ab}\vert m\mathbf{k}'\rangle
++ \langle n\mathbf{k}\vert 
+\frac{1}{i\hbar}
+\left[r^{\mathrm{a}},v^{\mathrm{nl},\mathrm{b}}\right]
+\vert m\mathbf{k}'\rangle\nonumber\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mathcal{L}^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k})
+\delta(\mathbf{k}-\mathbf{k}')
+&= \delta(\mathbf{k}-\mathbf{k}')
+\left(
+  \frac{i\hbar}{m_e}\delta_{ab}\delta_{nm}
++ \mathcal{L}_{nm}^{\mathrm{a}\mathrm{b}}(\mathbf{k})
+\right)\nonumber\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tau^{\mathrm{a}\mathrm{b}}_{nm}(\mathbf{k})
+ = \tau^{\mathrm{b}\mathrm{a}}_{nm}(\mathbf{k})
+&= \frac{i\hbar}{m_e}\delta_{ab}\delta_{nm}
++ \mathcal{L}_{nm}^{\mathrm{a}\mathrm{b}}(\mathbf{k}),
+\end{align}
+which is an explicit expression that can be numerically calculated.
 
 \stopcontents[chapters]

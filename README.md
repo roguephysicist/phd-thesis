@@ -22,3 +22,4 @@
 7. chi^abc or chi^ijk !!!
 8. change d to l in diagrams in chapter 2
 9. little sigma o big sigma :/
+10. MISSING: app:gdernl, app:vnlme
