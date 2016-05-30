@@ -108,10 +108,9 @@ examine the double resonances of Eq. \eqref{eq:chis} \cite{nastosPRB05}. Note
 that the Brillouin zone for the slab geometry collapses to a 2D-zone, with only
 one $\mathbf{k}$-point along the $z$-axis.
 
-{\color{red}
 $T^{\mathrm{a}\mathrm{b}}_{nm}=(i/\hbar)
 [r^\mathrm{b},v^{\mathrm{nl},\mathrm{a}}]_{nm}$ must be evaluated in order to
-obtain Eqs. \eqref{tau.1} and \eqref{tau.1n} that are required for Eq.
+obtain Eqs. \eqref{tau.1} and \eqref{tau.2} that are required for Eq.
 \eqref{eq:chis}. Computing second-order derivatives is necessary, making the
 numerical procedure very time consuming. This adds significantly to the already
 lengthy time needed for the calculation of the $\mathbf{v}^\mathrm{nl}$
@@ -119,7 +118,7 @@ contribution that is proportional only to the first-order derivatives. Memory
 requirements are also greatly increased for both $\mathbf{v}^\mathrm{nl}$ and
 $[\mathbf{r},\mathbf{v}^\mathrm{nl}]$. However, the contribution from
 $[\mathbf{r},\mathbf{v}^\mathrm{nl}]$ is very small \cite{valerie} and it is
-therefore neglected in this work.}
+therefore neglected in this work.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -346,7 +345,7 @@ that can accommodate all 18 components disregarding any surface symmetries.
 Calculating all 18 components is obviously more time consuming, but they can be
 efficiently parallelized so very little time is actually lost.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \subbottom[$\mathcal{R}_{pP}$\label{fig:2x1rpp3d}]%
 {\includegraphics[height=0.4\textwidth]{content/figures/3D-Si2x1-RpP.pdf}}\hfill
@@ -373,7 +372,7 @@ for $\mathcal{R}_{pP}$ is very consistent with other calculations of this type
 \cite{tancognedejean:tel-01235611}, and even with some limited experimental data
 \cite{powerPRL95}.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \subbottom[$\mathcal{R}_{pS}$\label{fig:2x1rps3d}]%
 {\includegraphics[height=0.4\textwidth]{content/figures/3D-Si2x1-RpS.pdf}}\hfill
@@ -512,7 +511,7 @@ unrelaxed curves are roughly half the intensity of the experimental spectrum. I
 have converted the units of the experimental data from CGS to MKS units for
 easier comparison.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{content/figures/fig-Si1x1-Hofer_Xxxx}
 \caption{Comparison of
@@ -578,7 +577,7 @@ to the experimental measurements featured in Refs. \cite{mejiaPRB02} and
 for energy values under 3 eV. This is because of the lack of surfaces states due
 to the surface H-saturation.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \subbottom[$\mathcal{R}_{pP}$\label{fig:1x1rpp3d}]%
 {\includegraphics[height=0.39\textwidth]{content/figures/3D-Si1x1-RpP}}\hfill
@@ -604,7 +603,7 @@ $E_{1}\sim 3.4$ eV and $E_{2}\sim 4.3$ eV critical points of bulk Si
 can see that the calculated SSHG yield does have peaks around those energy
 values. We will review this in much further detail below.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \subbottom[$\mathcal{R}_{pS}$\label{fig:1x1rps3d}]%
 {\includegraphics[height=0.39\textwidth]{content/figures/3D-Si1x1-RpS}}\hfill
@@ -631,12 +630,17 @@ as I do not have any experimental data to compare it with.
 \subsubsection{\texorpdfstring{$\mathcal{R}_{pP}$}{RpP} ($p$-in, $P$-out)}
 \label{sec:1x1RpP}
 
-{\color{red} HERE HERE HERE HERE HERE}
 
-I think the first order of business is to review how the inclusion of multiple reflections affects the 
-I think we should first review how the inclusion of multiple reflections affects the produced spectra. 
-
-We consider a Si(111)(1$\times$1):H surface as a test case for the three layer model and to study the effects that multiple reflections have on the SSHG radiation. This surface is well characterized experimentally,\cite{mitchellSS01, mejiaPRB02, bergfeldPRL04} and there has been success in reproducing these experimental results using the three layer model without multiple reflections.\cite{andersonPRB16} The details of the \emph{ab initio} calculation of $\chi^{ijk}$ are not needed for the following discussion, and are left for the reader in Ref. \cite{andersonPRB16}. However, we mention that we apply a scissors shift of 0.7 eV to the theoretical spectra. In a first approximation, this includes the effects of the electronic many-body interactions within the independent particle approach for the \emph{ab initio} calculation. This 0.7 eV value allows the SH resonant peaks to acquire their corresponding energy positions, and is calculated with what is known as a $G_{0}W_{0}$ calculation \cite{andersonPRB16}. We are interested in finding the thickness of the layer $\ell$ where $\chi^{ijk} \ne 0$. For this surface, we found well-converged results for a thickness of $\sim 5$ nm, that is equivalent to 24 atomic sheets of Si along the (111) direction. As this represents only the upper half of the slab, we find it reasonable to choose the thickness of the layer $\ell$ to be between $d\sim 5-10$ nm. This corresponds to a half-slab comprised of 24 to 48 atomic layers to get well-converged values of $\chi^{ijk}$.
+The first order of business will be to review how the inclusion of multiple
+reflections affects the calculated SSHG yield. I will conduct this study for
+$\mathcal{R}_{pP}$ as it is typically associated with the strongest signal
+output. We are interested in finding the thickness of the layer $\ell$ where
+$\chi^{ijk} \ne 0$. As mentioned above, we found well-converged results for this
+surface using a slab of 48 atomic layers. This corresponds to a thickness of
+$\sim 5$ nm, that is equivalent to the 24 atomic sheets of Si along the (111)
+direction, corresponding to the half-slab. As this represents only the upper
+half of the slab, we find it reasonable to choose the thickness of the layer
+$\ell$ to be between $d\sim 5-10$ nm.
 
 We begin our comparisons in Fig. \ref{fig:average}, in which we compare the theoretical results for the SHG radiation with the experimental results from Ref. \cite{mejiaPRB02}. The theoretical curves that include multiple reflections are featured with the average value $\bar{R}^{M}_{i}$, Eq. \eqref{eq:mcave2}, with two values for the total thickness, $d$, and Eqs. \eqref{eq:mc78} and \eqref{eq:rpp111}. We contrast these with the standard three layer model excluding the effects of multiple reflections from Sec. \ref{sec:nomr}. We see that the $E_{2}$ peak is blueshifted by around 0.3 eV, and the yield does not go to zero after 4.75 eV. $\mathcal{R}_{pP}$ is by far the most involved calculation out of the four different polarization cases, since it includes all four nonzero components. In particular, $\chi^{zzz}$ and $\chi^{xxz}$ include out-of-plane incoming fields. These are affected by local field effects that can change both intensity and peak position.\cite{tancognedejean:tel-01235611} Including these effects is computationally very expensive and is beyond the scope of this paper. We speculate that $\mathcal{R}_{pP}$ requires the proper inclusion of these effects in order to accurately describe the experimental peaks.
 

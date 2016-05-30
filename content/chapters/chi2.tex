@@ -124,7 +124,7 @@ is parallel to it.}
 We follow the article by Aversa and Sipe \cite{aversaPRB95} to calculate the
 optical properties of a given system within the longitudinal gauge. More recent
 derivations can also be found in Refs. \cite{sipePRB00} and
-\ref{lambrechtPSSB00}. We assume the long-wavelength approximation which implies
+\cite{lambrechtPSSB00}. We assume the long-wavelength approximation which implies
 a position independent electric field, $\mathbf{E}(t)$. The Hamiltonian in the
 length gauge approximation is given by
 \begin{equation}\label{ache}
@@ -373,73 +373,76 @@ Appendix \ref{app:vnlme} we outline how this is accomplished.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 \section{Time-dependent Perturbation Theory}\label{tdpt}
 
 In the independent particle approximation, we use the electron density operator
 $\hat{\rho}$ to obtain the expectation value of any observable $\mathcal{O}$ as
 \begin{equation}\label{traza}
-\mathcal{O}=\mathrm{Tr}(\hat{\mathcal{O}}\hat{\rho})=\mathrm{Tr}(\hat{\rho}\hat{\mathcal{O}}),
+\mathcal{O}
+= \mathrm{Tr}(\hat{\mathcal{O}}\hat{\rho})
+= \mathrm{Tr}(\hat{\rho}\hat{\mathcal{O}}),
 \end{equation}
 where $\mathrm{Tr}$ is the trace and is invariant under cyclic permutations.
 The dynamic equation of motion for $\rho$ is given by
 \begin{equation}\label{eqrho}
-i\hbar \frac{d\hat{\rho}}{dt}=[\hat{H},\hat{\rho}]
-,
+i\hbar \frac{d\hat{\rho}}{dt} = \left[\hat{H},\hat{\rho}\right],
 \end{equation}
-where it is more convenient to work in the interaction picture. We transform 
-all operators according to 
+where it is more convenient to work in the interaction picture. We transform all
+operators according to
 \begin{equation}\label{ip}
-\hat{\mathcal{O}}_I=\hat{U}\hat{\mathcal{O}}\hat{U}^\dagger,
+\hat{\mathcal{O}}_{I} = \hat{U}\hat{\mathcal{O}}\hat{U}^{\dagger},
 \end{equation}
 where
 \begin{equation}\label{ou}
-\hat{U}=e^{i\hat{H}_0t/\hbar},
+\hat{U} = e^{i\hat{H}_{0}t/\hbar},
 \end{equation}
-is the unitary operator that shifts us to the interaction picture.
-Note that $\hat{\mathcal{O}}_I$ depends on time even if $\hat{\mathcal{O}}$ does not.
+is the unitary operator that shifts us to the interaction picture. Note that
+$\hat{\mathcal{O}}_{I}$ depends on time even if $\hat{\mathcal{O}}$ does not.
 Then, we transform Eq. \eqref{eqrho} into
 \begin{equation}\label{intrho}
-i\hbar\frac{d\hat{\rho}_I(t)}{dt}=[-e\hat{\mathbf{r}}_I(t)\cdot\mathbf{E}(t),\hat{\rho}_I(t)],
+i\hbar\frac{d\hat{\rho}_{I}(t)}{dt}
+= \left[-e\hat{\mathbf{r}}_{I}(t)\cdot\mathbf{E}(t),\hat{\rho}_{I}(t)\right],
 \end{equation}
 that leads to
 \begin{equation}\label{intrho2}
-\hat{\rho}_I(t)=\hat{\rho}_I(t=-\infty)
-+
-\frac{ie}{\hbar}\int_{-\infty}^t dt'[\hat{\mathbf{r}}_I(t')\cdot\mathbf{E}(t'),\hat{\rho}_I(t')].
+\hat{\rho}_{I}(t)
+= \hat{\rho}_{I}(t = -\infty)
++ \frac{ie}{\hbar}\int_{-\infty}^{t}
+  \left[\hat{\mathbf{r}}_{I}(t')\cdot\mathbf{E}(t'),\hat{\rho}_{I}(t')\right]
+   \,dt'.
 \end{equation}
-We assume that the interaction is switched-on adiabatically and
-choose a time-periodic perturbing field, to write
+We assume that the interaction is switched-on adiabatically and choose a
+time-periodic perturbing field, to write
 \begin{equation}\label{efield}
-\mathbf{E}(t)=\mathbf{E} e^{-i\omega t}e^{\eta t}=\mathbf{E} e^{-i\tilde{\omega} t}
-,
+\mathbf{E}(t)
+= \mathbf{E} e^{-i\omega t}e^{\eta t}
+= \mathbf{E} e^{-i\tilde{\omega} t},
 \end{equation}
 with
 \begin{equation}\label{got}
-\tilde{\omega}=\omega+i\eta
-,
+\tilde{\omega} =\omega + i\eta,
 \end{equation} 
-where $\eta > 0$ assures
-that at $t=-\infty$ the interaction is zero and has its full strength $\mathbf{E}$ 
-at $t=0$. After computing the required time integrals one takes
-$\eta\to 0$. 
-Also, $\hat{\rho}_I(t=-\infty)$ should be time independent and thus 
-$[\hat{H},\hat{\rho}]_{t=-\infty}=0$, This implies that 
-$\hat{\rho}_I(t=-\infty)=\hat{\rho}(t=-\infty)\equiv\hat{\rho}_0$,
-where $\hat{\rho}_0$ is
-the density matrix of the unperturbed ground state,
-such that
+where $\eta > 0$ assures that at $t = -\infty$, the interaction is zero and has
+its full strength $\mathbf{E}$ at $t = 0$. After computing the required time
+integrals one takes $\eta\to 0$. Also, $\hat{\rho}_{I}(t = -\infty)$ should be
+time independent and thus $[\hat{H},\hat{\rho}]_{t = -\infty} = 0$, This implies
+that $\hat{\rho}_{I}(t = -\infty) = \hat{\rho}(t =
+-\infty)\equiv\hat{\rho}_{0}$, where $\hat{\rho}_{0}$ is the density matrix of
+the unperturbed ground state, such that
 \begin{equation}\label{nrhon}
-\langle n\mathbf{k}| \hat{\rho}_{0} |m\mathbf{k}'\rangle = f_{n}(\hbar\omega^{\Sigma}_{n}(\mathbf{k}))\delta_{nm}\delta(\mathbf{k}-\mathbf{k}')
-,
+\langle n\mathbf{k}\vert \hat{\rho}_{0} \vert m\mathbf{k}'\rangle
+= f_{n}\left(\hbar\omega^{\Sigma}_{n}(\mathbf{k})\right)
+\delta_{nm}\delta(\mathbf{k}-\mathbf{k}'),
 \end{equation}
-with $f_{n}(\hbar\omega^{\Sigma}_{n}(\mathbf{k}))=f_{n\mathbf{k}}$ as the Fermi-Dirac distribution function.
+with $f_{n}(\hbar\omega^{\Sigma}_{n}(\mathbf{k})) = f_{n\mathbf{k}}$ as the
+Fermi-Dirac distribution function.
+
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 We solve Eq. \eqref{intrho2} using the standard iterative
 solution, for which we write
@@ -453,30 +456,30 @@ Then, Eq. \eqref{intrho2} reads
 \hat{\rho}_{I}^{(0)} + \hat{\rho}_{I}^{(1)} + \hat{\rho}_{I}^{(2)} + \cdots
 = \hat{\rho}_{0}
 +
-\frac{ie}{\hbar}\int_{-\infty}^t dt'[\hat{\mathbf{r}}_I(t')\cdot\mathbf{E}(t'),
-\hat{\rho}_I^{(0)}+\hat{\rho}_I^{(1)}+\hat{\rho}_I^{(2)}+\cdots
+\frac{ie}{\hbar}\int_{-\infty}^t dt'[\hat{\mathbf{r}}_{I}(t')\cdot\mathbf{E}(t'),
+\hat{\rho}_{I}^{(0)}+\hat{\rho}_{I}^{(1)}+\hat{\rho}_{I}^{(2)}+\cdots
 ]
 ,
 \end{equation}
 where, by equating equal orders in the perturbation, we find
 \begin{equation}\label{rho0}
-\hat{\rho}_I^{(0)}\equiv\hat{\rho}_0
+\hat{\rho}_{I}^{(0)}\equiv\hat{\rho}_{0}
 ,
 \end{equation}
 and
 \begin{equation}\label{rhoN}
-\hat{\rho}_I^{(N)}(t)=
+\hat{\rho}_{I}^{(N)}(t)=
 \frac{ie}{\hbar}
-\int_{-\infty}^t dt'[\hat{\mathbf{r}}_I(t')\cdot\mathbf{E}(t'),\hat{\rho}^{(N-1)}_I(t')].
+\int_{-\infty}^t dt'[\hat{\mathbf{r}}_{I}(t')\cdot\mathbf{E}(t'),\hat{\rho}^{(N-1)}_{I}(t')].
 \end{equation}
 It is simple to show that matrix elements of Eq. (\ref{rhoN}) satisfy
-$\langle n\mathbf{k}| \rho_I^{(N+1)}(t) |m\mathbf{k}'\rangle = \rho^{(N+1)}_{I,nm}(\mathbf{k})\delta(\mathbf{k}-\mathbf{k}')$,
+$\langle n\mathbf{k}| \rho_{I}^{(N+1)}(t) |m\mathbf{k}'\rangle = \rho^{(N+1)}_{I,nm}(\mathbf{k})\delta(\mathbf{k}-\mathbf{k}')$,
 with
 \begin{equation}\label{rtilde}
 \rho^{(N+1)}_{I,nm}(\mathbf{k};t)
 =\frac{ie}{\hbar}\int_{-\infty}^t dt'
 \langle n\mathbf{k}|
-[\hat{\mathbf{r}}_I(t'),\hat{\rho}^{(N)}_I(t')]
+[\hat{\mathbf{r}}_{I}(t'),\hat{\rho}^{(N)}_{I}(t')]
 |m\mathbf{k}\rangle
 \cdot\mathbf{E}(t')
 .
@@ -485,7 +488,7 @@ with
 We now work out the commutator of Eq. \eqref{rtilde}. Then,
 \begin{align}\label{conmu1}
 \langle n\mathbf{k}|
-[\hat{\mathbf{r}}_I(t),\hat{\rho}^{(N)}_I(t)]
+[\hat{\mathbf{r}}_{I}(t),\hat{\rho}^{(N)}_{I}(t)]
 |m\mathbf{k}\rangle
 &=
 \langle n\mathbf{k}|
@@ -1011,7 +1014,7 @@ we must calculate the matrix elements of $\boldsymbol{\mathcal{V}}^{\mathcal{S},
 $\boldsymbol{\mathcal{V}}^{\mathrm{LDA},\ell}$ (separately)
 according to the expressions of
 Appendix \ref{app:calvs}. {\color{red}Aeroport Charles de Gaulle, Nov. 30,
-2014, see Appendix \ref{voila}}.
+2014, see Appendix \ref{app:voila}}.
 % Using Eq. \eqref{chon.9}, the matrix elements of Eq. \eqref{vcali}
 % are given by
 % \begin{align}\label{end.1}
@@ -1101,13 +1104,6 @@ anisotropic linear optical response of semiconductor surfaces.
 However, the first formal derivation of this scheme is presented in
 Ref. \cite{mendozaPRB06} for the linear response, and here in this 
 article, for the second harmonic optical response of semiconductors.
-
-%??d
-% debemos mencionar que v caligrafica con tijeras esta mal calculada
-% para la respuesta lineal y la inyeccion de corriente en el
-% tratamiento capa por capa. Tambien, habria que ver que pasa con la
-% inyeccion de espin capa-por-capa
-%??u 
 
 
 \section{Microscopic surface susceptibility}

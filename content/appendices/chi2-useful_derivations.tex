@@ -2570,4 +2570,63 @@ $\tau_{nm}(\mathbf{k})$. From Eq. \eqref{na_hrdab}
 \end{align}
 which is an explicit expression that can be numerically calculated.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Scissors renormalization for 
+\texorpdfstring{$\mathcal{V}^\Sigma_{nm}$}{Vnm}}
+\label{app:voila}
+
+\begin{align}\label{cdg.1}
+\langle n\mathbf{k}\vert\mathcal{C}(z)\mathbf{r}\vert m\mathbf{k}\rangle(E^\Sigma_m-E^\Sigma_n) 
+&=
+\int d\mathbf{r}\,\psi^*_{n\mathbf{k}}(\mathbf{r}) 
+\mathcal{C}(z)\mathbf{r} (E^\Sigma_m-E^\Sigma_n) 
+\psi_{m\mathbf{k}}(\mathbf{r}) 
+\nonumber\\
+&=
+\int d\mathbf{r}\,\psi^*_{n\mathbf{k}}(\mathbf{r}) 
+\mathcal{C}(z)[\mathbf{r},H^\Sigma]
+\psi_{m\mathbf{k}}(\mathbf{r}) 
+\nonumber\\
+&=
+-i\int d\mathbf{r}\,\psi^*_{n\mathbf{k}}(\mathbf{r}) 
+\mathcal{C}(z)\mathbf{v}^\Sigma 
+\psi_{m\mathbf{k}}(\mathbf{r}) 
+\to 
+\boldsymbol{\mathcal{V}}^\Sigma_{nm}
+\nonumber\\
+\langle n\mathbf{k}\vert\mathcal{C}(z)\mathbf{r}\vert m\mathbf{k}\rangle
+&\to 
+\frac{\boldsymbol{\mathcal{V}}^\Sigma_{nm}}{\omega^\Sigma_{nm}}
+\nonumber\\
+\langle n\mathbf{k}\vert\mathcal{C}(z)\mathbf{r}\vert m\mathbf{k}\rangle(E^\mathrm{LDA}_m-E^\mathrm{LDA}_n) 
+&=
+\int d\mathbf{r}\,\psi^*_{n\mathbf{k}}(\mathbf{r}) 
+\mathcal{C}(z)\mathbf{r} (E^\mathrm{LDA}_m-E^\mathrm{LDA}_n) 
+\psi_{m\mathbf{k}}(\mathbf{r}) 
+\nonumber\\
+&=
+\int d\mathbf{r}\,\psi^*_{n\mathbf{k}}(\mathbf{r}) 
+\mathcal{C}(z)[\mathbf{r},H^\mathrm{LDA}]
+\psi_{m\mathbf{k}}(\mathbf{r}) 
+\nonumber\\
+&=
+-i\int d\mathbf{r}\,\psi^*_{n\mathbf{k}}(\mathbf{r}) 
+\mathcal{C}(z)\mathbf{v}^\mathrm{LDA} 
+\psi_{m\mathbf{k}}(\mathbf{r}) 
+\to 
+\boldsymbol{\mathcal{V}}^\mathrm{LDA}_{nm}
+\nonumber\\
+\langle n\mathbf{k}\vert\mathcal{C}(z)\mathbf{r}\vert m\mathbf{k}\rangle
+&\to 
+\frac{\boldsymbol{\mathcal{V}}^\mathrm{LDA}_{nm}}{\omega^\mathrm{LDA}_{nm}}
+\nonumber\\
+\boldsymbol{\mathcal{V}}^\Sigma_{nm}
+&=
+\frac{\omega^\Sigma_{nm}}{\omega^\mathrm{LDA}_{nm}}
+\boldsymbol{\mathcal{V}}^\mathrm{LDA}_{nm}\quad{\mathrm{voila}!!!}
+.
+\end{align}
+
 \stopcontents[chapters]
