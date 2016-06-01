@@ -17,9 +17,3 @@
     that are built in.
 2. change part titles to small caps
 4. use larger font size for labels on multiref diagrams
-5. remember about putting the darn average epsilon, and copy from article
-6. CONSIDER ADDING A DFT PRIMER!!!!!!
-7. chi^abc or chi^ijk !!!
-8. change d to l in diagrams in chapter 2
-9. little sigma o big sigma :/
-10. MISSING: app:gdernl, app:vnlme

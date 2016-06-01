@@ -1,4 +1,5 @@
 \documentclass[letterpaper,11pt,oneside]{memoir}
+\usepackage{lmodern}
 \usepackage{fullpage}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -40,7 +41,6 @@
 
 % \input{base/definitions}
 % \input{base/bms}
-
 \begin{document}
 
 % \pagestyle{empty}
@@ -65,15 +65,15 @@
 \include{content/chapters/chi2}
 \include{content/chapters/shgyield}
 \include{content/chapters/results}
-\include{content/chapters/conclusions}
+% \include{content/chapters/conclusions}
 
 \appendix
 % \part{Appendices}
 \include{content/appendices/chi2-useful_derivations}
 % \include{content/appendices/chi2-misc_results}
 \include{content/appendices/sshg-explicit_expressions_rif}
-\include{content/appendices/sshg-without_multiref}
-\include{content/appendices/coding}
+% \include{content/appendices/sshg-without_multiref}
+% \include{content/appendices/coding}
 
 \backmatter
 \bibliographystyle{unsrt}

@@ -81,7 +81,7 @@ set yrange [0:0.8]
 set xtics 0.2
 set ytics 0.2
 set xlabel 'Two-photon energy (eV)'
-set ylabel '$\vert\chi^{xxx}\vert$ ($10^{6}\times\mathrm{pm}^{2}$/V)'
+set ylabel '$\vert\chi^{xxx}_{\mathrm{surface}}\vert$ ($10^{6}\times\mathrm{pm}^{2}$/V)'
 set linestyle 1 pt 7 ps 1 lw 3 lc rgb "black"
 p "../../data/Si1x1/shgC.vnl.sm_0.075_xxx_576_half-slab_12-nospin_scissor_0.70_Nc_103" u (2*$1):(2*abso($2,$3,$4,$5)) t 'Relaxed ($\times2$)'   dt 1 lw 4.0 lc rgb "#268bd2" w l,\
   "../../data/Si1x1/shgC.vnl.sm_0.075_xxx_514_half-slab_12-nospin_scissor_0.70_Nc_103" u (2*$1):(2*abso($2,$3,$4,$5)) t 'Unrelaxed ($\times2$)' dt 4 lw 3.0 lc rgb "#dc322f" w l,\
@@ -100,9 +100,9 @@ set xtics auto
 set ytics 0.1
 set xlabel 'Two-photon energy (eV)'
 set ylabel '$\mathcal{R}_{pS}\, (10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$'
-p "../../data/Si1x1/Rif-Mejia.MR.avg_10nm.vnl.scissor0.70.3-layer.dat" u (2*$1):($3*0.9) t '3-layer ($\times 0.9$)'       dt 1 lw 4.0 lc rgb "#268bd2" w l,\
-  "../../data/Si1x1/Rif-Mejia.vnl.scissor0.70.2-layer-fresnel.dat"     u (2*$1):($3*3)   t '2-layer-fresnel ($\times 3$)' dt 1 lw 2.0 lc rgb "#dc322f" w l,\
-  "../../data/Si1x1/Rif-Mejia.vnl.scissor0.70.2-layer-bulk.dat"        u (2*$1):($3*3)   t '2-layer-bulk ($\times 3$)'    dt 3 lw 4.0 lc rgb "#1ba362" w l,\
+p "../../data/Si1x1/Rif-Mejia.MR.avg_10nm.vnl.scissor0.70.3-layer.dat" u (2*$1):3      t '3-layer'                      dt 1 lw 4.0 lc rgb "#268bd2" w l,\
+  "../../data/Si1x1/Rif-Mejia.vnl.scissor0.70.2-layer-fresnel.dat"     u (2*$1):($3*3) t '2-layer-fresnel ($\times 3$)' dt 1 lw 2.0 lc rgb "#dc322f" w l,\
+  "../../data/Si1x1/Rif-Mejia.vnl.scissor0.70.2-layer-bulk.dat"        u (2*$1):($3*3) t '2-layer-bulk ($\times 3$)'    dt 3 lw 4.0 lc rgb "#1ba362" w l,\
   "../../data/experiment/mejiaPRB02_bergfeldPRL04.dat" u 1:($3/100) t 'Experiment' pt 1 ps 1 lw 2 lc rgb "black" w p
 ####
 
@@ -116,9 +116,9 @@ set xtics 0.2
 set ytics auto
 set xlabel 'Two-photon energy (eV)'
 set ylabel '$\mathcal{R}_{pS}\, (10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$'
-p "../../data/Si1x1/Rif-Mitchell.MR.avg_10nm.vnl.scissor0.70.3-layer.dat" u (2*$1):($3*1.5) t '3-layer ($\times 1.5$)'       dt 1 lw 4.0 lc rgb "#268bd2" w l,\
-  "../../data/Si1x1/Rif-Mitchell.vnl.scissor0.70.2-layer-fresnel.dat"     u (2*$1):($3*5)   t '2-layer-fresnel ($\times 5$)' dt 1 lw 2.0 lc rgb "#dc322f" w l,\
-  "../../data/Si1x1/Rif-Mitchell.vnl.scissor0.70.2-layer-bulk.dat"        u (2*$1):($3*5)   t '2-layer-bulk ($\times 5$)'    dt 3 lw 4.0 lc rgb "#1ba362" w l,\
+p "../../data/Si1x1/Rif-Mitchell.MR.avg_10nm.vnl.scissor0.70.3-layer.dat" u (2*$1):($3*1.8) t '3-layer ($\times 1.8$)'       dt 1 lw 4.0 lc rgb "#268bd2" w l,\
+  "../../data/Si1x1/Rif-Mitchell.vnl.scissor0.70.2-layer-fresnel.dat"     u (2*$1):($3*6)   t '2-layer-fresnel ($\times 6$)' dt 1 lw 2.0 lc rgb "#dc322f" w l,\
+  "../../data/Si1x1/Rif-Mitchell.vnl.scissor0.70.2-layer-bulk.dat"        u (2*$1):($3*6)   t '2-layer-bulk ($\times 6$)'    dt 3 lw 4.0 lc rgb "#1ba362" w l,\
   "../../data/experiment/mitchellSS01.dat" u 1:(mitchellnorm*$3) t 'Experiment' pt 7 ps 0.5 lw 1.0 lc rgb "black" w p
 ####
 
@@ -164,7 +164,7 @@ set ytics auto
 set xlabel 'Two-photon energy (eV)'
 set ylabel '$\mathcal{R}_{pP}\, (10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$'
 p "../../data/Si1x1/Rif-Mejia.MR.avg_10nm.vnl.scissor0.70.3-layer.dat" u (2*$1):($2*0.5)   t '3-layer ($\times 0.5$)'           dt 1 lw 4.0 lc rgb "#268bd2" w l,\
-  "../../data/Si1x1/Rif-Mejia.vnl.scissor0.70.2-layer-fresnel.dat"     u (2*$1):($2*0.025) t '2-layer-fresnel ($\times 0.025$)' dt 4 lw 4.0 lc rgb "#dc322f" w l,\
+  "../../data/Si1x1/Rif-Mejia.vnl.scissor0.70.3-layer-hybrid.dat"      u (2*$1):($2*2)     t '3-layer-hybrid ($\times 2$)'      dt 4 lw 4.0 lc rgb "#e6ac00" w l,\
   "../../data/Si1x1/Rif-Mejia.vnl.scissor0.70.2-layer-bulk.dat"        u (2*$1):($2*4)     t '2-layer-bulk ($\times 4$)'        dt 2 lw 4.0 lc rgb "#1ba362" w l,\
   "../../data/experiment/mejiaPRB02_bergfeldPRL04.dat" u 1:($2/100) t 'Experiment' pt 1 ps 1 lw 2 lc rgb "black" w p
 ####
@@ -196,7 +196,7 @@ set xtics auto
 set ytics auto
 set xlabel 'Two-photon energy (eV)'
 set ylabel '$\mathcal{R}_{pP}\, (10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$'
-p "../../data/Si1x1/Rif-Mejia.vnl.scissor0.70.3-layer-hybrid.dat" u (2*$1):($2*2)      t '3-layer-hybrid ($\times 2$)'               dt 1 lw 3.0 lc rgb "#e6ac00" w l,\
+p "../../data/Si1x1/Rif-Mejia.vnl.scissor0.70.2-layer-fresnel.dat"     u (2*$1):($2*0.025) t '2-layer-fresnel ($\times 0.025$)' dt 1 lw 4.0 lc rgb "#1ba362" w l,\
   "../../data/Si1x1/Rif-Mejia.vnl.scissor0.70.2-layer-vacuum.dat" u (2*$1):($2*2.5e-5) t '2-layer-vacuum ($\times 2.5\mathrm{E}-5$)' dt 2 lw 4.0 lc rgb "#dc322f" w l,\
   "../../data/experiment/mejiaPRB02_bergfeldPRL04.dat" u 1:($2/100) t 'Experiment' pt 1 ps 1 lw 2 lc rgb "black" w p
 ####

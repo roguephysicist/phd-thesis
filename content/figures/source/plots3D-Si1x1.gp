@@ -17,7 +17,7 @@ set xlabel "Two-photon energy (eV)"
 set xlabel  font "" textcolor lt -1 norotate
 set xtics 0.5
 set xrange [ 2.5 : 5.0 ] noreverse nowriteback
-set yrange [ -90 : 270 ] noreverse nowriteback
+set yrange [ -90 : 90 ] noreverse nowriteback
 set ytics 90
 set arrow front nohead lw 4 dt 1 lc rgb 'black' from 2.5,65,0 to 5,65,0
 set arrow front nohead lw 3 dt 2 lc rgb 'black' from 3.4,-90,0 to 3.4,270,0
@@ -34,23 +34,23 @@ set size ratio 1
 
 ## varying theta, phi = 30
 # set ytics ('$-\frac{\pi}{2}$' -90, "0" 0, '$\frac{\pi}{2}$' 90, '$\pi$' 180, '$\frac{3\pi}{2}$' 270,)
-set ylabel 'Angle of incidence $\theta_{0}$ ($^{\circ}$)' offset -0.5,0
-set cblabel '$\mathcal{R}_{pP}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0
+set ylabel 'Angle of incidence $\theta_{0}$ ($^{\circ}$)' offset 1,0
+set cblabel '$\mathcal{R}_{pP}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0 rotate by 270
 set cbtics auto
 set output '3D-Si1x1-RpP.tex'
 p '../../data/Si1x1/Rif-3Dtheta.dat' u (2*$2):1:3 w image
-set cblabel '$\mathcal{R}_{sP}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0
+set cblabel '$\mathcal{R}_{sP}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0 rotate by 270
 set cbtics 0.02
 set output '3D-Si1x1-RsP.tex'
 p '../../data/Si1x1/Rif-3Dtheta.dat' u (2*$2):1:5 w image
 
 # set ytics ('$-\frac{\pi}{2}$' -90, "0" 0, '$\frac{\pi}{2}$' 90, '$\pi$' 180, '$\frac{3\pi}{2}$' 270,)
-set ylabel 'Angle of incidence $\theta_{0}$ ($^{\circ}$)' offset -0.5,0
-set cblabel '$\mathcal{R}_{pS}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0
+set ylabel 'Angle of incidence $\theta_{0}$ ($^{\circ}$)' offset 1,0
+set cblabel '$\mathcal{R}_{pS}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0 rotate by 270
 set cbtics 0.2
 set output '3D-Si1x1-RpS.tex'
 p '../../data/Si1x1/Rif-3Dtheta.dat' u (2*$2):1:4 w image
-set cblabel '$\mathcal{R}_{sS}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0
+set cblabel '$\mathcal{R}_{sS}\,(10^{-20} \times \mathrm{cm}^{2}/\mathrm{W})$' offset 1,0 rotate by 270
 set cbtics 0.2
 set output '3D-Si1x1-RsS.tex'
 p '../../data/Si1x1/Rif-3Dtheta.dat' u (2*$2):1:6 w image

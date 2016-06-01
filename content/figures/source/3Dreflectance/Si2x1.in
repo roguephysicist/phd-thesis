@@ -1,10 +1,10 @@
 # MonoH_MonoH_1x1_111 input file for calculating reflectance
 mode: 3-layer
-theta: 270
+theta: 090
 phi: 45
-# chi1 normalization and broadening (sigma = 0.10 eV)
+# chi1 normalization and broadening (sigma = 0.15 eV)
 norm: 1.2535831585
-sigma: 4.2666666666
+sigma: 6.4
 # Multiple reflections
 multiref: yes
 thickness: 10
@@ -30,4 +30,4 @@ zxz: ../../../data/Si2x1/32layers/shgC.vnl.sm_0.05_zxz_244_half-slab_10-nospin_s
 zyy: ../../../data/Si2x1/32layers/shgC.vnl.sm_0.05_zyy_244_half-slab_10-nospin_scissor_0.50_Nc_130
 zzy: ../../../data/Si2x1/32layers/shgC.vnl.sm_0.05_zzy_244_half-slab_10-nospin_scissor_0.50_Nc_130
 zzz: ../../../data/Si2x1/32layers/shgC.vnl.sm_0.05_zzz_244_half-slab_10-nospin_scissor_0.50_Nc_130
-output: theta270.dat
+output: theta090.dat

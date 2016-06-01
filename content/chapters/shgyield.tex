@@ -2,15 +2,29 @@
 \chapter{Surface Second-Harmonic Generation Yield}\label{chap:sshgyield}
 \partialtoc
 
+In Chapter \ref{chap:chi2} we derived the expressions for the nonlinear surface
+susceptibility tensor including three features not previously found in a single
+formulation: (i) the scissors correction, (ii) the contribution of the nonlocal
+part of the pseudopotentials, and (iii) the cut function used to extract the
+surface response, all within the independent particle approximation. There are,
+of course, several other theoretical formalisms that describe the SHG process
+for surfaces with different approximations and varying levels of difficulty
+\cite{levinePRB94, mendozaPRL98, arzatePRB01, mendozaPRB01, mejiaPRB02,
+sanoPRB02, mejiaRMF04, trollePRB14}. However, I consider that this newly
+developed framwork, with the inclusion of these three contributions opens the
+possibility to study SSHG with more versatility and accuracy than was previously
+available at this level of approximation.
+
 In this chapter, I will walk the reader through the considerations for
-developing the three layer (3-layer) model for the SSHG yield. We will then
+developing the three layer (3-layer) model for the SSHG yield, that considers
+that the SH conversion takes place in a thin layer just below the surface that
+lies under the vacuum region and above the bulk of the material. We will then
 derive explicit expressions for each of the four polarization configurations for
 the incoming and outgoing fields. These expressions will be simplified by taking
 into account the symmetry relations for the (111), (110), and (001) surfaces. I
-have also included Appendices \ref{app:sshg_explicit_expressions_rif},
-\ref{app:shgyieldnomr}, \ref{app:limiting_cases}, and
-\ref{app:sipe_moss_vandriel} that contain a wealth of supplementary derivations
-for all the work contained in this chapter.
+have also included Appendix \ref{app:sshg_explicit_expressions_rif} that
+contains a wealth of supplementary derivations for all the work contained in
+this chapter.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -52,7 +66,8 @@ $b$ and characterized by $\epsilon_{b}(\omega)$. Both the vacuum and bulk layers
 are semi-infinite (see Fig. \ref{fig:MR3layer2w}).
 
 To model the electromagnetic response of the 3-layer model, we follow Ref.
-\cite{mizrahiJOSA88} and assume a polarization sheet of the form
+\cite{mizrahiJOSA88} and assume a polarization sheet of the form {\color{red}
+Decide if layered P (in previous chapter) should have calligrahic P or not}
 \begin{equation}\label{eq:psheet}
 \mathbf{P}(\mathbf{r},t) = \boldsymbol{\mathcal{P}}
 e^{i\boldsymbol{\kappa}\cdot\mathbf{R}}e^{-i\omega t}\delta(z - z_{\beta}) 
@@ -60,7 +75,8 @@ e^{i\boldsymbol{\kappa}\cdot\mathbf{R}}e^{-i\omega t}\delta(z - z_{\beta})
 \end{equation}
 where $\mathbf{R}=(x,y)$, $\boldsymbol{\kappa}$ is the component of the wave
 vector $\boldsymbol{\nu}^{\phantom{a}}_{\beta}$ parallel to the surface, and
-$z_{\beta}$ is the position of the sheet within medium $\beta$. Ref.
+$z_{\beta}$ is the position of the sheet within medium $\beta$, and
+$\boldsymbol{\mathcal{P}}$ is the position independent polarization. Ref.
 \cite{sipeJOSAB87} demonstrates that the solution of the Maxwell equations for
 the radiated fields $E_{\beta,p\pm}$, and $E_{\beta,s}$ with
 $\mathbf{P}(\mathbf{r},t)$ as a source at points $z\neq 0$, can be written as
@@ -108,61 +124,31 @@ and
 \end{equation}
 where $\phi$ is the azimuthal angle with respect to the $x$ axis.
 
-{\color{red}
-It is important to mention that we must also calculate the bulk and surface
-dielectric functions, $\boldsymbol{\epsilon}_b(\omega)$ and
-$\boldsymbol{\epsilon}_\ell(\omega)$. For this, we follow the method presented
-in Ref. \cite{mendozaPRB06}. For the bulk, the tensor components are equal in
-all three directions due to the cubic symmetry,
-\begin{equation*}
-\varepsilon_{b}(\omega) = 
-\epsilon^{xx}_{b}(\omega) = 
-\epsilon^{yy}_{b}(\omega) = 
-\epsilon^{zz}_{b}(\omega).
-\end{equation*}
-For the purpose of this calculation, we introduce the average value for the
-surface dielectric function, $\varepsilon_\ell(\omega)$. This entails that
-$\epsilon^{xx}_{\ell}(\omega) = \epsilon^{yy}_{\ell}(\omega) \approx
-\epsilon^{zz}_{\ell}(\omega)$, since symmetry is broken in the $zz$ direction
-because of the surface. We find the average in the conventional way,
-\begin{equation*}
-\varepsilon_{\ell}(\omega) = 
-\frac{\epsilon^{xx}_{\ell}(\omega) + 
-\epsilon^{yy}_{\ell}(\omega) + 
-\epsilon^{zz}_{\ell}(\omega)}{3},
-\end{equation*}
-and use that quantity in the equations for the SSHG yield. In order to obtain a
-result which does not depend on the size of the vacuum region
-\cite{nicolasPRB15}, we have normalized the surface dielectric function to the
-volume of the slab, instead of the volume of the super-cell. We remark that we
-could calculate $\epsilon^{\mathrm{ab}}_{\mathrm{half-slab}}(\omega)$ using
-${\mathcal{C}}(z)=1$ for the upper half of our slab and normalize to the volume
-of the half-slab. Nevertheless, $\epsilon^{\mathrm{ab}}_{\ell}(\omega)$ and
-$\epsilon^{\mathrm{ab}}_{\mathrm{half-slab}}(\omega)$ give the same
-result \cite{hoganPRB03, castilloPRB03, nicolasPRB15}.}
-
 In the 3-layer model the nonlinear polarization responsible for the SHG is
 immersed in the thin layer ($\beta=\ell$), and is given by
 \begin{equation}\label{eq:tres}
 \mathcal{P}_{\ell,i}(2\omega)=
 \left\{
 \begin{array}{cc}
-\chi^{ijk}(-2\omega;\omega,\omega)E_{j}(\omega)E_{k}(\omega)
-    & \text{(CGS units)}\\
-\epsilon_{0}\chi^{ijk}(-2\omega;\omega,\omega)E_{j}(\omega)E_{k}(\omega)
+\chi^{\mathrm{abc}}_{\mathrm{surface}}(-2\omega;\omega,\omega)
+    E^{\mathrm{b}}(\omega)E^{\mathrm{c}}(\omega)
+    & \text{(CGS units)}\\\\
+\epsilon_{0}\chi^{\mathrm{abc}}_{\mathrm{surface}}(-2\omega;\omega,\omega)
+    E^{\mathrm{b}}(\omega)E^{\mathrm{c}}(\omega)
     & \text{(MKS units)}
 \end{array}
 \right.,
 \end{equation}
-where $\boldsymbol{\chi}(-2\omega;\omega,\omega)$ is the dipolar surface
-nonlinear susceptibility tensor, and the Cartesian indiceœs $i,j,k$ are summed
-over if repeated. $\chi^{ijk}(-2\omega;\omega,\omega) =
-\chi^{ikj}(-2\omega;\omega,\omega)$ is the intrinsic permutation symmetry due to
-the fact that SHG is degenerate in $E_{j}(\omega)$ and $E_{k}(\omega)$. As in
-Ref. \cite{mizrahiJOSA88}, we consider the polarization sheet (Eq.
-\eqref{eq:psheet}) to be oscillating at some frequency $\omega$ in order to
-properly express Eqs. \eqref{eq:solmaxwell}-\eqref{eq:mmc2}. However, in the
-following we find it convenient to use $\omega$ exclusively to denote the
+where $\boldsymbol{\chi}_{\mathrm{surface}}(-2\omega;\omega,\omega)$ is the
+dipolar surface nonlinear susceptibility tensor that we derived in Chapter
+\ref{chap:chi2}, and the Cartesian indices $\mathrm{a,b,c}$ are summed over if
+repeated. As we mentioned before, $\chi^{\mathrm{abc}}(-2\omega;\omega,\omega) =
+\chi^{\mathrm{acb}}(-2\omega;\omega,\omega)$ is the intrinsic permutation
+symmetry due to the fact that SHG is degenerate in $E_{j}(\omega)$ and
+$E_{k}(\omega)$. As in Ref. \cite{mizrahiJOSA88}, we consider the polarization
+sheet (Eq. \eqref{eq:psheet}) to be oscillating at some frequency $\omega$ in
+order to properly express Eqs. \eqref{eq:solmaxwell}-\eqref{eq:mmc2}. However,
+in the following we find it convenient to use $\omega$ exclusively to denote the
 fundamental frequency and $\boldsymbol{\kappa}$ to denote the component of the
 incident wave vector parallel to the surface. The generated nonlinear
 polarization is oscillating at $\Omega = 2\omega$ and will be characterized by a
@@ -189,11 +175,13 @@ arrows point along the direction of propagation, and the $p$-polarization unit
 vector, $\hat{\mathbf{P}}_{\ell -(+)}$, along the downward (upward) direction is
 denoted with a thick arrow. The $s$-polarization unit vector $\hat{\mathbf{s}}$,
 points out of the page. The fundamental field $\mathbf{E}(\omega)$ is incident
-from the vacuum side along the $\hat{\boldsymbol{\kappa}z}$-plane, with
+from the vacuum side along the $\boldsymbol{\kappa}\hat{z}$-plane, with
 $\theta_{0}$ its angle of incidence and $\boldsymbol{\nu}_{v-}$ its wave vector.
-$\Delta\varphi_{i}$ denote the phase difference of the multiple reflected beams
-with respect to the first vacuum transmitted beam (dashed-red arrow), where the
-dotted lines are perpendicular to this beam.}
+$\Delta\varphi_{i}$ denotes the phase difference between the multiple reflected
+beams and the first layer-vacuum transmitted beam, denoted by the dashed-red
+arrow (of length $L_{2}$) followed by the solid black arrow (of length $L_{1}$).
+The dotted lines in the vacuum region are perpendicular to the beam extended
+from the solid black arrow (denoted by solid blue arrows of length $L_{6}$).}
 \label{fig:MR3layer2w}
 \end{figure}
 
@@ -220,7 +208,7 @@ as the reflection tensor for the $\ell b$ interface, and
 \end{equation} 
 as the reflection tensor for the $\ell v$ interface. The Fresnel factors in
 uppercase letters, $T^{ij}_{s,p}$ and $R^{ij}_{s,p}$, are evaluated at $2\omega$
-from the following well known formulas
+from the following well known formulas \cite{jacksonbook}
 \begin{equation}\label{eq:e.f1}
 \begin{split}
 t_{s}^{ij}(\omega) &=
@@ -371,35 +359,17 @@ R^{M}_{\mathrm{i}}\equiv
 is defined as the multiple ($M$) reflection coefficient. This coefficient
 depends on the thickness $d$ of layer $\ell$, and most importantly on the
 position $d_{2}$ of $\boldsymbol{\mathcal{P}}_{\ell}(2\omega)$ within this
-layer. The final results will depend on both $d$ and $d_{2}$. However, we can
-also define an average $\bar{R}^{M}_{\mathrm{i}}$ as
+layer. The final results will depend on both $d$ and $d_{2}$. However, using Eq.
+\eqref{eq:delta0} we can also define an average $\bar{R}^{M}_{\mathrm{i}}$ as
 \begin{equation}\label{eq:mcave}
 \bar{R}^{M}_{\mathrm{i}}\equiv 
-\frac{1}{d}\int_{0}^{d}R^{M}_{\mathrm{i}}(x)\,dx\propto
-\frac{1}{d}\int_{0}^{d}e^{i\alpha x}\,dx,
-\end{equation}
-where
-\begin{equation}\label{eq:m16}
-R^{M}_{\mathrm{i}}(x) = 
-\frac{R^{\ell b}_{\mathrm{i}}e^{i\alpha x}}
-{1 + R^{v\ell}_{\mathrm{i}}R^{\ell b}_{\mathrm{i}}e^{i\delta}},
-\end{equation}
-and $\alpha=8\pi W_{\ell}/\lambda_{0}$. We can evaluate the rightmost integral,
-\begin{align}\label{eq:integral}
-\frac{1}{d}\int_{0}^{d} e^{i\alpha x}\,dx
-&= \frac{1}{d}\frac{e^{i\alpha x}}{i\alpha}\,\Bigg\vert^{d}_{0}
- = \frac{1}{i\alpha d}\left(e^{i\alpha d} - 1\right)\nonumber\\\nonumber\\
-&= \frac{1}{i\delta}\left(e^{i\delta} - 1\right)
- = \frac{1}{i\delta}e^{i\delta/2}\frac{(e^{i\delta/2} - e^{-i\delta/2})}{2i}
- = e^{i\delta/2}\,\mathrm{sinc}(\delta/2).
-\end{align}
-Therefore, we can establish the average value $\bar{R}^{M}_{\mathrm{i}}$ as
-\begin{align}\label{eq:mcave2}
-\bar{R}^{M}_{\mathrm{i}} = 
-\frac{R^{\ell b}_{\mathrm{i}}e^{i\delta/2}}
+\frac{1}{d}\int_{0}^{d}
+\frac{R^{\ell b}_{\mathrm{i}}e^{i(8\pi W_{\ell}/\lambda_{0})x}}
+{1 + R^{v\ell}_{\mathrm{i}}R^{\ell b}_{\mathrm{i}}e^{i\delta}}\,dx
+= \frac{R^{\ell b}_{\mathrm{i}}e^{i\delta/2}}
 {1 + R^{v\ell}_{\mathrm{i}}R^{\ell b}_{\mathrm{i}}e^{i\delta}}
 \,\mathrm{sinc}(\delta/2),
-\end{align}
+\end{equation}
 that only depends on $d$ through the $\delta$ term from Eq. \eqref{eq:delta}.
 
 To connect with the work in Ref. \cite{mizrahiJOSA88}, where
@@ -469,7 +439,8 @@ with $\mathrm{i} = s,p$, and then, $\hat{\mathbf{e}}^{s}=\hat{\mathbf{s}}$ and
 $\hat{\mathbf{e}}^{p}=\hat{\mathbf{p}}_{v-}$. Also,
 \begin{equation}\label{mvrm}
 r^{M}_{\mathrm{i}} \equiv
-\frac{r^{\ell b}_{\mathrm{i}}e^{i\varphi}}{1+r^{v\ell}_{\mathrm{i}}r^{\ell b}_{\mathrm{i}}e^{i\varphi}}, \quad \mathrm{i}=s,p.
+\frac{r^{\ell b}_{\mathrm{i}}e^{i\varphi}}{1+r^{v\ell}_{\mathrm{i}}
+r^{\ell b}_{\mathrm{i}}e^{i\varphi}}, \quad \mathrm{i}=s,p.
 \end{equation}
 $r^{M}_{\mathrm{i}}$ is defined as the multiple (M) reflection coefficient for
 the fundamental field. We define $\mathbf{E}^{\mathrm{i}}_{\ell}(\omega)\equiv
@@ -524,9 +495,9 @@ to this beam.}
 
 The magnitude of the radiated field is given by $E(2\omega) =
 \hat{\mathbf{e}}^{\mathrm{F}}\cdot\mathbf{E}_{\ell}(2\omega)$, where
-$\hat{\mathbf{e}}^{\mathrm{F}}$ is the unit vector of the final polarization
-with $\mathrm{F}=S,P$, where $\hat{\mathbf{e}}^S=\hat{\mathbf{s}}$ and
-$\hat{\mathbf{e}}^P=\hat{\mathbf{P}}_{v+}$. We expand the rightmost term in
+$\hat{\mathbf{e}}^{\mathrm{F}}$ is the unit vector of the final, $S$ or $P$ SH
+polarization with $\mathrm{F}=S,P$, where $\hat{\mathbf{e}}^S=\hat{\mathbf{s}}$
+and $\hat{\mathbf{e}}^P=\hat{\mathbf{P}}_{v+}$. We expand the rightmost term in
 parenthesis of Eq. \eqref{eq:mr9} as
 \begin{equation}
 \begin{split}
@@ -577,11 +548,11 @@ Replacing $\mathbf{E}(\omega)\to E_0\mathbf{e}^{\omega,\mathrm{i}}_\ell$, in Eq.
 \left\{
 \begin{array}{cc}  
 E^{2}_{0}\,
-\boldsymbol{\chi}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
+\boldsymbol{\chi}_{\mathrm{surface}}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
                   \mathbf{e}^{\omega,\mathrm{i}}_{\ell}
 & \text{(CGS units)}\\\\
 \epsilon_{0}E^{2}_{0}\,
-\boldsymbol{\chi}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
+\boldsymbol{\chi}_{\mathrm{surface}}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
                   \mathbf{e}^{\omega,\mathrm{i}}_{\ell}
 & \text{(MKS units)}\\
 \end{array}
@@ -593,7 +564,7 @@ and thus Eq. \eqref{eq:r10} reduces to ($W_{v}=\cos\theta_{0}$)
 E_{\ell}(2\omega) 
 = \frac{2\eta i \omega}{c\cos\theta_{0}}
 \mathbf{e}^{2\omega,\mathrm{F}}_{\ell}\cdot
-\boldsymbol{\chi}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
+\boldsymbol{\chi}_{\mathrm{surface}}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
                   \mathbf{e}^{\omega,\mathrm{i}}_{\ell},
 \end{equation}
 where $\eta=2\pi$ in CGS units and $\eta=1/2$ in MKS units. For ease of
@@ -602,7 +573,7 @@ notation, we define
 \Upsilon_{\mathrm{iF}}
 \equiv 
 \mathbf{e}^{2\omega,\mathrm{F}}_{\ell}\cdot
-\boldsymbol{\chi}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
+\boldsymbol{\chi}_{\mathrm{surface}}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
                   \mathbf{e}^{\omega,\mathrm{i}}_{\ell},
 \end{align}
 where i stands for the incoming polarization of the fundamental electric field
@@ -660,19 +631,17 @@ Finally, we condense these results and establish the SSHG yield as
 \begin{array}{ r c } 
 \frac{32\pi^{3}\omega^{2}}{c^{3}\cos^{2}\theta_{0}}
 \left\vert\frac{1}{n_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2} 
-& \text{(CGS units)} \\
+& \text{(CGS units)} \\\\
 \frac{\omega^{2}}{2\epsilon_{0}c^3\cos^{2}\theta_{0}}
 \left\vert\frac{1}{n_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2} 
 & \text{(MKS units)} 
 \end{array}
 \right.,
 \end{equation}
-where $N_{v}=1$ and $W_{v}=\cos\theta_{0}$. In the MKS unit system
-$\boldsymbol{\chi}$ is given in m$^{2}$/V, since it is a surface second order
-nonlinear susceptibility, and $\mathcal{R}_{\mathrm{iF}}$ is given in m$^2$/W.
-
-I include a full treatise on this exact procedure without considering the
-effects of multiple reflections in Appendix \ref{app:shgyieldnomr}.
+where $N_{v}=1$ and $W_{v}=\cos\theta_{0}$. As mentioned in Chapter
+\eqref{chap:chi2}, $\boldsymbol{\chi}_{\mathrm{surface}}$ is given in m$^{2}$/V
+in the MKS unit system, since it is a surface second order nonlinear
+susceptibility, and $\mathcal{R}_{\mathrm{iF}}$ is given in m$^2$/W.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -758,7 +727,9 @@ writing we split $\Upsilon_{\mathrm{iF}}$ as
 \end{equation} 
 
 Lastly, in Table \ref{tab:chis} I list the nonzero components of
-$\boldsymbol{\chi}$ for each surface symmetry \cite{sipePRB87, popovbook}.
+$\boldsymbol{\chi}_{\mathrm{surface}}$ for each surface symmetry
+\cite{sipePRB87, popovbook}. From this point on, I will omit the ``surface''
+subscript for the $\chi^{\mathrm{abc}}$ components for ease of notation.
 
 \begin{table}
 \centering
@@ -880,10 +851,10 @@ r_{pP} =
 \end{split}
 \end{equation}
 where all 18 independent components of $\boldsymbol{\chi}$ for a surface with no
-symmetries, contribute to $\mathcal{R}_{pP}$. Recall that $\chi^{ijk} =
-\chi^{ikj}$. We will derive  the expressions for each of the three surfaces
-being considered here, referring to Table \ref{tab:chis}. For the (111) surface we
-obtain
+symmetries, contribute to $\mathcal{R}_{pP}$. Recall that $\chi^{\mathrm{abc}} =
+\chi^{\mathrm{acb}}$. We will derive  the expressions for each of the three
+surfaces being considered here, referring to Table \ref{tab:chis}. For the (111)
+surface we obtain
 \begin{equation}\label{eq:rpp111}
 \begin{split}
 r^{(111)}_{pP} &= 
@@ -937,8 +908,8 @@ R^{M+}_{p}\sin\theta_{0}
 \end{equation}
 This time, the azimuthal $4\phi$ symmetry for the $C_{4v}$ group of the (001)
 surface is absent in this  expression since this contribution is only related to
-the bulk nonlinear quadrupolar SH term \cite{sipePRB87}, that we neglect in this
-work.
+the bulk nonlinear quadrupolar SH term, Eq. \eqref{sshgp3} \cite{sipePRB87},
+that we neglect in this work.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1110,10 +1081,10 @@ field $\mathbf{E}(\omega)$, which are alternatives to the three-layer model
 presented above. In what follows, we confine ourselves only to the (111) surface
 and the $p$-in $P$-out combination polarizations. This is the case where the
 proposed scenarios differ the most as the SSHG yield depends on all the finite
-$\chi^{ijk}$ components for this surface. However, the other $pS$, $sP$, and
-$sS$ polarization cases, or the (110) or (001) surfaces could be worked out
-along the same lines described below. For all the scenarios we omit the multiple
-SH reflections by taking $R^{M\pm}_{p}\to 1\pm R^{\ell b}_{p}$ (Eq.
+$\chi^{\mathrm{abc}}$ components for this surface. However, the other $pS$,
+$sP$, and $sS$ polarization cases, or the (110) or (001) surfaces could be
+worked out along the same lines described below. For all the scenarios we omit
+the multiple SH reflections by taking $R^{M\pm}_{p}\to 1\pm R^{\ell b}_{p}$ (Eq.
 \eqref{eq:rm}) and the linear multiple reflections by taking $r^{M\pm}_{p}\to
 1\pm r^{\ell b}_{p}$ (Eq. \eqref{eq:mvc}). Using the expressions in Eq.
 \eqref{eq:mf}, we obtain the following useful relationships
@@ -1127,8 +1098,7 @@ which will come in handy for expressing $\Gamma_{pP}$ and $r^{(111)}_{pP}$ in
 the forms presented below. Recall that these expressions are valid for the
 $2\omega$ terms by simply capitalizing the relevant quantities as explained in
 Sec. \ref{sec:3layersshg}. We summarize these scenarios in Table
-\ref{tab:models} for quick reference. The complete derivations for these
-different cases are included in Appendix \ref{app:limiting_cases}.
+\ref{tab:models} for quick reference.
 
 \begin{table}[t]
 \centering
@@ -1137,9 +1107,9 @@ different cases are included in Appendix \ref{app:limiting_cases}.
 Label         &  $\boldsymbol{\mathcal{P}}(2\omega)$  &  $\mathbf{E}(\omega)$ \\
 \hline 
 3-layer         &          $\ell$           &      $\ell$   \\
-2-layer-fresnel &            $v$            &        $b$    \\
-2-layer-bulk    &            $b$            &        $b$    \\
 3-layer-hybrid  &          $\ell$           &        $b$    \\
+2-layer-bulk    &            $b$            &        $b$    \\
+2-layer-fresnel &            $v$            &        $b$    \\
 2-layer-vacuum  &            $v$            &        $v$    \\
 \hline 
 \end{tabular}
@@ -1147,7 +1117,13 @@ Label         &  $\boldsymbol{\mathcal{P}}(2\omega)$  &  $\mathbf{E}(\omega)$ \\
 is the name used in subsequent figures, while the remaining columns show in
 which medium we will consider the specified quantity. $\ell$ is the thin layer
 below the surface of the material, $v$ is the vacuum region, and $b$ is the bulk
-region of the material.}
+region of the material. We use the following convention for the labels. Models
+with ``3-layer'' consider the presence of the thin layer $\ell$, while
+``2-layer'' models do not. The ``fresnel'', ``bulk'', ``vacuum'', and ``hybrid''
+tags refers to the configuration in which we evaluate the specific quantities.
+For instance, the 3-layer-hybrid model evaluates
+$\boldsymbol{\mathcal{P}}(2\omega)$ in the thin layer $\ell$, while the
+fundamental fields are evaluated in the bulk region $b$.}
 \label{tab:models}
 \end{table}
 
@@ -1303,5 +1279,27 @@ r^{(111)}_{pP} =
 - 2N^{2}_{\ell}w_{b}W_{b}\sin\theta_{0}\chi^{xxz}
 - N^{2}_{\ell}w^{2}_{b}W_{b}\chi^{xxx}\cos3\phi.
 \end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusions}
+
+In this chapter, we derived the complete expressions for the SSHG radiation
+using the three layer model to describe the radiating system. Our derivation
+yields the full expressions for the radiation that include all required
+components of $\chi^{\mathrm{abc}}$, regardless of symmetry considerations.
+Thus, these expressions can be applied to any surface symmetry. We also reduce
+them according to the most commonly used surface symmetries, the (111), (110),
+and (100) cases.
+
+In the next chapter, I will present the results obtained from using the theory
+developed here and in Chapter \ref{chap:chi2} applied to the Si(001)(2$\times$1)
+and the Si(111)(1$\times$1):H surfaces. In particular, we will compare the
+theoretical SSHG yield for the latter surface with experimental data from
+several sources. This is an excellent way to test the validity of this approach,
+and will provide a benchmark for future calculations using the theory developed
+here.
 
 \stopcontents[chapters]

@@ -12,7 +12,7 @@ if [ -e $outfile ]; then
     rm -rf $outfile
 fi
 
-for num in $(seq -f "%03g" -90 01 270); do
+for num in $(seq -f "%03g" -90 01 90); do
     if [ $mode == "theta" ]; then
         output="theta${num}.dat"
         sed -i '' -e "3s/.*/theta: ${num}/" -e "33s/.*/output: ${output}/" ${infile}

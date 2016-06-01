@@ -2,116 +2,140 @@
 \chapter{The Nonlinear Surface Susceptibility}\label{chap:chi2}
 \partialtoc
 
+{\color{red} Small intro about centrosymmetry, explaining why we must follow
+this procedure for a surface response. Brief intro about scissors correction,
+LDA vs GW. Brief intro about the procedure we will follow in general.}
+
+\section{The nonlinear surface susceptibility}
+
 In this section I will outline the general procedure to obtain the surface
 susceptibility tensor for SHG. We start with the nonlinear polarization
-$\mathbf{P}$ written as
+$\mathbf{P}(\mathbf{r})$ of a bulk system, written as
 \begin{equation}\label{mshg}
 \begin{split}
-P_{\mathrm{a}}(2\omega)
+P^{\mathrm{a}}(\mathbf{r},2\omega)
 = \chi^{\mathrm{abc}}(-2\omega;\omega,\omega)
-  E^{\mathrm{b}}(\omega)E^{\mathrm{c}}(\omega)
+  E^{\mathrm{b}}(\mathbf{r},\omega)E^{\mathrm{c}}(\mathbf{r},\omega)
 + \chi^{\mathrm{abcd}}(-2\omega;\omega,\omega)
-  E^{\mathrm{b}}(\omega)\nabla^{\mathrm{c}}E^{\mathrm{d}}(\omega)
+  E^{\mathrm{b}}(\mathbf{r},\omega)\nabla^{\mathrm{c}}
+  E^{\mathrm{d}}(\mathbf{r},\omega)
 + \cdots,
 \end{split}
 \end{equation}
 where $\chi^{\mathrm{abc}}(-2\omega;\omega,\omega)$ and
 $\chi^{\mathrm{abcd}}(-2\omega;\omega,\omega)$ correspond to the dipolar and
-quadrupolar susceptibilities. For ease of notation, I will drop the
-$(-2\omega;\omega,\omega)$ argument from this point on. The sum continues with
-higher multipolar terms. If we consider a semi-infinite system with a
-centrosymmetric bulk, we can separate the terms into two contributions from
-symmetry considerations alone. The first from the surface of the system, and the
-second from the bulk of the system. We take
+quadrupolar susceptibility tensors, and $\mathbf{E}(\mathbf{r})$ is the incoming
+electric field along the different Cartesian directions denoted by the roman
+superscripts. For ease of notation, I will drop the $\omega$ arguments from this
+point on.
+% The sum continues with higher multipolar terms.
+At this point I introduce the units of the quantities above. For simplicity, we
+use the MKS system of units. The units of $\mathbf{E}(\mathbf{r})$ are
+$[\mathbf{E}] = $ V/m, and the units of $\mathbf{P}(\mathbf{r})$ are
+$[\mathbf{P}] = $ V/m since $\mathbf{P}(\mathbf{r})$ is a \emph{bulk}
+polarization. Therefore, the units of the bulk $\chi^{\mathrm{abc}}$ are
+$[\chi^{\mathrm{abc}}] = $ m/V.
+
+If we consider a semi-infinite system with a centrosymmetric bulk, we can obtain
+a bulk and a surface nonlinear polarization that differ from each other from
+symmetry considerations alone. To show this, we take
 \begin{equation}\label{mshg2}
 P^{\mathrm{a}}(\mathbf{r})
 = \chi^{\mathrm{abc}}E^{\mathrm{b}}(\mathbf{r})E^{\mathrm{c}}(\mathbf{r})
 + \chi^{\mathrm{abcd}}E^{\mathrm{b}}(\mathbf{r})
-  \frac{\partial}{\partial\mathbf{r}_{\mathrm{c}}}E^{\mathrm{d}}(\mathbf{r}) 
+  \frac{\partial}{\partial\mathbf{r}^{\mathrm{c}}}E^{\mathrm{d}}(\mathbf{r}) 
 + \cdots,
 \end{equation}
-as the polarization with respect to the original coordinate system, and 
+as the polarization with respect to the $\mathbf{r}$ coordinate system, and 
 \begin{equation}\label{mshg3}
-P_{\mathrm{a}}(-\mathbf{r})
+P^{\mathrm{a}}(-\mathbf{r})
 = \chi^{\mathrm{abc}}E^{\mathrm{b}}(-\mathbf{r})E^{\mathrm{c}}(-\mathbf{r})
 + \chi^{\mathrm{abcd}}E^{\mathrm{b}}(-\mathbf{r})
-  \frac{\partial}{\partial(-\mathbf{r}_{\mathrm{c}})}E^{\mathrm{d}}(-\mathbf{r}) 
+  \frac{\partial}{\partial(-\mathbf{r}^{\mathrm{c}})}E^{\mathrm{d}}(-\mathbf{r}) 
 + \cdots, 
 \end{equation}
-as the polarization in the coordinate system where inversion is taken, i.e.
-$\mathbf{r} \rightarrow -\mathbf{r}$. Note that we have kept the same
-susceptibility tensors as they must be invariant under $\mathbf{r} \to
--\mathbf{r}$ since the system is centrosymmetric. Recalling that
-$\mathbf{P}(\mathbf{r})$ and $\mathbf{E}(\mathbf{r})$ are polar vectors
+as the polarization in the inverted coordinate system, where we take
+$\mathbf{r}$ to $-\mathbf{r}$. Note that we have kept the same susceptibility
+tensors as they must be invariant under $\mathbf{r} \to -\mathbf{r}$ since the
+system is centrosymmetric. Recalling that $\mathbf{P}(\mathbf{r})$ and
+$\mathbf{E}(\mathbf{r})$ are polar vectors
 \cite{jacksonbook}, we have that Eq. \eqref{mshg3} reduces to
 \begin{align}\label{mshg4}
 -P^{\mathrm{a}}(\mathbf{r})
 &= \chi^{\mathrm{abc}}(-E^{\mathrm{b}}(\mathbf{r}))(-E^{\mathrm{c}}(\mathbf{r}))
  + \chi^{\mathrm{abcd}}(-E^{\mathrm{b}}(\mathbf{r}))
-(-\frac{\partial}{\partial\mathbf{r}_{\mathrm{c}}})(-E^{\mathrm{d}}(\mathbf{r})) 
+(-\frac{\partial}{\partial\mathbf{r}^{\mathrm{c}}})(-E^{\mathrm{d}}(\mathbf{r})) 
  + \cdots,\nonumber\\
 P^{\mathrm{a}}(\mathbf{r})
 &= -\chi^{\mathrm{abc}}E^{\mathrm{b}}(\mathbf{r})E^{\mathrm{c}}(\mathbf{r})
  + \chi^{\mathrm{abcd}}E^{\mathrm{b}}(\mathbf{r})
-   \frac{\partial}{\partial\mathbf{r}_{\mathrm{c}}}E^{\mathrm{d}}(\mathbf{r}) 
+   \frac{\partial}{\partial\mathbf{r}^{\mathrm{c}}}E^{\mathrm{d}}(\mathbf{r}) 
  + \cdots,
 \end{align}
 that when compared with Eq. \eqref{mshg2} leads to the conclusion that
 \begin{equation}\label{sshg}
-\chi^{\mathrm{abc}} = 0
+\begin{split}
+\chi^{\mathrm{abc}} &= 0,\\
+&\qquad\qquad\text{(centrosymmetric bulk)}\\
+\chi^{\mathrm{abcd}} &\ne 0,
+\end{split}
 \end{equation}
 for a centrosymmetric bulk.
 
-If we move to the surface of the semi-infinite system, our assumption of
-centrosymmetry breaks down and there is no restriction on $\chi^{\mathrm{abc}}$.
-We conclude that the leading term of the polarization in a surface region is
-given by
-\begin{equation}\label{sshgp1}
-\int P^{\mathrm{a}}(\mathbf{R},z)\,dz \approx lP^{\mathrm{a}}
-\equiv P^{\mathrm{a}}_{\mathrm{surface}}
-\equiv \chi^{\mathrm{abc}}_{S}E^{\mathrm{b}}E^{\mathrm{c}},
+The surface of a centrosymmetric system necessarily breaks the centrosymmetry;
+thus, there are no symmetry restrictions imposed on the $\chi^{\mathrm{abc}}$
+produced from the surface region. Therefore, it is convenient to define the
+surface nonlinear polarization $\mathbf{P}_{\mathrm{surface}}$ as follows,
+\begin{equation}\label{sshgp}
+P^{\mathrm{a}}_{\mathrm{surface}}
+\equiv \chi^{\mathrm{abc}}_{\mathrm{surface}}E^{\mathrm{b}}E^{\mathrm{c}},
 \end{equation}
-where $l$ is the surface region from which the dipolar signal of $\mathbf{P}$ is
-different from zero (see Fig. \ref{fsystem}), and
-$\mathbf{P}_{\mathrm{aurface}}\equiv l\mathbf{P}$ is the surface SH
-polarization. Then, from Eq. \eqref{mshg} we obtain that
-\begin{equation}\label{sshgp2}
-\chi^{\mathrm{abc}}_{S} = l\chi^{\mathrm{abc}}
-\end{equation}
-is the SH surface susceptibility. On the other hand,
+where $\chi^{\mathrm{abc}}_{\mathrm{surface}}$ is the surface nonlinear
+susceptibility. In this case, the units of $[\mathbf{P}_{\mathrm{surface}}]$ are
+V, and $[\chi^{\mathrm{abc}}_{\mathrm{surface}}]$ are m$^{2}$/V. The
+contribution from $\chi^{\mathrm{abcd}}$ to the surface polarization is
+neglected as it originates from a higher order multipole. From Eq. \eqref{mshg}
+we have that for the bulk of a semi-infinite system,
 \begin{equation}\label{sshgp3}
-P^{\mathrm{a}}_{\mathrm{bulk}}(\mathbf{r})
-= \chi^{\mathrm{abcd}}
-  E^{\mathrm{b}}(\mathbf{r})\nabla^{\mathrm{c}}E^{\mathrm{d}}(\mathbf{r}),  
+P^{\mathrm{a}}_{\mathrm{bulk}}
+= \chi^{\mathrm{abcd}}_{\mathrm{bulk}}
+  E^{\mathrm{b}}\nabla^{\mathrm{c}}E^{\mathrm{d}},  
 \end{equation}
-gives the bulk polarization. We immediately recognize that the surface
-polarization is of dipolar order while the bulk polarization is of quadrupolar
-order. The surface $\chi^{\mathrm{abc}}_{S}$, and bulk $\chi^{\mathrm{abcd}}$,
-susceptibility tensor ranks are three and four, respectively. We will only
-concentrate on SSHG in this work, even though bulk-generated SH is also a very
-important optical phenomenon. I will also exclude other interesting surface SH
-phenomena like, electric field induced second-harmonic (EFISH), which would be
-represented by a surface susceptibility tensor of quadrupolar origin. As I
-mentioned in Chapter \ref{chap:intro}, in centrosymmetric systems for which the
-quadrupolar bulk response is much smaller than the dipolar surface response, SH
-is a very capable and powerful optical surface probe \cite{downerSIA01}.
+which is the bulk nonlinear polarization; in this case the dipolar contribution
+$\chi^{\mathrm{abc}}_{\mathrm{bulk}} = 0$ since we are in the centrosymmetric
+bulk. Note that the surface nonlinear polarization is of dipolar electric order
+while the bulk polarization is of quadrupolar electric and dipolar magnetic
+order \cite{bloembergenPR62}. The surface
+$\chi^{\mathrm{abc}}_{\mathrm{surface}}$ and bulk
+$\chi^{\mathrm{abcd}}_{\mathrm{bulk}}$ susceptibilities are tensors of rank
+three and four, respectively.
 
-In the following sections of this chapter, we will review the theoretical
+In this work, we will only concentrate on SSHG, even though bulk-generated SH is
+also a very important optical phenomenon. To this end, we will neglect the
+contribution from Eq. \eqref{sshgp3} and only consider the surface term from Eq.
+\eqref{sshgp}. I will also exclude other interesting surface SH phenomena like,
+electric field induced second-harmonic (EFISH), which would be represented by a
+surface susceptibility tensor of quadrupolar origin. As mentioned in Chapter
+\ref{chap:intro}, in centrosymmetric systems for which the quadrupolar bulk
+response is much smaller than the dipolar surface response, SH is a very capable
+and powerful optical surface probe \cite{downerSIA01}.
+
+In the following sections of this chapter, we show the theoretical
 approach to derive the expressions for the surface susceptibility tensor
-$\chi^{\mathrm{abc}}_{S}$.
+$\chi^{\mathrm{abc}}_{\mathrm{surface}}$.
 
 \begin{figure}[t]
 \centering
 \includegraphics[scale=0.6]{content/figures/diag-system}
 \caption{Sketch of a semi-infinite system with a centrosymmetric bulk. The
-surface region is of width $\sim l$. The incoming photon of frequency $\omega$
+surface region is of width $\sim d$. The incoming photon of frequency $\omega$
 is represented by a downward red arrow, whereas both the surface and bulk
 created second-harmonic photons of frequency $2\omega$ are represented by upward
 green arrows. The red color suggests an incoming infrared photon with a green
-second-harmonic photon. The dipolar ($\chi^{\mathrm{abc}}$), and quadrupolar
-($\chi^{\mathrm{abcd}}$) susceptibility tensors are shown in the regions where
-they are nonzero. The $z$-axis is perpendicular to the surface and $\mathbf{R}$
-is parallel to it.}
+second-harmonic photon. The dipolar ($\chi^{\mathrm{abc}}_{\mathrm{surface}}$),
+and quadrupolar ($\chi^{\mathrm{abcd}_{\mathrm{bulk}}}$) susceptibility tensors
+are shown in the regions where they are nonzero. The $z$-axis is perpendicular
+to the surface and $\mathbf{R}$ is parallel to it.}
 \label{fsystem}
 \end{figure}
 
@@ -121,21 +145,27 @@ is parallel to it.}
 
 \section{Length Gauge}\label{longi}
 
-We follow the article by Aversa and Sipe \cite{aversaPRB95} to calculate the
-optical properties of a given system within the longitudinal gauge. More recent
-derivations can also be found in Refs. \cite{sipePRB00} and
-\cite{lambrechtPSSB00}. We assume the long-wavelength approximation which implies
-a position independent electric field, $\mathbf{E}(t)$. The Hamiltonian in the
+{\color{red} Brief intro to work in Refs. \cite{aversaPRB95} and
+\cite{cabellosPRB09} (both are bulk, aversa neglects nonlocalities while
+Cabellos adds nonlocal scissors)}
+
+We follow Refs. \cite{aversaPRB95} and \cite{cabellosPRB09} to calculate
+$\chi^{\mathrm{abc}}_{\mathrm{surface}}$ of a given system within the
+longitudinal gauge. We assume the long-wavelength approximation which implies a
+position independent electric field, $\mathbf{E}(t)$. The Hamiltonian in the
 length gauge approximation is given by
 \begin{equation}\label{ache}
 \hat{H}=\hat{H}^{\Sigma}_{0} - e\hat{\mathbf{r}}\cdot\mathbf{E},
 \end{equation}
-with
+where $e$ is the electron charge, $-e\hat{\mathbf{r}}\cdot\mathbf{E}$ is the
+dipolar interaction, $\mathbf{r}$ is the electron position operator, and
 \begin{align}\label{ache.1}
   \hat{H}^{\Sigma}_{0} = \hat{H}^{\mathrm{LDA}}_{0}
 + \mathcal{S}(\mathbf{r},\mathbf{p}),
 \end{align} 
-as the unperturbed Hamiltonian. The LDA Hamiltonian can be expressed as follows,
+as the unperturbed, scissors-shifted Hamiltonian denoted with $\Sigma$, composed
+of the LDA ground-state Hamiltonian, and the scissors operator
+\cite{levinePRB94}. The LDA Hamiltonian can be expressed as follows,
 \begin{align}\label{ache.2}
 \hat{H}^{\mathrm{LDA}}_{0}
 &= \frac{\hat{p}^{2}}{2m_{e}} + \hat{V}^{\mathrm{ps}},\nonumber\\
@@ -144,7 +174,10 @@ as the unperturbed Hamiltonian. The LDA Hamiltonian can be expressed as follows,
 \end{align}  
 where $\hat{V}^{\mathrm{l}}(\hat{\mathbf{r}})$ and $\hat{V}^{\mathrm{nl}}$ are
 the local and the nonlocal parts of the crystal pseudopotential
-$\hat{V}^{\mathrm{ps}}$. For the latter, we have that
+$\hat{V}^{\mathrm{ps}}$. $m_{e}$ is the bare mass of the electron, and $\hat{p}$
+is the momentum operator.
+{\color{red} Make reference about why we need the nonlocal part.}
+For the latter, we have that
 \begin{align}\label{ache.3n}
 V^{\mathrm{nl}}(\mathbf{r},\mathbf{r}')\equiv
 \langle\mathbf{r}\vert
@@ -169,19 +202,21 @@ where $\psi_{n\mathbf{k}}(\mathbf{r}) = \langle\mathbf{r}|n\mathbf{k}\rangle =
 e^{i\mathbf{k}\cdot\mathbf{r}}u_{n\mathbf{k}}(\mathbf{r})$, are the real space
 representations of the Bloch states $|n\mathbf{k}\rangle$ labeled by the band
 index $n$ and the crystal momentum $\mathbf{k}$, and
-$u_{n\mathbf{k}}(\mathbf{r})$ is cell periodic. $m_{e}$ is the bare mass of the
-electron. The nonlocal scissors operator is given by
+$u_{n\mathbf{k}}(\mathbf{r})$ is cell periodic. The nonlocal scissors operator
+is given by
 \begin{equation}\label{chon.0}
 \mathcal{S}(\mathbf{r},\mathbf{p}) = 
 \hbar\Delta\sum_{n}
-\int(1 - f_{n}(\mathbf{k}))\vert n\mathbf{k}'\rangle \langle n\mathbf{k}'\vert
-\,d^{3}k',
+\int(1 - f_{n}(\mathbf{k}))\vert n\mathbf{k}\rangle \langle n\mathbf{k}\vert
+\,d^{3}k,
 \end{equation}
+{\color{red} Check our article or cabellos to see if this has $8\pi$ and where this equation comes from, possibly Levine}
 where $f_{n}(\mathbf{k})$ is the occupation number that is independent of
 $\mathbf{k}$ for $T = 0$ K, and is $f_{n} = 1$ for filled bands and $f_{n} = 0$
 for unoccupied bands. For semiconductors the filled bands correspond to valence
 bands ($n = v$), and unoccupied bands correspond to conduction bands ($n = c$).
 We have that
+{\color{red} Check for reference from Pulci}
 \begin{equation}\label{chon.1}
 \begin{split}
 H^\mathrm{LDA}_{0}\vert n\mathbf{k}\rangle
@@ -204,10 +239,12 @@ E_{g}^\mathrm{LDA}$ where $E_{g}$ is the experimental or GW band gap taken at
 the $\Gamma$ point, i.e. $\mathbf{k} = 0$. We used the fact that $\vert
 n\mathbf{k}\rangle^\mathrm{LDA} \approx \vert n\mathbf{k}\rangle^\Sigma$, thus
 negating the need to label the Bloch states with the LDA or $\Sigma$
-superscripts. The matrix elements of $\mathbf{r}$ are split between the
+superscripts.
+{\color{red} Check for reference from Pulci}
+The matrix elements of $\mathbf{r}$ are split between the
 \emph{intraband} ($\mathbf{r}_{i}$) and \emph{interband} ($\mathbf{r}_{e}$)
 parts, where $\mathbf{r} = \mathbf{r}_{i} + \mathbf{r}_{e}$
-\cite{adamsJCP53, blountSSP62, aversaPRB95} and
+\cite{adamsJCP53, blountSSP62}, and its matrix elements are \cite{aversaPRB95}
 \begin{align}\label{rnminn}
 \langle n\mathbf{k}\vert \hat{\mathbf{r}}_{i} |m\mathbf{k}'\rangle 
 &= \delta_{nm}
@@ -294,8 +331,9 @@ reliable results \cite{ismailPRL01}. We proceed as follows: from Eqs.
   \left[\hat{\mathbf{r}},\hat{\mathcal{S}}(\mathbf{r},\mathbf{p})\right]
 \nonumber\\
 &\equiv
-\hat{\mathbf{v}} + \hat{\mathbf{v}}^{\mathrm{nl}} + \hat{\mathbf{v}}^\mathcal{S}
-= \hat{\mathbf{v}}^\mathrm{LDA} + \hat{\mathbf{v}}^\mathcal{S},
+  \hat{\mathbf{v}} + \hat{\mathbf{v}}^{\mathrm{nl}} 
++ \hat{\mathbf{v}}^{\mathcal{S}}
+= \hat{\mathbf{v}}^\mathrm{LDA} + \hat{\mathbf{v}}^{\mathcal{S}},
 \end{align}
 where we have defined
 \begin{equation}\label{conhr}
@@ -303,19 +341,19 @@ where we have defined
 \hat{\mathbf{v}} &=\frac{\hat{\mathbf{p}}}{m_{e}}\\
 \hat{\mathbf{v}}^{\mathrm{nl}} &= \frac{1}{i\hbar}
   \left[\hat{\mathbf{r}},\hat{V}^{\mathrm{nl}}\right]\\
-\hat{\mathbf{v}}^\mathcal{S} &= \frac{1}{i\hbar}
+\hat{\mathbf{v}}^{\mathcal{S}} &= \frac{1}{i\hbar}
   \left[\hat{\mathbf{r}},\hat{S}(\mathbf{r},\mathbf{p})\right]\\
 \hat{\mathbf{v}}^\mathrm{LDA} &= \hat{\mathbf{v}}+\hat{\mathbf{v}}^{\mathrm{nl}}
 \end{split}
 \end{equation}  
 with $\hat{\mathbf{p}}= -i\hbar\boldsymbol{\nabla}$ the momentum operator. Using
 Eq. \eqref{chon.0}, we obtain that the matrix elements of
-$\hat{\mathbf{v}}^\mathcal{S}$ are given by
+$\hat{\mathbf{v}}^{\mathcal{S}}$ are given by
 \begin{equation}\label{chon.2} 
-\mathbf{v}^\mathcal{S}_{nm} = i\Delta f_{mn}\mathbf{r}_{nm},
+\mathbf{v}^{\mathcal{S}}_{nm} = i\Delta f_{mn}\mathbf{r}_{nm},
 \end{equation}
-with $f_{nm} = f_{n} - f_{m}$, where we see that $\mathbf{v}^\mathcal{S}_{nn} =
-0$, then
+with $f_{nm} = f_{n} - f_{m}$, where we see that $\mathbf{v}^{\mathcal{S}}_{nn}
+= 0$, then
 \begin{align}\label{chon.8}
 \mathbf{v}^\Sigma_{nm} 
 &= \mathbf{v}^\mathrm{LDA}_{nm} + i\Delta f_{mn}\mathbf{r}_{nm}\nonumber\\
@@ -353,9 +391,9 @@ and Eq. \eqref{pmnrmn} gives
 = \frac{\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k})}
 {i\omega^{\mathrm{LDA}}_{nm}(\mathbf{k})} \qquad n\notin D_{m}.
 \end{align}
-The matrix elements of $\mathbf{r}_{e}$ are the same whether we use the LDA or
-the scissored Hamiltonian. Therefore, there is no need to label them with either
-LDA or $S$ superscripts. Thus, we can write
+Therefore, the matrix elements of $\mathbf{r}_{e}$ are the same whether we use
+the LDA or the scissored Hamiltonian; thus, there is no need to label them
+with either LDA or $\Sigma$ superscripts. Thus, we can write
 \begin{equation}\label{chon.98}
 \mathbf{r}_{e,nm}\to\mathbf{r}_{nm}(\mathbf{k}) =
 \frac{\mathbf{v}^\mathrm{LDA}_{nm}(\mathbf{k})}
@@ -383,7 +421,7 @@ $\hat{\rho}$ to obtain the expectation value of any observable $\mathcal{O}$ as
 = \mathrm{Tr}(\hat{\rho}\hat{\mathcal{O}}),
 \end{equation}
 where $\mathrm{Tr}$ is the trace and is invariant under cyclic permutations.
-The dynamic equation of motion for $\rho$ is given by
+The dynamic equation of motion for $\hat{\rho}$ is given by
 \begin{equation}\label{eqrho}
 i\hbar \frac{d\hat{\rho}}{dt} = \left[\hat{H},\hat{\rho}\right],
 \end{equation}
@@ -425,13 +463,13 @@ with
 where $\eta > 0$ assures that at $t = -\infty$, the interaction is zero and has
 its full strength $\mathbf{E}$ at $t = 0$. After computing the required time
 integrals one takes $\eta\to 0$. Also, $\hat{\rho}_{I}(t = -\infty)$ should be
-time independent and thus $[\hat{H},\hat{\rho}]_{t = -\infty} = 0$, This implies
+time independent and thus $[\hat{H},\hat{\rho}]_{t = -\infty} = 0$. This implies
 that $\hat{\rho}_{I}(t = -\infty) = \hat{\rho}(t =
 -\infty)\equiv\hat{\rho}_{0}$, where $\hat{\rho}_{0}$ is the density matrix of
 the unperturbed ground state, such that
 \begin{equation}\label{nrhon}
 \langle n\mathbf{k}\vert \hat{\rho}_{0} \vert m\mathbf{k}'\rangle
-= f_{n}\left(\hbar\omega^{\Sigma}_{n}(\mathbf{k})\right)
+= f_{n}(\hbar\omega^{\Sigma}_{n}(\mathbf{k}))
 \delta_{nm}\delta(\mathbf{k}-\mathbf{k}'),
 \end{equation}
 with $f_{n}(\hbar\omega^{\Sigma}_{n}(\mathbf{k})) = f_{n\mathbf{k}}$ as the
@@ -481,9 +519,12 @@ with
 \langle n\mathbf{k}|
 [\hat{\mathbf{r}}_{I}(t'),\hat{\rho}^{(N)}_{I}(t')]
 |m\mathbf{k}\rangle
-\cdot\mathbf{E}(t')
-.
+\cdot\mathbf{E}(t').
 \end{equation}
+This shows that the $N + 1$ solution is determined by the $N$th solution, which
+in turn is determined by the $N - 1$ solution, and so on. Starting from the
+zeroth order solution given in Eq. \eqref{rho0}, we can solve for any desired
+order.
 
 We now work out the commutator of Eq. \eqref{rtilde}. Then,
 \begin{align}\label{conmu1}
@@ -530,10 +571,6 @@ We calculate the interband term first, so using Eq. \eqref{chon.98} we obtain
 \langle \ell\mathbf{k}|
 \hat{\rho}^{(N)}(t)
 |m\mathbf{k}\rangle
-\right.
-\nonumber \\
-&
-\left.
 -
 \langle n\mathbf{k}|
 \hat{\rho}^{(N)}(t)
@@ -557,15 +594,13 @@ We calculate the interband term first, so using Eq. \eqref{chon.98} we obtain
 \mathbf{R}^{(N)}_e(\mathbf{k};t)
 ,
 \end{align}
-
 and from Eq. \eqref{conmri3n},
 \begin{equation}\label{conmri4}
 \langle n\mathbf{k}|
 [\hat{\mathbf{r}}_i,\hat{\rho}^{(N)}(t)]
 |m\mathbf{k}'\rangle
 =i \delta(\mathbf{k}-\mathbf{k}') (\rho^{(N)}_{nm}(t))_{;\mathbf{k}}
-\equiv \delta(\mathbf{k}-\mathbf{k}')\mathbf{R}_i^{(N)}(\mathbf{k};t)
-.
+\equiv \delta(\mathbf{k}-\mathbf{k}')\mathbf{R}_i^{(N)}(\mathbf{k};t).
 \end{equation}
 Then Eq. \eqref{rtilde} becomes
 \begin{equation}\label{rtilde2}
@@ -614,12 +649,11 @@ We also have from Eq. \eqref{conmri4} and Eq. \eqref{gendevnn} that
 R_i^{\mathrm{b}(0)}(\mathbf{k})=i(\rho^{(0)}_{nm})_{;k^{\mathrm{b}}}=i\delta_{nm}(f_{n\mathbf{k}})_{;k^{\mathrm{b}}}=i\delta_{nm}\nabla_{k^{\mathrm{b}}} f_{n\mathbf{k}}
 .
 \end{equation}
-For a semiconductor at $T=0$, $f_{n\mathbf{k}}$ is one if the state
-$|n\mathbf{k}\rangle$ is a valence state and zero if it is a conduction state; 
-thus $\nabla_\mathbf{k} f_{n\mathbf{k}}=0$ and $\mathbf{R}_i^{(0)}=0$ and
-the linear response has no contribution from
-intraband transitions.
- Then,
+For a semiconductor at $T = 0$, $f_{n\mathbf{k}} = 1$ if the state
+$|n\mathbf{k}\rangle$ is a valence state and $f_{n\mathbf{k}} = 0$ if it is a
+conduction state. Thus, $\nabla_\mathbf{k} f_{n\mathbf{k}} = 0$,
+$\mathbf{R}_i^{(0)} = 0$ and the linear response has no contribution from the
+intraband transitions. Then,
 \begin{align}\label{rtilde2n}
 \rho^{(1)}_{I,nm}(\mathbf{k};t)
 &=\frac{ie}{\hbar}
@@ -702,8 +736,7 @@ B^{\mathrm{c}}_{\ell m}(\mathbf{k},\omega)
 B^{\mathrm{c}}_{n\ell}(\mathbf{k},\omega)
 r^{\mathrm{b}}_{\ell m}(\mathbf{k})
 \Big)
-\nonumber \\
-&+
++
 i
 (B^{\mathrm{c}}_{nm}(\mathbf{k},\omega))_{;k^{\mathrm{b}}}
 \bigg]
@@ -722,8 +755,7 @@ B^{\mathrm{c}}_{\ell m}(\mathbf{k},\omega)
 B^{\mathrm{c}}_{n\ell}(\mathbf{k},\omega)
 r^{\mathrm{b}}_{\ell m}(\mathbf{k})
 \Big)
-\nonumber \\
-&+
++
 i
 (B^{\mathrm{c}}_{nm}(\mathbf{k},\omega))_{;k^{\mathrm{b}}}
 \bigg]
@@ -742,18 +774,19 @@ with
 \begin{align}\label{rho2}
 \rho_{nm}^{(2)}(\mathbf{k};2\omega)&=\frac{e}{i\hbar}\frac{1}{\omega^\Sigma_{nm\mathbf{k}}-2\tilde{\omega}}
 \bigg[-(B_{nm}^{\mathrm{c}}(\mathbf{k},\omega)_{;k^{\mathrm{b}}}
-\nonumber \\
-&
 +i\sum_\ell\Big(r_{n\ell}^{\mathrm{b}}B_{\ell m}^{\mathrm{c}}(\mathbf{k},\omega) - B_{n\ell}^{\mathrm{c}}(\mathbf{k},\omega)
   r_{\ell m}^{\mathrm{b}}\Big)
 \bigg] 
 E^{\mathrm{b}}(\omega)E^{\mathrm{c}}(\omega)
 \end{align} 
-where 
-$B_{\ell m}^{\mathrm{a}}(\mathbf{k},\omega)$ are given by Eq. \eqref{rho1}. 
-We remark that $\mathbf{r}_{nm}(\mathbf{k})$  are
-the same whether calculated with the LDA or the scissored Hamiltonian. 
-We chose the former in this article.
+where $B_{\ell m}^{\mathrm{a}}(\mathbf{k},\omega)$ are given by Eq.
+\eqref{rho1}. We remark that $\mathbf{r}_{nm}(\mathbf{k})$  are the same whether
+calculated with the LDA or the scissored Hamiltonian (see Eq. \eqref{chon.10}).
+We chose the former in this thesis.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Layered Current Density}\label{cd}
 
@@ -771,21 +804,21 @@ To take the reconstruction or relaxation into account, we take ``surface'' to
 mean the true surface of the first layer of atoms, and some of the atomic
 sub-layers adjacent to it. Since the front and the back surfaces of the slab are
 usually identical the total slab is centrosymmetric. This implies that
-$\chi^{\mathrm{slab}}_{\mathrm{abc}}=0$, and thus we must find a way to bypass
+$\chi^{\mathrm{abc}}_{\mathrm{slab}} = 0$, and thus we must find a way to bypass
 this characteristic of a centrosymmetric slab in order to have a finite
-$\chi^s_{\mathrm{abc}}$ representative of the surface. Even if the front and
+$\chi^{\mathrm{abc}}_{\mathrm{surface}}$ representative of the surface. Even if the front and
 back surfaces of the slab are different, breaking the centrosymmetry and
-therefore giving an overall $\chi^{\mathrm{slab}}_{\mathrm{abc}}\ne 0$, we still
-need a procedure to extract the front surface $\chi^f_{\mathrm{abc}}$ and the
-back surface $\chi^b_{\mathrm{abc}}$ from the nonlinear susceptibility $\chi^{\mathrm{slab}}_{\mathrm{abc}}=\chi^f_{\mathrm{abc}}-\chi^b_{\mathrm{abc}}$ of the
+therefore giving an overall $\chi^{\mathrm{abc}}_{\mathrm{slab}}\ne 0$, we still
+need a procedure to extract the front surface $\chi^{\mathrm{abc}}_{\mathrm{front}}$ and the
+back surface $\chi^{\mathrm{abc}}_{\mathrm{back}}$ from the nonlinear susceptibility $\chi^{\mathrm{abc}}_{\mathrm{slab}} = \chi^{\mathrm{abc}}_{\mathrm{front}} - \chi^{\mathrm{abc}}_{\mathrm{back}}$ of the
 entire slab.
 
 A convenient way to accomplish the separation of the SH signal of either surface
 is to introduce a ``cut function'', $\mathcal{C}(z)$, which is usually taken to be
-unity over one half of the slab and zero over the other half.\cite{reiningPRB94}
+unity over one half of the slab and zero over the other half \cite{reiningPRB94}.
 In this case $\mathcal{C}(z)$ will give the contribution of the side of the slab for
 which $\mathcal{C}(z)=1$. We can generalize this simple choice for $\mathcal{C}(z)$ by a
-top-hat cut function $\mathcal{C}^{\ell}(z)$ that selects a given layer,
+top-hat cut function $\mathcal{C}^{\ell}(z)$ that selects a given layer $\ell$,
 \begin{equation}
 \label{sz}
 \mathcal{C}^{\ell}(z)=\Theta(z-z_\ell+\Delta_\ell^{\mathrm{b}})
@@ -804,7 +837,7 @@ $\Delta_\ell^f+\Delta_\ell^b$ is the thickness of layer $\ell$
 \end{figure}
 
 Now, we show how this ``cut function'' $\mathcal{C}^{\ell}(z)$ is introduced in
-the calculation of $\chi_{\mathrm{abc}}$. 
+the calculation of $\chi^{\mathrm{abc}}$. 
 The microscopic current density is given by
 \begin{equation}\label{jmic}
 \mathbf{j}(\mathbf{r},t)=\mathrm{Tr}(\hat{\mathbf{j}}(\mathbf{r})\hat{\rho}(t)),
@@ -860,6 +893,7 @@ If we want the contribution from only one region of the unit cell
 towards the total current, we can integrate $\mathbf{j}({\mathbf r},t)$ 
 over the desired region. The contribution to the current density from the
 $\ell$-th layer of the slab is given by
+{\color{red} $\Omega \rightarrow A$?}
 \begin{equation}\label{jsz}
 \frac{1}{\Omega}\int d^3r\, \mathcal{C}^{\ell}(z)\, \mathbf{j}(\mathbf{r},t)
  \equiv \mathbf{J}^{\ell}(t),
@@ -990,139 +1024,47 @@ From Eq. \eqref{vop2},
 \boldsymbol{\mathcal{V}}^{\mathrm{nl},\ell}
 .
 \end{align}
-We remark that the simple relationship between 
-$\mathbf{v}^{\Sigma}_{nm}(\mathbf{k})$ 
-and 
-$\mathbf{v}^{\mathrm{LDA}}_{nm}(\mathbf{k})$,
-given in 
-Eq. \eqref{chon.9}, 
-does not hold between
-$\boldsymbol{\mathcal{V}}^{\Sigma,\ell}_{nm}(\mathbf{k})$   
-and 
-$\boldsymbol{\mathcal{V}}^{\mathrm{LDA},\ell}_{nm}(\mathbf{k})$,
-i.e.
-$\boldsymbol{\mathcal{V}}^{\Sigma,\ell}_{nm}(\mathbf{k})\ne
-(\omega^\Sigma_{nm}/\omega_{nm})
-\boldsymbol{\mathcal{V}}^{\mathrm{LDA},\ell}_{nm}(\mathbf{k})$ 
-and
-$\boldsymbol{\mathcal{V}}^{\Sigma,\ell}_{nn}(\mathbf{k})\ne
-\boldsymbol{\mathcal{V}}^{\mathrm{LDA},\ell}_{nn}(\mathbf{k})$
-,
-and thus, to calculate
-$\boldsymbol{\mathcal{V}}^{\Sigma,\ell}_{nm}(\mathbf{k})$ 
-we must calculate the matrix elements of $\boldsymbol{\mathcal{V}}^{\mathcal{S},\ell}$ and
-$\boldsymbol{\mathcal{V}}^{\mathrm{LDA},\ell}$ (separately)
-according to the expressions of
-Appendix \ref{app:calvs}. {\color{red}Aeroport Charles de Gaulle, Nov. 30,
-2014, see Appendix \ref{app:voila}}.
-% Using Eq. \eqref{chon.9}, the matrix elements of Eq. \eqref{vcali}
-% are given by
-% \begin{align}\label{end.1}
-% \boldsymbol{\mathcal{V}}^{\Sigma,\ell}_{nm}(\mathbf{k})
-% &=
-% \frac{1}{2}
-% \sum_q
-% \Big(
-% \mathcal{C}^{\ell}_{nq}\mathbf{v}^\Sigma_{qm}
-% +
-% \mathbf{v}^\Sigma_{nq}\mathcal{C}^{\ell}_{qm}
-% \Big)
-% \nonumber\\
-% &=
-% \frac{1}{2}
-% \Big(
-% \mathcal{C}^{\ell}_{nn}\mathbf{v}^\Sigma_{nm}
-% +
-% \mathbf{v}^\Sigma_{nn}\mathcal{C}^{\ell}_{nm}
-% +
-% \mathcal{C}^{\ell}_{nm}\mathbf{v}^\Sigma_{mm}
-% +
-% \mathbf{v}^\Sigma_{nm}\mathcal{C}^{\ell}_{mm}
-% \Big)
-% \nonumber\\
-% &+
-% \frac{1}{2}
-% \sum_{q\neq(nm)}
-% \Big(
-% \frac{\omega^\Sigma_{qm}}{\omega_{qm}}
-% \mathcal{C}^{\ell}_{nq}\mathbf{v}^\mathrm{LDA}_{qm}
-% +
-% \frac{\omega^\Sigma_{nq}}{\omega_{nq}}
-% \mathbf{v}^\mathrm{LDA}_{nq}\mathcal{C}^{\ell}_{qm}
-% \Big)
-% ,
-% \end{align}
-% \begin{align}\label{end.2}
-% \boldsymbol{\mathcal{V}}^{\Sigma,\ell}_{nn}(\mathbf{k})
-% &=
-% \frac{1}{2}
-% \Big(
-% \mathcal{C}^{\ell}_{nn}\mathbf{v}^\Sigma_{nn}
-% +
-% \mathbf{v}^\Sigma_{nn}\mathcal{C}^{\ell}_{nn}
-% \Big)
-% \nonumber\\
-% &+
-% \frac{1}{2}
-% \sum_{q\neq n}
-% \Big(
-% \frac{\omega^\Sigma_{qn}}{\omega_{qn}}
-% \mathcal{C}^{\ell}_{nq}\mathbf{v}^\mathrm{LDA}_{qn}
-% +
-% \frac{\omega^\Sigma_{nq}}{\omega_{nq}}
-% \mathbf{v}^\mathrm{LDA}_{nq}\mathcal{C}^{\ell}_{qn}
-% \Big)
-% \nonumber\\
-% &=
-% \mathcal{C}^{\ell}_{nn}\mathbf{v}^\mathrm{LDA}_{nn}
-% \nonumber\\
-% &+
-% \frac{1}{2}
-% \sum_{q\neq n}
-% \frac{\omega^\Sigma_{qn}}{\omega_{qn}}
-% \Big(
-% \mathcal{C}^{\ell}_{nq}\mathbf{v}^\mathrm{LDA}_{qn}
-% +
-% \mathbf{v}^\mathrm{LDA}_{nq}\mathcal{C}^{\ell}_{qn}
-% \Big)
-% ,
-% \end{align}
+{\color{red} Add $\ell$ to app:voila}
+As shown in Appendix \ref{app:voila}, Eq. \eqref{chon.8} is generalized to
+$\boldsymbol{\mathcal{V}}^{\Sigma,\ell}_{nm} =
+(\omega^\Sigma_{nm}/\omega^{\mathrm{LDA}}_{nm})
+\boldsymbol{\mathcal{V}}^{\mathrm{LDA},\ell}_{nm}$ from which
+$\boldsymbol{\mathcal{V}}^{\Sigma,\ell}_{nm}$ can be readily calculated. As a
+consistency test we have calculated the matrix elements of
+$\boldsymbol{\mathcal{V}}^{\mathrm{LDA},\ell}$ and
+$\boldsymbol{\mathcal{V}}^{\mathcal{S},\ell}$ separately, according to the
+derivation presented in Appendix \ref{app:calvs}, and confirm that both
+approaches yield identical results for $\chi^{\mathrm{abc}}_{\mathrm{surface}}$.
 
-To limit the response to one surface, the equivalent of Eq. \eqref{nl.4} 
-for $\boldsymbol{\mathcal{V}}^\ell=\boldsymbol{\mathcal{P}}^\ell/m_{e}$ was proposed in 
-Ref. \cite{reiningPRB94} and later used in Refs.
-\cite{mendozaPRL98},
-\cite{mendozaPRB01},
-\cite{sanoPRB02},
- and \cite{mejiaRMF04} 
-also in the context of SHG. 
-The layer-by-layer analysis of Refs. \cite{hoganPRB03} 
-and \cite{castilloPRB03} used Eq. \eqref{sz}, 
-limiting the current response
-to a particular layer of the slab and used to obtain the
-anisotropic linear optical response of semiconductor surfaces.
-However, the first formal derivation of this scheme is presented in
-Ref. \cite{mendozaPRB06} for the linear response, and here in this 
-article, for the second harmonic optical response of semiconductors.
+To limit the response to one surface, the equivalent of Eq. \eqref{nl.4} for
+$\boldsymbol{\mathcal{V}}^\ell=\boldsymbol{\mathcal{P}}^\ell/m_{e}$ was proposed
+in Ref. \cite{reiningPRB94} and later used in Refs. \cite{mendozaPRL98},
+\cite{mendozaPRB01}, \cite{sanoPRB02}, and \cite{mejiaRMF04} also in the context
+of SHG. The layer-by-layer analysis of Refs. \cite{hoganPRB03} and
+\cite{castilloPRB03} used Eq. \eqref{sz}, limiting the current response to a
+particular layer of the slab and used to obtain the anisotropic linear optical
+response of semiconductor surfaces. However, the first formal derivation of this
+scheme is presented in Ref. \cite{mendozaPRB06} for the linear response, and
+here in this thesis, for the second harmonic optical response of semiconductors.
 
 
 \section{Microscopic surface susceptibility}
 In this section we obtain the expressions for the 
-surface susceptibility tensor $\chi^S_{\mathrm{abc}}$.
+surface susceptibility tensor $\chi^{\mathrm{abc}}_{\mathrm{surface}}$.
 We start with the basic relation $\mathbf{J} = d\mathbf{P}/dt$ 
 with $\mathbf{J}$ the current calculated in Sec. \ref{cd}. From Eq. \eqref{jmac2} 
 we obtain
 \begin{equation}\label{Pjikn}
-J_{\mathrm{a}}^{(2,\ell)}(2\omega)=-i2\tilde{\omega} P_{\mathrm{a}}(2\omega)
+J^{(2,\ell)\mathrm{a}}(2\omega)=-i2\tilde{\omega} P^{\mathrm{a}}(2\omega)
 =\frac{e}{\Omega}
 \sum_{mn\mathbf{k}}
 \mathcal{V}^{\Sigma,\mathrm{a},\ell}_{mn}(\mathbf{k})
 \rho^{(2)}_{nm}(\mathbf{k};2\omega)
 ,
 \end{equation}
-and using Eqs. \eqref{rho2} and \eqref{sshgp2} leads to
+and using Eqs. \eqref{rho2} leads to
 \begin{align}\label{Pjikn2}
-\chi^{S,\ell}_{\mathrm{abc}}
+\chi^{\mathrm{abc},\ell}
 &=
 \frac{ie}{A E^{\mathrm{b}}_1E^{\mathrm{c}}_2 2\tilde{\omega}}
 \sum_{mn\mathbf{k}}
@@ -1136,30 +1078,28 @@ and using Eqs. \eqref{rho2} and \eqref{sshgp2} leads to
 {\omega^\Sigma_{nm\mathbf{k}}-2\tilde{\omega}}
 \bigg[
 -(B_{nm}^{\mathrm{c}}(\mathbf{k},\omega))_{;k^{\mathrm{b}}}
-\nonumber \\
-&
 +i\sum_\ell\left(r_{n\ell}^{\mathrm{b}}B_{\ell m}^{\mathrm{c}}(\mathbf{k},\omega) -
   B_{n\ell}^{\mathrm{c}}(\mathbf{k},\omega) 
   r_{\ell m}^{\mathrm{b}}\right)
 \bigg]
 ,
 \end{align}
-which gives the surface-like susceptibility of $\ell$-th layer, where 
-$\boldsymbol{\mathcal{V}}^\Sigma$ is given in Eq. \eqref{vopii},
-where $A=\Omega/d$ is the surface area of the unit
-cell that characterizes the surface of the system.
-Using Eq. \eqref{rho1} we
-split this equation into
-two contributions from the first and second terms on the right hand side,
+which gives the susceptibility of the $\ell$-th layer, where
+$\boldsymbol{\mathcal{V}}^\Sigma$ is given in Eq. \eqref{vopii}, where
+{\color{red} Remark about the normalization of the calculated $\chi$ in results}
+$A=\Omega/d$ is the surface area of the unit cell that characterizes the surface
+of the system. Using Eq. \eqref{rho1} we split this equation into two
+contributions from the first and second terms on the right hand side,
+{\color{red}!!!!CHECK THAT $\ell$ IS NOT USED AS INDEX, AND SWITCH $l$!!!}
 \begin{equation}\label{chii}
-\chi_{i,\mathrm{abc}}^{S,\ell}
+\chi^{\mathrm{abc},\ell}_{i}
 =-\frac{e^3}{A\hbar^22\tilde{\omega}}\sum_{mn\mathbf{k}}
 \frac{\mathcal{V}_{mn}^{\Sigma,\mathrm{a},\ell}}{\omega^\Sigma_{nm}-2\tilde{\omega}}
 \left(\frac{f_{mn}r_{nm}^{\mathrm{b}}}{\omega^\Sigma_{nm}-\tilde{\omega}}\right)_{;k^{\mathrm{c}}},
 \end{equation} 
 and 
 \begin{equation}\label{chie}
-\chi_{e,\mathrm{abc}}^{S,\ell}
+\chi^{\mathrm{abc},\ell}_{e}
 =\frac{ie^3}{A\hbar^22\tilde{\omega}}\sum_{\ell mn\mathbf{k}}
 \frac{\mathcal{V}_{mn}^{\Sigma,\mathrm{a},\ell}}{\omega^\Sigma_{nm}-2\tilde{\omega}}
 \left(
@@ -1169,103 +1109,100 @@ f_{m\ell}}{\omega^\Sigma_{\ell m}-\tilde{\omega}}
 f_{\ell n}}{\omega^\Sigma_{n \ell}-\tilde{\omega}}
 \right),
 \end{equation} 
-where $\boldsymbol{\chi}^{S,\ell}_i$
- is related to intraband transitions and
-$\boldsymbol{\chi}^{S,\ell}_e$
-to interband transitions.
-For the generalized derivative in Eq. \eqref{chii} we use the chain rule 
-\begin{equation}\label{gene2}
-\left(\frac{f_{mn}r_{nm}^{\mathrm{b}}}{\omega^\Sigma_{nm}-\tilde{\omega}}\right)_{;k^{\mathrm{c}}}=
-\frac{f_{mn}}{\omega^\Sigma_{nm}-\tilde{\omega}}\left(r_{nm}^{\mathrm{b}}\right)_{;k^{\mathrm{c}}}
--\frac{f_{mn}r_{nm}^{\mathrm{b}}\Delta_{nm}^\mathrm{c}}{(\omega^\Sigma_{nm}-\tilde{\omega})^2}
-,
-\end{equation}
-and the following result
+where $\boldsymbol{\chi}^{\ell}_{i}$ is related to intraband transitions and
+ $\boldsymbol{\chi}^{\ell}_{e}$ to interband transitions. For the generalized
+ derivative in Eq. \eqref{chii} we use the chain rule and the following result
 shown in Appendix \ref{app:gwk},
-\begin{align}\label{eli.13}
+ \begin{align}\label{eli.13}
 \left(\omega^\Sigma_{nm}\right)_{;k^{\mathrm{a}}}
 =
 \left(\omega^{\mathrm{LDA}}_{nm}\right)_{;k^{\mathrm{a}}}
 = 
 v_{nn}^{\mathrm{LDA},\mathrm{a}}-v_{mm}^{\mathrm{LDA},\mathrm{a}}\equiv\Delta_{nm}^{\mathrm{a}}
-.
+,
 \end{align} 
+to show that
+\begin{equation}\label{gene2}
+\left(\frac{f_{mn}r_{nm}^{\mathrm{b}}}{\omega^\Sigma_{nm}-\tilde{\omega}}\right)_{;k^{\mathrm{c}}}=
+\frac{f_{mn}}{\omega^\Sigma_{nm}-\tilde{\omega}}\left(r_{nm}^{\mathrm{b}}\right)_{;k^{\mathrm{c}}}
+-\frac{f_{mn}r_{nm}^{\mathrm{b}}\Delta_{nm}^\mathrm{c}}{(\omega^\Sigma_{nm}-\tilde{\omega})^2}.
+\end{equation}
 
 In order to calculate the nonlinear susceptibility of any given layer 
-$\ell$ we simply add the above terms $\boldsymbol{\chi}^{S,\ell}=
-\boldsymbol{\chi}_e^{S,\ell}+\boldsymbol{\chi}_i^{S,\ell}$ and 
+$\ell$ we simply add the above terms $\boldsymbol{\chi}^{\ell}=
+\boldsymbol{\chi}_{e}^{\ell} + \boldsymbol{\chi}_{i}^{\ell}$ and 
 then calculate the surface susceptibility as 
 \begin{equation}\label{chiijksur}
-\boldsymbol{\chi}^S\equiv \sum_{\ell=1}^{N}\boldsymbol{\chi}^{S,\ell},
+\boldsymbol{\chi}_{\mathrm{surface}} \equiv \sum_{\ell=1}^{N}\boldsymbol{\chi}^{\ell},
 \end{equation} 
 where $\ell=1$ is the first layer right at the surface, 
 and $\ell=N$ is the bulk-like layer (at a distance $\sim d$ from the
 surface  as seen in
 Fig. \ref{fsystem}), such that 
 \begin{equation}\label{chiijksur2}
-\boldsymbol{\chi}^{S,\ell=N}=0,
+\boldsymbol{\chi}^{\ell=N}=0,
 \end{equation}
 in accordance to Eq. \eqref{sshg} valid for a centrosymmetric environment. 
 We note that the value of
 $N$ is not universal.
 This means that the slab needs to have enough atomic layers for 
 Eq. \eqref{chiijksur2} 
-to be satisfied and to give converged results for $\boldsymbol{\chi}^S$. 
+to be satisfied and to give converged results for $\boldsymbol{\chi}_{\mathrm{surface}}$. 
 We can use Eq. \eqref{chiijksur} for
 either the front or the back surface.
 
 We can see from the prefactors of Eqs. \eqref{chii} and \eqref{chie} 
 that they diverge as $\tilde{\omega}\to 0$. To remove this apparent divergence of 
-$\boldsymbol{\chi}^{S,\ell}$, we perform a partial fraction expansion over $\tilde{\omega}$. 
+$\boldsymbol{\chi}^{\ell}$, we perform a partial fraction expansion over $\tilde{\omega}$. 
 As shown in Appendix \ref{appv}, we use time-reversal invariance to 
-remove these divergences and obtain the following expressions for $\boldsymbol{\chi}^S$,
+remove these divergences and obtain the following expressions for $\boldsymbol{\chi}^{\ell}$,
 \begin{subequations}\label{eq:chis}
 \begin{equation}
-\mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{e,\omega}]= 
+\mathrm{Im}[\chi^{\mathrm{abc},\ell}_{e,\omega}]= 
 \frac{\pi |e|^3}{2\hbar^2}
 \int \frac{d^{3}k}{8\pi^3}
 \sum_{vc}\sum_{q\neq(v,c)}\frac{1}{\omega^\Sigma_{cv}}
 \left[
-\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{qc}\{r^{\mathrm{b}}_{cv}r^{\mathrm{c}}_{vq}\}]}
+\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a},\ell}_{qc}\{r^{\mathrm{b}}_{cv}r^{\mathrm{c}}_{vq}\}]}
 {(2\omega^\Sigma_{cv}-\omega^\Sigma_{cq})} 
--\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vq}\{r^{\mathrm{c}}_{qc}r^{\mathrm{b}}_{cv}\}]}
+-\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a},\ell}_{vq}\{r^{\mathrm{c}}_{qc}r^{\mathrm{b}}_{cv}\}]}
 {(2\omega^\Sigma_{cv}-\omega^\Sigma_{qv})}
 \right]\delta(\omega^\Sigma_{cv}-\omega),
 \end{equation}  
 \begin{equation}
-\mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{i,\omega}]= 
+\mathrm{Im}[\chi^{\mathrm{abc},\ell}_{i,\omega}]= 
 \frac{\pi\vert e\vert^3}{2\hbar^2}
 \int \frac{d^{3}k}{8\pi^3}
 \sum_{cv}\frac{1}{(\omega^\Sigma_{cv})^{2}}
 \left[
-\mathrm{Re}\left[\left\{r^{\mathrm{b}}_{cv}\left(\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\right)_{;k^{\mathrm{c}}}\right\}\right]
-+\frac{\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\left\{r^{\mathrm{b}}_{cv}
+\mathrm{Re}\left[\left\{r^{\mathrm{b}}_{cv}\left(\mathcal{V}^{\Sigma,\mathrm{a},\ell}_{vc}\right)_{;k^{\mathrm{c}}}\right\}\right]
++\frac{\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a},\ell}_{vc}\left\{r^{\mathrm{b}}_{cv}
 \Delta^{\mathrm{c}}_{cv}\right\}\right]}{\omega^\Sigma_{cv}} 
 \right]\delta(\omega^\Sigma_{cv}-\omega),
 \end{equation}
 \begin{equation}
-\mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{e,2\omega}]= 
+\mathrm{Im}[\chi^{\mathrm{abc},\ell}_{e,2\omega}]= 
 -\frac{\pi |e|^3}{2\hbar^2}
 \int \frac{d^{3}k}{8\pi^3}
 \sum_{vc}\frac{4}{\omega^\Sigma_{cv}}
 \left[
 \sum_{v'\ne
-  v}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\{r^{\mathrm{b}}_{cv'}r^{\mathrm{c}}_{v'v}\}]}
+  v}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a},\ell}_{vc}\{r^{\mathrm{b}}_{cv'}r^{\mathrm{c}}_{v'v}\}]}
 {2\omega^\Sigma_{cv'}-\omega^\Sigma_{cv}}
 - \sum_{c'\ne
-  c}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\{r^{\mathrm{c}}_{cc'}r^{\mathrm{b}}_{c'v}\}]}
+  c}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a},\ell}_{vc}\{r^{\mathrm{c}}_{cc'}r^{\mathrm{b}}_{c'v}\}]}
 {2\omega^\Sigma_{c'v}-\omega^\Sigma_{cv}}
 \right]\delta(\omega^\Sigma_{cv}-2\omega),
 \end{equation}
 \begin{equation}
-\mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{i,2\omega}]= 
+\mathrm{Im}[\chi^{\mathrm{abc},\ell}_{i,2\omega}]= 
  \frac{\pi \vert
    e\vert^{3}}{2\hbar^2}
 \int \frac{d^{3}k}{8\pi^3}
 \sum_{vc}\frac{4}{(\omega^\Sigma_{cv})^{2}}
-\left[\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\left\{\left(r^{\mathrm{b}}_{cv}\right)_{;k^{\mathrm{c}}}
+\left[\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a},\ell}_{vc}\left\{\left(r^{\mathrm{b}}_{cv}\right)_{;k^{\mathrm{c}}}
 \right\}\right] -
-\frac{2\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\left\{r^{\mathrm{b}}_{cv}
+\frac{2\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a},\ell}_{vc}\left\{r^{\mathrm{b}}_{cv}
 \Delta^{\mathrm{c}}_{cv}\right\}\right]}{\omega^\Sigma_{cv}}\right]\delta(\omega^\Sigma_{cv}-2\omega)
 ,
 \end{equation}
@@ -1274,117 +1211,51 @@ remove these divergences and obtain the following expressions for $\boldsymbol{\
 We have split the interband and intraband $1\omega$ and $2\omega$
 contributions. The real part of each contribution can be obtained through
 a Kramers-Kronig transformation,\cite{nicolas} and then
-$\chi^{S,\ell}_{\mathrm{abc}}=\chi^{S,\ell}_{e,\mathrm{abc},\omega} 
-+\chi^{S,\ell}_{e,\mathrm{abc},2\omega}+\chi^{S,\ell}_{i,\mathrm{abc},\omega}
-+\chi^{S,\ell}_{i,\mathrm{abc},2\omega}
-$.
+$\chi^{\mathrm{abc},\ell}
+= \chi^{\mathrm{abc},\ell}_{e,\omega}
++ \chi^{\mathrm{abc},\ell}_{e,2\omega}
++ \chi^{\mathrm{abc},\ell}_{i,\omega}
++ \chi^{\mathrm{abc},\ell}_{i,2\omega}$.
 To fulfill the required intrinsic permutation symmetry,\cite{rashkeevPRB98} the
 $\{\}$ notation symmetrizes the $\mathrm{b}\mathrm{c}$ Cartesian indices, i.e. $
 \{u^{\mathrm{b}}s^{\mathrm{c}}\}=(u^{\mathrm{b}}s^{\mathrm{c}}+u^{\mathrm{c}}s^{
 \mathrm{b}})/2$, and thus
-$\chi_{\mathrm{abc}}^{S,\ell}=\chi_{\mathrm{a}\mathrm{c}\mathrm{b}}^{S,\ell}$.
+$\chi^{\mathrm{abc},\ell} = \chi^{\mathrm{acb},\ell}$.
 In Appendices \ref{app:gdernl} and \ref{app:calvs} we demonstrate how to
-calculate the generalized derivatives of $\mathbf{r}_{nm;\mathbf{k}}$ and
-$\mathcal{V}^{\Sigma,\mathrm{a},\ell}_{nm;\mathbf{k}}$. We find that
-\begin{align}\label{rgen.69}
-(r^{\mathrm{b}}_{nm})_{;k^{\mathrm{a}}}
-&=
--i\mathcal{T}^{\mathrm{a}\mathrm{b}}_{nm}
-+
-\frac{
-r^{\mathrm{a}}_{nm}
-\Delta^{\mathrm{b}}_{mn}
-+r^{\mathrm{b}}_{nm}
-\Delta^{\mathrm{a}}_{mn}
-}
-{\omega^{\mathrm{LDA}}_{nm}}
-+
-\frac{i}{\omega^{\mathrm{LDA}}_{nm}}
-\sum_{\ell}
-\bigg(
-\omega^{\mathrm{LDA}}_{\ell m}
-r^{\mathrm{a}}_{n\ell}
-r^{\mathrm{b}}_{\ell m}
--
-\omega^{\mathrm{LDA}}_{n\ell}
-r^{\mathrm{b}}_{n\ell}
-r^{\mathrm{a}}_{\ell m}
-\bigg)
-,
-\end{align}
-where
+calculate the generalized derivatives of $\left(\mathbf{r}\right)_{nm;\mathbf{k}}$ and
+$\left(\mathcal{V}^{\Sigma,\mathrm{a},\ell}_{nm}\right)_{;\mathbf{k}}$. From Appendix \ref{app:gdernl} we find that $\mathcal{T}_{nm}^{\mathrm{a}\mathrm{b}}$, given by
 \begin{align}\label{tau.1}
 \mathcal{T}_{nm}^{\mathrm{a}\mathrm{b}}
 =
 [r^{\mathrm{a}},v^{\mathrm{LDA},\mathrm{b}}]= 
 \frac{i\hbar}{m_{e}}\delta_{ab}\delta_{nm} +
-\mathcal{L}_{nm}^{\mathrm{a}\mathrm{b}}
-,
+\mathcal{L}_{nm}^{\mathrm{a}\mathrm{b}},
 \end{align}  
-and
+with
 \begin{align}\label{tau.2}
 \mathcal{L}_{nm}^{\mathrm{a}\mathrm{b}}
-= \frac{1}{i\hbar}[r^{\mathrm{a}},v^{\mathrm{nl},\mathrm{b}}]_{nm}
-,
+= \frac{1}{i\hbar}[r^{\mathrm{a}},v^{\mathrm{nl},\mathrm{b}}]_{nm},
 \end{align}
-is the contribution to the generalized derivative of $\mathbf{r}_{nm}$
-coming from the nonlocal part of the pseudopotential.
-In Appendix \ref{app:calt} we calculate
-$\mathcal{L}^{\mathrm{a}\mathrm{b}}_{nm}$, that
-is a term with very small numerical value but with a computational time 
-at least an order of magnitude larger
-than for all the other terms involved in the expressions for 
-$\chi^{s,\ell}_{\mathrm{abc}}$.\cite{valerie}
-Therefore, we neglect it throughout this article and take
+is the contribution to the generalized derivatives
+$\left(\mathbf{r}_{nm}\right)_{;\mathbf{k}}$, and
+$\left(\mathcal{V}^{\Sigma,\mathrm{a},\ell}_{nm}\right)_{;\mathbf{k}}$ coming
+from the nonlocal part of the pseudopotential, $\mathbf{v}^{\mathrm{nl}}$. In
+Appendix \ref{app:calt} we calculate $\mathcal{L}^{\mathrm{a}\mathrm{b}}_{nm}$,
+that as shown in Ref. \cite{valerie}, is a term with a very small numerical
+value but with a computational time at least an order of magnitude larger than
+for all the other terms involved in the expressions for
+$\chi^{\mathrm{abc},\ell}$. Therefore, we neglect it throughout this thesis and
+take
 \begin{align}\label{tau.69}
 \mathcal{T}_{nm}^{\mathrm{a}\mathrm{b}}
 \approx
 \frac{i\hbar}{m_{e}}\delta_{ab}\delta_{nm}
 .
 \end{align} 
-Finally,
-we also need the following term (Eq. \eqref{ntita})
-\begin{align}\label{a.3c}
-(v^{\mathrm{LDA},\mathrm{a}}_{nn})_{;k^\mathrm{b}}
-=
-\nabla_{k^{\mathrm{a}}}  
-v^{\mathrm{LDA},\mathrm{b}}_{nn}(\mathbf{k})
-&=
--i\mathcal{T}^{\mathrm{a}\mathrm{b}}_{nn}
--
-\sum_{\ell\ne n}
-\omega^{\mathrm{LDA}}_{\ell n}
-\bigg(  
-r^{\mathrm{a}}_{n\ell}  
-r^{\mathrm{b}}_{\ell n}
-+  
-r^{\mathrm{b}}_{n\ell}  
-r^{\mathrm{a}}_{\ell n}
-\bigg)
-\nonumber\\
-&\approx
-\frac{\hbar}{m_{e}}\delta_{\mathrm{a}\mathrm{b}}
--
-\sum_{\ell\ne n}
-\omega^{\mathrm{LDA}}_{\ell n}
-\bigg(  
-r^{\mathrm{a}}_{n\ell}  
-r^{\mathrm{b}}_{\ell n}
-+  
-r^{\mathrm{b}}_{n\ell}  
-r^{\mathrm{a}}_{\ell n}
-\bigg)
-,
-\end{align}  
-among other quantities for $\mathcal{V}^{\Sigma,\mathrm{a},\ell}_{nm;\mathbf{k}}$, where we 
-also use Eq. \eqref{tau.69}. Above is the standard effective-mas sum rule.
-\cite{ashcroftbook} 
-%In Appendix \ref{code}, we list all the quantities that should be
-%coded in order to calculate the previous expressions for $\boldsymbol{\chi}$.
 
 We have presented a complete derivation of the required elements to
 calculate in the independent particle approach (IPA) the microscopic  
-surface second harmonic susceptibility tensor $\boldsymbol{\chi}^S(-2\omega;\omega,\omega)$ 
+surface second harmonic susceptibility tensor $\boldsymbol{\chi}_{\mathrm{surface}}$ 
 using a layer-by-layer approach. We have done so for semiconductors using 
 the length gauge for the coupling of the external electric field to the 
 electron. 

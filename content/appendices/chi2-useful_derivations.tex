@@ -399,7 +399,7 @@ f_{lm}^s(\mathbf{K})\Bigg)\Bigg
 \nabla_{\mathbf{K}'}f_{lm}^{s*}(\mathbf{K}')\Bigg) \Bigg]
 ,
 \end{align}
-where there are only single sums over $\mathbf{G}$. Above is implemented in the
+where there are only single sums over $\mathbf{G}$. The above equation is implemented in the
 DP code \cite{olevanoDP}.
 
 Now we derive $\boldsymbol{\mathcal{V}}^{\mathrm{nl},\ell}_{nm}(\mathbf{k})$. First we prove that
@@ -810,17 +810,17 @@ A^*_{n\mathbf{k}}(\mathbf{G})A_{m\mathbf{k}}(\mathbf{G})(\mathbf{k}+\mathbf{G}),
 \end{align}  
 since for this case, $f_{\ell}(g) = \delta_{g0}$.
 
-We remark that $\boldsymbol{\mathcal{V}}^{\ell}_{nm}(\mathbf{k})$ of Eq.
-\eqref{eni.2} does not contain the contribution coming from the scissors
-operator. As commented in the paragraph after Eq. \eqref{vopii},
-$\boldsymbol{\mathcal{V}}^{\Sigma,\ell}_{nm}(\mathbf{k})\ne
-(\omega^{\Sigma}_{nm}/\omega_{nm})
-\boldsymbol{\mathcal{V}}^{\mathrm{LDA},\ell}_{nm}(\mathbf{k})$ and
-$\boldsymbol{\mathcal{V}}^{\Sigma,\ell}_{nn}(\mathbf{k})\ne
-\boldsymbol{\mathcal{V}}^{\mathrm{LDA},\ell}_{nn}(\mathbf{k})$, relations that
-are correct whether or not the contribution of $\mathbf{v}^\mathrm{nl}$ is taken
-into account. We will learn how to correctly implement the scissors correction
-in the next section, Sec. \ref{app:calvs}.
+% We remark that $\boldsymbol{\mathcal{V}}^{\ell}_{nm}(\mathbf{k})$ of Eq.
+% \eqref{eni.2} does not contain the contribution coming from the scissors
+% operator. As commented in the paragraph after Eq. \eqref{vopii},
+% $\boldsymbol{\mathcal{V}}^{\Sigma,\ell}_{nm}(\mathbf{k})\ne
+% (\omega^{\Sigma}_{nm}/\omega_{nm})
+% \boldsymbol{\mathcal{V}}^{\mathrm{LDA},\ell}_{nm}(\mathbf{k})$ and
+% $\boldsymbol{\mathcal{V}}^{\Sigma,\ell}_{nn}(\mathbf{k})\ne
+% \boldsymbol{\mathcal{V}}^{\mathrm{LDA},\ell}_{nn}(\mathbf{k})$, relations that
+% are correct whether or not the contribution of $\mathbf{v}^\mathrm{nl}$ is taken
+% into account. We will learn how to correctly implement the scissors correction
+% in the next section, Sec. \ref{app:calvs}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1834,6 +1834,7 @@ I &= -\frac{e^3}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
         {2\omega^\Sigma_{qv}-\omega^\Sigma_{cv}}
 \right]\frac{1}{\omega^\Sigma_{cv}-2\tilde\omega}\right).
 \end{align*}
+{\color{red} Add appendix A from article and modify the I terms to be chis to present the final chis from the article}
 We use \eqref{limit_eta},
 \begin{align*}
 I = \frac{\pi|e^3|}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
@@ -2572,10 +2573,13 @@ which is an explicit expression that can be numerically calculated.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Scissors renormalization for 
+\section{Scissors renormalization for 
 \texorpdfstring{$\mathcal{V}^\Sigma_{nm}$}{Vnm}}
 \label{app:voila}
+
+{\color{red} add some motherfuckin text yo}
 
 \begin{align}\label{cdg.1}
 \langle n\mathbf{k}\vert\mathcal{C}(z)\mathbf{r}\vert m\mathbf{k}\rangle(E^\Sigma_m-E^\Sigma_n) 
