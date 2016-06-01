@@ -2,9 +2,118 @@
 \chapter{The Nonlinear Surface Susceptibility}\label{chap:chi2}
 \partialtoc
 
-{\color{red} Small intro about centrosymmetry, explaining why we must follow
-this procedure for a surface response. Brief intro about scissors correction,
-LDA vs GW. Brief intro about the procedure we will follow in general.}
+
+In recent years surface nonlinear optical spectroscopies, particulary surface
+second-harmonic generation (SSHG), have evolved as useful nondestructive and
+noninvasive tools to study surface and interface properties. These properties
+include atomic structure, phase transitions, adsorption of atoms, and many
+others.\cite{daumPRL93, mcgilpOE94, meyerPRL95, powerPRL95, godefroyAPL96,
+hoferAPA96, dadapPRB97, bloembergenAPB99, mcgilpSRL99, suzukiAPB99,
+mitchellSS01, hughesPRB96, guyotPRB88, downerPSSA01, shenAPB99, shenNAT89,
+chenPRL81, mendozaPRL98, downerSIA01} Nowadays, SSHG spectroscopy is a crucial
+tool for research and development in microelectronics,
+\cite{zheltikovLP00} semiconductors, \cite{lupkeSSR99} nanomaterials,
+\cite{salazar-aparicioPRB14} and many more recent areas of great scientific and
+commercial interest.\cite{cazzanelliNM14} The high surface sensitivity of SSHG
+spectroscopy is due to the fact that within the dipole approximation the bulk
+SHG signal of centrosymmetric materials is identically zero. However, the SHG
+process can occur only at the surface where the inversion symmetry is broken.
+The bulk quadrupole contribution for centrosymmetric materials is different from
+zero, but usually it is very small \cite{downerSIA01}, and could be neglected.
+Much of the foundation of surface science has been built from experiments
+involving emission or scattering of electrons from surfaces. These require
+ultrahigh vacuum (UHV) environments and provide no access to buried interfaces.
+However, SSHG is compatible with non-UHV conditions and has access to interfaces
+buried beneath transparent overlayers. Even when applied to surfaces in UHV, the
+light source and detectors can be aligned and used outside the vacuum chamber.
+
+The usefulness of SSHG could be limited by the lack of microscopic theoretical
+understanding of the nonlinear spectra. The macroscopic phenomenological theory
+of SSHG, which relates the intensity, phase, and polarization of detected fields
+to nonlinear and linear susceptibilities at the material interface is now fully
+developed.\cite{downerSIA01} However, microscopic theory that relates
+electronic-level structure to the nonlinear source polarization is still being
+developed. \cite{butcherPOPS63, aspnesPRB72, sipePRB93, levinePRB94,aversaPRB95,
+hughesPRB96, rashkeevPRB98,beyond} Within the independent particle approximation
+(IPA) some frameworks for bulk SHG have been developed to study the nonlinear
+optical response of bulk materials. \cite{butcherPOPS63, aspnesPRB72, sipePRB93,
+levinePRB94,aversaPRB95, hughesPRB96, rashkeevPRB98} In this thesis we put
+forward an approach to calculate the microscopic second-harmonic surface
+susceptibility that encompasses several theoretical features not taken into
+account before in the case of a surface.
+
+The most used framework for \textit{ab initio} calculations, Density Functional
+Theory (DFT) within the Local Density Approximation (LDA),
+\cite{kohnPR65} underestimates the energy band gap of semiconductors. It is well
+understood that one has to include the many-body interaction to correct for this
+underestimation of the gap. In this context, the so-called GW
+approximation\cite{onidaRMP02} is known to correct the electronic gap of most
+semiconductors\cite{luceroJPCM12}. However this can be a very expensive
+calculation and thus one uses the much simpler scissors operator scheme.
+\cite{levinePRL89,levinePRL91,delsolePRB93} This allows us to ``open'' the
+DFT-LDA gap to its correct experimental or GW value for most bulk
+semiconductors. This approximation has already been used in linear optical
+calculations for surfaces,\cite{kippPRL96} thus improving the agreement with
+experimental results. In this context, to correct for the underestimation of the
+energy band gap of semiconductors Nastos et al.\cite{nastosPRB05} used the
+``length gauge'' or ``$\mathbf{r}\cdot\mathbf{E}$'' gauge to show how to
+correctly include the many-body corrections through the scissors operator in the
+SH susceptibility. Later, Cabellos \textit{et al}.\cite{cabellosPRB09}
+elaborated a derivation of the ``velocity gauge'' or
+``$\mathbf{A}\cdot\mathbf{v}$'' gauge properly including the scissors operator
+and proved gauge invariance with respect to the length gauge. From these works
+it is clear the length gauge is a much better starting point to obtain the
+surface SH (SSH) susceptibility, as will be elaborated in this thesis. However,
+these considerations are only valid for bulk semiconductors.
+
+Concerning the optical response of surfaces and interfaces, Reining \textit{et
+al.}\cite{reiningPRB94} introduced the concept of a cut function in order to
+obtain the surface SH susceptibility tensor. This cut function is required since
+one usually uses a slab approach when treating semi-infinite surface
+systems.\cite{reiningPRB94} If the slab is centrosymmetric the susceptibility
+tensor will be identically zero. The cut function is such that it separates the
+nonlinear response for the two surfaces of the slab avoiding the destructive
+interference between them giving a finite value that one identifies with the SSH
+susceptibility tensor. If the slab is not centrosymmetric the cut function can
+be used to separate the different signals coming from either surface of the
+slab. Indeed, one of the main results of this thesis is to show that the SSH
+susceptibility tensor obtained by using the cut function is correctly extracted
+from the slab. After Reining \textit{et al.},\cite{reiningPRB94} Refs.
+\cite{mendozaPRL98,arzatePRB01,mendozaPRB01,mejiaPRB02,sanoPRB02} followed upon
+this work and in particular Ref. \cite{arzatePRB01} went into a detailed
+analysis of the different contributions to the SHG spectra of a surface and the
+nuanced relationship between bulk, surface, interband, intraband, $1\omega$ and
+$2\omega$ terms, and Ref. \cite{mejiaRMF04} developed a layer-by-layer analysis
+for the nonlinear responses of semiconductor systems, within a tight-binding
+framework. This model allows for obtaining results from selected regions of a
+system including the surface. However, in these references the scissors operator
+is either excluded or incorrectly implemented. In the works that include this
+operator,  the velocity gauge was used to derive the expressions for
+$\chi^{\mathrm{abc}}(-2\omega;\omega,\omega)$. Nevertheless, a term in the
+time-dependent perturbation scheme necessary to satisfy the gauge invariance of
+$\chi^{\mathrm{abc}}(-2\omega;\omega,\omega)$  was omitted. This was
+demonstrated in Ref. \cite{cabellosPRB09} where a comparison between the
+velocity and the length gauge was carried out.
+
+Finally, DFT-LDA calculations are often based on the use of pseudopotentials. As
+it will be discussed in this thesis, the presence of a nonlocal part of the
+pseudopotential introduces corrections to the momentum operator of the electron
+that have to be included with care in the SSH susceptibility. For the bulk
+counterpart see for instance Refs. \cite{ismailPRL01,luppiPRB08}.
+
+Therefore, within the IPA the most complete approach for the calculation of the
+SSH susceptibility is one which includes (i) the scissors correction, (ii) the
+contribution of the nonlocal part of the pseudopotential, and (iii) the cut
+function. Therefore, the goal of this paper is to derive a new expression within
+the length gauge for the SSH susceptibility tensor
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ that includes
+the aforementioned contributions. The inclusion of these three contributions
+makes our scheme unprecedented and opens the possibility to study surface SHG
+with more versatility and providing accurate results.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{The nonlinear surface susceptibility}
 
@@ -143,58 +252,247 @@ to the surface and $\mathbf{R}$ is parallel to it.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Length Gauge}\label{longi}
+\section{Time-dependent Perturbation Theory}\label{tdpt}
 
-{\color{red} Brief intro to work in Refs. \cite{aversaPRB95} and
-\cite{cabellosPRB09} (both are bulk, aversa neglects nonlocalities while
-Cabellos adds nonlocal scissors)}
-
-We follow Refs. \cite{aversaPRB95} and \cite{cabellosPRB09} to calculate
-$\chi^{\mathrm{abc}}_{\mathrm{surface}}$ of a given system within the
-longitudinal gauge. We assume the long-wavelength approximation which implies a
-position independent electric field, $\mathbf{E}(t)$. The Hamiltonian in the
-length gauge approximation is given by
-\begin{equation}\label{ache}
-\hat{H}=\hat{H}^{\Sigma}_{0} - e\hat{\mathbf{r}}\cdot\mathbf{E},
+We assume the IPA, a classical electromagnetic field, and quantum mechanical
+matter. We neglect local field and excitonic effects. We can describe the system
+using the one electron density operator ${\rho}$, with which we can calculate
+the expectation value of a single-particle observable $\mathcal{O}$ as
+\begin{equation}\label{traza}
+\left\langle\mathcal{O}\right\rangle
+= \mathrm{Tr}(\rho\mathcal{O}),
 \end{equation}
-where $e$ is the electron charge, $-e\hat{\mathbf{r}}\cdot\mathbf{E}$ is the
-dipolar interaction, $\mathbf{r}$ is the electron position operator, and
-\begin{align}\label{ache.1}
-  \hat{H}^{\Sigma}_{0} = \hat{H}^{\mathrm{LDA}}_{0}
-+ \mathcal{S}(\mathbf{r},\mathbf{p}),
-\end{align} 
-as the unperturbed, scissors-shifted Hamiltonian denoted with $\Sigma$, composed
-of the LDA ground-state Hamiltonian, and the scissors operator
-\cite{levinePRB94}. The LDA Hamiltonian can be expressed as follows,
-\begin{align}\label{ache.2}
-\hat{H}^{\mathrm{LDA}}_{0}
-&= \frac{\hat{p}^{2}}{2m_{e}} + \hat{V}^{\mathrm{ps}},\nonumber\\
-\hat{V}^{\mathrm{ps}}
-&= \hat{V}^{\mathrm{l}}(\hat{\mathbf{r}}) + \hat{V}^{\mathrm{nl}},
-\end{align}  
-where $\hat{V}^{\mathrm{l}}(\hat{\mathbf{r}})$ and $\hat{V}^{\mathrm{nl}}$ are
-the local and the nonlocal parts of the crystal pseudopotential
-$\hat{V}^{\mathrm{ps}}$. $m_{e}$ is the bare mass of the electron, and $\hat{p}$
-is the momentum operator.
-{\color{red} Make reference about why we need the nonlocal part.}
-For the latter, we have that
+with $\mathcal{O}$ the associated quantum mechanical operator and Tr the 
+trace. The density operator satisfies
+\begin{equation}\label{eqrho}
+i\hbar \frac{d\rho}{dt} = \left[H,\rho\right],
+\end{equation}
+with $H(t)$ as the total single electron Hamiltonian, written as 
+\begin{equation*}
+H(t) = H_{0} + H_{I}(t),  
+\label{achea}
+\end{equation*}
+where $H_{0}$ is the unperturbed time-independent Hamiltonian, and $H_{I}(t)$ is
+the time-dependent potential energy due to the interaction of the electron with
+the electromagnetic field. To proceed with the solution of $\rho$ it is
+convenient to use the interaction picture, where a unitary operator
+\begin{equation}\label{ou}
+U = e^{iH_{0}t/\hbar},
+\end{equation}
+transforms any operator $\mathcal{O}$ into
+\begin{equation}\label{ip}
+\tilde{\mathcal{O}} = U\mathcal{O}U^{\dagger}.
+\end{equation}
+Even if $\mathcal{O}$ is time-independent, $\tilde{\mathcal{O}}$ is
+time-dependent through the explicit time dependence of $U$. The dynamical
+equation for $\tilde{\rho}$ is given by
+\begin{equation}\label{intrho}
+i\hbar \frac{d\tilde{\rho}}{dt}
+= \left[-e\mathbf{r}_{I}(t)\cdot\mathbf{E}(t),\tilde{\rho}\right]
+= [\tilde{H}_{I}(t), \tilde{\rho}],
+\end{equation}
+with solution 
+\begin{equation}\label{intrho2}
+i\hbar \tilde{\rho}(t)
+= i\hbar \tilde{\rho}_{0} + 
+\int_{-\infty}^{t}
+\left[\tilde{H}_{I}(t^{\prime}),\tilde{\rho}(t^{\prime})\right]\,dt^{\prime},  
+% \label{trans}
+\end{equation}
+where $\tilde{\rho}_{0} = \tilde{\rho}(t = -\infty)$ is the unperturbed density
+matrix.
+
+We assume that the interaction is switched-on adiabatically and choose a
+time-periodic perturbing field, to write
+\begin{equation}\label{efield}
+\mathbf{E}(t)
+= \mathbf{E} e^{-i\omega t}e^{\eta t}
+= \mathbf{E} e^{-i\tilde{\omega} t},
+\end{equation}
+with
+\begin{equation}\label{got}
+\tilde{\omega} =\omega + i\eta,
+\end{equation} 
+where $\eta > 0$ assures that at $t = -\infty$, the interaction is zero and has
+its full strength $\mathbf{E}$ at $t = 0$. After computing the required time
+integrals one takes $\eta\to 0$. Also, $\tilde{\rho}(t = -\infty)$ should be
+time independent and thus $[\tilde{H}_{I},\tilde{\rho}]_{t = -\infty} = 0$. This
+implies that $\tilde{\rho}(t = -\infty)\equiv\tilde{\rho}_{0}$, such that
+\begin{equation}\label{nrhon}
+\langle n\mathbf{k}\vert \tilde{\rho}_{0} \vert m\mathbf{k}'\rangle
+= f_{n}(\hbar\omega^{\Sigma}_{n}(\mathbf{k}))
+\delta_{nm}\delta(\mathbf{k}-\mathbf{k}'),
+\end{equation}
+with $f_{n}(\hbar\omega^{\Sigma}_{n}(\mathbf{k})) = f_{n}$ as the Fermi-Dirac
+distribution function. For a clean, cold semiconductor $f_{n}=1$ when $n$ is a
+valence ($v$) or occupied band, and zero when $n$ is a conduction ($c$) or empty
+band. We assume this for the remainder of this work. As we neglect spin-orbit
+coupling, the final expression for $\chi^{\mathrm{abc}}(-2\omega;\omega,\omega)$
+has to be multiplied by a factor of 2 to account for spin-degeneracy. The
+expectation values must always satisfy $\langle\mathcal{O}\rangle =
+\mathrm{Tr}({\rho}\mathcal{O}) = Tr(\tilde{\rho}\tilde{\mathcal{O}})$.
+
+We solve Eq. \eqref{intrho2} using the standard iterative
+solution, for which we write
+\begin{equation}\label{rhop}
+\tilde{\rho}
+= \tilde{\rho}^{(0)}
++ \tilde{\rho}^{(1)}
++ \tilde{\rho}^{(2)}
++ \cdots,
+\end{equation}
+where $\tilde{\rho}^{(N)}$ where the superscript denotes the order (power) with
+which each term depends on the perturbation $H_{I}(t)$. Then, Eq.
+\eqref{intrho2} reads
+\begin{equation}\label{intrho3}
+  \tilde{\rho}^{(0)} 
++ \tilde{\rho}^{(1)} 
++ \tilde{\rho}^{(2)} 
++ \cdots
+= \tilde{\rho}_{0}
++ \frac{1}{i\hbar}\int_{-\infty}^{t} 
+  \left[
+  \tilde{H}_{I}(t'),\tilde{\rho}^{(0)}+\tilde{\rho}^{(1)}+\tilde{\rho}^{(2)}
+  + \cdots
+  \right]\,dt',
+\end{equation}
+where, by equating equal orders in the perturbation, we find
+\begin{equation}\label{rho0}
+\tilde{\rho}^{(0)}\equiv\tilde{\rho}_{0},
+\end{equation}
+and the $N$th-order term
+\begin{equation}\label{rhoN}
+\tilde{\rho}^{(N)}(t)=
+\frac{1}{i\hbar}
+\int_{-\infty}^{t}
+\left[\tilde{H}_{I}(t'),\tilde{\rho}^{(N-1)}(t')\right]\,dt'.
+\end{equation}
+It is simple to show that matrix elements of Eq. (\ref{rhoN}) satisfy 
+$\langle n\mathbf{k}| \rho^{(N+1)}(t) |m\mathbf{k}'\rangle =
+\rho^{(N+1)}_{nm}(\mathbf{k})\delta(\mathbf{k}-\mathbf{k}')$, with
+\begin{equation}\label{rtilde}
+\rho^{(N+1)}_{nm}(\mathbf{k};t)
+= \frac{e}{i\hbar}\int_{-\infty}^t
+\langle n\mathbf{k}|
+\left[\mathbf{r}_{I}(t'),\tilde{\rho}^{(N)}(t')\right]
+|m\mathbf{k}\rangle
+\cdot\mathbf{E}(t')dt'.
+\end{equation}
+This shows that the $N + 1$ solution is determined by the $N$th solution, which
+in turn is determined by the $N - 1$ solution, and so on. Starting from the
+zeroth order solution given in Eq. \eqref{rho0}, we can solve for any desired
+order.
+
+We will look for the expectation value of the microscopic current density,
+$\mathbf{J}$, given by
+\begin{equation*}
+\mathbf{J} = \langle{\mathbf{J}}\rangle 
+           = \frac{e}{A}\mathrm{Tr}({\rho}\dot{\mathbf{r}}),
+\end{equation*}
+where $\dot{\mathbf{r}}$ is the time derivative of the position operator of the
+electron with charge $e$, defined as
+\begin{equation}
+\mathbf{v}\equiv \dot{\mathbf{r}}=\frac{1}{i\hbar }[\mathbf{r},H_0],  
+\label{mv}
+\end{equation}
+with $\mathbf{v}$ the velocity operator of the electron, and $A$ the area of the
+unit cell. We calculate the polarization density $\mathbf{P}$, related to
+$\mathbf{J}$ by $\mathbf{J}=d\mathbf{P}/dt$. We write the second-order nonlinear
+polarization as,
+\begin{equation}
+\boldsymbol{\mathcal{P}}^{\mathrm{a}}(2\omega)=
+\chi^{\mathrm{abc}}(-2\omega;\omega,\omega)
+E^{\mathrm{b}}(\omega)E^{\mathrm{c}}(\omega),  
+\label{pshg}
+\end{equation}
+where $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega ;\omega ,\omega )$ is the
+nonlinear susceptibility responsible for surface second-harmonic generation
+(SSHG). The superscripts in Eq.~\eqref{pshg} denote Cartesian components, and if
+repeated are to be summed over. Without loss of generality we will define
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ to satisfy
+intrinsic permutation symmetry,
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega ,\omega )
+=\chi^{\mathrm{a}\mathrm{c}\mathrm{b}}(-2\omega ;\omega,\omega )$.
+
+The unperturbed Hamiltonian is used to solve the Kohn-Sham equations
+\cite{kohnPR65} of Density Functional Theory (DFT). It is convenient to work
+within the Local Density Approximation (LDA), so we label the hamiltonian with
+the corresponding LDA superscript. Any other approximation can be used (like the
+generalized gradient approximation) and our derivation remains the same. Then,
+\begin{equation}\label{ache.2}
+H^{\mathrm{LDA}}_{0}(\mathbf{r},\mathbf{p})
+= \frac{p^{2}}{2m_e}+V(\mathbf{r},\mathbf{p})
+\end{equation}
+with $m_e$ the mass of the electron, $\mathbf{p}=-i\hbar\boldsymbol{\nabla}$ its
+canonical momentum, and $V$ the periodic crystal potential, where we neglect
+spin-orbit terms. To be more general in our derivation of
+$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$, we assume
+contribution as is customary for most pseudopotentials, and then we replace $V$
+with
+\begin{equation}
+V^{\mathrm{ps}}(\mathbf{r},\mathbf{p})
+= V(\mathbf{r})+V^{\mathrm{nl}}(\mathbf{r},\mathbf{p}),
+\end{equation}
+where $V(\mathbf{r})$ and $V^{\mathrm{nl}}(\mathbf{r},\mathbf{p})$ are the local
+and nonlocal parts, respectively. The argument $(\mathbf{r},\mathbf{p})$ is
+equivalent to the explicit $(\mathbf{r},\mathbf{r}')$ nonlocal notation
+\cite{ismailPRL01}. For this nonlocal part, we have that
 \begin{align}\label{ache.3n}
 V^{\mathrm{nl}}(\mathbf{r},\mathbf{r}')\equiv
 \langle\mathbf{r}\vert
-\hat{V}^{\mathrm{nl}}
+V^{\mathrm{nl}}
 \vert\mathbf{r}'\rangle \neq 0 
 \quad\text{for}\quad\mathbf{r} \neq \mathbf{r}',
 \end{align}
 where $V^{\mathrm{nl}}(\mathbf{r},\mathbf{r}')$ is a function of $\mathbf{r}$
 and $\mathbf{r}'$ representing the nonlocal contribution of the pseudopotential.
-The Schr\"odinger equation reads
+In case of a local potential, i.e. $V= V(\mathbf{r})$, like that of all-electron
+schemes, we simply omit the contribution of
+$V^{\mathrm{nl}}(\mathbf{r},\mathbf{p})$ from the results that we have derived.
+
+It is well known that the use of the LDA leads to an underestimation of the band
+gap. A standard procedure to correct for this is to use the ``scissors
+approximation'', where the conduction bands are rigidly shifted in energy so
+that the band gap corresponds to the accepted experimental electronic band
+gap.\cite{levinePRL89,levinePRL91,delsolePRB93} This is often in fairly good
+agreement with the GW band gap based on a more sophisticated
+calculation.\cite{hybertsenPRB86} The LDA wave functions are used since they
+produce band structures with dispersion relations similar to those predicted by
+the GW. Mathematically, the scissors (non-local) operator $S$ is added to the
+unperturbed or unscissored Hamiltonian $H^{\mathrm{LDA}}_{0}$ ,
+\begin{equation}\label{ache.1}
+H^\Sigma_{0}(\mathbf{r},\mathbf{p})
+= H^{\mathrm{LDA}}_{0}(\mathbf{r},\mathbf{p})
++ S(\mathbf{r},\mathbf{p})
+\end{equation}
+where 
+\begin{equation}\label{hats}
+S(\mathbf{r},\mathbf{p}) = \hbar \Delta\sum_{n}\int (1-f_{n})
+|n\mathbf{k}\rangle\langle n\mathbf{k}|\,d^{3}k,
+\end{equation}
+with $\hbar\Delta$ the rigid ($\mathbf{k}$-independent) energy correction to be
+applied. The unscissored and scissored Hamiltonians satisfy
+\begin{align*}
+H^{\mathrm{LDA}}_{0}(\mathbf{r},\mathbf{p})\psi _{n\mathbf{k}}(\mathbf{r}) &=
+\hbar \omega^{\mathrm{LDA}}_{n}(\mathbf{k})\psi _{n\mathbf{k}}(\mathbf{r}),
+\label{hamils} \\
+H_{0}^\Sigma (\mathbf{r},\mathbf{p})\psi _{n\mathbf{k}}(\mathbf{r}) &=
+\hbar \omega_{n}^\Sigma(\mathbf{k})\psi _{n\mathbf{k}}(\mathbf{r}),
+\end{align*}
+where the scissor-shifted energies, $\omega_{n}^\Sigma(\mathbf{k})$, are given
+by
+\begin{equation}\label{chon.78}
+\omega_{n}^\Sigma(\mathbf{k})
+= \omega^\mathrm{LDA}_{n}(\mathbf{k})+(1-f_{n})\Delta.
+\end{equation}
+Lastly, the Schr\"odinger equation reads
 \begin{align}\label{ache.4} 
 \left(
 \frac{-\hbar^2}{2m_{e}}\nabla^{2}
-+ \hat{V}^l(\mathbf{r})
++ V(\mathbf{r})
 \right)
 \psi_{n\mathbf{k}}(\mathbf{r})
-+ \int\hat{V}^{\mathrm{nl}}(\mathbf{r},\mathbf{r}')
++ \int V^{\mathrm{nl}}(\mathbf{r},\mathbf{r}')
   \psi_{n\mathbf{k}}(\mathbf{r}')\,d\mathbf{r}'
 = E_{i}\psi_{n\mathbf{k}}(\mathbf{r}),
 \end{align} 
@@ -202,39 +500,284 @@ where $\psi_{n\mathbf{k}}(\mathbf{r}) = \langle\mathbf{r}|n\mathbf{k}\rangle =
 e^{i\mathbf{k}\cdot\mathbf{r}}u_{n\mathbf{k}}(\mathbf{r})$, are the real space
 representations of the Bloch states $|n\mathbf{k}\rangle$ labeled by the band
 index $n$ and the crystal momentum $\mathbf{k}$, and
-$u_{n\mathbf{k}}(\mathbf{r})$ is cell periodic. The nonlocal scissors operator
-is given by
-\begin{equation}\label{chon.0}
-\mathcal{S}(\mathbf{r},\mathbf{p}) = 
-\hbar\Delta\sum_{n}
-\int(1 - f_{n}(\mathbf{k}))\vert n\mathbf{k}\rangle \langle n\mathbf{k}\vert
-\,d^{3}k,
+$u_{n\mathbf{k}}(\mathbf{r})$ is cell periodic. We emphasize that the scissored
+and unscissored Hamiltonian have the same eigenfunctions.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Length Gauge}\label{longi}
+
+According to Ref. \cite{ismailPRL01}, we first start with the interaction
+Hamiltonian expressed in the velocity gauge, containing the nonlocal parts
+$V^{nl}(\mathbf{r},\mathbf{p})$ and $S (\mathbf{r},\mathbf{p})$. Within the
+dipole approximation and using a gauge transformation, it can be transformed
+into an effective Hamiltonian \cite{valerie}
+\begin{equation}
+H_{I}(t)=-e\mathbf{r}\cdot \mathbf{E}(t).
+\label{rde}
 \end{equation}
-{\color{red} Check our article or cabellos to see if this has $8\pi$ and where this equation comes from, possibly Levine}
-where $f_{n}(\mathbf{k})$ is the occupation number that is independent of
-$\mathbf{k}$ for $T = 0$ K, and is $f_{n} = 1$ for filled bands and $f_{n} = 0$
-for unoccupied bands. For semiconductors the filled bands correspond to valence
-bands ($n = v$), and unoccupied bands correspond to conduction bands ($n = c$).
-We have that
-{\color{red} Check for reference from Pulci}
-\begin{equation}\label{chon.1}
-\begin{split}
-H^\mathrm{LDA}_{0}\vert n\mathbf{k}\rangle
-    &= \hbar\omega^{\mathrm{LDA}}_{n}(\mathbf{k})\vert n\mathbf{k}\rangle\\
-H^{\Sigma}_{0}\vert n\mathbf{k}\rangle
-    &= \hbar\omega^{\Sigma}_{n}(\mathbf{k})\vert n\mathbf{k}\rangle,
-\end{split}
+The treatment of the position operator $\mathbf{r}$ for extended Bloch states is
+problematic and has been discussed in Refs. \cite{adamsJCP53, blountSSP62}.
+
+{\color{red}
+We now work out the commutator of Eq. \eqref{rtilde}. Then,
+\begin{align}\label{conmu1}
+\langle n\mathbf{k}|
+\left[\mathbf{r}_{I}(t),\tilde{\rho}^{(N)}(t)\right]
+|m\mathbf{k}\rangle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&= \langle n\mathbf{k}|
+\left[U\mathbf{r}U^\dagger,U\rho^{(N)}(t)U^\dagger\right]
+|m\mathbf{k}\rangle\nonumber \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&= \langle n\mathbf{k}|
+U\left[\mathbf{r},\rho^{(N)}(t)\right]U^\dagger
+|m\mathbf{k}\rangle\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&= e^{i\omega^\Sigma_{nm\mathbf{k}}t}
+\left(
+\langle n\mathbf{k}|
+  \left[\mathbf{r}_{e},\rho^{(N)}(t)\right]
++ \left[\mathbf{r}_{i},\rho^{(N)}(t)\right]
+|m\mathbf{k}\rangle
+\right)\nonumber,
+\end{align}
+where the time dependence of the operator in the interaction picture is
+explicitly shown by the exponential factor, and the implicit dependence of
+$\rho^{(N)}$ inherited from Eq. \eqref{eqrho} is given through the $t$ argument.
+We calculate the interband term first, so using Eq. \eqref{chon.98} we obtain
+\begin{align}\label{conmu2}
+\langle n\mathbf{k}|
+[\hat{\mathbf{r}}_e,\tilde{\rho}^{(N)}(t)]
+|m\mathbf{k}\rangle
+&=
+\sum_{\ell}
+\left(
+\langle n\mathbf{k}|
+\hat{\mathbf{r}}_e
+|\ell\mathbf{k}\rangle
+\langle \ell\mathbf{k}|
+\tilde{\rho}^{(N)}(t)
+|m\mathbf{k}\rangle
+-
+\langle n\mathbf{k}|
+\tilde{\rho}^{(N)}(t)
+|\ell\mathbf{k}\rangle
+\langle \ell\mathbf{k}|
+\hat{\mathbf{r}}_e
+|m\mathbf{k}\rangle
+\right)
+\nonumber \\
+&=
+\sum_{\ell\ne n,m}
+\left(
+\mathbf{r}_{n\ell}(\mathbf{k})
+\rho^{(N)}_{\ell m}(\mathbf{k};t)
+-
+\rho^{(N)}_{n\ell}(\mathbf{k};t)
+\mathbf{r}_{\ell m}(\mathbf{k})
+\right)
+\nonumber\\
+&\equiv
+\mathbf{R}^{(N)}_e(\mathbf{k};t)
+,
+\end{align}
+and from Eq. \eqref{conmri3n},
+\begin{equation}\label{conmri4}
+\langle n\mathbf{k}|
+[\hat{\mathbf{r}}_i,\tilde{\rho}^{(N)}(t)]
+|m\mathbf{k}'\rangle
+=i \delta(\mathbf{k}-\mathbf{k}') (\rho^{(N)}_{nm}(t))_{;\mathbf{k}}
+\equiv \delta(\mathbf{k}-\mathbf{k}')\mathbf{R}_i^{(N)}(\mathbf{k};t).
+\end{equation}
+Then Eq. \eqref{rtilde} becomes
+\begin{equation}\label{rtilde2}
+\rho^{(N+1)}_{I,nm}(\mathbf{k};t)
+=\frac{ie}{\hbar}\int_{-\infty}^t dt'
+e^{i(\omega^\Sigma_{nm\mathbf{k}}-\tilde{\omega})t'}
+\left[R_e^{\mathrm{b}(N)}(\mathbf{k};t')+R_i^{\mathrm{b}(N)}(\mathbf{k};t')\right]E^{\mathrm{b}}
+,
+\end{equation}
+where the roman superindices
+$\mathrm{a},\mathrm{b},\mathrm{c}$ denote Cartesian components that are summed over if repeated.
+Starting from the linear response and proceeding from Eq. \eqref{nrhon} and  \eqref{conmu2},
+\begin{align}\label{R0e}
+R_e^{\mathrm{b}(0)}(\mathbf{k};t)
+&=
+\sum_{\ell}
+\left(
+r^{\mathrm{b}}_{n\ell}(\mathbf{k})
+\rho^{(0)}_{\ell m}(\mathbf{k})
+-
+\rho^{(0)}_{n\ell}(\mathbf{k})
+r^{\mathrm{b}}_{\ell m}(\mathbf{k})
+\right)
+\nonumber \\
+&=
+\sum_{\ell}
+\left(
+r^{\mathrm{b}}_{n\ell}(\mathbf{k})
+\delta_{\ell m}f_m(\hbar\omega^\Sigma_m(\mathbf{k}))
+-
+\delta_{n\ell}f_n(\hbar\omega^{\Sigma}_{n}(\mathbf{k}))
+r^{\mathrm{b}}_{\ell m}(\mathbf{k})
+\right)
+\nonumber \\
+&=
+f_{mn\mathbf{k}}
+r^{\mathrm{b}}_{nm}(\mathbf{k}),
+\end{align}
+where $f_{mn\mathbf{k}}=f_{m\mathbf{k}}-f_{n\mathbf{k}}$.
+From now on,
+it should be clear that the matrix elements of $\mathbf{r}_{nm}$ imply
+$n\notin D_m$.
+We also have from Eq. \eqref{conmri4} and Eq. \eqref{gendevnn} that
+\begin{equation}\label{R0i}
+R_i^{\mathrm{b}(0)}(\mathbf{k})
+= i(\rho^{(0)}_{nm})_{;k^{\mathrm{b}}}
+= i\delta_{nm}(f_{n\mathbf{k}})_{;k^{\mathrm{b}}}
+= i\delta_{nm}\nabla_{k^{\mathrm{b}}} f_{n\mathbf{k}}.
+\end{equation}
+For a semiconductor at $T = 0$, $f_{n\mathbf{k}} = 1$ if the state
+$|n\mathbf{k}\rangle$ is a valence state and $f_{n\mathbf{k}} = 0$ if it is a
+conduction state. Thus, $\nabla_\mathbf{k} f_{n\mathbf{k}} = 0$,
+$\mathbf{R}_i^{(0)} = 0$ and the linear response has no contribution from the
+intraband transitions. Then,
+\begin{align}\label{rtilde2n}
+\rho^{(1)}_{I,nm}(\mathbf{k};t)
+&=\frac{ie}{\hbar}
+f_{mn\mathbf{k}}
+r^{\mathrm{b}}_{nm}(\mathbf{k})E^{\mathrm{b}}
+\int_{-\infty}^t dt'
+e^{i(\omega^\Sigma_{nm\mathbf{k}}-\tilde{\omega})t'}
+\nonumber \\
+&=\frac{e}{\hbar}
+f_{mn\mathbf{k}}
+r^{\mathrm{b}}_{nm}(\mathbf{k})E^{\mathrm{b}}
+\frac{e^{i(\omega^\Sigma_{nm\mathbf{k}}-\tilde{\omega})t}}
+{\omega^\Sigma_{nm\mathbf{k}}-\tilde{\omega}}
+\nonumber \\
+&=
+e^{i\omega^\Sigma_{nm\mathbf{k}}t}
+B^{\mathrm{b}}_{mn}(\mathbf{k})E^{\mathrm{b}}(t)
+\nonumber \\
+&=
+e^{i\omega^\Sigma_{nm\mathbf{k}}t}
+\rho^{(1)}_{nm}(\mathbf{k};t)
+,
+\end{align}
+with
+\begin{equation}\label{rho1} 
+B^{\mathrm{b}}_{nm}(\mathbf{k},\omega)=
+\frac{e}{\hbar}
+\frac{f_{mn\mathbf{k}}r^{\mathrm{b}}_{nm}(\mathbf{k})}
+     {\omega^\Sigma_{nm\mathbf{k}}-\tilde{\omega}},
 \end{equation} 
-where 
-\begin{equation}\label{chon.78}
-\hbar\omega^{\Sigma}_{n}(\mathbf{k})
-= \hbar\omega^{\mathrm{LDA}}_{n}(\mathbf{k}) + \hbar\Delta(1 - f_{n}),
+and
+\begin{equation}\label{rhonoi1}
+\rho^{(1)}_{nm}(\mathbf{k};t)
+= B^{\mathrm{b}}_{mn}(\mathbf{k},\omega)E^{\mathrm{b}}(\omega)
+  e^{-i\tilde{\omega}t}.
 \end{equation}
-is the scissored energy. Here, $\hbar\Delta$ is the value by which the
-conduction bands are rigidly ($\mathbf{k}$-independent) shifted upwards in
-energy, also known as the scissors shift. $\Delta$ could be taken to be
-$\mathbf{k}$ dependent, but for most calculations (like the ones presented
-here), a rigid shift is sufficient. We can take $\hbar\Delta = E_{g} -
+
+Now, we calculate the second-order response. Then, from Eq. \eqref{conmu2}
+\begin{align}\label{R1e}
+R_e^{\mathrm{b}(1)}(\mathbf{k};t)
+&=
+\sum_{\ell}
+\left(
+r^{\mathrm{b}}_{n\ell}(\mathbf{k})
+\rho^{(1)}_{\ell m}(\mathbf{k};t)
+-
+\rho^{(1)}_{n\ell}(\mathbf{k};t)
+r^{\mathrm{b}}_{\ell m}(\mathbf{k})
+\right)
+\nonumber \\
+&=
+\sum_{\ell}
+\left(
+r^{\mathrm{b}}_{n\ell}(\mathbf{k})
+B^{\mathrm{c}}_{\ell m}(\mathbf{k},\omega)
+-
+B^{\mathrm{c}}_{n\ell}(\mathbf{k},\omega)
+r^{\mathrm{b}}_{\ell m}(\mathbf{k})
+\right)E^{\mathrm{c}}(t)
+,
+\end{align}
+and from Eq. \eqref{conmri4}
+\begin{equation}\label{R1i}
+R_i^{\mathrm{b}(1)}(\mathbf{k};t)=
+i(\rho^{(1)}_{nm}(t))_{;k^{\mathrm{b}}}=
+iE^{\mathrm{c}}(t)(B^{\mathrm{c}}_{nm}(\mathbf{k},\omega))_{;k^{\mathrm{b}}}
+.
+\end{equation}
+
+Using Eqs. \eqref{R1e} and  \eqref{R1i} in Eq. (\ref{rtilde2}),
+we obtain
+\begin{align}\label{rtilde33}
+\rho^{(2)}_{I,nm}(\mathbf{k};t)
+&=
+\frac{ie}{\hbar}
+\bigg[
+\sum_{\ell}
+\Big(
+r^{\mathrm{b}}_{n\ell}(\mathbf{k})
+B^{\mathrm{c}}_{\ell m}(\mathbf{k},\omega)
+-
+B^{\mathrm{c}}_{n\ell}(\mathbf{k},\omega)
+r^{\mathrm{b}}_{\ell m}(\mathbf{k})
+\Big)
++
+i
+(B^{\mathrm{c}}_{nm}(\mathbf{k},\omega))_{;k^{\mathrm{b}}}
+\bigg]
+E^{\mathrm{b}}_{\omega}E_{\omega}^{\mathrm{c}}
+\int_{-\infty}^t dt'
+e^{i(\omega^\Sigma_{nm\mathbf{k}}-2\tilde{\omega})t'}
+\nonumber \\
+&=
+\frac{e}{\hbar}
+\bigg[
+\sum_{\ell}
+\Big(
+r^{\mathrm{b}}_{n\ell}(\mathbf{k})
+B^{\mathrm{c}}_{\ell m}(\mathbf{k},\omega)
+-
+B^{\mathrm{c}}_{n\ell}(\mathbf{k},\omega)
+r^{\mathrm{b}}_{\ell m}(\mathbf{k})
+\Big)
++
+i
+(B^{\mathrm{c}}_{nm}(\mathbf{k},\omega))_{;k^{\mathrm{b}}}
+\bigg]
+E^{\mathrm{b}}_{\omega}E_{\omega}^{\mathrm{c}}
+\frac{e^{i(\omega^\Sigma_{nm\mathbf{k}}-2\tilde{\omega})t}}
+{\omega^\Sigma_{nm\mathbf{k}}-2\tilde{\omega}}
+\nonumber \\
+&=
+e^{i\omega^\Sigma_{nm\mathbf{k}}t}
+\rho_{nm}^{(2)}(\mathbf{k};t)
+.
+\end{align}
+Now, we write
+$\rho_{nm}^{(2)}(\mathbf{k};t)=\rho_{nm}^{(2)}(\mathbf{k};2\omega)e^{-i2\tilde{\omega} t}$,
+with
+\begin{align}\label{rho2}
+\rho_{nm}^{(2)}(\mathbf{k};2\omega)&=\frac{e}{i\hbar}\frac{1}{\omega^\Sigma_{nm\mathbf{k}}-2\tilde{\omega}}
+\bigg[-(B_{nm}^{\mathrm{c}}(\mathbf{k},\omega)_{;k^{\mathrm{b}}}
++i\sum_\ell\Big(r_{n\ell}^{\mathrm{b}}B_{\ell m}^{\mathrm{c}}(\mathbf{k},\omega) - B_{n\ell}^{\mathrm{c}}(\mathbf{k},\omega)
+  r_{\ell m}^{\mathrm{b}}\Big)
+\bigg] 
+E^{\mathrm{b}}(\omega)E^{\mathrm{c}}(\omega)
+\end{align} 
+where $B_{\ell m}^{\mathrm{a}}(\mathbf{k},\omega)$ are given by Eq.
+\eqref{rho1}. We remark that $\mathbf{r}_{nm}(\mathbf{k})$  are the same whether
+calculated with the LDA or the scissored Hamiltonian (see Eq. \eqref{chon.10}).
+We chose the former in this thesis.}
+
+We can take $\hbar\Delta = E_{g} -
 E_{g}^\mathrm{LDA}$ where $E_{g}$ is the experimental or GW band gap taken at
 the $\Gamma$ point, i.e. $\mathbf{k} = 0$. We used the fact that $\vert
 n\mathbf{k}\rangle^\mathrm{LDA} \approx \vert n\mathbf{k}\rangle^\Sigma$, thus
@@ -347,7 +890,7 @@ where we have defined
 \end{split}
 \end{equation}  
 with $\hat{\mathbf{p}}= -i\hbar\boldsymbol{\nabla}$ the momentum operator. Using
-Eq. \eqref{chon.0}, we obtain that the matrix elements of
+Eq. \eqref{hats}, we obtain that the matrix elements of
 $\hat{\mathbf{v}}^{\mathcal{S}}$ are given by
 \begin{equation}\label{chon.2} 
 \mathbf{v}^{\mathcal{S}}_{nm} = i\Delta f_{mn}\mathbf{r}_{nm},
@@ -411,383 +954,6 @@ Appendix \ref{app:vnlme} we outline how this is accomplished.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Time-dependent Perturbation Theory}\label{tdpt}
-
-In the independent particle approximation, we use the electron density operator
-$\hat{\rho}$ to obtain the expectation value of any observable $\mathcal{O}$ as
-\begin{equation}\label{traza}
-\mathcal{O}
-= \mathrm{Tr}(\hat{\mathcal{O}}\hat{\rho})
-= \mathrm{Tr}(\hat{\rho}\hat{\mathcal{O}}),
-\end{equation}
-where $\mathrm{Tr}$ is the trace and is invariant under cyclic permutations.
-The dynamic equation of motion for $\hat{\rho}$ is given by
-\begin{equation}\label{eqrho}
-i\hbar \frac{d\hat{\rho}}{dt} = \left[\hat{H},\hat{\rho}\right],
-\end{equation}
-where it is more convenient to work in the interaction picture. We transform all
-operators according to
-\begin{equation}\label{ip}
-\hat{\mathcal{O}}_{I} = \hat{U}\hat{\mathcal{O}}\hat{U}^{\dagger},
-\end{equation}
-where
-\begin{equation}\label{ou}
-\hat{U} = e^{i\hat{H}_{0}t/\hbar},
-\end{equation}
-is the unitary operator that shifts us to the interaction picture. Note that
-$\hat{\mathcal{O}}_{I}$ depends on time even if $\hat{\mathcal{O}}$ does not.
-Then, we transform Eq. \eqref{eqrho} into
-\begin{equation}\label{intrho}
-i\hbar\frac{d\hat{\rho}_{I}(t)}{dt}
-= \left[-e\hat{\mathbf{r}}_{I}(t)\cdot\mathbf{E}(t),\hat{\rho}_{I}(t)\right],
-\end{equation}
-that leads to
-\begin{equation}\label{intrho2}
-\hat{\rho}_{I}(t)
-= \hat{\rho}_{I}(t = -\infty)
-+ \frac{ie}{\hbar}\int_{-\infty}^{t}
-  \left[\hat{\mathbf{r}}_{I}(t')\cdot\mathbf{E}(t'),\hat{\rho}_{I}(t')\right]
-   \,dt'.
-\end{equation}
-We assume that the interaction is switched-on adiabatically and choose a
-time-periodic perturbing field, to write
-\begin{equation}\label{efield}
-\mathbf{E}(t)
-= \mathbf{E} e^{-i\omega t}e^{\eta t}
-= \mathbf{E} e^{-i\tilde{\omega} t},
-\end{equation}
-with
-\begin{equation}\label{got}
-\tilde{\omega} =\omega + i\eta,
-\end{equation} 
-where $\eta > 0$ assures that at $t = -\infty$, the interaction is zero and has
-its full strength $\mathbf{E}$ at $t = 0$. After computing the required time
-integrals one takes $\eta\to 0$. Also, $\hat{\rho}_{I}(t = -\infty)$ should be
-time independent and thus $[\hat{H},\hat{\rho}]_{t = -\infty} = 0$. This implies
-that $\hat{\rho}_{I}(t = -\infty) = \hat{\rho}(t =
--\infty)\equiv\hat{\rho}_{0}$, where $\hat{\rho}_{0}$ is the density matrix of
-the unperturbed ground state, such that
-\begin{equation}\label{nrhon}
-\langle n\mathbf{k}\vert \hat{\rho}_{0} \vert m\mathbf{k}'\rangle
-= f_{n}(\hbar\omega^{\Sigma}_{n}(\mathbf{k}))
-\delta_{nm}\delta(\mathbf{k}-\mathbf{k}'),
-\end{equation}
-with $f_{n}(\hbar\omega^{\Sigma}_{n}(\mathbf{k})) = f_{n\mathbf{k}}$ as the
-Fermi-Dirac distribution function.
-
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-We solve Eq. \eqref{intrho2} using the standard iterative
-solution, for which we write
-\begin{equation}\label{rhop}
-\hat{\rho}_{I} = \hat{\rho}_{I}^{(0)} + \hat{\rho}_{I}^{(1)} + \hat{\rho}_{I}^{(2)} + \cdots
-,
-\end{equation}
-where $\hat{\rho}_{I}^{(N)}$ is the density operator to order $N$ in $\mathbf{E}(t)$.
-Then, Eq. \eqref{intrho2} reads
-\begin{equation}\label{intrho3}
-\hat{\rho}_{I}^{(0)} + \hat{\rho}_{I}^{(1)} + \hat{\rho}_{I}^{(2)} + \cdots
-= \hat{\rho}_{0}
-+
-\frac{ie}{\hbar}\int_{-\infty}^t dt'[\hat{\mathbf{r}}_{I}(t')\cdot\mathbf{E}(t'),
-\hat{\rho}_{I}^{(0)}+\hat{\rho}_{I}^{(1)}+\hat{\rho}_{I}^{(2)}+\cdots
-]
-,
-\end{equation}
-where, by equating equal orders in the perturbation, we find
-\begin{equation}\label{rho0}
-\hat{\rho}_{I}^{(0)}\equiv\hat{\rho}_{0}
-,
-\end{equation}
-and
-\begin{equation}\label{rhoN}
-\hat{\rho}_{I}^{(N)}(t)=
-\frac{ie}{\hbar}
-\int_{-\infty}^t dt'[\hat{\mathbf{r}}_{I}(t')\cdot\mathbf{E}(t'),\hat{\rho}^{(N-1)}_{I}(t')].
-\end{equation}
-It is simple to show that matrix elements of Eq. (\ref{rhoN}) satisfy
-$\langle n\mathbf{k}| \rho_{I}^{(N+1)}(t) |m\mathbf{k}'\rangle = \rho^{(N+1)}_{I,nm}(\mathbf{k})\delta(\mathbf{k}-\mathbf{k}')$,
-with
-\begin{equation}\label{rtilde}
-\rho^{(N+1)}_{I,nm}(\mathbf{k};t)
-=\frac{ie}{\hbar}\int_{-\infty}^t dt'
-\langle n\mathbf{k}|
-[\hat{\mathbf{r}}_{I}(t'),\hat{\rho}^{(N)}_{I}(t')]
-|m\mathbf{k}\rangle
-\cdot\mathbf{E}(t').
-\end{equation}
-This shows that the $N + 1$ solution is determined by the $N$th solution, which
-in turn is determined by the $N - 1$ solution, and so on. Starting from the
-zeroth order solution given in Eq. \eqref{rho0}, we can solve for any desired
-order.
-
-We now work out the commutator of Eq. \eqref{rtilde}. Then,
-\begin{align}\label{conmu1}
-\langle n\mathbf{k}|
-[\hat{\mathbf{r}}_{I}(t),\hat{\rho}^{(N)}_{I}(t)]
-|m\mathbf{k}\rangle
-&=
-\langle n\mathbf{k}|
-[\hat{U}\hat{\mathbf{r}}\hat{U}^\dagger,\hat{U}\hat{\rho}^{(N)}(t)\hat{U}^\dagger]
-|m\mathbf{k}\rangle
-\nonumber \\
-&=
-\langle n\mathbf{k}|
-\hat{U}[\hat{\mathbf{r}},\hat{\rho}^{(N)}(t)]\hat{U}^\dagger
-|m\mathbf{k}\rangle
-\\
-&=
-e^{i\omega^\Sigma_{nm\mathbf{k}}t}
-\left(
-\langle n\mathbf{k}|
-[\hat{\mathbf{r}}_e,\hat{\rho}^{(N)}(t)]
-+
-[\hat{\mathbf{r}}_i,\hat{\rho}^{(N)}(t)]
-|m\mathbf{k}\rangle
-\right)
-\nonumber
-.
-\end{align}
-% where the time dependence of operator's interaction picture is
-% explicitly shown by the exponential factor, and the implicit
-% dependence of $\hat{\rho}^{(N)}$ inherited from Eq. \eqref{eqrho} is
-% shown by its $t$ argument.
-We calculate the interband term first, so using Eq. \eqref{chon.98} we obtain
-\begin{align}\label{conmu2}
-\langle n\mathbf{k}|
-[\hat{\mathbf{r}}_e,\hat{\rho}^{(N)}(t)]
-|m\mathbf{k}\rangle
-&=
-\sum_{\ell}
-\left(
-\langle n\mathbf{k}|
-\hat{\mathbf{r}}_e
-|\ell\mathbf{k}\rangle
-\langle \ell\mathbf{k}|
-\hat{\rho}^{(N)}(t)
-|m\mathbf{k}\rangle
--
-\langle n\mathbf{k}|
-\hat{\rho}^{(N)}(t)
-|\ell\mathbf{k}\rangle
-\langle \ell\mathbf{k}|
-\hat{\mathbf{r}}_e
-|m\mathbf{k}\rangle
-\right)
-\nonumber \\
-&=
-\sum_{\ell\ne n,m}
-\left(
-\mathbf{r}_{n\ell}(\mathbf{k})
-\rho^{(N)}_{\ell m}(\mathbf{k};t)
--
-\rho^{(N)}_{n\ell}(\mathbf{k};t)
-\mathbf{r}_{\ell m}(\mathbf{k})
-\right)
-\nonumber\\
-&\equiv
-\mathbf{R}^{(N)}_e(\mathbf{k};t)
-,
-\end{align}
-and from Eq. \eqref{conmri3n},
-\begin{equation}\label{conmri4}
-\langle n\mathbf{k}|
-[\hat{\mathbf{r}}_i,\hat{\rho}^{(N)}(t)]
-|m\mathbf{k}'\rangle
-=i \delta(\mathbf{k}-\mathbf{k}') (\rho^{(N)}_{nm}(t))_{;\mathbf{k}}
-\equiv \delta(\mathbf{k}-\mathbf{k}')\mathbf{R}_i^{(N)}(\mathbf{k};t).
-\end{equation}
-Then Eq. \eqref{rtilde} becomes
-\begin{equation}\label{rtilde2}
-\rho^{(N+1)}_{I,nm}(\mathbf{k};t)
-=\frac{ie}{\hbar}\int_{-\infty}^t dt'
-e^{i(\omega^\Sigma_{nm\mathbf{k}}-\tilde{\omega})t'}
-\left[R_e^{\mathrm{b}(N)}(\mathbf{k};t')+R_i^{\mathrm{b}(N)}(\mathbf{k};t')\right]E^{\mathrm{b}}
-,
-\end{equation}
-where the roman superindices
-$\mathrm{a},\mathrm{b},\mathrm{c}$ denote Cartesian components that are summed over if repeated.
-Starting from the linear response and proceeding from Eq. \eqref{nrhon} and  \eqref{conmu2},
-\begin{align}\label{R0e}
-R_e^{\mathrm{b}(0)}(\mathbf{k};t)
-&=
-\sum_{\ell}
-\left(
-r^{\mathrm{b}}_{n\ell}(\mathbf{k})
-\rho^{(0)}_{\ell m}(\mathbf{k})
--
-\rho^{(0)}_{n\ell}(\mathbf{k})
-r^{\mathrm{b}}_{\ell m}(\mathbf{k})
-\right)
-\nonumber \\
-&=
-\sum_{\ell}
-\left(
-r^{\mathrm{b}}_{n\ell}(\mathbf{k})
-\delta_{\ell m}f_m(\hbar\omega^\Sigma_m(\mathbf{k}))
--
-\delta_{n\ell}f_n(\hbar\omega^{\Sigma}_{n}(\mathbf{k}))
-r^{\mathrm{b}}_{\ell m}(\mathbf{k})
-\right)
-\nonumber \\
-&=
-f_{mn\mathbf{k}}
-r^{\mathrm{b}}_{nm}(\mathbf{k})
-,
-\end{align}
-where $f_{mn\mathbf{k}}=f_{m\mathbf{k}}-f_{n\mathbf{k}}$.
-From now on,
-it should be clear that the matrix elements of $\mathbf{r}_{nm}$ imply
-$n\notin D_m$.
-We also have from Eq. \eqref{conmri4} and Eq. \eqref{gendevnn} that
-\begin{equation}\label{R0i}
-R_i^{\mathrm{b}(0)}(\mathbf{k})=i(\rho^{(0)}_{nm})_{;k^{\mathrm{b}}}=i\delta_{nm}(f_{n\mathbf{k}})_{;k^{\mathrm{b}}}=i\delta_{nm}\nabla_{k^{\mathrm{b}}} f_{n\mathbf{k}}
-.
-\end{equation}
-For a semiconductor at $T = 0$, $f_{n\mathbf{k}} = 1$ if the state
-$|n\mathbf{k}\rangle$ is a valence state and $f_{n\mathbf{k}} = 0$ if it is a
-conduction state. Thus, $\nabla_\mathbf{k} f_{n\mathbf{k}} = 0$,
-$\mathbf{R}_i^{(0)} = 0$ and the linear response has no contribution from the
-intraband transitions. Then,
-\begin{align}\label{rtilde2n}
-\rho^{(1)}_{I,nm}(\mathbf{k};t)
-&=\frac{ie}{\hbar}
-f_{mn\mathbf{k}}
-r^{\mathrm{b}}_{nm}(\mathbf{k})E^{\mathrm{b}}
-\int_{-\infty}^t dt'
-e^{i(\omega^\Sigma_{nm\mathbf{k}}-\tilde{\omega})t'}
-\nonumber \\
-&=\frac{e}{\hbar}
-f_{mn\mathbf{k}}
-r^{\mathrm{b}}_{nm}(\mathbf{k})E^{\mathrm{b}}
-\frac{e^{i(\omega^\Sigma_{nm\mathbf{k}}-\tilde{\omega})t}}
-{\omega^\Sigma_{nm\mathbf{k}}-\tilde{\omega}}
-\nonumber \\
-&=
-e^{i\omega^\Sigma_{nm\mathbf{k}}t}
-B^{\mathrm{b}}_{mn}(\mathbf{k})E^{\mathrm{b}}(t)
-\nonumber \\
-&=
-e^{i\omega^\Sigma_{nm\mathbf{k}}t}
-\rho^{(1)}_{nm}(\mathbf{k};t)
-,
-\end{align}
-with
-\begin{equation}\label{rho1} 
-B^{\mathrm{b}}_{nm}(\mathbf{k},\omega)=
-\frac{e}{\hbar}\frac{f_{mn\mathbf{k}}r^{\mathrm{b}}_{nm}(\mathbf{k})}{\omega^\Sigma_{nm\mathbf{k}}-\tilde{\omega}}
-,
-\end{equation} 
-and
-\begin{equation}\label{rhonoi1}
-\rho^{(1)}_{nm}(\mathbf{k};t)=B^{\mathrm{b}}_{mn}(\mathbf{k},\omega)E^{\mathrm{b}}(\omega)e^{-i\tilde{\omega} t}
-.
-\end{equation}
-
-Now, we calculate the second-order response. Then, from Eq. \eqref{conmu2}
-\begin{align}\label{R1e}
-R_e^{\mathrm{b}(1)}(\mathbf{k};t)
-&=
-\sum_{\ell}
-\left(
-r^{\mathrm{b}}_{n\ell}(\mathbf{k})
-\rho^{(1)}_{\ell m}(\mathbf{k};t)
--
-\rho^{(1)}_{n\ell}(\mathbf{k};t)
-r^{\mathrm{b}}_{\ell m}(\mathbf{k})
-\right)
-\nonumber \\
-&=
-\sum_{\ell}
-\left(
-r^{\mathrm{b}}_{n\ell}(\mathbf{k})
-B^{\mathrm{c}}_{\ell m}(\mathbf{k},\omega)
--
-B^{\mathrm{c}}_{n\ell}(\mathbf{k},\omega)
-r^{\mathrm{b}}_{\ell m}(\mathbf{k})
-\right)E^{\mathrm{c}}(t)
-,
-\end{align}
-and from Eq. \eqref{conmri4}
-\begin{equation}\label{R1i}
-R_i^{\mathrm{b}(1)}(\mathbf{k};t)=
-i(\rho^{(1)}_{nm}(t))_{;k^{\mathrm{b}}}=
-iE^{\mathrm{c}}(t)(B^{\mathrm{c}}_{nm}(\mathbf{k},\omega))_{;k^{\mathrm{b}}}
-.
-\end{equation}
-
-Using Eqs. \eqref{R1e} and  \eqref{R1i} in Eq. (\ref{rtilde2}),
-we obtain
-\begin{align}\label{rtilde33}
-\rho^{(2)}_{I,nm}(\mathbf{k};t)
-&=
-\frac{ie}{\hbar}
-\bigg[
-\sum_{\ell}
-\Big(
-r^{\mathrm{b}}_{n\ell}(\mathbf{k})
-B^{\mathrm{c}}_{\ell m}(\mathbf{k},\omega)
--
-B^{\mathrm{c}}_{n\ell}(\mathbf{k},\omega)
-r^{\mathrm{b}}_{\ell m}(\mathbf{k})
-\Big)
-+
-i
-(B^{\mathrm{c}}_{nm}(\mathbf{k},\omega))_{;k^{\mathrm{b}}}
-\bigg]
-E^{\mathrm{b}}_{\omega}E_{\omega}^{\mathrm{c}}
-\int_{-\infty}^t dt'
-e^{i(\omega^\Sigma_{nm\mathbf{k}}-2\tilde{\omega})t'}
-\nonumber \\
-&=
-\frac{e}{\hbar}
-\bigg[
-\sum_{\ell}
-\Big(
-r^{\mathrm{b}}_{n\ell}(\mathbf{k})
-B^{\mathrm{c}}_{\ell m}(\mathbf{k},\omega)
--
-B^{\mathrm{c}}_{n\ell}(\mathbf{k},\omega)
-r^{\mathrm{b}}_{\ell m}(\mathbf{k})
-\Big)
-+
-i
-(B^{\mathrm{c}}_{nm}(\mathbf{k},\omega))_{;k^{\mathrm{b}}}
-\bigg]
-E^{\mathrm{b}}_{\omega}E_{\omega}^{\mathrm{c}}
-\frac{e^{i(\omega^\Sigma_{nm\mathbf{k}}-2\tilde{\omega})t}}
-{\omega^\Sigma_{nm\mathbf{k}}-2\tilde{\omega}}
-\nonumber \\
-&=
-e^{i\omega^\Sigma_{nm\mathbf{k}}t}
-\rho_{nm}^{(2)}(\mathbf{k};t)
-.
-\end{align}
-Now, we write
-$\rho_{nm}^{(2)}(\mathbf{k};t)=\rho_{nm}^{(2)}(\mathbf{k};2\omega)e^{-i2\tilde{\omega} t}$,
-with
-\begin{align}\label{rho2}
-\rho_{nm}^{(2)}(\mathbf{k};2\omega)&=\frac{e}{i\hbar}\frac{1}{\omega^\Sigma_{nm\mathbf{k}}-2\tilde{\omega}}
-\bigg[-(B_{nm}^{\mathrm{c}}(\mathbf{k},\omega)_{;k^{\mathrm{b}}}
-+i\sum_\ell\Big(r_{n\ell}^{\mathrm{b}}B_{\ell m}^{\mathrm{c}}(\mathbf{k},\omega) - B_{n\ell}^{\mathrm{c}}(\mathbf{k},\omega)
-  r_{\ell m}^{\mathrm{b}}\Big)
-\bigg] 
-E^{\mathrm{b}}(\omega)E^{\mathrm{c}}(\omega)
-\end{align} 
-where $B_{\ell m}^{\mathrm{a}}(\mathbf{k},\omega)$ are given by Eq.
-\eqref{rho1}. We remark that $\mathbf{r}_{nm}(\mathbf{k})$  are the same whether
-calculated with the LDA or the scissored Hamiltonian (see Eq. \eqref{chon.10}).
-We chose the former in this thesis.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Layered Current Density}\label{cd}
 
 In this section, we derive the expressions for the microscopic current density
@@ -840,7 +1006,7 @@ Now, we show how this ``cut function'' $\mathcal{C}^{\ell}(z)$ is introduced in
 the calculation of $\chi^{\mathrm{abc}}$. 
 The microscopic current density is given by
 \begin{equation}\label{jmic}
-\mathbf{j}(\mathbf{r},t)=\mathrm{Tr}(\hat{\mathbf{j}}(\mathbf{r})\hat{\rho}(t)),
+\mathbf{j}(\mathbf{r},t)=\mathrm{Tr}(\hat{\mathbf{j}}(\mathbf{r})\tilde{\rho}(t)),
 \end{equation}
 where the operator for the electron's current is
 \begin{equation}\label{hatjmic}
@@ -852,19 +1018,19 @@ with below. We define
 $\hat{\mu} \equiv |\mathbf{r}\rangle\langle\mathbf{r}|$ and use the cyclic invariance of
 the trace to write
 \begin{align}\label{jmic2}
-\mathrm{Tr}(\hat{\mathbf{j}}(\mathbf{r})\hat{\rho}(t)
-&= \mathrm{Tr}(\hat{\rho}(t)\hat{\mathbf{j}}(\mathbf{r}))
+\mathrm{Tr}(\hat{\mathbf{j}}(\mathbf{r})\tilde{\rho}(t)
+&= \mathrm{Tr}(\tilde{\rho}(t)\hat{\mathbf{j}}(\mathbf{r}))
 = \frac{e}{2}
 \left(
-  \mathrm{Tr}(\hat{\rho}\hat{\mathbf{v}}^{\Sigma}\hat{\mu})
-+ \mathrm{Tr}(\hat{\rho}\hat{\mu}\hat{\mathbf{v}}^{\Sigma})
+  \mathrm{Tr}(\tilde{\rho}\hat{\mathbf{v}}^{\Sigma}\hat{\mu})
++ \mathrm{Tr}(\tilde{\rho}\hat{\mu}\hat{\mathbf{v}}^{\Sigma})
 \right)\nonumber\\
 &= \frac{e}{2}\sum_{n\mathbf{k}}
 \left(
-\langle n\mathbf{k}| \hat{\rho}\hat{\mathbf{v}}^{\Sigma}\hat{\mu} |n\mathbf{k}\rangle
-+ \langle n\mathbf{k}| \hat{\rho}\hat{\mu}\hat{\mathbf{v}}^{\Sigma} |n\mathbf{k}\rangle
+\langle n\mathbf{k}| \tilde{\rho}\hat{\mathbf{v}}^{\Sigma}\hat{\mu} |n\mathbf{k}\rangle
++ \langle n\mathbf{k}| \tilde{\rho}\hat{\mu}\hat{\mathbf{v}}^{\Sigma} |n\mathbf{k}\rangle
 \right)\nonumber\\
-&= \frac{e}{2}\sum_{nm\mathbf{k}}\langle n\mathbf{k}|\hat{\rho} |m\mathbf{k}\rangle
+&= \frac{e}{2}\sum_{nm\mathbf{k}}\langle n\mathbf{k}|\tilde{\rho} |m\mathbf{k}\rangle
 \left(
 \langle m\mathbf{k}| \hat{\mathbf{v}}^{\Sigma}|\mathbf{r}\rangle \langle\mathbf{r}|n\mathbf{k}\rangle
 + \langle m\mathbf{k}|\mathbf{r}\rangle \langle\mathbf{r}| \hat{\mathbf{v}}^{\Sigma} |n\mathbf{k}\rangle
