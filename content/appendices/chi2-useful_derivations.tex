@@ -211,8 +211,8 @@ Eq. \eqref{rnmi} to obtain
 \boldsymbol{\xi}_{nn}(\mathbf{k})-\boldsymbol{\xi}_{mm}(\mathbf{k})
 \right)
 + i\mathcal{O}_{n m}(\mathbf{k}')\nabla_{\mathbf{k}}
-  \delta(\mathbf{k}-\mathbf{k}')
-+ i\delta(\mathbf{k}-\mathbf{k}')\nabla_{\mathbf{k}}
+  \delta(\mathbf{k}-\mathbf{k}')\nonumber\\
+&\qquad\qquad\qquad\qquad\qquad+ i\delta(\mathbf{k}-\mathbf{k}')\nabla_{\mathbf{k}}
   \mathcal{O}_{n m}(\mathbf{k})
 - i\mathcal{O}_{n m}(\mathbf{k}')\nabla_{\mathbf{k}}
   \delta(\mathbf{k}-\mathbf{k}')\nonumber\\
@@ -478,8 +478,8 @@ We work out the first term on the right hand side,
 \vert\mathbf{r}\rangle\langle\mathbf{r}\vert  
 C^{\ell}(z) 
 \vert\mathbf{r}'\rangle\langle\mathbf{r}'\vert
-\vert\mathbf{k}+\mathbf{G}\rangle
-\times 
+\vert\mathbf{k}+\mathbf{G}\rangle \nonumber\\
+&\qquad\qquad \times 
 \int d\mathbf{r}'' 
 \int d\mathbf{r}''' 
 \langle\mathbf{k}+\mathbf{G}\vert
@@ -494,8 +494,8 @@ C^{\ell}(z)
 \langle n\mathbf{k}\vert\mathbf{r}\rangle
 C^{\ell}(z) 
 \delta(\mathbf{r}-\mathbf{r}') 
-\langle\mathbf{r}'\vert\mathbf{k}+\mathbf{G}\rangle
-\times 
+\langle\mathbf{r}'\vert\mathbf{k}+\mathbf{G}\rangle \nonumber\\
+&\qquad\qquad \times 
 \int d\mathbf{r}'' 
 \int d\mathbf{r}''' 
 \langle\mathbf{k}+\mathbf{G}\vert\mathbf{r}''\rangle
@@ -508,8 +508,8 @@ C^{\ell}(z)
 \int d\mathbf{r} 
 \langle n\mathbf{k}\vert\mathbf{r}\rangle
 C^{\ell}(z) 
-\langle\mathbf{r}\vert\mathbf{k}+\mathbf{G}\rangle
-\times 
+\langle\mathbf{r}\vert\mathbf{k}+\mathbf{G}\rangle \nonumber\\
+&\qquad\qquad \times 
 \frac{i}{\hbar}
 \int d\mathbf{r}'' 
 \int d\mathbf{r}''' 
@@ -1032,8 +1032,8 @@ i\sum_{q}
 + i\left(
   \xi_{nn}^\mathrm{a}\mathcal{C}^{\ell}_{nm}
 - \mathcal{C}^{\ell}_{nn}\xi_{nm}^\mathrm{a}
-\right)_{q=n}
-+ i\left(
+\right)_{q=n}\nonumber\\
+&+ i\left(
   \xi_{nm}^\mathrm{a}\mathcal{C}^{\ell}_{mm}
 - \mathcal{C}^{\ell}_{nm}\xi_{mm}^\mathrm{a}
 \right)_{q=m}
@@ -1834,7 +1834,9 @@ I &= -\frac{e^3}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
         {2\omega^\Sigma_{qv}-\omega^\Sigma_{cv}}
 \right]\frac{1}{\omega^\Sigma_{cv}-2\tilde\omega}\right).
 \end{align*}
-{\color{red} Add appendix A from article and modify the I terms to be chis to present the final chis from the article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Add appendix A from article and modify the I terms to be chis to present the final chis from the article
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We use \eqref{limit_eta},
 \begin{align*}
 I = \frac{\pi|e^3|}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
@@ -1964,8 +1966,8 @@ and
 \sum_{\ell\mathbf{k}''}
 \bigg(
 (1-\delta_{n\ell})\delta(\mathbf{k}-\mathbf{k}'')\xi^{\mathrm{a}}_{n\ell}
-\delta(\mathbf{k}''-\mathbf{k}')v^{\mathrm{LDA},\mathrm{b}}_{\ell m}
--
+\delta(\mathbf{k}''-\mathbf{k}')v^{\mathrm{LDA},\mathrm{b}}_{\ell m}\nonumber\\
+&\qquad\qquad\qquad-
 \delta(\mathbf{k}-\mathbf{k}'')v^{\mathrm{LDA},\mathrm{b}}_{n\ell}
 (1-\delta_{\ell m})\delta(\mathbf{k}''-\mathbf{k}')\xi^{\mathrm{a}}_{\ell m}
 \bigg)
@@ -2474,8 +2476,8 @@ Then,
 &= \frac{1}{\hbar^{2}}
 \int \psi^{*}_{n\mathbf{k}}(\mathbf{r})
 \Big(
-  r^{\mathrm{a}}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{b}}
-- V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{a}}r^{\prime\mathrm{b}}
+  r^{\mathrm{a}}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{b}}\nonumber\\
+&\qquad\qquad\qquad- V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{a}}r^{\prime\mathrm{b}}
 - r^\mathrm{b}r^{\mathrm{a}}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
 + r^\mathrm{b}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{a}}
 \Big)
@@ -2579,11 +2581,11 @@ which is an explicit expression that can be numerically calculated.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Scissors renormalization for 
-\texorpdfstring{$\mathcal{V}^\Sigma_{nm}$}{Vnm}}
+\texorpdfstring{$\boldsymbol{\mathcal{V}}^\Sigma_{nm}$}{Vnm}}
 \label{app:voila}
 
-{\color{red} add some text here yo}
-
+We derive the scissors renormalization for
+$\boldsymbol{\mathcal{V}}^{\Sigma}_{nm}$. For the scissors case, we have
 \begin{align}\label{cdg.1}
 \langle n\mathbf{k}\vert\mathcal{C}(z)\mathbf{r}\vert m\mathbf{k}\rangle(E^\Sigma_m-E^\Sigma_n) 
 &=
@@ -2600,13 +2602,12 @@ which is an explicit expression that can be numerically calculated.
 -i\int d\mathbf{r}\,\psi^*_{n\mathbf{k}}(\mathbf{r}) 
 \mathcal{C}(z)\mathbf{v}^\Sigma 
 \psi_{m\mathbf{k}}(\mathbf{r}) 
-\to 
-\boldsymbol{\mathcal{V}}^\Sigma_{nm}
-\nonumber\\
+= \boldsymbol{\mathcal{V}}^\Sigma_{nm}\nonumber\\
 \langle n\mathbf{k}\vert\mathcal{C}(z)\mathbf{r}\vert m\mathbf{k}\rangle
-&\to 
-\frac{\boldsymbol{\mathcal{V}}^\Sigma_{nm}}{\omega^\Sigma_{nm}}
-\nonumber\\
+&= \frac{\boldsymbol{\mathcal{V}}^\Sigma_{nm}}{\omega^\Sigma_{nm}}.
+\end{align}
+For the LDA case, we have
+\begin{align}
 \langle n\mathbf{k}\vert\mathcal{C}(z)\mathbf{r}\vert m\mathbf{k}\rangle(E^\mathrm{LDA}_m-E^\mathrm{LDA}_n) 
 &=
 \int d\mathbf{r}\,\psi^*_{n\mathbf{k}}(\mathbf{r}) 
@@ -2622,18 +2623,17 @@ which is an explicit expression that can be numerically calculated.
 -i\int d\mathbf{r}\,\psi^*_{n\mathbf{k}}(\mathbf{r}) 
 \mathcal{C}(z)\mathbf{v}^\mathrm{LDA} 
 \psi_{m\mathbf{k}}(\mathbf{r}) 
-\to 
+=
 \boldsymbol{\mathcal{V}}^\mathrm{LDA}_{nm}
 \nonumber\\
 \langle n\mathbf{k}\vert\mathcal{C}(z)\mathbf{r}\vert m\mathbf{k}\rangle
-&\to 
-\frac{\boldsymbol{\mathcal{V}}^\mathrm{LDA}_{nm}}{\omega^\mathrm{LDA}_{nm}}
-\nonumber\\
+&= \frac{\boldsymbol{\mathcal{V}}^\mathrm{LDA}_{nm}}{\omega^\mathrm{LDA}_{nm}}.
+\end{align}
+Then, using the previous two equations, it follows that
+\begin{align}
 \boldsymbol{\mathcal{V}}^\Sigma_{nm}
-&=
-\frac{\omega^\Sigma_{nm}}{\omega^\mathrm{LDA}_{nm}}
-\boldsymbol{\mathcal{V}}^\mathrm{LDA}_{nm}\quad{\mathrm{voila}!!!}
-.
+&= \frac{\omega^\Sigma_{nm}}{\omega^\mathrm{LDA}_{nm}}
+\boldsymbol{\mathcal{V}}^\mathrm{LDA}_{nm}.
 \end{align}
 
 \stopcontents[chapters]

@@ -659,9 +659,9 @@ e^{i(\omega^{\Sigma}_{nm} - \tilde{\omega})t'}
 \right]
 E^{\mathrm{b}}\,dt',
 \end{equation}
-where the roman superindices
-$\mathrm{a},\mathrm{b},\mathrm{c}$ denote Cartesian components that are summed over if repeated.
-Starting from the linear response and proceeding from Eq. \eqref{nrhon} and  \eqref{conmu2},
+where the roman superindices $\mathrm{abc}$ denote Cartesian components that are
+summed over if repeated. Starting from the linear response and proceeding from
+Eq. \eqref{nrhon} and  \eqref{conmu2},
 \begin{align}\label{R0e}
 R_e^{\mathrm{b}(0)}(\mathbf{k};t)
 &=
@@ -796,10 +796,12 @@ e^{i(\omega^\Sigma_{nm}-2\tilde{\omega})t}
 &= e^{i\omega^\Sigma_{nm}t}\rho_{nm}^{(2)}(\mathbf{k};t).
 \end{align}
 Now, we write
-$\rho_{nm}^{(2)}(\mathbf{k};t)=\rho_{nm}^{(2)}(\mathbf{k};2\omega)e^{-i2\tilde{\omega}t}$,
+$\rho_{nm}^{(2)}(\mathbf{k};t)
+=\rho_{nm}^{(2)}(\mathbf{k};2\omega)e^{-i2\tilde{\omega}t}$,
 with
 \begin{align}\label{rho2}
-\rho_{nm}^{(2)}(\mathbf{k};2\omega)&=\frac{e}{i\hbar}\frac{1}{\omega^\Sigma_{nm}-2\tilde{\omega}}
+\rho_{nm}^{(2)}(\mathbf{k};2\omega)
+&=\frac{e}{i\hbar}\frac{1}{\omega^\Sigma_{nm}-2\tilde{\omega}}
 \bigg[
 i\sum_q
 \Big(
@@ -870,9 +872,10 @@ distance that the $\ell$-th layer extends towards the front $(f)$ or back $(b)$
 from its $z_\ell$ position. We take $z_\ell$ to be at the center of an atom that
 belongs to layer $\ell$, so the previous equation would give the $\ell$-th
 atomic-layer contribution to the nonlinear optical response.
-$\Delta_\ell^f+\Delta_\ell^b$ is the thickness of layer $\ell$ (see
+$\Delta_{\ell}^{f}+\Delta_{\ell}^{b}$ is the thickness of layer $\ell$ (see
 Fig. \ref{fslab}).
-\begin{figure}
+
+\begin{figure}[b]
 \centering
 \includegraphics[scale=.7]{content/figures/diag-slab}
 \caption{A sketch of the super-cell. The atomic slab corresponds to the circles
@@ -1126,9 +1129,10 @@ the right hand side of Eq. \eqref{Pjikn2}:
 =-\frac{e^3}{A\hbar^22\tilde\omega}
 \int \frac{d^3 k}{8\pi^3}
 \sum_{mn}
-\frac{\boldsymbol{\mathcal{V}}_{mn}^{\Sigma,\mathrm{a}}}{\omega^\Sigma_{nm}-2\tilde\omega}
-\left(\frac{f_{mn}r_{nm}^{\mathrm{b}}}{\omega^\Sigma_{nm}-\tilde\omega}\right)_{;k^{\mathrm{c}}}
-,
+\frac{\boldsymbol{\mathcal{V}}_{mn}^{\Sigma,\mathrm{a}}}
+{\omega^\Sigma_{nm}-2\tilde\omega}
+\left(\frac{f_{mn}r_{nm}^{\mathrm{b}}}
+{\omega^\Sigma_{nm}-\tilde\omega}\right)_{;k^{\mathrm{c}}},
 \label{chii}
 \end{equation} 
 related to intraband transitions, and 
@@ -1149,10 +1153,12 @@ f_{qn}}{\omega^\Sigma_{nq}-\tilde\omega}
 related to interband transitions. The generalized derivative in Eq. \eqref{chii}
 is dealt with by the chain rule
 \begin{equation}
-\left(\frac{f_{mn}r_{nm}^{\mathrm{b}}}{\omega^\Sigma_{nm}-\tilde\omega}\right)_{;k^{\mathrm{c}}}=
-\frac{f_{mn}}{\omega^\Sigma_{nm}-\tilde\omega}\left(r_{nm}^\mathrm{b}\right)_{;k^{\mathrm{c}}}
--\frac{f_{mn}r_{nm}^{\mathrm{b}}\Delta_{nm}^\mathrm{c}}{(\omega^\Sigma_{nm}-\tilde\omega)^2}
-,
+\left(\frac{f_{mn}r_{nm}^{\mathrm{b}}}
+{\omega^\Sigma_{nm}-\tilde\omega}\right)_{;k^{\mathrm{c}}}=
+\frac{f_{mn}}{\omega^\Sigma_{nm}-\tilde\omega}
+\left(r_{nm}^\mathrm{b}\right)_{;k^{\mathrm{c}}}
+-\frac{f_{mn}r_{nm}^{\mathrm{b}}\Delta_{nm}^\mathrm{c}}
+{(\omega^\Sigma_{nm}-\tilde\omega)^2},
 \label{gene2}
 \end{equation}
 where substituting $H^\Sigma_0$ into Eq. \eqref{conmri3n} and then Eq.
@@ -1176,9 +1182,11 @@ $\eta\to 0$, we obtain the following expressions for the imaginary parts of Eqs.
 \int \frac{d^3 k}{8\pi^3}
 \sum_{vc}\sum_{q\neq(v,c)}\frac{1}{\omega^\Sigma_{cv}}
 \left[
-\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{qc}\{r^{\mathrm{b}}_{cv}r^{\mathrm{c}}_{vq}\}]}
+\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{qc}
+\{r^{\mathrm{b}}_{cv}r^{\mathrm{c}}_{vq}\}]}
 {(2\omega^\Sigma_{cv}-\omega^\Sigma_{cq})} 
--\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vq}\{r^{\mathrm{c}}_{qc}r^{\mathrm{b}}_{cv}\}]}
+-\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vq}
+\{r^{\mathrm{c}}_{qc}r^{\mathrm{b}}_{cv}\}]}
 {(2\omega^\Sigma_{cv}-\omega^\Sigma_{qv})}
 \right]\delta(\omega^\Sigma_{cv}-\omega),
 \end{equation}  
@@ -1188,9 +1196,12 @@ $\eta\to 0$, we obtain the following expressions for the imaginary parts of Eqs.
 \int \frac{d^3 k}{8\pi^3}
 \sum_{cv}\frac{1}{(\omega^\Sigma_{cv})^{2}}
 \left[
-\mathrm{Re}\left[\left\{r^{\mathrm{b}}_{cv}\left(\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\right)_{;k^{\mathrm{c}}}\right\}\right]
-+\frac{\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\left\{r^{\mathrm{b}}_{cv}
-\Delta^{\mathrm{c}}_{cv}\right\}\right]}{\omega^\Sigma_{cv}} 
+\mathrm{Re}\left[\left\{r^{\mathrm{b}}_{cv}
+\left(\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\right)_{;k^{\mathrm{c}}}\right\}
+\right]
++\frac{\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}
+\left\{r^{\mathrm{b}}_{cv}\Delta^{\mathrm{c}}_{cv}\right\}
+\right]}{\omega^\Sigma_{cv}} 
 \right]\delta(\omega^\Sigma_{cv}-\omega),
 \end{equation}
 \begin{equation}
@@ -1200,10 +1211,12 @@ $\eta\to 0$, we obtain the following expressions for the imaginary parts of Eqs.
 \sum_{vc}\frac{4}{\omega^\Sigma_{cv}}
 \left[
 \sum_{v'\ne
-  v}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\{r^{\mathrm{b}}_{cv'}r^{\mathrm{c}}_{v'v}\}]}
+  v}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}
+  \{r^{\mathrm{b}}_{cv'}r^{\mathrm{c}}_{v'v}\}]}
 {2\omega^\Sigma_{cv'}-\omega^\Sigma_{cv}}
 - \sum_{c'\ne
-  c}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\{r^{\mathrm{c}}_{cc'}r^{\mathrm{b}}_{c'v}\}]}
+  c}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}
+  \{r^{\mathrm{c}}_{cc'}r^{\mathrm{b}}_{c'v}\}]}
 {2\omega^\Sigma_{c'v}-\omega^\Sigma_{cv}}
 \right]\delta(\omega^\Sigma_{cv}-2\omega),
 \end{equation}
@@ -1213,11 +1226,12 @@ $\eta\to 0$, we obtain the following expressions for the imaginary parts of Eqs.
    e\vert^{3}}{2\hbar^2}
 \int \frac{d^3 k}{8\pi^3}
 \sum_{vc}\frac{4}{(\omega^\Sigma_{cv})^{2}}
-\left[\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\left\{\left(r^{\mathrm{b}}_{cv}\right)_{;k^{\mathrm{c}}}
+\left[\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}
+\left\{\left(r^{\mathrm{b}}_{cv}\right)_{;k^{\mathrm{c}}}
 \right\}\right] -
-\frac{2\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\left\{r^{\mathrm{b}}_{cv}
-\Delta^{\mathrm{c}}_{cv}\right\}\right]}{\omega^\Sigma_{cv}}\right]\delta(\omega^\Sigma_{cv}-2\omega)
-,
+\frac{2\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}
+\left\{r^{\mathrm{b}}_{cv}\Delta^{\mathrm{c}}_{cv}\right\}\right]}
+{\omega^\Sigma_{cv}}\right]\delta(\omega^\Sigma_{cv}-2\omega),
 \end{equation}
 \end{subequations}
 where we have split the interband and intraband $1\omega$ and $2\omega$
@@ -1233,17 +1247,16 @@ $.
 To fulfill the required intrinsic permutation symmetry, the $\{\}$ notation
 symmetrizes the $\mathrm{b}\mathrm{c}$ Cartesian indices, i.e. $\{u^{\mathrm{b}}
 s^{\mathrm{c}}\}=(u^{\mathrm{b}}s^{\mathrm{c}}+u^{\mathrm{c}}s^{\mathrm{b}})/2$,
-and thus
-$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}=\chi^{\mathrm{a}\mathrm{c}\mathrm{b}}$.
-The full expressions for
-$\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$, along with the
-various quantities involved in Eq. \eqref{eq:chis} are given in the Appendix
-\ref{appv}. We mention that if we take $\boldsymbol{\mathcal{C}}(z)=1$ through
-out, the layered matrix elements $\boldsymbol{\mathcal{V}}^{\Sigma}_{nm}$ become
-standard bulk-like $\mathbf{v}^{\Sigma}_{nm}$ matrix elements. We mention that
-in this case, Eq. \eqref{eq:chis} is equivalent to the expressions of Ref.
-\cite{cabellosPRB09}, valid for bulk semiconductors. Finally, we could also
-calculate the nonlinear surface susceptibility as
+and thus $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}=\chi^{\mathrm{acb}}$. The full
+expressions for $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$,
+along with the various quantities involved in Eq. \eqref{eq:chis} are given in
+the Appendix \ref{appv}. We mention that if we take
+$\boldsymbol{\mathcal{C}}(z)=1$ through out, the layered matrix elements
+$\boldsymbol{\mathcal{V}}^{\Sigma}_{nm}$ become standard bulk-like
+$\mathbf{v}^{\Sigma}_{nm}$ matrix elements. We mention that in this case, Eq.
+\eqref{eq:chis} is equivalent to the expressions of Ref. \cite{cabellosPRB09},
+valid for bulk semiconductors. Finally, we could also calculate the nonlinear
+surface susceptibility as
 \begin{equation}
 \boldsymbol{\chi}_{\mathrm{surface}}(-2\omega;\omega,\omega)
 = \sum_{\{\ell\}}\boldsymbol{\chi}^\ell(-2\omega;\omega,\omega),

@@ -139,9 +139,9 @@ $\chi_{\mathrm{full-slab}}^{xxx}$ is calculated using ${\mathbf{\mathcal{C}}}(z)
 = 1$ for the entire slab. Again, the dihydride surface on the lower half of the
 slab must have $\chi_{\mathrm{half-slab}}^{xxx} = 0$.
 
-\begin{figure}[t]
+\begin{figure}[h]
 \centering 
-\includegraphics[width=0.45\textwidth]{content/figures/struc-Si2x1-rot}
+\includegraphics[width=0.4\textwidth]{content/figures/struc-Si2x1-rot}
 \caption{The slab for the Si(001)(2$\times$1) surface. The front (upper) surface
 is in a 2$\times$1, clean reconstruction, and the rear (lower) surfaces is
 H-terminated, with ``ideal'' bulk-like atomic positions. The dangling bonds are
@@ -225,6 +225,7 @@ contribution from the nonlocal part of the pseudopotentials, and part of the
 many-body effects through the scissors correction. Therefore, this scheme is
 robust and versatile and should work for any crystalline surface.
 
+\clearpage
 \begin{figure}[H]
 \centering 
 \includegraphics[height=0.9\textheight]{content/figures/fig-Si2x1-hsvsfs}
@@ -261,7 +262,7 @@ confirm that this is not unique for this specific scissors shift, as we can
 appreciate from the upper two panels of Fig. \ref{fig:hsvfs}, with $\hbar\Delta
 = 0$ eV.
 
-\begin{figure}[H]
+\begin{figure}[b]
 \centering 
 \includegraphics[width=0.6\textwidth]{content/figures/fig-Si2x1-vnl}
 \caption{$\chi^{xxx}_{\mathrm{half-slab}}$ vs $\hbar\omega$, with and without
@@ -301,9 +302,9 @@ more influenced by the electronic structure of the material than the linear
 case. For the case of semiconductor surfaces, the problem is even more intricate
 due to the presence of electronic surface states.
 
-\begin{figure}[H]
+\begin{figure}[b]
 \centering 
-\includegraphics[width=0.5\textwidth]{content/figures/fig-Si2x1-scissors}
+\includegraphics[width=0.6\textwidth]{content/figures/fig-Si2x1-scissors}
 \caption{$\chi^{xxx}_{\mathrm{half-slab}}$ vs $\hbar\omega$ for a slab with 32
 atomic Si layers plus one H layer, for three different values of the scissors
 correction, $\hbar\Delta$.
@@ -342,7 +343,7 @@ Calculating all 18 components is obviously more time consuming, but this
 calculation can be parallelized in order to calculate all components at once, so
 very little time is actually lost.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \subbottom[$\mathcal{R}_{pP}$\label{fig:2x1rpp3d}]%
 {\includegraphics[height=0.4\textwidth]{content/figures/3D-Si2x1-RpP.pdf}}\hfill
@@ -368,7 +369,7 @@ consistent with other calculations of this type
 \cite{tancognedejean:tel-01235611}, and even with some limited experimental data
 \cite{powerPRL95}.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \subbottom[$\mathcal{R}_{pS}$\label{fig:2x1rps3d}]%
 {\includegraphics[height=0.4\textwidth]{content/figures/3D-Si2x1-RpS.pdf}}\hfill
@@ -436,7 +437,7 @@ effects produced by possible wave-function tunneling from the contiguous
 surfaces of the full crystal formed by the repeated super-cell scheme
 \cite{mendozaPRB06}.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \subbottom[Front view.\label{fig:1x1front}]%
 {\includegraphics[width=0.3\textwidth]{content/figures/struc-Si1x1-front}}\hfill
@@ -537,7 +538,7 @@ unrelaxed curves are roughly half the intensity of the experimental spectrum. I
 have converted the units of the experimental data from CGS to MKS units for
 easier comparison.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.6\textwidth]{content/figures/fig-Si1x1-Hofer_Xxxx}
 \caption{Comparison of
@@ -604,7 +605,7 @@ to the experimental measurements featured in Refs. \cite{mejiaPRB02} and
 for energy values under 3 eV. This is because of the lack of surfaces states due
 to the surface H-saturation.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \subbottom[$\mathcal{R}_{pP}$\label{fig:1x1rpp3d}]%
 {\includegraphics[height=0.39\textwidth]{content/figures/3D-Si1x1-RpP}}\hfill
@@ -651,7 +652,7 @@ points. Both figures consider an azimuthal angle of $\phi = 30^{\circ}$.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{\texorpdfstring{$\mathcal{R}_{pP}$}{RpP} ($p$-in, $P$-out)}
+\subsubsection{\texorpdfstring{$\mathcal{R}_{pP}$}{RpP}($p$-in, $P$-out)}
 \label{sec:1x1RpP}
 
 We first analyze how the inclusion of multiple reflections affects the
@@ -696,7 +697,7 @@ temperature measurements of $\mathcal{R}_{pP}$ will blueshift the spectrum away
 from room temperature measurements such as those shown in Figs. \ref{fig:RpP}
 and \ref{fig:mitchellRpP}, and towards the theoretical results.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-MRthickness}
 \caption{Comparison between the three layer model with the effects of multiple
@@ -728,7 +729,7 @@ However, including them is indeed necessary in order to have the most complete
 formulation, and calculating $r^{M}_{p}$ comes at no additional computational
 expense.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-MRno1w}
 \caption{Comparison between including or neglecting the effects of multiple
@@ -799,7 +800,7 @@ $\epsilon_{\ell}$ (3-layer), or a combination of the two (3-layer-hybrid).
 Ultimately, the 3-layer model has better peak proportions and good intensity,
 but the other two models are interesting alternatives.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering 
 \includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-Mejia_RpP}
 \caption{Comparison between theoretical models (see Table \ref{tab:models}) and
@@ -855,7 +856,7 @@ in both intensity and lineshape. Under these conditions, the 3-layer model very
 accurately reproduces the E$_{1}$ peak over the 2-layer-fresnel and 2-layer-bulk
 models.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-Mitchell_RpP}
 \caption{Comparison between theoretical models (see Table \ref{tab:models}) and
@@ -900,13 +901,13 @@ the scissor operator, which does not adequately correct the transitions
 occurring at these higher energies. A full GW calculation would be well suited
 for this task, but is well beyond the scope of this work.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-Mejia_RsP}
 \caption{Comparison between theoretical models (see Table \ref{tab:models}) and
 experiment for $\mathcal{R}_{sP}$, for $\theta=65^{\circ}$, and a scissors value
-of $\hbar\Delta = 0.7\,\text{eV}$. Experimental data taken from Ref. \cite{mejiaPRB02},
-measured at room temperature.}
+of $\hbar\Delta = 0.7\,\text{eV}$. Experimental data taken from Ref.
+\cite{mejiaPRB02}, measured at room temperature.}
 \label{fig:RsP}
 \end{figure}
 
@@ -935,7 +936,7 @@ oxidized and the E$_{1}$ peak diminishes substantially, as shown by the
 experimental data taken 5 hours after initial H-termination. This may be enough
 time to slightly reduce the E$_{1}$ peak intensity in the experimental data.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-Mejia_RpS}
 \caption{Comparison between theoretical models (see Table \ref{tab:models}) and
@@ -957,7 +958,7 @@ degree of quality and measured at room temperature. Peak position compared to
 theory is slightly improved under these conditions. As before, the 3-layer model
 is closer in intensity to the experimental spectrum.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-Mitchell_RpS}
 \caption{Comparison between theoretical models (see Table \ref{tab:models}) and
@@ -1018,7 +1019,7 @@ contribution from the nonlocal part of the pseudopotentials and the scissors
 operator on top of the 3-layer model produces spectra with a lineshape and
 intensity that compare favorably with the experimental data.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.7\textwidth]
 {content/figures/fig-Si1x1-Mejia_RpS_improvements}
@@ -1097,7 +1098,7 @@ is beyond the scope of this paper. Nevertheless, the inclusion of aforementioned
 contributions in our scheme opens the unprecedented possibility to study SSHG
 with more versatility and more accurate results.
 
-We also revised the 3-layer model for the SSHG yield where the nonlinear
+I also revised the 3-layer model for the SSHG yield where the nonlinear
 polarization, $\boldsymbol{\mathcal{P}}(2\omega)$, and the fundamental fields
 are taken within a small layer $\ell$ below the surface of the material. This
 model reproduces key spectral features and yields an intensity closer to the
@@ -1113,14 +1114,14 @@ experimental aspects of SSHG studies. On the theoretical side, we have shown the
 importance of using relaxed atomic positions to more accurately calculate the
 nonlinear susceptibility tensor. The intensity of these spectra is greatly
 improved when compared to previous works.\cite{mejiaPRB02} We also postulate
-that the lack of local field effects in the theory is a serious shortcoming, but
-in this case, it only affects two of the
-$\boldsymbol{\chi}(-2\omega;\omega,\omega)$ components. Concerning the
-experiments, we show that surface preparation and quality are important for
-better results. The approach for calculating the SSHG yield presented here finds
-closer agreement with surfaces that are freshly prepared with little or no
-oxidation, and with measurements taken at low temperatures. Overall, this newly
-implemented framework for calculating
+that the lack of local field effects in the theory is a shortcoming, but in this
+case, it only affects two of the
+$\boldsymbol{\chi}_{\mathrm{surface}}(-2\omega;\omega,\omega)$ components.
+Concerning the experiments, we show that surface preparation and quality are
+important for better results. The approach for calculating the SSHG yield
+presented here finds closer agreement with surfaces that are freshly prepared
+with little or no oxidation, and with measurements taken at low temperatures.
+Overall, this newly implemented framework for calculating
 $\boldsymbol{\chi}_{\mathrm{surface}}(-2\omega;\omega,\omega)$ and $\mathcal{R}$
 focused on the Si(001)$2\times 1$ and  Si(111)(1$\times$1):H surfaces provides a
 compelling benchmark for SSHG studies. We are confident that this work can be

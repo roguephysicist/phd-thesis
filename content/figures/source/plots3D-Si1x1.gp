@@ -20,8 +20,8 @@ set xrange [ 2.5 : 5.0 ] noreverse nowriteback
 set yrange [ -90 : 90 ] noreverse nowriteback
 set ytics 90
 set arrow front nohead lw 4 dt 1 lc rgb 'black' from 2.5,65,0 to 5,65,0
-set arrow front nohead lw 3 dt 2 lc rgb 'black' from 3.4,-90,0 to 3.4,270,0
-set arrow front nohead lw 3 dt 2 lc rgb 'black' from 4.3,-90,0 to 4.3,270,0
+set arrow front nohead lw 3 dt 2 lc rgb 'black' from 3.4,-90,0 to 3.4,90,0
+set arrow front nohead lw 3 dt 2 lc rgb 'black' from 4.3,-90,0 to 4.3,90,0
 set x2tics ("E$_{1}$" 3.4, "E$_{2}$" 4.3)
 set ticslevel 0
 set locale "en_US.UTF-8"

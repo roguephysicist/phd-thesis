@@ -6,49 +6,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Motivation}
-The principal motivation for this work is the analysis of different
-nanoparticles following two concepts:
-
-\begin{description}
-\item[First,] the use of second-order nonlinear optical effects that are very
-effective for surface analysis.
-\item[Second,] the use of a special technique for optical spectroscopy -- the
-two beam, cross-polarized second harmonic/sum-frequency generation (XP2SHG/ SFG)
-technique.
-\end{description}
-
-Metallic nanoparticles are currently a ``hot topic'' in the scientific world
-because the scope of their potential applications is very large, from biological
-applications \cite{baroli2007penetration}, imaging and detection
-\cite{lindfors2004detection, haick2007chemical, berciaud2006photothermal}, and
-more \cite{kamyshny2005ink, krenn1999squeezing}. Silicon nanoparticles, although
-more common, are not far behind -- their use in new solar cell technologies
-\cite{pillai2007surface} and biological markers \cite{li2004water} are also
-cutting edge research.
-
-None of the techniques described in this thesis are particularly new, but they
-have been used with great success in a variety of different materials. Although
-some literature exists on metallic nanoparticles characterized by these
-techniques, there is a relatively small amount of research on the subject. The
-optical methods included here are both non-destructive and potentially surface
-specific. Combining these with interesting nanostructures may prove to be a
-promising path for future developments in the nanosciences.
-
-The focus of this thesis will be the study of second-order nonlinear effects in
-nanosystems. Nanoparticles have huge surface to volume ratios because they are
-so small; they contain few atoms and the bulk is tiny compared to the outside
-surface. The second-order nonlinearities, second harmonic generation (SHG) and
-sum-frequency generation (SFG), are both suitable for spectroscopic analysis of
-nanoparticles. These can be greatly enhanced using the two beam, cross-polarized
-SHG/SFG (XP2SHG/SFG) technique \cite{figliozzi2005single}. The purpose of this
-work is to study the properties of these nanostructures using the aforementioned
-methods.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{A Review of Nonlinear Optics}
 
 
@@ -153,7 +110,8 @@ which can be considerably simplified thanks to the identity
 \end{equation}
 so we can finally express the inhomogenous wave equation as
 \begin{equation}
-\nabla^{2}\mathbf{E} - \frac{1}{c^{2}}\frac{\partial^{2}}{\partial t^{2}}\mathbf{E}
+\nabla^{2}\mathbf{E} 
+- \frac{1}{c^{2}}\frac{\partial^{2}}{\partial t^{2}}\mathbf{E}
 = \frac{1}{\epsilon_{0}c^{2}}\frac{\partial^{2}\mathbf{P}}{\partial t^{2}}.
 \end{equation}
 In this form, it is clear that the polarization acts as a source for this
@@ -216,7 +174,8 @@ $\omega_{n} + \omega_{m}$ remains fixed. We can study the generalized case when
 we have two incoming fields with frequencies $\omega_{1}$ and $\omega_{2}$. We
 can represent this in the following form
 \begin{equation}
-E(t) = E_{1}e^{-i\omega_{1}t} + E_{2}e^{-i\omega_{2}t} + \text{c.c.}\label{eq_sfg_form}
+E(t) = E_{1}e^{-i\omega_{1}t} + E_{2}e^{-i\omega_{2}t}
+     + \text{c.c.}\label{eq_sfg_form}
 \end{equation}
 Assuming the form of equation \eqref{eq_power}
 \begin{equation}
@@ -262,7 +221,7 @@ P(0)
 Janner \cite{janner1998exciton} has a wonderfully formatted table in her
 dissertation that summarizes the first few optical processes, which I reproduce
 here as follows.
-\begin{table}
+\begin{table}[b]
 \centering
 \scalebox{0.9}{
 \begin{tabular}{| c c c | p{7cm} | c |}
