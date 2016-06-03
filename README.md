@@ -17,3 +17,4 @@
     that are built in.
 2. change part titles to small caps
 4. use larger font size for labels on multiref diagrams
+3. SHG ANIMATION IN THE CORNER
