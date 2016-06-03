@@ -1,5 +1,5 @@
 %!TEX root = ../../main.tex
-\chapter{Results}\label{chap:results}
+\chapter{A SSHG Spectroscopic Study of Two Si Surfaces}\label{chap:results}
 \partialtoc
 
 In this chapter, I will present the results for the calculation of the nonlinear
@@ -168,7 +168,7 @@ the calculation. I consider a slab with 32 Si atomic layers as a good compromise
 between the convergence of $\chi^{xxx}_{\mathrm{full-slab}}$ as a function of
 the number of layers in the slab, and the computational expense.
 
-\begin{figure}[b]
+\begin{figure}[H]
 \centering 
 \includegraphics[width=0.6\textwidth]{content/figures/fig-Si2x1-layerconv}
 \caption{$\vert\chi_{\mathrm{full-slab}}^{xxx}\vert$ vs $\hbar\omega$ for the
@@ -206,8 +206,17 @@ how 32 layers in the slab is more than enough to confirm that the extraction of
 the surface second-harmonic susceptibility from the 2$\times$1 surface is
 readily possible using the formalism contained in Eq. \eqref{eq:chis}.
 Calculating the response from the lower half of the slab substantiates that
-$\vert\chi^{xxx}_{\mathrm{half-slab}}\vert\approx 0$ for the dihydride surface
-(not shown). {\color{red} Show this motherfuckin' bitch}
+$\vert\chi^{xxx}_{\mathrm{half-slab}}\vert\approx 0$ for the dihydride surface,
+shown in Fig. \ref{fig:topvbottom}.
+
+\begin{figure}[H]
+\centering 
+\includegraphics[width=0.6\textwidth]{content/figures/fig-Si2x1-topvbottom}
+\caption{$\chi^{xxx}_{\mathrm{half-slab}}$ vs $\hbar\omega$ for the clean
+2$\times$1 and H-terminated surfaces, with $\hbar\Delta = 0.5$ eV and without
+the effects of $\mathbf{v}^\mathrm{nl}$.}
+\label{fig:topvbottom}
+\end{figure}
 
 This confirms the validity of the theory developed in Chapter \ref{chap:chi2}
 and is an important result of this work. Through the proposed layer formalism,
@@ -1020,7 +1029,6 @@ details.}
 \label{fig:improvements}
 \end{figure}
 
-{\color{red}
 Lastly, $GW$ transition energies are needed for linear optics and SHG. Doing a
 Bethe-Salpeter calculation for SSHG will undoubtedly improve the position and
 the amplitude of the peaks, but is far beyond current capabilities \cite{puff}.
@@ -1049,7 +1057,6 @@ compute \cite{nicolasPRB15}, and beyond the scope of this thesis. These effects
 would mostly affect $\mathcal{R}_{pP}$ since it includes all four nonzero
 components. We speculate that $\mathcal{R}_{pP}$ requires the proper inclusion
 of these effects in order to accurately describe the experimental peaks.
-}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

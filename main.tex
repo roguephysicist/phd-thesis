@@ -1,14 +1,14 @@
 \documentclass[letterpaper,11pt,oneside]{memoir}
-\usepackage{lmodern}
 \usepackage{fullpage}
+\usepackage{lmodern}
+\usepackage{titletoc}
+\usepackage{cite}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{color}
-\usepackage{titletoc}
-\usepackage{showkeys}
+% \usepackage{showkeys}
 % \usepackage{MinionPro}
-% \usepackage{showframe}
 
 \changecaptionwidth
 \captionwidth{0.8\textwidth}
@@ -30,7 +30,7 @@
             breaklinks=true]{hyperref}
 \urlstyle{same}
 \hypersetup{% PDF display options
-   pdftitle={Optimized Software for Theoretical Optical Calculations},
+   pdftitle={Optimized Software for Theoretical Nonlinear Optical Calculations},
    pdfauthor={Sean M. Anderson},
    pdfsubject={Theory of SHG in crystalline semiconductors, from the nonlinear
    polarization and susceptility, to the SSHG radiation with results.},
@@ -45,38 +45,35 @@
 
 % \pagestyle{empty}
 \frontmatter
-% \include{content/frontmatter/titlepage_generic}
-% \include{content/frontmatter/copyright}
-% \include{content/frontmatter/signature_page}
-% \include{content/frontmatter/epigraph}
-% \include{content/frontmatter/abstract}
+\include{content/frontmatter/titlepage_generic}
+\include{content/frontmatter/copyright}
+\include{content/frontmatter/signature_page}
+\include{content/frontmatter/epigraph}
+\include{content/frontmatter/abstract}
 % \include{content/frontmatter/dedication}
 % \include{content/frontmatter/acknowledgments}
 
 \tableofcontents
-% \listoftables
-% \listoffigures
-% \clearpage
+\clearpage
+\listoftables
+\clearpage
+\listoffigures
 
 \mainmatter
-% \input{base/fancyheaders}
-% \part{The Thesis}
-% \include{content/chapters/intro}
+\include{content/chapters/intro}
 \include{content/chapters/chi2}
 \include{content/chapters/shgyield}
 \include{content/chapters/results}
-% \include{content/chapters/conclusions}
+\include{content/chapters/conclusions}
 
 \appendix
-% \part{Appendices}
 \include{content/appendices/chi2-useful_derivations}
 % \include{content/appendices/chi2-misc_results}
 \include{content/appendices/sshg-explicit_expressions_rif}
 % \include{content/appendices/sshg-without_multiref}
-% \include{content/appendices/coding}
 
 \backmatter
 \bibliographystyle{unsrt}
-\bibliography{/Users/sma/Dropbox/docs/academics/master}
+\bibliography{/Users/sma/Dropbox/docs/academics/master,/Users/sma/Developer/phd-thesis/temp/old}
 
 \end{document}

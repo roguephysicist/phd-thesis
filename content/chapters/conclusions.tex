@@ -4,30 +4,84 @@
 
 
 \section{Conclusions}
-I was able to learn and successfully apply the XP2SHG/SFG technique to a series
-of nanoparticles that were unfortunately not of sufficient optical quality to
-yield meaningful results. This was accomplished by using established methods
-(with the help of very capable people) to study samples that were not properly
-characterized. The obvious solution to this would have been to use other
-nanoparticles, but it was very much beyond my possibilities to obtain other
-samples within the time constraints imposed by my visit to the Femtosecond
-Spectroscopy group.
 
-My suggestions for a revisionary work are the following.
 
-\begin{description}
-\item[Better quality samples.] The scattering problem can be completely
-eliminated with samples that are in good physical condition.
-\item[Well characterized samples.] The purpose of this work was to characterize
-the nanoparticles via nonlinear spectroscopy. However, these measurements work
-much better if applied in conjunction with previous studies of the samples, such
-as TEM scans, linear measurements, etc.
-\item[Apply the XP2SFG technique to metallic nanoparticles.] There are few
-references available on sum frequency studies involving metallic nanoparticles,
-especially in the two beam configuration. I think that using proper samples with
-a NOPA in the XP2SFG configuration would provide excellent characterization of
-the samples and interesting results.
-\end{description}
+We have presented a formulation to calculate the surface second-harmonic (SSH)
+susceptibility tensor $\boldsymbol{\chi}(-2\omega;\omega,\omega)$, using the
+length gauge formalism and within the independent particle approximation (IPA).
+It includes on equal footing: (i) the scissors correction, (ii) the contribution
+of the non-local part of the pseudopotentials, and (iii) the cut function. We
+have used a Si(001)$2\times 1$ surface to confirm that our scheme correctly
+obtains the surface response as we confirm that
+$\chi_{\mathrm{half-slab}}^{xxx}(-2\omega;\omega,\omega) \approx
+\chi_{\mathrm{full-slab}}^{xxx}(-2\omega;\omega,\omega) . $ Although one can in
+principle increase the number of atomic layers, $\mathbf{k}$-points, etc. to
+improve even further on the similarity of the half-slab and full-slab results,
+we have chosen a good compromise between accuracy and the burden and time of the
+computations. We describe the effect of the independent inclusion of the three
+effects mentioned above in the calculation of
+$\boldsymbol{\chi}(-2\omega;\omega,\omega)$. The scissors correction shifts the
+spectrum to higher energies though the shifting is not rigid and mixes the
+$1\omega$ and $2\omega$ resonances, and has a strong influence in the
+line-shape, as for the case of bulk
+semiconductors.\cite{luppiJCP10,luppiPRB10,leitsmannPRB05} The cut function
+allows us to extract unequivocally $\chi^{xxx}_{2\times
+1}(-2\omega;\omega,\omega)$. The effects of the nonlocal part of the
+pseudopotentials keeps the same line-shape of $|\chi^{xxx}_{2\times
+1}(-2\omega;\omega,\omega)|$, but reduces the value of by 15-20\%. The $xxx$
+component of $\boldsymbol{\chi}_{2\times 1}(-2\omega;\omega,\omega)$, can not be
+experimentally isolated, however in a forthcoming publication we will compare
+our formulation against experimental results. We have neglected local field and
+excitonic effects. Although these are important factors in the optical response
+of a semiconductor, their efficient calculation is theoretically and numerically
+challenging and still under debate.\cite{beyond} This merits further study but
+is beyond the scope of this paper. Nevertheless, the inclusion of aforementioned
+contributions in our scheme opens the unprecedented possibility to study surface
+SHG with more versatility and more accurate results.
+
+
+We have presented new \emph{ab initio} LDA calculations for SSHG that are in
+good quantitative agreement with experimental SSHG spectra for the
+Si(111)(1$\times$1):H surface. These calculations include contributions not
+previously considered in a single formulation, to wit, (i) the scissors
+correction, (ii) the contribution of the nonlocal part of the pseudopotentials,
+and (iii) the cut function used to extract the surface response, all within the
+independent particle approximation. We also revised the 3-layer model for the
+SSHG yield where the nonlinear polarization,
+$\boldsymbol{\mathcal{P}}(2\omega)$, and the fundamental fields are taken within
+a small layer $\ell$ below the surface of the material. This model reproduces
+key spectral features and yields an intensity closer to the experiment for all
+cases of $\mathcal{R}_{\mathrm{iF}}$. We consider it an upgrade over the much
+reviewed 2-layer model\cite{mizrahiJOSA88}, and it comes with very little added
+computational expense. Additionally, we have compared these two models with
+another definition of the 2-layer model, where both
+$\boldsymbol{\mathcal{P}}(2\omega)$ and the fundamental fields are considered
+inside the bulk of the material. We found that this model yields an intensity
+lower than the 3-layer model, but far closer than the 2-layer-vacuum model.
+Lineshape is very similar between the 3-layer and 2-layer-bulk models.
+Therefore, we consider that the 3-layer model offers the closest comparison to
+experiment, while the 2-layer-bulk model offers a reasonable compromise between
+the 3-layer and 2-layer-vacuum models.
+
+This study affords us an interesting view of both the theoretical and
+experimental aspects of SSHG studies. On the theoretical side, we have shown the
+importance of using relaxed atomic positions to more accurately calculate the
+nonlinear susceptibility tensor. The intensity of these spectra is greatly
+improved when compared to previous works.\cite{mejiaPRB02} We also postulate
+that the lack of local field effects in the theory is a serious shortcoming, but
+in this case, it only affects two of the
+$\boldsymbol{\chi}(-2\omega;\omega,\omega)$ components.
+
+Concerning the experiments, we show that surface preparation and quality are
+important for better results. The approach for calculating the SSHG yield
+presented here finds closer agreement with surfaces that are freshly prepared
+with little or no oxidation, and with measurements taken at low temperatures.
+
+Overall, this newly implemented framework for calculating
+$\boldsymbol{\chi}(-2\omega;\omega,\omega)$ and $\mathcal{R}$ focused on the
+well-known Si(111)(1$\times$1):H surface provides a compelling benchmark for
+SSHG studies. We are confident that this work can be applied directly to many
+other surfaces of interest.
 
 \section{Future Work}
 I think that every work of experimental science has its fair share of setbacks,

@@ -66,8 +66,7 @@ $b$ and characterized by $\epsilon_{b}(\omega)$. Both the vacuum and bulk layers
 are semi-infinite (see Fig. \ref{fig:MR3layer2w}).
 
 To model the electromagnetic response of the 3-layer model, we follow Ref.
-\cite{mizrahiJOSA88} and assume a polarization sheet of the form {\color{red}
-Decide if layered P (in previous chapter) should have calligrahic P or not}
+\cite{mizrahiJOSA88} and assume a polarization sheet of the form
 \begin{equation}\label{eq:psheet}
 \mathbf{P}(\mathbf{r},t) = \boldsymbol{\mathcal{P}}
 e^{i\boldsymbol{\kappa}\cdot\mathbf{R}}e^{-i\omega t}\delta(z - z_{\beta}) 
@@ -1280,6 +1279,25 @@ r^{(111)}_{pP} =
 - N^{2}_{\ell}w^{2}_{b}W_{b}\chi^{xxx}\cos3\phi.
 \end{equation}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{About the code}
+
+SHGyield is a python script designed to calculate the nonlinear reflection
+coefficient for semiconductor surfaces. It works in conjunction with the matrix
+elements calculated with ABINIT and TINIBA, our in-house optical calculation
+software. I have created a 
+\href{https://github.com/roguephysicist/SHGYield}{Github respository}
+with the code. Like all free and open-source software, it can be freely
+downloaded, modified, and shared. The script reads an input file that specifies
+all the necessary filenames, angles, broadening, and other variables. It allows
+the user to include the effects of multiple reflections if desired, and select
+several parameters for calculating these effects. It will automatically try to
+read all 18 independent components of the nonlinear susceptibility (for SHG),
+but the user can easily limit which components it will attempt to read if the
+total number can be reduced due to symmetry relations.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

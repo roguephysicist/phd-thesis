@@ -58,6 +58,21 @@ p  '../../data/Si2x1/32layers/shgC.vnl.sm_0.15_xxx_244_half-slab_10-nospin_sciss
 
 unset label
 
+## Si2x1: top vs bottom
+set output 'fig-Si2x1-topvbottom.tex'
+set key right top
+set xrange [ 0 : 5 ] noreverse nowriteback
+set yrange [ 0 : 1.4 ] noreverse nowriteback
+set ytics auto
+set xlabel 'One-photon energy (eV)'
+set ylabel '$\vert\chi^{xxx}_{\mathrm{half-slab}}\vert$ ($10^{6}\times\mathrm{pm}^{2}$/V)'
+# set label 1 at 3.45,0.7 '$\hbar\Delta=0.5$ eV'
+p  '../../data/Si2x1/32layers/shgC.sm_0.15_xxx_244_half-slab_10-nospin_scissor_0.50_Nc_130'             u 1:(abso($2,$3,$4,$5)) t '2$\times$1 clean surface' dt 1 lw 4.0 lc rgb "#268bd2" w l,\
+   '../../data/Si2x1/32layers/shgC.sm_0.15_xxx_244_half-slab_10-nospin_scissor_0.50_Nc_130_DiH_surface' u 1:(abso($2,$3,$4,$5)) t 'H-terminated surface'     dt 2 lw 4.0 lc rgb "#dc322f" w l
+####
+
+unset label
+
 ## Si2x1: different scissors values
 set output 'fig-Si2x1-scissors.tex'
 set key right top
