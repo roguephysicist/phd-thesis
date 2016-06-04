@@ -1,7 +1,6 @@
 \documentclass[letterpaper,11pt]{memoir}
 \usepackage[margin=2.5cm,includehead,includefoot,footskip=30pt]{geometry}
 \usepackage{lmodern}
-\usepackage{psvectorian}
 \usepackage{titletoc}
 \usepackage{cite}
 \usepackage{amsmath}
@@ -16,6 +15,7 @@
 
 \maxtocdepth{subsection}
 \setsecnumdepth{subsubsection}
+\setpnumwidth{3em}
 
 \definecolor{blue}{rgb}{0.149,0.545,0.824}
 \definecolor{red}{rgb}{0.647,0.129,0.149}
@@ -57,7 +57,7 @@
 \pagestyle{plain}
 \input{content/frontmatter/abstract}
 \input{content/frontmatter/dedication}
-% \input{content/frontmatter/acknowledgments}
+\input{content/frontmatter/acknowledgments}
 \tableofcontents*\clearpage
 \listoffigures*\clearpage
 \listoftables*
@@ -78,6 +78,6 @@
 
 \backmatter
 \bibliographystyle{unsrt}
-\bibliography{/Users/sma/Dropbox/docs/academics/master,old}
+\bibliography{thesis}
 
 \end{document}

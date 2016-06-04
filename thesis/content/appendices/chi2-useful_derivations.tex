@@ -308,7 +308,7 @@ $V^\mathrm{nl}(\mathbf{r},\mathbf{r}') =
 (Eq. \eqref{ache.3n}). Also, we have the following identity which will be used
 shortly,
 \begin{align}\label{cn51}
-(\nabla_\mathbf{K}+\nabla_{\mathbf{K}'})\frac{1}{\Omega}\int e^{-i\mathbf{K}\cdot\mathbf{r}}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')e^{i\mathbf{K}'\cdot\mathbf{r}'}\,d\mathbf{r}\,d\mathbf{r}'
+(\nabla_\mathbf{K}+\nabla_{\mathbf{K}'})\frac{1}{\Omega}\int e^{-i\mathbf{K}\cdot\mathbf{r}}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')&e^{i\mathbf{K}'\cdot\mathbf{r}'}\,d\mathbf{r}\,d\mathbf{r}'\nonumber\\
 &= -i \frac{1}{\Omega} \int e^{-i\mathbf{K}\cdot\mathbf{r}} \left(\mathbf{r} V^\mathrm{nl}(\mathbf{r},\mathbf{r}') - V^\mathrm{nl}(\mathbf{r},\mathbf{r}') \mathbf{r}'\right) e^{i\mathbf{K}'\cdot\mathbf{r}'} \,d\mathbf{r}\,d\mathbf{r}'\nonumber\\ (\nabla_\mathbf{K}+\nabla_{\mathbf{K}'}) \langle\mathbf{K}\vert V^\mathrm{nl} \vert\mathbf{K}'\rangle
 &= \frac{i}{\Omega} \int e^{-i\mathbf{K}\cdot\mathbf{r}} V^\mathrm{nl}(\mathbf{r},\mathbf{r}') \big(\mathbf{r}'- \mathbf{r} \big) e^{i\mathbf{K}'\cdot\mathbf{r}'} \,d\mathbf{r}\,d\mathbf{r}',
 \end{align}
@@ -667,8 +667,6 @@ e^{i(\mathbf{k}+\mathbf{G}'')\cdot\mathbf{r}}
 A^{*}_{n\mathbf{k}}(\mathbf{G}') 
 (\nabla_\mathbf{K}+\nabla_{\mathbf{K}'})
 V^\mathrm{nl}(\mathbf{K}',\mathbf{K})
-\nonumber\\
-&\times 
 \sum_{\mathbf{G}''}
 A_{m\mathbf{k}}(\mathbf{G}'') 
 \delta_{\mathbf{G}_\parallel \mathbf{G}''_\parallel}f_\ell(\mathbf{G}''_\perp-\mathbf{G}_\perp)
@@ -1320,9 +1318,9 @@ and work the time-reversal on each term. The first term is reduced to
     \frac{r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{2}}
     \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)
     _{;k^{\text{c}}}\vert_{\mathbf{k}}
-+   \frac{r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{2}}
+&+  \frac{r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{2}}
     \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)
-    _{;k^{\text{c}}}\vert_{-\mathbf{k}}
+    _{;k^{\text{c}}}\vert_{-\mathbf{k}}\nonumber\\\nonumber\\
 &=  \frac{r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{2}}
     \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)
     _{;k^{\text{c}}}\vert_{\mathbf{k}}
@@ -1342,8 +1340,9 @@ the second term is reduced to
 \begin{align}\label{second_term_gen_deriv}
     \frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
     \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\vert_{\mathbf{k}}
-+   \frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
+&+  \frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
     \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\vert_{-\mathbf{k}}
+    \nonumber\\\nonumber\\
 &=  \frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
     \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\vert_{\mathbf{k}}
 +   \frac{\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}}{(\omega^{\Sigma}_{nm})^{2}}
@@ -1364,9 +1363,10 @@ and by using \eqref{eli.13}, the third term is reduced to
     \frac{2\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
     r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}
     \left(\omega^{\Sigma}_{nm}\right)_{;k^{\text{c}}}\vert_{\mathbf{k}}
-+   \frac{2\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+&+  \frac{2\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
     r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}
     \left(\omega^{\Sigma}_{nm}\right)_{;k^{\text{c}}}\vert_{-\mathbf{k}}
+    \nonumber\\\nonumber\\
 &=  \frac{2\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
     r^{\text{LDA,b}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}
     \Delta_{nm}^{\text{c}}\vert_{\mathbf{k}}
@@ -1404,8 +1404,9 @@ r^{\text{LDA,b}}_{nm}}{(\omega^\Sigma_{nm})^2}
   \right)_{;k^{\text{c}}}\vert_{-\mathbf{k}}
   \right]
   \frac{1}{\omega^\Sigma_{nm}-\tilde\omega}
-= \nonumber\\
-& \left(
+= \frac{f_{mn}}{2(\omega^{\Sigma}_{nm})^{2}}
+  \frac{1}{\omega^\Sigma_{nm}-\tilde\omega}\nonumber\\
+& \times\left(
   2\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}
   \left(
   \mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
@@ -1421,15 +1422,13 @@ r^{\text{LDA,b}}_{nm}}{(\omega^\Sigma_{nm})^2}
   \mathcal{V}^{\Sigma,\text{a},\ell}_{nm}r^{\text{LDA,b}}_{mn}
   \right]
   \Delta_{nm}^{\text{c}}
-  \right)
-  \frac{f_{mn}}{2(\omega^{\Sigma}_{nm})^{2}}
-  \frac{1}{\omega^\Sigma_{nm}-\tilde\omega}.
+  \right).
 \end{align}
 We substitute \eqref{ct}, \eqref{dt}, and \eqref{derivative_under_k} in 
 \eqref{pfinn},
 \begin{align*}
 I
-=   &\left[
+&=   \left[
     -\frac{2f_{mn}\,\mathrm{Re}
     \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
     \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
@@ -1438,7 +1437,7 @@ I
     \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
     {(\omega^{\Sigma}_{nm})^{2}}\frac{1}{\omega^{\Sigma}_{nm}-2\tilde\omega}
     \right]\nonumber\\
-+   &\left[\frac{6f_{mn}\,\mathrm{Re}
+&+   \left[\frac{6f_{mn}\,\mathrm{Re}
     \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}\right]
     \Delta^{\text{c}}_{nm}}{2(\omega^{\Sigma}_{nm})^{3}}
     \frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega} 
@@ -1446,14 +1445,18 @@ I
     \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}\right]
     \Delta^{\text{c}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}
     \frac{1}{\omega^{\Sigma}_{nm}-2\tilde\omega}\right.\nonumber\\
-&\,\,\,+ 
-    \left.\frac{f_{mn}\left(2\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}
-    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)_{;k^{\text{c}}}\right]
-+   2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right] 
--   \frac{4}{\omega^{\Sigma}_{nm}}\,\mathrm{Re}
+&+ 
+    \left.\frac{2f_{mn}\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}
+    \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)_{;k^{\text{c}}}\right]}
+    {2(\omega^{\Sigma}_{nm})^{2}}
+    \frac{1}{\omega^\Sigma_{nm}-\tilde\omega}
++   \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
+    {2(\omega^{\Sigma}_{nm})^{2}}
+    \frac{1}{\omega^\Sigma_{nm}-\tilde\omega}\right.\\
+&-   \left.\frac{\frac{4}{\omega^{\Sigma}_{nm}}f_{mn}\,\mathrm{Re}
     \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}r^{\text{LDA,b}}_{mn}\right]
-    \Delta_{nm}^{\text{c}}\right)}{2(\omega^{\Sigma}_{nm})^{2}}
+    \Delta_{nm}^{\text{c}}}{2(\omega^{\Sigma}_{nm})^{2}}
     \frac{1}{\omega^\Sigma_{nm}-\tilde\omega}\right]
 .
 \end{align*}
@@ -2494,7 +2497,7 @@ C^{*}_{n\mathbf{k}}(\mathbf{K})C_{m\mathbf{k}}(\mathbf{K}')
 - V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{a}}r^{\prime\mathrm{b}}
 \nonumber\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-&\hspace{7cm} -
+&\hspace{5cm} -
   r^\mathrm{b}r^{\mathrm{a}}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')
 + r^\mathrm{b}V^\mathrm{nl}(\mathbf{r},\mathbf{r}')r^{\prime\mathrm{a}}
 \Big) 
@@ -2503,9 +2506,9 @@ e^{i\mathbf{K}'\cdot\mathbf{r}'}
 \end{align} 
 We use the following identity,
 \begin{align}\label{3.4}
-\Big(
+&\Big(
  \frac{\partial^{2}}{\partial K^\mathrm{a}\partial K^{\prime\mathrm{b}}}
-&+\frac{\partial^{2}}{\partial K^{\prime\mathrm{a}}\partial K^{\prime\mathrm{b}}}
++\frac{\partial^{2}}{\partial K^{\prime\mathrm{a}}\partial K^{\prime\mathrm{b}}}
 +\frac{\partial^{2}}{\partial K^\mathrm{a}\partial K^\mathrm{b}}
 +\frac{\partial^{2}}{\partial K^\mathrm{b}\partial K^{\prime\mathrm{a}}}
 \Big)
@@ -2534,7 +2537,7 @@ e^{i\mathbf{K}'\cdot\mathbf{r}'}\,d\mathbf{r}\,d\mathbf{r}'\nonumber\\
 \end{align}
 to write
 \begin{align}\label{3.7}
-\mathcal{L}^{\mathrm{ab}}_{nm}(\mathbf{k})
+&\mathcal{L}^{\mathrm{ab}}_{nm}(\mathbf{k})\\
 &= \frac{1}{\hbar^{2}\Omega}
 \sum_{\mathbf{K},\mathbf{K}'} 
 C^{*}_{n\mathbf{k}}(\mathbf{K})C_{m\mathbf{k}}(\mathbf{K}')
