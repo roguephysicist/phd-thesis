@@ -1,0 +1,83 @@
+\documentclass[letterpaper,11pt]{memoir}
+\usepackage[margin=2.5cm,includehead,includefoot,footskip=30pt]{geometry}
+\usepackage{lmodern}
+\usepackage{psvectorian}
+\usepackage{titletoc}
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{color}
+% \usepackage{showkeys}
+% \usepackage{MinionPro}
+
+\changecaptionwidth
+\captionwidth{0.8\textwidth}
+
+\maxtocdepth{subsection}
+\setsecnumdepth{subsubsection}
+
+\definecolor{blue}{rgb}{0.149,0.545,0.824}
+\definecolor{red}{rgb}{0.647,0.129,0.149}
+
+\renewcommand\colorchapnum{\color{red}}
+\chapterstyle{hangnum}
+\renewcommand*{\chapnamefont}{\normalfont\Huge\scshape}
+\renewcommand*{\chapnumfont}{\normalfont\fontsize{50}{60}\slshape\colorchapnum}
+\renewcommand*{\chaptitlefont}{\normalfont\HUGE\scshape\colorchaptitle}
+
+\newcommand{\partialtoc}{
+\vspace*{2pc}\vbox{\bfseries\Large Outline}\vspace*{5pt}\hrule\vspace*{1pc}%
+\startcontents[chapters]
+\printcontents[chapters]{}{1}{\setcounter{tocdepth}{3}}
+\vspace*{1pc}\hrule\vspace*{2pc}}
+
+\usepackage[bookmarksdepth=2,colorlinks=true,linkcolor=blue,
+            citecolor=red,filecolor=magenta,urlcolor=blue,
+            breaklinks=true]{hyperref}
+\urlstyle{same}
+\hypersetup{% PDF display options
+   pdftitle={Optimized Software for Theoretical Nonlinear Optical Calculations},
+   pdfauthor={Sean M. Anderson},
+   pdfsubject={Theory of SSHG in crystalline semiconductors, from the nonlinear
+   polarization and susceptility, to the SSHG radiation with results.},
+   pdfkeywords={nonlinear} {optics} {shg} {radiation} {semiconductors}
+   {theoretical} {spectroscopy} {surface} {experiment}}
+
+\newsubfloat{figure}
+
+\begin{document}
+
+\frontmatter
+\renewcommand{\thepage}{\Roman{page}}
+\input{content/frontmatter/titlepage_generic}
+\input{content/frontmatter/copyright}
+% \input{content/frontmatter/signature_page}
+\input{content/frontmatter/epigraph}
+\pagestyle{plain}
+\input{content/frontmatter/abstract}
+\input{content/frontmatter/dedication}
+% \input{content/frontmatter/acknowledgments}
+\tableofcontents*\clearpage
+\listoffigures*\clearpage
+\listoftables*
+
+\mainmatter
+\pagestyle{ruled}
+\input{content/chapters/intro}
+\input{content/chapters/chi2}
+\input{content/chapters/shgyield}
+\input{content/chapters/results}
+\input{content/chapters/conclusions}
+
+\appendix
+\input{content/appendices/chi2-useful_derivations}
+% \input{content/appendices/chi2-misc_results}
+\input{content/appendices/sshg-explicit_expressions_rif}
+% \input{content/appendices/sshg-without_multiref}
+
+\backmatter
+\bibliographystyle{unsrt}
+\bibliography{/Users/sma/Dropbox/docs/academics/master,old}
+
+\end{document}
