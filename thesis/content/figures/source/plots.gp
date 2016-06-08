@@ -1,3 +1,4 @@
+
 #!/usr/local/Cellar/gnuplot/5.0.3/bin/gnuplot -persist
 #
 #    
@@ -10,9 +11,9 @@
 #       gnuplot home:     http://www.gnuplot.info
 #       faq, bugs, etc:   type "help FAQ"
 #       immediate help:   type "help"  (plot window: hit 'h')
-set terminal epslatex leveldefault color blacktext standalone "" 11 fontscale 1
+set terminal epslatex leveldefault color blacktext standalone "" 11 fontscale 1  size 5,3
 
-set border lw 3
+set border lw 2
 set zero 1e-08
 set locale "en_US.UTF-8"
 
@@ -266,40 +267,72 @@ p "../../data/Si1x1/Rif-Mejia.MR.00nm_10nm.vnl.scissor0.70.3-layer.dat" u (2*$1)
 
 
 ## Si2x1: half-slab vs full-slab multiplot
-set terminal epslatex leveldefault color blacktext standalone "" 11 fontscale 1 size 12.25cm,23.75cm
+set terminal epslatex leveldefault color blacktext standalone "" 11 fontscale 1 size 6,3.5
 set output 'fig-Si2x1-hsvsfs.tex'
-set multiplot
+set border lw 2
+set multiplot layout 2,2
 set xrange [ 0 : 5 ] noreverse nowriteback
-set yrange [ 0 : 1.4 ] noreverse nowriteback
-unset xlabel
-set ylabel '$\vert\chi^{xxx}\vert$ ($10^{6}\times\mathrm{pm}^{2}$/V)'
+set yrange [ 0 : 1.5 ] noreverse nowriteback
+set ytics 0.5
 
-set key at 4.9,1.35
-set origin 0,0.75
-set size 1,0.26
-set label 1 at 2.6,0.7 '$\hbar\Delta=0$ eV, w/o $\mathbf{v}^\mathrm{nl}$' 
+TOP = 0.96
+LEFT = 0.13
+DIV = 0.39
+DIV2 = 0.42
+
+unset key
+set tmargin at screen TOP
+set bmargin at screen TOP-DIV
+set lmargin at screen LEFT
+set rmargin at screen LEFT+DIV2
+set format x ''
+unset format y
+unset ylabel
+unset xlabel
+set label 1 at 3.4,0.7 '{\scriptsize $\hbar\Delta=0$ eV, w/o $\mathbf{v}^\mathrm{nl}$}' 
 p  '../../data/Si2x1/32layers/shgC.sm_0.15_xxx_244_half-slab_10-nospin_scissor_0.00_Nc_130' u 1:(abso($2,$3,$4,$5))     t 'half-slab' dt 1 lw 4.0 lc rgb "#268bd2" w l,\
    '../../data/Si2x1/32layers/shgL.sm_0.15_xxx_244_10-nospin_scissor_0.00_Nc_130'           u 1:(f32*abso($2,$3,$4,$5)) t 'full-slab' dt 4 lw 4.0 lc rgb "#dc322f" w l
 
 set key at 4.9,1.35
-set origin 0,0.50
-set size 1,0.26
-set label 1 at 2.6,0.7 '$\hbar\Delta=0$ eV, with $\mathbf{v}^\mathrm{nl}$' 
-p  '../../data/Si2x1/32layers/shgC.vnl.sm_0.15_xxx_244_half-slab_10-nospin_scissor_0.00_Nc_130' u 1:(abso($2,$3,$4,$5))     t 'half-slab' dt 1 lw 4.0 lc rgb "#268bd2" w l,\
-   '../../data/Si2x1/32layers/shgL.vnl.sm_0.15_xxx_244_10-nospin_scissor_0.00_Nc_130'           u 1:(f32*abso($2,$3,$4,$5)) t 'full-slab' dt 4 lw 4.0 lc rgb "#dc322f" w l
+set key Left width -8
+set tmargin at screen TOP
+set bmargin at screen TOP-DIV
+set lmargin at screen LEFT+DIV2
+set rmargin at screen LEFT+2*DIV2
+set format x ''
+set format y ''
+unset ylabel
+unset xlabel
+set label 1 at 3.4,0.7 '{\scriptsize $\hbar\Delta=0$ eV, with $\mathbf{v}^\mathrm{nl}$}' 
+p  '../../data/Si2x1/32layers/shgC.vnl.sm_0.15_xxx_244_half-slab_10-nospin_scissor_0.00_Nc_130' u 1:(abso($2,$3,$4,$5))     t '{\small half-slab}' dt 1 lw 4.0 lc rgb "#268bd2" w l,\
+   '../../data/Si2x1/32layers/shgL.vnl.sm_0.15_xxx_244_10-nospin_scissor_0.00_Nc_130'           u 1:(f32*abso($2,$3,$4,$5)) t '{\small full-slab}' dt 4 lw 4.0 lc rgb "#dc322f" w l
 
-set key at 4.9,1.35
-set origin 0,0.25
-set size 1,0.26
-set label 1 at 2.6,0.7 '$\hbar\Delta=0.5$ eV, w/o $\mathbf{v}^\mathrm{nl}$' 
+unset key
+set tmargin at screen TOP-DIV
+set bmargin at screen TOP-2*DIV
+set lmargin at screen LEFT
+set rmargin at screen LEFT+DIV2
+unset format x
+unset format y
+set ytics add ('' 1.5)
+set xtics add ('' 5)
+set ylabel '$\vert\chi^{xxx}\vert$ ($10^{6}\times\mathrm{pm}^{2}$/V)' offset 0,4,0
+set xlabel 'One-photon energy (eV)' offset 12,0,0
+set label 1 at 3.5,0.7 '{\scriptsize $\hbar\Delta=0.5$ eV, w/o $\mathbf{v}^\mathrm{nl}$}' 
 p  '../../data/Si2x1/32layers/shgC.sm_0.15_xxx_244_half-slab_10-nospin_scissor_0.50_Nc_130' u 1:(abso($2,$3,$4,$5))     t 'half-slab' dt 1 lw 4.0 lc rgb "#268bd2" w l,\
    '../../data/Si2x1/32layers/shgL.sm_0.15_xxx_244_10-nospin_scissor_0.50_Nc_130'           u 1:(f32*abso($2,$3,$4,$5)) t 'full-slab' dt 4 lw 4.0 lc rgb "#dc322f" w l
 
-set key at 4.9,1.35
-set origin 0,0
-set size 1,0.26
-set xlabel 'One-photon energy (eV)'
-set label 1 at 2.6,0.7 '$\hbar\Delta=0.5$ eV, with $\mathbf{v}^\mathrm{nl}$' 
+unset key
+set tmargin at screen TOP-DIV
+set bmargin at screen TOP-2*DIV
+set lmargin at screen LEFT+DIV2
+set rmargin at screen LEFT+2*DIV2
+unset format x
+set format y ''
+set xtics auto
+unset ylabel
+unset xlabel
+set label 1 at 3.5,0.7 '{\scriptsize $\hbar\Delta=0.5$ eV, with $\mathbf{v}^\mathrm{nl}$}' 
 p  '../../data/Si2x1/32layers/shgC.vnl.sm_0.15_xxx_244_half-slab_10-nospin_scissor_0.50_Nc_130' u 1:(abso($2,$3,$4,$5))     t 'half-slab' dt 1 lw 4.0 lc rgb "#268bd2" w l,\
    '../../data/Si2x1/32layers/shgL.vnl.sm_0.15_xxx_244_10-nospin_scissor_0.50_Nc_130'           u 1:(f32*abso($2,$3,$4,$5)) t 'full-slab' dt 4 lw 4.0 lc rgb "#dc322f" w l 
 unset multiplot

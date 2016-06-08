@@ -171,7 +171,7 @@ the calculation. I consider a slab with 32 Si atomic layers as a good compromise
 between the convergence of $\chi^{xxx}_{\mathrm{full-slab}}$ as a function of
 the number of layers in the slab, and the computational expense.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering 
 \includegraphics[width=0.6\textwidth]{content/figures/fig-Si2x1-layerconv}
 \caption[Layer convergence for the Si(001)(2$\times$1) slab.]
@@ -213,9 +213,9 @@ Calculating the response from the lower half of the slab substantiates that
 $\vert\chi^{xxx}_{\mathrm{half-slab}}\vert\approx 0$ for the dihydride surface,
 shown in Fig. \ref{fig:topvbottom}.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering 
-\includegraphics[width=0.6\textwidth]{content/figures/fig-Si2x1-topvbottom}
+\includegraphics[width=0.55\textwidth]{content/figures/fig-Si2x1-topvbottom}
 \caption[$\chi^{xxx}_{\mathrm{half-slab}}$ for the clean and H-terminated 
 surfaces.]
 {$\chi^{xxx}_{\mathrm{half-slab}}$ vs $\hbar\omega$ for the clean
@@ -231,10 +231,9 @@ contribution from the nonlocal part of the pseudopotentials, and part of the
 many-body effects through the scissors correction. Therefore, this scheme is
 robust and versatile and should work for any crystalline surface.
 
-\clearpage
-\begin{figure}[H]
+\begin{figure}[b]
 \centering 
-\includegraphics[height=0.9\textheight]{content/figures/fig-Si2x1-hsvsfs}
+\includegraphics[width=0.75\textwidth]{content/figures/fig-Si2x1-hsvsfs}
 \caption[Different scenarios of half-slab vs full-slab.]
 {$\chi^{xxx}_{\mathrm{half-slab}}$ and $\chi^{xxx}_{\mathrm{full-slab}}$
 vs $\hbar\omega$ for four different combinations: with and without the effects
@@ -311,7 +310,7 @@ more influenced by the electronic structure of the material than the linear
 case. For the case of semiconductor surfaces, the problem is even more intricate
 due to the presence of electronic surface states.
 
-\begin{figure}[b]
+\begin{figure}[t]
 \centering 
 \includegraphics[width=0.6\textwidth]{content/figures/fig-Si2x1-scissors}
 \caption[$\chi^{xxx}_{\mathrm{half-slab}}$ with three different values of the 
@@ -624,9 +623,9 @@ to the surface H-saturation.
 \begin{figure}[t]
 \centering
 \subbottom[$\mathcal{R}_{pP}$\label{fig:1x1rpp3d}]%
-{\includegraphics[height=0.39\textwidth]{content/figures/3D-Si1x1-RpP}}\hfill
+{\includegraphics[height=0.40\textwidth]{content/figures/3D-Si1x1-RpP}}\hfill
 \subbottom[$\mathcal{R}_{sP}$\label{fig:1x1rsp3d}]%
-{\includegraphics[height=0.39\textwidth]{content/figures/3D-Si1x1-RsP}}
+{\includegraphics[height=0.40\textwidth]{content/figures/3D-Si1x1-RsP}}
 \caption[Overview of the angular dependence of $\mathcal{R}_{\mathrm{iP}}$.]
 {$\mathcal{R}$ for outgoing $P$ polarization, versus the angle of
 incidence ($\theta_{0}$) for the Si(111)(1$\times$1):H surface. A scissors shift
@@ -652,12 +651,12 @@ critical points. Again, we will review these findings in much more detail below.
 Note that I will omit $\mathcal{R}_{sS}$ from this point forward, as I do not
 have any experimental data to compare it with.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \subbottom[$\mathcal{R}_{pS}$\label{fig:1x1rps3d}]%
-{\includegraphics[height=0.39\textwidth]{content/figures/3D-Si1x1-RpS}}\hfill
+{\includegraphics[height=0.40\textwidth]{content/figures/3D-Si1x1-RpS}}\hfill
 \subbottom[$\mathcal{R}_{sS}$\label{fig:1x1rss3d}]%
-{\includegraphics[height=0.39\textwidth]{content/figures/3D-Si1x1-RsS}}
+{\includegraphics[height=0.40\textwidth]{content/figures/3D-Si1x1-RsS}}
 \caption[Overview of the angular dependence of $\mathcal{R}_{\mathrm{iS}}$.]
 {$\mathcal{R}$ for outgoing $S$ polarized fields, versus the angle of
 incidence ($\theta_{0}$) for the Si(111)(1$\times$1):H surface. A scissors shift
@@ -717,14 +716,13 @@ and \ref{fig:mitchellRpP}, and towards the theoretical results.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-MRthickness}
-\caption{$\mathcal{R}_{pP}$ for two thickness values $d$ of the thin layer
-$\ell$.}
-{Comparison between the three layer model with the effects of multiple
-reflections for two different values of the total layer thickness $d$, with the
-standard three layer model without the effects of multiple reflections, and the
-experimental data from Ref. \cite{mejiaPRB02}. We take $\theta=65^{\circ}$,
-$\phi=30^{\circ}$, and a scissors value of $\hbar\Delta = 0.7\,\text{eV}$.}
+\includegraphics[width=0.64\textwidth]{content/figures/fig-Si1x1-MRthickness}
+\caption[$\mathcal{R}_{pP}$ for two thickness values $d$ of the thin layer
+$\ell$.] {$\mathcal{R}_{pP}$ for two different values of the total layer
+thickness $d$, the three layer model without the effects of multiple
+reflections, and the experimental data from Ref. \cite{mejiaPRB02}. We take
+$\theta=65^{\circ}$, $\phi=30^{\circ}$, and a scissors value of $\hbar\Delta =
+0.7\,\text{eV}$.}
 \label{fig:average}
 \end{figure}
 
@@ -749,9 +747,9 @@ However, including them is indeed necessary in order to have the most complete
 formulation, and calculating $r^{M}_{p}$ comes at no additional computational
 expense.
 
-\begin{figure}[t]
+\begin{figure}[b]
 \centering
-\includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-MRno1w}
+\includegraphics[width=0.64\textwidth]{content/figures/fig-Si1x1-MRno1w}
 \caption[Including or neglecting the effects of multiple reflections for the
 fundamental fields]
 {Comparison between including or neglecting the effects of multiple
@@ -795,9 +793,9 @@ nonlinear SH conversion takes place. From this point on, we will always include
 the effects of multiple reflections in the 3-layer model, with a layer thickness
 of $d = 10$ nm and the average value of $\bar{R}^{M}_{p}$.
 
-\begin{figure}[H]
+\begin{figure}[b]
 \centering
-\includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-MRdepth}
+\includegraphics[width=0.64\textwidth]{content/figures/fig-Si1x1-MRdepth}
 \caption[Different depths for the placement of the polarization sheet in the
 thin layer $\ell$.]
 {Comparison between the three layer model with the effects of multiple
@@ -824,9 +822,9 @@ $\epsilon_{\ell}$ (3-layer), or a combination of the two (3-layer-hybrid).
 Ultimately, the 3-layer model has better peak proportions and good intensity,
 but the other two models are interesting alternatives.
 
-\begin{figure}[t]
+\begin{figure}[b]
 \centering 
-\includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-Mejia_RpP}
+\includegraphics[width=0.64\textwidth]{content/figures/fig-Si1x1-Mejia_RpP}
 \caption[$\mathcal{R}_{pP}$ compared to experimental data from Mejia et al.]
 {Comparison between theoretical models (see Table \ref{tab:models}) and
 experiment for $\mathcal{R}_{pP}$, for $\theta=65^{\circ}$, and a scissors value
@@ -857,9 +855,9 @@ reflections), the 2-layer-fresnel (the historically popular model), and the
 different possibilities available and add some insight into the physics behind
 the SSHG yield.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering 
-\includegraphics[width=0.7\textwidth]
+\includegraphics[width=0.64\textwidth]
 {content/figures/fig-Si1x1-Mejia_RpP_models}
 \caption[2-layer-fresnel and 2-layer vacuum for $\mathcal{R}_{pP}$.]
 {Comparison between the 2-layer-fresnel and 2-layer-vacuum models (see Table
@@ -884,7 +882,7 @@ models.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-Mitchell_RpP}
+\includegraphics[width=0.64\textwidth]{content/figures/fig-Si1x1-Mitchell_RpP}
 \caption[$\mathcal{R}_{pP}$ compared to experimental data from Mitchell et al.]
 {Comparison between theoretical models (see Table \ref{tab:models}) and
 experiment for $\mathcal{R}_{pP}$, for $\theta=45^{\circ}$, and a scissors value
@@ -930,7 +928,7 @@ for this task, but is well beyond the scope of this work.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-Mejia_RsP}
+\includegraphics[width=0.64\textwidth]{content/figures/fig-Si1x1-Mejia_RsP}
 \caption[$\mathcal{R}_{sP}$ compared to experimental data from Mejia et al.]
 {Comparison between theoretical models (see Table \ref{tab:models}) and
 experiment for $\mathcal{R}_{sP}$, for $\theta=65^{\circ}$, and a scissors value
@@ -964,9 +962,9 @@ oxidized and the E$_{1}$ peak diminishes substantially, as shown by the
 experimental data taken 5 hours after initial H-termination. This may be enough
 time to slightly reduce the E$_{1}$ peak intensity in the experimental data.
 
-\begin{figure}[t]
+\begin{figure}[b]
 \centering
-\includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-Mejia_RpS}
+\includegraphics[width=0.64\textwidth]{content/figures/fig-Si1x1-Mejia_RpS}
 \caption[$\mathcal{R}_{pS}$ compared to experimental data from Mejia et al.]
 {Comparison between theoretical models (see Table \ref{tab:models}) and
 experiment for $\mathcal{R}_{pS}$, for $\theta=65^{\circ}$, and a scissors value
@@ -987,9 +985,9 @@ degree of quality and measured at room temperature. Peak position compared to
 theory is slightly improved under these conditions. As before, the 3-layer model
 is closer in intensity to the experimental spectrum.
 
-\begin{figure}[t]
+\begin{figure}[b]
 \centering
-\includegraphics[width=0.7\textwidth]{content/figures/fig-Si1x1-Mitchell_RpS}
+\includegraphics[width=0.64\textwidth]{content/figures/fig-Si1x1-Mitchell_RpS}
 \caption[$\mathcal{R}_{pS}$ compared to experimental data from Mitchell et al.]
 {Comparison between theoretical models (see Table \ref{tab:models}) and
 experiment for $\mathcal{R}_{pS}$, for $\theta=45^\circ$. We use a scissors
@@ -1051,7 +1049,7 @@ intensity that compare favorably with the experimental data.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.7\textwidth]
+\includegraphics[width=0.64\textwidth]
 {content/figures/fig-Si1x1-Mejia_RpS_improvements}
 \caption[$\mathcal{R}_{pS}$ calculated with different levels of appoximation.]
 {Calculated results for $\mathcal{R}_{pS}$ for the different levels of
