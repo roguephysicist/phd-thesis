@@ -1,0 +1,79 @@
+\documentclass[border=1cm,tikz]{standalone}
+\usepackage{amsmath}
+
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{fadings}
+\usetikzlibrary{decorations.markings}
+
+
+\definecolor{lightblue}{rgb}{0.149,0.545,0.824}
+\definecolor{darkred}{rgb}{0.647,0.129,0.149}
+\definecolor{green}{rgb}{0.365, 0.592, 0.157}
+\definecolor{darkblue}{rgb}{0.000, 0.275, 0.545}
+
+\begin{document}
+
+\tikzset{middlearrow/.style={decoration={markings,mark= at position 0.5 with {\arrow{#1}},},postaction={decorate}}}
+
+\begin{tikzpicture}
+
+% axes
+\draw [very thick] (13,10) +(90:0.8) arc (90:135:0.8);
+\draw [Latex-Latex,thick] (13,12) -- (13,10) -- (15,10);
+\draw [Latex-,ultra thick] (13,10) -- ++(135:2.3);
+\draw [color=black] (13,10) circle (0.10);
+\node at (12.6,11.1) {\LARGE $\theta_{0}$};
+\node at (11.7,10.8) {\LARGE $\boldsymbol{\nu}_{v-}$};
+\node at (13.3,12) {\LARGE $z$};
+\node at (13,9.6) {\LARGE $\hat{\mathbf{s}}$};
+\node at (15.2,9.8) {\LARGE $\hat{\boldsymbol{\kappa}}$};
+
+% outside arrows and labels
+\draw [thick] (4.95,10.01) -- ++(45:0.41) -- ++(-45:0.41);
+\draw [thick,dashed] (1.5,6) --  ++(45:9);
+\draw [-Latex,thick] (1.52,6) --  ++(135:2) -- ++(45:1.5);
+\draw [Latex-,ultra thick,darkred] (1.52,6) --  ++(135:3);
+\draw [Latex-,ultra thick] (5.22,6) --  ++(135:5);
+\draw [Latex-,ultra thick,darkred] (5.22,6) --  ++(135:2.618);
+\draw [Latex-,ultra thick] (8.92,6) --  ++(135:7);
+\draw [Latex-,ultra thick,darkred] (8.92,6) --  ++(135:5.236);
+\draw [Latex-,ultra thick] (12.62,6) -- ++(135:9);
+\draw [Latex-,ultra thick,darkred] (12.62,6) -- ++(135:7.850);
+\node at (4.4,7.5) {\LARGE $L_{2}$};
+\node at (7.2,8.5) {\LARGE $2L_{2}$};
+\node at (9.9,9.5) {\LARGE $3L_{2}$};
+\node at (1.2,7.7) {\LARGE $\hat{\mathbf{p}}_{v-}$};
+\node at (4.5,6.3) {\LARGE $\varphi$};
+\node at (8.05,6.35) {\LARGE $2\varphi$};
+\node at (11.75,6.35) {\LARGE $3\varphi$};
+
+% inside arrows and labels
+\draw [-Latex,thick] (1.5,6) -- ++(-65:1) -- ++(25:1.5);
+\draw [middlearrow={Latex},-Latex,ultra thick,darkred] (1.5,6) -- ++(-65:4.4) -- ++(65:4.4);
+\draw [-Latex,thick] (8.92,6) -- ++(-115:1) -- ++(155:1.5);
+\draw [middlearrow={Latex},-Latex,ultra thick,darkred] (5.2,6) -- ++(-65:4.4) -- ++(65:4.4);
+\draw [middlearrow={Latex},-Latex,ultra thick,darkred] (8.9,6) -- ++(-65:4.4) -- ++(65:4.4);
+\draw [ultra thick,darkred,path fading=north] (5.2,6) -- ++(45:1.5);
+\draw [ultra thick,darkred,path fading=north] (8.9,6) -- ++(45:1.5);
+\draw [ultra thick,darkred,path fading=north] (12.6,6) -- ++(45:1.5);
+\draw [ultra thick,darkred,path fading=south] (12.6,6) -- ++(-65:1.5);
+\draw [ultra thick,darkred,path fading=south] (3.36,2) -- ++(-75:2);
+\draw [ultra thick,darkred,path fading=south] (7.06,2) -- ++(-75:2);
+\draw [ultra thick,darkred,path fading=south] (10.76,2) -- ++(-75:2);
+\node at (3,5) {\LARGE $\hat{\mathbf{p}}_{\ell -}$};
+\node at (7.7,5) {\LARGE $\hat{\mathbf{p}}_{\ell +}$};
+\node at (4.5,3.5) {\LARGE $L_{1}$};
+
+% surface and side labels
+\node at (13.5,7.5) {\LARGE $v$};
+\node at (15,6.1) {\LARGE $z = 0$};
+\draw [ultra thick] (0,6) -- (14,6);
+\node at (13.5,4) {\LARGE $\ell$};
+\draw [ultra thick] (0,2) -- (14,2);
+\node at (15,2.1) {\LARGE $z = -d$};
+\node at (13.5,0.5) {\LARGE $b$};
+
+
+\end{tikzpicture}
+
+\end{document}
