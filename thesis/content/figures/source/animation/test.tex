@@ -1,0 +1,22 @@
+\documentclass{standalone}
+
+\usepackage{pgfplots}
+
+\begin{document}
+  \begin{tikzpicture}
+    \begin{axis}[
+        axis on top,% ----
+        width=5cm,
+        scale only axis,
+        enlargelimits=false,
+        xmin=0,
+        xmax=96,
+        ymin=0,
+        ymax=96,
+        axis equal=true
+        ]
+
+      \addplot[thick,blue] graphics[xmin=0,ymin=0,xmax=96,ymax=96] {cube.pdf};
+    \end{axis}
+  \end{tikzpicture}
+\end{document}
