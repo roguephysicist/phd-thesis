@@ -1,0 +1,54 @@
+\documentclass[border=1cm,tikz]{standalone}
+\usepackage{tikz-3dplot}
+\usepackage{hieroglf}
+
+\usetikzlibrary{arrows.meta}
+
+\definecolor{lightblue}{rgb}{0.149,0.545,0.824}
+\definecolor{darkred}{rgb}{0.647,0.129,0.149}
+\definecolor{green}{rgb}{0.365, 0.592, 0.157}
+
+\begin{document}
+
+\tdplotsetmaincoords{70}{110}
+
+\begin{tikzpicture}[tdplot_main_coords]
+
+%% axes
+\draw[->,line width=4pt] (0,0,0) -- (10,0,0) node[anchor=north east]{\Huge $x$};
+\draw[->,line width=4pt] (0,0,0) -- (-10,0,0) node[anchor=north east]{};
+\draw[->,line width=4pt] (0,0,0) -- (0,6,0) node[anchor=north west]{\Huge $y$};
+\draw[->,line width=4pt] (0,0,0) -- (0,-6,0) node[anchor=north west]{};
+\draw[->,line width=4pt] (0,0,0) -- (0,0,10) node[anchor=south]{\Huge $z$};
+\draw[->,line width=4pt] (0,0,0) -- (0,0,-8) node[anchor=south]{};
+
+\draw[line width=5pt,darkred] (0,0,0) -- (-5,0,0) -- (-5,0,5) -- (-5,3,5);
+
+\begin{scope}[canvas is zx plane at y=2.85]
+    \draw [ultra thick,fill=white] (5,-5) circle (1.2);
+\end{scope}
+
+\begin{scope}[canvas is zx plane at y=3]
+    \draw [ultra thick,fill=white] (5,-5) circle (1.2)
+          node [xslant=0,yslant=0.7] {\LARGE \$1}
+          node [below,yshift=-35,darkred] {\Huge $(a,b,c)$};
+\end{scope}
+
+\begin{scope}[canvas is zx plane at y=-3.15]
+    \draw [ultra thick,fill=white] (-5,5) circle (1.2);
+\end{scope}
+
+\begin{scope}[canvas is zx plane at y=-3]
+    \draw [ultra thick,fill=white] (-5,5) circle (1.2)
+          node [rotate=180,xscale=-1,xslant=0,yslant=-0.1,xshift=2.5] {\LARGE \pmglyph{\Ha}}
+          node [below,yshift=-30,green] {\Huge $(-a,-b,-c)$};
+\end{scope}
+
+\draw[line width=5pt,green] (0,0,0) -- (5,0,0) -- (5,0,-5) -- (5,-3,-5);
+
+\node [lightblue] at (-1.2,-3.5,1) {\Huge Inversion Point};
+\draw [-Latex,line width=3pt,lightblue] (-0.9,-2.1,0.8) -- (0,0,0);
+
+\end{tikzpicture}
+
+\end{document}

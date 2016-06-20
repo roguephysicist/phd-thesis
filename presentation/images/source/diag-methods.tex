@@ -1,0 +1,48 @@
+\documentclass[border=1cm,tikz]{standalone}
+\usepackage{MyriadPro}
+
+\usetikzlibrary{arrows.meta}
+
+\definecolor{yellow}{RGB}{255,197,051}
+\definecolor{blue}  {RGB}{124,192,217}
+\definecolor{green} {RGB}{139,158,119}
+\definecolor{orange}{RGB}{232,099,044}
+\definecolor{red}   {RGB}{219,053,038}
+\definecolor{purple}{RGB}{109,110,146}
+
+\begin{document}
+
+\tikzstyle{block}=[rectangle,text=white,text width=5.5cm,text centered,rounded corners,minimum height=2cm]
+
+\begin{tikzpicture}[font=\sffamily\large]
+
+% blocks
+\node [block,top color=yellow,bottom color=yellow!80!black] at (4,10) (DFT) 
+       {\textbf{DFT}\\ Density Functional Theory};
+
+\node [block,top color=blue,bottom color=blue!80!black] at (0.5,5.5) (TDDFT)
+       {\textbf{TD-DFT}\\ Time-Dependent DFT};
+\node [block,top color=green,bottom color=green!80!black] at (0.5,2.5) (ALDA)
+       {\textbf{ALDA}\\ Adiabatic Local Density\\ Approximation};
+
+\node [block,top color=orange,bottom color=orange!80!black] at (7.5,6.5) (MBPT)
+       {\textbf{MBPT}\\ Many-Body\\ Perturbation Theory};
+\node [block,top color=red,bottom color=red!80!black] at (7.5,3.5) (GW)
+       {\textbf{GW}\\ GW Approximation};
+\node [block,top color=purple,bottom color=purple!80!black] at (7.5,0.5) (BSE)
+       {\textbf{BSE}\\ Bethe-Salpeter Equation};
+
+% arrows
+\draw [-Latex,thick] (DFT.west) to [bend right=55] (TDDFT);
+\draw [-Latex,thick] (TDDFT) -- (ALDA);
+
+\draw [-Latex,thick] (DFT.east) to [bend left=55] (MBPT);
+\draw [-Latex,thick] (MBPT) -- (GW);
+\draw [-Latex,thick] (GW) -- (BSE);
+
+\node [yshift=15] at (DFT.north) {\Large Exact theory for ground state properties};
+\node [yshift=-25] at (DFT.south) {\Large Exact theories for excited state properties};
+
+\end{tikzpicture}
+
+\end{document}

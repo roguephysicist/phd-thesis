@@ -1,0 +1,33 @@
+# MonoH_MonoH_1x1_111 input file for calculating reflectance
+mode: 3-layer
+theta: 090
+phi: 090
+# chi1 normalization and broadening (sigma = 0.075 eV)
+norm: 1.2659296143
+sigma: 3.2
+# Multiple reflections
+multiref: yes
+thickness: 10
+depth: average
+# Components
+chib: /Users/sma/developer/phd-thesis/thesis/content/data/SiBulk/chi1-vnl.sm_0.075_xx_yy_zz_3107_25-nospin_scissor_0.70_Nc_26
+chil: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/calChi1-vnl.sm_0.075_xx_yy_zz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+xxx: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_xxx_576_half-slab_12-nospin_scissor_0.70_Nc_103
+xxy: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_xxy_576_half-slab_12-nospin_scissor_0.70_Nc_103
+xxz: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_xxz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+xyy: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_xyy_576_half-slab_12-nospin_scissor_0.70_Nc_103
+xyz: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_xyz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+xzz: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_xzz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+yxx: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_yxx_576_half-slab_12-nospin_scissor_0.70_Nc_103
+yxz: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_yxz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+yyx: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_yyx_576_half-slab_12-nospin_scissor_0.70_Nc_103
+yyy: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_yyy_576_half-slab_12-nospin_scissor_0.70_Nc_103
+yyz: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_yyz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+yzz: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_yzz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+zxx: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_zxx_576_half-slab_12-nospin_scissor_0.70_Nc_103
+zxy: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_zxy_576_half-slab_12-nospin_scissor_0.70_Nc_103
+zxz: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_zxz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+zyy: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_zyy_576_half-slab_12-nospin_scissor_0.70_Nc_103
+zzy: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_zzy_576_half-slab_12-nospin_scissor_0.70_Nc_103
+zzz: /Users/sma/developer/phd-thesis/thesis/content/data/Si1x1/shgC.vnl.sm_0.075_zzz_576_half-slab_12-nospin_scissor_0.70_Nc_103
+output: RiF-theta_090.phi_090.dat
