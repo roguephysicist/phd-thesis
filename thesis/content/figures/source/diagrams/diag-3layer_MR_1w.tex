@@ -7,12 +7,17 @@
 
 \definecolor{darkred}{rgb}{0.647,0.129,0.149}
 \definecolor{green}{rgb}{0.365, 0.592, 0.157}
+\definecolor{lightred}{RGB}{255,227,227}
 
 \begin{document}
 
 \tikzset{middlearrow/.style={decoration={markings,mark= at position 0.5 with {\arrow{#1}},},postaction={decorate}}}
 
 \begin{tikzpicture}
+
+% colors
+\fill [green,fill opacity=0.2] (0,2) rectangle (14,6);
+\fill [lightred] (0,0) rectangle (14,2);
 
 % axes
 \draw [very thick] (13,10) +(90:0.8) arc (90:135:0.8);
@@ -50,25 +55,28 @@
 \draw [-Latex,thick] (8.92,6) -- ++(-115:1) -- ++(155:1.5);
 \draw [middlearrow={Latex},-Latex,ultra thick,darkred] (5.2,6) -- ++(-65:4.4) -- ++(65:4.4);
 \draw [middlearrow={Latex},-Latex,ultra thick,darkred] (8.9,6) -- ++(-65:4.4) -- ++(65:4.4);
-\draw [ultra thick,darkred,path fading=north] (5.2,6) -- ++(45:1.5);
-\draw [ultra thick,darkred,path fading=north] (8.9,6) -- ++(45:1.5);
-\draw [ultra thick,darkred,path fading=north] (12.6,6) -- ++(45:1.5);
-\draw [ultra thick,darkred,path fading=south] (12.6,6) -- ++(-65:1.5);
-\draw [ultra thick,darkred,path fading=south] (3.36,2) -- ++(-75:2);
-\draw [ultra thick,darkred,path fading=south] (7.06,2) -- ++(-75:2);
-\draw [ultra thick,darkred,path fading=south] (10.76,2) -- ++(-75:2);
+\draw [ultra thick,darkred,dash pattern=on 25pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (5.2,6) -- ++(45:1.5);
+\draw [ultra thick,darkred,dash pattern=on 25pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (8.9,6) -- ++(45:1.5);
+\draw [ultra thick,darkred,dash pattern=on 25pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (12.6,6) -- ++(45:1.5);
+\draw [ultra thick,darkred,dash pattern=on 25pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (12.6,6) -- ++(-65:1.5);
+\draw [ultra thick,darkred,dash pattern=on 39pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (3.36,2) -- ++(-75:2);
+\draw [ultra thick,darkred,dash pattern=on 39pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (7.06,2) -- ++(-75:2);
+\draw [ultra thick,darkred,dash pattern=on 39pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (10.76,2) -- ++(-75:2);
 \node at (3,5) {\LARGE $\hat{\mathbf{p}}_{\ell -}$};
 \node at (7.7,5) {\LARGE $\hat{\mathbf{p}}_{\ell +}$};
 \node at (4.5,3.5) {\LARGE $L_{1}$};
 
 % surface and side labels
-\node at (13.5,7.5) {\LARGE $v$};
+\node at (14.04,7.5) {\LARGE $\epsilon_{v} = 1$};
+\node at (-1.4,7.0) {\Large Vacuum};
 \node at (15,6.1) {\LARGE $z = 0$};
 \draw [ultra thick] (0,6) -- (14,6);
-\node at (13.5,4) {\LARGE $\ell$};
+\node [text width=2cm,align=right] at (-1.5,4) {\Large Surface\\[2pt] Layer};
+\node at (13.5,4) {\LARGE $\epsilon_{\ell}$};
 \draw [ultra thick] (0,2) -- (14,2);
 \node at (15,2.1) {\LARGE $z = -d$};
-\node at (13.5,0.5) {\LARGE $b$};
+\node at (-1,1) {\Large Bulk};
+\node at (13.5,1) {\LARGE $\epsilon_{b}$};
 
 \end{tikzpicture}
 

@@ -3,9 +3,9 @@ infile="Si2x1.in"
 mode="theta"
 
 if [ $mode == "theta" ]; then
-    outfile="../../../data/Si2x1/Rif-3Dtheta.dat"
+    outfile="Rif-3Dtheta.dat"
 elif [ $mode == "phi" ]; then
-    outfile="../../../data/Si2x1/Rif-3Dphi.dat"
+    outfile="Rif-3Dphi.dat"
 fi
 
 if [ -e $outfile ]; then

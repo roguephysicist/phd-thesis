@@ -21,8 +21,9 @@ b. Conceptual nonlinear de SHG (animación del gay)
 4. Both structures
 
 ## nonlocal chi2
-1. Different elements in chi (what is nonlocal? why are these elements important?)
-2. Diagram for cut function (2x1)
+1. Different elements in chi (why are these elements important?)
+2. Diagram for cut function (2x1) and cut function to extract surface response
+2. Pseudo potentials, nonlocal part, what is nonlocal?
 3. ABINIT, TINIBA, DP, programming
 4. Results for 2x1
 5. Result for 1x1 vs Hofer

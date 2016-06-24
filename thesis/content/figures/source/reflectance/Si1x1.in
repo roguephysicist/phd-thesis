@@ -1,12 +1,12 @@
 # MonoH_MonoH_1x1_111 input file for calculating reflectance
 mode: 3-layer
-theta: 45
+theta: 65
 phi: 30
 # chi1 normalization and broadening (sigma = 0.075 eV)
 norm: 1.2659296143
 sigma: 3.2
 # Multiple reflections
-multiref: no
+multiref: yes
 thickness: 10
 depth: average
 # Components
@@ -30,4 +30,4 @@ zxz: ../../../data/Si1x1/shgC.vnl.sm_0.075_zxz_576_half-slab_12-nospin_scissor_0
 zyy: ../../../data/Si1x1/shgC.vnl.sm_0.075_zyy_576_half-slab_12-nospin_scissor_0.70_Nc_103
 zzy: ../../../data/Si1x1/shgC.vnl.sm_0.075_zzy_576_half-slab_12-nospin_scissor_0.70_Nc_103
 zzz: ../../../data/Si1x1/shgC.vnl.sm_0.075_zzz_576_half-slab_12-nospin_scissor_0.70_Nc_103
-output: Rif-Mitchell.vnl.scissor0.70.3-layer.dat
+output: Rif-Mejia.MR_no2w.avg_10nm.vnl.scissor0.70.3-layer.dat

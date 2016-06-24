@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[paperwidth=16cm,paperheight=3.5cm,margin=0pt]{geometry}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{equation*}\label{eq:chis}
+\begin{split}
+\mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{e,\omega}]&= 
+\frac{\pi |e|^3}{2\hbar^2}
+\int \frac{d^{3}k}{8\pi^3}
+\sum_{vc}\sum_{q\neq(v,c)}\frac{1}{\omega^\Sigma_{cv}}
+\left[
+\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{qc}
+\{r^{\mathrm{b}}_{cv}r^{\mathrm{c}}_{vq}\}]}
+{(2\omega^\Sigma_{cv}-\omega^\Sigma_{cq})} 
+-\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vq}
+\{r^{\mathrm{c}}_{qc}r^{\mathrm{b}}_{cv}\}]}
+{(2\omega^\Sigma_{cv}-\omega^\Sigma_{qv})}
+\right]\delta(\omega^\Sigma_{cv}-\omega)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{e,2\omega}]&= 
+-\frac{\pi |e|^3}{2\hbar^2}
+\int \frac{d^{3}k}{8\pi^3}
+\sum_{vc}\frac{4}{\omega^\Sigma_{cv}}
+\left[
+\sum_{v'\ne
+  v}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}
+  \{r^{\mathrm{b}}_{cv'}r^{\mathrm{c}}_{v'v}\}]}
+{2\omega^\Sigma_{cv'}-\omega^\Sigma_{cv}}
+- \sum_{c'\ne
+  c}\frac{\mathrm{Im}[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}
+  \{r^{\mathrm{c}}_{cc'}r^{\mathrm{b}}_{c'v}\}]}
+{2\omega^\Sigma_{c'v}-\omega^\Sigma_{cv}}
+\right]\delta(\omega^\Sigma_{cv}-2\omega)
+\end{split}
+\end{equation*}
+
+\end{document}

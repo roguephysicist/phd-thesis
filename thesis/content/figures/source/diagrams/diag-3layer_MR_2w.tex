@@ -9,10 +9,15 @@
 \definecolor{darkblue}{rgb}{0.000, 0.275, 0.545}
 \definecolor{darkred}{rgb}{0.647,0.129,0.149}
 \definecolor{green}{rgb}{0.365, 0.592, 0.157}
+\definecolor{lightred}{RGB}{255,227,227}
 
 \begin{document}
 
 \begin{tikzpicture}
+
+% colors
+\fill [green,fill opacity=0.2] (0,2) rectangle (18,5);
+\fill [lightred] (0,0) rectangle (18,2);
 
 %% axes
 \draw [very thick] (2,9) +(90:0.8) arc (90:135:0.8);
@@ -28,7 +33,7 @@
 %% outside
 % arrows
 \draw [thick] (8.893,8.75) -- ++(-60:0.41) -- ++(-150:0.41); % right angle
-\draw [ultra thick,darkblue,path fading=north] (8.893,8.75) -- ++(30:6);
+\draw [ultra thick,darkblue,dash pattern=on 25pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (8.893,8.75) -- ++(30:6);
 \draw [-Latex,ultra thick,darkblue] (2.4,5) -- ++(30:12.2);
 \draw [-Latex,ultra thick,darkblue] (2.4,5) -- ++(30:7.1);
 \draw [-Latex,ultra thick] (2.4,5) -- ++(30:1.8);
@@ -45,7 +50,7 @@
 % first beam from the left
 \draw [-Latex,ultra thick,darkred,dashed] (0.44,3.06) -- ++(45:2.75);
 \draw [-Latex,ultra thick,lightblue] (0.44,3.06) -- ++(-45:1.5);
-\draw [ultra thick,lightblue,path fading=south] (1.5,2) -- ++(-75:2);
+\draw [ultra thick,lightblue,dash pattern=on 39pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (1.5,2) -- ++(-75:2);
 \filldraw [green] (0.44,3.06) circle (0.15);
 % P_{\ell +} and P_{\ell -}
 \draw [-Latex,thick] (5.5,4) -- ++(-45:1) -- ++(45:1.5);
@@ -54,21 +59,21 @@
 \node at (14,3.5) {\LARGE $\hat{\mathbf{P}}_{\ell +}$};
 % first node on upper surface at (4.5,5)
 \draw [thick,dashed] (4.5,5) -- ++(120:1);
-\draw [ultra thick,lightblue,path fading=north] (4.5,5) -- ++(30:1.5);
+\draw [ultra thick,lightblue,dash pattern=on 25pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (4.5,5) -- ++(30:1.5);
 \draw [Latex-,ultra thick,lightblue] (4.5,5) -- ++(-135:4.25);
 \draw [-Latex,ultra thick,lightblue] (4.5,5) -- ++(-45:4.25);
-\draw [ultra thick,lightblue,path fading=south] (7.5,2) -- ++(-75:2);
+\draw [ultra thick,lightblue,dash pattern=on 39pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (7.5,2) -- ++(-75:2);
 % second node on upper surface at (10.6,5)
 \draw [thick,dashed] (10.6,5) -- ++(120:4.1);
-\draw [ultra thick,lightblue,path fading=north] (10.5,5) -- ++(30:1.5);
+\draw [ultra thick,lightblue,dash pattern=on 25pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (10.5,5) -- ++(30:1.5);
 \draw [Latex-,ultra thick,lightblue] (10.5,5) -- ++(-135:4.25);
 \draw [-Latex,ultra thick,lightblue] (10.5,5) -- ++(-45:4.25);
-\draw [ultra thick,lightblue,path fading=south] (13.5,2) -- ++(-75:2);
+\draw [ultra thick,lightblue,dash pattern=on 39pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (13.5,2) -- ++(-75:2);
 % third node on upper surface at (16.5,5)
 \draw [thick,dashed] (16.5,5) -- ++(120:7.1);
-\draw [ultra thick,lightblue,path fading=north] (16.5,5) -- ++(30:1.5);
+\draw [ultra thick,lightblue,dash pattern=on 25pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (16.5,5) -- ++(30:1.5);
 \draw [Latex-,ultra thick,lightblue] (16.5,5) -- ++(-135:4.25);
-\draw [ultra thick,lightblue,path fading=south] (16.5,5) -- ++(-45:1.5);
+\draw [ultra thick,lightblue,dash pattern=on 25pt off 2pt on 5pt off 2pt on 3pt off 2pt on 1pt off 2pt] (16.5,5) -- ++(-45:1.5);
 % labels
 \node at (1.4,3) {\Large $\boldsymbol{\mathcal{P}}(2\omega)$};
 \node at (1,4.3) {\Large $L_{2}$};
@@ -87,11 +92,14 @@
 \draw [Latex-Latex,thick] (0.2,2) -- (0.2,3.06);
 \draw [Latex-Latex,thick] (0.2,3.06) -- (0.2,5);
 % right side
-\node at (17.5,6.5) {\LARGE $v$};
+\node at (18.05,6.5) {\LARGE $\epsilon_{v}=1$};
+\node at (-1.9,6.0) {\Large Vacuum};
 \node at (19,5.1) {\LARGE $z = 0$};
-\node at (17.5,3.5) {\LARGE $\ell$};
+\node [text width=2cm,align=right] at (-2.05,3.5) {\Large Surface\\[2pt] Layer};
+\node at (17.5,3.5) {\LARGE $\epsilon_{\ell}$};
 \node at (19,2.1) {\LARGE $z = -d$};
-\node at (17.5,0.5) {\LARGE $b$};
+\node at (-1.55,1) {\Large Bulk};
+\node at (17.5,1) {\LARGE $\epsilon_{b}$};
 % surface
 \draw [ultra thick] (0,5) -- (18,5);
 \draw [ultra thick] (0,2) -- (18,2);

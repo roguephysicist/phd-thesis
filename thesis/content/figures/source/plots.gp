@@ -82,9 +82,9 @@ set yrange [ 0 : 1.2 ] noreverse nowriteback
 set xlabel 'One-photon energy (eV)'
 set ylabel '$\vert\chi^{xxx}_{2\times1}\vert$ ($10^{6}\times\mathrm{pm}^{2}$/V)'
 set label 1 at 3.45,.6 'with $\mathbf{v}^\mathrm{nl}$'
-p '../../data/Si2x1/32layers/shgC.vnl.sm_0.15_xxx_244_half-slab_10-nospin_scissor_0.00_Nc_130' u 1:(abso($2,$3,$4,$5)) t '$\hbar\Sigma=0.00$ eV' dt 4 lw 4.0 lc rgb "#1ba362" w l,\
-  '../../data/Si2x1/32layers/shgC.vnl.sm_0.15_xxx_244_half-slab_10-nospin_scissor_0.50_Nc_130' u 1:(abso($2,$3,$4,$5)) t '$\hbar\Sigma=0.50$ eV' dt 1 lw 4.0 lc rgb "#268bd2" w l,\
-  '../../data/Si2x1/32layers/shgC.vnl.sm_0.15_xxx_244_half-slab_10-nospin_scissor_0.63_Nc_130' u 1:(abso($2,$3,$4,$5)) t '$\hbar\Sigma=0.63$ eV' dt 1 lw 3.0 lc rgb "#dc322f" w l
+p '../../data/Si2x1/32layers/shgC.vnl.sm_0.15_xxx_244_half-slab_10-nospin_scissor_0.00_Nc_130' u 1:(abso($2,$3,$4,$5)) t '$\hbar\Delta=0.00$ eV' dt 4 lw 4.0 lc rgb "#1ba362" w l,\
+  '../../data/Si2x1/32layers/shgC.vnl.sm_0.15_xxx_244_half-slab_10-nospin_scissor_0.50_Nc_130' u 1:(abso($2,$3,$4,$5)) t '$\hbar\Delta=0.50$ eV' dt 1 lw 4.0 lc rgb "#268bd2" w l,\
+  '../../data/Si2x1/32layers/shgC.vnl.sm_0.15_xxx_244_half-slab_10-nospin_scissor_0.63_Nc_130' u 1:(abso($2,$3,$4,$5)) t '$\hbar\Delta=0.63$ eV' dt 1 lw 3.0 lc rgb "#dc322f" w l
 ####
 
 unset label

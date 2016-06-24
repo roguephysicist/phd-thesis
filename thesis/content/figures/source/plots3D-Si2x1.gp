@@ -26,6 +26,7 @@ load '3DReflectance/Spectral.plt'
 set palette negative
 unset grid
 set size ratio 1
+# set arrow front nohead lw 3 dt 2 lc rgb 'black' from 1.4,-90,0 to 1.4,90,0
 
 ## varying theta, phi = 45
 # set ytics ('$-\frac{\pi}{2}$' -90, "0" 0, '$\frac{\pi}{2}$' 90, '$\pi$' 180, '$\frac{3\pi}{2}$' 270,)

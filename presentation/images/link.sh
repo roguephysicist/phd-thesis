@@ -6,7 +6,7 @@ declare -a FILELIST=(
 3D-Si1x1-RpP.pdf
 3D-Si1x1-RpS.pdf
 3D-Si1x1-RsP.pdf
-# 3D-Si1x1-RsS.pdf
+3D-Si1x1-RsS.pdf
 # 3D-Si2x1-RpP.pdf
 # 3D-Si2x1-RpS.pdf
 # 3D-Si2x1-RsP.pdf
@@ -20,8 +20,8 @@ fig-Si1x1-Hofer_Xxxx.pdf
 fig-Si1x1-Mejia_RpP_models.pdf
 fig-Si1x1-Mejia_RpP.pdf
 # fig-Si1x1-Mejia_RpS_improvements.pdf
-fig-Si1x1-Mejia_RpS.pdf
-fig-Si1x1-Mejia_RsP.pdf
+# fig-Si1x1-Mejia_RpS.pdf
+# fig-Si1x1-Mejia_RsP.pdf
 # fig-Si1x1-Mitchell_RpP.pdf
 # fig-Si1x1-Mitchell_RpS.pdf
 fig-Si1x1-MRdepth.pdf
