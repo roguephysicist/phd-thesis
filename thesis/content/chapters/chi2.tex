@@ -5,8 +5,8 @@
 
 In this chapter we formulate a theoretical approach of surface second-harmonic
 generation from semiconductor surfaces based on the length gauge and the
-electron density operator. Within the independent particle approximation the
-nonlinear second-order surface susceptibility tensor
+electron density operator. Within the independent particle approximation (IPA)
+the nonlinear second-order surface susceptibility tensor
 $\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}(-2\omega;\omega,\omega)$ is calculated,
 including in one unique formulation (i) the scissors correction, needed to have
 the correct value of the energy band gap, (ii) the contribution of the nonlocal
@@ -22,7 +22,7 @@ into account in the present formulation.
 
 \section{The Nonlinear Surface Susceptibility}
 
-In this section I will outline the general procedure to obtain the surface
+In this section we will outline the general procedure to obtain the surface
 susceptibility tensor for SHG. We start with the nonlinear polarization
 $\mathbf{P}(\mathbf{r})$ of a bulk system, written as
 \begin{equation}\label{mshg}
@@ -40,11 +40,10 @@ where $\chi^{\mathrm{abc}}(-2\omega;\omega,\omega)$ and
 $\chi^{\mathrm{abcd}}(-2\omega;\omega,\omega)$ correspond to the dipolar and
 quadrupolar susceptibility tensors, and $\mathbf{E}(\mathbf{r})$ is the incoming
 electric field along the different Cartesian directions denoted by the roman
-superscripts. For ease of notation, I will drop the $\omega$ arguments from this
-point on. At this point I introduce the units of the quantities above. For
-simplicity, we use the MKS system of units. The units of
-$\mathbf{E}(\mathbf{r})$ are $[\mathbf{E}] = $ V/m, and the units of
-$\mathbf{P}(\mathbf{r})$ are $[\mathbf{P}] = $ V/m since
+superscripts, and if repeated are to be summed over. For ease of notation, we
+will drop the $\omega$ arguments from this point on. For simplicity, we use the
+MKS system of units. The units of $\mathbf{E}(\mathbf{r})$ are $[\mathbf{E}] = $
+V/m, and the units of $\mathbf{P}(\mathbf{r})$ are $[\mathbf{P}] = $ V/m since
 $\mathbf{P}(\mathbf{r})$ is a \emph{bulk} polarization. Therefore, the units of
 the bulk $\chi^{\mathrm{abc}}$ are $[\chi^{\mathrm{abc}}] = $ m/V.
 
@@ -126,7 +125,7 @@ three and four, respectively.
 In this work, we will only concentrate on SSHG, even though bulk-generated SH is
 also a very important optical phenomenon. To this end, we will neglect the
 contribution from Eq. \eqref{sshgp3} and only consider the surface term from Eq.
-\eqref{sshgp}. I will also exclude other interesting surface SH phenomena like,
+\eqref{sshgp}. We will also exclude other interesting surface SH phenomena, like
 electric field induced second-harmonic (EFISH), which would be represented by a
 surface susceptibility tensor of quadrupolar origin. As mentioned in Chapter
 \ref{chap:intro}, in centrosymmetric systems for which the quadrupolar bulk
@@ -142,7 +141,7 @@ $\chi^{\mathrm{abc}}_{\mathrm{surface}}$.
 \includegraphics[scale=0.6]{content/figures/diag-system}
 \caption[Sketch of a semi-infinite system with a centrosymmetric bulk.]
 {Sketch of a semi-infinite system with a centrosymmetric bulk. The surface
-region is of width $\sim d$. The incoming photon of frequency $\omega$ is
+region is of thickness $\sim d$. The incoming photon of frequency $\omega$ is
 represented by a downward red arrow, whereas both the surface and bulk created
 second-harmonic photons of frequency $2\omega$ are represented by upward green
 arrows. The red color suggests an incoming infrared photon with a green
@@ -246,8 +245,8 @@ solution, for which we write
 + \tilde{\rho}^{(2)}
 + \cdots,
 \end{equation}
-where $\tilde{\rho}^{(N)}$ where the superscript denotes the order (power) with
-which each term depends on the perturbation $H_{I}(t)$. Then, Eq.
+where the superscript of the $\tilde{\rho}^{(N)}$ terms denotes the order
+(power) with which each term depends on the perturbation $H_{I}(t)$. Then, Eq.
 \eqref{intrho2} reads
 \begin{equation}\label{intrho3}
   \tilde{\rho}^{(0)} 
@@ -330,9 +329,8 @@ H^{\mathrm{LDA}}_{0}(\mathbf{r},\mathbf{p})
 with $m_e$ the mass of the electron, $\mathbf{p}=-i\hbar\boldsymbol{\nabla}$ its
 canonical momentum, and $V$ the periodic crystal potential, where we neglect
 spin-orbit terms. To be more general in our derivation of
-$\chi^{\mathrm{abc}}(-2\omega;\omega,\omega)$, we assume
-contribution as is customary for most pseudopotentials, and then we replace $V$
-with
+$\chi^{\mathrm{abc}}(-2\omega;\omega,\omega)$, we assume the contribution as is
+customary for most pseudopotentials, and then we replace $V$ with
 \begin{equation}
 V^{\mathrm{ps}}(\mathbf{r},\mathbf{p})
 = V(\mathbf{r})+V^{\mathrm{nl}}(\mathbf{r},\mathbf{p}),
@@ -473,13 +471,14 @@ i\hbar\langle n\mathbf{k}\vert\mathbf{v}^\Sigma\vert m\mathbf{k}\rangle
 Defining $\omega^\Sigma_{nm}(\mathbf{k}) =
 \omega^{\Sigma}_{n}(\mathbf{k}) - \omega^\Sigma_m(\mathbf{k})$, we get
 \begin{equation}\label{pmnrmn}
+\boldsymbol{\xi}_{nm}(\mathbf{k})\equiv
 \mathbf{r}_{nm}(\mathbf{k})
-= \frac{\mathbf{v}^\Sigma_{nm}(\mathbf{k})}{i\omega^\Sigma_{nm}(\mathbf{k})}
+= \frac{\mathbf{v}^\Sigma_{nm}(\mathbf{k})}{i\omega^\Sigma_{nm}(\mathbf{k})},
 \qquad n\notin D_{m},
 \end{equation} 
 which can be identified as
 $\mathbf{r}_{nm}=(1-\delta_{nm})\boldsymbol{\xi}_{nm}\to \mathbf{r}_{e,nm}$.
-Here, $D_m$ are all the possible degenerate $m$-states.For the intraband part,
+Here, $D_m$ are all the possible degenerate $m$-states. For the intraband part,
 $\mathbf{r}_i$ only appears in commutators during the derivation of the optical
 response. We use \cite{aversaPRB95}
 \begin{equation}\label{conmri3n}
@@ -502,7 +501,7 @@ is the generalized derivative of the operator $\mathcal{O}$ (see Appendix
 Ref. \cite{aversaPRB95} though they do not need to be calculated explicitly in
 what follows.
 
-As can be seen from Eq. \eqref{ache.1} and \eqref{ache.2}, both $\mathcal{S}$
+As can be seen from Eqs. \eqref{ache.1} and \eqref{ache.2}, both $\mathcal{S}$
 and $V^{\mathrm{nl}}$ are nonlocal potentials. Their contribution in the
 calculation of the optical response must be considered in order to get reliable
 results \cite{ismailPRL01}. Before continuing, we derive a key result for the
@@ -595,7 +594,7 @@ end of the derivation to obtain the scissored results for any susceptibility
 expression, whether linear or nonlinear \cite{nastosPRB05}. In Appendix
 \ref{app:vnlme} we outline how this is accomplished.
 
-We also need to derive the matrix elements the density operator. In order to
+We also need to derive the matrix elements of the density operator. In order to
 proceed, we must now work out the commutator of Eq. \eqref{rtilde}. Then,
 \begin{align}\label{conmu1}
 \langle n\mathbf{k}|
@@ -836,11 +835,11 @@ crystal is as follows. Instead of using a semi-infinite system, we replace it by
 a super-cell that consists of a finite slab of atomic layers and a vacuum region
 (see Fig. \ref{fslab}). This super-cell is repeated to form a full three
 dimensional crystalline structure. The slab itself consists of front, back, and
-sub-surface regions, and in between these a region that is equivalent to the
-bulk of the system. In general the surface of a crystal reconstructs or relaxes
-as the atoms move to find equilibrium positions. This is due to the fact that
-the otherwise balanced forces are disrupted when the surface atoms do not find
-their partner atoms that are now absent at the slab surface. To take the
+sub-surface regions, and a region that is equivalent to the bulk of the system
+in between these. In general the surface of a crystal reconstructs or relaxes as
+the atoms move to find equilibrium positions. This is due to the fact that the
+otherwise balanced forces are disrupted when the surface atoms do not find their
+partner atoms that are now absent at the slab surface. To take the
 reconstruction or relaxation into account, we take ``surface'' to mean the true
 surface of the first layer of atoms and some of the atomic sub-layers adjacent
 to it. Since the front and the back surfaces of the slab are usually identical
@@ -1083,7 +1082,7 @@ Refs. \cite{hoganPRB03} and \cite{castilloPRB03} used Eq. \eqref{sz}, limiting
 the current response to a particular layer of the slab and used to obtain the
 anisotropic linear optical response of semiconductor surfaces. However, the
 first formal derivation of this scheme is presented in Ref. \cite{mendozaPRB06}
-for the linear response. In this thesis I formally introduce the cut function
+for the linear response. In this thesis we formally introduce the cut function
 $\boldsymbol{\mathcal{C}}(z)$ for the second-harmonic optical response of
 semiconductor surfaces, from an average of the second order polarization over
 the region of interest.
@@ -1297,7 +1296,7 @@ $\left(\mathcal{V}^{\Sigma,\mathrm{a},\ell}_{nm}\right)_{;\mathbf{k}}$ coming
 from the nonlocal part of the pseudopotential, $\mathbf{v}^{\mathrm{nl}}$. In
 Appendix \ref{app:calt} we calculate $L^{\mathrm{ab}}_{nm}$. It is shown in Ref.
 \cite{valerie} that this term has a very small numerical value, and a
-computational time of at least an order of magnitude larger than for all the
+computational time of at least one order of magnitude larger than for all the
 other terms involved in the expressions for $\chi^{\mathrm{abc}}$. Therefore, we
 neglect it throughout this thesis and take
 \begin{align}\label{tau.69}
@@ -1310,10 +1309,10 @@ T_{nm}^{\mathrm{ab}} \approx \frac{\hbar}{m_{e}}\delta_{ab}\delta_{nm}.
 
 \section{About the Code}
 
-The TINIBA code is a suite of scripts that work with the popular ABINIT package
+The TINIBA code is a suite of scripts that works with the popular ABINIT package
 to run and calculate optical properties of crystalline semiconductors by
 parallelizing the computation of the different quantities involved in the
-procedure. I have created a
+procedure. We have created a
 \href{https://github.com/roguephysicist/tiniba-manual}{Github repository}
 with the user manual for the TINIBA code, along with a detailed manuscript on
 how we coded the expressions derived in this chapter.
@@ -1324,19 +1323,18 @@ how we coded the expressions derived in this chapter.
 
 \section{Conclusions}
 
-I have presented a formulation to calculate the surface second-harmonic (SSH)
+We have presented a formulation to calculate the surface second-harmonic (SSH)
 susceptibility tensor
 $\boldsymbol{\chi}_{\mathrm{surface}}(-2\omega;\omega,\omega)$, using the length
-gauge formalism and within the independent particle approximation (IPA). It
-includes on equal footing: (i) the scissors correction, (ii) the contribution of
-the non-local part of the pseudopotentials, and (iii) the cut function. We have
-neglected local field and excitonic effects. Although these are important
-factors in the optical response of a semiconductor, their efficient calculation
-is theoretically and numerically challenging and still under debate
-\cite{beyond}. This merits further study but is beyond the scope of this thesis.
-Nevertheless, the inclusion of aforementioned contributions in our scheme opens
-the unprecedented possibility to study surface SHG with more versatility and
-more accurate results.
+gauge formalism and within the IPA. It includes on equal footing: (i) the
+scissors correction, (ii) the contribution of the non-local part of the
+pseudopotentials, and (iii) the cut function. We have neglected local field and
+excitonic effects. Although these are important factors in the optical response
+of a semiconductor, their efficient calculation is theoretically and numerically
+challenging and still under debate \cite{beyond}. This merits further study but
+is beyond the scope of this thesis. Nevertheless, the inclusion of
+aforementioned contributions in our scheme opens the unprecedented possibility
+to study surface SHG with more versatility and more accurate results.
 
 
 \stopcontents[chapters]

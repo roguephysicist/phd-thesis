@@ -2,11 +2,15 @@
 2. SHG ANIMATION IN THE CORNER
 3. fix citations to be inside punctuation
 
+# Ramon
+Page 33: En que dirección apunta \phi = 0?
+
+# Norberto
+Page 56: La resonancia ocurre en 2\omega. La estructura al rededor de 2w puede empezar desde antes. Corregir o aclarar. 
+Page 57: Como influye mas?
+
 # Francisco Villa 
-1. En la dedicatoria omitir la expresion: "Gaynaldo" en espanol esto se traduce como "el joto del Reynaldo". Este es un documento serio donde no hay cabida para estas expresiones. Si se desea digamos romper el hielo, hay otras formas de hacerlo. De manera que con tu buen manejo del lenguaje lo puedes lograr sin problema.
-2. En los titulos de secciones y subsecciones se utilizan mayusculas en algunas y minusculas en otras (en palabras ademas de la inicial), uniformizar el estilo o en todas minusculas o en todas mayusculas
 3. Algo similar sucede con las referencias en algunas se incluye el mes de publicacion y en otras no. Uniformizar todos con mes o todos sin mes.
-4. En general en los documentos relacionados al mundo cientifico, como articulos, libros de texto, tesis etc. se acostumbra el uso de "nosotros hicimos esto a aquello..." y jamas el "yo hice esto o aquello..." con la idea de que el lector sienta que esta participando del proceso y le motive y sea mas grato leer el documento. Por otra parte, el trabajo no lo hizo solo una persona: si el proceso de ensenanza-aprendizaje es correcto tuvo que participar el estudiante y el asesor. A menos que el asesor no haya hecho practicamente nada....? Mi recomedacion es cambiar todos los "I did...."por "we did...." en toda la tesis. Finalmente en mi opinion, expreasarse en primera persona en un documento como este, denota un cierto problema de egocentrismo.
 5. Respecto a lo que me comentabas del software, el titulo mismo se enfoca expresamente en el tema y en la tesis no se dice nada de la estructura especifica de los programas que desarrollaste, es mas no recuerdo bien pero creo que ni siquiera se menciona Fortran?
     * Al respecto sugiero incluir la decripcion de la estructura (no el listado) del programa que ya habia y que agregaste en el trabajo.
     * Que lenguajes utilizaste: Fortran, MPI, OpenMO, Python, DP code y porque? Ventajas, deventajas de cada complilador y librerias

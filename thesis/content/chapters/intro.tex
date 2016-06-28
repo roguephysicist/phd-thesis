@@ -18,7 +18,7 @@ construction of the laser by Maiman in the late 1950s and early 1960s ushered a
 new age of optical discoveries. The ability to produce optical beams with these
 devices automatically lead to very highly focused energies distributed over very
 small areas. These concentrated energies allowed scientists to finally move into
-the optical nonlinear regime for many different materials. The maser allowed for
+the optical nonlinear regime for many different materials. The laser allowed for
 the first recorded observation of optical second-harmonic generation (SHG) by
 Franken et al. in 1961 \cite{PhysRevLett.7.118}. They produced a second beam of
 light at twice the frequency of the original by exciting a piece of crystalline
@@ -119,25 +119,25 @@ differential equation, analogous to a simple harmonic oscillator. The
 polarization can be expressed by a power series of the form
 \begin{align}
 {P}(t)
-&= \epsilon_{0}\left[\chi^{(1)}{E}(t) 
- + \chi^{(2)}{E}^{2}(t)
- + \chi^{(3)}{E}^{3}(t)
+&= \epsilon_{0}\left[\boldsymbol{\chi}^{(1)}{E}(t) 
+ + \boldsymbol{\chi}^{(2)}{E}^{2}(t)
+ + \boldsymbol{\chi}^{(3)}{E}^{3}(t)
  + \ldots\right]\label{eq_power}\\
 &\equiv {P}^{(1)}(t) + {P}^{(2)}(t) + {P}^{(3)}(t) + \ldots,
 \end{align}
-where $\chi^{(n)}$ is the n\textsuperscript{th}-order susceptibility of the
-material. We can define the susceptibility as a constant of proportionallity
+where $\boldsymbol{\chi}^{(n)}$ is the $n^{\mathrm{th}}$-order susceptibility of the
+material. We can define the susceptibility as a constant of proportionality
 that describes the degree of polarizability a material has in terms of the
 strength of an incoming optical electric field. The first term
 \begin{equation}
-P(t) = \epsilon_{0}\chi^{(1)}E(t),
+P(t) = \epsilon_{0}\boldsymbol{\chi}^{(1)}E(t),
 \end{equation}
 is the linear term that describes most everyday interactions between light and
 matter. When taking into account that the incoming fields are vectorial in
-nature, the linear susceptibility $\chi^{(1)}$ becomes a second-rank tensor.
-$\chi^{(2)}$, the second-order nonlinear optical susceptibility is a third-rank
+nature, the linear susceptibility $\boldsymbol{\chi}^{(1)}$ becomes a second-rank tensor.
+$\boldsymbol{\chi}^{(2)}$, the second-order nonlinear optical susceptibility is a third-rank
 tensor \cite{boyd2003nonlinear}. The nonlinear susceptibilities are very small
-in nature. If $\chi^{(1)}$ is unity, $\chi^{(2)}$ is on the order of $\approx
+in nature. If $\boldsymbol{\chi}^{(1)}$ is unity, $\boldsymbol{\chi}^{(2)}$ is on the order of $\approx
 10^{-12}\,\text{m/V}$. This explains why such high intensity fields are needed
 to produce nonlinear interactions; each term in equation \eqref{eq_power}
 depends on a higher power of the incoming field but has a much smaller value for
@@ -165,84 +165,99 @@ as
 \begin{equation}
 P^{\mathrm{a}}(\omega_{n} + \omega_{m})
 = \epsilon_{0}\sum_{\mathrm{bc}}\sum_{(nm)}
-\chi^{(2),\mathrm{abc}}(\omega_{n}+\omega_{m};\omega_{n},\omega_{m})
+\boldsymbol{\chi}^{(2),\mathrm{abc}}(-(\omega_{n}+\omega_{m});\omega_{n},\omega_{m})
 E^{\mathrm{b}}(\omega_{n})E^{\mathrm{c}}(\omega_{m}),\label{eq_nonlin_p}
 \end{equation}
 where the indices $\mathrm{abc}$ refer to the Cartesian components of the
-fields, and $(nm)$ notes that $n$ and $m$ can be varied while the sum
+fields, and $(nm)$ denotes that $n$ and $m$ can be varied while the sum
 $\omega_{n} + \omega_{m}$ remains fixed. We can study the generalized case when
-we have two incoming fields with frequencies $\omega_{1}$ and $\omega_{2}$. We
-can represent this in the following form
+we have two incoming scalar fields with frequencies $\omega_{1}$ and
+$\omega_{2}$. We can represent this in the following form
 \begin{equation}
 E(t) = E_{1}e^{-i\omega_{1}t} + E_{2}e^{-i\omega_{2}t}
-     + \text{c.c.}\label{eq_sfg_form}
+     + \text{c.c.}.\label{eq_sfg_form}
 \end{equation}
 Assuming the form of equation \eqref{eq_power}
 \begin{equation}
-P^{(2)} = \epsilon_{0}\chi^{(2)}E^{2}(t),
+P^{(2)} = \epsilon_{0}\boldsymbol{\chi}^{(2)}E^{2}(t),
 \end{equation}
 and substituting expression \eqref{eq_sfg_form} we get
 \begin{align}
 P^{(2)}(t)
-&= \epsilon_{0}\chi^{(2)}\left[E^{2}_{1}e^{-i2\omega_{1}t}
+&= \epsilon_{0}\boldsymbol{\chi}^{(2)}\left[E^{2}_{1}e^{-i2\omega_{1}t}
  + E^{2}_{2}e^{-i2\omega_{2}t}\right.\nonumber\\
 &+ \left. 2E_{1}E_{2}e^{-i(\omega_{1}+\omega_{2})t}
  + 2E_{1}E^{\ast}_{2}e^{-i(\omega_{1}-\omega_{2})t}
  + \text{c.c.}\right]\nonumber\\
-&+ 2\epsilon_{0}\chi^{(2)}\left[E_{1}E^{\ast}_{1}
+&+ 2\epsilon_{0}\boldsymbol{\chi}^{(2)}\left[E_{1}E^{\ast}_{1}
  + E_{2}E^{\ast}_{2}\right].\label{eq_second_order}
 \end{align}
-We separate this expression into its components and the nonlinear effect that
-each represents in the following manner (abbreviations defined in table
-\ref{tab_janner}),
+We separate this expression into its components and the nonlinear effect
+represented, in the following manner (abbreviations defined in table
+\ref{tab:janner}),
 \begin{equation}\label{eq_list}
 \begin{split}
 P(2\omega_{1}) 
-&= \epsilon_{0}\chi^{(2)}E^{2}_{1}e^{-i2\omega_{1}t}
+&= \epsilon_{0}\boldsymbol{\chi}^{(2)}E^{2}_{1}e^{-i2\omega_{1}t}
  + \text{c.c.}\quad\text{(SHG)},\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 P(2\omega_{2})
-&= \epsilon_{0}\chi^{(2)}E^{2}_{2}e^{-i2\omega_{2}t}
+&= \epsilon_{0}\boldsymbol{\chi}^{(2)}E^{2}_{2}e^{-i2\omega_{2}t}
  + \text{c.c.}\quad\text{(SHG)},\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 P(\omega_{1}+\omega_{2})
-&= 2\epsilon_{0}\chi^{(2)}E_{1}E_{2}e^{-i(\omega_{1}+\omega_{2})t}
+&= 2\epsilon_{0}\boldsymbol{\chi}^{(2)}E_{1}E_{2}e^{-i(\omega_{1}+\omega_{2})t}
  + \text{c.c.}\quad\text{(SFG)},\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 P(\omega_{1}-\omega_{2})
-&= 2\epsilon_{0}\chi^{(2)}E_{1}E^{\ast}_{2}e^{-i(\omega_{1}-\omega_{2})t}
+&= 2\epsilon_{0}\boldsymbol{\chi}^{(2)}E_{1}E^{\ast}_{2}e^{-i(\omega_{1}-\omega_{2})t}
  + \text{c.c.}\quad\text{(DFG)},\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 P(0)
-&= 2\epsilon_{0}\chi^{(2)}\left(E_{1}E^{\ast}_{1}
+&= 2\epsilon_{0}\boldsymbol{\chi}^{(2)}\left(E_{1}E^{\ast}_{1}
  + E_{2}E^{\ast}_{2}\right) + \text{c.c.}\quad\text{(OR)}.
 \end{split}
 \end{equation}
 Janner \cite{janner1998exciton} has a wonderfully formatted table in her
-dissertation that summarizes the first few optical processes, which I reproduce
-here as follows.
+dissertation that summarizes the first few optical processes, reproduced here in
+Table \ref{tab:janner}. From this point forward we will only be concerned with
+second-order effects.
+
 \begin{table}[b]
+\caption{Optical processes described with $\boldsymbol{\chi}^{(n)}$.\label{tab:janner}}
 \centering
 \scalebox{0.9}{
 \begin{tabular}{| c c c | p{7cm} | c |}
 \hline
-\multicolumn{3}{|c|}{$\quad\,\,\chi^{(n)}(-\omega;\omega_{1},\ldots,\omega_{n})$}  & Process & Order \\ \hline
-$-\omega$ & ; & $\omega$                                    & Linear absorption / emission and refractive index                                 & 1 \\ \hline
-$0$ & ; & $\omega,-\omega$                                  & Optical rectification (OR)                                                        & 2 \\ \hline
-$-\omega$ & ; & $0,\omega$                                  & Pockels effect                                                                    & 2 \\ \hline
-$-2\omega$ & ; & $\omega,\omega$                            & Second-harmonic generation (SHG)                                                  & 2 \\ \hline
-$-(\omega_{1}+\omega_{2})$ & ; & $\omega_{1},\omega_{2}$    & Sum-frequency generation (SFG)                                                    & 2 \\ \hline
-$-(\omega_{1}-\omega_{2})$ & ; & $\omega_{1},\omega_{2}$    & Difference-frequency generation (DFG) / Parametric amplifcation and oscillation   & 2 \\ \hline
-$-\omega$ & ; & $0,0,\omega$                                & d.c. Kerr effect                                                                  & 3 \\ \hline
-$-2\omega$ & ; & $0,\omega,\omega$                          & Electric Field induced SHG (EFISH)                                                & 3 \\ \hline
-$-3\omega$ & ; & $\omega,\omega,\omega$                     & Third-harmonic generation (THG)                                                   & 3 \\ \hline
-$-\omega$ & ; & $\omega,-\omega,\omega$                     & Degenerate four-wave mixing (DFWM)                                                & 3 \\ \hline
-$-\omega$ & ; & $-\omega_{2},\omega_{2},\omega_{1}$         & Two-photon absorption (TPA) / ionization / emission                               & 3 \\ \hline
+\multicolumn{3}{|c|}
+{\,\,\,
+$\boldsymbol{\chi}^{(n)}(-(\omega_{1} + \ldots + \omega_{n});\omega_{1},\ldots,\omega_{n})$}
+& Process & Order \\ \hline
+$-\omega_{1}$ & ; & $\omega_{1}$
+& Linear absorption / emission and refractive index & 1 \\ \hline
+$0$ & ; & $\omega_{1},-\omega_{1}$
+& Optical rectification (OR) & 2 \\ \hline
+$-\omega_{1}$ & ; & $0,\omega_{1}$
+& Pockels effect & 2 \\ \hline
+$-2\omega_{1}$ & ; & $\omega_{1},\omega_{1}$
+& Second-harmonic generation (SHG) & 2 \\ \hline
+$-(\omega_{1}+\omega_{2})$ & ; & $\omega_{1},\omega_{2}$
+& Sum-frequency generation (SFG) & 2 \\ \hline
+$-(\omega_{1}-\omega_{2})$ & ; & $\omega_{1},\omega_{2}$
+& Difference-frequency generation (DFG) / 
+  Parametric amplification and oscillation & 2 \\ \hline
+$-\omega_{1}$ & ; & $0,0,\omega_{1}$
+& d.c. Kerr effect & 3 \\ \hline
+$-2\omega_{1}$ & ; & $0,\omega_{1},\omega_{1}$
+& Electric Field induced SHG (EFISH) & 3 \\ \hline
+$-3\omega_{1}$ & ; & $\omega_{1},\omega_{1},\omega_{1}$
+& Third-harmonic generation (THG) & 3 \\ \hline
+$-\omega_{1}$ & ; & $\omega_{1},-\omega_{1},\omega_{1}$
+& Degenerate four-wave mixing (DFWM) & 3 \\ \hline
+$-\omega_{1}$ & ; & $-\omega_{2},\omega_{2},\omega_{1}$
+& Two-photon absorption (TPA) / ionization / emission & 3 \\ \hline
 \end{tabular}}
-\caption{Optical processes described by
-$\chi^{(n)}(-\omega;\omega_{1},\ldots,\omega_{n})$\label{tab_janner}}
 \end{table}
-From this point forward we will only be concerned with second-order effects.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -250,35 +265,37 @@ From this point forward we will only be concerned with second-order effects.
 \subsection{Symmetry Considerations for Centrosymmetric Materials}
 \label{chap_theory_sym}
 
-As mentioned previously, $\chi^{(2)}$ is a third-rank tensor with 27 elements.
-The amount of non-zero elements varies with the symmetry properties of the
-medium. SHG has intrinsic permutation symmetry for the incoming fields, such
-that $\chi^{(2),\mathrm{abc}} = \chi^{(2),\mathrm{acb}}$; this reduces the total
-components from 27 to 18. Knowledge of the symmetry properties of the material
-can help us reduce the amount of unknown elements to calculate.
+As mentioned previously, $\boldsymbol{\chi}^{(2)}$ is a third-rank tensor with
+27 elements. The amount of non-zero elements varies with the symmetry properties
+of the medium. SHG has intrinsic permutation symmetry for the incoming fields,
+such that $\chi^{(2),\mathrm{abc}} = \chi^{(2),\mathrm{acb}}$; this reduces the
+total components from 27 to 18. Knowledge of the symmetry properties of the
+material can help us reduce the amount of unknown elements to calculate.
 
 A centrosymmetric material, or a material with an inversion center, is a
 material that for every point at coordinates $(x,y,z)$, there is an identical
 point located at $(-x,-y,-z)$. For instance, many crystals are centrosymmetric.
 If we assume that we are in the bulk of a centrosymmetric material, we can write
 the nonlinear polarization as
-\begin{equation}
-{P}(t) = \epsilon_{0}\chi^{(2)}{E}^{2}(t).\label{eq_regular}
+\begin{equation}\label{eq_regular}
+{P}(\mathbf{r},t) = \epsilon_{0}\boldsymbol{\chi}^{(2)}{E}^{2}(t).
 \end{equation}
-If the medium is centrosymmetric, a sign change must affect both the electric
-field and the polarization since they are polar vectors \cite{jacksonbook}. So,
-\begin{align}
--{P}(t) &= \epsilon_{0}\chi^{(2)}\left[-{E}(t)\right]^{2},\\
-              &= \epsilon_{0}\chi^{(2)}{E}^{2}(t).\label{eq_centro}
+If the medium is centrosymmetric, a sign change on the coordinates must affect
+both the electric field and the polarization since they are polar vectors
+\cite{jacksonbook}. So,
+\begin{align}\label{eq_centro}
+-{P}(\mathbf{r},t)
+&= \epsilon_{0}\boldsymbol{\chi}^{(2)}\left[-{E}(t)\right]^{2},\\
+&= \epsilon_{0}\boldsymbol{\chi}^{(2)}{E}^{2}(t).
 \end{align}
-However, substituting \eqref{eq_centro} into \eqref{eq_regular} we get ${P}(t) =
--{P}(t)$. We can finally deduce that
+However, substituting \eqref{eq_centro} into \eqref{eq_regular} we get
+${P}(\mathbf{r},t) = -{P}(\mathbf{r},t)$. We can finally deduce that
 \begin{equation}
-\chi^{(2)} = 0.
+\boldsymbol{\chi}^{(2)} = 0.
 \end{equation}
 Therefore, all second-order processes are forbidden in the bulk of
-centrosymmetric materials in the dipole approximation. We will talk about the
-other important approximation in section \ref{chap_theory_quad}. This property
+centrosymmetric materials in the dipole approximation. We will talk about
+another important approximation in section \ref{chap_theory_quad}. This property
 is broken at the surface since that region no longer presents an inversion
 center.  This very special property is what enables second-order nonlinearities
 to be so effective for surface and interface measurements. Likewise, any other
@@ -292,27 +309,28 @@ surface spectroscopy for further reading.
 
 \subsection{Bulk Quadrupolar and Other Contributions}\label{chap_theory_quad}
 
-Everything that I have stated up to this point assumes what we call the
-\emph{dipole approximation} that arises from assuming that the polarization can
-take the form of a multipole expansion. The dipole approximation simply assumes
-that the dipolar contribution is significantly greater than all the others. This
-is not necessarily the case in many materials. In particular, we find that there
-can be a non-negligible electric quadrupole contribution from the bulk of
-centrosymmetric materials. Bloembergen et al. \cite{PhysRev.174.813} elaborate
-on this as early as the 1960s. This adds a severe complication to the use of
-second-order nonlinearities as surface probes since signal is actually produced
-from both surface and bulk. Sipe et al. \cite{sipe1987fundamental} go into some
-detail about this problem, stating that it is very difficult to separate the
-surface and bulk contributions as the various nonlinear coefficients cannot be
-measured separately. Guyot-Sionnest and Shen \cite{PhysRevB.38.7985} go one step
-further and state that the contributions are impossible to separate. They
-suggest that the best way to distinguish one from the other is by taking
-measurements before and after altering the surface and observing the overall
-changes to the produced signal. About a decade later, Shen et al.
-\cite{shen1999surface} state that bulk contributions not only come from the
-electric quadrupole, but also from the magnetic dipole, although the latter is
-typically much less intense than either of the former. They express the bulk
-polarization as a multipole series as follows,
+We assume that the nonlinear polarization can take the form of a multipole
+expansion, as we expressed in Eq. \eqref{eq_power}. This work is interested
+exclusively in the \emph{dipole approximation}, that assumes that the dipolar
+contribution is significantly greater than the quadrupolar and higher order
+contributions. This is not necessarily the case in many materials. In
+particular, we find that there can be a non-negligible electric quadrupole
+contribution from the bulk of centrosymmetric materials. Bloembergen et al.
+\cite{PhysRev.174.813} elaborate on this as early as the 1960s. This adds a
+severe complication to the use of second-order nonlinearities as surface probes
+since signal is actually produced from both surface and bulk. Sipe et al.
+\cite{sipe1987fundamental} go into some detail about this problem, stating that
+it is very difficult to separate the surface and bulk contributions as the
+various nonlinear coefficients cannot be measured separately. Guyot-Sionnest and
+Shen \cite{PhysRevB.38.7985} go one step further and state that the
+contributions are impossible to separate. They suggest that the best way to
+distinguish one from the other is by taking measurements before and after
+altering the surface and observing the overall changes to the produced signal.
+About a decade later, Shen et al. \cite{shen1999surface} state that bulk
+contributions not only come from the electric quadrupole, but also from the
+magnetic dipole, although the latter is typically much less intense than either
+of the former. They express the bulk polarization as a multipole series as
+follows,
 \begin{equation}
 \mathbf{P}^{B}(\omega)
 = \mathbf{P}_{D}(\omega)
@@ -325,42 +343,41 @@ is the electric quadrupole polarization, and $\mathbf{M}(\omega)$ is the
 magnetic dipole polarization. Indeed, if only the dipolar contribution is
 forbidden for centrosymmetric materials then there will be a contribution from
 the other two in addition to the dipolar contribution at the surface. The group
-does however go on to explain that there are a few experimental ways to help
-distinguish between surface and bulk contributions.
+does however go on to explain that there are a few experimental ways that can
+help distinguish between surface and bulk contributions.
 
 If $\mathbf{Q}(\omega)$ is assumed to take some form similar to
 \begin{equation}
-\mathbf{Q}(\omega) \approx \chi^{(2)}_{q}(\omega_{1}
-+ \omega_{2})\mathbf{E}(\omega_{1})\nabla\mathbf{E}(\omega_{w}),
+\mathbf{Q}(\omega_{1}+\omega_{2})\approx \boldsymbol{\chi}^{(2)}_{q}(\omega_{1}
++ \omega_{2})\mathbf{E}(\omega_{1})\nabla\mathbf{E}(\omega_{2}),
 \end{equation}
-then $\chi^{(2)}_{q}$ is a fourth-rank tensor with 81 independent elements.
-Clearly this adds some considerable complication to our problem and makes
-selecting the appropriate symmetry that much more important. In summary, bulk
-electric quadrupole and magnetic dipole contributions to second-order surface
-effects may not be negligible and need to be taken into account. However, in
-this thesis we study the nonlinear optical properties of Silicon, and it is
-known that the quadrupolar effects are quite small \cite{aktsipetrovJETP86,
-sipePRB87, xuJVST97, guyotPRB88, downerSIA01, shenAPB99}. Therefore, we will
-neglect these effects for the remainder of this thesis.
+then $\boldsymbol{\chi}^{(2)}_{q}$ is a fourth-rank tensor with 81 independent
+elements. Clearly this adds considerable complication to our problem; hence the
+importance of selecting the appropriate symmetry. In summary, bulk electric
+quadrupole and magnetic dipole contributions to second-order surface effects may
+not be negligible and need to be taken into account. However, in this work we
+study the nonlinear optical properties of Silicon, and it is known that the
+quadrupolar effects are quite small \cite{aktsipetrovJETP86, sipePRB87,
+xuJVST97, guyotPRB88, downerSIA01, shenAPB99}. Therefore, we will neglect these
+effects for the remainder of this thesis.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{SFG and SHG}\label{chap_theory_sum}
 
-We call the third process in expression \eqref{eq_list} Sum-frequency generation
+We call the third process in expression \eqref{eq_list} sum-frequency generation
 (SFG). It is a second-order process that involves two photons, of frequencies
 $\omega_{1}$ and $\omega_{2}$ that combine to form one photon of frequency
-$\omega_{3} = \omega_{1} + \omega_{2}$. This is represented mathematically in
-the previous expression
+$\omega_{3} = \omega_{1} + \omega_{2}$. This is represented mathematically as
 \begin{equation}
 P(\omega_{1}+\omega_{2})
 = 2\epsilon_{0}\chi^{(2)}E_{1}E_{2}e^{-i(\omega_{1}+\omega_{2})t} + \text{c.c.},
 \end{equation}
 where the term is explicitly stated in the exponential. A special case of
-sum-frequency generation is when both incoming frequencies are the same, i.e.
-$\omega_{1} = \omega_{2}$; this case is also known as the degenerate case. The
-resulting frequency is then exactly double that of the input frequency.
+sum-frequency generation is when both incoming field frequencies are the same,
+i.e. $\omega_{1} = \omega_{2}$; this case is also known as the degenerate case.
+The resulting frequency is then exactly twice that of the input frequency.
 
 As mentioned previously, second-order nonlinear processes are prohibited in the
 bulk of centrosymmetric materials (in the dipole approximation). Since it has a
@@ -368,15 +385,15 @@ very strong surface contribution (where the inversion symmetry is broken), it
 can be used as a very precise diagnostic tool for surface and interface regions.
 The use of these second-order nonlinearites for surface studies had gained
 momentum in the 1990s. McGilp wrote a review about using SHG and SFG as surface
-and interface probes in 1996 \cite{mcgilp1996review}. He adds experimental
-confirmation to his theories in 1999 \cite{mcgilp1999second} in an extremely
-thorough review about using SHG on the surface of almost any material you can
-think of. Aktsipetrov et al. \cite{aktsipetrov1997dc} followed a different
-approach by establishing what they call electric field induced second-harmonic
-generation, or EFISH. In this paper they elaborate how the sensitivity of SHG to
-surfaces can be enhanced by applying an electric field across the interface.
-More recently a book in the field of second-order nonlinear optics has been
-published with a wealth of useful information \cite{aktsipetrovbook}.
+and interface probes in 1996 \cite{mcgilp1996review}. He added experimental
+confirmation to his theories in 1999 \cite{mcgilp1999second} in a thorough
+review about using SHG on almost any surface. Aktsipetrov et al.
+\cite{aktsipetrov1997dc} followed a different approach by establishing what they
+call electric field induced second-harmonic generation, or EFISH. In this paper
+they elaborate how the sensitivity of SHG to surfaces can be enhanced by
+applying an electric field across the interface. More recently a book in the
+field of second-order nonlinear optics has been published with a wealth of
+useful information \cite{aktsipetrovbook}.
 
 The theoretical side of things was further developed in a paper by Maytorena et
 al. \cite{PhysRevB.57.2569} discussing the formalities of SFG from surfaces by
@@ -408,15 +425,15 @@ and commercial interest.\cite{cazzanelliNM14} The high surface sensitivity of
 SSHG spectroscopy is due to the fact that within the dipole approximation the
 bulk SHG signal of centrosymmetric materials is identically zero. However, the
 SHG process can occur only at the surface where the inversion symmetry is
-broken. The bulk quadrupole contribution for centrosymmetric materials is
-different from zero, but usually it is very small \cite{downerSIA01}, and could
-be neglected. Much of the foundation of surface science has been built from
-experiments involving emission or scattering of electrons from surfaces. These
-require ultrahigh vacuum (UHV) environments and provide no access to buried
-interfaces. However, SSHG is compatible with non-UHV conditions and has access
-to interfaces buried beneath transparent overlayers. Even when applied to
-surfaces in UHV, the light source and detectors can be aligned and used outside
-the vacuum chamber.
+broken. As mentioned previously, the bulk quadrupole contribution for
+centrosymmetric materials is different from zero, but usually it is very small
+\cite{downerSIA01}, and can be neglected. Much of the foundation of surface
+science has been built from experiments involving emission or scattering of
+electrons from surfaces. These require ultrahigh vacuum (UHV) environments and
+provide no access to buried interfaces. However, SSHG is compatible with non-UHV
+conditions and has access to interfaces buried beneath transparent overlayers.
+Even when applied to surfaces in UHV, the light source and detectors can be
+aligned and used outside the vacuum chamber.
 
 The usefulness of SSHG could be limited by the lack of microscopic theoretical
 understanding of the nonlinear spectra. The macroscopic phenomenological theory
@@ -456,8 +473,8 @@ elaborated a derivation of the ``velocity gauge'' or
 ``$\mathbf{A}\cdot\mathbf{v}$'' gauge properly including the scissors operator
 and proved gauge invariance with respect to the length gauge. From these works
 it is clear the length gauge is a much better starting point to obtain the
-surface SH (SSH) susceptibility, as will be elaborated in this thesis. However,
-these considerations are only valid for bulk semiconductors.
+surface second-harmonic (SSH) susceptibility, as will be elaborated in this
+thesis. However, these considerations are only valid for bulk semiconductors.
 
 Concerning the optical response of surfaces and interfaces, Reining \textit{et
 al.}\cite{reiningPRB94} introduced the concept of a cut function in order to
@@ -469,7 +486,7 @@ nonlinear response for the two surfaces of the slab avoiding the destructive
 interference between them giving a finite value that one identifies with the SSH
 susceptibility tensor. If the slab is not centrosymmetric the cut function can
 be used to separate the different signals coming from either surface of the
-slab. Indeed, one of the main results of this thesis is to show that the SSH
+slab. Indeed, one of the results of this thesis is to show that the SSH
 susceptibility tensor obtained by using the cut function is correctly extracted
 from the slab. After Reining \textit{et al.},\cite{reiningPRB94} Refs.
 \cite{mendozaPRL98,arzatePRB01,mendozaPRB01,mejiaPRB02,sanoPRB02} followed upon
@@ -508,7 +525,7 @@ with more versatility and providing accurate results.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{The SSHG yield}
+\section{The SSHG Yield}
 
 For calculating the SSHG yield, we will use the nonlinear surface susceptiblity
 tensor produced with the framework mentioned in the previous section, and
@@ -570,7 +587,7 @@ SSHG theory.
 
 Besides the phenomena mentioned above, there are several other nonlinear effects
 that have become particularly interesting with the advent of bidimensional
-materials, such as MoS$_{2}$, MoSe$_{2}$, WS$_{2}$, and WSe$_{2}$, and Graphene.
+materials, such as MoS$_{2}$, MoSe$_{2}$, WS$_{2}$, WSe$_{2}$, and Graphene.
 In particular, Graphene is an allotrope of carbon with a planar, hexagonal,
 two-dimensional honeycomb structure with one carbon atom at each vertex. It has
 attracted a great deal of interest due to its distinctive properties, such as
@@ -584,20 +601,20 @@ explored doping with boron, nitrogen \cite{guoIJ11}, and hydrogen
 \cite{eliasS09, guisingerNL09, samarakoonACSN10}. Hydrogenated graphene can
 achieve different spatial configurations by varying the amount and location of
 the hydrogen bonds. When a hydrogen atom is bonded to a carbon atom in graphene,
-it draws the atom away from the plane. This modifies the carbon-carbon bond
+it pulls the atom away from the plane. This modifies the carbon-carbon bond
 length resulting in an opening of the band gap \cite{eliasS09, boukhvalovPRB08}.
-In Ref. \cite{zapataPSSB16}, I helped carry out a theoretical study of three
-optical nonlinear phenomena for two hydrogenated graphane structures: optical
-spin injection, optical current injection and second-harmonic generation (SHG).
-I describe the former two as follows.
+During my doctoral research, we carried out a theoretical study of three optical
+nonlinear phenomena for two hydrogenated graphane structures: optical spin
+injection, optical current injection and second-harmonic generation (SHG). I
+describe the former two as follows.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Optical spin injection}
+\subsection{Optical Spin Injection}
 
 The injection and detection of spin polarized electrons in nonmagnetic materials
-is the at the core of spintronics \cite{vzuticRMP04, fertRMP08} and an important
+is at the core of spintronics \cite{vzuticRMP04, fertRMP08} and an important
 problem in condensed matter theory. The idea of creating and detecting spin
 polarized electrons from light originates in the 1960s with Ref.
 \cite{lampelPRL68}. Following that work, it was later demonstrated that
@@ -618,7 +635,7 @@ surfaces \cite{mendozaPRB12, arzatePRB14}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Optical current injection}
+\subsection{Optical Current Injection}
 
 The optical current injection is a second-order optical nonlinear effect that
 has been the subject of research in recent years
