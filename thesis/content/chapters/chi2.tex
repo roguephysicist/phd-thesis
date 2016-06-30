@@ -143,8 +143,8 @@ $\chi^{\mathrm{abc}}_{\mathrm{surface}}$.
 {Sketch of a semi-infinite system with a centrosymmetric bulk. The surface
 region is of thickness $\sim d$. The incoming photon of frequency $\omega$ is
 represented by a downward red arrow, whereas both the surface and bulk created
-second-harmonic photons of frequency $2\omega$ are represented by upward green
-arrows. The red color suggests an incoming infrared photon with a green
+second-harmonic photons of frequency $2\omega$ are represented by upward blue
+arrows. The red color suggests an incoming infrared photon with a blue
 second-harmonic photon. The dipolar ($\chi^{\mathrm{abc}}_{\mathrm{surface}}$),
 and quadrupolar ($\chi^{\mathrm{abcd}}_{\mathrm{bulk}}$) susceptibility tensors
 are shown in the regions where they are nonzero. The $z$-axis is perpendicular
@@ -1309,13 +1309,66 @@ T_{nm}^{\mathrm{ab}} \approx \frac{\hbar}{m_{e}}\delta_{ab}\delta_{nm}.
 
 \section{About the Code}
 
-The TINIBA code is a suite of scripts that works with the popular ABINIT package
-to run and calculate optical properties of crystalline semiconductors by
-parallelizing the computation of the different quantities involved in the
-procedure. We have created a
-\href{https://github.com/roguephysicist/tiniba-manual}{Github repository}
-with the user manual for the TINIBA code, along with a detailed manuscript on
-how we coded the expressions derived in this chapter.
+The TINIBA code is a suite of scripts that works with the popular
+ABINIT\cite{gonzeCPS09} package to run and calculate optical properties of
+crystalline semiconductors by parallelizing the computation of the different
+quantities involved in the procedure. It is written primarily in FORTRAN with
+Bash wrapper scripts. It is capable of calculating the following optical
+responses:
+\begin{enumerate}
+\item \verb|chi1|: linear optical response,
+\item \verb|calChi1|: layered linear optical response,
+\item \verb|eta2|: bulk optical current injection,
+\item \verb|calEta2|: layered optical current injection,
+\item \verb|zeta|: bulk optical spin injection,
+\item \verb|calZeta|: layered optical spin injection,
+\item \verb|shg1L|: bulk SHG derived in the length gauge,
+\item \verb|shg1V|: bulk SHG derived in the velocity gauge,
+\item \verb|shg1C|: layerd SHG derived in the length gauge
+                    (described in this work),
+\end{enumerate}
+amongst others. It makes good use of the open-source MPI libraries, that allows
+it to be parallelized across any number of machines. Integrating the framework
+developed in this chapter consisted of integrating the new elements into the
+length gauge derived SHG response. More details about this can be found in Refs.
+\cite{cabellosPRB09} and \cite{andersonPRB15}. See Fig. \ref{fig:tiniba} for a
+sample of the code required for calculating
+$\mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{2\omega}]$. It is designed
+to streamline the entire calculation by using a single file to control ABINIT
+(for producing the LDA wave functions and the electron density), and for
+producing the matrix elements listed in the previous sections of this chapter.
+Then, the SHG responses can be calculated using the generated matrix elements.
+
+These calculations are quite complex and time consuming. Each matrix can have
+millions of entries occupying tens of GB of RAM. Our FORTRAN code is all
+compiled using the latest Intel compilers, purpose build for processors in our
+computer cluster, Medusa. We now have nodes that have 3 TB of RAM available,
+which will allow us to take these calculations to unprecedent levels. These
+calculations are also quite processor intensive, so we parallelize every
+calculation over as many nodes as possible. The results listed in Chapter
+\ref{chap:results} took around 1 day to produce, from the calculation of the
+matrix elements all the way to the generation of the final spectra. On average,
+we used around 60 cores to produce the wavefunction and matrix elements, and
+then parallelized all 18 components of $\chi^{\mathrm{abc}}$ on a single machine
+over 12 cores. Producing the matrix elements that include the nonlocal part of
+the pseudopotentials is particularly time consuming. That part of the
+calculation invokes the DP code \cite{olevanoDP} which produces the necessary
+matrix elements that are then used in TINIBA. This usually takes up to 3-4 times
+the amount of time that the normal matrix elements take.
+
+We have created a
+\href{https://github.com/roguephysicist/tiniba-manual}{Github repository} with
+the user manual for the TINIBA code, along with a detailed manuscript on how we
+coded the expressions derived in this chapter. 
+
+\begin{figure}[b]
+\centering
+\includegraphics[width=\textwidth]{content/figures/code-tiniba}
+\caption[A portion of the FORTRAN code.]
+{A portion of the FORTRAN code for calculating
+$\mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{2\omega}]$.}
+\label{fig:tiniba}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

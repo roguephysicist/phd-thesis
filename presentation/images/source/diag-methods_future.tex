@@ -1,0 +1,28 @@
+\documentclass[border=1cm,tikz]{standalone}
+\usepackage{MyriadPro}
+
+\usetikzlibrary{arrows.meta}
+
+\definecolor{yellow}{RGB}{255,197,051}
+\definecolor{blue}  {RGB}{124,192,217}
+\definecolor{green} {RGB}{139,158,119}
+\definecolor{orange}{RGB}{232,099,044}
+\definecolor{red}   {RGB}{219,053,038}
+\definecolor{purple}{RGB}{109,110,146}
+
+\begin{document}
+
+\tikzstyle{block}=[rectangle,text=white,text width=5.5cm,text centered,rounded corners,minimum height=2cm]
+
+\begin{tikzpicture}[font=\sffamily\large]
+
+% blocks
+\node [block,top color=purple,bottom color=purple!80!black] at (0,0) (BSE)
+       {\textbf{BSE}\\ Bethe-Salpeter Equation};
+
+% arrows
+% \node [yshift=20] at (BSE.north) {\Large Exact theories for excited state properties};
+
+\end{tikzpicture}
+
+\end{document}

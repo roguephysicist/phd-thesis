@@ -49,28 +49,65 @@
 \end{frame}
 
 \begin{frame}
-% \frametitle{A two column slide}
+\frametitle{A Nonlinear Crystal}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{image-ramon}
+\caption{A nonlinear KDP crystal excited at 800 nm, with SHG at 400 nm.}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+% \frametitle{Second Harmonic Generation (SHG)}
 \begin{columns}
 \column{0.5\textwidth}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{diag-levelsflourescence}
+\caption{\centering Two-photon excited fluorescence (real transitions)}
 \end{figure}
 \column{0.5\textwidth}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{diag-levelsshg}
+\caption{\centering Second-harmonic generation\qquad(virtual transitions)}
 \end{figure}
 \end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Applications}
+\frametitle{Applications: XP2SHG}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{image-xp2_01}
+\caption{Fluorescence from the card.}
+\end{figure}
+\column{0.5\textwidth}
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{image-xp2_02}
+\caption{Middle beam is pure SHG.}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Applications: Strain in TSVs\footnote{\emph{Cho et al.}, Appl. Phys. Lett. 108, 151602 (2016)} \footnote{\emph{Mendoza et al.}, Phys. Status Solidi B 253, 2 (2016)}}
+\begin{columns}
+\column{0.5\textwidth}
 \begin{figure}
 \centering
-\includegraphics[width=0.6\textwidth]{image-yojin}
-\caption{Test\footnote{\emph{Cho et al.}, Appl. Phys. Lett. 108, 151602 (2016)}}
+\includegraphics[width=\textwidth]{image-yojin}
+\vspace*{0.5cm}
+\caption{Experiment}
 \end{figure}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{image-bms}
+\caption{Theory}
+\end{figure}
+\end{columns}
 \end{frame}
 
 \begin{frame}
@@ -82,7 +119,10 @@ Second-order nonlinear processes\footnote{\emph{Armstrong et al.}, Phys. Rev.
 \item Are dipole forbidden in the bulk of centrosymmetric materials
 \item Are related to $\chi^{(2)}$, the nonlinear susceptibility
 \item Have bigger dipolar (surface) than quadrupolar contributions
-\end{itemize}
+\end{itemize}\vfill
+\begin{block}{Summary}
+SHG is well suited for studying surfaces and interfaces!
+\end{block}
 \end{frame}
 
 \begin{frame}
@@ -96,26 +136,30 @@ that $p(a,b,c) \rightarrow p(-a,-b,-c)$.
 \end{frame}
 
 \begin{frame}
-% \frametitle{A two column slide}
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{diag-system}
+\includegraphics[width=0.8\textwidth]{diag-system}
+\caption{Semi-infinite system with a centrosymmetric bulk and a surface region
+is of thickness $\sim d$. Dipolar SHG is produced in reflection from the
+surface.}
 \end{figure}
 \end{frame}
 
 \begin{frame}
-\frametitle{Test Cases}
+\frametitle{Two Si Test Cases}
 \begin{columns}
 \column{0.5\textwidth}
 \begin{figure}
 \centering
 \includegraphics[height=0.7\textheight]{struc-Si2x1-front}
+\vspace{-0.4cm}
 \caption{Si(001)(2$\times$1)}
 \end{figure}
 \column{0.5\textwidth}
 \begin{figure}
 \centering
 \includegraphics[height=0.7\textheight]{struc-Si1x1-front}
+\vspace{-0.4cm}
 \caption{Si(111)(1$\times$1):H}
 \end{figure}
 \end{columns}
@@ -133,7 +177,8 @@ that $p(a,b,c) \rightarrow p(-a,-b,-c)$.
 \subsection{Nonlocal Operators}
 
 \begin{frame}
-Our new formulation adds three contributions:%
+\frametitle{New Contributions to the Theory}
+Our new formulation adds three contributions (within the IPA):%
 \footnote{\emph{Anderson et al.}, Phys. Rev. B. 91, 075302 (2015)}
 \begin{enumerate}
 \item The scissors correction
@@ -220,10 +265,63 @@ representing the atoms of the system.}
 \end{alertblock}
 \end{frame}
 
+\subsection{Software}
 \begin{frame}
-\frametitle{Coding}
-abinit, DP, tiniba
+Medusa runs on free and open source software:
+\begin{itemize}
+\item CentOS 6.7 GNU/Linux
+\item Intel MPI \& OpenMP
+\item Intel MKL
+\item Intel FORTRAN \& C
+\item Bash, Perl, Python
+\end{itemize}
+\begin{block}{TINIBA}
+Combines Bash, Perl, Fortran, and ABINIT for calculating:
+\begin{itemize}
+\item Optical response of semiconductors
+\item Optical response of nanomaterials
+\item Spin injection in materials
+\item Nonlinear optical response for surfaces and interfaces
+\end{itemize}
+\end{block}
 \end{frame}
+
+\begin{frame}
+\begin{block}{ABINIT\footnote{X. Gonze et al. 
+\emph{Computational Materials Science}, 25:478--492, 2002} 
+\footnote{X. Gonze et al. \emph{Z. Kristallogr.}, 220:558--562, 2005} 
+\footnote{X. Gonze et al. 
+\emph{Computer Physics Communications}, 180(12):2582, 2009}}
+First-principle study of crystals, molecules, nanostructures using density
+functional theory, many-body perturbation theory, plane waves, and
+pseudopotentials to calculate
+\begin{itemize}
+\item Electronic structure
+\item Total energy
+\item Dielectric properties, and many, many more
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{block}{DP/EXC%
+\footnote{Olevano, V. and Reining, L. and Sottile, F.,
+http://dp-code.org, http://etsf.polytechnique.fr/exc/}}
+
+Linear response time-dependent density-functional theory (LR-TDDFT) code in
+frequency reciprocal ($\mathbf{k}-\omega$) space on a plane waves (PW) basis
+set, for dielectric and optical Spectroscopy.
+\begin{itemize}
+\item Optical absorption
+\item Reflectivity
+\item Refraction Indices
+\item EELS
+\end{itemize}
+\end{block}
+In our case, we use DP for calculating the contribution from
+$\mathbf{v}^\mathrm{nl}$.
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -234,7 +332,8 @@ abinit, DP, tiniba
 \frametitle{The Si(001)(2$\times$1) Slab}
 \begin{figure}
 \centering
-\includegraphics[height=0.7\textheight]{struc-Si2x1-rot}
+\includegraphics[height=0.76\textheight]{struc-Si2x1-rot}
+\vspace*{-0.4cm}
 \caption{Convergence is achieved with 32 layers of Si.}
 \end{figure}
 \end{frame}
@@ -249,11 +348,11 @@ abinit, DP, tiniba
 \end{frame}
 
 \begin{frame}
-\frametitle{oh snap mofo}
+\frametitle{Top vs. Bottom Surfaces}
 \begin{figure}
 \centering
 \includegraphics[width=0.9\textwidth]{fig-Si2x1-topvbottom}
-\caption{wait until calc finishes yo}
+\caption{Improved with more layers and more precise division of slab.}
 \end{figure}
 \end{frame}
 
@@ -273,7 +372,7 @@ spectrum shifts non-rigidly.}
 \centering
 \includegraphics[width=0.9\textwidth]{fig-Si2x1-vnl}
 \caption{The effect of the nonlocal part of the pseudopotentials maintains the
-same line-shape but reduces the value of by 15-20\%.}
+same line-shape but reduces the value by 15-20\% on average.}
 \end{figure}
 \end{frame}
 
@@ -285,15 +384,18 @@ same line-shape but reduces the value of by 15-20\%.}
 
 \begin{frame}
 \frametitle{$\boldsymbol{\chi}$ for the Si(111)(1$\times$1):H surface%
-\footnote{Experimental data from Appl. Phys. A 63, 533 (1996)}}
+\footnote{Experimental data from \emph{H\"ofer et al.}, 
+Appl. Phys. A 63, 533 (1996)}}
+\vspace{-0.5cm}
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{fig-Si1x1-Hofer_Xxxx}
+\includegraphics[width=0.65\textwidth]{fig-Si1x1-Hofer_Xxxx}
 \end{figure}
+\vspace{-0.5cm}
 \begin{block}{Relaxing the Structure}
 \begin{enumerate}
 \item Worth the time and effort
-\item We'll talk about temp later
+\item Experimental data taken at low temperature
 \end{enumerate}
 \end{block}
 \end{frame}
@@ -307,31 +409,32 @@ same line-shape but reduces the value of by 15-20\%.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{The Three Layer Model}
+\subsection{Deriving \texorpdfstring{$\mathcal{R}$}{R}}
 
 \begin{frame}
-% \frametitle{A two column slide}
+\frametitle{The Three Layer Model}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{diag-3layer_MR_2w}
+\caption{The nonlinear process occurs in a thin layer ($\ell$) just below the
+surface, between the vacuum region ($v$) and the material bulk ($b$)}
 \end{figure}
 \end{frame}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Explicit Expressions for \texorpdfstring{$\mathcal{R}$}{R}}
-
 \begin{frame}
-\frametitle{Explicit Expressions for $\mathcal{R}$}
+\frametitle{Explicit Expressions for $\mathcal{R}$%
+\footnote{\emph{Anderson, et al.}, Phys. Rev. B 93, 235304 (2016)}
+\footnote{\emph{Anderson, et al.}, arXiv:1604.07722 (2016)}
+}
 The SSHG yield is
 \begin{equation*}
 \mathcal{R}_{\mathrm{iF}}(2\omega) =
 \frac{\omega^{2}}{2\epsilon_{0}c^3\cos^{2}\theta_{0}}
-\left\vert\frac{1}{n_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2} 
+\left\vert\frac{1}{n_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2}
+\quad\left[\frac{\mathrm{m}^{2}}{\mathrm{W}}\right]
 \end{equation*}
-for each combination of polarizations of incoming and outgoing fields ($\mathrm{iF} = pP,
-pS, sP,$ and $sS$). We have that
+for each combination of polarizations of incoming and outgoing fields
+($\mathrm{iF} = pP, pS, sP,$ and $sS$). We have that
 \begin{equation*}\label{eq:mc25}
 \Upsilon_{\mathrm{iF}} = \Gamma_{\mathrm{iF}}\,r_{\mathrm{iF}},
 \end{equation*}
@@ -380,7 +483,19 @@ r^{(111)}_{sS} &= \chi^{xxx}\sin3\phi.
 
 \begin{frame}
 \frametitle{About the Code}
-python, shgyield.py, github, robustness
+\begin{block}{SHGYield.py}
+A python script designed to calculate the nonlinear reflection coefficient for
+semiconductor surfaces. It works in conjunction with the matrix elements
+calculated with ABINIT, an open source \emph{ab initio} software, and TINIBA,
+our in-house optical calculation software.
+\begin{itemize}
+\item Reads necessary data from input file
+\item Works for any angles
+\item Allows selection of other models besides three-layer
+\item Can include or neglect effects of multiple reflections
+\end{itemize}
+\end{block}
+Get it at: https://github.com/roguephysicist/SHGYield
 \end{frame}
 
 
@@ -397,13 +512,13 @@ Si(111)(1\texorpdfstring{$\times$}{x}1):H}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{3D-Si1x1-RpP}
-\caption{$\mathcal{R}_{pP}$}
+\caption{$\mathcal{R}_{pP}$ with $\phi=45$}
 \end{figure}
 \column{0.55\textwidth}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{3D-Si1x1-RsP}
-\caption{$\mathcal{R}_{sP}$}
+\caption{$\mathcal{R}_{sP}$ with $\phi=45$}
 \end{figure}
 \end{columns}
 \end{frame}
@@ -416,39 +531,65 @@ Si(111)(1\texorpdfstring{$\times$}{x}1):H}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{3D-Si1x1-RpS}
-\caption{$\mathcal{R}_{pS}$}
+\caption{$\mathcal{R}_{pS}$ with $\phi=45$}
 \end{figure}
 \column{0.55\textwidth}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{3D-Si1x1-RsS}
-\caption{$\mathcal{R}_{sS}$}
+\caption{$\mathcal{R}_{sS}$ with $\phi=45$}
 \end{figure}
 \end{columns}
 \end{frame}
 
 \begin{frame}
-% \frametitle{A two column slide}
+% \frametitle{Si(111)(1\texorpdfstring{$\times$}{x}1):H -- $\mathcal{R}_{pP}$}
 \begin{figure}
 \centering
-\includegraphics[width=0.9\textwidth]{fig-Si1x1-MRdepth}
+\includegraphics[width=\textwidth]{fig-Si1x1-MRdepth}
+\caption{$\mathcal{R}_{pP}$ for $\theta=65$ and $\phi=45$
+\footnote{Experimental data from \emph{Mejia et al.}, Phys. Rev. B 66, 195329 (2002)}}
 \end{figure}
 \end{frame}
 
 \begin{frame}
-% \frametitle{A two column slide}
+\frametitle{The Three Layer Model}
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{fig-Si1x1-Mejia_RsP}
+\includegraphics[width=\textwidth]{diag-3layer_MR_2w}
+\caption{The nonlinear process occurs in a thin layer ($\ell$) just below the
+surface, between the vacuum region ($v$) and the material bulk ($b$)}
 \end{figure}
 \end{frame}
 
 \begin{frame}
-% \frametitle{A two column slide}
+% \frametitle{Si(111)(1\texorpdfstring{$\times$}{x}1):H -- $\mathcal{R}_{pS}$}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{fig-Si1x1-Mejia_RpS}
+\caption{$\mathcal{R}_{pS}$ for $\theta=65$ and $\phi=45$
+\footnote{Experimental data from \emph{Mejia et al.}, Phys. Rev. B 66, 195329 (2002)}}
 \end{figure}
+\end{frame}
+
+\begin{frame}
+% \frametitle{Si(111)(1\texorpdfstring{$\times$}{x}1):H -- $\mathcal{R}_{sP}$}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{fig-Si1x1-Mejia_RsP}
+\caption{$\mathcal{R}_{sP}$ for $\theta=65$ and $\phi=45$\footnote{Experimental data from \emph{Mejia et al.}, Phys. Rev. B 66, 195329 (2002)}}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary}
+\begin{itemize}
+\item Intensity is very close to experiment with unambiguous units. No more AU!
+\item Peak position is also quite close, temperature effects are quite clear.
+\item Multiple reflections enhances peak proportions and intensity when needed.
+\item We can now have \emph{quantitative} and predictive results for any surface!
+\end{itemize}
+Remember, this is IPA folks! We neglect excitonic and local field effects.
 \end{frame}
 
 
@@ -457,52 +598,140 @@ Si(111)(1\texorpdfstring{$\times$}{x}1):H}
 
 \section{Conclusions}
 
-\subsection{Chi2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Methods}
+
 \begin{frame}
-\frametitle{Title}
-\begin{itemize}
-\item Item 1
-\item Item 2
-\item Item 3
-\end{itemize}
+\frametitle{What's Next?}
+\vspace{-0.7cm}
+\begin{figure}
+\centering
+\includegraphics[height=0.95\textheight]{diag-methods}
+\end{figure}
 \end{frame}
 
 \begin{frame}
-Some starting text,
-\begin{equation*}
-E = mc^{2},
-\end{equation*}
-and more text.
-\begin{block}{A block}
+\frametitle{Where We Stand}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{diag-methods_us}
+\end{figure}
+\vspace{-0.5cm}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{fig-mbpt01}
+\end{figure}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{fig-mbpt02}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{The State of the Art}
+\begin{figure}
+\centering
+\includegraphics[height=0.2\textheight]{diag-methods_future}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[height=0.55\textheight]{fig-mbpt03}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fat Nodes $\rightarrow$ Up to 6 TB of RAM!}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{image-fats}
+\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{About Me}
+
+\begin{frame}
+\frametitle{Productivity}
+\begin{block}{Produced Articles}
 \begin{itemize}
-\item Item 1
-\item Item 2
+\item \emph{Anderson, et al.}, Phys. Rev. B, Submitted (2016)
+\item \emph{Anderson, et al.}, Phys. Rev. B 93, 235304 (2016)
+\item \emph{Anderson, et al.}, arXiv:1604.07722 [physics.optics] (2016)
+\item \emph{Zapata-Pe\~na, et al.}, Phys. Status Solidi B 253, 408 (2016) % COVER PAGE
+\item \emph{Anderson, et al.}, Phys. Rev. B 91, 075302 (2015)
+% \item \emph{Corzo-G\'arcia et al.}, Opt. Laser. Eng. 49, 1251 (2011)
+\end{itemize}
+\end{block}
+\begin{block}{Academic Stays}
+\begin{itemize}
+\small
+\item Le mariage avec la Dr. Liliana Villafa\~na L\'opez (2016 -- Present)
+\item Laboratoire des Solides Irradi\'es, \'Ecole Polytechnique, France (2015)
+\item Laboratoire des Solides Irradi\'es, \'Ecole Polytechnique, France (2014)
 \end{itemize}
 \end{block}
 \end{frame}
 
 \begin{frame}
-% \frametitle{A two column slide}
-\begin{figure}
-\centering
-\includegraphics[height=\textheight]{diag-methods}
-\end{figure}
+% \frametitle{Productivity}
+\begin{block}{Conferences}
+\begin{itemize}
+\item Psi-K 2015 (Ganador del Concurso de Posters Cient\'ificos)
+\item OSI-11 2015 (Poster)
+\item ENU-HPC 2012 (Submitted Talk)
+\end{itemize}
+\end{block}
+\begin{block}{Specialized Courses}
+\begin{itemize}
+\item \emph{Ab-initio} calculations with the DP/EXC Codes (2016) (Imparted)
+\item Control de versiones usando Git y GitHub (2013) (Imparted)
+\item C\'omputo en paralelo mediante FORTRAN/C++ con MPI y OpenMP (2013)
+\item C\'alculo de propiedades \'opticas de la materia con el uso de teor\'ia de muchos cuerpos (2013)
+\end{itemize}
+\end{block}
 \end{frame}
 
+\subsection{Credits}
 \begin{frame}
-\frametitle{Appendix}
-\begin{columns}
-\column{0.5\textwidth}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Benevolent leader: Dr. Bernardo Mendoza
+\item Dr. Ram\'on Carriles Jaimes
+\item Dr. Norberto Arzate Plata
+\item Dr. Francisco Villa Villa
+\item Dr. Wolf Luis Moch\'an Backal
+\item The CONACYT
+\item The CIO for 6 great years
+\end{itemize}
+\begin{center}
+\vspace{3em}
+{\huge Thanks for coming!}
+\end{center}
+\end{frame}
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Appendix}
+
+\begin{frame}
+% \frametitle{Appendix}
 \begin{figure}
-\centering
-\includegraphics[width=\textwidth]{fig-Si1x1-Mejia_RpP}
+\raggedright
+\includegraphics[height=0.45\textheight]{fig-Si1x1-Mejia_RpP}
 \end{figure}
-\column{0.5\textwidth}
+\vspace{-0.5cm}
 \begin{figure}
-\centering
-\includegraphics[width=\textwidth]{fig-Si1x1-Mejia_RpP_models}
+\raggedleft
+\includegraphics[height=0.45\textheight]{fig-Si1x1-Mejia_RpP_models}
 \end{figure}
-\end{columns}
 \end{frame}
 
 \end{document}

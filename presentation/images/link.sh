@@ -24,7 +24,7 @@ fig-Si1x1-Mejia_RpP.pdf
 # fig-Si1x1-Mejia_RsP.pdf
 # fig-Si1x1-Mitchell_RpP.pdf
 # fig-Si1x1-Mitchell_RpS.pdf
-fig-Si1x1-MRdepth.pdf
+# fig-Si1x1-MRdepth.pdf
 # fig-Si1x1-MRno1w.pdf
 # fig-Si1x1-MRthickness.pdf
 fig-Si2x1-hsvsfs.pdf

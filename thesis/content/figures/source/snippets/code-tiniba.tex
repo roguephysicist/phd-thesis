@@ -1,0 +1,68 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{fullpage}
+
+\pagestyle{empty}
+% \setmainfont{SourceCodePro-Regular}
+\setmonofont[Scale=0.95]{SourceCodePro-Regular}
+\usemintedstyle{manni}
+\definecolor{bg}{HTML}{F1F3F3}
+\renewcommand{\theFancyVerbLine}{{\ttfamily\arabic{FancyVerbLine}}}
+
+\begin{document}
+
+\begin{minted}[bgcolor=bg,linenos,mathescape]{fortran}
+    DO v = 1, nVal
+       DO c = nVal+1, nMax
+          omegacv=band(c) - band(v)
+          tmp = 0.d0
+          DO da=1,3
+             DO db=1,3
+                DO dc=1,3
+!!! this is for interband 2w contributions
+!!!  virtual-hole 
+                   do vp=1,nVal
+                      if((vp.ne.v).and.(vp.ne.c))then
+                         omegacvp=band(c) - band(vp)
+                         omegacvpcv=(2.*omegacvp-omegacv)
+                         IF ((omegacvpcv.ge.0.d0).and.(omegacvpcv.le.tol))
+                            omegacvpcv=omegacvpcv+tol
+                         IF ((omegacvpcv.le.0.d0).and.(omegacvpcv.ge.(-tol)))
+                            omegacvpcv=omegacvpcv-tol
+                        psym=(posMatElem(db,c,vp)*posMatElem(dc,vp,v)&
+                             +posMatElem(dc,c,vp)*posMatElem(db,vp,v))/2.
+                         tmp=tmp-4.*T3(da,db,dc)*aimag(calVsig(da,v,c)*psym)&
+                              /(omegacv*omegacvpcv)
+                      end if
+                   end do
+!!!! virtual-electron
+                   do cp=nVal+1,nMax
+                      if((cp.ne.v).and.(cp.ne.c))then
+                         omegacpv=band(cp) - band(v)
+                         omegacpvcv=(2.*omegacpv-omegacv)
+                         IF ((omegacpvcv.ge.0.d0).and.(omegacpvcv.le.tol))
+                            omegacpvcv=omegacpvcv+tol
+                         IF ((omegacpvcv.le.0.d0).and.(omegacpvcv.ge.(-tol)))
+                            omegacpvcv=omegacpvcv-tol
+                         psym=(posMatElem(db,c,cp)*posMatElem(dc,cp,v)&
+                              +posMatElem(dc,c,cp)*posMatElem(db,cp,v))/2.
+                         tmp=tmp+4.*T3(da,db,dc)*aimag(calVsig(da,v,c)*psym)&
+                              /(omegacv*omegacpvcv)
+                      end if
+                   end do
+!!! this is for intraband 2w contributions 
+                   psym=(derMatElem(db,dc,c,v)+derMatElem(dc,db,c,v))/2.
+                   psym1=(posMatElem(db,c,v)*delta(dc,c,v)&
+                         +posMatElem(dc,c,v)*delta(db,c,v))/2.
+                   tmp=tmp+4.*(T3(da,db,dc)/(omegacv)**2)&
+                        *(real(calVsig(da,v,c)*psym) &
+                        -2.*real(calVsig(da,v,c)*psym1)/omegacv)
+                END DO
+             END DO
+          END DO
+\end{minted}
+
+\end{document}

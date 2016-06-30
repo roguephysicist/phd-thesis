@@ -1,6 +1,13 @@
 #!/bin/bash
 
-## plotex - for creating plots in pdf from gnuplot epslatex files
+for file in *.tex; do
+    name=`basename $file .tex`
+    pdflatex $file
+    # pdfcrop ${name}.pdf ${name}.pdf
+    rm -f ${name}.aux ${name}.fdb_latexmk ${name}.fls ${name}.log
+    # mv ${name}.pdf ../
+done
+
 function plotex() {
     local tex=(`grep "set output" $1 | grep -v '\#' | awk -F\' '{print $(NF-1)}'`)
     gnuplot $1
@@ -14,6 +21,13 @@ function plotex() {
     clear
 }
 
-plotex plots.gp
+pdfcrop chis_inter.pdf chis_inter.pdf
+pdfcrop chis_intra.pdf chis_intra.pdf
+pdfcrop diag-methods_us.pdf diag-methods_us.pdf
+pdfcrop diag-methods_future.pdf diag-methods_future.pdf
 
-mv fig-*.pdf ../
+plotex fig-mbpt.gp
+
+mv *.pdf ../
+
+clear
