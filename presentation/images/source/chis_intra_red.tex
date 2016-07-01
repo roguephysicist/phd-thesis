@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[paperwidth=16cm,paperheight=3.5cm,margin=0pt]{geometry}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{color}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{equation*}\label{eq:chis}
+\begin{split}
+\mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{i,\omega}]&= 
+\frac{\pi\vert e\vert^3}{2\hbar^2}
+\int \frac{d^{3}k}{8\pi^3}
+\sum_{cv}\frac{1}{(\omega^\Sigma_{cv})^{2}}
+\left[
+\mathrm{Re}\left[\left\{r^{\mathrm{b}}_{cv}
+\textcolor{red}{\left(\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}\right)_{;k^{\mathrm{c}}}}\right\}
+\right]
++\frac{\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}
+\left\{r^{\mathrm{b}}_{cv}\Delta^{\mathrm{c}}_{cv}\right\}
+\right]}{\omega^\Sigma_{cv}} 
+\right]\delta(\omega^\Sigma_{cv}-\omega)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mathrm{Im}[\chi^{\mathrm{a}\mathrm{b}\mathrm{c}}_{i,2\omega}]&= 
+ \frac{\pi \vert
+   e\vert^{3}}{2\hbar^2}
+\int \frac{d^{3}k}{8\pi^3}
+\sum_{vc}\frac{4}{(\omega^\Sigma_{cv})^{2}}
+\left[\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}
+\left\{\textcolor{red}{\left(r^{\mathrm{b}}_{cv}\right)_{;k^{\mathrm{c}}}}
+\right\}\right] -
+\frac{2\mathrm{Re}\left[\mathcal{V}^{\Sigma,\mathrm{a}}_{vc}
+\left\{r^{\mathrm{b}}_{cv}\Delta^{\mathrm{c}}_{cv}\right\}\right]}
+{\omega^\Sigma_{cv}}\right]\delta(\omega^\Sigma_{cv}-2\omega)
+\end{split}
+\end{equation*}
+
+\end{document}

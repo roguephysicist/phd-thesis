@@ -57,23 +57,23 @@
 \end{figure}
 \end{frame}
 
-\begin{frame}
-% \frametitle{Second Harmonic Generation (SHG)}
-\begin{columns}
-\column{0.5\textwidth}
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{diag-levelsflourescence}
-\caption{\centering Two-photon excited fluorescence (real transitions)}
-\end{figure}
-\column{0.5\textwidth}
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{diag-levelsshg}
-\caption{\centering Second-harmonic generation\qquad(virtual transitions)}
-\end{figure}
-\end{columns}
-\end{frame}
+% \begin{frame}
+% % \frametitle{Second Harmonic Generation (SHG)}
+% \begin{columns}
+% \column{0.5\textwidth}
+% \begin{figure}
+% \centering
+% \includegraphics[width=\textwidth]{diag-levelsflourescence}
+% \caption{\centering Two-photon excited fluorescence (real transitions)}
+% \end{figure}
+% \column{0.5\textwidth}
+% \begin{figure}
+% \centering
+% \includegraphics[width=\textwidth]{diag-levelsshg}
+% \caption{\centering Second-harmonic generation\qquad(virtual transitions)}
+% \end{figure}
+% \end{columns}
+% \end{frame}
 
 \begin{frame}
 \frametitle{Applications: XP2SHG}
@@ -188,9 +188,29 @@ Our new formulation adds three contributions (within the IPA):%
 \end{frame}
 
 \begin{frame}
+\frametitle{Electron Position Operator}
+We have the electron position operator as 
+\begin{equation*}
+\mathbf{r} = \mathbf{r}_{i} + \mathbf{r}_{e},
+\end{equation*}
+for interband ($e$) and intraband ($i$) transitions. The matrix elements of $\mathbf{r}_{i}$ and $\mathbf{r}_{e}$ are given by
+\begin{align*}
+\langle n\mathbf{k}\vert \mathbf{r}_{i} |m\mathbf{k}'\rangle 
+&= \delta_{nm}
+\left[
+  \delta(\mathbf{k} - \mathbf{k}')\boldsymbol{\xi}_{nn}(\mathbf{k})
++ i\nabla_{\mathbf{k}}\delta(\mathbf{k} - \mathbf{k}')
+\right],\\\\
+\langle n\mathbf{k}| \mathbf{r}_{e} |m\mathbf{k}'\rangle 
+&= (1- \delta_{nm})\delta(\mathbf{k}-\mathbf{k}')
+   \boldsymbol{\xi}_{nm}(\mathbf{k}).
+\end{align*}
+\end{frame}
+
+\begin{frame}
 \frametitle{Scissors Operator and
-\texorpdfstring{$\mathbf{v}^{\mathrm{nl}}$}{vnl} (1 \& 2)} We express the
-electron velocity operator as
+\texorpdfstring{$\mathbf{v}^{\mathrm{nl}}$}{vnl} (1 \& 2)}
+We express the electron velocity operator as
 \begin{equation*}\label{vop2}
 \begin{split}
 \mathbf{v}^{\Sigma}
@@ -199,8 +219,7 @@ electron velocity operator as
 = \mathbf{v}^\mathrm{LDA} + \mathbf{v}^{\mathcal{S}},
 \end{split}
 \end{equation*}
-which includes the nonlocal part of the pseudopotential and the scissors
-correction, where
+where
 \begin{equation*}\label{conhr}
 \begin{split}
 \mathbf{v} &=\frac{\mathbf{p}}{m_{e}},\\
@@ -210,7 +229,13 @@ correction, where
   \left[\mathbf{r},S(\mathbf{r},\mathbf{p})\right],\\
 \mathbf{v}^\mathrm{LDA} &= \mathbf{v}+\mathbf{v}^{\mathrm{nl}}.
 \end{split}
-\end{equation*}  
+\end{equation*}
+We also have that
+\begin{equation*}
+\mathbf{r}_{nm}(\mathbf{k})
+= \frac{\mathbf{v}^{\Sigma}_{nm}(\mathbf{k})}{i\omega^{\Sigma}_{nm}(\mathbf{k})}
+= \frac{\mathbf{v}^{\mathrm{LDA}}_{nm}(\mathbf{k})}{i\omega^{\mathrm{LDA}}_{nm}(\mathbf{k})}.
+\end{equation*} 
 \end{frame}
 
 
@@ -251,16 +276,32 @@ representing the atoms of the system.}
 
 \begin{frame}
 \frametitle{Final Expressions}
-\begin{block}{Interband Contribution}
+\begin{block}{Interband Contribution {\tiny $\langle n\mathbf{k}| \mathbf{r}_{e} |m\mathbf{k}'\rangle = (1- \delta_{nm})\delta(\mathbf{k}-\mathbf{k}')\boldsymbol{\xi}_{nm}(\mathbf{k})$}}
 \begin{figure}
 \centering
 \includegraphics[scale=0.70]{chis_inter}
 \end{figure}
 \end{block}
-\begin{alertblock}{Intraband Contribution}
+\begin{alertblock}{Intraband Contribution {\tiny $\langle n\mathbf{k}\vert \mathbf{r}_{i} |m\mathbf{k}'\rangle = \delta_{nm}\left[\delta(\mathbf{k} - \mathbf{k}')\boldsymbol{\xi}_{nn}(\mathbf{k}) + i\nabla_{\mathbf{k}}\delta(\mathbf{k} - \mathbf{k}')\right]$}}
 \begin{figure}
 \centering
 \includegraphics[scale=0.70]{chis_intra}
+\end{figure}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Final Expressions}
+\begin{block}{Interband Contribution {\tiny $\langle n\mathbf{k}| \mathbf{r}_{e} |m\mathbf{k}'\rangle = (1- \delta_{nm})\delta(\mathbf{k}-\mathbf{k}')\boldsymbol{\xi}_{nm}(\mathbf{k})$}}
+\begin{figure}
+\centering
+\includegraphics[scale=0.70]{chis_inter_red}
+\end{figure}
+\end{block}
+\begin{alertblock}{Intraband Contribution {\tiny $\langle n\mathbf{k}\vert \mathbf{r}_{i} |m\mathbf{k}'\rangle = \delta_{nm}\left[\delta(\mathbf{k} - \mathbf{k}')\boldsymbol{\xi}_{nn}(\mathbf{k}) + i\nabla_{\mathbf{k}}\delta(\mathbf{k} - \mathbf{k}')\right]$}}
+\begin{figure}
+\centering
+\includegraphics[scale=0.70]{chis_intra_red}
 \end{figure}
 \end{alertblock}
 \end{frame}
@@ -547,7 +588,7 @@ Si(111)(1\texorpdfstring{$\times$}{x}1):H}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{fig-Si1x1-MRdepth}
-\caption{$\mathcal{R}_{pP}$ for $\theta=65$ and $\phi=45$
+\caption{$\mathcal{R}_{pP}$ for $\theta=65$ and $\phi=45$%
 \footnote{Experimental data from \emph{Mejia et al.}, Phys. Rev. B 66, 195329 (2002)}}
 \end{figure}
 \end{frame}
@@ -567,7 +608,7 @@ surface, between the vacuum region ($v$) and the material bulk ($b$)}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{fig-Si1x1-Mejia_RpS}
-\caption{$\mathcal{R}_{pS}$ for $\theta=65$ and $\phi=45$
+\caption{$\mathcal{R}_{pS}$ for $\theta=65$ and $\phi=45$%
 \footnote{Experimental data from \emph{Mejia et al.}, Phys. Rev. B 66, 195329 (2002)}}
 \end{figure}
 \end{frame}
@@ -577,7 +618,8 @@ surface, between the vacuum region ($v$) and the material bulk ($b$)}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{fig-Si1x1-Mejia_RsP}
-\caption{$\mathcal{R}_{sP}$ for $\theta=65$ and $\phi=45$\footnote{Experimental data from \emph{Mejia et al.}, Phys. Rev. B 66, 195329 (2002)}}
+\caption{$\mathcal{R}_{sP}$ for $\theta=65$ and $\phi=45$%
+\footnote{Experimental data from \emph{Mejia et al.}, Phys. Rev. B 66, 195329 (2002)}}
 \end{figure}
 \end{frame}
 
@@ -647,9 +689,10 @@ Remember, this is IPA folks! We neglect excitonic and local field effects.
 
 \begin{frame}
 \frametitle{Fat Nodes $\rightarrow$ Up to 6 TB of RAM!}
+\vspace{-0.5cm}
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{image-fats}
+\includegraphics[width=1.01\textwidth]{image-fats}
 \end{figure}
 \end{frame}
 
@@ -661,11 +704,12 @@ Remember, this is IPA folks! We neglect excitonic and local field effects.
 \frametitle{Productivity}
 \begin{block}{Produced Articles}
 \begin{itemize}
-\item \emph{Anderson, et al.}, Phys. Rev. B, Submitted (2016)
+\small
 \item \emph{Anderson, et al.}, Phys. Rev. B 93, 235304 (2016)
-\item \emph{Anderson, et al.}, arXiv:1604.07722 [physics.optics] (2016)
-\item \emph{Zapata-Pe\~na, et al.}, Phys. Status Solidi B 253, 408 (2016) % COVER PAGE
+\item \emph{Zapata-Pe\~na, Anderson, et al.}, Phys. Status Solidi B 253, 408 (2016) % COVER PAGE
 \item \emph{Anderson, et al.}, Phys. Rev. B 91, 075302 (2015)
+\item \emph{Anderson, et al.}, arXiv:1604.07722 [physics.optics] (2016)
+\item \emph{Anderson, et al.}, Phys. Rev. B, Submitted (2016)
 % \item \emph{Corzo-G\'arcia et al.}, Opt. Laser. Eng. 49, 1251 (2011)
 \end{itemize}
 \end{block}

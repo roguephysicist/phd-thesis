@@ -15,7 +15,7 @@ declare -a FILELIST=(
 diag-3layer_MR_2w.pdf
 # diag-3layer.pdf
 diag-slab.pdf
-diag-system.pdf
+# diag-system.pdf
 fig-Si1x1-Hofer_Xxxx.pdf
 fig-Si1x1-Mejia_RpP_models.pdf
 fig-Si1x1-Mejia_RpP.pdf

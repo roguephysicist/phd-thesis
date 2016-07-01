@@ -13,6 +13,7 @@
 set terminal epslatex   leveldefault color blacktext butt noclip nobackground \
                         palfuncparam 2000,0.003 standalone "" 11  fontscale 1.0 
 unset key
+set tics front
 set xlabel "Two-photon energy (eV)" 
 set xlabel  font "" textcolor lt -1 norotate
 set xtics 1

@@ -60,11 +60,20 @@
 ## chi2
 #################
 11. New elememts
-        1. DFT-LDA produces an underestimated band gap, so the scissors operator
+    1. DFT-LDA produces an underestimated band gap, so the scissors operator
        improves on this by allowing us to "open" the DFT-LDA gap to its correct
        experimental or GW value. This is accomplished by rigidly shifting the
        conduction bands (in energy) so the gap is corrected.
-** 2. read more about this, particularly from Nicolas ** talk briefly about separable pseudopotentials, and what the meaning of the local and nonlocal parts.
+    2. The success of the PA is due to the fact that it enables the study of
+       very complex large-scale systems, by removing the core electrons from the
+       calculations and treating only the valence electrons, which are the
+       chemically active players. In the PA, the core electrons are frozen and
+       the electron-ion Coulomb interaction for the valence electrons is
+       replaced by an effective  semilocal or fully nonlocal potential.
+    The nonlocal part of the pseudopotential relates to the angular momentum of
+    the electron. In this formulation, it is accounted for by computing the
+    matrix elements of v, instead of p. If we neglect the nonlocal operators,
+    the momentum operator can be used in place of the velocity operator.
     3. The layered cut-function allows us to select the surface response, or
        even particular layers of our slab.
 #################
@@ -93,33 +102,3 @@
 16. Software 1
     You got this man
 #################
-.
-.
-.
-#################
-22. scissors correction
-
-
-#################
-
-
-
-
-
-25. Three layer model
-    ** When neglecting multiple reflections, where was the polarizing sheet located? **
-
-
-## SSHG Yield
-1. Three-layer model, sshg yield intensity ratio
-
-    
-
-## Conclusions
-    Independent particle approximation (IPA)
-    
-    $G_{0}W_{0}$ correction improves band gap In a first approximation, this
-    includes the effects of the electronic many-body interactions within the
-    independent particle approach for our \emph{ab initio} calculation.
-
-    Thesis is a guide for future students!

@@ -23,6 +23,9 @@ function plotex() {
 
 pdfcrop chis_inter.pdf chis_inter.pdf
 pdfcrop chis_intra.pdf chis_intra.pdf
+pdfcrop chis_intra_red.pdf chis_intra_red.pdf
+pdfcrop chis_inter_red.pdf chis_inter_red.pdf
+pdfcrop diag-system.pdf diag-system.pdf
 pdfcrop diag-methods_us.pdf diag-methods_us.pdf
 pdfcrop diag-methods_future.pdf diag-methods_future.pdf
 

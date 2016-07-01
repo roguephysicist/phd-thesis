@@ -95,9 +95,9 @@ set arrow from t1(0.0, 90),0,t2(0.0, 90) to t1(2.5, 90),0,t2(2.5, 90) nohead lw 
 set arrow from t1(1.5,135),0,t2(1.5,135) to t1(2.5,135),0,t2(2.5,135) nohead lw 1 dt 2 lc rgb 'black' back
 # angle label
 set label 'θ'    at 0.90*t1(2.5, 90),+0.1,0.90*t2(2.5, 90) font ',30' front
-set label 'π/4'  at 1.15*t1(2.5, 45),-0.0,1.15*t2(2.5, 45) front
-set label 'π/2'  at 1.00*t1(2.5, 90),-0.1,1.08*t2(2.5, 90) front
-set label '3π/4' at 1.05*t1(2.5,135),-0.0,1.05*t2(2.5,135) front
+set label '-π/2'  at 1.2*t1(2.5, 45),-0.0,1.2*t2(2.5, 45) front
+set label '0'  at 1.00*t1(2.5, 90),-0.1,1.08*t2(2.5, 90) front
+set label 'π/2' at 1.05*t1(2.5,135),-0.0,1.05*t2(2.5,135) front
 
 # set arrow from 0,0,0 to t1(65),0,t2(65) nohead lw 1 dt 3
 # set label '65' at 1.15*t1(65),0,1.15*t2(65)
