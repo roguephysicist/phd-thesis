@@ -96,9 +96,14 @@
     transitions. Interband happens between different valence and conduction
     bands, while intraband transitions occur over small energy differences along
     the same band. v and c and real valence and conduction states. q are virtual
-    states, so the innermost sum is over all the virtual states.
-** ocurren en 1w, y w/2 and why do intraband transitions have vc indices? **
+    states, so the innermost sum is over all the virtual states. That gradient
+    turns into the generalized derivative that can then be calculated
 #################
 16. Software 1
     You got this man
 #################
+
+Local field effects: 
+Los enlaces entre los atomos interacciona con el campos externo y se comportan
+como dipolos. Los campos locales son la influencia que tienen sobre un dipolo
+dado el resto de los dipolos.

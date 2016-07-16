@@ -1186,12 +1186,12 @@ partial fraction expansion in $\tilde\omega$.
 For the intraband term of Eq. \eqref{chii}, we obtain
 \begin{align}\label{pfinn} 
 I&= 
-C
+\frac{-e^{3}}{\hbar^{2}}\Bigg[C
 \left[
 -\frac{1}{2(\omega^\Sigma_{nm})^2}\frac{1}{\omega^\Sigma_{nm}-\tilde\omega}
 +\frac{2}{(\omega^\Sigma_{nm})^2}\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
 +\frac{1}{2(\omega^\Sigma_{nm})^2}\frac{1}{\tilde\omega}
-\right]
+\right]\Bigg]
 \nonumber\\
 &-D
 \left[
@@ -1428,7 +1428,8 @@ We substitute \eqref{ct}, \eqref{dt}, and \eqref{derivative_under_k} in
 \eqref{pfinn},
 \begin{align*}
 I
-&=   \left[
+&=  \frac{-e^{3}}{\hbar^{2}}
+    \left[
     -\frac{2f_{mn}\,\mathrm{Re}
     \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
     \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
@@ -1463,6 +1464,7 @@ I
 If we simplify,
 \begin{align}\label{simplified_i} 
 I =
+    \frac{-e^{3}}{\hbar^{2}}\Bigg[
 -   \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
     \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
     {2(\omega^{\Sigma}_{nm})^{2}}&\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega}
@@ -1495,7 +1497,8 @@ I =
     r^{\text{LDA,b}}_{mn}
     \right]
     \Delta_{nm}^{\text{c}}}{2(\omega^{\Sigma}_{nm})^{3}}
-    &\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega},
+    &\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega}
+    \Bigg],
 \end{align}
 we conveniently collect the terms in columns of $\omega$ and $2\omega$. We can
 now express the susceptibility in terms of $\omega$ and $2\omega$. Separating
@@ -1509,7 +1512,7 @@ I_{2\omega}
     \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{LDA,b}}_{nm}\right]
     \Delta^{\text{c}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}\right]
     \frac{1}{\omega^{\Sigma}_{nm}-2\tilde\omega}\nonumber\\
-&=  -\frac{e^3}{\hbar^2}\sum_{mn\mathbf{k}}
+&=  \frac{\vert e\vert^3}{2\hbar^2}\sum_{mn\mathbf{k}}
     \frac{4f_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
     \left[
     \mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
@@ -1519,6 +1522,7 @@ I_{2\omega}
     \right]
     \frac{1}{\omega^{\Sigma}_{nm}-2\tilde\omega}.
 \end{align}
+where we added a $1/2$ from the sum over $\mathbf{k} \rightarrow - \mathbf{k}$.
 
 We can express the energies in terms of transitions between bands. Therefore,
 $\omega^{\Sigma}_{nm} = \omega^{\Sigma}_{cv}$ for transitions between conduction
@@ -1528,8 +1532,8 @@ and valence bands. To take the limit $\eta\to 0$, we use
 \end{equation}
 and can finally rewrite \eqref{2wchii} in the desired form,
 \begin{equation}\label{imchi2w}
-    \mathrm{Im}[\chi_{i,\text{a},\ell\text{b}\text{c},2\omega}^{s,\ell}] 
-=   -\frac{\pi \vert e\vert^{3}}{2\hbar^2}\sum_{vc\mathbf{k}}
+    \mathrm{Im}[\chi_{i,2\omega}^{\mathrm{abc}}] 
+=   \frac{\pi \vert e\vert^{3}}{2\hbar^2}\sum_{vc\mathbf{k}}
     \frac{4}{(\omega^{\Sigma}_{cv})^{2}}\left(\mathrm{Re}
     \left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
     \left(r^{\text{LDA,b}}_{cv}\right)_{;k^{\text{c}}}\right] 
@@ -1540,27 +1544,27 @@ and can finally rewrite \eqref{2wchii} in the desired form,
     \Delta^{\text{c}}_{cv}}{\omega^{\Sigma}_{cv}}\right)
     \delta(\omega^{\Sigma}_{cv}-2\omega).
 \end{equation}
-where we added a $1/2$ from the sum over $\mathbf{k} \rightarrow - \mathbf{k}$.
+
 We do the same for the $\tilde\omega$ terms in \eqref{simplified_i} to obtain
 \begin{align}\label{wchii}
 I_{\omega}
-= -\frac{e^3}{2\hbar^2}\sum_{nm\mathbf{k}}
+= -\frac{e^3}{\hbar^2}\sum_{nm\mathbf{k}}
 \Biggl[
--   \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+-   \frac{f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
     \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
     {(\omega^{\Sigma}_{nm})^{2}}
-&+  \frac{6f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+&+  \frac{3f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
     r^{\text{LDA,b}}_{nm}\right]
     \Delta^{\text{c}}_{nm}}{(\omega^{\Sigma}_{nm})^{3}}
     \nonumber\\
-+   \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
++   \frac{f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
     \left(r^{\text{LDA,b}}_{nm}\right)_{;k^{\text{c}}}\right]}
     {(\omega^{\Sigma}_{nm})^{2}}
-&-  \frac{4f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}
+&-  \frac{2f_{mn}\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}
     r^{\text{LDA,b}}_{mn}\right]
     \Delta_{nm}^{\text{c}}}{(\omega^{\Sigma}_{nm})^{3}}
     \nonumber\\
-&+  \frac{2f_{mn}\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}
+&+  \frac{f_{mn}\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}
     \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)
     _{;k^{\text{c}}}\right]}{(\omega^{\Sigma}_{nm})^{2}}
 \Biggr]\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega}.
@@ -1568,19 +1572,20 @@ I_{\omega}
 We reduce in the same way as \eqref{2wchii}, 
 \begin{equation}\label{wchii_simplified}
 I_{\omega}
-=   -\frac{e^3}{2\hbar^2}\sum_{nm\mathbf{k}}
+=   \frac{\vert e\vert^3}{2\hbar^2}\sum_{nm\mathbf{k}}
     \frac{f_{mn}}{(\omega^{\Sigma}_{nm})^{2}}
 \Biggl[
-    2\,\mathrm{Re}\left[r^{\text{LDA,b}}_{nm}
+    \mathrm{Re}\left[r^{\text{LDA,b}}_{nm}
     \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}\right)_{;k^{\text{c}}}\right]
-+   \frac{2\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
++   \frac{\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
     r^{\text{LDA,b}}_{nm}\right]\Delta^{\text{c}}_{nm}}{\omega^{\Sigma}_{nm}} 
 \Biggr]\frac{1}{\omega^{\Sigma}_{nm}-\tilde\omega},
 \end{equation}
-and using \eqref{limit_eta} we obtain our final form,
+where we added a $1/2$ from the sum over $\mathbf{k} \rightarrow -
+\mathbf{k}$, and using \eqref{limit_eta} we obtain our final form,
 \begin{equation}
-\mathrm{Im}[\chi_{i,\text{a},\ell\text{b}\text{c},\omega}^{s,\ell}]
-=   -\frac{\pi\vert e\vert^3}{2\hbar^2}
+\mathrm{Im}[\chi_{i,\omega}^{\mathrm{abc}}]
+=   \frac{\pi\vert e\vert^3}{2\hbar^2}
     \sum_{cv}\frac{1}{(\omega^{\Sigma}_{cv})^{2}}
 \left(
     \mathrm{Re}\left[r^{\text{LDA,b}}_{cv}
@@ -1588,10 +1593,8 @@ and using \eqref{limit_eta} we obtain our final form,
 +   \frac{\,\mathrm{Re}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
     r^{\text{LDA,b}}_{cv}\right]\Delta^{\text{c}}_{cv}}{\omega^{\Sigma}_{cv}} 
 \right)\delta(\omega^{\Sigma}_{cv}-\omega)
-,
+.
 \end{equation}
-where again we added a $1/2$ from the sum over $\mathbf{k} \rightarrow -
-\mathbf{k}$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1601,199 +1604,207 @@ where again we added a $1/2$ from the sum over $\mathbf{k} \rightarrow -
 We follow an equivalent procedure for the interband contribution. From Eq.
 \eqref{chie} we have
 \begin{align}\label{ewithaandb}  
-E&= A
+E&=
+\frac{ie^{3}}{\hbar^{2}}\Bigg(A
 \left[
--\frac{1}{2\omega^\Sigma_{lm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
- \frac{1}{\omega^\Sigma_{lm}-\tilde\omega}
-+\frac{2}{\omega^\Sigma_{nm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
+-\frac{1}{2\omega^\Sigma_{qm}(2\omega^\Sigma_{qm}-\omega^\Sigma_{nm})}
+ \frac{1}{\omega^\Sigma_{qm}-\tilde\omega}
++\frac{2}{\omega^\Sigma_{nm}(2\omega^\Sigma_{qm}-\omega^\Sigma_{nm})}
  \frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
-+\frac{1}{2\omega^\Sigma_{lm}\omega^\Sigma_{nm}}
++\frac{1}{2\omega^\Sigma_{qm}\omega^\Sigma_{nm}}
  \frac{1}{\tilde\omega}
 \right]
 \nonumber\\
 &- B
 \left[
--\frac{1}{2\omega^\Sigma_{nl}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
- \frac{1}{\omega^\Sigma_{nl}-\tilde\omega}
-+\frac{2}{\omega^\Sigma_{nm}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
+-\frac{1}{2\omega^\Sigma_{nq}(2\omega^\Sigma_{nq}-\omega^\Sigma_{nm})}
+ \frac{1}{\omega^\Sigma_{nq}-\tilde\omega}
++\frac{2}{\omega^\Sigma_{nm}(2\omega^\Sigma_{nq}-\omega^\Sigma_{nm})}
  \frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
-+\frac{1}{2\omega^\Sigma_{nl}\omega^\Sigma_{nm}}
++\frac{1}{2\omega^\Sigma_{nq}\omega^\Sigma_{nm}}
  \frac{1}{\tilde\omega}
-\right],
+\right]\Bigg),
 \end{align}  
 where 
-$A=f_{ml}\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{c}}_{nl}r^{\text{b}}_{lm}$   
+$A=f_{mq}\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{c}}_{nq}r^{\text{b}}_{qm}$   
 and
-$B=f_{ln}\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nl}r^{\text{c}}_{lm}$.
-
+$B=f_{qn}\mathcal{V}^{\Sigma,\text{a}}_{mn}r^{\text{b}}_{nq}r^{\text{c}}_{qm}$.
 Just as above, the $\frac{1}{\tilde\omega}$ terms cancel out. We multiply out
 the $A$ and $B$ terms,
 \begin{align}\label{emultipied}  
 E&=  
+\frac{ie^{3}}{\hbar^{2}}\Bigg(
 \left[
--\frac{A}{2\omega^\Sigma_{lm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
- \frac{1}{\omega^\Sigma_{lm}-\tilde\omega}
-+\frac{2A}{\omega^\Sigma_{nm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
+-\frac{A}{2\omega^\Sigma_{qm}(2\omega^\Sigma_{qm}-\omega^\Sigma_{nm})}
+ \frac{1}{\omega^\Sigma_{qm}-\tilde\omega}
++\frac{2A}{\omega^\Sigma_{nm}(2\omega^\Sigma_{qm}-\omega^\Sigma_{nm})}
  \frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
 \right]\nonumber\\
 &+ 
 \left[
- \frac{B}{2\omega^\Sigma_{nl}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
- \frac{1}{\omega^\Sigma_{nl}-\tilde\omega}
--\frac{2B}{\omega^\Sigma_{nm}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
+ \frac{B}{2\omega^\Sigma_{nq}(2\omega^\Sigma_{nq}-\omega^\Sigma_{nm})}
+ \frac{1}{\omega^\Sigma_{nq}-\tilde\omega}
+-\frac{2B}{\omega^\Sigma_{nm}(2\omega^\Sigma_{nq}-\omega^\Sigma_{nm})}
  \frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
-\right].
+\right]\Bigg).
 \end{align}  
 As before, we notice that the energy denominators are invariant under
 $\mathbf{k} \rightarrow - \mathbf{k}$ so we need only to review the numerators.
 Starting with $A$,
 \begin{align*}
-A \rightarrow f_{ml}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-    r^{\text{c}}_{nl}r^{\text{b}}_{lm}\vert_{\mathbf{k}}
-&+  f_{ml}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{c}}_{nl}
-    r^{\text{b}}_{lm}\vert_{-\mathbf{k}}\nonumber\\
-&=  f_{ml}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-    r^{\text{c}}_{nl}r^{\text{b}}_{lm}\vert_{\mathbf{k}} 
+A \rightarrow f_{mq}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{c}}_{nq}r^{\text{b}}_{qm}\vert_{\mathbf{k}}
+&+  f_{mq}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{c}}_{nq}
+    r^{\text{b}}_{qm}\vert_{-\mathbf{k}}\nonumber\\
+&=  f_{mq}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{c}}_{nq}r^{\text{b}}_{qm}\vert_{\mathbf{k}} 
 +   \left(-\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}\right)
-    r^{\text{c}}_{ln}r^{\text{b}}_{ml}\vert_{\mathbf{k}}\right]\nonumber\\
-&=  f_{ml}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-    r^{\text{c}}_{nl}r^{\text{b}}_{lm} 
+    r^{\text{c}}_{qn}r^{\text{b}}_{mq}\vert_{\mathbf{k}}\right]\nonumber\\
+&=  f_{mq}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{c}}_{nq}r^{\text{b}}_{qm} 
 -   \mathcal{V}^{\Sigma,\text{a},\ell}_{nm}
-    r^{\text{c}}_{ln}r^{\text{b}}_{ml}\right]\nonumber\\
-&=  f_{ml}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-    r^{\text{c}}_{nl}r^{\text{b}}_{lm}
+    r^{\text{c}}_{qn}r^{\text{b}}_{mq}\right]\nonumber\\
+&=  f_{mq}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{c}}_{nq}r^{\text{b}}_{qm}
 -   \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-    r^{\text{c}}_{nl}r^{\text{b}}_{lm}\right)^{*}\right]\nonumber\\
-&= -2f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-    r^{\text{c}}_{nl}r^{\text{b}}_{lm}\right],
+    r^{\text{c}}_{nq}r^{\text{b}}_{qm}\right)^{*}\right]\nonumber\\
+&=  2if_{mq}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{c}}_{nq}r^{\text{b}}_{qm}\right],
 \end{align*}
 then $B$,
 \begin{align*}
-B \rightarrow f_{ln}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-    r^{\text{b}}_{nl}r^{\text{c}}_{lm}\vert_{\mathbf{k}}
-&+  f_{ln}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{b}}_{nl}
-    r^{\text{c}}_{lm}\vert_{-\mathbf{k}}\nonumber\\
-&=  f_{ln}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-    r^{\text{b}}_{nl}r^{\text{c}}_{lm}\vert_{\mathbf{k}} 
+B \rightarrow f_{qn}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{b}}_{nq}r^{\text{c}}_{qm}\vert_{\mathbf{k}}
+&+  f_{qn}\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}r^{\text{b}}_{nq}
+    r^{\text{c}}_{qm}\vert_{-\mathbf{k}}\nonumber\\
+&=  f_{qn}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{b}}_{nq}r^{\text{c}}_{qm}\vert_{\mathbf{k}} 
 +   \left(-\mathcal{V}^{\Sigma,\text{a},\ell}_{nm}\right)
-    r^{\text{b}}_{ln}r^{\text{c}}_{ml}\vert_{\mathbf{k}}\right]\nonumber\\
-&=  f_{ln}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-    r^{\text{b}}_{nl}r^{\text{c}}_{lm} 
+    r^{\text{b}}_{qn}r^{\text{c}}_{mq}\vert_{\mathbf{k}}\right]\nonumber\\
+&=  f_{qn}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{b}}_{nq}r^{\text{c}}_{qm} 
 -   \mathcal{V}^{\Sigma,\text{a},\ell}_{nm}
-    r^{\text{b}}_{ln}r^{\text{c}}_{ml}\right]\nonumber\\
-&=  f_{ln}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-    r^{\text{b}}_{nl}r^{\text{c}}_{lm}
+    r^{\text{b}}_{qn}r^{\text{c}}_{mq}\right]\nonumber\\
+&=  f_{qn}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{b}}_{nq}r^{\text{c}}_{qm}
 -   \left(\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-    r^{\text{b}}_{nl}r^{\text{c}}_{lm}\right)^{*}\right]\nonumber\\
-&= -2f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-    r^{\text{b}}_{nl}r^{\text{c}}_{lm}\right].
+    r^{\text{b}}_{nq}r^{\text{c}}_{qm}\right)^{*}\right]\nonumber\\
+&=  2if_{qn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+    r^{\text{b}}_{nq}r^{\text{c}}_{qm}\right].
 \end{align*}
 We then substitute in \eqref{emultipied},
 \begin{align*}
-E =  
+E =
+\frac{e^{3}}{\hbar^{2}}\Bigg(
 \Bigg[
-  \frac{2f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-        r^{\text{c}}_{nl}
-        r^{\text{b}}_{lm}\right]}
-        {2\omega^\Sigma_{lm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
-\frac{1}{\omega^\Sigma_{lm}-\tilde\omega}
-&-\frac{4f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-        r^{\text{c}}_{nl}
-        r^{\text{b}}_{lm}\right]}
-        {\omega^\Sigma_{nm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
+  \frac{2f_{mq}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{c}}_{nq}
+        r^{\text{b}}_{qm}\right]}
+        {2\omega^\Sigma_{qm}(2\omega^\Sigma_{qm}-\omega^\Sigma_{nm})}
+\frac{1}{\omega^\Sigma_{qm}-\tilde\omega}
+&-\frac{4f_{mq}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{c}}_{nq}
+        r^{\text{b}}_{qm}\right]}
+        {\omega^\Sigma_{nm}(2\omega^\Sigma_{qm}-\omega^\Sigma_{nm})}
 \frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}\nonumber\\
--\frac{2f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-        r^{\text{b}}_{nl}
-        r^{\text{c}}_{lm}\right]}
-        {2\omega^\Sigma_{nl}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
-\frac{1}{\omega^\Sigma_{nl}-\tilde\omega}
-&+\frac{4f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-        r^{\text{b}}_{nl}
-        r^{\text{c}}_{lm}\right]}
-        {\omega^\Sigma_{nm}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
+-\frac{2f_{qn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{b}}_{nq}
+        r^{\text{c}}_{qm}\right]}
+        {2\omega^\Sigma_{nq}(2\omega^\Sigma_{nq}-\omega^\Sigma_{nm})}
+\frac{1}{\omega^\Sigma_{nq}-\tilde\omega}
+&+\frac{4f_{qn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{b}}_{nq}
+        r^{\text{c}}_{qm}\right]}
+        {\omega^\Sigma_{nm}(2\omega^\Sigma_{nq}-\omega^\Sigma_{nm})}
 \frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
-\Bigg]
+\Bigg]\Bigg)
 .
 \end{align*}
-We manipulate indices and simplify,
+We exchange $n\leftrightarrow q$ ($m\leftrightarrow q$) in the first (second)
+term,
 \begin{align*}
 E &=  
+\frac{e^{3}}{\hbar^{2}}\Bigg(
 \Bigg[
-  \frac{f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-        r^{\text{c}}_{nl}
-        r^{\text{b}}_{lm}\right]}
-        {\omega^\Sigma_{lm}(2\omega^\Sigma_{lm}-\omega^\Sigma_{nm})}
-\frac{1}{\omega^\Sigma_{lm}-\tilde\omega}
- -\frac{f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-        r^{\text{b}}_{nl}
-        r^{\text{c}}_{lm}\right]}
-        {\omega^\Sigma_{nl}(2\omega^\Sigma_{nl}-\omega^\Sigma_{nm})}
-\frac{1}{\omega^\Sigma_{nl}-\tilde\omega}
+  \frac{f_{mq}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{c}}_{nq}
+        r^{\text{b}}_{qm}\right]}
+        {\omega^\Sigma_{qm}(2\omega^\Sigma_{qm}-\omega^\Sigma_{nm})}
+\frac{1}{\omega^\Sigma_{qm}-\tilde\omega}
+ -\frac{f_{qn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{b}}_{nq}
+        r^{\text{c}}_{qm}\right]}
+        {\omega^\Sigma_{nq}(2\omega^\Sigma_{nq}-\omega^\Sigma_{nm})}
+\frac{1}{\omega^\Sigma_{nq}-\tilde\omega}
 \Bigg]\nonumber\\
 &\qquad+
 \Bigg[
-  \frac{f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-        r^{\text{b}}_{nl}
-        r^{\text{c}}_{lm}\right]}
-        {2\omega^\Sigma_{nl}-\omega^\Sigma_{nm}}
- -\frac{f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-        r^{\text{c}}_{nl}
-        r^{\text{b}}_{lm}\right]}
-        {2\omega^\Sigma_{lm}-\omega^\Sigma_{nm}}
+  \frac{f_{qn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{b}}_{nq}
+        r^{\text{c}}_{qm}\right]}
+        {2\omega^\Sigma_{nq}-\omega^\Sigma_{nm}}
+ -\frac{f_{mq}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{c}}_{nq}
+        r^{\text{b}}_{qm}\right]}
+        {2\omega^\Sigma_{qm}-\omega^\Sigma_{nm}}
 \Bigg]\frac{4}{\omega^\Sigma_{nm}}\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
+\Bigg)
 \nonumber\\
 &=  
+\frac{e^{3}}{\hbar^{2}}\Bigg(
 \Bigg[
-  \frac{f_{mn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{ml}
-        r^{\text{c}}_{ln}
+  \frac{f_{mn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mq}
+        r^{\text{c}}_{qn}
         r^{\text{b}}_{nm}\right]}
-        {2\omega^\Sigma_{nm}-\omega^\Sigma_{lm}}
- -\frac{f_{mn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{ln}
+        {2\omega^\Sigma_{nm}-\omega^\Sigma_{qm}}
+ -\frac{f_{mn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{qn}
         r^{\text{b}}_{nm}
-        r^{\text{c}}_{ml}\right]}
-        {2\omega^\Sigma_{nm}-\omega^\Sigma_{nl}}
+        r^{\text{c}}_{mq}\right]}
+        {2\omega^\Sigma_{nm}-\omega^\Sigma_{nq}}
 \Bigg]\frac{1}{\omega^\Sigma_{nm}}\frac{1}{\omega^\Sigma_{nm}-\tilde\omega}
 \nonumber\\
 &\qquad+
 \Bigg[
-  \frac{f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-        r^{\text{b}}_{nl}
-        r^{\text{c}}_{lm}\right]}
-        {2\omega^\Sigma_{nl}-\omega^\Sigma_{nm}}
- -\frac{f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-        r^{\text{c}}_{nl}
-        r^{\text{b}}_{lm}\right]}
-        {2\omega^\Sigma_{lm}-\omega^\Sigma_{nm}}
-\Bigg]\frac{4}{\omega^\Sigma_{nm}}\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega},
+  \frac{f_{qn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{b}}_{nq}
+        r^{\text{c}}_{qm}\right]}
+        {2\omega^\Sigma_{nq}-\omega^\Sigma_{nm}}
+ -\frac{f_{mq}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        r^{\text{c}}_{nq}
+        r^{\text{b}}_{qm}\right]}
+        {2\omega^\Sigma_{qm}-\omega^\Sigma_{nm}}
+\Bigg]\frac{4}{\omega^\Sigma_{nm}}\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}
+\Bigg),
 \end{align*}
 and substitute in \eqref{chie},
 \begin{align*}
-I = -\frac{e^3}{2\hbar^2}\sum_{nm}\frac{1}{\omega^\Sigma_{nm}}
+E = \frac{e^3}{2\hbar^2}\sum_{nm}\frac{f_{mn}}{\omega^\Sigma_{nm}}
 &\left[
-  \frac{f_{mn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{ml}
-        \{r^{\text{c}}_{ln}
+  \frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mq}
+        \{r^{\text{c}}_{qn}
         r^{\text{b}}_{nm}\}\right]}
-        {2\omega^\Sigma_{nm}-\omega^\Sigma_{lm}}
- -\frac{f_{mn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{ln}
+        {2\omega^\Sigma_{nm}-\omega^\Sigma_{qm}}
+ -\frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{qn}
         \{r^{\text{b}}_{nm}
-        r^{\text{c}}_{ml}\}\right]}
-        {2\omega^\Sigma_{nm}-\omega^\Sigma_{nl}}
+        r^{\text{c}}_{mq}\}\right]}
+        {2\omega^\Sigma_{nm}-\omega^\Sigma_{nq}}
 \right]\frac{1}{\omega^\Sigma_{nm}-\tilde\omega}\nonumber\\
 +
-4&\left[
-  \frac{f_{ln}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-        \{r^{\text{b}}_{nl}
-        r^{\text{c}}_{lm}\}\right]}
-        {2\omega^\Sigma_{nl}-\omega^\Sigma_{nm}}
- -\frac{f_{ml}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
-        \{r^{\text{c}}_{nl}
-        r^{\text{b}}_{lm}\}\right]}
-        {2\omega^\Sigma_{lm}-\omega^\Sigma_{nm}}
-\right]\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega}.
+\frac{4}{\omega^\Sigma_{nm}}&\left[
+  \frac{f_{qn}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        \{r^{\text{b}}_{nq}
+        r^{\text{c}}_{qm}\}\right]}
+        {2\omega^\Sigma_{nq}-\omega^\Sigma_{nm}}
+ -\frac{f_{mq}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{mn}
+        \{r^{\text{c}}_{nq}
+        r^{\text{b}}_{qm}\}\right]}
+        {2\omega^\Sigma_{qm}-\omega^\Sigma_{nm}}
+\right]\frac{1}{\omega^\Sigma_{nm}-2\tilde\omega},
 \end{align*}
-Finally, we take $n = c$, $m = v$, and $l = q$ and substitute,
+where we added a $1/2$ from the sum over $\mathbf{k} \rightarrow -
+\mathbf{k}$. Finally, we take $n = c$, and $m = v$ and substitute,
 \begin{align*}
-I &= -\frac{e^3}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
+E &= -\frac{\vert e\vert^3}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
   \left(\left[
   \frac{f_{vc}\,\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vq}
         \{r^{\text{c}}_{qc}
@@ -1815,7 +1826,7 @@ I &= -\frac{e^3}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
         r^{\text{b}}_{qv}\}\right]}
         {2\omega^\Sigma_{qv}-\omega^\Sigma_{cv}}
 \right]\frac{1}{\omega^\Sigma_{cv}-2\tilde\omega}\right)\nonumber\\
-&= \frac{e^3}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
+&= \frac{\vert e\vert^3}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
 \left(\left[
  \frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{qc}
         \{r^{\text{b}}_{cv}
@@ -1843,7 +1854,7 @@ I &= -\frac{e^3}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We use \eqref{limit_eta},
 \begin{align*}
-I = \frac{\pi|e^3|}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
+\mathrm{Im}[\chi^{\mathrm{abc}}_{e}] = \frac{\pi|e^3|}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
 &\left(\left[
  \frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{qc}
         \{r^{\text{b}}_{cv}
@@ -1870,7 +1881,8 @@ I = \frac{\pi|e^3|}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
 and recognize that for the $1\omega$ terms, $q\neq (v,c)$, and for the $2\omega$
 q can have two distinct values such that,
 \begin{align*}  
-I = \frac{\pi|e^3|}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
+\mathrm{Im}[\chi^{\mathrm{abc}}_{e}] =
+\frac{\pi|e^3|}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
 &\left(
 \sum_{q\neq (v,c)}
 \left[
@@ -1897,7 +1909,39 @@ I = \frac{\pi|e^3|}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
         {2\omega^\Sigma_{c^{\prime}v}-\omega^\Sigma_{cv}}
 \right]\delta(\omega^{\Sigma}_{cv}-2\omega)\right).
 \end{align*}
-
+Therefore
+\begin{equation*}  
+\mathrm{Im}[\chi^{\mathrm{abc}}_{e,\omega}] =
+\frac{\pi|e^3|}{2\hbar^2}\sum_{cv}\frac{1}{\omega^\Sigma_{cv}}
+\sum_{q\neq (v,c)}
+\left[
+ \frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{qc}
+        \{r^{\text{b}}_{cv}
+        r^{\text{c}}_{vq}\}\right]}
+        {2\omega^\Sigma_{cv}-\omega^\Sigma_{cq}}
+ -\frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vq}
+        \{r^{\text{c}}_{qc}
+        r^{\text{b}}_{cv}\}\right]}
+        {2\omega^\Sigma_{cv}-\omega^\Sigma_{qv}}
+\right]\delta(\omega^{\Sigma}_{cv}-\omega),
+\end{equation*}
+and
+\begin{equation*}  
+\mathrm{Im}[\chi^{\mathrm{abc}}_{e,2\omega}] =
+-\frac{\pi|e^3|}{2\hbar^2}\sum_{cv}\frac{4}{\omega^\Sigma_{cv}}
+\left[
+ \sum_{v^{\prime}\neq v}
+  \frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
+        \{r^{\text{b}}_{cv^{\prime}}
+        r^{\text{c}}_{v^{\prime}v}\}\right]}
+        {2\omega^\Sigma_{cv^{\prime}}-\omega^\Sigma_{cv}}
+ -\sum_{c^{\prime}\neq c}
+ \frac{\mathrm{Im}\left[\mathcal{V}^{\Sigma,\text{a},\ell}_{vc}
+        \{r^{\text{c}}_{cc^{\prime}}
+        r^{\text{b}}_{c^{\prime}v}\}\right]}
+        {2\omega^\Sigma_{c^{\prime}v}-\omega^\Sigma_{cv}}
+\right]\delta(\omega^{\Sigma}_{cv}-2\omega).
+\end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

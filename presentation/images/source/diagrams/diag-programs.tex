@@ -1,0 +1,34 @@
+\documentclass[border=0.5cm,tikz]{standalone}
+\usepackage{MyriadPro}
+
+
+\definecolor{yellow}{RGB}{255,197,051}
+\definecolor{blue}  {RGB}{124,192,217}
+\definecolor{green} {RGB}{139,158,119}
+\definecolor{orange}{RGB}{232,099,044}
+\definecolor{red}   {RGB}{219,053,038}
+\definecolor{purple}{RGB}{109,110,146}
+
+\begin{document}
+
+\tikzstyle{block}=[rectangle,text=white,text width=5.5cm,text centered,rounded corners,minimum height=2cm]
+
+\begin{tikzpicture}[font=\sffamily]
+% blocks
+\node [block,top color=yellow,bottom color=yellow!80!black] at (0,10) (ABI) {\huge ABINIT};
+\node [block,top color=blue,bottom color=blue!80!black] at (0,5) (TIN) {\huge{TINIBA}\\[4pt]\Large{Matrix Elements}};
+\node [block,top color=orange,bottom color=orange!80!black] at (10,5) (DP) {\huge DP Code};
+\node [block,top color=red,bottom color=red!80!black] at (0,0) (yield) {\huge SHGYield.py};
+
+% arrows
+\draw [-Latex,ultra thick] (ABI) -- (TIN);
+\draw [Latex-Latex,ultra thick] (DP) -- (TIN);
+\draw [-Latex,ultra thick] (TIN) -- (yield);
+
+% text
+\node [text width=2.5cm,align=right,scale=1.5] at (-2.5,7.5) {Wave function\\ Electron density\\ Eigenvalues};
+\node [scale=3] at (1.5,2.5) {$\chi^{\mathrm{abc}}$};
+\node [scale=3] at (5,6) {$\mathbf{v}^{\mathrm{nl}}$};
+\end{tikzpicture}
+
+\end{document}

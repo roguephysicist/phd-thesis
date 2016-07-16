@@ -1,10 +1,38 @@
 \documentclass{beamer}
 \usetheme{Antibes}
-\setbeamertemplate{navigation symbols}{} 
+% \setbeamertemplate{navigation symbols}{} 
 \usefonttheme[onlymath]{serif}
+\usepackage{animate}
 \usepackage{amsmath}
 \usepackage{lmodern}%
 % \usepackage{showframe} 
+
+\definecolor{yellow}{RGB}{255,197,051}
+\definecolor{blue}  {RGB}{124,192,217}
+\definecolor{green} {RGB}{139,158,119}
+\definecolor{orange}{RGB}{232,099,044}
+\definecolor{red}   {RGB}{219,053,038}
+\definecolor{purple}{RGB}{109,110,146}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\tikzstyle{block}=[rectangle,text=white,text width=5.5cm,text centered,rounded corners,minimum height=2cm]
+\tikzset{
+    hyperlink node/.style={
+        alias=sourcenode,
+        append after command={
+            let     \p1 = (sourcenode.north west),
+                \p2=(sourcenode.south east),
+                \n1={\x2-\x1},
+                \n2={\y1-\y2} in
+            node [inner sep=0pt, outer sep=0pt,anchor=north west,at=(\p1)] {\hyperlink{#1}{\XeTeXLinkBox{\phantom{\rule{\n1}{\n2}}}}}
+                    %xelatex needs \XeTeXLinkBox, won't create a link unless it
+                    %finds text --- rules don't work without \XeTeXLinkBox.
+                    %Still builds correctly with pdflatex and lualatex
+        }
+    }
+}
 
 \usepackage{graphicx}
 \graphicspath{{.}{images/}}
@@ -18,8 +46,10 @@
 \institute{Centro de Investigaciones en \'Optica, A.C\vspace{-1em}}
 \date{\small July 14, 2016\vspace{-1.2em}}
 \titlegraphic{
+\vspace{-3.2em}
 \begin{figure}
-\includegraphics[width=0.8\textwidth]{3D-cover}
+\animategraphics[loop,scale=1.1]{12}{images/source/animation/shg-frame}{000}{058}
+% \includegraphics[width=0.8\textwidth]{3D-cover}
 \end{figure}}
 
 
@@ -48,13 +78,44 @@
 \end{figure}
 \end{frame}
 
+\subsection{Applications}
+
 \begin{frame}
-\frametitle{A Nonlinear Crystal}
+\frametitle{Frequency Conversion%
+\footnote{Images: Dr. Ram\'on Carriles Jaimes, Cornelia Reitb\"ock}}
+\begin{columns}
+\column{0.5\textwidth}
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{image-ramon}
-\caption{A nonlinear KDP crystal excited at 800 nm, with SHG at 400 nm.}
+\includegraphics[width=\textwidth]{image-ramon}
 \end{figure}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[height=0.7\textheight]{image-conny}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Strain in TSVs%
+\footnote{\emph{Cho et al.}, Appl. Phys. Lett. 108, 151602 (2016)}
+\footnote{\emph{Mendoza et al.}, Phys. Status Solidi B 253, 2 (2016)}}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{image-yojin}
+\vspace*{0.5cm}
+\caption{Experiment}
+\end{figure}
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{image-bms}
+\caption{Theory}
+\end{figure}
+\end{columns}
 \end{frame}
 
 % \begin{frame}
@@ -75,24 +136,7 @@
 % \end{columns}
 % \end{frame}
 
-\begin{frame}
-\frametitle{Applications: Strain in TSVs\footnote{\emph{Cho et al.}, Appl. Phys. Lett. 108, 151602 (2016)} \footnote{\emph{Mendoza et al.}, Phys. Status Solidi B 253, 2 (2016)}}
-\begin{columns}
-\column{0.5\textwidth}
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{image-yojin}
-\vspace*{0.5cm}
-\caption{Experiment}
-\end{figure}
-\column{0.5\textwidth}
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{image-bms}
-\caption{Theory}
-\end{figure}
-\end{columns}
-\end{frame}
+\subsection{}
 
 \begin{frame}
 \frametitle{Second-order Nonlinear Effects}
@@ -219,7 +263,8 @@ We also have that
 \begin{equation*}
 \mathbf{r}_{nm}(\mathbf{k})
 = \frac{\mathbf{v}^{\Sigma}_{nm}(\mathbf{k})}{i\omega^{\Sigma}_{nm}(\mathbf{k})}
-= \frac{\mathbf{v}^{\mathrm{LDA}}_{nm}(\mathbf{k})}{i\omega^{\mathrm{LDA}}_{nm}(\mathbf{k})}.
+= \frac{\mathbf{v}^{\mathrm{LDA}}_{nm}(\mathbf{k})}
+       {i\omega^{\mathrm{LDA}}_{nm}(\mathbf{k})}.
 \end{equation*} 
 \end{frame}
 
@@ -275,33 +320,35 @@ representing the atoms of the system.}
 i\nabla_{\mathbf{k}}\delta(\mathbf{k} - \mathbf{k}')\right]$}}
 \begin{figure}
 \centering
-\includegraphics[scale=0.70]{chis_intra}
-\end{figure}
-\end{alertblock}
-\end{frame}
-
-\begin{frame}
-\frametitle{Final Expressions}
-\begin{block}{Interband Contribution {\tiny $\langle n\mathbf{k}|
-\mathbf{r}_{e} |m\mathbf{k}'\rangle = (1- \delta_{nm})
-\delta(\mathbf{k}-\mathbf{k}')\boldsymbol{\xi}_{nm}(\mathbf{k})$}}
-\begin{figure}
-\centering
-\includegraphics[scale=0.70]{chis_inter_red}
-\end{figure}
-\end{block}
-\begin{alertblock}{Intraband Contribution {\tiny $\langle n\mathbf{k}\vert
-\mathbf{r}_{i} |m\mathbf{k}'\rangle = \delta_{nm}
-\left[\delta(\mathbf{k} - \mathbf{k}')\boldsymbol{\xi}_{nn}(\mathbf{k}) +
-i\nabla_{\mathbf{k}}\delta(\mathbf{k} - \mathbf{k}')\right]$}}
-\begin{figure}
-\centering
 \includegraphics[scale=0.70]{chis_intra_red}
 \end{figure}
 \end{alertblock}
 \end{frame}
 
+% \begin{frame}
+% \frametitle{Final Expressions}
+% \begin{block}{Interband Contribution {\tiny $\langle n\mathbf{k}|
+% \mathbf{r}_{e} |m\mathbf{k}'\rangle = (1- \delta_{nm})
+% \delta(\mathbf{k}-\mathbf{k}')\boldsymbol{\xi}_{nm}(\mathbf{k})$}}
+% \begin{figure}
+% \centering
+% \includegraphics[scale=0.70]{chis_inter_red}
+% \end{figure}
+% \end{block}
+% \begin{alertblock}{Intraband Contribution {\tiny $\langle n\mathbf{k}\vert
+% \mathbf{r}_{i} |m\mathbf{k}'\rangle = \delta_{nm}
+% \left[\delta(\mathbf{k} - \mathbf{k}')\boldsymbol{\xi}_{nn}(\mathbf{k}) +
+% i\nabla_{\mathbf{k}}\delta(\mathbf{k} - \mathbf{k}')\right]$}}
+% \begin{figure}
+% \centering
+% \includegraphics[scale=0.70]{chis_intra_red}
+% \end{figure}
+% \end{alertblock}
+% \end{frame}
+
+
 \subsection{Software}
+
 \begin{frame}
 Medusa runs on free and open source software:
 \begin{itemize}
@@ -323,40 +370,58 @@ Combines Bash, Perl, Fortran, and ABINIT for calculating:
 \end{frame}
 
 \begin{frame}
-\begin{block}{ABINIT\footnote{X. Gonze et al. 
-\emph{Computational Materials Science}, 25:478--492, 2002} 
-\footnote{X. Gonze et al. \emph{Z. Kristallogr.}, 220:558--562, 2005} 
-\footnote{X. Gonze et al. 
-\emph{Computer Physics Communications}, 180(12):2582, 2009}}
-First-principle study of crystals, molecules, nanostructures using density
-functional theory, many-body perturbation theory, plane waves, and
-pseudopotentials to calculate
-\begin{itemize}
-\item Electronic structure
-\item Total energy
-\item Dielectric properties, and many, many more
-\end{itemize}
-\end{block}
+\begin{tikzpicture}[font=\sffamily,scale=0.6, every node/.style={transform shape}]
+% blocks
+\node [block,top color=yellow,bottom color=yellow!80!black,hyperlink node=app-abinit] at (0,10) (ABI) {\huge ABINIT};
+\node [block,top color=blue,bottom color=blue!80!black,hyperlink node=app-tiniba] at (0,5) (TIN) {\huge{TINIBA}\\[4pt]\Large{Matrix Elements}};
+\node [block,top color=orange,bottom color=orange!80!black,hyperlink node=app-dpvnl] at (10,5) (DP) {\huge DP Code};
+\node [block,top color=red,bottom color=red!80!black,hyperlink node=app-shgyield] at (0,0) (yield) {\huge SHGYield.py};
+% arrows
+\draw [-Latex,ultra thick] (ABI) -- (TIN);
+\draw [Latex-Latex,ultra thick] (DP) -- (TIN);
+\draw [-Latex,ultra thick] (TIN) -- (yield);
+% text
+\node [text width=3cm,align=right,scale=1.4] at (-2.5,7.5) {Wave function\\ Electron density\\ Eigenvalues};
+\node [scale=3] at (1.5,2.5) {$\chi^{\mathrm{abc}}$};
+\node [scale=3] at (5,6) {$\mathbf{v}^{\mathrm{nl}}$};
+\end{tikzpicture}
 \end{frame}
 
-\begin{frame}
-\begin{block}{DP/EXC%
-\footnote{Olevano, V. and Reining, L. and Sottile, F.,
-http://dp-code.org, http://etsf.polytechnique.fr/exc/}}
+% \begin{frame}
+% \begin{block}{ABINIT\footnote{X. Gonze et al. 
+% \emph{Computational Materials Science}, 25:478--492, 2002} 
+% \footnote{X. Gonze et al. \emph{Z. Kristallogr.}, 220:558--562, 2005} 
+% \footnote{X. Gonze et al. 
+% \emph{Computer Physics Communications}, 180(12):2582, 2009}}
+% First-principle study of crystals, molecules, nanostructures using density
+% functional theory, many-body perturbation theory, plane waves, and
+% pseudopotentials to calculate
+% \begin{itemize}
+% \item Electronic structure
+% \item Total energy
+% \item Dielectric properties, and many, many more
+% \end{itemize}
+% \end{block}
+% \end{frame}
 
-Linear response time-dependent density-functional theory (LR-TDDFT) code in
-frequency reciprocal ($\mathbf{k}-\omega$) space on a plane waves (PW) basis
-set, for dielectric and optical Spectroscopy.
-\begin{itemize}
-\item Optical absorption
-\item Reflectivity
-\item Refraction Indices
-\item EELS
-\end{itemize}
-\end{block}
-In our case, we use DP for calculating the contribution from
-$\mathbf{v}^\mathrm{nl}$.
-\end{frame}
+% \begin{frame}
+% \begin{block}{DP/EXC%
+% \footnote{Olevano, V. and Reining, L. and Sottile, F.,
+% http://dp-code.org, http://etsf.polytechnique.fr/exc/}}
+
+% Linear response time-dependent density-functional theory (LR-TDDFT) code in
+% frequency reciprocal ($\mathbf{k}-\omega$) space on a plane waves (PW) basis
+% set, for dielectric and optical Spectroscopy.
+% \begin{itemize}
+% \item Optical absorption
+% \item Reflectivity
+% \item Refraction Indices
+% \item EELS
+% \end{itemize}
+% \end{block}
+% In our case, we use DP for calculating the contribution from
+% $\mathbf{v}^\mathrm{nl}$.
+% \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -469,7 +534,7 @@ surface, between the vacuum region ($v$) and the material bulk ($b$)}
 \begin{frame}
 \frametitle{Explicit Expressions for $\mathcal{R}$%
 \footnote{\emph{Anderson, et al.}, Phys. Rev. B 93, 235304 (2016)}
-\footnote{\emph{Anderson, et al.}, arXiv:1604.07722 (2016)}
+\footnote{\emph{Anderson, et al.}, Phys. Rev. B, submitted}
 }
 The SSHG yield is
 \begin{equation*}
@@ -610,7 +675,7 @@ Si(111)(1\texorpdfstring{$\times$}{x}1):H}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{fig-Si1x1-MRdepth}
-\caption{$\mathcal{R}_{pP}$ for $\theta=65$ and $\phi=45$%
+\caption{$\mathcal{R}_{pP}$ for $\theta=65$ and $\phi=45$ at room temperature%
 \footnote{Experimental data from \emph{Mejia et al.}, Phys. Rev. B 66, 195329 (2002)}}
 \end{figure}
 \end{frame}
@@ -626,15 +691,18 @@ surface, between the vacuum region ($v$) and the material bulk ($b$)}
 \end{frame}
 
 \begin{frame}
-% \frametitle{Appendix}
+\frametitle{Other models}
 \begin{figure}
-\raggedright
-\includegraphics[height=0.45\textheight]{fig-Si1x1-Mejia_RpP}
+\centering
+\includegraphics[width=\textwidth]{fig-Si1x1-Mejia_RpP}
 \end{figure}
-\vspace{-0.5cm}
+\end{frame}
+
+\begin{frame}
+\frametitle{Other models}
 \begin{figure}
-\raggedleft
-\includegraphics[height=0.45\textheight]{fig-Si1x1-Mejia_RpP_models}
+\centering
+\includegraphics[width=\textwidth]{fig-Si1x1-Mejia_RpP_models}
 \end{figure}
 \end{frame}
 
@@ -643,7 +711,7 @@ surface, between the vacuum region ($v$) and the material bulk ($b$)}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{fig-Si1x1-Mejia_RpS}
-\caption{$\mathcal{R}_{pS}$ for $\theta=65$ and $\phi=45$%
+\caption{$\mathcal{R}_{pS}$ for $\theta=65$ and $\phi=45$ at room temperature%
 \footnote{Experimental data from \emph{Mejia et al.}, Phys. Rev. B 66, 195329 (2002)}}
 \end{figure}
 \end{frame}
@@ -653,20 +721,55 @@ surface, between the vacuum region ($v$) and the material bulk ($b$)}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{fig-Si1x1-Mejia_RsP}
-\caption{$\mathcal{R}_{sP}$ for $\theta=65$ and $\phi=45$%
+\caption{$\mathcal{R}_{sP}$ for $\theta=65$ and $\phi=45$ at room temperature%
 \footnote{Experimental data from \emph{Mejia et al.}, Phys. Rev. B 66, 195329 (2002)}}
 \end{figure}
 \end{frame}
 
 \begin{frame}
+\frametitle{\texorpdfstring{$\mathcal{R}_{pP}$}{RpP} -- Old vs. New}
+\begin{columns}
+\column{0.55\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{mejia-000}
+\caption{From \emph{Mejia et al.}}
+\end{figure}
+\column{0.55\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{fig-rpp}
+\caption{This work.}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{\texorpdfstring{$\mathcal{R}_{pS}$}{RpS} -- Old vs. New}
+\begin{columns}
+\column{0.55\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{mejia-001}
+\caption{From \emph{Mejia et al.}}
+\end{figure}
+\column{0.55\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{fig-rps}
+\caption{This work.}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
 \frametitle{Summary}
 \begin{itemize}
-\item Intensity is very close to experiment with unambiguous units. No more AU!
-\item Peak position is also quite close, temperature effects are quite clear.
-\item Multiple reflections enhances peak proportions and intensity when needed.
+\item Intensity is very close to experiment with unambiguous units. No more arbitrary units!
+\item Peak position is also quite close, temperature effects are clear.
+\item Multiple reflections enhances peak proportions and intensity according to experiment.
 \item We can now have \emph{quantitative} and predictive results for any surface!
 \end{itemize}
-Remember, this is IPA folks! We neglect excitonic and local field effects.
 \end{frame}
 
 
@@ -682,20 +785,46 @@ Remember, this is IPA folks! We neglect excitonic and local field effects.
 
 \begin{frame}
 \frametitle{What's Next?}
-\vspace{-0.7cm}
-\begin{figure}
 \centering
-\includegraphics[height=0.95\textheight]{diag-methods}
-\end{figure}
+\begin{tikzpicture}[font=\sffamily\large,scale=0.58, every node/.style={transform shape}]
+% blocks
+\node [block,top color=yellow,bottom color=yellow!80!black] at (4,10) (DFT) 
+       {\textbf{DFT}\\ Density Functional Theory};
+\node [block,top color=blue,bottom color=blue!80!black] at (0.5,5.5) (TDDFT)
+       {\textbf{TD-DFT}\\ Time-Dependent DFT};
+\node [block,top color=green,bottom color=green!80!black] at (0.5,2.5) (ALDA)
+       {\textbf{ALDA}\\ Adiabatic Local Density\\ Approximation};
+\node [block,top color=orange,bottom color=orange!80!black] at (7.5,6.5) (MBPT)
+       {\textbf{MBPT}\\ Many-Body\\ Perturbation Theory};
+\node [block,top color=red,bottom color=red!80!black] at (7.5,3.5) (GW)
+       {\textbf{GW}\\ GW Approximation};
+\node [block,top color=purple,bottom color=purple!80!black] at (7.5,0.5) (BSE)
+       {\textbf{BSE}\\ Bethe-Salpeter Equation};
+% arrows
+\draw [-Latex,thick] (DFT.west) to [bend right=55] (TDDFT);
+\draw [-Latex,thick] (TDDFT) -- (ALDA);
+\draw [-Latex,thick] (DFT.east) to [bend left=55] (MBPT);
+\draw [-Latex,thick] (MBPT) -- (GW);
+\draw [-Latex,thick] (GW) -- (BSE);
+% text
+\node [yshift=15] at (DFT.north) {\Large Exact theory for ground state properties};
+\node [yshift=-25] at (DFT.south) {\Large Exact theories for excited state properties};
+\end{tikzpicture}
 \end{frame}
 
 \begin{frame}
 \frametitle{Where We Stand}
-\begin{figure}
 \centering
-\includegraphics[width=\textwidth]{diag-methods_us}
-\end{figure}
-\vspace{-0.5cm}
+\begin{tikzpicture}[font=\sffamily\large,scale=0.58, every node/.style={transform shape}]
+\node [block,top color=yellow,bottom color=yellow!80!black] at (0,0) (DFT) 
+       {\textbf{DFT}\\ Density Functional Theory};
+\node [scale=3] at (5,0) (plus) {$+$};
+\node [block,top color=red,bottom color=red!80!black] at (10,0) (GW)
+       {\textbf{GW}\\ GW Approximation};
+\node [scale=1.2,yshift=10,text width=2cm,align=center] at (plus.north) (scis) {Scissors\\ Correction};
+\node at (scis.west) {\Bigg(};
+\node at (scis.east) {\Bigg)};
+\end{tikzpicture}
 \begin{columns}
 \column{0.5\textwidth}
 \begin{figure}
@@ -712,10 +841,11 @@ Remember, this is IPA folks! We neglect excitonic and local field effects.
 
 \begin{frame}
 \frametitle{The State of the Art}
-\begin{figure}
 \centering
-\includegraphics[height=0.2\textheight]{diag-methods_future}
-\end{figure}
+\begin{tikzpicture}[font=\sffamily\large]
+\node [block,top color=purple,bottom color=purple!80!black] at (0,0) (BSE)
+       {\textbf{BSE}\\ Bethe-Salpeter Equation};
+\end{tikzpicture}
 \begin{figure}
 \centering
 \includegraphics[height=0.55\textheight]{fig-mbpt03}
@@ -733,7 +863,7 @@ Remember, this is IPA folks! We neglect excitonic and local field effects.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{About Me}
+\subsection{Credits}
 
 \begin{frame}
 \frametitle{Productivity}
@@ -741,7 +871,8 @@ Remember, this is IPA folks! We neglect excitonic and local field effects.
 \begin{itemize}
 \small
 \item \emph{Anderson, et al.}, Phys. Rev. B 93, 235304 (2016)
-\item \emph{Zapata-Pe\~na, Anderson, et al.}, Phys. Status Solidi B 253, 408 (2016) % COVER PAGE
+\item \emph{Zapata-Pe\~na, Anderson, et al.}, 
+            Phys. Status Solidi B 253, 408 (2016) % COVER PAGE
 \item \emph{Anderson, et al.}, Phys. Rev. B 91, 075302 (2015)
 \item \emph{Anderson, et al.}, arXiv:1604.07722 [physics.optics] (2016)
 \item \emph{Anderson, et al.}, Phys. Rev. B, Submitted (2016)
@@ -777,7 +908,6 @@ Remember, this is IPA folks! We neglect excitonic and local field effects.
 \end{block}
 \end{frame}
 
-\subsection{Credits}
 \begin{frame}
 \frametitle{Acknowledgements}
 \begin{itemize}
@@ -786,13 +916,81 @@ Remember, this is IPA folks! We neglect excitonic and local field effects.
 \item Dr. Norberto Arzate Plata
 \item Dr. Francisco Villa Villa
 \item Dr. Wolf Luis Moch\'an Backal
+\item Reinaldo Arturo Zapata Pe\~na
+\item Val\'erie V\'eniard \& Nicolas Tancogne-Dejean
 \item The CONACYT
 \item The CIO for 6 great years
+\item My parents, Mike \& Ana
+\item All my friends
+\item Dra. Liliana Villafa\~na L\'opez
 \end{itemize}
 \begin{center}
-\vspace{3em}
+% \vspace{3em}
 {\huge Thanks for coming!}
 \end{center}
+\end{frame}
+
+
+\subsection{Appendix}
+
+\begin{frame}
+\hypertarget{app-abinit}{}
+\frametitle{ABINIT}
+\centering
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{code-abinit}
+\end{figure}
+http://www.abinit.org
+\end{frame}
+
+\begin{frame}
+\hypertarget{app-tiniba}{}
+\frametitle{TINIBA}
+\centering
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{image-tiniba}
+\end{figure}
+https://github.com/roguephysicist/tiniba-manual
+\end{frame}
+
+\begin{frame}
+\hypertarget{app-dpvnl}{}
+\frametitle{Contribution of the Nonlocal Part of the Pseudopotential}
+\tiny
+\begin{equation*}\label{vnl.14}
+\begin{split}
+&\boldsymbol{\mathcal{V}}^{\mathrm{nl},\ell}_{nm}(\mathbf{k}) = \frac{1}{2\hbar}
+\sum_s\sum_{l=0}^{l_s}\sum_{m=-l}^{l}E_{l}\Bigg[\\
+&+\Bigg(\sum_{{\mathbf{G}''}}
+\nabla_{{\mathbf{G}''}}f_{lm}^s({\mathbf{G}''})
+\sum_{\mathbf{G}}A^{*}_{n{\mathbf{k}}}(\mathbf{G})\delta_{\mathbf{G}_{||}{\mathbf{G}''}_{||}}
+f_\ell(G_z-G''_z) \Bigg)  
+\Bigg( \sum_{{\mathbf{G}'}}A_{m{\mathbf{k}}}({\mathbf{G}'})f_{lm}^{s*}({\mathbf{K}'}) \Bigg)\\%
+&+ \Bigg(\sum_{{\mathbf{G}''}}
+f_{lm}^s({\mathbf{G}''})\sum_{\mathbf{G}}A^{*}_{n{\mathbf{k}}}(\mathbf{G})\delta_{\mathbf{G}_{||}{\mathbf{G}''}_{||}}
+f_\ell(G_z-G''_z) \Bigg)  
+\Bigg( \sum_{{\mathbf{G}'}}A_{m{\mathbf{k}}}({\mathbf{G}'})\nabla_{{\mathbf{K}'}}f_{lm}^{s*}({\mathbf{K}'}) \Bigg) \\
+&+\Bigg(\sum_{\mathbf{G}}A^{*}_{n{\mathbf{k}}}(\mathbf{G})\nabla_{\mathbf{G}}f_{lm}^s(\mathbf{G})\Bigg)\Bigg(
+\sum_{{\mathbf{G}''}}
+f_{lm}^{s*}({\mathbf{G}''})\sum_{{\mathbf{G}'}}A_{m{\mathbf{k}}}({\mathbf{G}'})\delta_{{\mathbf{G}'}_{||}{\mathbf{G}''}_{||}}
+f_\ell(G''_z-G'_z) \Bigg)\\ 
+&+\Bigg(\sum_{\mathbf{G}}A^{*}_{n{\mathbf{k}}}(\mathbf{G})f_{lm}^s(\mathbf{G})
+\Bigg) \Bigg(
+\sum_{{\mathbf{G}''}}\nabla_{{\mathbf{G}''}}f_{lm}^{s*}({\mathbf{G}''})
+\sum_{{\mathbf{G}'}}A_{m{\mathbf{k}}}({\mathbf{G}'})\delta_{{\mathbf{G}'}_{||}{\mathbf{G}''}_{||}}
+f_\ell(G''_z-G'_z) \Bigg) \Bigg]. 
+\end{split}
+\end{equation*}
+\end{frame}
+
+\begin{frame}
+\hypertarget{app-shgyield}{}
+\frametitle{SHGYield.py}
+\centering
+\begin{figure}
+\includegraphics[width=\textwidth]{code-shgyield}
+\end{figure}
+https://github.com/roguephysicist/SHGYield
 \end{frame}
 
 \end{document}

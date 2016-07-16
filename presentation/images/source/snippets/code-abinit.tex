@@ -1,0 +1,34 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{fullpage}
+
+\pagestyle{empty}
+% \setmainfont{SourceCodePro-Regular}
+\setmonofont[Scale=0.95]{SourceCodePro-Regular}
+\usemintedstyle{manni}
+\definecolor{bg}{HTML}{F1F3F3}
+\renewcommand{\theFancyVerbLine}{{\ttfamily\arabic{FancyVerbLine}}}
+
+\begin{document}
+
+\begin{minted}[bgcolor=bg,linenos,mathescape]{bash}
+### Dataset 3 : variables for KSS file
+###             used to get the contribution of the non-local
+###             part of the pseudopotential to the 
+###             velocity matrix elements
+### For KSS set nbandkss3 with the same numerical values as nband
+nbandkss2           200
+### For KSS the following variables are a must
+getden2             1
+iscf2              -2
+kptopt2             0
+prtwf2              0
+kssform2            3
+nsym2               1 
+###
+\end{minted}
+
+\end{document}

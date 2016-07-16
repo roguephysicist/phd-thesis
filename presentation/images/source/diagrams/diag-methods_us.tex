@@ -15,20 +15,14 @@
 \tikzstyle{block}=[rectangle,text=white,text width=5.5cm,text centered,rounded corners,minimum height=2cm]
 
 \begin{tikzpicture}[font=\sffamily\large]
-
-% blocks
 \node [block,top color=yellow,bottom color=yellow!80!black] at (0,0) (DFT) 
        {\textbf{DFT}\\ Density Functional Theory};
-
 \node [scale=3] at (5,0) (plus) {$+$};
-
 \node [block,top color=red,bottom color=red!80!black] at (10,0) (GW)
        {\textbf{GW}\\ GW Approximation};
-
 \node [scale=1.2,yshift=10,text width=2cm,align=center] at (plus.north) (scis) {Scissors\\ Correction};
 \node at (scis.west) {\Bigg(};
 \node at (scis.east) {\Bigg)};
-
 \end{tikzpicture}
 
 \end{document}

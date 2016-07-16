@@ -1,0 +1,31 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{fullpage}
+
+\pagestyle{empty}
+% \setmainfont{SourceCodePro-Regular}
+\setmonofont[Scale=0.95]{SourceCodePro-Regular}
+\usemintedstyle{manni}
+\definecolor{bg}{HTML}{F1F3F3}
+\renewcommand{\theFancyVerbLine}{{\ttfamily\arabic{FancyVerbLine}}}
+
+\begin{document}
+
+\begin{minted}[bgcolor=bg,linenos,mathescape]{ruby}
+def shgyield(gamma, riF): # function for the final yield
+    RiF = SCALE * M2TOCM2 * PREFACTOR * (ONEE ** 2) * \
+                    np.absolute((1/nl) * gamma * riF)**2
+    broadened = broad(RiF, SIGMA)
+    return broadened
+
+
+#### Init ####
+PARAM = parse_input(sys.argv[1]) # parses input file
+MODE = str(PARAM['mode']) # establishes mode
+MULTIREF = str(PARAM['multiref']) # if multiple reflections are considered
+\end{minted}
+
+\end{document}

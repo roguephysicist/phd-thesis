@@ -29,7 +29,7 @@ pdfcrop diag-system.pdf diag-system.pdf
 pdfcrop diag-methods_us.pdf diag-methods_us.pdf
 pdfcrop diag-methods_future.pdf diag-methods_future.pdf
 
-plotex fig-mbpt.gp
+plotex figures.gp
 
 mv *.pdf ../
 

@@ -1,0 +1,32 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{fullpage}
+
+\pagestyle{empty}
+% \setmainfont{SourceCodePro-Regular}
+\setmonofont[Scale=0.95]{SourceCodePro-Regular}
+\usemintedstyle{manni}
+\definecolor{bg}{HTML}{F1F3F3}
+\renewcommand{\theFancyVerbLine}{{\ttfamily\arabic{FancyVerbLine}}}
+
+\begin{document}
+
+\begin{minted}[bgcolor=bg,linenos,mathescape]{fortran}
+  do izeta = 1,Nlayers ! number of layers
+!!! selects given planes
+     do jz = -minz-maxz,maxz+minz  ! g-g'
+        if ( jz==0 ) then
+           cf(jz,izeta)=cmplx(( deltab(izeta)+deltaf(izeta) )/Lslab,0.)
+        else
+           Lg = Lslab* jz * b3(3) 
+           cf(jz,izeta)=-ci/Lg * ( exp(ci*Lg*(zeta(izeta)/Lslab + deltaf(izeta)/Lslab)) &
+                -exp(ci*Lg*(zeta(izeta)/Lslab - deltab(izeta)/Lslab)))
+        endif
+     end do
+  end do
+\end{minted}
+
+\end{document}
