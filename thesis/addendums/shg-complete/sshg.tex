@@ -1,4 +1,4 @@
-\documentclass[aps,pra,10pt,amsmath,eqsecnum,notitlepage,letterpaper]{revtex4-1}
+\documentclass[aps,pra,10pt,amsmath,notitlepage,letterpaper]{revtex4-1}
 \usepackage{lmodern}
 \usepackage{graphicx}
 \usepackage{titletoc}
@@ -35,11 +35,11 @@ supplementary derivations for all the work contained in this manuscript.
     \affiliation{Centro de Investigaciones en \'Optica, A.C.,
                  Le\'on 37150, Mexico}
 
-    \author{Yujin Cho}
-    \email{ycho@physics.utexas.edu}
-    \affiliation{Department of Physics,
-                 University of Texas at Austin,
-                 Austin, Texas 78712, USA}
+    % \author{Yujin Cho}
+    % \email{ycho@physics.utexas.edu}
+    % \affiliation{Department of Physics,
+    %              University of Texas at Austin,
+    %              Austin, Texas 78712, USA}
 
     \author{Bernardo S. Mendoza}
     \email{bms@cio.mx}
@@ -520,11 +520,212 @@ beams with respect to the incident field, where the dotted line is perpendicular
 to this beam.}
 \label{fig:MR3layer1w}
 \end{figure}
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{The SSHG Yield}
+
+The magnitude of the radiated field is given by $E(2\omega) =
+\hat{\mathbf{e}}^{\mathrm{F}}\cdot\mathbf{E}_{\ell}(2\omega)$, where
+$\hat{\mathbf{e}}^{\mathrm{F}}$ is the unit vector of the final, $S$ or $P$ SH
+polarization with $\mathrm{F}=S,P$, where $\hat{\mathbf{e}}^S=\hat{\mathbf{s}}$
+and $\hat{\mathbf{e}}^P=\hat{\mathbf{P}}_{v+}$. We expand the rightmost term in
+parenthesis of Eq. \eqref{eq:mr9} as
+\begin{equation}
+\begin{split}
+\hat{\mathbf{P}}_{\ell +} + R^{M}_{p}\hat{\mathbf{P}}_{\ell -}
+&= \frac{\sin\theta_{0}\hat{\mathbf{z}} - W_{\ell}\hat{\boldsymbol{\kappa}}}
+        {N_{\ell}}
+ + R^{M}_{p}
+   \frac{\sin\theta_{0}\hat{\mathbf{z}} + W_{\ell}\hat{\boldsymbol{\kappa}}}
+        {N_{\ell}}\\
+&= \frac{1}{N_{\ell}}
+\left(
+\sin\theta_{0}R^{M+}_{p}\hat{\mathbf{z}}
+- W_{\ell}R^{M-}_{p}\hat{\boldsymbol{\kappa}}
+\right),
+\end{split}
+\end{equation}
+where
+\begin{equation}\label{eq:rm}
+R^{M\pm}_{\mathrm{i}}\equiv 1 \pm R^{M}_{\mathrm{i}}, \quad \mathrm{i}=s,p.
+\end{equation}
+Using Eq. \eqref{eq:mf} we write Eq. \eqref{eq:mr8} as
+\begin{equation}\label{eq:r10}
+E_{\ell}(2\omega) = \frac{2\gamma i\omega}{cW_\ell}
+\hat{\mathbf{e}}^{\mathrm{F}}\cdot\mathbf{H}_{\ell}\cdot
+\boldsymbol{\mathcal{P}}_{\ell}(2\omega) 
+= \frac{2\gamma i\omega}{cW_{v}}
+\mathbf{e}^{\,2\omega,\mathrm{F}}_{\ell}\cdot
+\boldsymbol{\mathcal{P}}_{\ell}(2\omega),
+\end{equation}
+where
+\begin{equation}\label{eq:r12mm}
+\mathbf{e}^{2\omega,\mathrm{F}}_{\ell} =\hat{\mathbf{e}}^{\mathrm{F}}\cdot 
+\Bigg[
+\hat{\mathbf{s}}T_{s}^{v\ell}R^{M+}_{s}\hat{\mathbf{s}} + 
+\hat{\mathbf{P}}_{v+}
+\frac{T^{v\ell}_{p}}
+     {N_{\ell}}
+\left(
+\sin\theta_{0}R^{M+}_{p}\hat{\mathbf{z}}
+- W_{\ell}R^{M-}_{p}\hat{\boldsymbol{\kappa}}
+\right) 
+\Bigg]. 
+\end{equation}  
+Replacing $\mathbf{E}_{\ell}(\omega)\to E_0\mathbf{e}^{\omega}_\ell$,
+in Eq. \eqref{eq:tres}, we obtain that
+\begin{equation}\label{eq:m4}
+\boldsymbol{\mathcal{P}}_{\ell}(2\omega) = 
+\left\{
+\begin{array}{cc}  
+E^{2}_{0}\,
+\boldsymbol{\chi}_{\mathrm{surface}}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
+                                     \mathbf{e}^{\omega,\mathrm{i}}_{\ell}
+& \text{(CGS units)}\\\\
+\epsilon_{0}E^{2}_{0}\,
+\boldsymbol{\chi}_{\mathrm{surface}}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
+                                     \mathbf{e}^{\omega,\mathrm{i}}_{\ell}
+& \text{(MKS units)}\\
+\end{array}
+\right.,
+\end{equation}
+where $\mathbf{e}^{\omega}_{\ell}$ is given by Eq. \eqref{eq:vec1wcomplete},
+and thus Eq. \eqref{eq:r10} reduces to ($W_{v}=\cos\theta_{0}$)
+\begin{equation}\label{eq:mr10}
+E_{\ell}(2\omega) 
+= \frac{2\eta i \omega}{c\cos\theta_{0}}
+\mathbf{e}^{2\omega,\mathrm{F}}_{\ell}\cdot
+\boldsymbol{\chi}_{\mathrm{surface}}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
+                                     \mathbf{e}^{\omega,\mathrm{i}}_{\ell},
+\end{equation}
+where $\eta=2\pi$ in CGS units and $\eta=1/2$ in MKS units. For ease of
+notation, we define
+\begin{equation}\label{eq:mc0}
+\Upsilon_{\mathrm{iF}}
+\equiv 
+\mathbf{e}^{2\omega,\mathrm{F}}_{\ell}\cdot
+\boldsymbol{\chi}_{\mathrm{surface}}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
+                                     \mathbf{e}^{\omega,\mathrm{i}}_{\ell},
+\end{equation}
+where i stands for the incoming polarization of the fundamental electric field
+given by $\hat{\mathbf{e}}^{\mathrm{i}}$ in Eq. \eqref{eq:vec1wcomplete}, and F
+for the outgoing polarization of the SH electric field given by
+$\hat{\mathbf{e}}^{\mathrm{F}}$ in Eq. \eqref{eq:r12mm}. I purposely omitted the
+full $\boldsymbol{\chi}(-2\omega;\omega,\omega)$ notation, and will do so from
+this point on.
+
+From Eqs. \eqref{eq:rintensities} and \eqref{eq:intensity} we obtain that in
+CGS units ($\eta=2\pi$), 
+\begin{equation}\label{eq:r01}
+\begin{split}
+\vert E(2\omega)\vert^{2} &=
+\vert E_{0}\vert^{4}\frac{16\pi^{2}\omega^{2}}{c^{2}W^2_{v}}
+\vert\Upsilon_{\mathrm{iF}}\vert^{2}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frac{c}{2\pi}\vert\sqrt{N_{v}}E(2\omega)\vert^{2} &=
+\frac{32\pi^{3}\omega^{2}}{c^{3}\cos^2\theta_{0}}
+\left\vert\frac{\sqrt{N_{v}}}{n^{2}_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2} 
+\left(\frac{c}{2\pi}\vert\sqrt{n_{\ell}}E_{0}\vert^{2}\right)^{2}\\ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+I(2\omega) &=
+\frac{32\pi^{3}\omega^{2}}{c^{3}\cos^2\theta_{0}}
+\left\vert\frac{\sqrt{N_{v}}}{n^{2}_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2}
+I^{2}(\omega)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mathcal{R}_{\mathrm{iF}}(2\omega) &=
+\frac{32\pi^{3}\omega^{2}}{c^{3}\cos^2\theta_{0}}
+\left\vert\frac{1}{n_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2},
+\end{split} 
+\end{equation} 
+and in MKS units ($\eta=1/2$),
+\begin{equation}\label{r01m}
+\begin{split}
+\vert E(2\omega)\vert^{2} &=
+\vert E_{0}\vert^{4}\frac{\omega^{2}}{c^{2}W^{2}_{v}}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2\epsilon_{0}c|\sqrt{N_{v}}E(2\omega)|^{2} &=
+\frac{2\epsilon_{0}\omega^{2}}{c\cos^{2}\theta_{0}}
+\left\vert\frac{\sqrt{N_{v}}}{n^{2}_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2} 
+\frac{1}{4\epsilon^{2}_0c^{2}}
+\left(2\epsilon_{0}c\vert\sqrt{n_{\ell}}E_{0}\vert^{2}\right)^{2}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+I(2\omega) &= 
+\frac{\omega^{2}}{2\epsilon_{0}c^3\cos^{2}\theta_{0}}
+\left\vert\frac{\sqrt{N_{v}}}{n^{2}_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2}
+I^{2}(\omega)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mathcal{R}_{\mathrm{iF}}(2\omega) &=
+\frac{\omega^{2}}{2\epsilon_{0}c^3\cos^{2}\theta_{0}}
+\left\vert  \frac{1}{n_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2}.
+\end{split}
+\end{equation}
+Finally, we condense these results and establish the SSHG yield as
+\begin{equation}\label{eq:mc6}
+\mathcal{R}_{\mathrm{iF}}(2\omega) 
+\left\{
+\begin{array}{ r c } 
+\frac{32\pi^{3}\omega^{2}}{c^{3}\cos^{2}\theta_{0}}
+\left\vert\frac{1}{n_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2} 
+& \text{(CGS units)} \\\\
+\frac{\omega^{2}}{2\epsilon_{0}c^3\cos^{2}\theta_{0}}
+\left\vert\frac{1}{n_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2} 
+& \text{(MKS units)} 
+\end{array}
+\right.,
+\end{equation}
+where $N_{v}=1$ and $W_{v}=\cos\theta_{0}$.
+$\boldsymbol{\chi}_{\mathrm{surface}}$ is given in m$^{2}$/V in the MKS unit
+system, since it is a surface second order nonlinear susceptibility, and
+$\mathcal{R}_{\mathrm{iF}}$ is given in m$^2$/W.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Generalized Polarization Considerations}
+
+Ultimately, the crux of the matter is how to calculate Eq. \eqref{eq:mc0}.
+Fortunately, this term can be expressed in a highly elegant and flexible manner
+that greatly simplifies the required algebra. We will evaluate each potential
+case and derive the necessary expressions.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Generalized Polarization Considerations for the Linear Field}
+\subsection{\texorpdfstring{$2\omega$}{2w} Terms for \emph{P} and \emph{S}
+Linear Polarization}
+
+By substituting Eqs. \eqref{eq:mc1} and \eqref{eq:mmc2} into Eq.
+\eqref{eq:r12mm}, we obtain
+\begin{equation}\label{eq:e2wpmr}
+\mathbf{e}^{2\omega,P}_{\ell} =
+\frac{T^{v\ell}_{p}}{N_{\ell}}
+\big(
+  \sin\theta_{0}R^{M+}_{p}\hat{\mathbf{z}}
+- W_{\ell}R^{M-}_{p}\cos\phi\hat{\mathbf{x}}
+- W_{\ell}R^{M-}_{p}\sin\phi\hat{\mathbf{y}}
+\big),
+\end{equation}
+for $P$ $(\hat{\mathbf{e}}^{\mathrm{F}} = \hat{\mathbf{P}}_{v+})$ outgoing
+polarization, and
+\begin{equation}\label{eq:e2wsmr}
+\mathbf{e}^{2\omega,S}_{\ell} =
+T_{s}^{v\ell}R^{M+}_{s}
+\left(
+- \sin\phi\hat{\mathbf{x}}
++ \cos\phi\hat{\mathbf{y}}
+\right).
+\end{equation}
+for $S$ $(\hat{\mathbf{e}}^{\mathrm{F}}=\hat{\mathbf{s}})$ outgoing
+polarization.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{\texorpdfstring{$1\omega$}{1w} Terms for for Elliptical
+Polarization}
 
 Up until this juncture, we have not assumed any given polarization for the
 incoming fields, other than that they must be in some combination of $p$ or $s$
@@ -553,7 +754,7 @@ t^{v\ell}_{s} r^{M+}_{s}
 \right)
 \Bigg].
 \end{equation}
-The next section will make it clear that what we really need is
+Eq. \eqref{eq:mc0} makes it clear that what we really need is
 $\mathbf{e}^{\omega}_{\ell}\mathbf{e}^{\omega}_{\ell}$. Multiplying these terms
 out leads to the following expression,
 \begin{equation}
@@ -661,237 +862,40 @@ r^{M-}_{p}w_{\ell}\cos 2\phi
 \end{pmatrix}.
 \end{split}
 \end{equation}
-We list some common polarization cases in Table \ref{tab:polcases}, and their
-respective values for $\gamma$ and $\tau$.
+Now that Eq. \eqref{eq:Rcomplete} can encompass all possible polarization
+choices, we can obtain some common polarization cases using some specific values
+for $\gamma$ and $\tau$ featured in Table \ref{tab:polcases}.
 
-\begin{table}\label{tab:polcases}
+\begin{table}
 \caption{Values for $\gamma$ and $\tau$ (see Eq. \eqref{eq:generalpol}) that
-yield common polarization cases.}
-\begin{tabular}{ l | c c }
-% \hline
-Polarization      & $\gamma$  & $\tau$  \\
+yield common polarization cases.\label{tab:polcases}}
+\begin{tabular}{ | l l | c c | }
 \hline
-Linear -- $p$     & 0         & 0       \\
-Linear -- $s$     & $\pi/2$   & 0       \\
-Linear -- equal   & $\pi/4$   & 0       \\
-Circular -- left  & $\pi/4$   & $-\pi/2$ \\
-Circular -- right & $\pi/4$   & $+\pi/2$\\
-Elliptical        & Any       & Any
+\multicolumn{2}{|c|}{Type}                    & $\gamma$  & $\tau$    \\
+\hline
+Linear        & $p$ ($\hat{\mathbf{p}}_{v-}$) & 0         & 0         \\
+Linear        & $s$ ($\hat{\mathbf{s}}$)      & $\pi/2$   & 0         \\
+Linear        & $p$ + $s$ & $\pi/4$           & 0         \\
+\hline
+Circular      & Left                          & $\pi/4$   & $-\pi/2$  \\
+Circular      & Right                         & $\pi/4$   & $+\pi/2$  \\
+\hline
+Elliptical    &                               & Any       & Any       \\
+\hline
 \end{tabular}
 \end{table}
 
-So, we have that Eq. \eqref{eq:Rcomplete} can encompass all possible
-polarization choices. We should be able to easily recover the expressions for
-$p$ and $s$ linear polarization. Plugging in the values for $\gamma$ and $\tau$ featured in Table \ref{tab:polcases}, we have that
-
-
-
-\begin{equation}\label{eq:mcvep}
-\mathbf{e}^{\omega,p}_{\ell}=\frac{t^{v\ell}_{p}}{n_{\ell}}
-\left( 
-  r^{M+}_{p}\sin\theta_{0}\hat{\mathbf{z}}
-+ r^{M-}_{p}w_{\ell}\hat{\boldsymbol{\kappa}}
-\right),
-\end{equation} 
-for $p$-input polarization with
-$\hat{\mathbf{e}}^{\mathrm{i}}=\hat{\mathbf{p}}_{v-}$, and
-\begin{equation}\label{eq:mcves}
-\mathbf{e}^{\omega,s}_\ell=t^{v\ell}_{s}r^{M+}_{s}\hat{\mathbf{s}},
-\end{equation}
-for $s$-input polarization with
-$\hat{\mathbf{e}}^{\mathrm{i}}=\hat{\mathbf{s}}$, 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{The SSHG Yield}
+\subsection{\texorpdfstring{$1\omega$}{1w} Terms for for \emph{p} and \emph{s}
+Linear Polarization}
 
-The magnitude of the radiated field is given by $E(2\omega) =
-\hat{\mathbf{e}}^{\mathrm{F}}\cdot\mathbf{E}_{\ell}(2\omega)$, where
-$\hat{\mathbf{e}}^{\mathrm{F}}$ is the unit vector of the final, $S$ or $P$ SH
-polarization with $\mathrm{F}=S,P$, where $\hat{\mathbf{e}}^S=\hat{\mathbf{s}}$
-and $\hat{\mathbf{e}}^P=\hat{\mathbf{P}}_{v+}$. We expand the rightmost term in
-parenthesis of Eq. \eqref{eq:mr9} as
-\begin{equation}
-\begin{split}
-\hat{\mathbf{P}}_{\ell +} + R^{M}_{p}\hat{\mathbf{P}}_{\ell -}
-&= \frac{\sin\theta_{0}\hat{\mathbf{z}} - W_{\ell}\hat{\boldsymbol{\kappa}}}
-        {N_{\ell}}
- + R^{M}_{p}
-   \frac{\sin\theta_{0}\hat{\mathbf{z}} + W_{\ell}\hat{\boldsymbol{\kappa}}}
-        {N_{\ell}}\\
-&= \frac{1}{N_{\ell}}
-\left(
-\sin\theta_{0}R^{M+}_{p}\hat{\mathbf{z}}
-- W_{\ell}R^{M-}_{p}\hat{\boldsymbol{\kappa}}
-\right),
-\end{split}
-\end{equation}
-where
-\begin{equation}\label{eq:rm}
-R^{M\pm}_{\mathrm{i}}\equiv 1 \pm R^{M}_{\mathrm{i}}, \quad \mathrm{i}=s,p.
-\end{equation}
-Using Eq. \eqref{eq:mf} we write Eq. \eqref{eq:mr8} as
-\begin{equation}\label{eq:r10}
-E_{\ell}(2\omega) = \frac{2\gamma i\omega}{cW_\ell}
-\hat{\mathbf{e}}^{\mathrm{F}}\cdot\mathbf{H}_{\ell}\cdot
-\boldsymbol{\mathcal{P}}_{\ell}(2\omega) 
-= \frac{2\gamma i\omega}{cW_{v}}
-\mathbf{e}^{\,2\omega,\mathrm{F}}_{\ell}\cdot
-\boldsymbol{\mathcal{P}}_{\ell}(2\omega),
-\end{equation}
-where
-\begin{equation}\label{eq:r12mm}
-\mathbf{e}^{2\omega,\mathrm{F}}_{\ell} =\hat{\mathbf{e}}^{\mathrm{F}}\cdot 
-\Bigg[
-\hat{\mathbf{s}}T_{s}^{v\ell}R^{M+}_{s}\hat{\mathbf{s}} + 
-\hat{\mathbf{P}}_{v+}
-\frac{T^{v\ell}_{p}}
-     {N_{\ell}}
-\left(
-\sin\theta_{0}R^{M+}_{p}\hat{\mathbf{z}}
-- W_{\ell}R^{M-}_{p}\hat{\boldsymbol{\kappa}}
-\right) 
-\Bigg]. 
-\end{equation}  
-Replacing $\mathbf{E}_{\ell}(\omega)\to E_0\mathbf{e}^{\omega,\mathrm{i}}_\ell$,
-in Eq. \eqref{eq:tres}, we obtain that
-\begin{equation}\label{eq:m4}
-\boldsymbol{\mathcal{P}}_{\ell}(2\omega) = 
-\left\{
-\begin{array}{cc}  
-E^{2}_{0}\,
-\boldsymbol{\chi}_{\mathrm{surface}}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
-                  \mathbf{e}^{\omega,\mathrm{i}}_{\ell}
-& \text{(CGS units)}\\\\
-\epsilon_{0}E^{2}_{0}\,
-\boldsymbol{\chi}_{\mathrm{surface}}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
-                  \mathbf{e}^{\omega,\mathrm{i}}_{\ell}
-& \text{(MKS units)}\\
-\end{array}
-\right.,
-\end{equation}
-where $\mathbf{e}^{\omega,\mathrm{i}}_{\ell}$ is given by Eq. \eqref{eq:mcvew2},
-and thus Eq. \eqref{eq:r10} reduces to ($W_{v}=\cos\theta_{0}$)
-\begin{equation}\label{eq:mr10}
-E_{\ell}(2\omega) 
-= \frac{2\eta i \omega}{c\cos\theta_{0}}
-\mathbf{e}^{2\omega,\mathrm{F}}_{\ell}\cdot
-\boldsymbol{\chi}_{\mathrm{surface}}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
-                  \mathbf{e}^{\omega,\mathrm{i}}_{\ell},
-\end{equation}
-where $\eta=2\pi$ in CGS units and $\eta=1/2$ in MKS units. For ease of
-notation, we define
-\begin{align}\label{eq:mc0}
-\Upsilon_{\mathrm{iF}}
-\equiv 
-\mathbf{e}^{2\omega,\mathrm{F}}_{\ell}\cdot
-\boldsymbol{\chi}_{\mathrm{surface}}:\mathbf{e}^{\omega,\mathrm{i}}_{\ell}
-                  \mathbf{e}^{\omega,\mathrm{i}}_{\ell},
-\end{align}
-where i stands for the incoming polarization of the fundamental electric field
-given by $\hat{\mathbf{e}}^{\mathrm{i}}$ in Eq. \eqref{eq:mcvew2}, and F for the
-outgoing polarization of the SH electric field given by
-$\hat{\mathbf{e}}^{\mathrm{F}}$ in Eq. \eqref{eq:r12mm}. I purposely omitted the
-full $\boldsymbol{\chi}(-2\omega;\omega,\omega)$ notation, and will do so from
-this point on.
-
-From Eqs. \eqref{eq:rintensities} and \eqref{eq:intensity} we obtain that in
-CGS units ($\eta=2\pi$), 
-\begin{align}\label{eq:r01}
-\vert E(2\omega)\vert^{2} &=
-\vert E_{0}\vert^{4}\frac{16\pi^{2}\omega^{2}}{c^{2}W^2_{v}}
-\vert\Upsilon_{\mathrm{iF}}\vert^{2}\nonumber\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frac{c}{2\pi}\vert\sqrt{N_{v}}E(2\omega)\vert^{2} &=
-\frac{32\pi^{3}\omega^{2}}{c^{3}\cos^2\theta_{0}}
-\left\vert\frac{\sqrt{N_{v}}}{n^{2}_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2} 
-\left(\frac{c}{2\pi}\vert\sqrt{n_{\ell}}E_{0}\vert^{2}\right)^{2}\nonumber\\ 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-I(2\omega) &=
-\frac{32\pi^{3}\omega^{2}}{c^{3}\cos^2\theta_{0}}
-\left\vert\frac{\sqrt{N_{v}}}{n^{2}_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2}
-I^{2}(\omega)\nonumber\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\mathcal{R}_{\mathrm{iF}}(2\omega) &=
-\frac{32\pi^{3}\omega^{2}}{c^{3}\cos^2\theta_{0}}
-\left\vert\frac{1}{n_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2},
-\end{align} 
-and in MKS units ($\eta=1/2$),
-\begin{align}\label{r01m}
-\vert E(2\omega)\vert^{2} &=
-\vert E_{0}\vert^{4}\frac{\omega^{2}}{c^{2}W^{2}_{v}}\nonumber\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-2\epsilon_{0}c|\sqrt{N_{v}}E(2\omega)|^{2} &=
-\frac{2\epsilon_{0}\omega^{2}}{c\cos^{2}\theta_{0}}
-\left\vert\frac{\sqrt{N_{v}}}{n^{2}_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2} 
-\frac{1}{4\epsilon^{2}_0c^{2}}
-\left(2\epsilon_{0}c\vert\sqrt{n_{\ell}}E_{0}\vert^{2}\right)^{2}\nonumber\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-I(2\omega) &= 
-\frac{\omega^{2}}{2\epsilon_{0}c^3\cos^{2}\theta_{0}}
-\left\vert\frac{\sqrt{N_{v}}}{n^{2}_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2}
-I^{2}(\omega)\nonumber\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\mathcal{R}_{\mathrm{iF}}(2\omega) &=
-\frac{\omega^{2}}{2\epsilon_{0}c^3\cos^{2}\theta_{0}}
-\left\vert  \frac{1}{n_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2}.
-\end{align}
-Finally, we condense these results and establish the SSHG yield as
-\begin{equation}\label{eq:mc6}
-\mathcal{R}_{\mathrm{iF}}(2\omega) 
-\left\{
-\begin{array}{ r c } 
-\frac{32\pi^{3}\omega^{2}}{c^{3}\cos^{2}\theta_{0}}
-\left\vert\frac{1}{n_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2} 
-& \text{(CGS units)} \\\\
-\frac{\omega^{2}}{2\epsilon_{0}c^3\cos^{2}\theta_{0}}
-\left\vert\frac{1}{n_{\ell}}\Upsilon_{\mathrm{iF}}\right\vert^{2} 
-& \text{(MKS units)} 
-\end{array}
-\right.,
-\end{equation}
-where $N_{v}=1$ and $W_{v}=\cos\theta_{0}$.
-$\boldsymbol{\chi}_{\mathrm{surface}}$ is given in m$^{2}$/V in the MKS unit
-system, since it is a surface second order nonlinear susceptibility, and
-$\mathcal{R}_{\mathrm{iF}}$ is given in m$^2$/W.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{\texorpdfstring{$\mathcal{R}_{\mathrm{iF}}$}{R} for Different
-Polarization Cases}\label{sec:rcases}
-
-We now have everything we need to derive explicit expressions for
-$\mathcal{R}_{\mathrm{iF}}$, Eq. \eqref{eq:mc6}, for the most commonly used
-polarizations of incoming and outgoing fields (iF=$pP$, $pS$, $sP$, and $sS$).
-For this, we must expand $\Upsilon_{\mathrm{iF}}$ from Eq. \eqref{eq:mc0} for
-each case. By substituting Eqs. \eqref{eq:mc1} and \eqref{eq:mmc2} into Eq.
-\eqref{eq:r12mm}, we obtain
-\begin{equation}\label{eq:e2wpmr}
-\mathbf{e}^{2\omega,P}_{\ell} =
-\frac{T^{v\ell}_{p}}{N_{\ell}}
-\big(
-  \sin\theta_{0}R^{M+}_{p}\hat{\mathbf{z}}
-- W_{\ell}R^{M-}_{p}\cos\phi\hat{\mathbf{x}}
-- W_{\ell}R^{M-}_{p}\sin\phi\hat{\mathbf{y}}
-\big),
-\end{equation}
-for $P$ $(\hat{\mathbf{e}}^{\mathrm{F}} = \hat{\mathbf{P}}_{v+})$ outgoing
-polarization, and
-\begin{equation}\label{eq:e2wsmr}
-\mathbf{e}^{2\omega,S}_{\ell} =
-T_{s}^{v\ell}R^{M+}_{s}
-\left(
-- \sin\phi\hat{\mathbf{x}}
-+ \cos\phi\hat{\mathbf{y}}
-\right).
-\end{equation}
-for $S$ $(\hat{\mathbf{e}}^{\mathrm{F}}=\hat{\mathbf{s}})$ outgoing
-polarization.
-
-Following a similar procedure, we use Eqs. \eqref{eq:mc1} and \eqref{eq:mmc2}
-with Eq. \eqref{eq:mcvep}, and obtain
+Given that the terms for $1\omega$ are now presented for the most general
+polarization case, we can easily recover the expressions for $p$ and $s$ linear
+polarization by plugging in the appropriate values for $\gamma$ and $\tau$
+(featured in Table \ref{tab:polcases}) into Eq. \eqref{eq:Rcomplete}. With
+$\gamma = 0$ and $\tau = 0$ we obtain
 \begin{equation}\label{eq:ewewpmr}
 \begin{split}
 \mathbf{e}^{\omega,\mathrm{p}}_{\ell}\mathbf{e}^{\omega,\mathrm{p}}_{\ell} =
@@ -912,8 +916,9 @@ with Eq. \eqref{eq:mcvep}, and obtain
 \bigg),
 \end{split}
 \end{equation}
-for $p$ incoming polarization $(\hat{\mathbf{e}}^{\mathrm{i}} =
-\hat{\mathbf{p}}_{v-})$, and with Eq. \eqref{eq:mcves},
+for $p$ incoming polarization (equivalent to using
+$\hat{\mathbf{e}}^{\mathrm{i}} = \hat{\mathbf{p}}_{v-}$ in Eq.
+\eqref{eq:vec1wcomplete}), and with $\gamma = \pi/2$ and $\tau = 0$ we obtain
 \begin{equation}\label{eq:ewewsmr}
 \mathbf{e}^{\omega,\mathrm{s}}_{\ell}\mathbf{e}^{\omega,\mathrm{s}}_{\ell}
 = \left(t^{v\ell}_{s}r^{M+}_{s}\right)^{2}
@@ -923,8 +928,21 @@ for $p$ incoming polarization $(\hat{\mathbf{e}}^{\mathrm{i}} =
  - 2\sin\phi\cos\phi\hat{\mathbf{x}}\hat{\mathbf{y}}
 \big).
 \end{equation}
-for $s$ incoming polarization $(\hat{\mathbf{e}}^{\mathrm{i}} =
-\hat{\mathbf{s}})$.
+for $s$ incoming polarization (equivalent to using
+$\hat{\mathbf{e}}^{\mathrm{i}} = \hat{\mathbf{s}}$ in Eq.
+\eqref{eq:vec1wcomplete}).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\texorpdfstring{$\mathcal{R}_{\mathrm{iF}}$}{R} for Different
+Polarization Cases}\label{sec:rcases}
+
+We now have everything we need to derive explicit expressions for
+$\mathcal{R}_{\mathrm{iF}}$, Eq. \eqref{eq:mc6}, for the any polarization combination of incoming and outgoing fields. Particularly, the four different combinations of linear polarization (iF=$pP$, $pS$, $sP$, and $sS$) can be easily recovered from this treatment.
+For this, we must expand $\Upsilon_{\mathrm{iF}}$ from Eq. \eqref{eq:mc0} for
+each case.
 
 We summarize the combination of equations needed to derive the expressions for
 all four polarization cases of $\mathcal{R}_{\mathrm{iF}}$ in Table
@@ -937,13 +955,11 @@ as
 \begin{equation}\label{eq:mc25}
 \Upsilon_{\mathrm{iF}} = \Gamma_{\mathrm{iF}}\,r_{\mathrm{iF}},
 \end{equation}
-and omit the ``surface''subscript for the $\chi^{\mathrm{abc}}$ components. A
-full, step-by-step derivation for all of these expressions can be found in
-Appendix \ref{app:sshg_explicit_expressions_rif}, with and without the effects
-of multiple reflections. The avid reader should refer to that chapter if
-interested in deriving any of the expressions listed below.
+and omit the ``surface''subscript for the $\chi^{\mathrm{abc}}$ components. The
+avid reader should refer to Ref. \cite{andersonthesis} if interested in
+reviewing the step-by-step derivation of the expressions listed below.
 
-\begin{table}[t]
+\begin{table}[b]
 \caption{(Color online) Polarization unit vectors for
 $\hat{\mathbf{e}}^{\mathrm{F}}$ and $\hat{\mathbf{e}}^{\mathrm{i}}$, and
 equations describing $\mathbf{e}^{2\omega,\mathrm{F}}_{\ell}$ and
@@ -1303,37 +1319,6 @@ nonlinear quadrupolar contribution is not considered here.\cite{sipePRB87}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Some Scenarios of Interest}\label{sec:scenarios}
-
-In this section we present five different scenarios for placing the nonlinear
-polarization $\boldsymbol{\mathcal{P}}(2\omega)$ and the fundamental electric
-field $\mathbf{E}(\omega)$, which are alternatives to the three-layer model
-presented above. In what follows, we confine ourselves only to the (111) surface
-and the $p$-in $P$-out combination polarizations. This is the case where the
-proposed scenarios differ the most as the SSHG yield depends on all the finite
-$\chi^{\mathrm{abc}}$ components for this surface. However, the other $pS$,
-$sP$, and $sS$ polarization cases, or the (110) or (001) surfaces could be
-worked out along the same lines described below. For all the scenarios we omit
-the multiple SH reflections by taking $R^{M\pm}_{p}\to 1\pm R^{\ell b}_{p}$ (Eq.
-\eqref{eq:rm}) and the linear multiple reflections by taking $r^{M\pm}_{p}\to
-1\pm r^{\ell b}_{p}$ (Eq. \eqref{eq:mvc}). Using the expressions in Eq.
-\eqref{eq:mf}, we obtain the following useful relationships
-\begin{equation}\label{eq:mvc89}
-\begin{split}
-r^{M+}_{p}&\to\frac{n_{b}}{n_{\ell}}t^{\ell b}_{p}\\
-r^{M-}_{p}&\to\frac{n_{\ell}}{n_{b}}\frac{w_{b}}{w_{\ell}}t^{\ell b}_{p},
-\end{split}
-\end{equation}
-which will come in handy for expressing $\Gamma_{pP}$ and $r^{(111)}_{pP}$ in
-the forms presented below. Recall that these expressions are valid for the
-$2\omega$ terms by simply capitalizing the relevant quantities as explained in
-Sec. \ref{sec:3layersshg}. We summarize these scenarios in Table
-\ref{tab:models} for quick reference.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Conclusions}
 
 In this manuscript, we derived the complete expressions for the SSHG radiation
@@ -1347,11 +1332,6 @@ and (100) cases.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% \appendix
-% \input{../../content/appendices/sshg-explicit_expressions_rif}
 
 
 \bibliographystyle{unsrt}
