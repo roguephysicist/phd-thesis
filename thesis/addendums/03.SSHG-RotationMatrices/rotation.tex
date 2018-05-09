@@ -1,0 +1,96 @@
+\documentclass[aps,prb,10pt,letterpaper,notitlepage]{revtex4-1}
+\usepackage{amsmath}
+\usepackage{fullpage}
+
+% \usepackage[colorlinks=true]{hyperref}
+
+\begin{document}
+
+\title{On rotating $\boldsymbol{\chi}(-2\omega;\omega,\omega)$}
+\author{Sean M. Anderson}
+\email{sma@cio.mx}
+\affiliation{Centro de Investigaciones en \'Optica, A.C., Le\'on 37150, Mexico}
+\date{\today}
+
+\maketitle
+
+To take the components of $\boldsymbol{\chi}(-2\omega;\omega,\omega)$ from the
+crystallographic frame to the lab frame, we can simply apply a standard
+rotational matrix,
+\begin{equation}
+R =
+\begin{pmatrix}
+R_{Ii} & R_{Ij} & R_{Ik} \\
+R_{Ji} & R_{Jj} & R_{Jk} \\
+R_{Ki} & R_{Kj} & R_{Kk} \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+\sin\phi & -\cos\phi & 0 \\
+\cos\phi &  \sin\phi & 0 \\
+    0    &      0    & 1
+\end{pmatrix},
+\end{equation}
+such that
+\begin{equation}
+\chi^{IJK} = \sum_{ijk}R_{Ii}R_{Jj}R_{Kk}\chi^{ijk},
+\end{equation}
+where $I$, $J$, and $K$ ($i$, $j$, $k$) cycle through $X$, $Y$, or $Z$ ($x$,
+$y$, $z$). Thus, our $\chi^{\mathrm{abc}}$ components in the original
+coordinates are
+\begin{equation}
+\boldsymbol{\chi} = 
+\left( 
+\begin{array}{c@{}}
+\left(\begin{array}{c c c}
+\chi^{xxx} & \chi^{xxy} & \chi^{xxz} \\
+\chi^{xyx} & \chi^{xyy} & \chi^{xyz} \\
+\chi^{xzx} & \chi^{xzy} & \chi^{xzz} 
+\end{array}\right)\\[20pt]
+\left(\begin{array}{c c c}
+\chi^{yxx} & \chi^{yxy} & \chi^{yxz} \\
+\chi^{yyx} & \chi^{yyy} & \chi^{yyz} \\
+\chi^{yzx} & \chi^{yzy} & \chi^{yzz} 
+\end{array}\right)\\[20pt]
+\left(\begin{array}{c c c}
+\chi^{zxx} & \chi^{zxy} & \chi^{zxz} \\
+\chi^{zyx} & \chi^{zyy} & \chi^{zyz} \\
+\chi^{zzx} & \chi^{zzy} & \chi^{zzz} 
+\end{array}\right)
+\end{array}\right)
+\end{equation}
+
+\begin{equation}
+\boldsymbol{\chi} =
+\left(
+\begin{array}{c c c c c c c c c c c}
+\chi^{xxx}& \chi^{xyy}& \chi^{xzz}& |& \chi^{xyz}& \chi^{xxz}& \chi^{xxy}& |& \chi^{xzy}& \chi^{xzx}& \chi^{xyx} \\[3pt]
+\chi^{yxx}& \chi^{yyy}& \chi^{yzz}& |& \chi^{yyz}& \chi^{yxz}& \chi^{yxy}& |& \chi^{yzy}& \chi^{yzx}& \chi^{yyx} \\[3pt]
+\chi^{zxx}& \chi^{zyy}& \chi^{zzz}& |& \chi^{zyz}& \chi^{zxz}& \chi^{zxy}& |& \chi^{zzy}& \chi^{zzx}& \chi^{zyx}
+\end{array}
+\right)
+,
+\end{equation}
+
+\begin{equation}
+R\boldsymbol{\chi} =
+\begin{pmatrix}
+\sin\phi & -\cos\phi & 0 \\
+\cos\phi &  \sin\phi & 0 \\
+    0    &      0    & 1
+\end{pmatrix}
+\begin{pmatrix}
+\chi^{xxx} & \chi^{xxy} & \chi^{xxz} \\
+\chi^{xyx} & \chi^{xyy} & \chi^{xyz} \\
+\chi^{xzx} & \chi^{xzy} & \chi^{xzz} 
+\end{pmatrix}
+=
+\begin{pmatrix}
+\sin\phi\chi^{xxx} - \cos\phi\chi^{xyx} & \sin\phi\chi^{xxy} - \cos\phi\chi^{xyy} & \sin\phi\chi^{xxz} - \cos\phi\chi^{xyz}\\
+\cos\phi\chi^{xxx} + \sin\phi\chi^{xyx} & \cos\phi\chi^{xxy} + \sin\phi\chi^{xyy} & \cos\phi\chi^{xxz} + \sin\phi\chi^{xyz}\\
+\chi^{xzx} & \chi^{xzy} & \chi^{xzz}  
+\end{pmatrix}
+\end{equation}
+
+
+\end{document}
