@@ -33,7 +33,7 @@ Let us first consider the case of a bulk material, that is conformed entirely of
 a supercell with no vacuum region. A unit cell is repeated indefinitely in every
 direction, thus creating a three-dimensional reproduction of an infinite
 material. From Fig. \ref{fig:bulk}, we can see that the volume of each unit cell
-is $\Omega = L^{3}$. We calculate $\boldsymbol{\chi}(-2\omega;\omega,\omega)$
+is $V = L^{3}$. We calculate $\boldsymbol{\chi}(-2\omega;\omega,\omega)$
 using the TINIBA \cite{tiniba} software suite; for ease of notation,
 $\boldsymbol{\chi}(-2\omega;\omega,\omega) = \boldsymbol{\chi}_{T}$ ($T$ for
 TINIBA).
@@ -74,7 +74,7 @@ region between each repeat.}
 \end{figure}
 
 For the bulk calculation, $\boldsymbol{\chi}_{T}$ must be normalized over the
-volume of the unit cell (i.e. $1/\Omega$); this normalization happens
+volume of the unit cell (i.e. $1/V$); this normalization happens
 automatically in TINIBA. Thus, no further action is necessary and the
 susceptibility can be used as is. Finally, we establish that
 $\boldsymbol{\chi}_{T} = \boldsymbol{\chi}_{b}$, where $\boldsymbol{\chi}_{b}$
@@ -96,7 +96,7 @@ material with finite height; this necessarily implies that there are regions of
 empty space between each repeat. The slab has both upper and lower surfaces, and
 we can extract the response for each by use of the cut function.
 
-\begin{figure}[h]
+\begin{figure}[t]
 \centering
 \subcaptionbox{Repeated supercells for a surface material. Each individual
 supercell is repeated in every direction, just like the bulk case. Vacuum
@@ -174,14 +174,65 @@ calculating $\boldsymbol{\chi}(-2\omega;\omega,\omega)$ for surfaces.}
 \label{fig:surface}
 \end{figure}
 
-Fig. \ref{fig:sf_supercell} depicts a representative supercell for a surface material. As mentioned above, it is necessary to include the cut-function to extract the surface response. For instance, a centrosymmetric material will always yield $\boldsymbol{\chi}(-2\omega;\omega,\omega) = 0$, except at the surface where the symmetry is broken. If we calculate the response from the entire slab, the contribution from the bottom half will cancel out the top half; thus, we use the cut function to only calculate over the desired region. For most surfaces, we can simply 
+Fig. \ref{fig:sf_supercell} depicts a representative supercell for a surface
+material. As mentioned above, it is necessary to include the cut-function to
+extract the surface response. For instance, a centrosymmetric material will
+always yield $\boldsymbol{\chi}(-2\omega;\omega,\omega) = 0$, except at the
+surface where the symmetry is broken. If we calculate the response from the
+entire slab, the contribution from the bottom half will cancel out the top half;
+thus, we use the cut function to only calculate over the desired region.
+Therefore, the surface calculation is simply done over the \emph{half-slab}
+region, with is the blue shaded region in Fig. \ref{fig:surface}. Therefore, the
+proper normalization is as follows,
+\begin{align}\label{m1}
+\frac{L}{L_{s}}\left(\frac{1}{V}\right) =
+\frac{L}{L_{s}}\left(\frac{1}{AL}\right) =
+\frac{1}{AL_{s}}\equiv\frac{1}{V_{s}},
+\end{align}
+where $L_{s}$ is the thickness of the material slab without the vacuum layer,
+and $V_{s}$ is the volume of the material slab.
 
-The blue shaded region represents the \emph{half-slab}
+These same considerations apply for the linear response, $\chi(\omega)$. In Fig.
+\ref{chil}, we show Im[$\chi(\omega)$] for the \verb=si_as_6= slab where three
+different values of the supercell thickness ($L$) were chosen. As the response
+is normalized with the volume $V = AL$ of the supercell, the intensity of
+Im[$\chi(\omega)$] decreases as $L$ is increased. When the results are
+multiplied by $L$, and since the area $A$ of the unit cell is fixed, we see that
+the results converge nicely.
+
+\textcolor{red}{WARNING}: Note that if you compare the full- vs. the half-slab
+responses, there will be a factor of exactly 2 between them once the full-slab
+is properly normalized as explained above. Therefore,
+$\chi_{\mathrm{full-slab}}(\omega) = 2 \chi_{\mathrm{half-slab}}(\omega)$.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.6]{plots/chi-layer}
+\end{center}
+\caption{Im[$\chi(\omega)$] for three different supercells thickness $L$.
+Top-left panel: without the normalization; bottom-left panel: multiplied by $L$;
+and top-right panel: scaled according to Eq. \eqref{m1}. }
+\label{chil}
+\end{figure}
+
+Therefore, for a surface calculation, $\boldsymbol{\chi}_{T}$ must be normalized
+over the volume of the unit cell (i.e. $1/V$) and multiplied by $L$; this
+normalization happens automatically in TINIBA in the \verb=all_response.sh=
+shell for responses \verb=21= and \verb=24=. Thus, no further action is
+necessary and the susceptibility can be used as is. Finally, we establish that
+$\boldsymbol{\chi}_{T} = \boldsymbol{\chi}_{s}$, where $\boldsymbol{\chi}_{s}$
+is the desired susceptibility for our surface system. Calculated in this
+fashion, $\boldsymbol{\chi}_{s}$ has the appropriate MKS units of m$^{2}$/V.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Third Case: Two-dimensional Materials}
+
+Lastly, let us consider the case for two-dimensional materials, as depicted in
+Fig. \ref{fig:2d}. These types of materials are essentially a combination of the
+two previous cases; namely, they must have a vacuum region included, but do not
+require restricting the calculated response to the just the half-slab region.
 
 \begin{figure}[t]
 \centering
@@ -256,6 +307,17 @@ $\boldsymbol{\chi}(-2\omega;\omega,\omega)$ for 2D materials is very similar to
 the surface case.}
 \label{fig:2d}
 \end{figure}
+
+Since we don't need to calculate for the half-slab, we can simply effectuate a
+bulk calculation. However, as mentioned above, this does not include the
+appropriate normalization to compensate for the inclusion of the vacuum region.
+Therefore, $\boldsymbol{\chi}_{T}$ must be normalized over the volume of the
+unit cell (i.e. $1/V$) and multiplied by $L$. Since we carry out the bulk
+calculation and $\boldsymbol{\chi}_{T} = \boldsymbol{\chi}_{b}$, we must
+multiply by $L$ manually, since this normalization \emph{does not} happen
+automatically in TINIBA. This is a necessary step in order to obtain the correct
+susceptibility. Calculated in this fashion, $\boldsymbol{\chi}_{\mathrm{2D}}$
+has the appropriate MKS units of m$^{2}$/V.
 
 \bibliographystyle{unsrt}
 \bibliography{/Users/sma/Dropbox/Docs/academics/master}
