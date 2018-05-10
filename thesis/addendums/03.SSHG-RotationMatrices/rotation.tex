@@ -7,12 +7,27 @@
 
 \begin{document}
 
-\title{Considerations for arbitrary rotation on
+\title{Expressions for arbitrary rotation on
 \texorpdfstring{$\boldsymbol{\chi}(-2\omega;\omega,\omega)$}{X(2w)}}
 \author{Sean M. Anderson}
-\email{sma@cio.mx}
-\affiliation{Centro de Investigaciones en \'Optica, A.C., Le\'on 37150, Mexico}
+    \email{sma@cio.mx}
+    \affiliation{Centro de Investigaciones en \'Optica, A.C., Le\'on 37150,
+    Mexico}
+\author{Yujin Cho}
+    \affiliation{Department of Physics, University of Texas at Austin, Austin,
+    Texas 78712, USA}
+\author{Bernardo S. Mendoza}
+    \affiliation{Centro de Investigaciones en \'Optica, A.C., Le\'on 37150,
+    Mexico}
 \date{\today}
+
+\begin{abstract}
+We develop the explicit expressions for rotating the nonlinear susceptibility
+tensor $\boldsymbol{\chi}(-2\omega;\omega,\omega)$ through any arbitrary angle.
+Each component in the rotated frame of reference is a combination of different
+components from the non-rotated system; setting the angle of rotation to $\pi/2$
+is equivalent to no rotation whatsoever.
+\end{abstract}
 
 \maketitle
 
@@ -38,8 +53,21 @@ such that
 \chi^{IJK} = \sum_{ijk}R_{Ii}R_{Jj}R_{Kk}\chi^{ijk},
 \end{equation*}
 where $I$, $J$, and $K$ ($i$, $j$, $k$) cycle through $X$, $Y$, or $Z$ ($x$,
-$y$, $z$). Thus, our $\chi^{IJK}$ components in terms of the original $ijk$
-coordinate system are
+$y$, $z$). Fig. \ref{fig:axes} depicts this rotation over any arbitrary
+combination of angles $\Theta$ and $\Phi$; however, in this work we will only
+consider a rotation in the $xy$-plane along $\Phi$.
+
+\begin{figure}[b]
+\centering
+\includegraphics[width=0.4\linewidth]{axes}
+\caption{The translation from the non-rotates $xyz$ coordinates to the rotated
+$XYZ$ system. In this work, we will only consider an in-plane rotation of
+$\Phi$.}
+\label{fig:axes}
+\end{figure}
+
+Thus, our $\chi^{IJK}$ components in terms of the original $ijk$ coordinate
+system are
 \begin{equation}\label{eq:xcomps}
 \begin{split}
 \chi^{XXX} 
@@ -188,28 +216,28 @@ in the original coordinates are presented in Fig. \ref{fig:comps}, multiplied by
 the appropriate prefactors from Eq. \eqref{eq:xcomps}. We can see how we recover
 the component in the original coordinates when $\Phi = \pi/2$.
 
-\begin{figure}[b]
+\begin{figure}[t]
 \centering
-\includegraphics[width=0.6\linewidth]{rot/rotxxx.pdf}
+\includegraphics[width=0.4\linewidth]{rot/rotxxx.pdf}
 \caption{$\chi^{XXX}$ for three values of $\Phi$ calculated for a system with
 $C_{3v}$ symmetry.}
 \label{fig:rotxxx}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[b]
     \centering
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{rot/comps15.pdf}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=0.8\textwidth]{rot/comps15.pdf}
         \caption{$\Phi = \pi/12$.}
     \end{subfigure}
     ~ 
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{rot/comps30.pdf}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=0.8\textwidth]{rot/comps30.pdf}
         \caption{$\Phi = \pi/6$.}
     \end{subfigure}
     ~ 
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{rot/comps90.pdf}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=0.8\textwidth]{rot/comps90.pdf}
         \caption{$\Phi = \pi/2$.}
     \end{subfigure}
     \caption{Nonzero components of $\chi^{ijk}$ multiplied by the appropriate
