@@ -30,11 +30,11 @@ for component in ALL_COMPONENTS:
         shg = shgload(value)
         CHI2[component] = shg
 
-ROT = { 'XXX': +  np.sin(PHI)**3              * CHI2['xxx']
-               +  np.sin(PHI)*np.cos(PHI)**2  * CHI2['xyy']
+ROT = { 'XXX': +   np.sin(PHI)**3              * CHI2['xxx']
+               +   np.sin(PHI)*np.cos(PHI)**2  * CHI2['xyy']
                - 2*np.sin(PHI)**2*np.cos(PHI) * CHI2['xxy']
-               -  np.sin(PHI)**2*np.cos(PHI)  * CHI2['yxx']
-               -  np.cos(PHI)**3              * CHI2['yyy'] 
+               -   np.sin(PHI)**2*np.cos(PHI)  * CHI2['yxx']
+               -   np.cos(PHI)**3              * CHI2['yyy'] 
                + 2*np.sin(PHI)*np.cos(PHI)**2 * CHI2['yxy'] }
 
 np.savetxt('out.txt', np.column_stack((freq, ROT['XXX'].real, ROT['XXX'].imag)),
