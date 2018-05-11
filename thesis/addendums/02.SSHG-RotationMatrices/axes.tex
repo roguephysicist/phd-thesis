@@ -47,9 +47,9 @@
 
 %define polar coordinates for some vector
 %TODO: look into using 3d spherical coordinate system
-\pgfmathsetmacro{\rvec}{.8}
-\pgfmathsetmacro{\thetavec}{30}
-\pgfmathsetmacro{\phivec}{60}
+\pgfmathsetmacro{\rvec}{0.0}
+\pgfmathsetmacro{\thetavec}{0}
+\pgfmathsetmacro{\phivec}{30}
 
 %start tikz picture, and use the tdplot_main_coords style to implement the display 
 %coordinate transformation provided by 3dplot
@@ -71,10 +71,10 @@
 %draw the main coordinate system axes
 \draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
 \draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
-\draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+\draw[thick,->] (0,0,0) -- (0,0,0.5) node[anchor=south]{$z=Z$};
 
 %draw a vector from origin to point (P) 
-\draw[-stealth,color=red] (O) -- (P);
+% \draw[-stealth,color=red] (O) -- (P);
 
 %draw projection on xy plane, and a connecting line
 \draw[dashed, color=red] (O) -- (Pxy);
@@ -91,7 +91,7 @@
 \tdplotsetthetaplanecoords{\phivec}
 
 %draw theta arc and label, using rotated coordinate system
-\tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.5}{0}{\thetavec}{anchor=south west}{$\theta$}
+% \tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.5}{0}{\thetavec}{anchor=south west}{$\theta$}
 
 %draw some dashed arcs, demonstrating direct arc drawing
 \draw[dashed,tdplot_rotated_coords] (\rvec,0,0) arc (0:90:\rvec);
@@ -109,7 +109,7 @@
 %use the tdplot_rotated_coords style to work in the rotated, translated coordinate frame
 \draw[thick,tdplot_rotated_coords,->] (0,0,0) -- (.5,0,0) node[anchor=north west]{$X$};
 \draw[thick,tdplot_rotated_coords,->] (0,0,0) -- (0,.5,0) node[anchor=west]{$Y$};
-\draw[thick,tdplot_rotated_coords,->] (0,0,0) -- (0,0,.5) node[anchor=south]{$Z$};
+% \draw[thick,tdplot_rotated_coords,->] (0,0,0) -- (0,0,.5) node[anchor=south]{$Z$};
 
 %WARNING:  coordinates defined by the \coordinate command (eg. (O), (P), etc.)
 %cannot be used in rotated coordinate frames.  Use only literal coordinates.  
@@ -128,7 +128,7 @@
 \tdplotsetrotatedthetaplanecoords{45}
 
 %draw theta arc and label
-\tdplotdrawarc[tdplot_rotated_coords,color=blue]{(0,0,0)}{0.2}{0}{55}{anchor=south west,color=black}{$\Theta$}
+% \tdplotdrawarc[tdplot_rotated_coords,color=blue]{(0,0,0)}{0.2}{0}{55}{anchor=south west,color=black}{$\Theta$}
 
 \end{tikzpicture}
 
