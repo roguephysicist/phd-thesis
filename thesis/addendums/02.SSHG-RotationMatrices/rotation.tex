@@ -43,8 +43,8 @@ R_{Zx} & R_{Zy} & R_{Zz} \\
 \end{pmatrix}
 =
 \begin{pmatrix}
-\sin\Phi & -\cos\Phi & 0 \\
-\cos\Phi &  \sin\Phi & 0 \\
+\sin\gamma & -\cos\gamma & 0 \\
+\cos\gamma &  \sin\gamma & 0 \\
     0    &      0    & 1
 \end{pmatrix},
 \end{equation*}
@@ -54,15 +54,15 @@ such that
 \end{equation*}
 where $I$, $J$, and $K$ ($i$, $j$, $k$) cycle through $X$, $Y$, or $Z$ ($x$,
 $y$, $z$). Fig. \ref{fig:axes} depicts this rotation over any arbitrary
-combination of angles $\Theta$ and $\Phi$; however, in this work we will only
-consider a rotation in the $xy$-plane along $\Phi$.
+combination of angles $\Theta$ and $\gamma$; however, in this work we will only
+consider a rotation in the $xy$-plane along $\gamma$.
 
 \begin{figure}[b]
 \centering
 \includegraphics[width=0.4\linewidth]{axes}
 \caption{The translation from the non-rotates $xyz$ coordinates to the rotated
 $XYZ$ system. In this work, we will only consider an in-plane rotation of
-$\Phi$.}
+$\gamma$.}
 \label{fig:axes}
 \end{figure}
 
@@ -71,127 +71,127 @@ system are
 \begin{equation}\label{eq:xcomps}
 \begin{split}
 \chi^{XXX} 
-&=  \sin^{3}\Phi          \chi^{xxx}
- +  \sin\Phi \cos^{2}\Phi \chi^{xyy}
- - 2\sin^{2}\Phi \cos\Phi \chi^{xxy}\\
-&-  \sin^{2}\Phi \cos\Phi \chi^{yxx}
- -  \cos^{3}\Phi          \chi^{yyy}
- + 2\sin\Phi \cos^{2}\Phi \chi^{yxy},\\[10pt]
+&=  \sin^{3}\gamma          \chi^{xxx}
+ +  \sin\gamma \cos^{2}\gamma \chi^{xyy}
+ - 2\sin^{2}\gamma \cos\gamma \chi^{xxy}\\
+&-  \sin^{2}\gamma \cos\gamma \chi^{yxx}
+ -  \cos^{3}\gamma          \chi^{yyy}
+ + 2\sin\gamma \cos^{2}\gamma \chi^{yxy},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{XYY} 
-&=  \sin\Phi \cos^{2}\Phi \chi^{xxx}
- +  \sin^{3}\Phi          \chi^{xyy}
- + 2\sin^{2}\Phi \cos\Phi \chi^{xxy}\\
-&-  \cos^{3}\Phi          \chi^{yxx}
- -  \sin^{2}\Phi \cos\Phi \chi^{yyy}
- - 2\sin\Phi \cos^{2}\Phi \chi^{yxy},\\[10pt]
+&=  \sin\gamma \cos^{2}\gamma \chi^{xxx}
+ +  \sin^{3}\gamma          \chi^{xyy}
+ + 2\sin^{2}\gamma \cos\gamma \chi^{xxy}\\
+&-  \cos^{3}\gamma          \chi^{yxx}
+ -  \sin^{2}\gamma \cos\gamma \chi^{yyy}
+ - 2\sin\gamma \cos^{2}\gamma \chi^{yxy},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{XZZ} 
-&= \sin\Phi \chi^{xzz}
- - \cos\Phi \chi^{yzz},\\[10pt]
+&= \sin\gamma \chi^{xzz}
+ - \cos\gamma \chi^{yzz},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{XYZ} = \chi^{XZY}
 &=
-   \sin^{2}\Phi      \chi^{xyz}
- + \sin\Phi \cos\Phi \chi^{xxz}
- - \sin\Phi \cos\Phi \chi^{yyz}
- - \cos^{2}\Phi      \chi^{yxz},\\[10pt]
+   \sin^{2}\gamma      \chi^{xyz}
+ + \sin\gamma \cos\gamma \chi^{xxz}
+ - \sin\gamma \cos\gamma \chi^{yyz}
+ - \cos^{2}\gamma      \chi^{yxz},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{XXZ} = \chi^{XZX}
 &=
- - \sin\Phi \cos\Phi \chi^{xyz}
- + \sin^{2}\Phi      \chi^{xxz}
- + \cos^{2}\Phi      \chi^{yyz}
- - \sin\Phi \cos\Phi \chi^{yxz},\\[10pt]
+ - \sin\gamma \cos\gamma \chi^{xyz}
+ + \sin^{2}\gamma      \chi^{xxz}
+ + \cos^{2}\gamma      \chi^{yyz}
+ - \sin\gamma \cos\gamma \chi^{yxz},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{XXY} = \chi^{XYX} 
 &= 
-   \sin^{2}\Phi \cos\Phi \chi^{xxx}
- - \sin^{2}\Phi \cos\Phi \chi^{xyy}
- + (\sin^{3}\Phi - \sin\Phi \cos^{2}\Phi) \chi^{xxy}\\
-&- \sin\Phi \cos^{2}\Phi \chi^{yxx}
- + \sin\Phi \cos^{2}\Phi \chi^{yyy}
- + (\cos^{3}\Phi - \sin^{2}\Phi \cos\Phi) \chi^{yxy},
+   \sin^{2}\gamma \cos\gamma \chi^{xxx}
+ - \sin^{2}\gamma \cos\gamma \chi^{xyy}
+ + (\sin^{3}\gamma - \sin\gamma \cos^{2}\gamma) \chi^{xxy}\\
+&- \sin\gamma \cos^{2}\gamma \chi^{yxx}
+ + \sin\gamma \cos^{2}\gamma \chi^{yyy}
+ + (\cos^{3}\gamma - \sin^{2}\gamma \cos\gamma) \chi^{yxy},
 \end{split}
 \end{equation}
 for the $\chi^{XJK}$ components,
 \begin{equation*}
 \begin{split}
 \chi^{YXX}
-&=  \sin^{2}\Phi \cos\Phi \chi^{xxx}
- +  \cos^{3}\Phi          \chi^{xyy}
- - 2\sin\Phi \cos^{2}\Phi \chi^{xxy}\\
-&+  \sin^{3}\Phi          \chi^{yxx}
- +  \sin\Phi \cos^{2}\Phi \chi^{yyy}
- - 2\sin^{2}\Phi \cos\Phi \chi^{yxy},\\[10pt]
+&=  \sin^{2}\gamma \cos\gamma \chi^{xxx}
+ +  \cos^{3}\gamma          \chi^{xyy}
+ - 2\sin\gamma \cos^{2}\gamma \chi^{xxy}\\
+&+  \sin^{3}\gamma          \chi^{yxx}
+ +  \sin\gamma \cos^{2}\gamma \chi^{yyy}
+ - 2\sin^{2}\gamma \cos\gamma \chi^{yxy},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{YYY}
-&=  \cos^{3}\Phi          \chi^{xxx}
- +  \sin^{2}\Phi \cos\Phi \chi^{xyy}
- + 2\sin\Phi \cos^{2}\Phi \chi^{xxy}\\
-&+  \sin\Phi \cos^{2}\Phi \chi^{yxx}
- +  \sin^{3}\Phi          \chi^{yyy}
- + 2\sin^{2}\Phi \cos\Phi \chi^{yxy},\\[10pt]
+&=  \cos^{3}\gamma          \chi^{xxx}
+ +  \sin^{2}\gamma \cos\gamma \chi^{xyy}
+ + 2\sin\gamma \cos^{2}\gamma \chi^{xxy}\\
+&+  \sin\gamma \cos^{2}\gamma \chi^{yxx}
+ +  \sin^{3}\gamma          \chi^{yyy}
+ + 2\sin^{2}\gamma \cos\gamma \chi^{yxy},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{YZZ}
-&= \cos\Phi \chi^{xzz} + \sin\Phi \chi^{yzz},\\[10pt]
+&= \cos\gamma \chi^{xzz} + \sin\gamma \chi^{yzz},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{YYZ} = \chi^{YZY}
-&= \sin\Phi \cos\Phi \chi^{xyz}
- + \cos^{2}\Phi      \chi^{xxz}
- + \sin^{2}\Phi      \chi^{yyz}
- + \sin\Phi \cos\Phi \chi^{yxz},\\[10pt]
+&= \sin\gamma \cos\gamma \chi^{xyz}
+ + \cos^{2}\gamma      \chi^{xxz}
+ + \sin^{2}\gamma      \chi^{yyz}
+ + \sin\gamma \cos\gamma \chi^{yxz},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{YXZ} = \chi^{YZX}
 &=
-- \cos^{2}\Phi      \chi^{xyz}
-+ \sin\Phi \cos\Phi \chi^{xxz}
-- \sin\Phi \cos\Phi \chi^{yyz}
-+ \sin^{2}\Phi      \chi^{yxz},\\[10pt]
+- \cos^{2}\gamma      \chi^{xyz}
++ \sin\gamma \cos\gamma \chi^{xxz}
+- \sin\gamma \cos\gamma \chi^{yyz}
++ \sin^{2}\gamma      \chi^{yxz},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{YXY} = \chi^{YYX}
-&= \sin\Phi \cos^{2}\Phi \chi^{xxx}
- - \sin\Phi \cos^{2}\Phi \chi^{xyy}
- + (\sin^{2}\Phi \cos\Phi - \cos^{3}\Phi) \chi^{xxy}\\
-&+ \sin^{2}\Phi \cos\Phi \chi^{yxx}
- - \sin^{2}\Phi \cos\Phi \chi^{yyy}
- + (\sin^{3}\Phi - \sin\Phi \cos^{2}\Phi) \chi^{yxy},\\[10pt]
+&= \sin\gamma \cos^{2}\gamma \chi^{xxx}
+ - \sin\gamma \cos^{2}\gamma \chi^{xyy}
+ - (\cos^{3}\gamma - \sin^{2}\gamma \cos\gamma) \chi^{xxy}\\
+&+ \sin^{2}\gamma \cos\gamma \chi^{yxx}
+ - \sin^{2}\gamma \cos\gamma \chi^{yyy}
+ + (\sin^{3}\gamma - \sin\gamma \cos^{2}\gamma) \chi^{yxy},\\[10pt]
 \end{split}
 \end{equation*}
 for the $\chi^{YJK}$ components, and lastly
 \begin{equation*}
 \begin{split}
 \chi^{ZXX}
-&=  \sin^{2}\Phi      \chi^{zxx}
- +  \cos\Phi \cos\Phi \chi^{zyy}
- - 2\sin\Phi \cos\Phi \chi^{zxy},\\[10pt]
+&=  \sin^{2}\gamma        \chi^{zxx}
+ +  \cos^{2}\gamma        \chi^{zyy}
+ - 2\sin\gamma \cos\gamma \chi^{zxy},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{ZYY}
-&=  \cos^{2}\Phi      \chi^{zxx}
- +  \sin^{2}\Phi      \chi^{zyy}
- + 2\sin\Phi \cos\Phi \chi^{zxy},\\[10pt]
+&=  \cos^{2}\gamma        \chi^{zxx}
+ +  \sin^{2}\gamma        \chi^{zyy}
+ + 2\sin\gamma \cos\gamma \chi^{zxy},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{ZZZ} &=  \chi^{zzz},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{ZYZ} = \chi^{ZZY}
-&= \sin\Phi \chi^{zyz}
- + \cos\Phi \chi^{zxz},\\[10pt]
+&= \sin\gamma \chi^{zyz}
+ + \cos\gamma \chi^{zxz},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{ZXZ} = \chi^{ZZX}
 &= 
-- \cos\Phi \chi^{zyz}
-+ \sin\Phi \chi^{zxz},\\[10pt]
+- \cos\gamma \chi^{zyz}
++ \sin\gamma \chi^{zxz},\\[10pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chi^{ZXY} = \chi^{ZYX}
-&= \sin\Phi \cos\Phi \chi^{zxx}
- - \sin\Phi \cos\Phi \chi^{zyy}
- - \cos2\Phi         \chi^{zxy},
+&= \sin\gamma \cos\gamma \chi^{zxx}
+ - \sin\gamma \cos\gamma \chi^{zyy}
+ - \cos2\gamma         \chi^{zxy},
 \end{split}
 \end{equation*}
 for the $\chi^{ZJK}$ components. Fortunately, the intrinsic permutation symmetry
 of SHG is also present in the new coordinate system, such that $\chi^{IJK} =
 \chi^{IKJ}$; therefore, there are only 18 unique components in either system.
-Setting $\Phi = \pi/2$ signifies that there is no rotation, and thus $\chi^{IJK}
+Setting $\gamma = \pi/2$ signifies that there is no rotation, and thus $\chi^{IJK}
 = \chi^{ijk}$.
 
 It should also be clear that the crystal symmetries do \textbf{not} follow into
@@ -205,21 +205,21 @@ the rotated system. For instance, the $C_{3v}$ symmetry satisfies the following,
 In the rotated system, the top relationship holds true such that $\chi^{XXX} =
 -\chi^{XYY} = - \chi^{YXY}$. However, we also obtain that
 \begin{equation*}
-\chi^{YYY} = \cos3\Phi \chi^{xxx},
+\chi^{YYY} = \cos3\gamma \chi^{xxx},
 \end{equation*}
 which is most definitely not zero. Fortunately, we can simply apply the crystal
 symmetry to the non-rotated system before transforming to the rotated system.
 
-As an example case, we present $\chi^{XXX}$ for three values of $\Phi$ for a
+As an example case, we present $\chi^{XXX}$ for three values of $\gamma$ for a
 system with $C_{3v}$ symmetry in Fig. \ref{fig:rotxxx}. The nonzero components
 in the original coordinates are presented in Fig. \ref{fig:comps}, multiplied by
 the appropriate prefactors from Eq. \eqref{eq:xcomps}. We can see how we recover
-the component in the original coordinates when $\Phi = \pi/2$.
+the component in the original coordinates when $\gamma = \pi/2$.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.4\linewidth]{rot/rotxxx.pdf}
-\caption{$\chi^{XXX}$ for three values of $\Phi$ calculated for a system with
+\caption{$\chi^{XXX}$ for three values of $\gamma$ calculated for a system with
 $C_{3v}$ symmetry.}
 \label{fig:rotxxx}
 \end{figure}
@@ -228,20 +228,20 @@ $C_{3v}$ symmetry.}
     \centering
     \begin{subfigure}[b]{0.25\textwidth}
         \includegraphics[width=0.8\textwidth]{rot/comps15.pdf}
-        \caption{$\Phi = \pi/12$.}
+        \caption{$\gamma = \pi/12$.}
     \end{subfigure}
     ~ 
     \begin{subfigure}[b]{0.25\textwidth}
         \includegraphics[width=0.8\textwidth]{rot/comps30.pdf}
-        \caption{$\Phi = \pi/6$.}
+        \caption{$\gamma = \pi/6$.}
     \end{subfigure}
     ~ 
     \begin{subfigure}[b]{0.25\textwidth}
         \includegraphics[width=0.8\textwidth]{rot/comps90.pdf}
-        \caption{$\Phi = \pi/2$.}
+        \caption{$\gamma = \pi/2$.}
     \end{subfigure}
     \caption{Nonzero components of $\chi^{ijk}$ multiplied by the appropriate
-    prefactors, for three different values of $\Phi$.}
+    prefactors, for three different values of $\gamma$.}
     \label{fig:comps}
 \end{figure}
 
